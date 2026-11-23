@@ -1,0 +1,14 @@
+tag: SG0000002A
+kind: theorem
+title: The normalization of an affine curve
+statement: Let $k$ be a field and let $A$ be a domain of dimension at most 1 that is a finitely generated $k$-algebra. Then the normalization of $A$ is a Dedekind domain. In particular, each of its local rings is regular.
+sources:
+- paper: AM69
+- paper: Har
+uses:
+- SG0000000M
+- SG00000022
+lean:
+  statement: Singularity.Curves.isDedekindDomain_integralClosure
+  proof: Singularity.Curves.isDedekindDomain_integralClosure
+tier: T1

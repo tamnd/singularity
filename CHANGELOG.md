@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The papers Eis95 (Eisenbud, Commutative Algebra with a View Toward Algebraic Geometry) and Lan02 (Lang, Algebra).
+- The nodes SG00000028 (the integral closure of a polynomial ring in a purely inseparable extension is finite), SG00000029 (the integral closure of a polynomial ring in each finite extension is finite) and SG0000002A (the normalization of an affine curve over each field is a Dedekind domain), each with its Lean proof.
+- The node SG0000000M (finiteness of normalization, the theorem of E. Noether) now has a precise statement and its Lean proof `Singularity.Algebra.finite_integralClosure`. Before this change its Lean name was a placeholder that did not exist.
+- `records/lean.json` from tamnd/singularity-lean at 1ef1ad1, with the file `Singularity/Algebra/NormalizationCharP.lean`. It has 92 declarations, and each uses only the three standard axioms.
+
 ## 0.2.2 - 2026-11-24
 
 - The nodes SG00000024 (normal schemes of dimension at most 1 are regular), SG00000025 (finiteness of the integral closure in the separable case) and SG00000026 (finiteness of normalization in characteristic 0), each with its Lean proof. The node SG0000000M uses SG00000025, and the node SG0000001A uses SG00000024.

@@ -1,11 +1,15 @@
 tag: SG0000000M
 kind: theorem
 title: Finiteness of normalization
-statement: The normalization of a variety is finite over it.
+statement: Let $k$ be a field and let $A$ be a domain that is a finitely generated $k$-algebra. Then the integral closure of $A$ in its field of fractions is a finite $A$-module. Thus the normalization of a variety is finite over it.
 sources:
 - paper: Nag62
+- paper: Eis95
+- paper: Har
 uses:
+- SG00000029
 - SG00000025
 lean:
-  statement: Singularity.normalization_finite
+  statement: Singularity.Algebra.finite_integralClosure
+  proof: Singularity.Algebra.finite_integralClosure
 tier: T1

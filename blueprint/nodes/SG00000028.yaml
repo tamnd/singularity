@@ -1,0 +1,11 @@
+tag: SG00000028
+kind: theorem
+title: Finiteness of the integral closure in a purely inseparable extension
+statement: Let $k$ be a field of characteristic $p > 0$, let $P = k[y_1, \dots, y_s]$ and let $K = k(y_1, \dots, y_s)$. Let $M$ be a finite purely inseparable extension of $K$. Then the integral closure of $P$ in $M$ is a finite $P$-module.
+sources:
+- paper: Eis95
+- paper: Lan02
+lean:
+  statement: Singularity.Algebra.finite_integralClosure_mvPolynomial_of_isPurelyInseparable
+  proof: Singularity.Algebra.finite_integralClosure_mvPolynomial_of_isPurelyInseparable
+tier: T1

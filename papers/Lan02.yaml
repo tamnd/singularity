@@ -1,0 +1,9 @@
+key: Lan02
+title: Lang, Algebra, revised third edition (2002)
+tag: S
+tier: T0
+why: Normal, separable and purely inseparable extensions (Chapter V), Galois theory (Chapter VI)
+year: 2002
+lean: ML
+use:
+- read
