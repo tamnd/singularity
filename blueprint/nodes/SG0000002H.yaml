@@ -1,7 +1,7 @@
 tag: SG0000002H
 kind: theorem
 title: The residue field of a regular local ring has projective dimension equal to the dimension
-statement: Let $(R, \mathfrak{m}, \kappa)$ be a regular local ring of dimension $d$. Then $\operatorname{pd}_R \kappa = d$. This is the first half of the theorem of Serre. The converse, that a Noetherian local ring of finite global dimension is regular, is not in Lean yet.
+statement: Let $(R, \mathfrak{m}, \kappa)$ be a regular local ring of dimension $d$. Then $\operatorname{pd}_R \kappa = d$. This is the first half of the theorem of Serre. SG0000002K proves that each finite module has projective dimension at most $d$. The converse, that a Noetherian local ring of finite global dimension is regular, is not in Lean yet.
 sources:
 - paper: Ser55
 - paper: Mat

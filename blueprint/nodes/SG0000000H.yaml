@@ -6,6 +6,8 @@ sources:
 - paper: Ser55
 uses:
 - SG0000002H
+- SG0000002J
+- SG0000002K
 lean:
   statement: Singularity.IsRegularLocalRing.localization
 tier: T1

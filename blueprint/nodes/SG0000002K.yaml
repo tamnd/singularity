@@ -1,0 +1,14 @@
+tag: SG0000002K
+kind: theorem
+title: Finite modules over a regular local ring have finite projective dimension
+statement: Let $R$ be a regular local ring of dimension $d$. Then each finite $R$-module $M$ has $\operatorname{pd}_R M \le d$. With SG0000002H, the bound is sharp.
+sources:
+- paper: Ser55
+- paper: Mat
+uses:
+- SG0000000J
+- SG00000021
+lean:
+  statement: Singularity.Algebra.projectiveDimension_le_ringKrullDim
+  proof: Singularity.Algebra.projectiveDimension_le_ringKrullDim
+tier: T1
