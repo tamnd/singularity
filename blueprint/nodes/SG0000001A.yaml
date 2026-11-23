@@ -1,7 +1,7 @@
 tag: SG0000001A
 kind: theorem
 title: Curves
-statement: 'For each $p$, each variety of dimension at most 1 has a resolution: the normalization. The integral case is SG0000002C, and it is proved. The general case follows from it with the reduction to integral varieties SG0000001Y. Until the reduction is proved in Lean, the theorem `Singularity.Curves.resolutionInDim_one_of_reductionToIntegral` takes it as a hypothesis.'
+statement: 'For each $p$, each variety of dimension at most 1 has a resolution: the normalization. The integral case is SG0000002C, and it is proved. The general case follows from it with the reduction to integral varieties SG0000001Y, which is proved.'
 sources:
 - paper: Curves
 uses:
@@ -12,5 +12,5 @@ uses:
 - SG0000001Y
 lean:
   statement: Singularity.ResolutionInDim
-  proof: Singularity.resolutionInDim_one
+  proof: Singularity.Curves.resolutionInDim_one
 tier: T5
