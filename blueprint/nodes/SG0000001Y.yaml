@@ -1,0 +1,9 @@
+tag: SG0000001Y
+kind: hypothesis
+title: Reduction to integral varieties
+statement: For each $p$ and $n$, if each integral variety of dimension at most $n$ over a field of characteristic $p$ has a resolution, then each variety of dimension at most $n$ over a field of characteristic $p$ has a resolution. The resolution of a reduced variety is the disjoint union of the resolutions of its irreducible components with the reduced structure. A point in two components is not regular, so the regular locus of the variety is the disjoint union of open subsets of the regular loci of the components.
+uses:
+- SG00000006
+lean:
+  statement: Singularity.ReductionToIntegral
+tier: S

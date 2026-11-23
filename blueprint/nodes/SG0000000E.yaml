@@ -1,10 +1,10 @@
 tag: SG0000000E
 kind: theorem
 title: The bridge to formal-conjectures
-statement: Over a perfect field and for an integral $X$, the statement of the project in dimension $n$ is equivalent to the statement `resolution_of_singularities` of google-deepmind/formal-conjectures in dimension $n$.
+statement: 'Let $X$ be an integral variety over a perfect field $k$ and let $\pi : Y \to X$ be a resolution in the sense of the project. Then $\pi$ is a resolution in the sense of google-deepmind/formal-conjectures: $Y$ is integral and smooth over $k$, and $\pi$ is proper and birational over $X$. Thus the statement of the project in dimension $n$ implies the statement `resolution_of_singularities` of formal-conjectures in dimension $n$. The converse is not a formal consequence, because a resolution of formal-conjectures need not be an isomorphism over the whole regular locus.'
 uses:
-- SG00000006
-- SG0000000F
+- SG00000004
 lean:
-  statement: Singularity.Bridge.resolutionInDim_iff_formalConjectures
+  statement: Singularity.Bridge.HasResolution
+  proof: Singularity.Base.hasResolution_of_isResolution
 tier: S

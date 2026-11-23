@@ -1,0 +1,12 @@
+tag: SG0000001Z
+kind: theorem
+title: Integral varieties in characteristic 0
+statement: For each $n$, each integral variety of dimension at most $n$ over a field of characteristic 0 has a resolution. Main Theorem I of resolutionorg/hironaka gives an ideal sheaf $D$ with support equal to the singular locus such that the blowup along $D$ is regular. The blowup is proper and it is an isomorphism off the support of $D$. The exceptional divisor is invertible, so its complement is dense.
+sources:
+- paper: Hir64
+uses:
+- SG00000006
+lean:
+  statement: Singularity.IntegralResolutionInDim
+  proof: Singularity.Base.integralResolutionInDim_zero
+tier: S

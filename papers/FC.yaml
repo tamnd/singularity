@@ -1,0 +1,9 @@
+key: FC
+title: google-deepmind/formal-conjectures, ResolutionOfSingularities.lean (2026)
+tag: S
+tier: T0
+why: An independent Lean statement of resolution; the bridge of the project compares with it
+year: 2026
+lean: FC
+use:
+- bridge

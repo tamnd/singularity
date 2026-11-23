@@ -1,0 +1,9 @@
+key: AM69
+title: Atiyah-Macdonald, Introduction to Commutative Algebra (1969)
+tag: S
+tier: T0
+why: Localization, the nilradical, dimension theory (Chapters 1, 3 and 11)
+year: 1969
+lean: ML
+use:
+- read

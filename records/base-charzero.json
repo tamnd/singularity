@@ -1,0 +1,438 @@
+{
+ "built": "2026-11-23",
+ "commit": "77e37873d6a9d3fd9e522bd91a0a4706a64f47b4",
+ "decls": {
+  "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 32,
+   "type": "\u2200 {A : Type u_1} [inst : CommRing A] {g : A}, g \u2208 nonZeroDivisors A \u2192 Dense \u2191(PrimeSpectrum.basicOpen g)"
+  },
+  "Singularity.Base.dense_compl_support_of_locally_nonZeroDivisor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 46,
+   "type": "\u2200 {Y : AlgebraicGeometry.Scheme} (J : Y.IdealSheafData),\n  (\u2200 (y : \u21a5Y), \u2203 U, y \u2208 \u2191U \u2227 \u2203 g \u2208 nonZeroDivisors \u2191(Y.presheaf.obj (Opposite.op \u2191U)), J.ideal U = Ideal.span {g}) \u2192\n    Dense (\u2191J.support)\u1d9c"
+  },
+  "Singularity.Base.exists_isResolution_of_isIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 81,
+   "type": "\u2200 {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [hX : Singularity.IsVariety X f] [AlgebraicGeometry.IsIntegral X], \u2203 Y \u03c0, Singularity.IsResolution \u03c0"
+  },
+  "Singularity.Base.fcResolutionCharZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 99,
+   "type": "Singularity.Bridge.FCResolutionCharZero"
+  },
+  "Singularity.Base.fcResolutionInDim_of_integralResolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {p n : \u2115}, Singularity.IntegralResolutionInDim p n \u2192 Singularity.Bridge.FCResolutionInDim p n"
+  },
+  "Singularity.Base.fcResolutionInDim_of_resolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.Bridge.FCResolutionInDim p n"
+  },
+  "Singularity.Base.genericPoint_mem_regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 32,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X], genericPoint \u21a5X \u2208 Singularity.regularLocus X"
+  },
+  "Singularity.Base.hasResolution_of_isResolution": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 45,
+   "type": "\u2200 {k : Type u} [inst : Field k] [PerfectField k] {X Y : AlgebraicGeometry.Scheme} (sX : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.IsIntegral X] [AlgebraicGeometry.LocallyOfFiniteType sX] (\u03c0 : Y \u27f6 X),\n  Singularity.IsResolution \u03c0 \u2192 Singularity.Bridge.HasResolution sX"
+  },
+  "Singularity.Base.integralResolutionInDim_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 (n : \u2115), Singularity.IntegralResolutionInDim 0 n"
+  },
+  "Singularity.Base.isReduced_of_isRegularScheme": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/Bridge.lean",
+   "kind": "theorem",
+   "line": 38,
+   "type": "\u2200 {Y : AlgebraicGeometry.Scheme}, Singularity.IsRegularScheme Y \u2192 AlgebraicGeometry.IsReduced Y"
+  },
+  "Singularity.Base.regularLocus_eq_compl_singularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 75,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = X.singularLocus\u1d9c"
+  },
+  "Singularity.Bridge.FCResolutionCharZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "kind": "def",
+   "line": 41,
+   "type": "Prop"
+  },
+  "Singularity.Bridge.FCResolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "kind": "def",
+   "line": 35,
+   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.Bridge.HasResolution": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "kind": "def",
+   "line": 30,
+   "type": "{S X : AlgebraicGeometry.Scheme} \u2192 (X \u27f6 S) \u2192 Prop"
+  },
+  "Singularity.Fidelity.isResolution_id": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Positive.lean",
+   "kind": "theorem",
+   "line": 19,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme X \u2192 Singularity.IsResolution (CategoryTheory.CategoryStruct.id X)"
+  },
+  "Singularity.IntegralResolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "kind": "def",
+   "line": 21,
+   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.IsRegularScheme": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "def",
+   "line": 33,
+   "type": "AlgebraicGeometry.Scheme \u2192 Prop"
+  },
+  "Singularity.IsResolution": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "inductive",
+   "line": 37,
+   "type": "{X Y : AlgebraicGeometry.Scheme} \u2192 (Y \u27f6 X) \u2192 Prop"
+  },
+  "Singularity.IsResolution.dense": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 Dense (\u21d1\u03c0 \u207b\u00b9' Singularity.regularLocus X)"
+  },
+  "Singularity.IsResolution.isIso_over": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X},\n  Singularity.IsResolution \u03c0 \u2192 \u2203 U, \u2191U = Singularity.regularLocus X \u2227 CategoryTheory.IsIso (\u03c0 \u2223_ U)"
+  },
+  "Singularity.IsResolution.proper": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 48,
+   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 AlgebraicGeometry.IsProper \u03c0"
+  },
+  "Singularity.IsResolution.regular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 Singularity.IsRegularScheme Y"
+  },
+  "Singularity.IsVariety": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "inductive",
+   "line": 52,
+   "type": "{k : Type u} \u2192 [inst : Field k] \u2192 (X : AlgebraicGeometry.Scheme) \u2192 (X \u27f6 AlgebraicGeometry.Spec \u21a7k) \u2192 Prop"
+  },
+  "Singularity.IsVariety.finiteType": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.LocallyOfFiniteType f"
+  },
+  "Singularity.IsVariety.quasiCompact": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 56,
+   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.QuasiCompact f"
+  },
+  "Singularity.IsVariety.reduced": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 54,
+   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsReduced X"
+  },
+  "Singularity.IsVariety.separated": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 57,
+   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsSeparated f"
+  },
+  "Singularity.ReductionToIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "kind": "def",
+   "line": 26,
+   "type": "Prop"
+  },
+  "Singularity.ResolutionDimFourCharP": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Main.lean",
+   "kind": "def",
+   "line": 32,
+   "type": "Prop"
+  },
+  "Singularity.ResolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Main.lean",
+   "kind": "def",
+   "line": 21,
+   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.ResolutionOfSingularities": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Main.lean",
+   "kind": "def",
+   "line": 28,
+   "type": "Prop"
+  },
+  "Singularity.integralResolutionInDim_of_resolutionInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "kind": "theorem",
+   "line": 30,
+   "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.IntegralResolutionInDim p n"
+  },
+  "Singularity.isRegularLocalRing_of_isField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Known/DimZero.lean",
+   "kind": "theorem",
+   "line": 28,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R], IsField R \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.isRegularScheme_of_topologicalKrullDim_le_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Known/DimZero.lean",
+   "kind": "theorem",
+   "line": 44,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsReduced X],\n  topologicalKrullDim \u21a5X \u2264 0 \u2192 Singularity.IsRegularScheme X"
+  },
+  "Singularity.krullDimLE_zero_stalk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Known/DimZero.lean",
+   "kind": "theorem",
+   "line": 34,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
+  },
+  "Singularity.regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "def",
+   "line": 29,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192 Set \u21a5X"
+  },
+  "Singularity.regularLocus_eq_univ_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Basic.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = Set.univ \u2194 Singularity.IsRegularScheme X"
+  },
+  "Singularity.resolutionInDim_dim_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Known/DimZero.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 (p : \u2115), Singularity.ResolutionInDim p 0"
+  },
+  "Singularity.resolutionInDim_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "base/SingularityBase/CharZero.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "Singularity.ReductionToIntegral \u2192 \u2200 (n : \u2115), Singularity.ResolutionInDim 0 n"
+  }
+ },
+ "mathlib": "v4.35.0",
+ "repository": "https://github.com/tamnd/singularity-lean",
+ "toolchain": "4.35.0"
+}

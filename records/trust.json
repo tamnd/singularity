@@ -1,0 +1,14 @@
+{
+  "updated": "2026-11-23",
+  "checks": [
+    {"id": "Q0", "question": "Is the source the one that the site describes?", "state": "open", "note": "The site build records the commit of this repository. The record of the Lean build records the commit of tamnd/singularity-lean and the pin of the base. The check that refuses a mismatch is planned."},
+    {"id": "Q1", "question": "Does it build?", "state": "yes", "note": "The workflows build and base of tamnd/singularity-lean build the packages Singularity and SingularityBase at Lean v4.35.0 on GitHub runners, at commit 453191c. The base job restores the build of resolutionorg/hironaka from a cache keyed by its pin and the toolchain."},
+    {"id": "Q2", "question": "Which axioms do the top theorems use?", "state": "yes", "note": "54 declarations in records/lean.json. Each uses only propext, Classical.choice and Quot.sound. The scan finds no sorry, admit or axiom in the project source."},
+    {"id": "Q3", "question": "Does a second kernel accept it?", "state": "not run", "note": "The replay in lean4checker and the comparator replay in lean4lean are not yet in the trust workflow."},
+    {"id": "Q4", "question": "Do the proved theorems have the pinned statements?", "state": "not run", "note": "manifests/statements.sha256 pins the statement files, and CI checks the hashes. The comparator run against the pinned statements is not yet in the trust workflow."},
+    {"id": "Q5", "question": "Do the statements mean what the docstrings say?", "state": "open", "note": "Fidelity checks F2 (the identity of a regular scheme) and F3 (the codiagonal) are proved. The bridge to formal-conjectures is proved in one direction. The other instances of the battery are planned."},
+    {"id": "Q6", "question": "Which published theorems are still hypotheses?", "state": "yes", "note": "One: ReductionToIntegral (SG0000001Y). The theorem resolutionInDim_zero (SG0000000D) takes it as an argument, so its status is proved-mod."},
+    {"id": "Q7", "question": "Has a person read the proof?", "state": "no", "note": "The handbook sections are at status drafted. No reviewer has signed them."},
+    {"id": "Q8", "question": "Has someone outside the project reproduced Q1 to Q4?", "state": "no", "note": "No independent run yet."}
+  ]
+}

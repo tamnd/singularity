@@ -1,0 +1,9 @@
+key: HirLean
+title: resolutionorg/hironaka, a Lean proof of Hironaka's Main Theorem I (2026)
+tag: S
+tier: T8
+why: The characteristic 0 base of the project
+year: 2026
+lean: base
+use:
+- bridge
