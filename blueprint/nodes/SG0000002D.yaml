@@ -1,0 +1,12 @@
+tag: SG0000002D
+kind: theorem
+title: The laws of the Hilbert-Samuel function
+statement: Let $\chi(n) = \ell(M/I^n M)$. Then $\chi(0) = 0$, $\chi(n+1) = \chi(n) + \ell(I^n M/I^{n+1} M)$, and $\chi$ is monotone. A larger ideal gives a smaller function, and $J^k \subseteq I$ gives $\chi_I(n) \le \chi_J(kn)$. If $R$ is Noetherian, $M$ is finite and $I$ contains a power of a maximal ideal, then each value of $\chi$ is finite.
+sources:
+- paper: AM69
+uses:
+- SG0000000Q
+lean:
+  statement: Singularity.Algebra.hilbertSamuel_ne_top
+  proof: Singularity.Algebra.hilbertSamuel_ne_top
+tier: T1

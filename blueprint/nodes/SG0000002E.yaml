@@ -1,0 +1,9 @@
+tag: SG0000002E
+kind: definition
+title: The order of an element
+statement: For an ideal $I$ of a ring $R$ and $f \in R$, the order $\operatorname{ord}_I(f)$ is the largest $n$ with $f \in I^n$, or $\infty$ if $f$ is in each power of $I$. For a regular local ring and its maximal ideal, the order of $f$ is the multiplicity of the hypersurface $f = 0$ at the closed point.
+sources:
+- paper: AM69
+lean:
+  statement: Singularity.Algebra.order
+tier: T1
