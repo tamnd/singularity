@@ -1,0 +1,11 @@
+tag: SG00000021
+kind: theorem
+title: The quotient of a regular local ring by a parameter
+statement: Let $(R, \mathfrak{m})$ be a regular local ring of dimension $d$ and let $x \in \mathfrak{m} \setminus \mathfrak{m}^2$. Then $R/(x)$ is a regular local ring of dimension $d - 1$.
+sources:
+- paper: AM69
+- paper: Stacks
+lean:
+  statement: Singularity.Algebra.quotient_span_singleton
+  proof: Singularity.Algebra.quotient_span_singleton
+tier: T1
