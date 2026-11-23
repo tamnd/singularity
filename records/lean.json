@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "756fa03255c4ed867855b45ba032e19d36fab6a2",
+  "commit": "0cb57d52f47803b2725368bff51aa952eff0f2e7",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "756fa03255c4ed867855b45ba032e19d36fab6a2",
+ "commit": "0cb57d52f47803b2725368bff51aa952eff0f2e7",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -346,6 +346,28 @@
    "kind": "def",
    "line": 30,
    "type": "{S X : AlgebraicGeometry.Scheme} \u2192 (X \u27f6 S) \u2192 Prop"
+  },
+  "Singularity.Curves.isDedekindDomain_integralClosure_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Affine.lean",
+   "kind": "theorem",
+   "line": 30,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsDedekindDomain \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Curves.isRegularRing_integralClosure_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Affine.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsRegularRing \u21a5(integralClosure A (FractionRing A))"
   },
   "Singularity.Fidelity.codiag": {
    "axioms": [
