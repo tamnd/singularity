@@ -7,7 +7,7 @@ sources:
 uses:
 - SG00000006
 - SG0000000M
-- SG0000000J
+- SG00000022
 lean:
   statement: Singularity.ResolutionInDim
   proof: Singularity.resolutionInDim_one

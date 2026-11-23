@@ -1,0 +1,13 @@
+tag: SG00000022
+kind: theorem
+title: Regular local rings of dimension 1
+statement: Let $R$ be a Noetherian local domain of dimension 1. Then $R$ is regular if and only if $R$ is a discrete valuation ring, and if and only if $R$ is integrally closed.
+sources:
+- paper: AM69
+- paper: Mat
+uses:
+- SG00000021
+lean:
+  statement: Singularity.Algebra.isRegularLocalRing_iff_isIntegrallyClosed
+  proof: Singularity.Algebra.isRegularLocalRing_iff_isIntegrallyClosed
+tier: T1

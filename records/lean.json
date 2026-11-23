@@ -1,11 +1,176 @@
 {
  "base": {
-  "commit": "77e37873d6a9d3fd9e522bd91a0a4706a64f47b4",
+  "commit": "0df69ef47af5ad20300a25d8b50cd2ee8633d02e",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "453191cc165f495caa2df1b88d4e5648e5fdd0c1",
+ "commit": "0df69ef47af5ad20300a25d8b50cd2ee8633d02e",
  "decls": {
+  "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 363,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 \u2200 {P : Ideal R} [hP : P.IsPrime], P \u2260 \u22a5 \u2192 P = IsLocalRing.maximalIdeal R"
+  },
+  "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_notMem_minimalPrimes": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 203,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  0 < ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 \u2200 p \u2208 minimalPrimes R, x \u2209 p"
+  },
+  "Singularity.Algebra.exists_ringKrullDim_eq_natCast": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 63,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [FiniteRingKrullDim R], \u2203 n, ringKrullDim R = \u2191n"
+  },
+  "Singularity.Algebra.exists_span_insert_eq_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 91,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2203 t,\n        \u2191t \u2286 \u2191(IsLocalRing.maximalIdeal R) \u2227\n          t.card + 1 = Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2227\n            IsLocalRing.maximalIdeal R = Ideal.span (insert x \u2191t)"
+  },
+  "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 344,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], IsDomain R"
+  },
+  "Singularity.Algebra.isDomain_of_isRegularLocalRing_of_ringKrullDim_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 298,
+   "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R = \u2191n \u2192 IsDomain R"
+  },
+  "Singularity.Algebra.isLocalRing_quotient_of_le_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
+  },
+  "Singularity.Algebra.isRegularLocalRing_iff_isDiscreteValuationRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 378,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [inst_3 : IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsDiscreteValuationRing R)"
+  },
+  "Singularity.Algebra.isRegularLocalRing_iff_isIntegrallyClosed": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 389,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsIntegrallyClosed R)"
+  },
+  "Singularity.Algebra.maximalIdeal_quotient_eq_map": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 84,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R \u29f8 I)],\n  IsLocalRing.maximalIdeal (R \u29f8 I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)"
+  },
+  "Singularity.Algebra.not_isField_of_ringKrullDim_eq_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 357,
+   "type": "\u2200 {R : Type u} [inst : CommRing R], ringKrullDim R = 1 \u2192 \u00acIsField R"
+  },
+  "Singularity.Algebra.of_quotient_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 275,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2208 nonZeroDivisors R \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2192\n        IsRegularLocalRing R \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
+  },
+  "Singularity.Algebra.quotient_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 241,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
+  },
+  "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})],\n      Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2264\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 Ideal.span {x})) + 1"
+  },
+  "Singularity.Algebra.spanFinrank_maximalIdeal_quotient_add_one_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Regular.lean",
+   "kind": "theorem",
+   "line": 138,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})],\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 Ideal.span {x})) + 1 \u2264\n          Submodule.spanFinrank (IsLocalRing.maximalIdeal R)"
+  },
   "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors": {
    "axioms": [
     "Classical.choice",

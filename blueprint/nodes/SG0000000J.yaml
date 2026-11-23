@@ -1,9 +1,13 @@
 tag: SG0000000J
 kind: theorem
 title: A regular local ring is a domain
-statement: A regular local ring is an integral domain, and it is normal.
+statement: A regular local ring is an integral domain. The proof is by induction on the dimension. The inductive step divides by an element of $\mathfrak{m} \setminus \mathfrak{m}^2$ that is in no minimal prime ideal.
 sources:
-- paper: Ser55
+- paper: Mat
+- paper: Stacks
+uses:
+- SG00000021
 lean:
-  statement: Singularity.IsRegularLocalRing.isDomain
+  statement: Singularity.Algebra.isDomain_of_isRegularLocalRing
+  proof: Singularity.Algebra.isDomain_of_isRegularLocalRing
 tier: T1
