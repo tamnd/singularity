@@ -4,6 +4,8 @@ title: Finiteness of normalization
 statement: The normalization of a variety is finite over it.
 sources:
 - paper: Nag62
+uses:
+- SG00000025
 lean:
   statement: Singularity.normalization_finite
 tier: T1

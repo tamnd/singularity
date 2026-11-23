@@ -1,0 +1,11 @@
+tag: SG00000025
+kind: theorem
+title: Finiteness of the integral closure, separable case
+statement: Let $P \subseteq A$ be domains such that $A$ is a finite $P$-module, $P$ is Noetherian and integrally closed, and $\operatorname{Frac} A$ is separable over $\operatorname{Frac} P$. Then the integral closure of $A$ in $\operatorname{Frac} A$ is a finite $A$-module.
+sources:
+- paper: AM69
+- paper: Mathlib
+lean:
+  statement: Singularity.Algebra.finite_integralClosure_of_finite
+  proof: Singularity.Algebra.finite_integralClosure_of_finite
+tier: T1

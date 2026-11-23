@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "0df69ef47af5ad20300a25d8b50cd2ee8633d02e",
+  "commit": "756fa03255c4ed867855b45ba032e19d36fab6a2",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "0df69ef47af5ad20300a25d8b50cd2ee8633d02e",
+ "commit": "756fa03255c4ed867855b45ba032e19d36fab6a2",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -49,6 +49,28 @@
    "kind": "theorem",
    "line": 91,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2203 t,\n        \u2191t \u2286 \u2191(IsLocalRing.maximalIdeal R) \u2227\n          t.card + 1 = Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2227\n            IsLocalRing.maximalIdeal R = Ideal.span (insert x \u2191t)"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Normalization.lean",
+   "kind": "theorem",
+   "line": 53,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A], Module.Finite A \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_finite": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Normalization.lean",
+   "kind": "theorem",
+   "line": 34,
+   "type": "\u2200 (P : Type u_1) (A : Type u_2) [inst : CommRing P] [inst_1 : IsDomain P] [IsIntegrallyClosed P] [IsNoetherianRing P]\n  [inst_4 : CommRing A] [inst_5 : IsDomain A] [inst_6 : Algebra P A] [inst_7 : Module.IsTorsionFree P A]\n  [Module.Finite P A] [Algebra.IsSeparable (FractionRing P) (FractionRing A)],\n  Module.Finite A \u21a5(integralClosure A (FractionRing A))"
   },
   "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
    "axioms": [
@@ -611,6 +633,28 @@
    "line": 28,
    "type": "\u2200 {R : Type u_1} [inst : CommRing R], IsField R \u2192 IsRegularLocalRing R"
   },
+  "Singularity.isRegularLocalRing_of_isIntegrallyClosed": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/NormalDimOne.lean",
+   "kind": "theorem",
+   "line": 37,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R] [IsIntegrallyClosed R],\n  ringKrullDim R \u2264 1 \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.isRegularScheme_of_isIntegrallyClosed_stalk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/NormalDimOne.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsLocallyNoetherian X],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192\n    (\u2200 (x : \u21a5X), IsDomain \u2191(X.presheaf.stalk x)) \u2192\n      (\u2200 (x : \u21a5X), IsIntegrallyClosed \u2191(X.presheaf.stalk x)) \u2192 Singularity.IsRegularScheme X"
+  },
   "Singularity.isRegularScheme_of_topologicalKrullDim_le_zero": {
    "axioms": [
     "Classical.choice",
@@ -753,6 +797,17 @@
    "kind": "theorem",
    "line": 65,
    "type": "\u2200 {k : Type u} [inst : Field k] {p n : \u2115},\n  p \u2260 0 \u2192 \u2200 (g : MvPolynomial (Fin n) k), ringKrullDim (Singularity.P1Ring k p n g) \u2264 \u2191n"
+  },
+  "Singularity.ringKrullDim_stalk_le_topologicalKrullDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/NormalDimOne.lean",
+   "kind": "theorem",
+   "line": 28,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme} (x : \u21a5X), ringKrullDim \u2191(X.presheaf.stalk x) \u2264 topologicalKrullDim \u21a5X"
   },
   "Singularity.topologicalKrullDim_p1Hypersurface_le": {
    "axioms": [
