@@ -1,0 +1,12 @@
+// The Worker that serves singularity.tamnd.com. It has no script: Cloudflare serves the files of public/, which sing site build writes. The workflow deploy runs wrangler deploy with this file.
+{
+  "name": "singularity",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "routes": [{ "pattern": "singularity.tamnd.com", "custom_domain": true }],
+  "assets": {
+    "directory": "public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
