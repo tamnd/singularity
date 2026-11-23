@@ -1,16 +1,14 @@
 tag: SG0000000D
 kind: theorem
 title: Characteristic 0
-statement: For each $n$, each variety of dimension at most $n$ over a field of characteristic 0 has a resolution. The proof applies Main Theorem I of resolutionorg/hironaka to the integral case and takes the step from integral varieties to reduced varieties as a named hypothesis.
+statement: For each $n$, each variety of dimension at most $n$ over a field of characteristic 0 has a resolution. The proof applies Main Theorem I of resolutionorg/hironaka to the integral case and then applies the reduction to integral varieties SG0000001Y, which is proved. The theorem `Singularity.resolutionInDim_zero` keeps the form that takes the reduction as an argument.
 sources:
 - paper: Hir64
 uses:
 - SG00000006
 - SG0000001Z
 - SG0000001Y
-hypotheses:
-- SG0000001Y
 lean:
   statement: Singularity.ResolutionInDim
-  proof: Singularity.resolutionInDim_zero
+  proof: Singularity.resolutionInDim_charZero
 tier: S

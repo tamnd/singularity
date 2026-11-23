@@ -4,6 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000001Y (the reduction to integral varieties) is now a theorem with the Lean proof `Singularity.Reduction.reductionToIntegral`. It was a named hypothesis. The source is the Stacks project.
+- The node SG0000000D (characteristic 0) now has the Lean proof `Singularity.resolutionInDim_charZero`, which takes no hypothesis. Its status changes from proved-mod to proved.
+- The node SG0000001A (curves) now has the Lean proof `Singularity.Curves.resolutionInDim_one`. Its status changes from stated to proved.
+- `records/lean.json` and `records/base-charzero.json` from tamnd/singularity-lean at ad0770f, with the files `Singularity/Scheme/Components.lean` and `Singularity/Scheme/Reduction.lean`. The record has 148 declarations, and each uses only the three standard axioms.
+- Trust check Q6 now records that no published theorem is still a hypothesis.
+
 ## 0.2.4 - 2026-11-24
 
 - The node SG0000002B (the normal locus of a domain with a finite normalization) with its Lean proof.
