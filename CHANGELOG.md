@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.1.0 - 2026-11-23
+
 - The spec, documents 00 to 16.
 - The style check `scripts/style.py`.
 - The workflows: lint, scorecard and dependency updates.
