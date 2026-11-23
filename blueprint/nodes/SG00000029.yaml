@@ -1,0 +1,14 @@
+tag: SG00000029
+kind: theorem
+title: Finiteness of the integral closure of a polynomial ring
+statement: Let $k$ be a field, let $P = k[y_1, \dots, y_s]$ and let $L$ be a finite extension of $k(y_1, \dots, y_s)$. Then the integral closure of $P$ in $L$ is a finite $P$-module.
+sources:
+- paper: Eis95
+- paper: Mat
+uses:
+- SG00000028
+- SG00000025
+lean:
+  statement: Singularity.Algebra.finite_integralClosure_mvPolynomial
+  proof: Singularity.Algebra.finite_integralClosure_mvPolynomial
+tier: T1

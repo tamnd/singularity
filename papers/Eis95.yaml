@@ -1,0 +1,9 @@
+key: Eis95
+title: Eisenbud, Commutative Algebra with a View Toward Algebraic Geometry (1995)
+tag: S
+tier: T0
+why: Noether normalization, finiteness of the integral closure (Corollary 13.13)
+year: 1995
+lean: partly ML
+use:
+- read

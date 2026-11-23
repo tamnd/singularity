@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "0cb57d52f47803b2725368bff51aa952eff0f2e7",
+  "commit": "1ef1ad16fe293caf7992da721bcac104a7d8ac6a",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "0cb57d52f47803b2725368bff51aa952eff0f2e7",
+ "commit": "1ef1ad16fe293caf7992da721bcac104a7d8ac6a",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -50,6 +50,116 @@
    "line": 91,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2203 t,\n        \u2191t \u2286 \u2191(IsLocalRing.maximalIdeal R) \u2227\n          t.card + 1 = Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2227\n            IsLocalRing.maximalIdeal R = Ideal.span (insert x \u2191t)"
   },
+  "Singularity.Algebra.expandMap": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "def",
+   "line": 150,
+   "type": "(\u03c3 : Type u_1) \u2192\n  (k : Type u_2) \u2192\n    (k' : Type u_3) \u2192\n      [inst : Field k] \u2192 [inst_1 : Field k'] \u2192 [Algebra k k'] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192+* MvPolynomial \u03c3 k'"
+  },
+  "Singularity.Algebra.expandMap_C": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 155,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} {k' : Type u_3} [inst : Field k] [inst_1 : Field k'] [inst_2 : Algebra k k'] (q : \u2115)\n  (c : k), (Singularity.Algebra.expandMap \u03c3 k k' q) (MvPolynomial.C c) = MvPolynomial.C ((algebraMap k k') c)"
+  },
+  "Singularity.Algebra.expandMap_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 159,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} {k' : Type u_3} [inst : Field k] [inst_1 : Field k'] [inst_2 : Algebra k k'] (q : \u2115)\n  (i : \u03c3), (Singularity.Algebra.expandMap \u03c3 k k' q) (MvPolynomial.X i) = MvPolynomial.X i ^ q"
+  },
+  "Singularity.Algebra.expandMap_finite": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 163,
+   "type": "\u2200 (\u03c3 : Type u_1) (k : Type u_2) (k' : Type u_3) [Finite \u03c3] [inst : Field k] [inst_1 : Field k'] [inst_2 : Algebra k k']\n  [FiniteDimensional k k'] {q : \u2115}, 0 < q \u2192 (Singularity.Algebra.expandMap \u03c3 k k' q).Finite"
+  },
+  "Singularity.Algebra.expandMap_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 188,
+   "type": "\u2200 (\u03c3 : Type u_1) (k : Type u_2) (k' : Type u_3) [inst : Field k] [inst_1 : Field k'] [inst_2 : Algebra k k'] (p e : \u2115)\n  [ExpChar k' p], Function.Injective \u21d1(Singularity.Algebra.expandMap \u03c3 k k' (p ^ e))"
+  },
+  "Singularity.Algebra.expand_map_eq_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 136,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} {k' : Type u_3} [inst : Field k] [inst_1 : Field k'] [inst_2 : Algebra k k'] (p e : \u2115)\n  [ExpChar k' p] (root : k \u2192 k') (f : MvPolynomial \u03c3 k),\n  (\u2200 c \u2208 f.coeffs, root c ^ p ^ e = (algebraMap k k') c) \u2192\n    (MvPolynomial.expand (p ^ e)) ((MvPolynomial.map (algebraMap k k')) f) =\n      (\u2211 \u03b1 \u2208 f.support, (MvPolynomial.monomial \u03b1) (root (f.coeff \u03b1))) ^ p ^ e"
+  },
+  "Singularity.Algebra.finite_integralClosure": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 306,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [inst_1 : CommRing A] [IsDomain A] [inst_3 : Algebra k A] [Algebra.FiniteType k A],\n  Module.Finite A \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Algebra.finite_integralClosure_mvPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 286,
+   "type": "\u2200 (k : Type u) [inst : Field k] (s : \u2115) (L : Type u) [inst_1 : Field L]\n  [inst_2 : Algebra (FractionRing (MvPolynomial (Fin s) k)) L] [inst_3 : Algebra (MvPolynomial (Fin s) k) L]\n  [IsScalarTower (MvPolynomial (Fin s) k) (FractionRing (MvPolynomial (Fin s) k)) L]\n  [FiniteDimensional (FractionRing (MvPolynomial (Fin s) k)) L],\n  Module.Finite (MvPolynomial (Fin s) k) \u21a5(integralClosure (MvPolynomial (Fin s) k) L)"
+  },
+  "Singularity.Algebra.finite_integralClosure_mvPolynomial_of_isPurelyInseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 201,
+   "type": "\u2200 (k : Type u) [inst : Field k] (p : \u2115) [Fact (Nat.Prime p)] [CharP k p] (s : \u2115) (M : Type v) [inst_3 : Field M]\n  [inst_4 : Algebra (FractionRing (MvPolynomial (Fin s) k)) M] [inst_5 : Algebra (MvPolynomial (Fin s) k) M]\n  [IsScalarTower (MvPolynomial (Fin s) k) (FractionRing (MvPolynomial (Fin s) k)) M]\n  [FiniteDimensional (FractionRing (MvPolynomial (Fin s) k)) M]\n  [IsPurelyInseparable (FractionRing (MvPolynomial (Fin s) k)) M],\n  Module.Finite (MvPolynomial (Fin s) k) \u21a5(integralClosure (MvPolynomial (Fin s) k) M)"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_algHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 113,
+   "type": "\u2200 (P : Type u_1) (T : Type u_2) (K' : Type u_3) (M : Type u_4) [inst : CommRing P] [IsNoetherianRing P]\n  [inst_2 : CommRing T] [IsDomain T] [IsIntegrallyClosed T] [inst_5 : Algebra P T] [Module.Finite P T]\n  [inst_7 : Field K'] [inst_8 : Algebra T K'] [IsFractionRing T K'] [inst_10 : Algebra P K'] [IsScalarTower P T K']\n  [inst_12 : Field M] [inst_13 : Algebra P M] (\u03b9 : M \u2192\u2090[P] K'), Module.Finite P \u21a5(integralClosure P M)"
+  },
   "Singularity.Algebra.finite_integralClosure_of_charZero": {
    "axioms": [
     "Classical.choice",
@@ -58,7 +168,7 @@
    ],
    "file": "Singularity/Algebra/Normalization.lean",
    "kind": "theorem",
-   "line": 53,
+   "line": 59,
    "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A], Module.Finite A \u21a5(integralClosure A (FractionRing A))"
   },
   "Singularity.Algebra.finite_integralClosure_of_finite": {
@@ -69,8 +179,41 @@
    ],
    "file": "Singularity/Algebra/Normalization.lean",
    "kind": "theorem",
-   "line": 34,
+   "line": 50,
    "type": "\u2200 (P : Type u_1) (A : Type u_2) [inst : CommRing P] [inst_1 : IsDomain P] [IsIntegrallyClosed P] [IsNoetherianRing P]\n  [inst_4 : CommRing A] [inst_5 : IsDomain A] [inst_6 : Algebra P A] [inst_7 : Module.IsTorsionFree P A]\n  [Module.Finite P A] [Algebra.IsSeparable (FractionRing P) (FractionRing A)],\n  Module.Finite A \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_finite_of_finite": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Normalization.lean",
+   "kind": "theorem",
+   "line": 34,
+   "type": "\u2200 (P : Type u_1) (A : Type u_2) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P] [inst_3 : CommRing A] [IsDomain A]\n  [inst_5 : Algebra P A] [Module.IsTorsionFree P A] [Module.Finite P A],\n  Module.Finite P \u21a5(integralClosure P (FractionRing A)) \u2192 Module.Finite A \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_isPurelyInseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 92,
+   "type": "\u2200 (P : Type u_1) (K : Type u_2) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P] [inst_3 : Field K]\n  [inst_4 : Algebra P K] [IsFractionRing P K] (L : Type u) [inst_6 : Field L] [inst_7 : Algebra K L]\n  [inst_8 : Algebra P L] [IsScalarTower P K L] [FiniteDimensional K L],\n  (\u2200 (M : Type u) [inst_11 : Field M] [inst_12 : Algebra K M] [inst_13 : Algebra P M] [IsScalarTower P K M]\n      [FiniteDimensional K M] [IsPurelyInseparable K M], Module.Finite P \u21a5(integralClosure P M)) \u2192\n    Module.Finite P \u21a5(integralClosure P L)"
+  },
+  "Singularity.Algebra.finite_integralClosure_of_tower": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 62,
+   "type": "\u2200 (P : Type u_1) (K : Type u_2) (M : Type u_3) (L : Type u_4) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P]\n  [inst_3 : Field K] [inst_4 : Field M] [inst_5 : Field L] [inst_6 : Algebra P K] [IsFractionRing P K]\n  [inst_8 : Algebra K M] [inst_9 : Algebra K L] [inst_10 : Algebra M L] [IsScalarTower K M L] [inst_12 : Algebra P M]\n  [inst_13 : Algebra P L] [IsScalarTower P K M] [IsScalarTower P K L] [IsScalarTower P M L] [FiniteDimensional K L]\n  [Algebra.IsSeparable M L], Module.Finite P \u21a5(integralClosure P M) \u2192 Module.Finite P \u21a5(integralClosure P L)"
   },
   "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
    "axioms": [
@@ -104,6 +247,17 @@
    "kind": "theorem",
    "line": 77,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
+  },
+  "Singularity.Algebra.isPurelyInseparable_fixedField_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalizationCharP.lean",
+   "kind": "theorem",
+   "line": 37,
+   "type": "\u2200 (K : Type u_1) (L : Type u_2) [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [Normal K L],\n  IsPurelyInseparable K \u21a5(IntermediateField.fixedField \u22a4)"
   },
   "Singularity.Algebra.isRegularLocalRing_iff_isDiscreteValuationRing": {
    "axioms": [
@@ -347,7 +501,7 @@
    "line": 30,
    "type": "{S X : AlgebraicGeometry.Scheme} \u2192 (X \u27f6 S) \u2192 Prop"
   },
-  "Singularity.Curves.isDedekindDomain_integralClosure_of_charZero": {
+  "Singularity.Curves.isDedekindDomain_integralClosure": {
    "axioms": [
     "Classical.choice",
     "Quot.sound",
@@ -356,7 +510,29 @@
    "file": "Singularity/Curves/Affine.lean",
    "kind": "theorem",
    "line": 30,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [inst_1 : CommRing A] [IsDomain A] [inst_3 : Algebra k A] [Algebra.FiniteType k A]\n  [Ring.DimensionLEOne A], IsDedekindDomain \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Curves.isDedekindDomain_integralClosure_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Affine.lean",
+   "kind": "theorem",
+   "line": 53,
    "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsDedekindDomain \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Curves.isRegularRing_integralClosure": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Affine.lean",
+   "kind": "theorem",
+   "line": 46,
+   "type": "\u2200 (k A : Type u) [inst : Field k] [inst_1 : CommRing A] [IsDomain A] [inst_3 : Algebra k A] [Algebra.FiniteType k A]\n  [Ring.DimensionLEOne A], IsRegularRing \u21a5(integralClosure A (FractionRing A))"
   },
   "Singularity.Curves.isRegularRing_integralClosure_of_charZero": {
    "axioms": [
@@ -366,7 +542,7 @@
    ],
    "file": "Singularity/Curves/Affine.lean",
    "kind": "theorem",
-   "line": 47,
+   "line": 59,
    "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsRegularRing \u21a5(integralClosure A (FractionRing A))"
   },
   "Singularity.Fidelity.codiag": {
