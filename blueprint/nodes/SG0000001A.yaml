@@ -1,0 +1,14 @@
+tag: SG0000001A
+kind: theorem
+title: Curves
+statement: 'For each $p$, each variety of dimension at most 1 has a resolution: the normalization.'
+sources:
+- paper: Curves
+uses:
+- SG00000006
+- SG0000000M
+- SG0000000J
+lean:
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_one
+tier: T5

@@ -1,0 +1,14 @@
+key: Tei14
+title: Teissier, arXiv:1401.5204; follow-ups arXiv:1807.04187, 2301.10636, 2311.12456
+tag: S
+tier: T6
+why: Overweight deformations
+year: 1807
+arxiv:
+- '1401.5204'
+- '1807.04187'
+- '2301.10636'
+- '2311.12456'
+lean: none
+use:
+- state

@@ -1,0 +1,11 @@
+key: HP19a
+title: Hauser-Perlega, J. Algebraic Geom. 28 (2019), arXiv:1802.05010
+tag: P
+tier: T4
+why: The cycle that disproves Moh's stability
+year: 2019
+arxiv:
+- '1802.05010'
+lean: none
+use:
+- ex

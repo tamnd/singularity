@@ -1,0 +1,8 @@
+key: Cart
+title: Stacks 01WR
+tag: S
+tier: T1
+why: Effective Cartier divisors, invertible sheaves
+lean: base, PR (#44200)
+use:
+- reuse

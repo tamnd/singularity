@@ -1,0 +1,8 @@
+key: Dim
+title: Krull dimension of varieties
+tag: S
+tier: T1
+why: '`topologicalKrullDim` bridge, dimension of fibres'
+lean: partly ML
+use:
+- prove

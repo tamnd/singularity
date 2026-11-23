@@ -1,0 +1,9 @@
+key: Ful93
+title: Fulton, Introduction to Toric Varieties (1993); Cox-Little-Schenck (2011)
+tag: S
+tier: T3
+why: Toric varieties, fans, subdivisions
+year: 1993
+lean: partly (polyhedral cones in ML)
+use:
+- prove

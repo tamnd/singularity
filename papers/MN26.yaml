@@ -1,0 +1,11 @@
+key: MN26
+title: Martínez-Núñez, arXiv:2611.18258
+tag: P
+tier: T8
+why: T-varieties of complexity $\le 3$
+arxiv:
+- '2611.18258'
+lean: none
+use:
+- state
+notes: 'The plan in the corpus table: state (R9).'

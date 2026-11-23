@@ -1,0 +1,11 @@
+key: CP14
+title: Cossart-Piltant, RACSAM 108 (2014); arXiv:1203.2484
+tag: S
+tier: T5
+why: Mixed char, small multiplicity
+year: 2014
+arxiv:
+- '1203.2484'
+lean: none
+use:
+- read

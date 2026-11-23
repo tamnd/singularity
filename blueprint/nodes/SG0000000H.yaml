@@ -1,0 +1,9 @@
+tag: SG0000000H
+kind: theorem
+title: Localizations of a regular local ring
+statement: The localization of a regular local ring at a prime ideal is a regular local ring.
+sources:
+- paper: Ser55
+lean:
+  statement: Singularity.IsRegularLocalRing.localization
+tier: T1

@@ -1,0 +1,11 @@
+tag: SG00000004
+kind: definition
+title: Resolution of a scheme
+statement: 'A morphism $\pi : Y \to X$ is a resolution of $X$ when $Y$ is regular, $\pi$ is proper, $\pi$ is an isomorphism over an open set $U$ of $X$ that contains the regular locus, and the inverse image of $U$ is dense in $Y$.'
+uses:
+- SG00000001
+- SG00000002
+lean:
+  statement: Singularity.IsResolution
+tier: S
+notes: Spec 06.1. The density condition stops a trivial $Y$, and the condition over the regular locus stops an alteration from counting as a resolution. The fidelity checks F2 and F3 test both conditions.

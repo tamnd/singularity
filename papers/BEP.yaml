@@ -1,0 +1,14 @@
+key: BEP
+title: Bravo-Encinas-Pascual-Escudero, arXiv:1802.02566, 1811.12203; Bravo-Encinas, arXiv:1912.00006; Bravo-Encinas-Guillán-Rial, arXiv:2307.11489
+tag: S
+tier: T4
+why: Nash multiplicity sequences
+year: 1802
+arxiv:
+- '1802.02566'
+- '1811.12203'
+- '1912.00006'
+- '2307.11489'
+lean: none
+use:
+- prove

@@ -1,0 +1,13 @@
+tag: SG0000000R
+kind: theorem
+title: Bennett's theorem
+statement: Under a permissible blowup, the Hilbert-Samuel function at a point above does not go up.
+sources:
+- paper: Benn70
+uses:
+- SG0000000Q
+- SG0000000S
+- SG0000000T
+lean:
+  statement: Singularity.hilbertSamuel_blowup_le
+tier: T1

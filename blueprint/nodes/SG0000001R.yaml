@@ -1,0 +1,14 @@
+tag: SG0000001R
+kind: conjecture
+title: A weighted invariant in characteristic $p$
+statement: There is an invariant of a singular point in characteristic $p$, of the form of the weighted invariant, that goes down under a weighted blowup of a fourfold. This is a research target of route R4. It is open.
+sources:
+- paper: Abr25
+uses:
+- SG0000001Q
+- SG00000007
+lean:
+  statement: Singularity.WeightedInvariantCharP
+tier: T8
+route:
+- R4

@@ -1,0 +1,8 @@
+key: EGA4-7
+title: EGA IV §7
+tag: S
+tier: T1
+why: Excellent rings, openness of the regular locus
+lean: St (`IsExcellent`)
+use:
+- prove

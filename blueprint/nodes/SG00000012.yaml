@@ -1,0 +1,11 @@
+tag: SG00000012
+kind: theorem
+title: Hironaka's polyhedra game has a winning strategy
+statement: The first player has a winning strategy in Hironaka's polyhedra game.
+sources:
+- paper: Spi83
+uses:
+- SG00000011
+lean:
+  statement: Singularity.polyhedraGame_win
+tier: T3

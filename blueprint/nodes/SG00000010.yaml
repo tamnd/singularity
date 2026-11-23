@@ -1,0 +1,9 @@
+tag: SG00000010
+kind: definition
+title: The defect of an extension
+statement: For a finite extension of henselian valued fields, the defect is the degree divided by the product of the ramification index and the residue degree. It is a power of $p$.
+sources:
+- paper: Kuh-book
+lean:
+  statement: Singularity.Valuation.defect
+tier: T2

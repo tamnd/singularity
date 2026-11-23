@@ -1,0 +1,11 @@
+tag: SG0000000C
+kind: counterexample
+title: Smooth is too strong over an imperfect field
+statement: Over $k = \mathbb{F}_p(t)$ there is a regular curve that is not smooth over $k$. So the statement with smooth in place of regular is false over an imperfect field.
+sources:
+- paper: RegSm
+uses:
+- SG00000002
+lean:
+  statement: Singularity.exists_regular_not_smooth
+tier: S

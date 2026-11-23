@@ -1,0 +1,10 @@
+tag: SG0000000Z
+kind: definition
+title: Key polynomials
+statement: MacLane's key polynomials and augmented valuations for a simple extension of a valued field.
+sources:
+- paper: Mac36
+- paper: HMOS22
+lean:
+  statement: Singularity.KeyPolynomial
+tier: T2

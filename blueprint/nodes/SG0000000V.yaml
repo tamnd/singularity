@@ -1,0 +1,9 @@
+tag: SG0000000V
+kind: definition
+title: Simple normal crossings
+statement: A divisor on a regular scheme has simple normal crossings when its components are regular and meet transversally.
+sources:
+- paper: SNC
+lean:
+  statement: Singularity.IsSncDivisor
+tier: T1

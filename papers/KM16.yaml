@@ -1,0 +1,11 @@
+key: KM16
+title: Kawanoue-Matsuki, arXiv:1205.4556, 1507.05195
+tag: P
+tier: T5
+why: Surfaces in the IFP
+arxiv:
+- '1205.4556'
+- '1507.05195'
+lean: none
+use:
+- prove

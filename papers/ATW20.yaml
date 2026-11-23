@@ -1,0 +1,12 @@
+key: ATW20
+title: Abramovich-Temkin-Włodarczyk, JEMS 22 (2020), arXiv:1709.03185; ANT 14 (2020), arXiv:1709.03206
+tag: P
+tier: T8
+why: Toroidal orbifolds
+year: 2020
+arxiv:
+- '1709.03185'
+- '1709.03206'
+lean: none
+use:
+- prove

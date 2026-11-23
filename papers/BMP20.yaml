@@ -1,0 +1,11 @@
+key: BMP20
+title: Bhatt et al., arXiv:2012.15801
+tag: P
+tier: T5
+why: MMP for threefolds in mixed char; resolution statements
+year: 2012
+arxiv:
+- '2012.15801'
+lean: none
+use:
+- read

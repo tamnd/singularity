@@ -1,0 +1,11 @@
+key: Lip78
+title: Lipman, Ann. of Math. 107 (1978)
+tag: S
+tier: T5
+why: Excellent surfaces; `resolutionInDim_two`
+year: 1978
+lean: St (`exists_isResolution_of_isExcellent_of_ringKrullDim_eq_two`)
+use:
+- prove
+- bridge
+notes: 'The plan in the corpus table: prove, or review and bridge (Q-07).'

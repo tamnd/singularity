@@ -1,0 +1,9 @@
+key: EGA4
+title: Grothendieck, EGA IV (1964 to 1967)
+tag: S
+tier: T0
+why: Excellence (§7), regular and smooth morphisms (§6, §17), limits (§8)
+year: 1964
+lean: partly ML
+use:
+- read

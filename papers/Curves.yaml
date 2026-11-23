@@ -1,0 +1,8 @@
+key: Curves
+title: normalization of curves
+tag: S
+tier: T5
+why: '`resolutionInDim_one`'
+lean: none
+use:
+- prove

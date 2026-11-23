@@ -1,0 +1,10 @@
+key: DM69
+title: Deligne-Mumford (1969)
+tag: S
+tier: T7
+why: Stable curves and their moduli, used by de Jong
+year: 1969
+lean: none
+use:
+- state
+notes: 'The plan in the corpus table: state (Q-08).'

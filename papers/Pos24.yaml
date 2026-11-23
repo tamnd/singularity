@@ -1,0 +1,10 @@
+key: Pos24
+title: Posva, arXiv:2405.05735
+tag: P
+tier: T8
+why: 1-foliations in char $p$
+arxiv:
+- '2405.05735'
+lean: none
+use:
+- read

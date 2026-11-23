@@ -1,0 +1,11 @@
+key: Moh87
+title: Moh, Publ. RIMS 23 (1987)
+tag: S
+tier: T4
+why: The one-step bound on the residual order; the false stability claim
+year: 1987
+lean: none
+use:
+- prove
+- ex
+notes: 'The plan in the corpus table: prove (bound), ex (failure).'

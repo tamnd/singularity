@@ -1,0 +1,12 @@
+key: Kol20
+title: Kollár, arXiv:2012.05327, 2102.03162
+tag: P
+tier: T5
+why: Log and projective resolution, dimension $\le 3$
+year: 2012
+arxiv:
+- '2012.05327'
+- '2102.03162'
+lean: none
+use:
+- state

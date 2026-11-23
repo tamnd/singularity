@@ -1,0 +1,10 @@
+key: BBE25
+title: Benito-Bravo-Encinas, arXiv:2506.14993
+tag: P
+tier: T4
+why: The Samuel slope characterizes regularity
+arxiv:
+- '2506.14993'
+lean: none
+use:
+- prove

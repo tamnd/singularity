@@ -1,0 +1,12 @@
+key: AQS24
+title: Abramovich-Quek-Schober, arXiv:2412.16426
+tag: P
+tier: T8
+why: Plane curves in char $p$, tangent space growth
+arxiv:
+- '2412.16426'
+lean: none
+use:
+- prove
+- ex
+notes: 'The plan in the corpus table: prove, ex.'

@@ -1,0 +1,9 @@
+tag: SG0000000W
+kind: definition
+title: Hasse-Schmidt derivations
+statement: Higher derivations and the differential operators of a polynomial ring in characteristic $p$.
+sources:
+- paper: HSDer
+lean:
+  statement: Singularity.HasseDeriv
+tier: T1

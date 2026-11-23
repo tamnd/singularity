@@ -1,0 +1,12 @@
+tag: SG0000000K
+kind: theorem
+title: The regular locus is open
+statement: The regular locus of a variety is open. For an excellent scheme the same holds.
+sources:
+- paper: EGA4-7
+uses:
+- SG00000001
+- SG0000000H
+lean:
+  statement: Singularity.regularLocus_isOpen
+tier: T1

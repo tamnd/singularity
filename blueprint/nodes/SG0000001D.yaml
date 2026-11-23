@@ -1,0 +1,17 @@
+tag: SG0000001D
+kind: theorem
+title: Threefolds
+statement: For each $p$, each variety of dimension at most 3 has a resolution (Cossart-Piltant).
+sources:
+- paper: CP08
+- paper: CP09
+- paper: CP19
+uses:
+- SG00000006
+- SG0000001B
+- SG0000001C
+- SG0000001F
+lean:
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_three
+tier: T5

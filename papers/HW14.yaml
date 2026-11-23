@@ -1,0 +1,10 @@
+key: HW14
+title: Hauser-Wagner, arXiv:1403.6789
+tag: P
+tier: T4
+why: Corrected residual order for $z^p + f(x, y)$
+arxiv:
+- '1403.6789'
+lean: none
+use:
+- prove

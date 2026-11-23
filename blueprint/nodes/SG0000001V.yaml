@@ -1,0 +1,13 @@
+tag: SG0000001V
+kind: theorem
+title: Quasi-excellent schemes of dimension at most 3
+statement: Each reduced quasi-excellent Noetherian scheme of dimension at most 3 has a resolution, also in mixed characteristic.
+sources:
+- paper: CP19
+uses:
+- SG0000001D
+lean:
+  statement: Singularity.resolution_quasiExcellent_three
+tier: T5
+route:
+- R8

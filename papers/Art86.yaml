@@ -1,0 +1,9 @@
+key: Art86
+title: Artin, "Lipman's proof of resolution of singularities for surfaces", in Arithmetic Geometry (1986)
+tag: S
+tier: T5
+why: A shorter account of Lipman
+year: 1986
+lean: none
+use:
+- read

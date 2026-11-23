@@ -1,0 +1,9 @@
+tag: SG0000000M
+kind: theorem
+title: Finiteness of normalization
+statement: The normalization of a variety is finite over it.
+sources:
+- paper: Nag62
+lean:
+  statement: Singularity.normalization_finite
+tier: T1

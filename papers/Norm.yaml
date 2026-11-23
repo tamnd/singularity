@@ -1,0 +1,8 @@
+key: Norm
+title: normalization of schemes; finiteness for varieties
+tag: S
+tier: T1
+why: Curves (T5), Lipman
+lean: ML (normalization), none for finiteness
+use:
+- prove

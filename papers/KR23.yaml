@@ -1,0 +1,11 @@
+key: KR23
+title: Kuhlmann-Rzepka, arXiv:1811.04396
+tag: P
+tier: T2
+why: Dependent and independent defect, deeply ramified fields
+year: 1811
+arxiv:
+- '1811.04396'
+lean: none
+use:
+- prove

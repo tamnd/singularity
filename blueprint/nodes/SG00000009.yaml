@@ -1,0 +1,14 @@
+tag: SG00000009
+kind: conjecture
+title: Purely inseparable hypersurfaces
+statement: For a field $k$ of characteristic $p$ and a polynomial $g$ in $n$ variables, the reduced hypersurface $z^p + g(x_1, \dots, x_n) = 0$ has a resolution. For $n \le 3$ this follows from the known cases. For $n = 4$ it is the first open case and the core of route R5.
+sources:
+- paper: HW14
+- paper: Hau08
+uses:
+- SG00000004
+lean:
+  statement: Singularity.PurelyInseparableHypersurfaceResolution
+tier: S
+route:
+- R5

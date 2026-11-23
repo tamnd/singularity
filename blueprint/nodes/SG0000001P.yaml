@@ -1,0 +1,13 @@
+tag: SG0000001P
+kind: theorem
+title: Hironaka's theorem
+statement: Each variety over a field of characteristic 0 has a resolution by a sequence of blowups along regular centres.
+sources:
+- paper: Hir64
+- paper: Wlo05
+uses:
+- SG0000000S
+- SG0000000V
+lean:
+  statement: Singularity.Base.hironaka
+tier: T8

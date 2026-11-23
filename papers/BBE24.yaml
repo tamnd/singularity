@@ -1,0 +1,11 @@
+key: BBE24
+title: Benito-Bravo-Encinas, Rev. Mat. Complut. 37 (2024), arXiv:2107.14188
+tag: P
+tier: T4
+why: The asymptotic Samuel function
+year: 2024
+arxiv:
+- '2107.14188'
+lean: none
+use:
+- prove

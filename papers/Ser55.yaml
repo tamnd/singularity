@@ -1,0 +1,9 @@
+key: Ser55
+title: Serre (1955); Auslander-Buchsbaum (1956)
+tag: S
+tier: T1
+why: 'Regular local rings: localizations are regular, regular implies UFD'
+year: 1955
+lean: 'ML (`IsRegularLocalRing`), PR (#28683, #35561, #29802, #46021, #39510)'
+use:
+- prove

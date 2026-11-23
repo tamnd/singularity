@@ -1,0 +1,10 @@
+key: Tem23
+title: Temkin, arXiv:2301.09160
+tag: P
+tier: T6
+why: Height reduction
+arxiv:
+- '2301.09160'
+lean: none
+use:
+- prove

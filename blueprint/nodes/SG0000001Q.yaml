@@ -1,0 +1,14 @@
+tag: SG0000001Q
+kind: theorem
+title: Resolution by weighted blowups
+statement: In characteristic 0, the weighted blowup at the centre of the invariant of Abramovich-Temkin-Włodarczyk makes the invariant go down.
+sources:
+- paper: ATW24
+- paper: McQ20
+uses:
+- SG0000000S
+lean:
+  statement: Singularity.weightedBlowup_invariant_lt
+tier: T8
+route:
+- R4

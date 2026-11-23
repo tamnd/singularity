@@ -1,0 +1,9 @@
+tag: SG00000001
+kind: definition
+title: The regular locus
+statement: The regular locus of a scheme $X$ is the set of points $x$ such that the local ring $\mathcal{O}_{X,x}$ is a regular local ring.
+sources:
+- paper: Ser55
+lean:
+  statement: Singularity.regularLocus
+tier: S

@@ -1,0 +1,14 @@
+tag: SG0000001E
+kind: theorem
+title: Local uniformization of Abhyankar valuations
+statement: An Abhyankar valuation of a function field over a field of any characteristic has local uniformization.
+sources:
+- paper: KK05
+uses:
+- SG0000000Y
+- SG0000000Z
+lean:
+  statement: Singularity.localUniformization_abhyankar
+tier: T6
+route:
+- R2

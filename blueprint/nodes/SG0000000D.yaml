@@ -1,0 +1,13 @@
+tag: SG0000000D
+kind: theorem
+title: Characteristic 0
+statement: For each $n$, each variety of dimension at most $n$ over a field of characteristic 0 has a resolution. The proof is a bridge to the Lean proof of Hironaka's theorem in resolutionorg/hironaka.
+sources:
+- paper: Hir64
+uses:
+- SG00000006
+- SG0000000F
+lean:
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_zero
+tier: S

@@ -1,0 +1,11 @@
+key: CP19
+title: Cossart-Piltant, J. Algebra 529 (2019), arXiv:1412.0868
+tag: P
+tier: T5
+why: Quasi-excellent schemes of dimension $\le 3$
+year: 2019
+arxiv:
+- '1412.0868'
+lean: none
+use:
+- prove

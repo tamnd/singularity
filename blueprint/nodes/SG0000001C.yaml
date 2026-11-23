@@ -1,0 +1,13 @@
+tag: SG0000001C
+kind: theorem
+title: Embedded resolution of surfaces
+statement: Each reduced surface in a regular threefold has an embedded resolution by permissible blowups, in a canonical way.
+sources:
+- paper: CJS20
+uses:
+- SG0000001B
+- SG0000000T
+- SG0000000V
+lean:
+  statement: Singularity.embeddedResolution_surface
+tier: T5

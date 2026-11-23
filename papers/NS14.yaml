@@ -1,0 +1,12 @@
+key: NS14
+title: Novacoski-Spivakovsky, arXiv:1204.4751, 1509.03122, survey 1509.06350
+tag: S
+tier: T2
+why: Reduction of LU to rank one
+arxiv:
+- '1204.4751'
+- '1509.03122'
+- '1509.06350'
+lean: none
+use:
+- prove

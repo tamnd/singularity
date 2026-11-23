@@ -1,0 +1,15 @@
+tag: SG0000001T
+kind: theorem
+title: Toric resolution
+statement: Each toric variety over a field of any characteristic has a toric resolution, from a regular subdivision of its fan.
+sources:
+- paper: KKMS
+- paper: Ful93
+uses:
+- SG00000004
+lean:
+  statement: Singularity.toric_resolution
+tier: T3
+route:
+- R7
+- R9

@@ -1,0 +1,11 @@
+key: BFZ23
+title: Bérczi-Fan-Zeng, arXiv:2307.00252
+tag: P
+tier: T3
+why: Learned strategies for the polyhedra game
+arxiv:
+- '2307.00252'
+lean: none
+use:
+- read
+notes: 'The plan in the corpus table: read, lab.'

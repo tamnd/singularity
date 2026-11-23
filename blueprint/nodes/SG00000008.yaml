@@ -1,0 +1,11 @@
+tag: SG00000008
+kind: conjecture
+title: Resolution of singularities in every dimension
+statement: For each prime $p$ and each $n$, each variety of dimension $n$ over a field of characteristic $p$ has a resolution.
+sources:
+- paper: Hau10
+uses:
+- SG00000006
+lean:
+  statement: Singularity.ResolutionOfSingularities
+tier: S

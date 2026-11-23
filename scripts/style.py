@@ -6,6 +6,8 @@ The rules are:
 2. No line break in the middle of a sentence. A line of a paragraph must not continue on the next line.
 3. No page break (a form feed or a LaTeX page break command).
 
+The YAML front matter of a Markdown file is checked for rules 1 and 3 only.
+
 The script prints each fault as path:line: message and exits with code 1 when it finds a fault.
 """
 
@@ -22,13 +24,16 @@ def check(path: pathlib.Path) -> list[str]:
     faults = []
     lines = path.read_text(encoding="utf-8").split("\n")
     fence = False
+    front = 0
+    if path.suffix == ".md" and lines and lines[0] == "---":
+        front = next((j for j in range(1, len(lines)) if lines[j] == "---"), 0) + 1
     for i, line in enumerate(lines, 1):
         for ch, name in DASHES.items():
             if ch in line:
                 faults.append(f"{path}:{i}: {name}")
         if PAGEBREAK.search(line):
             faults.append(f"{path}:{i}: page break")
-        if path.suffix != ".md":
+        if path.suffix != ".md" or i <= front:
             continue
         if line.lstrip().startswith(("```", "~~~")):
             fence = not fence

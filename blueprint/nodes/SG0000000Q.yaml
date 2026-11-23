@@ -1,0 +1,9 @@
+tag: SG0000000Q
+kind: definition
+title: The Hilbert-Samuel function
+statement: For a Noetherian local ring $(R, \mathfrak{m})$, the function $n \mapsto \ell(R/\mathfrak{m}^{n+1})$ and the multiplicity of $R$.
+sources:
+- paper: Benn70
+lean:
+  statement: Singularity.hilbertSamuel
+tier: T1

@@ -1,0 +1,11 @@
+key: BV10
+title: Bravo-Villamayor, Adv. Math. 224 (2010), arXiv:0807.4308
+tag: S
+tier: T4
+why: Stratification, simplification of the singular locus
+year: 2010
+arxiv:
+- '0807.4308'
+lean: none
+use:
+- prove

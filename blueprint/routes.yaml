@@ -1,0 +1,96 @@
+# The research routes to resolution in dimension 4. The text comes from spec 04. The weights set the share of the research budget for the first year.
+- id: R1
+  title: Characteristic polyhedra
+  weight: 0.25
+  idea: Hironaka's characteristic polyhedra, after Cossart-Jannsen-Saito and Cossart-Piltant.
+  known: Known up to dim 2 (all excellent), dim 3 (Cossart-Piltant).
+  obstruction: The dim 3 proof uses projections to dimension 2 and case analysis that does not scale; no invariant known that drops for $z^p + g(x_1, \dots, x_4)$.
+  first: '1. The characteristic polyhedron: definition, existence by vertex preparation, independence of $z$ (Hironaka 1967; Cossart-Schober for the non-complete case). Tier T4.
+
+    2. The non-increase of the Hilbert-Samuel function under permissible blowups (Hironaka, Bennett, Singh). Tier T4.
+
+    3. The Cossart-Piltant invariants for $n = 3$, stated in Lean, and their dimension 4 analogues stated as conjectures, each with a lab experiment (E4 of 13.3).'
+- id: R2
+  title: Local uniformization and patching
+  weight: 0.2
+  idea: 'Valuations: local uniformization, then patching.'
+  known: Known up to dim 3 (Abhyankar for $p > 5$, Cossart-Piltant for all $p$); Abhyankar valuations in all dims (Knaf-Kuhlmann).
+  obstruction: Valuations with defect in dim 4; patching (Zariski's method) is known only up to dim 3.
+  first: '1. Tier T2: valuations, the Zariski-Riemann space and its quasi-compactness, the Abhyankar inequality, key polynomials (MacLane, Vaquié, Herrera-Olalla-Mahboub-Spivakovsky, Novacoski), defect. Mathlib has valuations and Krull valuations, and no Zariski-Riemann space (PR #31938 was closed).
+
+    2. `localUniformization_abhyankar` (Knaf-Kuhlmann): a full formal proof is a milestone (S5).
+
+    3. Temkin''s inseparable local uniformization, stated with its nodes.
+
+    4. Zariski''s patching theorem in dimension $\le 3$, stated and then proved, so that the exact place where dimension 3 is used is in Lean. [U] A precise Lean statement of "patching in dimension $n$" as a separate open problem is itself useful: it splits `ResolutionDimFourCharP` into two named open nodes.'
+- id: R3
+  title: Rees algebras, elimination and idealistic filtrations
+  weight: 0.15
+  idea: Rees algebras, elimination, idealistic filtrations (Villamayor, Benito, Bravo, Encinas, Kawanoue, Matsuki).
+  known: Known up to dim 2 in all char; programs for all dims, with invariants defined but not shown to drop.
+  obstruction: The elimination algebra loses information in char p; the "monomial" end case is not monomial.
+  first: '1. Hasse-Schmidt derivations and differential operators on smooth $k$-algebras in char p (tier T1, a gap in Mathlib).
+
+    2. Rees algebras with a differential structure, their integral closure, and the closure under differential operators (Villamayor; Kawanoue).
+
+    3. The Nash multiplicity sequence, its upper semi-continuity, and its behaviour under blowups.
+
+    4. Benito-Villamayor''s invariant and its non-increase.
+
+    5. The asymptotic Samuel function and the Samuel slope, with the theorem that the slope characterizes regularity.'
+- id: R4
+  title: Weighted and cobordant blowups
+  weight: 0.1
+  idea: Weighted and cobordant blowups (Abramovich-Temkin-Włodarczyk, McQuillan, Włodarczyk).
+  known: Known up to char 0, all dims.
+  obstruction: The weighted centre is defined from derivatives; in char p its invariant does not drop.
+  first: Temkin's Dream axioms, stated in Lean for a ring with a module of derivations, and the theorem that they imply resolution, in the form that does not need char 0. Weighted blowups and stack-theoretic Proj (the base and Mathlib do not have stacks; the project uses the coarse space and the toric charts, which suffices for statements). The ATW invariant, stated over any field.
+- id: R5
+  title: The purely inseparable core
+  weight: 0.15
+  idea: 'The core case $z^p + g$: residual order, kangaroo points, secondary invariants (Moh, Hauser and coauthors).'
+  known: Known up to surfaces (Hauser-Wagner, Hauser-Perlega).
+  obstruction: 'Find P2 of 3.4: an invariant that pays for the increases of the residual order.'
+  first: 'Tier T4.
+
+    1. The order, the residual order and the coefficient ideal of $z^p + g$, as Lean definitions with computable versions over $\mathbb{F}_p$.
+
+    2. The transformation of $f$ under a point or a regular curve blowup in each chart, as explicit formulas (13.4).
+
+    3. Moh''s one-step bound, stated and proved; the Hauser-Perlega cycle as a certified example (13.4).
+
+    4. Hauser-Perlega''s characterization of kangaroo points.
+
+    5. Hauser-Wagner''s correction and Hauser-Perlega''s modified residual order for surfaces, and their monotonicity.
+
+    6. Bérczi''s two conjectures, as nodes of kind `conjecture`, with lab experiment E8.
+
+    7. [U] A list of candidate secondary invariants for $n = 4$, each a node of kind `conjecture` with its lab test.'
+- id: R6
+  title: Alterations and descent
+  weight: 0.05
+  idea: Alterations and descent.
+  known: Known up to alterations exist in all dims (de Jong, Gabber, Temkin's $p$-alterations).
+  obstruction: The quotient by a wild group (a $p$-group) is not known to have a resolution.
+  first: See spec 04 for the first steps of this route.
+- id: R7
+  title: Toric, arc and non-archimedean methods
+  weight: 0.05
+  idea: 'Toric and arc methods: Teissier''s overweight deformations, jet schemes, Berkovich spaces.'
+  known: Known up to some cases of local uniformization.
+  obstruction: A general reduction to the toric case in char p.
+  first: See spec 04 for the first steps of this route.
+- id: R8
+  title: Mixed characteristic
+  weight: 0.0
+  idea: Mixed characteristic and the generic fibre.
+  known: Known up to dim 2 (Cossart-Jannsen-Saito), arithmetic threefolds (Cossart-Piltant).
+  obstruction: A family over $\mathbb{Z}_p$ whose fibres are the variety; the special fibre does not follow.
+  first: See spec 04 for the first steps of this route.
+- id: R9
+  title: Special classes in every dimension
+  weight: 0.05
+  idea: 'Special classes in every dimension: torus actions of small complexity, binomial and toroidal varieties.'
+  known: Known up to T-varieties of complexity $\le 3$ (Martínez-Núñez 2026), binomial (Włodarczyk 2022, Abramovich-Schober).
+  obstruction: No general way to produce the torus action.
+  first: Toric resolution in every characteristic (KKMS) as a theorem of the library; the theorem of Martínez-Núñez, stated, with its dependence on `resolutionInDim_three` as a hypothesis.

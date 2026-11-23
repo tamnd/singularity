@@ -1,0 +1,8 @@
+key: SNC
+title: simple and strict normal crossings
+tag: S
+tier: T1
+why: The end state of every resolution
+lean: base, rl
+use:
+- reuse

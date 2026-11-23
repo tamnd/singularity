@@ -1,0 +1,12 @@
+tag: SG00000013
+kind: definition
+title: Order and residual order
+statement: The order of a hypersurface at a point, and for $z^p + f$ the residual order of $f$ after the coordinate changes that remove $p$-th powers.
+sources:
+- paper: Hau10
+- paper: HW14
+uses:
+- SG0000000W
+lean:
+  statement: Singularity.residualOrder
+tier: T4

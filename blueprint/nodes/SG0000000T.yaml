@@ -1,0 +1,11 @@
+tag: SG0000000T
+kind: definition
+title: Permissible centre
+statement: A closed regular subscheme $Z$ of $X$ is permissible when $X$ is normally flat along $Z$.
+sources:
+- paper: Hir64-perm
+uses:
+- SG0000000S
+lean:
+  statement: Singularity.IsPermissible
+tier: T1

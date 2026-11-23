@@ -1,0 +1,11 @@
+key: HMOS22
+title: Herrera-Mahboub-Olalla-Spivakovsky, J. Singularities 25 (2022), arXiv:1406.0657
+tag: S
+tier: T2
+why: Key polynomials for simple extensions
+year: 2022
+arxiv:
+- '1406.0657'
+lean: none
+use:
+- prove

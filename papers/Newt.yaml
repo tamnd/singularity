@@ -1,0 +1,8 @@
+key: Newt
+title: Newton polyhedra, their faces and initial forms
+tag: S
+tier: T3
+why: Every invariant of T4
+lean: partly ML
+use:
+- prove
