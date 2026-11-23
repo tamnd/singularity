@@ -1,0 +1,13 @@
+tag: SG00000016
+kind: example
+title: A kangaroo point
+statement: An explicit hypersurface $z^p + f$ and a permissible blowup at which the residual order goes up. The example is a certified Lean computation.
+sources:
+- paper: Hau08
+uses:
+- SG00000013
+lean:
+  statement: Singularity.Examples.kangaroo
+tier: T4
+route:
+- R5

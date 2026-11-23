@@ -1,0 +1,16 @@
+tag: SG0000001B
+kind: theorem
+title: Surfaces
+statement: For each $p$, each variety of dimension at most 2 has a resolution (Lipman, for all excellent surfaces).
+sources:
+- paper: Lip78
+- paper: Art86
+uses:
+- SG00000006
+- SG0000001A
+- SG0000000S
+- SG0000000M
+lean:
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_two
+tier: T5

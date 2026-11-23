@@ -1,0 +1,9 @@
+key: ZS2
+title: Zariski-Samuel, Commutative Algebra II (1960), Chapter VI
+tag: S
+tier: T2
+why: Valuation rings, the Zariski-Riemann space
+year: 1960
+lean: 'ML (valuations), none (Zariski-Riemann, PR #31938 closed)'
+use:
+- prove

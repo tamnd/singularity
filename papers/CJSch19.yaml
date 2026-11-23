@@ -1,0 +1,11 @@
+key: CJSch19
+title: Cossart-Jannsen-Schober, RACSAM 113 (2019), arXiv:1805.10660
+tag: S
+tier: T4
+why: The polyhedron is intrinsic
+year: 2019
+arxiv:
+- '1805.10660'
+lean: none
+use:
+- prove

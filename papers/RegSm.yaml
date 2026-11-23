@@ -1,0 +1,8 @@
+key: RegSm
+title: regular and smooth (Stacks 00TV, 07NM, 038V)
+tag: S
+tier: T1
+why: Smooth implies regular; regular implies smooth over a perfect field; separable base change keeps regularity
+lean: partly base
+use:
+- prove

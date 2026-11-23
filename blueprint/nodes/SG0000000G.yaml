@@ -1,0 +1,11 @@
+tag: SG0000000G
+kind: theorem
+title: The Jacobian criterion
+statement: A point of a hypersurface $f = 0$ in affine space over a perfect field is regular when a partial derivative of $f$ does not vanish at the point.
+sources:
+- paper: Jac
+uses:
+- SG0000000F
+lean:
+  statement: Singularity.isRegular_of_jacobian
+tier: T1

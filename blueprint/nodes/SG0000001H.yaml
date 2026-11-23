@@ -1,0 +1,15 @@
+tag: SG0000001H
+kind: conjecture
+title: Local uniformization in dimension 4
+statement: Each valuation of a function field of transcendence degree 4 over a field of characteristic $p$ has local uniformization. This is open.
+sources:
+- paper: fc-LU
+- paper: CM17
+uses:
+- SG0000001F
+- SG00000010
+lean:
+  statement: Singularity.LocalUniformizationFour
+tier: T6
+route:
+- R2

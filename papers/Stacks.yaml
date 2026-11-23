@@ -1,0 +1,8 @@
+key: Stacks
+title: The Stacks project
+tag: S
+tier: T0
+why: Definitions and tags for every scheme notion; AxiomMath/Stacks follows its tags
+lean: St (Core and Frontier)
+use:
+- read

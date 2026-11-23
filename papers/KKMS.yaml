@@ -1,0 +1,9 @@
+key: KKMS
+title: Kempf-Knudsen-Mumford-Saint-Donat, Toroidal Embeddings I, LNM 339 (1973)
+tag: S
+tier: T3
+why: Toric and toroidal resolution, in every characteristic
+year: 1973
+lean: none
+use:
+- prove

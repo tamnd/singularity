@@ -1,0 +1,16 @@
+tag: SG0000001K
+kind: theorem
+title: De Jong's alterations
+statement: 'Each variety over a field has a regular alteration: a proper, surjective, generically finite map from a regular variety.'
+sources:
+- paper: dJ96
+- paper: DM69
+uses:
+- SG00000002
+- SG0000000V
+lean:
+  statement: Singularity.exists_regular_alteration
+tier: T7
+route:
+- R6
+notes: 'Open question Q-08: the first form takes the moduli of stable curves as a hypothesis.'

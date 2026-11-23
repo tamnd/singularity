@@ -1,0 +1,14 @@
+tag: SG0000001G
+kind: theorem
+title: Inseparable local uniformization
+statement: Each valuation of a function field has local uniformization after a finite purely inseparable extension of the function field.
+sources:
+- paper: Tem13
+uses:
+- SG0000000X
+- SG00000010
+lean:
+  statement: Singularity.localUniformization_inseparable
+tier: T6
+route:
+- R2

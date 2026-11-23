@@ -1,0 +1,10 @@
+tag: SG00000006
+kind: definition
+title: Resolution in dimension $n$ and characteristic $p$
+statement: For a prime or zero $p$ and a natural number $n$, the statement that each variety of dimension at most $n$ over a field of characteristic $p$ has a resolution.
+uses:
+- SG00000004
+- SG00000005
+lean:
+  statement: Singularity.ResolutionInDim
+tier: S

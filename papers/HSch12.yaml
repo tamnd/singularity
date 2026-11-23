@@ -1,0 +1,10 @@
+key: HSch12
+title: Hauser-Schicho, "A game for the resolution of singularities", arXiv:1010.0163
+tag: S
+tier: T3
+why: The char $p$ game
+arxiv:
+- '1010.0163'
+lean: none
+use:
+- prove

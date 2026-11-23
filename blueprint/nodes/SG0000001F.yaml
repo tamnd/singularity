@@ -1,0 +1,14 @@
+tag: SG0000001F
+kind: theorem
+title: Local uniformization in dimension 3
+statement: Each valuation of a function field of transcendence degree 3 over a field of characteristic $p$ has local uniformization.
+sources:
+- paper: CP08
+uses:
+- SG0000001E
+- SG00000010
+lean:
+  statement: Singularity.localUniformization_three
+tier: T6
+route:
+- R2

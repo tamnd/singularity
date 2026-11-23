@@ -1,0 +1,13 @@
+tag: SG0000001M
+kind: theorem
+title: Gabber's prime to $\ell$ alterations
+statement: For a prime $\ell \neq p$, each variety has a regular alteration of degree prime to $\ell$.
+sources:
+- paper: ILO14
+uses:
+- SG0000001K
+lean:
+  statement: Singularity.exists_regular_alteration_coprime
+tier: T7
+route:
+- R6

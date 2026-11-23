@@ -1,0 +1,10 @@
+tag: SG0000000A
+kind: example
+title: A regular scheme resolves itself
+statement: If $X$ is regular, the identity $X \to X$ is a resolution of $X$. This is the first positive instance F2.
+uses:
+- SG00000004
+lean:
+  statement: Singularity.isResolution_id
+  proof: Singularity.isResolution_id
+tier: S

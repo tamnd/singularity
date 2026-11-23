@@ -1,0 +1,9 @@
+key: Mat
+title: Matsumura, Commutative Ring Theory (1986)
+tag: S
+tier: T0
+why: Regular rings, Hasse-Schmidt derivations (§27), excellence (§32)
+year: 1986
+lean: partly ML
+use:
+- read

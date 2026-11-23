@@ -1,0 +1,8 @@
+key: Pil
+title: Piltant, "An axiomatic version of Zariski's patching theorem"
+tag: S
+tier: T6
+why: Patching in a form to formalize
+lean: none
+use:
+- prove

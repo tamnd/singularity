@@ -1,0 +1,14 @@
+tag: SG0000001N
+kind: theorem
+title: Temkin's $p$-alterations
+statement: Each variety over a perfect field of characteristic $p$ has a regular alteration whose degree is a power of $p$.
+sources:
+- paper: Tem17
+uses:
+- SG0000001K
+- SG0000001G
+lean:
+  statement: Singularity.exists_regular_p_alteration
+tier: T7
+route:
+- R6

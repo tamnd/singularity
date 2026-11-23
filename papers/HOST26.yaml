@@ -1,0 +1,10 @@
+key: HOST26
+title: Herrera Govantes-Olalla Acosta-Spivakovsky-Teissier, arXiv:2607.11223
+tag: P
+tier: T6
+why: Tight extensions
+arxiv:
+- '2607.11223'
+lean: none
+use:
+- prove

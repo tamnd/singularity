@@ -1,0 +1,12 @@
+key: ABQTW25
+title: arXiv:2503.13341, 2503.13345, 2503.00926
+tag: P
+tier: T8
+why: Relative, logarithmic, foliated
+arxiv:
+- '2503.13341'
+- '2503.13345'
+- '2503.00926'
+lean: none
+use:
+- read

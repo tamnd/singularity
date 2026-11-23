@@ -1,0 +1,7 @@
+tag: SG00000005
+kind: definition
+title: Variety over a field
+statement: A variety over a field $k$ is a reduced scheme that is separated and of finite type over $k$.
+lean:
+  statement: Singularity.IsVariety
+tier: S

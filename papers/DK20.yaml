@@ -1,0 +1,11 @@
+key: DK20
+title: Dutta-Kuhlmann, Pacific J. Math. 307 (2020), arXiv:1912.06337
+tag: S
+tier: T2
+why: Elimination of tame ramification
+year: 2020
+arxiv:
+- '1912.06337'
+lean: none
+use:
+- read

@@ -1,0 +1,9 @@
+key: BH
+title: Bruns-Herzog, Cohen-Macaulay Rings (1993)
+tag: S
+tier: T0
+why: Depth, Cohen-Macaulay, Hilbert-Samuel
+year: 1993
+lean: PR (#26218 and others)
+use:
+- read

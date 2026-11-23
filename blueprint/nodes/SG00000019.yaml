@@ -1,0 +1,13 @@
+tag: SG00000019
+kind: theorem
+title: The Samuel slope characterizes regularity
+statement: A Noetherian local ring is regular if and only if its Samuel slope is infinite.
+sources:
+- paper: BBE25
+uses:
+- SG0000000Q
+lean:
+  statement: Singularity.samuelSlope_eq_top_iff
+tier: T4
+route:
+- R3

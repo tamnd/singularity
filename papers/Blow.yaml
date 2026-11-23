@@ -1,0 +1,13 @@
+key: Blow
+title: Stacks 0806; Mayeux, arXiv:2609.28489 (2026)
+tag: P
+tier: T1
+why: 'Blowups: universal property, Proj of the Rees algebra, charts'
+year: 2026
+arxiv:
+- '2609.28489'
+lean: base, rl, St, Mayeux
+use:
+- reuse
+- bridge
+notes: 'The plan in the corpus table: reuse and bridge.'

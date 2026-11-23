@@ -1,0 +1,13 @@
+key: BenV13
+title: Benito-Villamayor, Compositio 149 (2013), arXiv:1004.1803; arXiv:1103.3462, 1103.3464
+tag: P
+tier: T4
+why: The elimination invariant in char $p$
+year: 2013
+arxiv:
+- '1004.1803'
+- '1103.3462'
+- '1103.3464'
+lean: none
+use:
+- prove

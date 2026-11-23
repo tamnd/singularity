@@ -1,0 +1,14 @@
+tag: SG00000015
+kind: theorem
+title: Moh's one-step bound
+statement: Under a permissible blowup of $z^p + f$ in dimension 3, the residual order goes up by at most a bound that depends on $p$ only.
+sources:
+- paper: Moh87
+uses:
+- SG00000013
+lean:
+  statement: Singularity.moh_bound
+tier: T4
+route:
+- R5
+notes: The stability claim of the same paper is false (HP19a). Expert question 5 of the spec asks for the exact bound that survives.

@@ -1,0 +1,11 @@
+key: Cut15
+title: Cutkosky, Math. Ann. 362 (2015), arXiv:1404.7459
+tag: P
+tier: T6
+why: Local monomialization fails
+year: 2015
+arxiv:
+- '1404.7459'
+lean: none
+use:
+- ex

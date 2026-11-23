@@ -1,0 +1,10 @@
+tag: SG0000000E
+kind: theorem
+title: The bridge to formal-conjectures
+statement: Over a perfect field and for an integral $X$, the statement of the project in dimension $n$ is equivalent to the statement `resolution_of_singularities` of google-deepmind/formal-conjectures in dimension $n$.
+uses:
+- SG00000006
+- SG0000000F
+lean:
+  statement: Singularity.Bridge.resolutionInDim_iff_formalConjectures
+tier: S

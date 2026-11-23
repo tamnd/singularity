@@ -1,0 +1,9 @@
+tag: SG00000002
+kind: definition
+title: Regular scheme
+statement: A scheme $X$ is regular when each local ring $\mathcal{O}_{X,x}$ is a regular local ring.
+sources:
+- paper: Ser55
+lean:
+  statement: Singularity.IsRegularScheme
+tier: S

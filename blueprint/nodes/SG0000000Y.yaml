@@ -1,0 +1,9 @@
+tag: SG0000000Y
+kind: theorem
+title: The Abhyankar inequality
+statement: For a valuation $\nu$ of a function field $K/k$, the rational rank plus the transcendence degree of the residue field is at most the transcendence degree of $K/k$.
+sources:
+- paper: Abh56
+lean:
+  statement: Singularity.abhyankar_inequality
+tier: T2

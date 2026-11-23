@@ -1,0 +1,13 @@
+tag: SG0000001S
+kind: theorem
+title: Binomial varieties in every characteristic
+statement: Each binomial variety has a resolution, in every characteristic.
+sources:
+- paper: AS22
+uses:
+- SG00000004
+lean:
+  statement: Singularity.binomial_resolution
+tier: T8
+route:
+- R9

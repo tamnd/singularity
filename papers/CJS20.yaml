@@ -1,0 +1,11 @@
+key: CJS20
+title: Cossart-Jannsen-Saito, LNM 2270 (2020), arXiv:0905.2191
+tag: P
+tier: T5
+why: Canonical embedded resolution of excellent surfaces
+year: 2020
+arxiv:
+- '0905.2191'
+lean: none
+use:
+- prove

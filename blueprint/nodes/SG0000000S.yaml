@@ -1,0 +1,10 @@
+tag: SG0000000S
+kind: definition
+title: The blowup along a closed subscheme
+statement: The blowup of $X$ along a closed subscheme $Z$, with its universal property and its description as $\operatorname{Proj}$ of the Rees algebra.
+sources:
+- paper: Blow
+lean:
+  statement: Singularity.IsBlowUpAlong
+tier: T1
+notes: 'Open question Q-16 of the spec: the project takes the API of resolutionorg/hironaka, with a proved equivalence to the others.'

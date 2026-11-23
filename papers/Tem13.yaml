@@ -1,0 +1,11 @@
+key: Tem13
+title: Temkin, J. Algebra 373 (2013), arXiv:0804.1554
+tag: P
+tier: T6
+why: Inseparable local uniformization
+year: 2013
+arxiv:
+- '0804.1554'
+lean: none
+use:
+- prove

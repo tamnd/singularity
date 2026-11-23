@@ -1,0 +1,10 @@
+tag: SG0000000B
+kind: counterexample
+title: Two copies of a regular scheme are not a resolution
+statement: For a regular nonempty $X$, the map $X \sqcup X \to X$ is proper, $X \sqcup X$ is regular, and the inverse image of $X$ is dense, but the map is not an isomorphism. So the condition over the regular locus is necessary. This is the negative instance F3.
+uses:
+- SG00000004
+lean:
+  statement: Singularity.not_isResolution_codiag
+  proof: Singularity.not_isResolution_codiag
+tier: S

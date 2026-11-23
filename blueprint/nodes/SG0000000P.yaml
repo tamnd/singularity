@@ -1,0 +1,9 @@
+tag: SG0000000P
+kind: theorem
+title: Cohen's structure theorem
+statement: A complete regular local ring that contains a field is a ring of formal power series over its residue field.
+sources:
+- paper: Coh46
+lean:
+  statement: Singularity.cohen_structure
+tier: T1

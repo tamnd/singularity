@@ -1,0 +1,9 @@
+key: HSDer
+title: Hasse (1937), Schmidt; Mat §27
+tag: S
+tier: T1
+why: Hasse-Schmidt derivations and differential operators in char $p$
+year: 1937
+lean: none
+use:
+- prove

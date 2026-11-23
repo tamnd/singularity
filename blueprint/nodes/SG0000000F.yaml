@@ -1,0 +1,9 @@
+tag: SG0000000F
+kind: theorem
+title: Smooth implies regular
+statement: A scheme that is smooth over a field is regular. Over a perfect field, a regular scheme of finite type is smooth.
+sources:
+- paper: RegSm
+lean:
+  statement: Singularity.isRegularScheme_of_smooth
+tier: T1

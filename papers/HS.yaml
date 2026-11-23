@@ -1,0 +1,9 @@
+key: HS
+title: Huneke-Swanson, Integral Closure of Ideals, Rings, and Modules (2006)
+tag: S
+tier: T0
+why: Rees algebras, integral closure, reductions
+year: 2006
+lean: partly ML
+use:
+- read

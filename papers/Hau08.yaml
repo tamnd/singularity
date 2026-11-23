@@ -1,0 +1,12 @@
+key: Hau08
+title: Hauser, "Kangaroo points and oblique polynomials", arXiv:0811.4151
+tag: S
+tier: T4
+why: Kangaroo points
+arxiv:
+- '0811.4151'
+lean: none
+use:
+- prove
+- ex
+notes: 'The plan in the corpus table: prove, ex.'

@@ -1,0 +1,9 @@
+key: Coh46
+title: Cohen (1946)
+tag: S
+tier: T1
+why: Structure of complete local rings
+year: 1946
+lean: 'PR (#44551, #44577)'
+use:
+- prove

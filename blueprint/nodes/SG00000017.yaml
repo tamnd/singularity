@@ -1,0 +1,13 @@
+tag: SG00000017
+kind: counterexample
+title: The Hauser-Perlega cycle
+statement: An explicit sequence of permissible blowups of a purely inseparable threefold that returns to the same residual order. It disproves the stability claim of Moh.
+sources:
+- paper: HP19a
+uses:
+- SG00000013
+lean:
+  statement: Singularity.Examples.hauserPerlegaCycle
+tier: T4
+route:
+- R5

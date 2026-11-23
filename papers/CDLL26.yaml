@@ -1,0 +1,11 @@
+key: CDLL26
+title: Castillo-Duarte-Leyton-Álvarez-Liendo, Ann. of Math. 203 (2026), arXiv:2409.19767
+tag: P
+tier: T8
+why: Nash blowups fail in dimension $\ge 4$
+year: 2026
+arxiv:
+- '2409.19767'
+lean: none
+use:
+- ex

@@ -1,0 +1,8 @@
+key: fc-LU
+title: formal-conjectures `LocalUniformization.lean`
+tag: S
+tier: T6
+why: The statement
+lean: fc
+use:
+- bridge

@@ -1,0 +1,11 @@
+tag: SG00000003
+kind: lemma
+title: The regular locus is everything iff the scheme is regular
+statement: For a scheme $X$, the regular locus of $X$ is all of $X$ if and only if $X$ is regular.
+uses:
+- SG00000001
+- SG00000002
+lean:
+  statement: Singularity.regularLocus_eq_univ_iff
+  proof: Singularity.regularLocus_eq_univ_iff
+tier: S

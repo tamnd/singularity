@@ -1,0 +1,11 @@
+key: Ber26
+title: Bérczi, arXiv:2602.06553
+tag: P
+tier: T4
+why: Ranking functions found by AlphaEvolve, two conjectures
+arxiv:
+- '2602.06553'
+lean: none
+use:
+- state
+notes: 'The plan in the corpus table: lab (E8), state.'

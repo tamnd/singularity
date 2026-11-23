@@ -1,0 +1,9 @@
+key: Spi83
+title: Spivakovsky, "A solution to Hironaka's polyhedra game" (1983)
+tag: S
+tier: T3
+why: The combinatorial core of the monomial case
+year: 1983
+lean: none
+use:
+- prove

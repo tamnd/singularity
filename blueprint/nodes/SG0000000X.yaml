@@ -1,0 +1,9 @@
+tag: SG0000000X
+kind: theorem
+title: The Zariski-Riemann space is quasi-compact
+statement: The space of valuation rings of a function field $K/k$ that contain $k$, with the Zariski topology, is quasi-compact.
+sources:
+- paper: ZS2
+lean:
+  statement: Singularity.ZariskiRiemann.compactSpace
+tier: T2

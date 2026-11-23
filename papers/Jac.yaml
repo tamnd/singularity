@@ -1,0 +1,8 @@
+key: Jac
+title: the Jacobian criterion (Mat, §30; Stacks 07PF)
+tag: S
+tier: T1
+why: Regularity of explicit equations, used by the certificates of 13.4
+lean: none
+use:
+- prove

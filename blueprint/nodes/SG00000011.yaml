@@ -1,0 +1,9 @@
+tag: SG00000011
+kind: definition
+title: Newton polyhedron
+statement: The Newton polyhedron of a power series, as a rational polyhedron in the positive orthant.
+sources:
+- paper: Newt
+lean:
+  statement: Singularity.newtonPolyhedron
+tier: T3

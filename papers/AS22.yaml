@@ -1,0 +1,10 @@
+key: AS22
+title: Abramovich-Schober, arXiv:2208.08951
+tag: P
+tier: T8
+why: Binomial varieties, every char
+arxiv:
+- '2208.08951'
+lean: none
+use:
+- prove

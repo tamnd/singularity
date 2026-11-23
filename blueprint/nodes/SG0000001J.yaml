@@ -1,0 +1,17 @@
+tag: SG0000001J
+kind: theorem
+title: Patching in dimension 4
+statement: If each valuation of a function field of a fourfold has local uniformization, then the fourfold has a resolution.
+sources:
+- paper: Zar44
+- paper: Pil
+uses:
+- SG0000001H
+- SG0000000X
+- SG00000007
+lean:
+  statement: Singularity.resolution_of_localUniformization_four
+tier: T6
+route:
+- R2
+notes: In dimension 4 this is open. Expert question 6 asks whether it is a separate problem.

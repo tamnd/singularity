@@ -1,0 +1,11 @@
+key: Kuh16
+title: Kuhlmann, J. reine angew. Math. 719 (2016), arXiv:1304.0194
+tag: S
+tier: T2
+why: Tame valued fields
+year: 2016
+arxiv:
+- '1304.0194'
+lean: none
+use:
+- prove

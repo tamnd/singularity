@@ -1,0 +1,13 @@
+tag: SG00000018
+kind: counterexample
+title: Maximal contact fails in characteristic $p$
+statement: Narasimhan's threefold in characteristic 2 has no hypersurface of maximal contact at a point, also locally in the étale topology.
+sources:
+- paper: Nar83
+uses:
+- SG00000013
+lean:
+  statement: Singularity.Examples.narasimhan
+tier: T4
+route:
+- R3

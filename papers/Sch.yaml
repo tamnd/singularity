@@ -1,0 +1,13 @@
+key: Sch
+title: Schober, arXiv:1410.6541 (J. Algebra 565 (2021)), 1410.6543, 1708.04784
+tag: S
+tier: T4
+why: Polyhedra and invariants
+year: 2021
+arxiv:
+- '1410.6541'
+- '1410.6543'
+- '1708.04784'
+lean: none
+use:
+- prove

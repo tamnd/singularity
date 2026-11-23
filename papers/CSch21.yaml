@@ -1,0 +1,12 @@
+key: CSch21
+title: Cossart-Schober, Collect. Math. 72 (2021), arXiv:1411.2522; arXiv:1411.4452
+tag: S
+tier: T4
+why: A strictly decreasing invariant in dimension 2; no completion
+year: 2021
+arxiv:
+- '1411.2522'
+- '1411.4452'
+lean: none
+use:
+- prove

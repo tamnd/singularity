@@ -1,0 +1,9 @@
+tag: SG0000000J
+kind: theorem
+title: A regular local ring is a domain
+statement: A regular local ring is an integral domain, and it is normal.
+sources:
+- paper: Ser55
+lean:
+  statement: Singularity.IsRegularLocalRing.isDomain
+tier: T1

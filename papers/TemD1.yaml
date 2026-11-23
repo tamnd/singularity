@@ -1,0 +1,10 @@
+key: TemD1
+title: Temkin, Dream resolution I, arXiv:2503.18205
+tag: P
+tier: T8
+why: '"enough derivations"'
+arxiv:
+- '2503.18205'
+lean: none
+use:
+- prove

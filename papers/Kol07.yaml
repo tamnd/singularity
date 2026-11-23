@@ -1,0 +1,11 @@
+key: Kol07
+title: Kollár, Lectures on Resolution of Singularities (2007)
+tag: S
+tier: T0
+why: The char 0 proof (also T8)
+year: 2007
+lean: base, rl
+use:
+- read
+- bridge
+notes: 'The corpus has this work in tier T8 too: functorial resolution.'

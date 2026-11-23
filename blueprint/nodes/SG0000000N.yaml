@@ -1,0 +1,9 @@
+tag: SG0000000N
+kind: theorem
+title: Kunz's theorem
+statement: A Noetherian local ring of characteristic $p$ is regular if and only if its Frobenius map is flat.
+sources:
+- paper: Kunz69
+lean:
+  statement: Singularity.isRegularLocalRing_iff_flat_frobenius
+tier: T1

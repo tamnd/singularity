@@ -1,0 +1,14 @@
+tag: SG00000014
+kind: definition
+title: The characteristic polyhedron
+statement: Hironaka's characteristic polyhedron of a hypersurface singularity, the intersection over all coordinate choices of the projected Newton polyhedra.
+sources:
+- paper: Hir67
+- paper: CJSch19
+uses:
+- SG00000011
+lean:
+  statement: Singularity.characteristicPolyhedron
+tier: T4
+route:
+- R1

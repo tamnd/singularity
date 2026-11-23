@@ -1,0 +1,8 @@
+key: ZMT
+title: Zariski's Main Theorem
+tag: S
+tier: T1
+why: Proper birational maps of normal schemes
+lean: partly ML
+use:
+- prove

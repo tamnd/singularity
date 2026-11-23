@@ -1,0 +1,12 @@
+tag: SG00000007
+kind: conjecture
+title: Resolution of fourfolds in characteristic $p$
+statement: For each prime $p$, each variety of dimension 4 over a field of characteristic $p$ has a resolution. This is the open problem of the project.
+sources:
+- paper: Hau10
+uses:
+- SG00000006
+lean:
+  statement: Singularity.ResolutionDimFourCharP
+tier: S
+notes: No proof exists. The project does not claim one. The status of this node changes only after the checks of spec 06.6.
