@@ -1,0 +1,13 @@
+tag: SG0000002N
+kind: theorem
+title: The regular locus is stable under generization
+statement: Let $A$ be a Noetherian ring and let $\mathfrak{q} \subseteq \mathfrak{p}$ be prime ideals. If $A_\mathfrak{p}$ is a regular local ring, then $A_\mathfrak{q}$ is a regular local ring. Thus $\operatorname{Reg}(A)$ is stable under generization in $\operatorname{Spec} A$.
+sources:
+- paper: Ser55
+- paper: Mat
+uses:
+- SG0000000H
+lean:
+  statement: Singularity.Algebra.regularLocus_stableUnderGeneralization
+  proof: Singularity.Algebra.regularLocus_stableUnderGeneralization
+tier: T1

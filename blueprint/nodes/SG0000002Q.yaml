@@ -1,0 +1,14 @@
+tag: SG0000002Q
+kind: theorem
+title: The criterion of Nagata for the openness of the regular locus
+statement: Let $A$ be a Noetherian ring. Assume that for each $\mathfrak{p} \in \operatorname{Reg}(A)$ the set $\operatorname{Reg}(A/\mathfrak{p})$ contains a nonempty open subset of $\operatorname{Spec} A/\mathfrak{p}$. Then $\operatorname{Reg}(A)$ is open in $\operatorname{Spec} A$.
+sources:
+- paper: Nag62
+- paper: Mat
+uses:
+- SG0000002N
+- SG0000002P
+lean:
+  statement: Singularity.Algebra.isOpen_regularLocus_of_exists_isOpen
+  proof: Singularity.Algebra.isOpen_regularLocus_of_exists_isOpen
+tier: T1

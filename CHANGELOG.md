@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The nodes SG0000002N (the regular locus is stable under generization), SG0000002P (a regular system of parameters spreads to a neighbourhood) and SG0000002Q (the criterion of Nagata), each with its Lean proof in `Singularity/Algebra/RegularLocus.lean`.
+- The node SG0000000K (the regular locus is open) now uses SG0000002Q. It stays planned, because it also needs a nonempty open regular locus for each domain of finite type over a field.
+- The Lean records are at commit 9cf5ebe of tamnd/singularity-lean, with 215 declarations.
+
 ## 0.2.7 - 2026-11-24
 
 - The node SG0000002M (the converse of the theorem of Serre) with its Lean proof `Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT`. A Noetherian local ring whose residue field has finite projective dimension is regular.
