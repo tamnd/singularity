@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "1ef1ad16fe293caf7992da721bcac104a7d8ac6a",
+  "commit": "4ab4320c840c8c7609d904c5e719e95591fbacff",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "1ef1ad16fe293caf7992da721bcac104a7d8ac6a",
+ "commit": "4ab4320c840c8c7609d904c5e719e95591fbacff",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -38,6 +38,17 @@
    "kind": "theorem",
    "line": 63,
    "type": "\u2200 (R : Type u) [inst : CommRing R] [FiniteRingKrullDim R], \u2203 n, ringKrullDim R = \u2191n"
+  },
+  "Singularity.Algebra.exists_smul_mem_of_isIntegrallyClosed_localization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalLocus.lean",
+   "kind": "theorem",
+   "line": 36,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  [Module.Finite A \u21a5(integralClosure A K)] (p : Ideal A) [inst_4 : p.IsPrime] (S : Type u_1) [inst_5 : CommRing S]\n  [inst_6 : Algebra A S] [IsLocalization.AtPrime S p] [inst_8 : Algebra S K] [IsScalarTower A S K] [IsFractionRing S K]\n  [IsIntegrallyClosed S], \u2203 s \u2209 p, \u2200 (b : K), IsIntegral A b \u2192 \u2203 a, (algebraMap A K) a = s \u2022 b"
   },
   "Singularity.Algebra.exists_span_insert_eq_maximalIdeal": {
    "axioms": [
@@ -193,6 +204,17 @@
    "line": 34,
    "type": "\u2200 (P : Type u_1) (A : Type u_2) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P] [inst_3 : CommRing A] [IsDomain A]\n  [inst_5 : Algebra P A] [Module.IsTorsionFree P A] [Module.Finite P A],\n  Module.Finite P \u21a5(integralClosure P (FractionRing A)) \u2192 Module.Finite A \u21a5(integralClosure A (FractionRing A))"
   },
+  "Singularity.Algebra.finite_integralClosure_of_isFractionRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalLocus.lean",
+   "kind": "theorem",
+   "line": 24,
+   "type": "\u2200 (k A : Type u) (B : Type v) [inst : Field k] [inst_1 : CommRing A] [IsDomain A] [inst_3 : Algebra k A]\n  [Algebra.FiniteType k A] [inst : CommRing B] [inst_4 : Algebra A B] [IsFractionRing A B],\n  Module.Finite A \u21a5(integralClosure A B)"
+  },
   "Singularity.Algebra.finite_integralClosure_of_isPurelyInseparable": {
    "axioms": [
     "Classical.choice",
@@ -236,6 +258,17 @@
    "kind": "theorem",
    "line": 298,
    "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R = \u2191n \u2192 IsDomain R"
+  },
+  "Singularity.Algebra.isIntegrallyClosed_of_isLocalization_away": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/NormalLocus.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] [IsFractionRing A K] (s : A),\n  (\u2200 (b : K), IsIntegral A b \u2192 \u2203 a, (algebraMap A K) a = s \u2022 b) \u2192\n    \u2200 (R : Type u_1) [inst_4 : CommRing R] [IsDomain R] [inst_6 : Algebra A R] [IsLocalization.Away s R]\n      [inst_8 : Algebra R K] [IsScalarTower A R K] [IsFractionRing R K], IsIntegrallyClosed R"
   },
   "Singularity.Algebra.isLocalRing_quotient_of_le_maximalIdeal": {
    "axioms": [
@@ -501,6 +534,149 @@
    "line": 30,
    "type": "{S X : AlgebraicGeometry.Scheme} \u2192 (X \u27f6 S) \u2192 Prop"
   },
+  "Singularity.Curves.NormalOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 254,
+   "type": "AlgebraicGeometry.Scheme \u2192 Type u"
+  },
+  "Singularity.Curves.coe_normalLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 263,
+   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192 \u2191(Singularity.Curves.normalLocus X) = Singularity.regularLocus X"
+  },
+  "Singularity.Curves.dimensionLEOne_of_ringKrullDim_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [IsDomain R], ringKrullDim R \u2264 1 \u2192 Ring.DimensionLEOne R"
+  },
+  "Singularity.Curves.exists_isIntegrallyClosed_of_mem_regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 196,
+   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192\n    \u2200 {x : \u21a5X},\n      x \u2208 Singularity.regularLocus X \u2192\n        \u2203 V, AlgebraicGeometry.IsAffineOpen V \u2227 x \u2208 V \u2227 IsIntegrallyClosed \u2191(X.presheaf.obj (Opposite.op V))"
+  },
+  "Singularity.Curves.finiteType_sectionAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 100,
+   "type": "\u2200 {k : Type u} [inst : Field k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f] (U : X.Opens),\n  AlgebraicGeometry.IsAffineOpen U \u2192 Algebra.FiniteType k \u2191(X.presheaf.obj (Opposite.op U))"
+  },
+  "Singularity.Curves.finite_integralClosure_sections": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 {k : Type u} [inst : Field k] (X : AlgebraicGeometry.Scheme) [inst_1 : AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f] (U : X.Opens),\n  AlgebraicGeometry.IsAffineOpen U \u2192\n    \u2200 [Nonempty \u21a5\u2191U],\n      Module.Finite \u2191(X.presheaf.obj (Opposite.op U))\n        \u21a5(integralClosure \u2191(X.presheaf.obj (Opposite.op U))\n            \u2191((AlgebraicGeometry.Spec X.functionField).presheaf.obj\n                (Opposite.op ((TopologicalSpace.Opens.map (Singularity.Curves.genericHom X).base).obj U))))"
+  },
+  "Singularity.Curves.genericAlgEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 73,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192\n  [inst : AlgebraicGeometry.IsIntegral X] \u2192\n    (U : X.Opens) \u2192\n      [inst_1 : Nonempty \u21a5\u2191U] \u2192\n        \u2191X.functionField \u2243\u2090[\u2191(X.presheaf.obj (Opposite.op U))]\n          \u2191((AlgebraicGeometry.Spec X.functionField).presheaf.obj\n              (Opposite.op ((TopologicalSpace.Opens.map (Singularity.Curves.genericHom X).base).obj U)))"
+  },
+  "Singularity.Curves.genericHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 45,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192 [inst : AlgebraicGeometry.IsIntegral X] \u2192 AlgebraicGeometry.Spec X.functionField \u27f6 X"
+  },
+  "Singularity.Curves.genericHom_app": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X] (U : X.Opens) [inst_1 : Nonempty \u21a5\u2191U],\n  AlgebraicGeometry.Scheme.Hom.app (Singularity.Curves.genericHom X) U =\n    CategoryTheory.CategoryStruct.comp (X.germToFunctionField U) (Singularity.Curves.genericIso X U).hom"
+  },
+  "Singularity.Curves.genericHom_preimage": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X] (U : X.Opens) [Nonempty \u21a5\u2191U],\n  (TopologicalSpace.Opens.map (Singularity.Curves.genericHom X).base).obj U = \u22a4"
+  },
+  "Singularity.Curves.genericIso": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 61,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192\n  [inst : AlgebraicGeometry.IsIntegral X] \u2192\n    (U : X.Opens) \u2192\n      [Nonempty \u21a5\u2191U] \u2192\n        X.functionField \u2245\n          (AlgebraicGeometry.Spec X.functionField).presheaf.obj\n            (Opposite.op ((TopologicalSpace.Opens.map (Singularity.Curves.genericHom X).base).obj U))"
+  },
+  "Singularity.Curves.genericPoint_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X] (U : X.Opens) [h : Nonempty \u21a5\u2191U],\n  genericPoint \u21a5X \u2208 U"
+  },
+  "Singularity.Curves.integralResolutionInDim_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 342,
+   "type": "\u2200 (p : \u2115), Singularity.IntegralResolutionInDim p 1"
+  },
   "Singularity.Curves.isDedekindDomain_integralClosure": {
    "axioms": [
     "Classical.choice",
@@ -523,6 +699,61 @@
    "line": 53,
    "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsDedekindDomain \u21a5(integralClosure A (FractionRing A))"
   },
+  "Singularity.Curves.isFinite_normalizationHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 142,
+   "type": "\u2200 {k : Type u} [inst : Field k] (X : AlgebraicGeometry.Scheme) [inst_1 : AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  AlgebraicGeometry.IsFinite (Singularity.Curves.normalizationHom X)"
+  },
+  "Singularity.Curves.isFractionRing_genericHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X] (U : X.Opens),\n  AlgebraicGeometry.IsAffineOpen U \u2192\n    \u2200 [Nonempty \u21a5\u2191U],\n      IsFractionRing \u2191(X.presheaf.obj (Opposite.op U))\n        \u2191((AlgebraicGeometry.Spec X.functionField).presheaf.obj\n            (Opposite.op ((TopologicalSpace.Opens.map (Singularity.Curves.genericHom X).base).obj U)))"
+  },
+  "Singularity.Curves.isIntegrallyClosed_of_isRegularLocalRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 178,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R \u2264 1 \u2192 IsIntegrallyClosed R"
+  },
+  "Singularity.Curves.isIso_normalizationHom_restrict": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X] (V : X.Opens),\n  AlgebraicGeometry.IsAffineOpen V \u2192\n    \u2200 [Nonempty \u21a5\u2191V] [IsIntegrallyClosed \u2191(X.presheaf.obj (Opposite.op V))],\n      CategoryTheory.IsIso (Singularity.Curves.normalizationHom X \u2223_ V)"
+  },
+  "Singularity.Curves.isIso_normalizationHom_restrict_normalLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 277,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X],\n  CategoryTheory.IsIso (Singularity.Curves.normalizationHom X \u2223_ Singularity.Curves.normalLocus X)"
+  },
   "Singularity.Curves.isRegularRing_integralClosure": {
    "axioms": [
     "Classical.choice",
@@ -544,6 +775,94 @@
    "kind": "theorem",
    "line": 59,
    "type": "\u2200 (k A : Type u) [inst : Field k] [CharZero k] [inst_2 : CommRing A] [IsDomain A] [inst_4 : Algebra k A]\n  [Algebra.FiniteType k A] [Ring.DimensionLEOne A], IsRegularRing \u21a5(integralClosure A (FractionRing A))"
+  },
+  "Singularity.Curves.isRegularScheme_normalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 292,
+   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} [inst_1 : AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192\n    Singularity.IsRegularScheme (AlgebraicGeometry.Scheme.Hom.normalization (Singularity.Curves.genericHom X))"
+  },
+  "Singularity.Curves.isResolution_normalizationHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 319,
+   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} [inst_1 : AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192 Singularity.IsResolution (Singularity.Curves.normalizationHom X)"
+  },
+  "Singularity.Curves.mem_regularLocus_of_isIntegrallyClosed": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 232,
+   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsIntegral X]\n  (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k) [AlgebraicGeometry.LocallyOfFiniteType f],\n  topologicalKrullDim \u21a5X \u2264 1 \u2192\n    \u2200 {V : X.Opens},\n      AlgebraicGeometry.IsAffineOpen V \u2192\n        \u2200 [IsIntegrallyClosed \u2191(X.presheaf.obj (Opposite.op V))] {x : \u21a5X}, x \u2208 V \u2192 x \u2208 Singularity.regularLocus X"
+  },
+  "Singularity.Curves.normalLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 259,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192 X.Opens"
+  },
+  "Singularity.Curves.normalizationHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 128,
+   "type": "(X : AlgebraicGeometry.Scheme) \u2192\n  [inst : AlgebraicGeometry.IsIntegral X] \u2192\n    AlgebraicGeometry.Scheme.Hom.normalization (Singularity.Curves.genericHom X) \u27f6 X"
+  },
+  "Singularity.Curves.resolutionInDim_one_of_reductionToIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 348,
+   "type": "Singularity.ReductionToIntegral \u2192 \u2200 (p : \u2115), Singularity.ResolutionInDim p 1"
+  },
+  "Singularity.Curves.ringKrullDim_sections_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 (X : AlgebraicGeometry.Scheme),\n  topologicalKrullDim \u21a5X \u2264 1 \u2192\n    \u2200 (U : X.Opens), AlgebraicGeometry.IsAffineOpen U \u2192 ringKrullDim \u2191(X.presheaf.obj (Opposite.op U)) \u2264 1"
+  },
+  "Singularity.Curves.sectionAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Curves/Resolution.lean",
+   "kind": "def",
+   "line": 96,
+   "type": "{k : Type u} \u2192\n  [inst : Field k] \u2192\n    (X : AlgebraicGeometry.Scheme) \u2192\n      (X \u27f6 AlgebraicGeometry.Spec \u21a7k) \u2192 (U : X.Opens) \u2192 Algebra k \u2191(X.presheaf.obj (Opposite.op U))"
   },
   "Singularity.Fidelity.codiag": {
    "axioms": [

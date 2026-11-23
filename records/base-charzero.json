@@ -1,6 +1,6 @@
 {
  "built": "2026-11-23",
- "commit": "1ef1ad16fe293caf7992da721bcac104a7d8ac6a",
+ "commit": "4ab4320c840c8c7609d904c5e719e95591fbacff",
  "decls": {
   "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors": {
    "axioms": [

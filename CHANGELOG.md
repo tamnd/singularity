@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000002B (the normal locus of a domain with a finite normalization) with its Lean proof.
+- The node SG0000002C (integral curves have a resolution in each characteristic) with its Lean proof `Singularity.Curves.integralResolutionInDim_one`. The resolution is the normalization. The node SG0000001A uses SG0000002C and SG0000001Y. Its status stays stated, because the general case needs the reduction to integral varieties.
+- `records/lean.json` from tamnd/singularity-lean at 4ab4320, with the files `Singularity/Algebra/NormalLocus.lean` and `Singularity/Curves/Resolution.lean`. It has 109 declarations, and each uses only the three standard axioms.
+
 ## 0.2.3 - 2026-11-24
 
 - The papers Eis95 (Eisenbud, Commutative Algebra with a View Toward Algebraic Geometry) and Lan02 (Lang, Algebra).
