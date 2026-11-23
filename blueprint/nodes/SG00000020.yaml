@@ -1,0 +1,13 @@
+tag: SG00000020
+kind: theorem
+title: Hironaka's theorem in the form of formal-conjectures
+statement: Each integral scheme that is separated and of finite type over a field of characteristic 0 has a resolution in the sense of google-deepmind/formal-conjectures. This is the statement `resolution_of_singularities_of_charZero` of formal-conjectures. The proof applies the bridge to the integral case in characteristic 0, so it takes no named hypothesis.
+sources:
+- paper: Hir64
+uses:
+- SG0000001Z
+- SG0000000E
+lean:
+  statement: Singularity.Bridge.FCResolutionCharZero
+  proof: Singularity.Base.fcResolutionCharZero
+tier: S

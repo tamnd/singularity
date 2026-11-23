@@ -1,0 +1,9 @@
+key: Mathlib
+title: The Mathlib Community, Mathlib (2026)
+tag: S
+tier: T0
+why: The library of mathematics in Lean on which the project is built
+year: 2026
+lean: ML
+use:
+- read
