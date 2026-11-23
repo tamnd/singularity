@@ -1,0 +1,11 @@
+tag: SG0000001X
+kind: theorem
+title: P1 is a special case
+statement: Let $p \neq 0$. If each variety of dimension at most $n$ over a field of characteristic $p$ has a resolution, then each reduced hypersurface $z^p + g(x_1, \dots, x_n) = 0$ has a resolution. The equation is not zero, because its coefficient at $z^p$ is 1. Thus it is a nonzerodivisor, and the hypersurface has dimension at most $n$. The hypersurface is affine and of finite type, so it is a variety when it is reduced.
+uses:
+- SG00000005
+- SG00000006
+lean:
+  statement: Singularity.PurelyInseparableHypersurfaceResolution
+  proof: Singularity.purelyInseparableHypersurfaceResolution_of_resolutionInDim
+tier: S
