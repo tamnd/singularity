@@ -8,6 +8,7 @@ Each release has a section. The newest release is first.
 - `records/lean.json` and `records/base-charzero.json` from tamnd/singularity-lean at 1bde104, with the files `Singularity/Algebra/HilbertSamuel.lean` and `Singularity/Algebra/RegularSequence.lean`. The record has 175 declarations, and each uses only the three standard axioms.
 - The node SG0000000Q (the Hilbert-Samuel function) now has the Lean definition `Singularity.Algebra.hilbertSamuel`, the function $n \mapsto \ell(M/I^n M)$. Before this change its Lean name was a placeholder that did not exist. The statement says that the Samuel multiplicity needs the theorem of Hilbert and Samuel, which is not in Lean yet.
 - The nodes SG0000002D (the laws of the Hilbert-Samuel function, with finiteness), SG0000002E (the order of an element) and SG0000002F (the laws of the order, with the intersection theorem of Krull). The node SG00000013 (order and residual order) now uses SG0000002E.
+- The release v0.2.6 of tamnd/singularity-lean.
 
 ## 0.2.5 - 2026-11-24
 
