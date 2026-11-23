@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.2.7 - 2026-11-24
+
 - The node SG0000002M (the converse of the theorem of Serre) with its Lean proof `Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT`. A Noetherian local ring whose residue field has finite projective dimension is regular.
 - The node SG0000000H (localizations of a regular local ring) is now proved, with the Lean proof `Singularity.Algebra.isRegularLocalRing_localization`. It uses SG0000002M. Its Lean name was a placeholder before this change.
 - `records/lean.json` and `records/base-charzero.json` from tamnd/singularity-lean at a1e5c55, with the files `Singularity/Algebra/SerreConverse.lean` and `Singularity/Algebra/RegularLocalization.lean`. The record has 200 declarations, and each uses only the three standard axioms.
