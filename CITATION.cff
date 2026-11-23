@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "To cite this project, use this file."
+title: "singularity: resolution of singularities in characteristic p, in public"
+type: software
+authors:
+  - family-names: Nguyen Duc
+    given-names: Tam
+repository-code: "https://github.com/tamnd/singularity"
+url: "https://singularity.tamnd.com"
+license: CC-BY-SA-4.0
+keywords:
+  - resolution of singularities
+  - characteristic p
+  - Lean 4
+  - formalization
