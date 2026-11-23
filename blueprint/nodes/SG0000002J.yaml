@@ -1,0 +1,10 @@
+tag: SG0000002J
+kind: theorem
+title: The Ext criterion for projective dimension over a local ring
+statement: Let $(R, \mathfrak{m}, \kappa)$ be a Noetherian local ring and let $M$ be a finite $R$-module. Then $\operatorname{pd}_R M \le n$ if and only if $\operatorname{Ext}^{n+1}_R(M, \kappa) = 0$. In particular, $M$ is free if $\operatorname{Ext}^1_R(M, \kappa) = 0$.
+sources:
+- paper: Mat
+lean:
+  statement: Singularity.Algebra.projectiveDimension_le_iff_subsingleton_ext
+  proof: Singularity.Algebra.projectiveDimension_le_iff_subsingleton_ext
+tier: T1

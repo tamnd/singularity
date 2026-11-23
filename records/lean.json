@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "1bde104ca51a1d5f225c83f0624f49275920f01a",
+  "commit": "03be6fbf9456b355c0b4e7e682c0d27e1b97e321",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "1bde104ca51a1d5f225c83f0624f49275920f01a",
+ "commit": "03be6fbf9456b355c0b4e7e682c0d27e1b97e321",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -259,6 +259,72 @@
    "line": 62,
    "type": "\u2200 (P : Type u_1) (K : Type u_2) (M : Type u_3) (L : Type u_4) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P]\n  [inst_3 : Field K] [inst_4 : Field M] [inst_5 : Field L] [inst_6 : Algebra P K] [IsFractionRing P K]\n  [inst_8 : Algebra K M] [inst_9 : Algebra K L] [inst_10 : Algebra M L] [IsScalarTower K M L] [inst_12 : Algebra P M]\n  [inst_13 : Algebra P L] [IsScalarTower P K M] [IsScalarTower P K L] [IsScalarTower P M L] [FiniteDimensional K L]\n  [Algebra.IsSeparable M L], Module.Finite P \u21a5(integralClosure P M) \u2192 Module.Finite P \u21a5(integralClosure P L)"
   },
+  "Singularity.Algebra.free_of_subsingleton_ext_one_residueField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/ExtCriterion.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M],\n  Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) 1) \u2192 Module.Free R \u2191M"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_of_isRegularLocalRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GlobalDimension.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 (d : \u2115) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R],\n  ringKrullDim R = \u2191d \u2192\n    \u2200 (M : Type u) [inst_2 : AddCommGroup M] [inst_3 : Module R M] [Module.Finite R M],\n      CategoryTheory.HasProjectiveDimensionLT (\u21a7M) (d + 1)"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_of_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GlobalDimension.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R} [IsNoetherianRing R],\n  IsSMulRegular R x \u2192\n    \u2200 (n : \u2115) (N : Type u) [inst_2 : AddCommGroup N] [inst_3 : Module (R \u29f8 Ideal.span {x}) N] [inst_4 : Module R N]\n      [IsScalarTower R (R \u29f8 Ideal.span {x}) N] [Module.Finite (R \u29f8 Ideal.span {x}) N],\n      CategoryTheory.HasProjectiveDimensionLT (\u21a7N) n \u2192 CategoryTheory.HasProjectiveDimensionLT (\u21a7N) (n + 1)"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_of_subsingleton_ext": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/ExtCriterion.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (n : \u2115) (M : ModuleCat R)\n  [Module.Finite R \u2191M],\n  Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) (n + 1)) \u2192\n    CategoryTheory.HasProjectiveDimensionLT M (n + 1)"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_pi_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GlobalDimension.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R},\n  IsSMulRegular R x \u2192 \u2200 (m : \u2115), CategoryTheory.HasProjectiveDimensionLT (\u21a7(Fin m \u2192 R \u29f8 Ideal.span {x})) 2"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_succ_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/ExtCriterion.lean",
+   "kind": "theorem",
+   "line": 125,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M]\n  (n : \u2115),\n  CategoryTheory.HasProjectiveDimensionLT M (n + 1) \u2194\n    Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) (n + 1))"
+  },
   "Singularity.Algebra.hilbertSamuel": {
    "axioms": [
     "Classical.choice",
@@ -434,6 +500,17 @@
    "kind": "theorem",
    "line": 389,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsIntegrallyClosed R)"
+  },
+  "Singularity.Algebra.lTensor_residueField_injective_of_forall_extend": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/ExtCriterion.lean",
+   "kind": "theorem",
+   "line": 44,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {K F : Type u} [inst_2 : AddCommGroup K]\n  [inst_3 : Module R K] [inst_4 : AddCommGroup F] [inst_5 : Module R F] (i : K \u2192\u2097[R] F),\n  (\u2200 (g : K \u2192\u2097[R] IsLocalRing.ResidueField R), \u2203 g', g' \u2218\u2097 i = g) \u2192\n    Function.Injective \u21d1(LinearMap.lTensor (IsLocalRing.ResidueField R) i)"
   },
   "Singularity.Algebra.le_order_iff": {
    "axioms": [
@@ -621,6 +698,28 @@
    "kind": "theorem",
    "line": 185,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R}, Singularity.Algebra.order I 0 = \u22a4"
+  },
+  "Singularity.Algebra.projectiveDimension_le_iff_subsingleton_ext": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/ExtCriterion.lean",
+   "kind": "theorem",
+   "line": 133,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M]\n  (n : \u2115),\n  CategoryTheory.projectiveDimension M \u2264 \u2191n \u2194\n    Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) (n + 1))"
+  },
+  "Singularity.Algebra.projectiveDimension_le_ringKrullDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GlobalDimension.lean",
+   "kind": "theorem",
+   "line": 194,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [IsRegularLocalRing R] (M : Type u) [inst_2 : AddCommGroup M] [inst_3 : Module R M]\n  [Module.Finite R M], CategoryTheory.projectiveDimension \u21a7M \u2264 ringKrullDim R"
   },
   "Singularity.Algebra.projectiveDimension_residueField": {
    "axioms": [
