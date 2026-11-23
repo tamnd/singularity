@@ -11,6 +11,7 @@ Each release has a section. The newest release is first.
 - The node SG0000001A (curves) now has the Lean proof `Singularity.Curves.resolutionInDim_one`. Its status changes from stated to proved.
 - `records/lean.json` and `records/base-charzero.json` from tamnd/singularity-lean at ad0770f, with the files `Singularity/Scheme/Components.lean` and `Singularity/Scheme/Reduction.lean`. The record has 148 declarations, and each uses only the three standard axioms.
 - Trust check Q6 now records that no published theorem is still a hypothesis.
+- The release v0.2.5 of tamnd/singularity-lean.
 
 ## 0.2.4 - 2026-11-24
 
