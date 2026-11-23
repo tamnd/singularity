@@ -1,0 +1,11 @@
+tag: SG0000001W
+kind: theorem
+title: Dimension 0
+statement: For each $p$, each variety of dimension at most 0 over a field of characteristic $p$ has a resolution. A reduced scheme of dimension at most 0 is regular, because its local rings are reduced local rings of dimension 0, and these are fields. So the identity is a resolution.
+uses:
+- SG00000006
+- SG0000000A
+lean:
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_dim_zero
+tier: S
