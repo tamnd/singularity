@@ -1,0 +1,13 @@
+tag: SG0000002H
+kind: theorem
+title: The residue field of a regular local ring has projective dimension equal to the dimension
+statement: Let $(R, \mathfrak{m}, \kappa)$ be a regular local ring of dimension $d$. Then $\operatorname{pd}_R \kappa = d$. This is the first half of the theorem of Serre. The converse, that a Noetherian local ring of finite global dimension is regular, is not in Lean yet.
+sources:
+- paper: Ser55
+- paper: Mat
+uses:
+- SG0000002G
+lean:
+  statement: Singularity.Algebra.projectiveDimension_residueField
+  proof: Singularity.Algebra.projectiveDimension_residueField
+tier: T1
