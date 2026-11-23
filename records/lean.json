@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "281e384bd3b5e148a88fa32771f83b628c959daa",
+  "commit": "1bde104ca51a1d5f225c83f0624f49275920f01a",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "281e384bd3b5e148a88fa32771f83b628c959daa",
+ "commit": "1bde104ca51a1d5f225c83f0624f49275920f01a",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -16,6 +16,28 @@
    "kind": "theorem",
    "line": 363,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 \u2200 {P : Ideal R} [hP : P.IsPrime], P \u2260 \u22a5 \u2192 P = IsLocalRing.maximalIdeal R"
+  },
+  "Singularity.Algebra.exists_isRegular_ofList_eq_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularSequence.lean",
+   "kind": "theorem",
+   "line": 110,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  \u2203 rs, \u2191rs.length = ringKrullDim R \u2227 Ideal.ofList rs = IsLocalRing.maximalIdeal R \u2227 RingTheory.Sequence.IsRegular R rs"
+  },
+  "Singularity.Algebra.exists_isRegular_of_ringKrullDim_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularSequence.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  ringKrullDim R = \u2191n \u2192\n    \u2203 rs, rs.length = n \u2227 Ideal.ofList rs = IsLocalRing.maximalIdeal R \u2227 RingTheory.Sequence.IsRegular R rs"
   },
   "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_notMem_minimalPrimes": {
    "axioms": [
@@ -599,6 +621,28 @@
    "kind": "theorem",
    "line": 185,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R}, Singularity.Algebra.order I 0 = \u22a4"
+  },
+  "Singularity.Algebra.projectiveDimension_residueField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularSequence.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  CategoryTheory.projectiveDimension \u21a7(Shrink.{u, u} (R \u29f8 IsLocalRing.maximalIdeal R)) = ringKrullDim R"
+  },
+  "Singularity.Algebra.quotSMulTopEquivQuotSpan": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularSequence.lean",
+   "kind": "def",
+   "line": 43,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 (x : R) \u2192 QuotSMulTop x R \u2243\u2097[R] R \u29f8 Ideal.span {x}"
   },
   "Singularity.Algebra.quotient_span_singleton": {
    "axioms": [
