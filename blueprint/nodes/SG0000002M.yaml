@@ -1,0 +1,14 @@
+tag: SG0000002M
+kind: theorem
+title: The converse of the theorem of Serre
+statement: Let $(R, \mathfrak{m}, \kappa)$ be a Noetherian local ring. If $\operatorname{pd}_R \kappa < \infty$, then $R$ is a regular local ring. With SG0000002K, a Noetherian local ring is regular if and only if its residue field has finite projective dimension.
+sources:
+- paper: Ser55
+- paper: Mat
+uses:
+- SG0000002J
+- SG00000021
+lean:
+  statement: Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT
+  proof: Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT
+tier: T1

@@ -1,11 +1,22 @@
 {
  "base": {
-  "commit": "03be6fbf9456b355c0b4e7e682c0d27e1b97e321",
+  "commit": "a1e5c553fa843fc2ba87221abd5b3ff8739880b7",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "03be6fbf9456b355c0b4e7e682c0d27e1b97e321",
+ "commit": "a1e5c553fa843fc2ba87221abd5b3ff8739880b7",
  "decls": {
+  "Singularity.Algebra.algebraMapSubmonoid_primeCompl_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocalization.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (p : Ideal R) [inst_1 : p.IsPrime],\n  Algebra.algebraMapSubmonoid (R \u29f8 p) p.primeCompl = nonZeroDivisors (R \u29f8 p)"
+  },
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
     "Classical.choice",
@@ -16,6 +27,28 @@
    "kind": "theorem",
    "line": 363,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 \u2200 {P : Ideal R} [hP : P.IsPrime], P \u2260 \u22a5 \u2192 P = IsLocalRing.maximalIdeal R"
+  },
+  "Singularity.Algebra.exact_smul_algebraMap_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (x : R),\n  Function.Exact \u21d1(x \u2022 LinearMap.id) \u21d1(Algebra.linearMap R (R \u29f8 Ideal.span {x}))"
+  },
+  "Singularity.Algebra.exists_injective_residueField_of_socle": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {s : R},\n  s \u2260 0 \u2192 (\u2200 a \u2208 IsLocalRing.maximalIdeal R, a * s = 0) \u2192 \u2203 j, Function.Injective \u21d1j"
   },
   "Singularity.Algebra.exists_isRegular_ofList_eq_maximalIdeal": {
    "axioms": [
@@ -38,6 +71,28 @@
    "kind": "theorem",
    "line": 49,
    "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  ringKrullDim R = \u2191n \u2192\n    \u2203 rs, rs.length = n \u2227 Ideal.ofList rs = IsLocalRing.maximalIdeal R \u2227 RingTheory.Sequence.IsRegular R rs"
+  },
+  "Singularity.Algebra.exists_linearMap_maximalIdeal_eq_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 194,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {x : R} (hx : x \u2208 IsLocalRing.maximalIdeal R),\n  x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192 \u2203 g, g \u27e8x, hx\u27e9 = 1"
+  },
+  "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_mem_nonZeroDivisors": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 344,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  IsLocalRing.maximalIdeal R \u2260 \u22a5 \u2192\n    (\u2200 (s : R), s \u2260 0 \u2192 \u2203 a \u2208 IsLocalRing.maximalIdeal R, a * s \u2260 0) \u2192\n      \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 x \u2208 nonZeroDivisors R"
   },
   "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_notMem_minimalPrimes": {
    "axioms": [
@@ -259,6 +314,17 @@
    "line": 62,
    "type": "\u2200 (P : Type u_1) (K : Type u_2) (M : Type u_3) (L : Type u_4) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P]\n  [inst_3 : Field K] [inst_4 : Field M] [inst_5 : Field L] [inst_6 : Algebra P K] [IsFractionRing P K]\n  [inst_8 : Algebra K M] [inst_9 : Algebra K L] [inst_10 : Algebra M L] [IsScalarTower K M L] [inst_12 : Algebra P M]\n  [inst_13 : Algebra P L] [IsScalarTower P K M] [IsScalarTower P K L] [IsScalarTower P M L] [FiniteDimensional K L]\n  [Algebra.IsSeparable M L], Module.Finite P \u21a5(integralClosure P M) \u2192 Module.Finite P \u21a5(integralClosure P L)"
   },
+  "Singularity.Algebra.free_of_hasProjectiveDimensionLT_of_socle": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 291,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {s : R},\n  s \u2260 0 \u2192\n    (\u2200 a \u2208 IsLocalRing.maximalIdeal R, a * s = 0) \u2192\n      \u2200 (n : \u2115) (M : ModuleCat R) [Module.Finite R \u2191M], CategoryTheory.HasProjectiveDimensionLT M n \u2192 Module.Free R \u2191M"
+  },
   "Singularity.Algebra.free_of_subsingleton_ext_one_residueField": {
    "axioms": [
     "Classical.choice",
@@ -269,6 +335,17 @@
    "kind": "theorem",
    "line": 73,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M],\n  Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) 1) \u2192 Module.Free R \u2191M"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_baseChange_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R} [IsNoetherianRing R],\n  IsSMulRegular R x \u2192\n    \u2200 (n : \u2115) (M : Type u) [inst_2 : AddCommGroup M] [inst_3 : Module R M] [Module.Finite R M],\n      IsSMulRegular M x \u2192\n        CategoryTheory.HasProjectiveDimensionLT (\u21a7M) (n + 1) \u2192\n          CategoryTheory.HasProjectiveDimensionLT (\u21a7(TensorProduct R (R \u29f8 Ideal.span {x}) M)) (n + 1)"
   },
   "Singularity.Algebra.hasProjectiveDimensionLT_of_isRegularLocalRing": {
    "axioms": [
@@ -313,6 +390,17 @@
    "kind": "theorem",
    "line": 50,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R},\n  IsSMulRegular R x \u2192 \u2200 (m : \u2115), CategoryTheory.HasProjectiveDimensionLT (\u21a7(Fin m \u2192 R \u29f8 Ideal.span {x})) 2"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_residueField_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 211,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      x \u2208 nonZeroDivisors R \u2192\n        \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})] (n : \u2115),\n          CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n \u2192\n            CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField (R \u29f8 Ideal.span {x}))) (n + 1)"
   },
   "Singularity.Algebra.hasProjectiveDimensionLT_succ_iff": {
    "axioms": [
@@ -468,6 +556,17 @@
    "line": 77,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
   },
+  "Singularity.Algebra.isLocalization_residueField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocalization.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (p : Ideal R) [inst_1 : p.IsPrime],\n  IsLocalization (Algebra.algebraMapSubmonoid (R \u29f8 p) p.primeCompl) p.ResidueField"
+  },
   "Singularity.Algebra.isPurelyInseparable_fixedField_top": {
    "axioms": [
     "Classical.choice",
@@ -478,6 +577,17 @@
    "kind": "theorem",
    "line": 37,
    "type": "\u2200 (K : Type u_1) (L : Type u_2) [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [Normal K L],\n  IsPurelyInseparable K \u21a5(IntermediateField.fixedField \u22a4)"
+  },
+  "Singularity.Algebra.isRegularLocalRing_iff_exists_hasProjectiveDimensionLT": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocalization.lean",
+   "kind": "theorem",
+   "line": 43,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  IsRegularLocalRing R \u2194 \u2203 n, CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n"
   },
   "Singularity.Algebra.isRegularLocalRing_iff_isDiscreteValuationRing": {
    "axioms": [
@@ -501,6 +611,50 @@
    "line": 389,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsIntegrallyClosed R)"
   },
+  "Singularity.Algebra.isRegularLocalRing_localization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocalization.lean",
+   "kind": "theorem",
+   "line": 74,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsRegularLocalRing R] (p : Ideal R) [inst_2 : p.IsPrime],\n  IsRegularLocalRing (Localization.AtPrime p)"
+  },
+  "Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 426,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (n : \u2115),\n  CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.Algebra.isRegularLocalRing_of_spanFinrank_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 394,
+   "type": "\u2200 (e : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2264 e \u2192\n    \u2200 (n : \u2115), CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.Algebra.lTensor_injective_of_isSMulRegular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 66,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R} {K P M Q : Type u} [inst_1 : AddCommGroup K] [inst_2 : Module R K]\n  [inst_3 : AddCommGroup P] [inst_4 : Module R P] [inst_5 : AddCommGroup M] [inst_6 : Module R M]\n  [inst_7 : AddCommGroup Q] [inst_8 : Module R Q] (q : R \u2192\u2097[R] Q),\n  Function.Surjective \u21d1q \u2192\n    Function.Exact \u21d1(x \u2022 LinearMap.id) \u21d1q \u2192\n      \u2200 (i : K \u2192\u2097[R] P) (f : P \u2192\u2097[R] M),\n        Function.Injective \u21d1i \u2192\n          Function.Exact \u21d1i \u21d1f \u2192\n            Function.Surjective \u21d1f \u2192 IsSMulRegular M x \u2192 Function.Injective \u21d1(LinearMap.lTensor Q i)"
+  },
   "Singularity.Algebra.lTensor_residueField_injective_of_forall_extend": {
    "axioms": [
     "Classical.choice",
@@ -511,6 +665,17 @@
    "kind": "theorem",
    "line": 44,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {K F : Type u} [inst_2 : AddCommGroup K]\n  [inst_3 : Module R K] [inst_4 : AddCommGroup F] [inst_5 : Module R F] (i : K \u2192\u2097[R] F),\n  (\u2200 (g : K \u2192\u2097[R] IsLocalRing.ResidueField R), \u2203 g', g' \u2218\u2097 i = g) \u2192\n    Function.Injective \u21d1(LinearMap.lTensor (IsLocalRing.ResidueField R) i)"
+  },
+  "Singularity.Algebra.lTensor_residueField_injective_of_socle": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 166,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {K F : Type u} [inst_2 : AddCommGroup K]\n  [inst_3 : Module R K] [inst_4 : AddCommGroup F] [inst_5 : Module R F] [Module.Flat R K] [Module.Flat R F]\n  (\u03c6 : K \u2192\u2097[R] F),\n  Function.Injective \u21d1\u03c6 \u2192\n    \u2200 (j : IsLocalRing.ResidueField R \u2192\u2097[R] R),\n      Function.Injective \u21d1j \u2192 Function.Injective \u21d1(LinearMap.lTensor (IsLocalRing.ResidueField R) \u03c6)"
   },
   "Singularity.Algebra.le_order_iff": {
    "axioms": [
@@ -555,6 +720,17 @@
    "kind": "theorem",
    "line": 37,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {N P : Submodule R M},\n  N \u2264 P \u2192 Module.length R (M \u29f8 N) = Module.length R (\u21a5P \u29f8 Submodule.comap P.subtype N) + Module.length R (M \u29f8 P)"
+  },
+  "Singularity.Algebra.maximalIdeal_eq_bot_of_socle": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/SerreConverse.lean",
+   "kind": "theorem",
+   "line": 324,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {s : R},\n  s \u2260 0 \u2192\n    (\u2200 a \u2208 IsLocalRing.maximalIdeal R, a * s = 0) \u2192\n      \u2200 (n : \u2115),\n        CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n \u2192 IsLocalRing.maximalIdeal R = \u22a5"
   },
   "Singularity.Algebra.maximalIdeal_quotient_eq_map": {
    "axioms": [
