@@ -7,6 +7,7 @@ sources:
 - paper: HW14
 uses:
 - SG0000000W
+- SG0000002E
 lean:
   statement: Singularity.residualOrder
 tier: T4

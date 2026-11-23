@@ -1,6 +1,6 @@
 {
  "built": "2026-11-23",
- "commit": "ad0770fb434808fc58a713b57a5bfcbb62428f03",
+ "commit": "281e384bd3b5e148a88fa32771f83b628c959daa",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [

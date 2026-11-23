@@ -1,0 +1,12 @@
+tag: SG0000002F
+kind: theorem
+title: The laws of the order
+statement: The order satisfies $n \le \operatorname{ord}_I(f)$ if and only if $f \in I^n$, $\operatorname{ord}_I(f+g) \ge \min(\operatorname{ord}_I(f), \operatorname{ord}_I(g))$ and $\operatorname{ord}_I(fg) \ge \operatorname{ord}_I(f) + \operatorname{ord}_I(g)$. In a Noetherian local ring and for a proper ideal $I$, only $0$ has order $\infty$, by the intersection theorem of Krull. In a local ring, $f$ has order $0$ with respect to the maximal ideal if and only if $f$ is a unit.
+sources:
+- paper: AM69
+uses:
+- SG0000002E
+lean:
+  statement: Singularity.Algebra.order_eq_top_iff
+  proof: Singularity.Algebra.order_eq_top_iff
+tier: T1

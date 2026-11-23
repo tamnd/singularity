@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "ad0770fb434808fc58a713b57a5bfcbb62428f03",
+  "commit": "281e384bd3b5e148a88fa32771f83b628c959daa",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "ad0770fb434808fc58a713b57a5bfcbb62428f03",
+ "commit": "281e384bd3b5e148a88fa32771f83b628c959daa",
  "decls": {
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -237,6 +237,105 @@
    "line": 62,
    "type": "\u2200 (P : Type u_1) (K : Type u_2) (M : Type u_3) (L : Type u_4) [inst : CommRing P] [IsDomain P] [IsNoetherianRing P]\n  [inst_3 : Field K] [inst_4 : Field M] [inst_5 : Field L] [inst_6 : Algebra P K] [IsFractionRing P K]\n  [inst_8 : Algebra K M] [inst_9 : Algebra K L] [inst_10 : Algebra M L] [IsScalarTower K M L] [inst_12 : Algebra P M]\n  [inst_13 : Algebra P L] [IsScalarTower P K M] [IsScalarTower P K L] [IsScalarTower P M L] [FiniteDimensional K L]\n  [Algebra.IsSeparable M L], Module.Finite P \u21a5(integralClosure P M) \u2192 Module.Finite P \u21a5(integralClosure P L)"
   },
+  "Singularity.Algebra.hilbertSamuel": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "def",
+   "line": 86,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 \u2115 \u2192 \u2115\u221e"
+  },
+  "Singularity.Algebra.hilbertSamuel_anti": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {J : Ideal R}, I \u2264 J \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel J M n \u2264 Singularity.Algebra.hilbertSamuel I M n"
+  },
+  "Singularity.Algebra.hilbertSamuel_le_of_pow_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 116,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {J : Ideal R} {k : \u2115},\n  J ^ k \u2264 I \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel I M n \u2264 Singularity.Algebra.hilbertSamuel J M (k * n)"
+  },
+  "Singularity.Algebra.hilbertSamuel_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M],\n  Monotone (Singularity.Algebra.hilbertSamuel I M)"
+  },
+  "Singularity.Algebra.hilbertSamuel_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 146,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  [IsNoetherianRing R] [Module.Finite R M] (m : Ideal R) [m.IsMaximal] {k : \u2115},\n  m ^ k \u2264 I \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel I M n \u2260 \u22a4"
+  },
+  "Singularity.Algebra.hilbertSamuel_ne_top_of_isMaximal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 126,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] [IsNoetherianRing R]\n  [Module.Finite R M] (m : Ideal R) [m.IsMaximal] (n : \u2115), Singularity.Algebra.hilbertSamuel m M n \u2260 \u22a4"
+  },
+  "Singularity.Algebra.hilbertSamuel_self_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (m : Ideal R) [m.IsMaximal], Singularity.Algebra.hilbertSamuel m R 1 = 1"
+  },
+  "Singularity.Algebra.hilbertSamuel_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] (n : \u2115),\n  Singularity.Algebra.hilbertSamuel I M (n + 1) =\n    Singularity.Algebra.hilbertSamuel I M n +\n      Module.length R (\u21a5(I ^ n \u2022 \u22a4) \u29f8 Submodule.comap (I ^ n \u2022 \u22a4).subtype (I ^ (n + 1) \u2022 \u22a4))"
+  },
+  "Singularity.Algebra.hilbertSamuel_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M],\n  Singularity.Algebra.hilbertSamuel I M 0 = 0"
+  },
   "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
    "axioms": [
     "Classical.choice",
@@ -314,6 +413,50 @@
    "line": 389,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsIntegrallyClosed R)"
   },
+  "Singularity.Algebra.le_order_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 173,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {f : R} {n : \u2115}, \u2191n \u2264 Singularity.Algebra.order I f \u2194 f \u2208 I ^ n"
+  },
+  "Singularity.Algebra.le_order_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 170,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {f : R} {n : \u2115}, f \u2208 I ^ n \u2192 \u2191n \u2264 Singularity.Algebra.order I f"
+  },
+  "Singularity.Algebra.length_ne_top_of_smul_eq_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 63,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsNoetherianRing R] (m : Ideal R) [m.IsMaximal] (Q : Type v)\n  [inst_3 : AddCommGroup Q] [inst_4 : Module R Q] [Module.Finite R Q], m \u2022 \u22a4 = \u22a5 \u2192 Module.length R Q \u2260 \u22a4"
+  },
+  "Singularity.Algebra.length_quotient_eq_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 37,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {N P : Submodule R M},\n  N \u2264 P \u2192 Module.length R (M \u29f8 N) = Module.length R (\u21a5P \u29f8 Submodule.comap P.subtype N) + Module.length R (M \u29f8 P)"
+  },
   "Singularity.Algebra.maximalIdeal_quotient_eq_map": {
    "axioms": [
     "Classical.choice",
@@ -346,6 +489,116 @@
    "kind": "theorem",
    "line": 275,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2208 nonZeroDivisors R \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2192\n        IsRegularLocalRing R \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
+  },
+  "Singularity.Algebra.order": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "def",
+   "line": 164,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 R \u2192 \u2115\u221e"
+  },
+  "Singularity.Algebra.order_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 206,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (f g : R),\n  min (Singularity.Algebra.order I f) (Singularity.Algebra.order I g) \u2264 Singularity.Algebra.order I (f + g)"
+  },
+  "Singularity.Algebra.order_eq_top_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 193,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} [IsNoetherianRing R] [IsLocalRing R],\n  I \u2260 \u22a4 \u2192 \u2200 {f : R}, Singularity.Algebra.order I f = \u22a4 \u2194 f = 0"
+  },
+  "Singularity.Algebra.order_eq_top_iff_forall": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 189,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {f : R}, Singularity.Algebra.order I f = \u22a4 \u2194 \u2200 (n : \u2115), f \u2208 I ^ n"
+  },
+  "Singularity.Algebra.order_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 244,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {f : R},\n  Singularity.Algebra.order (IsLocalRing.maximalIdeal R) f = 0 \u2194 IsUnit f"
+  },
+  "Singularity.Algebra.order_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) {J : Ideal R},\n  I \u2264 J \u2192 \u2200 (f : R), Singularity.Algebra.order I f \u2264 Singularity.Algebra.order J f"
+  },
+  "Singularity.Algebra.order_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (f g : R),\n  Singularity.Algebra.order I f + Singularity.Algebra.order I g \u2264 Singularity.Algebra.order I (f * g)"
+  },
+  "Singularity.Algebra.order_neg": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 200,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (f : R),\n  Singularity.Algebra.order I (-f) = Singularity.Algebra.order I f"
+  },
+  "Singularity.Algebra.order_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 229,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R}, I \u2260 \u22a4 \u2192 Singularity.Algebra.order I 1 = 0"
+  },
+  "Singularity.Algebra.order_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSamuel.lean",
+   "kind": "theorem",
+   "line": 185,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R}, Singularity.Algebra.order I 0 = \u22a4"
   },
   "Singularity.Algebra.quotient_span_singleton": {
    "axioms": [
