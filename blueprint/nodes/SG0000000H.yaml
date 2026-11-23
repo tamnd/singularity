@@ -4,10 +4,13 @@ title: Localizations of a regular local ring
 statement: The localization of a regular local ring at a prime ideal is a regular local ring.
 sources:
 - paper: Ser55
+- paper: Mat
 uses:
 - SG0000002H
 - SG0000002J
 - SG0000002K
+- SG0000002M
 lean:
-  statement: Singularity.IsRegularLocalRing.localization
+  statement: Singularity.Algebra.isRegularLocalRing_localization
+  proof: Singularity.Algebra.isRegularLocalRing_localization
 tier: T1
