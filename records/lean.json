@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "a1e5c553fa843fc2ba87221abd5b3ff8739880b7",
+  "commit": "9cf5ebeba284bc93c8dd67e71db03f7c10454aa1",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-23",
- "commit": "a1e5c553fa843fc2ba87221abd5b3ff8739880b7",
+ "commit": "9cf5ebeba284bc93c8dd67e71db03f7c10454aa1",
  "decls": {
   "Singularity.Algebra.algebraMapSubmonoid_primeCompl_eq": {
    "axioms": [
@@ -16,6 +16,16 @@
    "kind": "theorem",
    "line": 55,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (p : Ideal R) [inst_1 : p.IsPrime],\n  Algebra.algebraMapSubmonoid (R \u29f8 p) p.primeCompl = nonZeroDivisors (R \u29f8 p)"
+  },
+  "Singularity.Algebra.algebraMap_mem_map_of_mul_mem": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] (q : Ideal A) [inst_1 : q.IsPrime] (I : Ideal A) {g y : A},\n  g \u2209 q \u2192 g * y \u2208 I \u2192 (algebraMap A (Localization.AtPrime q)) y \u2208 Ideal.map (algebraMap A (Localization.AtPrime q)) I"
   },
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
@@ -104,6 +114,39 @@
    "kind": "theorem",
    "line": 203,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  0 < ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 \u2200 p \u2208 minimalPrimes R, x \u2209 p"
+  },
+  "Singularity.Algebra.exists_notMem_forall_mul_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A] (p : Ideal A) [p.IsPrime] (I J : Ideal A),\n  (\u2200 y \u2208 J, \u2203 s \u2209 p, s * y \u2208 I) \u2192 \u2203 g \u2209 p, \u2200 y \u2208 J, g * y \u2208 I"
+  },
+  "Singularity.Algebra.exists_notMem_isRegularLocalRing_of_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 296,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A] (p : Ideal A) [inst_2 : p.IsPrime]\n  [IsRegularLocalRing (Localization.AtPrime p)],\n  \u2203 f \u2209 p,\n    \u2200 (q : Ideal A) [inst_4 : q.IsPrime],\n      p \u2264 q \u2192\n        f \u2209 q \u2192\n          IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) p) \u2192\n            IsRegularLocalRing (Localization.AtPrime q)"
+  },
+  "Singularity.Algebra.exists_notMem_isRegularLocalRing_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 136,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A] (p : Ideal A) [inst_2 : p.IsPrime] (r : \u2115),\n  \u2200 I \u2264 p,\n    IsRegularLocalRing (Localization.AtPrime p \u29f8 Ideal.map (algebraMap A (Localization.AtPrime p)) I) \u2192\n      ringKrullDim (Localization.AtPrime p \u29f8 Ideal.map (algebraMap A (Localization.AtPrime p)) I) = \u2191r \u2192\n        \u2203 f \u2209 p,\n          \u2200 (q : Ideal A) [inst_3 : q.IsPrime],\n            p \u2264 q \u2192\n              f \u2209 q \u2192\n                IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) p) \u2192\n                  IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) I)"
   },
   "Singularity.Algebra.exists_ringKrullDim_eq_natCast": {
    "axioms": [
@@ -545,6 +588,17 @@
    "line": 77,
    "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] [IsFractionRing A K] (s : A),\n  (\u2200 (b : K), IsIntegral A b \u2192 \u2203 a, (algebraMap A K) a = s \u2022 b) \u2192\n    \u2200 (R : Type u_1) [inst_4 : CommRing R] [IsDomain R] [inst_6 : Algebra A R] [IsLocalization.Away s R]\n      [inst_8 : Algebra R K] [IsScalarTower A R K] [IsFractionRing R K], IsIntegrallyClosed R"
   },
+  "Singularity.Algebra.isLocalRing_localization_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 130,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] (q : Ideal A) [inst_1 : q.IsPrime] {I : Ideal A},\n  I \u2264 q \u2192 IsLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) I)"
+  },
   "Singularity.Algebra.isLocalRing_quotient_of_le_maximalIdeal": {
    "axioms": [
     "Classical.choice",
@@ -556,6 +610,17 @@
    "line": 77,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
   },
+  "Singularity.Algebra.isLocalization_localization_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 386,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] (p q : Ideal A) [inst_1 : q.IsPrime],\n  p \u2264 q \u2192\n    \u2200 [inst_2 : (Ideal.map (Ideal.Quotient.mk p) q).IsPrime],\n      IsLocalization (Ideal.map (Ideal.Quotient.mk p) q).primeCompl\n        (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) p)"
+  },
   "Singularity.Algebra.isLocalization_residueField": {
    "axioms": [
     "Classical.choice",
@@ -566,6 +631,50 @@
    "kind": "theorem",
    "line": 68,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (p : Ideal R) [inst_1 : p.IsPrime],\n  IsLocalization (Algebra.algebraMapSubmonoid (R \u29f8 p) p.primeCompl) p.ResidueField"
+  },
+  "Singularity.Algebra.isOpen_of_stableUnderGeneralization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 317,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A] (U : Set (PrimeSpectrum A)),\n  StableUnderGeneralization U \u2192\n    (\u2200 p \u2208 U, \u2203 f \u2209 p.asIdeal, \u2200 (q : PrimeSpectrum A), p \u2264 q \u2192 f \u2209 q.asIdeal \u2192 q \u2208 U) \u2192 IsOpen U"
+  },
+  "Singularity.Algebra.isOpen_regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 363,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A],\n  (\u2200 p \u2208 Singularity.Algebra.regularLocus A,\n      \u2203 g \u2209 p.asIdeal,\n        \u2200 (q : PrimeSpectrum A),\n          p \u2264 q \u2192\n            g \u2209 q.asIdeal \u2192\n              IsRegularLocalRing\n                (Localization.AtPrime q.asIdeal \u29f8\n                  Ideal.map (algebraMap A (Localization.AtPrime q.asIdeal)) p.asIdeal)) \u2192\n    IsOpen (Singularity.Algebra.regularLocus A)"
+  },
+  "Singularity.Algebra.isOpen_regularLocus_of_exists_isOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 432,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A],\n  (\u2200 p \u2208 Singularity.Algebra.regularLocus A,\n      \u2203 U, IsOpen U \u2227 U.Nonempty \u2227 U \u2286 Singularity.Algebra.regularLocus (A \u29f8 p.asIdeal)) \u2192\n    IsOpen (Singularity.Algebra.regularLocus A)"
+  },
+  "Singularity.Algebra.isPrime_map_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 381,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] (p q : Ideal A) [q.IsPrime], p \u2264 q \u2192 (Ideal.map (Ideal.Quotient.mk p) q).IsPrime"
   },
   "Singularity.Algebra.isPurelyInseparable_fixedField_top": {
    "axioms": [
@@ -721,6 +830,17 @@
    "line": 37,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {N P : Submodule R M},\n  N \u2264 P \u2192 Module.length R (M \u29f8 N) = Module.length R (\u21a5P \u29f8 Submodule.comap P.subtype N) + Module.length R (M \u29f8 P)"
   },
+  "Singularity.Algebra.localizationQuotientEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "def",
+   "line": 424,
+   "type": "{A : Type u} \u2192\n  [inst : CommRing A] \u2192\n    (p q : Ideal A) \u2192\n      [inst_1 : q.IsPrime] \u2192\n        p \u2264 q \u2192\n          [inst_2 : (Ideal.map (Ideal.Quotient.mk p) q).IsPrime] \u2192\n            Localization.AtPrime (Ideal.map (Ideal.Quotient.mk p) q) \u2243+*\n              Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) p"
+  },
   "Singularity.Algebra.maximalIdeal_eq_bot_of_socle": {
    "axioms": [
     "Classical.choice",
@@ -742,6 +862,17 @@
    "kind": "theorem",
    "line": 84,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R \u29f8 I)],\n  IsLocalRing.maximalIdeal (R \u29f8 I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)"
+  },
+  "Singularity.Algebra.mem_regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 60,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] {p : PrimeSpectrum A},\n  p \u2208 Singularity.Algebra.regularLocus A \u2194 IsRegularLocalRing (Localization.AtPrime p.asIdeal)"
   },
   "Singularity.Algebra.not_isField_of_ringKrullDim_eq_one": {
    "axioms": [
@@ -908,6 +1039,17 @@
    "line": 119,
    "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  CategoryTheory.projectiveDimension \u21a7(Shrink.{u, u} (R \u29f8 IsLocalRing.maximalIdeal R)) = ringKrullDim R"
   },
+  "Singularity.Algebra.quotQuotSpanEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "def",
+   "line": 111,
+   "type": "{A : Type u} \u2192\n  [inst : CommRing A] \u2192\n    {S : Type u} \u2192\n      [inst_1 : CommRing S] \u2192\n        (\u03c6 : A \u2192+* S) \u2192\n          (I : Ideal A) \u2192\n            (a : A) \u2192\n              (S \u29f8 Ideal.map \u03c6 I) \u29f8 Ideal.span {(Ideal.Quotient.mk (Ideal.map \u03c6 I)) (\u03c6 a)} \u2243+*\n                S \u29f8 Ideal.map \u03c6 (I \u2294 Ideal.span {a})"
+  },
   "Singularity.Algebra.quotSMulTopEquivQuotSpan": {
    "axioms": [
     "Classical.choice",
@@ -929,6 +1071,28 @@
    "kind": "theorem",
    "line": 241,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
+  },
+  "Singularity.Algebra.regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "def",
+   "line": 56,
+   "type": "(A : Type u) \u2192 [inst : CommRing A] \u2192 Set (PrimeSpectrum A)"
+  },
+  "Singularity.Algebra.regularLocus_stableUnderGeneralization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 64,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A], StableUnderGeneralization (Singularity.Algebra.regularLocus A)"
   },
   "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one": {
    "axioms": [

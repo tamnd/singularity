@@ -1,0 +1,13 @@
+tag: SG0000002P
+kind: lemma
+title: A regular system of parameters spreads to a neighbourhood
+statement: Let $A$ be a Noetherian ring and let $\mathfrak{p} \in \operatorname{Reg}(A)$. Then there is $f \notin \mathfrak{p}$ with this property. For each prime $\mathfrak{q} \supseteq \mathfrak{p}$ with $f \notin \mathfrak{q}$, if $A_\mathfrak{q}/\mathfrak{p}A_\mathfrak{q}$ is a regular local ring, then $A_\mathfrak{q}$ is a regular local ring.
+sources:
+- paper: Mat
+- paper: Nag62
+uses:
+- SG00000021
+lean:
+  statement: Singularity.Algebra.exists_notMem_isRegularLocalRing_of_quotient
+  proof: Singularity.Algebra.exists_notMem_isRegularLocalRing_of_quotient
+tier: T1
