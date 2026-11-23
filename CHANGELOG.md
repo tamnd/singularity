@@ -4,9 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.2.1 - 2026-11-24
+
 - The nodes SG00000021 (the quotient of a regular local ring by a parameter), SG00000022 (regular local rings of dimension 1) and SG00000023 (a regular local ring is a unique factorization domain, planned). The node SG0000000J has its Lean proof, and its statement is now the domain part only. The node SG0000001A uses SG00000022.
 - `records/lean.json` from tamnd/singularity-lean at 0df69ef, with the file `Singularity/Algebra/Regular.lean`. It has 69 declarations.
 - `records/trust.json`: the replay with leanchecker passes on both packages. Q3 stays open, because the replay uses the same kernel.
+- The release v0.2.1 of tamnd/singularity-lean, with `Singularity/Algebra/Regular.lean`.
 
 ## 0.2.0 - 2026-11-23
 
