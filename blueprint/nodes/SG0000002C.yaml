@@ -1,0 +1,17 @@
+tag: SG0000002C
+kind: theorem
+title: Integral curves
+statement: For each $p$, each integral variety of dimension at most 1 over a field of characteristic $p$ has a resolution, and the normalization is one. The normalization is finite by the theorem of E. Noether, so it is proper. It is regular, because its rings of sections over affine opens are Dedekind domains. A point of the curve is regular if and only if it has an affine neighbourhood with an integrally closed ring of sections. Thus the regular locus is open and the normalization is an isomorphism over it.
+sources:
+- paper: Curves
+- paper: Har
+uses:
+- SG00000006
+- SG0000000M
+- SG0000002A
+- SG0000002B
+- SG00000024
+lean:
+  statement: Singularity.IntegralResolutionInDim
+  proof: Singularity.Curves.integralResolutionInDim_one
+tier: T5

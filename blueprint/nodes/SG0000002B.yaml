@@ -1,0 +1,12 @@
+tag: SG0000002B
+kind: theorem
+title: The normal locus of a domain with a finite normalization
+statement: Let $A$ be a domain whose normalization $\tilde A$ is a finite $A$-module, and let $p$ be a prime ideal of $A$ such that $A_p$ is integrally closed. Then there is an element $s \notin p$ with $s \tilde A \subseteq A$, and the localization $A_s$ is integrally closed. Thus the normal locus of $\operatorname{Spec} A$ is open. The element $s$ is in the conductor of $A$ in $\tilde A$.
+sources:
+- paper: Mat
+uses:
+- SG0000000M
+lean:
+  statement: Singularity.Algebra.exists_smul_mem_of_isIntegrallyClosed_localization
+  proof: Singularity.Algebra.exists_smul_mem_of_isIntegrallyClosed_localization
+tier: T1
