@@ -5,6 +5,6 @@ statement: For a regular nonempty $X$, the map $X \sqcup X \to X$ is proper, $X 
 uses:
 - SG00000004
 lean:
-  statement: Singularity.not_isResolution_codiag
-  proof: Singularity.not_isResolution_codiag
+  statement: Singularity.Fidelity.not_isResolution_codiag
+  proof: Singularity.Fidelity.not_isResolution_codiag
 tier: S
