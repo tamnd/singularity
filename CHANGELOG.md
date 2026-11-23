@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.2.5 - 2026-11-24
+
 - The node SG0000001Y (the reduction to integral varieties) is now a theorem with the Lean proof `Singularity.Reduction.reductionToIntegral`. It was a named hypothesis. The source is the Stacks project.
 - The node SG0000000D (characteristic 0) now has the Lean proof `Singularity.resolutionInDim_charZero`, which takes no hypothesis. Its status changes from proved-mod to proved.
 - The node SG0000001A (curves) now has the Lean proof `Singularity.Curves.resolutionInDim_one`. Its status changes from stated to proved.
