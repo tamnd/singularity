@@ -1,0 +1,13 @@
+tag: SG00000026
+kind: theorem
+title: Finiteness of normalization in characteristic 0
+statement: Let $k$ be a field of characteristic 0 and let $A$ be a domain that is a finitely generated $k$-algebra. Then the integral closure of $A$ in $\operatorname{Frac} A$ is a finite $A$-module.
+sources:
+- paper: Har
+- paper: Mathlib
+uses:
+- SG00000025
+lean:
+  statement: Singularity.Algebra.finite_integralClosure_of_charZero
+  proof: Singularity.Algebra.finite_integralClosure_of_charZero
+tier: T1

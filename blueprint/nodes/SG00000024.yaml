@@ -1,0 +1,13 @@
+tag: SG00000024
+kind: theorem
+title: Normal schemes of dimension at most 1 are regular
+statement: Let $X$ be a locally Noetherian scheme of dimension at most 1. If each local ring of $X$ is an integrally closed domain, then $X$ is regular.
+sources:
+- paper: AM69
+- paper: Har
+uses:
+- SG00000022
+lean:
+  statement: Singularity.isRegularScheme_of_isIntegrallyClosed_stalk
+  proof: Singularity.isRegularScheme_of_isIntegrallyClosed_stalk
+tier: T1
