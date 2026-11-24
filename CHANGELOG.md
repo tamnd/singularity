@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The note of SG0000000Z gives the limit augmentation of Vaquié from tamnd/singularity-lean#84.
 - The note of SG00000014 gives the case f = z^q + F with F clean, where the polyhedron is (1/q) times the Newton polyhedron of F (tamnd/singularity-lean#83).
 
 ### Added
