@@ -1,0 +1,15 @@
+tag: SG00000047
+kind: theorem
+title: The coefficient ideal
+statement: Let $X$ be a smooth variety over a field of characteristic 0, let $(I, m)$ be a marked ideal with $m \ge 1$, and let $C(I) = \sum_{j=0}^{m-1} (D^j(I))^{m!/(m-j)}$ be its coefficient ideal, with the mark $m!$. Let $S \subseteq X$ be a smooth hypersurface such that no irreducible component of $S$ lies in $\operatorname{cosupp}(I, m)$, and let $C_S(I) = C(I) \cdot \mathcal{O}_S$. Consider a sequence of blowups $X_r \to \dots \to X_0 = X$ with smooth centers $Z_i \subseteq S_i$, where $S_{i+1}$ is the birational transform of $S_i$. Then it is a blowup sequence of order at least $m$ for $(I, m)$ if and only if the induced sequence $S_r \to \dots \to S_0 = S$ is a blowup sequence of order at least $m!$ for $(C_S(I), m!)$. In this case $S_i \cap \operatorname{cosupp}(I_i, m) = \operatorname{cosupp}(C_{S,i}, m!)$ for each $i$, where $C_{S,i}$ is the $i$th transform of $(C_S(I), m!)$. In particular, if $m$ is the maximal order of $I$ and $S$ is a hypersurface of maximal contact, then order reduction for $(I, m)$ on $X$ is order reduction for $(C_S(I), m!)$ on $S$.
+sources:
+- paper: Vil89
+- paper: EH02
+- paper: Kol07
+uses:
+- SG00000045
+- SG00000046
+tier: T8
+route:
+- R3
+notes: This is Volume 2, Theorem 3.2.4 (going down and going up) and Corollary 3.2.5 of the handbook. The coefficient ideal is the one of [Vil89] and [EH02]. Kollár prefers other ideals, which are both D-balanced and MC-invariant [Kol07, Chapter 3]. The theorem reduces the dimension by one. No Lean statement yet.

@@ -1,0 +1,13 @@
+tag: SG00000043
+kind: theorem
+title: Functorial principalization in characteristic 0
+statement: There is a rule $B$ that assigns to each triple $(X, I, E)$, where $X$ is a smooth scheme of finite type over a field of characteristic 0, $I$ is an ideal sheaf that is nonzero on each irreducible component and $E$ is a divisor with simple normal crossings with an ordered index set, a blowup sequence $\Pi \colon X_r \to \dots \to X_0 = X$ such that each center is smooth and has simple normal crossings with the transform of $E$, $\Pi^* I$ is the ideal sheaf of a divisor with simple normal crossings, and $\Pi$ is an isomorphism over $X \setminus V(I)$. The rule commutes with smooth morphisms and with change of the ground field.
+sources:
+- paper: Kol07
+- paper: Wlo05
+uses:
+- SG00000048
+- SG00000049
+- SG0000000V
+tier: T8
+notes: This is the fourth and strongest form of principalization in [Kol07, Chapter 3], Volume 2, Theorem 1.1.8 of the handbook. The functorial forms of the steps of order reduction, SG00000048 and SG00000049, give the rule. Kollár takes the idea of the uniqueness argument from [Wlo05]. The compatibility with smooth morphisms lets the local sequences glue. No Lean statement yet.

@@ -1,0 +1,12 @@
+tag: SG0000004J
+kind: theorem
+title: Extension of a pointed curve after an alteration
+statement: Let $k$ be an algebraically closed field, let $Y$ be a variety over $k$, let $U \subseteq Y$ be a nonempty open subscheme, let $n \ge 3$, and let $(C \to U, \sigma_1, \dots, \sigma_n)$ be a smooth proper $n$-pointed curve of genus $g$ over $U$ with geometrically connected fibres. Then there are a variety $Y'$ over $k$, a projective generically étale alteration $\psi \colon Y' \to Y$, a nonempty open subscheme $U' \subseteq \psi^{-1}(U)$, a stable $n$-pointed curve $(\mathcal{C}', \tau_1, \dots, \tau_n)$ of genus $g$ over $Y'$, and an isomorphism $\mathcal{C}'|_{U'} \cong C \times_U U'$ that maps each $\tau_i$ to the pullback of $\sigma_i$. If $Y$ is projective, then $Y'$ is projective.
+sources:
+- paper: dJ96
+uses:
+- SG0000004H
+tier: T7
+route:
+- R6
+notes: 'This is Hypothesis 2.2.5 of Volume 8 of the handbook, the only consequence of the moduli that the proof of SG0000001K uses. Proposition 2.2.6 of Volume 8 proves it from SG0000004H, with the argument of [dJ96, 4.17]: take a component of the scheme of level structures, and the closure of the graph of the map to $\overline{M}$. Volume 8, Chapter 4 proposes it as the named hypothesis of the first Lean form of SG0000001K (open question Q-08). No Lean statement yet.'

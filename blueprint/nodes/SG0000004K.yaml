@@ -1,0 +1,14 @@
+tag: SG0000004K
+kind: theorem
+title: De Jong's regular model of a semistable curve
+statement: Let $S$ be an excellent regular scheme, let $D \subseteq S$ be a divisor with strict normal crossings, and let $f \colon X \to S$ be a split semistable curve that is smooth over $S \setminus D$. Then there is a projective modification $\varphi \colon X_1 \to X$ with center in $\operatorname{Sing}(X)$ such that the composition $X_1 \to S$ is a split semistable curve that is smooth over $S \setminus D$, and $X_1$ is regular.
+sources:
+- paper: dJ96
+- paper: Liu
+uses:
+- SG00000002
+- SG0000000V
+tier: T7
+route:
+- R6
+notes: This is [dJ96, Proposition 3.6], Volume 8, Theorem 2.1.8 of the handbook. A semistable curve is a flat proper morphism of finite presentation whose geometric fibres are connected curves with at most ordinary double points [dJ96, 2.21 and 2.22]. At a singular point the complete local ring is $A[[u, v]]/(uv - h)$, and explicit blowups resolve it. De Jong uses the theorem over a trait [dJ96, 6.16]. Over a field he uses only its first step, so SG0000001K does not use this node. No Lean statement yet.

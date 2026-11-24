@@ -1,0 +1,11 @@
+tag: SG0000004G
+kind: theorem
+title: Stable reduction and the moduli of stable pointed curves
+statement: Let $g, n \ge 0$ with $2g - 2 + n > 0$. The stable $n$-pointed curves of genus $g$ form an algebraic stack $\overline{\mathcal{M}}_{g,n}$ over $\mathbb{Z}$ that is proper and smooth over $\mathbb{Z}$, and the smooth curves form an open substack $\mathcal{M}_{g,n}$.
+sources:
+- paper: DM69
+- paper: Knu83
+tier: T7
+route:
+- R6
+notes: For $n = 0$ and $g \ge 2$ this is [DM69], and for pointed curves it is [Knu83]. The properness of $\overline{\mathcal{M}}_{g,n}$ contains the stable reduction theorem for curves over a discrete valuation ring, after a finite extension of the fraction field. Volume 8, Theorem 2.2.2 of the handbook states the theorem and does not prove it. No Lean statement yet. A formalization of [DM69] is a large separate project.

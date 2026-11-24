@@ -1,0 +1,12 @@
+tag: SG0000004D
+kind: theorem
+title: Local uniformization of monomial valuations
+statement: 'Let $k$ be a field of any characteristic, let $K = k(x_1, \dots, x_r)$, and let $v$ be the monomial valuation of $K/k$ with weights $\gamma_1, \dots, \gamma_r$ in an ordered abelian group, linearly independent over $\mathbb{Z}$, so that $v(\sum_\alpha c_\alpha x^\alpha) = \min \{ \sum_i \alpha_i \gamma_i : c_\alpha \ne 0 \}$. Then for each finite subset $S$ of $\mathcal{O}_v$ there are Laurent monomials $u_1, \dots, u_r$ in the $x_i$ that form a basis of the group of Laurent monomials, with $v(u_i) > 0$, such that $S$ lies in the localization of the polynomial ring $k[u_1, \dots, u_r]$ at the ideal $(u_1, \dots, u_r)$. In particular $v$ has local uniformization. The key step is the lattice lemma: if $\Gamma \cong \mathbb{Z}^r$ is an ordered group and $D \subseteq \Gamma$ is a finite set of elements $\ge 0$, then $\Gamma$ has a basis $m_1, \dots, m_r$ over $\mathbb{Z}$ of positive elements such that each element of $D$ is a combination of the $m_i$ with coefficients in $\mathbb{N}$.'
+sources:
+- paper: KK05
+uses:
+- SG0000000Y
+tier: T6
+route:
+- R2
+notes: This is Volume 5, Lemma 2.1.4 and Theorem 2.1.5 of the handbook. A monomial valuation is an Abhyankar valuation with residue field $k$. Corollary 2.1.6 gives the same result over the ground field $k(y_1, \dots, y_t)$, and this is the form that the proof of SG0000001E uses. The charts $k[u_1, \dots, u_r]$ are smooth affine toric charts. The library has the one-variable step `Singularity.monomialValuation`, and not the lattice lemma or the theorem.

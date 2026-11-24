@@ -1,0 +1,13 @@
+tag: SG00000046
+kind: theorem
+title: The restriction theorem
+statement: Let $X$ be a smooth variety over a field of characteristic 0, let $S \subseteq X$ be a smooth hypersurface, and let $(I, m)$ be a marked ideal with $m \ge 1$. Let $X_r \to \dots \to X_0 = X$ be a blowup sequence of order at least $m$ for $(I, m)$ whose centers $Z_i$ lie in the birational transforms $S_i$ of $S$ and have codimension at least 2 in $X_i$. For $0 \le j \le m - 1$ let $J^{(j)}_i$ be the $i$th transform of the marked ideal $(D^j(I), m - j)$ and let $T^{(j)}_i = J^{(j)}_i \cdot \mathcal{O}_{S_i}$. Then $S_{i+1} \to S_i$ is the blowup of $S_i$ along $Z_i$, the $T^{(j)}_i$ are the successive transforms of $(D^j(I) \cdot \mathcal{O}_S, m - j)$ on $S$, and $S_i \cap \operatorname{cosupp}(I_i, m) = \bigcap_{j=0}^{m-1} \operatorname{cosupp}(T^{(j)}_i, m - j)$.
+sources:
+- paper: Kol07
+uses:
+- SG0000000S
+- SG0000002E
+tier: T8
+route:
+- R3
+notes: This is Volume 2, Theorem 3.1.3 of the handbook, the going-up step of [Kol07, Chapter 3], Section Restriction of derivatives and going up, in a form for the family of all derivative ideals. Here $\operatorname{cosupp}(I, m)$ is the set of the closed points where $I$ has order at least $m$, and the transform of a marked ideal $(A, a)$ under the blowup of $Z$ with exceptional divisor $F$ is $(\mathcal{O}(aF) \cdot \pi^* A, a)$. The proof divides by factorials, so it needs characteristic 0. No Lean statement yet.
