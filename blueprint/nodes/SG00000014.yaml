@@ -8,7 +8,8 @@ sources:
 uses:
 - SG00000011
 lean:
-  statement: Singularity.characteristicPolyhedron
+  statement: Singularity.charPolyhedron
 tier: T4
 route:
 - R1
+notes: The Lean definition is in tamnd/singularity-lean#76, for a polynomial in z over the power series ring k[[x]] with the coordinates x fixed. The library proves that the polyhedron is convex and stable under the orthant, that it does not change under a translation of z by an element of the maximal ideal, and one direction of the vertex criterion of Hironaka (a solvable vertex is not in the polyhedron). The library does not prove the converse of the criterion, that some choice of z attains the polyhedron, that the polyhedron has finitely many vertices, or the result over a general regular local ring.
