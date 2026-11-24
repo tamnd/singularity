@@ -1,0 +1,16 @@
+tag: SG0000004P
+kind: theorem
+title: The transformation law of the log-Jacobian ideal under a blowup in a regular center
+statement: Let $K$ be an algebraically closed field of characteristic $p > 0$, let $C = V(x_1, \dots, x_c)$ with $2 \le c \le n$, let $g \in (x_1, \dots, x_c)^p$, and let $\pi$ be the $x_1$-chart of the blowup of $C$ with the translations $t_2, \dots, t_c$. Put $g' = x_1^{-p} \pi(g)$ and $\Delta' = \{1\} \cup \{i \in \Delta \mid i \ne 1, \ i > c \text{ or } t_i = 0\}$. Then, in $K[[x]]$, the log-Jacobian ideal of $g'$ for $\Delta'$ is $x_1^{-p} \pi(\Theta_C(g))$, where $\Theta_C(g)$ is the image of $g$ under the log derivations that map $(x_1, \dots, x_c)$ into itself. Also, if $h \in (x_1, \dots, x_c)^s$ and $\operatorname{ord}_0 h = s$, then $x_1^{-s} \pi(h)$ has order at most $s$ at the origin.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000003E
+- SG0000003M
+- SG0000003A
+tier: T2
+route:
+- R1
+- R5
+notes: This is Volume 7, Theorem 3.4.3 and Lemma 3.4.4 of the handbook. For $c = n$ the center is the origin, and the law is SG0000003M. The second statement is the equimultiple case of the bound SG0000003A for the order of a weak transform. Without the condition $\operatorname{ord}_0 h = s$ it is false, for example for $h = x_2 x_3$ and $s = 1$. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.

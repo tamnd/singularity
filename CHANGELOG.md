@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes SG0000004P to SG0000004R are new, for Volume 7, Section 3.4 of the handbook. SG0000004P is the transformation law of the log-Jacobian ideal for the blowup in a regular center of positive dimension, with the lemma on the weak transform of an equimultiple ideal. SG0000004Q is the non-increase of the residual order under the conditions (H1) and (H2). SG0000004R is the counterexample that shows that (H1) alone is not sufficient (#130).
+
 ## 0.4.11 - 2026-11-25
 
 ### Added
