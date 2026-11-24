@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The handbook page lists the five volumes of the handbook edition 0.3.2, with links to the PDF and EPUB files of the release.
+
 ## 0.3.0 - 2026-11-24
 
 - The node SG0000003A (the order does not go up under a point blowup) is proved by Singularity.ord_le_of_pointChart in tamnd/singularity-lean#52. The node SG0000003B (the points of the same order lie in the directrix) is new, with no Lean proof.
