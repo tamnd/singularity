@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.1 - 2026-11-24
+
 - The papers Vaq07, Kuh10, Kuh10b and Zar44b are new, for Volume 3 of the handbook. The record Mac36 names only the paper of MacLane, because Vaq07 now has its own record.
 - The note of the trust check Q3 gives the result of lean4lean on each module of Singularity at commit ce778c3, run on a project server. It accepted the 43 modules.
 - The handbook page lists the six volumes of the handbook edition 0.4.1, with links to the PDF and EPUB files of the release. Volume 3, Valuations, is new in this edition.
