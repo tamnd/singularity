@@ -1,0 +1,14 @@
+tag: SG0000002T
+kind: theorem
+title: The regular locus is open in characteristic zero
+statement: Let $R$ be an algebra of finite type over a field $k$ of characteristic $0$. Then the regular locus of $R$ is open in $\operatorname{Spec} R$.
+sources:
+- paper: Nag62
+- paper: Mat
+uses:
+- SG0000002Q
+- SG0000002S
+lean:
+  statement: Singularity.Algebra.isOpen_regularLocus_of_charZero
+  proof: Singularity.Algebra.isOpen_regularLocus_of_charZero
+tier: T1

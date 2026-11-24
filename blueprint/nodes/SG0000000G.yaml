@@ -6,6 +6,7 @@ sources:
 - paper: Jac
 uses:
 - SG0000000F
+- SG0000002R
 lean:
   statement: Singularity.isRegular_of_jacobian
 tier: T1

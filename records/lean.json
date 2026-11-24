@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "9cf5ebeba284bc93c8dd67e71db03f7c10454aa1",
+  "commit": "4213622cdc6788566c70b16f968758835ee5e21f",
   "record": "records/base-charzero.json"
  },
- "built": "2026-11-23",
- "commit": "9cf5ebeba284bc93c8dd67e71db03f7c10454aa1",
+ "built": "2026-11-24",
+ "commit": "4213622cdc6788566c70b16f968758835ee5e21f",
  "decls": {
   "Singularity.Algebra.algebraMapSubmonoid_primeCompl_eq": {
    "axioms": [
@@ -27,6 +27,17 @@
    "line": 119,
    "type": "\u2200 {A : Type u} [inst : CommRing A] (q : Ideal A) [inst_1 : q.IsPrime] (I : Ideal A) {g y : A},\n  g \u2209 q \u2192 g * y \u2208 I \u2192 (algebraMap A (Localization.AtPrime q)) y \u2208 Ideal.map (algebraMap A (Localization.AtPrime q)) I"
   },
+  "Singularity.Algebra.derivation_mem_of_mem_sq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Jacobian.lean",
+   "kind": "theorem",
+   "line": 40,
+   "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] (D : Derivation k A A)\n  (I : Ideal A) {x : A}, x \u2208 I ^ 2 \u2192 D x \u2208 I"
+  },
   "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
    "axioms": [
     "Classical.choice",
@@ -48,6 +59,17 @@
    "kind": "theorem",
    "line": 85,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (x : R),\n  Function.Exact \u21d1(x \u2022 LinearMap.id) \u21d1(Algebra.linearMap R (R \u29f8 Ideal.span {x}))"
+  },
+  "Singularity.Algebra.exists_conductor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 154,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] [Module.Finite A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2203 c, c \u2260 0 \u2227 \u2200 (d : B), (algebraMap A B) c * d \u2208 A[z]"
   },
   "Singularity.Algebra.exists_injective_residueField_of_socle": {
    "axioms": [
@@ -114,6 +136,39 @@
    "kind": "theorem",
    "line": 203,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  0 < ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 \u2200 p \u2208 minimalPrimes R, x \u2209 p"
+  },
+  "Singularity.Algebra.exists_mul_mem_adjoin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 125,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2200 (d : B), \u2203 b, b \u2260 0 \u2227 (algebraMap A B) b * d \u2208 A[z]"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [IsDomain B] [inst_4 : Algebra A B]\n  [FaithfulSMul A B] [IsRegularRing A] [IsIntegrallyClosed A] [Module.Finite A B] [CharZero (FractionRing A)],\n  \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus B"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_field": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 247,
+   "type": "\u2200 (k : Type u) [inst : Field k] [CharZero k] (D : Type u) [inst_2 : CommRing D] [IsDomain D] [inst_4 : Algebra k D]\n  [Algebra.FiniteType k D], \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
   },
   "Singularity.Algebra.exists_notMem_forall_mul_mem": {
    "axioms": [
@@ -610,6 +665,17 @@
    "line": 77,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
   },
+  "Singularity.Algebra.isLocalization_atPrime_of_conductor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S],\n  Function.Injective \u21d1(algebraMap R S) \u2192\n    \u2200 (P : Ideal S) [inst_3 : P.IsPrime] (c : R),\n      (algebraMap R S) c \u2209 P \u2192\n        (\u2200 (s : S), \u2203 r, (algebraMap R S) r = (algebraMap R S) c * s) \u2192\n          IsLocalization.AtPrime (Localization.AtPrime P) (Ideal.comap (algebraMap R S) P)"
+  },
   "Singularity.Algebra.isLocalization_localization_quotient": {
    "axioms": [
     "Classical.choice",
@@ -653,6 +719,17 @@
    "kind": "theorem",
    "line": 363,
    "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A],\n  (\u2200 p \u2208 Singularity.Algebra.regularLocus A,\n      \u2203 g \u2209 p.asIdeal,\n        \u2200 (q : PrimeSpectrum A),\n          p \u2264 q \u2192\n            g \u2209 q.asIdeal \u2192\n              IsRegularLocalRing\n                (Localization.AtPrime q.asIdeal \u29f8\n                  Ideal.map (algebraMap A (Localization.AtPrime q.asIdeal)) p.asIdeal)) \u2192\n    IsOpen (Singularity.Algebra.regularLocus A)"
+  },
+  "Singularity.Algebra.isOpen_regularLocus_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 262,
+   "type": "\u2200 (k : Type u) [inst : Field k] [CharZero k] (R : Type u) [inst_2 : CommRing R] [inst_3 : Algebra k R]\n  [Algebra.FiniteType k R], IsOpen (Singularity.Algebra.regularLocus R)"
   },
   "Singularity.Algebra.isOpen_regularLocus_of_exists_isOpen": {
    "axioms": [
@@ -731,6 +808,17 @@
    "line": 74,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [IsRegularLocalRing R] (p : Ideal R) [inst_2 : p.IsPrime],\n  IsRegularLocalRing (Localization.AtPrime p)"
   },
+  "Singularity.Algebra.isRegularLocalRing_localization_quotient_of_derivation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Jacobian.lean",
+   "kind": "theorem",
+   "line": 78,
+   "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsNoetherianRing A]\n  (D : Derivation k A A) (q : Ideal A) [inst_4 : q.IsPrime] [IsRegularLocalRing (Localization.AtPrime q)] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      \u2200 [inst : (Ideal.map (Ideal.Quotient.mk (Ideal.span {F})) q).IsPrime],\n        IsRegularLocalRing (Localization.AtPrime (Ideal.map (Ideal.Quotient.mk (Ideal.span {F})) q))"
+  },
   "Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT": {
    "axioms": [
     "Classical.choice",
@@ -752,6 +840,17 @@
    "kind": "theorem",
    "line": 394,
    "type": "\u2200 (e : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2264 e \u2192\n    \u2200 (n : \u2115), CategoryTheory.HasProjectiveDimensionLT (\u21a7(IsLocalRing.ResidueField R)) n \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.Algebra.isRegularLocalRing_quotient_of_derivation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Jacobian.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsNoetherianRing A]\n  (D : Derivation k A A) (q : Ideal A) [inst_4 : q.IsPrime] [IsRegularLocalRing (Localization.AtPrime q)] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) (Ideal.span {F}))"
   },
   "Singularity.Algebra.lTensor_injective_of_isSMulRegular": {
    "axioms": [
@@ -873,6 +972,39 @@
    "kind": "theorem",
    "line": 60,
    "type": "\u2200 {A : Type u} [inst : CommRing A] {p : PrimeSpectrum A},\n  p \u2208 Singularity.Algebra.regularLocus A \u2194 IsRegularLocalRing (Localization.AtPrime p.asIdeal)"
+  },
+  "Singularity.Algebra.mem_regularLocus_of_conductor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S],\n  Function.Injective \u21d1(algebraMap R S) \u2192\n    \u2200 (P : PrimeSpectrum S) (c : R),\n      (algebraMap R S) c \u2209 P.asIdeal \u2192\n        (\u2200 (s : S), \u2203 r, (algebraMap R S) r = (algebraMap R S) c * s) \u2192\n          { asIdeal := Ideal.comap (algebraMap R S) P.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n            P \u2208 Singularity.Algebra.regularLocus S"
+  },
+  "Singularity.Algebra.mem_regularLocus_of_ringEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (e : R \u2243+* S) (p : PrimeSpectrum S),\n  { asIdeal := Ideal.comap e p.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n    p \u2208 Singularity.Algebra.regularLocus S"
+  },
+  "Singularity.Algebra.notMem_maximalIdeal_sq_of_derivation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Jacobian.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] (D : Derivation k A A)\n  (q : Ideal A) [inst_3 : q.IsPrime] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      (algebraMap A (Localization.AtPrime q)) F \u2208 IsLocalRing.maximalIdeal (Localization.AtPrime q) \u2227\n        (algebraMap A (Localization.AtPrime q)) F \u2209 IsLocalRing.maximalIdeal (Localization.AtPrime q) ^ 2"
   },
   "Singularity.Algebra.not_isField_of_ringKrullDim_eq_one": {
    "axioms": [
@@ -1082,6 +1214,28 @@
    "kind": "def",
    "line": 56,
    "type": "(A : Type u) \u2192 [inst : CommRing A] \u2192 Set (PrimeSpectrum A)"
+  },
+  "Singularity.Algebra.regularLocus_adjoinRoot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 107,
+   "type": "\u2200 {A : Type u} [inst : CommRing A] [IsRegularRing A] (F : Polynomial A),\n  \u2191(PrimeSpectrum.basicOpen ((AdjoinRoot.mk F) (Polynomial.derivative F))) \u2286\n    Singularity.Algebra.regularLocus (AdjoinRoot F)"
+  },
+  "Singularity.Algebra.regularLocus_quotient_of_derivation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Jacobian.lean",
+   "kind": "theorem",
+   "line": 87,
+   "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsRegularRing A]\n  (D : Derivation k A A) (F : A),\n  \u2191(PrimeSpectrum.basicOpen ((Ideal.Quotient.mk (Ideal.span {F})) (D F))) \u2286\n    Singularity.Algebra.regularLocus (A \u29f8 Ideal.span {F})"
   },
   "Singularity.Algebra.regularLocus_stableUnderGeneralization": {
    "axioms": [
