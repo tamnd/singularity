@@ -4,6 +4,7 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The handbook page links to the handbook edition 0.4.5. Volume 3 of this edition proves parts 1 and 2 of the theorem of MacLane-Vaquié and gives the Lean statements of local uniformization.
 - The nodes SG0000001E, SG0000001F, SG0000001G, SG0000001H and SG0000001J have notes on the Lean statements of local uniformization of tamnd/singularity-lean#69 and tamnd/singularity-lean#70.
 - records/lean.json records the Lean build at commit dbde226, with 974 declarations.
 - The node SG0000000Z has notes on the Lean proof of parts 1 and 2 of the theorem of MacLane-Vaquié, from tamnd/singularity-lean#68.
