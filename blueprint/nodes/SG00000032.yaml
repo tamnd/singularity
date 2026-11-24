@@ -1,0 +1,15 @@
+tag: SG00000032
+kind: theorem
+title: The Hilbert-Samuel polynomial
+statement: Let $R$ be a Noetherian ring, let $I$ be an ideal with $r$ generators and let $M$ be a finite $R$-module such that $M/IM$ has finite length. Then there is a polynomial $P \in \mathbb{Q}[X]$ of degree at most $r$ such that $\ell(M/I^n M) = P(n)$ for large $n$.
+sources:
+- paper: AM69
+- paper: Mat
+uses:
+- SG0000000Q
+- SG0000002D
+- SG00000031
+lean:
+  statement: Singularity.Algebra.exists_hilbertSamuel_polynomial
+  proof: Singularity.Algebra.exists_hilbertSamuel_polynomial
+tier: T1

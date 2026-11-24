@@ -1,0 +1,12 @@
+tag: SG00000033
+kind: definition
+title: The Samuel multiplicity
+statement: For $d \in \mathbb{N}$, the multiplicity $e_d(I, M)$ is the eventual value of $\Delta^d \chi_{I,M}$, where $\chi_{I,M}(n) = \ell(M/I^n M)$ and $\Delta$ is the forward difference. When the Hilbert-Samuel polynomial has degree at most $d$, it is $d!$ times the coefficient of $n^d$.
+sources:
+- paper: AM69
+- paper: Mat
+uses:
+- SG00000032
+lean:
+  statement: Singularity.Algebra.samuelMultiplicity
+tier: T1

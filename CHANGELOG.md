@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The nodes SG00000031 (the theorem of Hilbert and Serre), SG00000032 (the Hilbert-Samuel polynomial), SG00000033 (the Samuel multiplicity) and SG00000034 (the laws of the multiplicity), each with its Lean declaration in tamnd/singularity-lean#38.
+
 - The nodes SG0000002W (effective Cartier divisors), SG0000002X (Zariski's Main Theorem) and SG0000002Y (the dimension of a variety). With these nodes, each row of tier T1 in the corpus has a node on the map.
 - The nodes SG0000002Z (a local ring is regular if and only if its completion is regular) and SG00000030 (excellent rings), for Chapters 4 and 5 of Volume 1 of the handbook. The node SG0000000K now uses SG00000030.
 
