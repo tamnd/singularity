@@ -8,10 +8,10 @@ sources:
 uses:
 - SG00000011
 lean:
-  statement: Singularity.LEAN_TORUS
-  proof: Singularity.LEAN_TORUS
+  statement: Singularity.exists_torus_isCriticalPoint_iff
+  proof: Singularity.exists_torus_isCriticalPoint_iff
 tier: T2
 route:
 - R5
 - R7
-notes: In characteristic 0 the criterion asks that each $g_\sigma = 0$ be smooth in the torus. In characteristic $p$ it asks that $g_\sigma$ have no torus critical point at all, because $\partial_z z^p = 0$. A vertex of the polyhedron in $p\mathbb{N}^n$ makes $z^p + g$ degenerate. The library proves the pointwise statement for each polynomial $h$, and the vertex statement. It does not define Newton nondegeneracy face by face, and it does not prove the toric resolution of Varchenko and Khovanskii.
+notes: In Lean the criterion is proved for one face, with $h$ in the place of $g_\sigma$, in Singularity.isSingularPoint_purelyInseparable_iff and Singularity.exists_torus_isCriticalPoint_iff. The vertex case is Singularity.exists_torus_isSingularPoint_purelyInseparable_initialForm. The faces of the Newton polyhedron are not formalized. In characteristic 0 the criterion asks that each $g_\sigma = 0$ be smooth in the torus. In characteristic $p$ it asks that $g_\sigma$ have no torus critical point at all, because $\partial_z z^p = 0$. A vertex of the polyhedron in $p\mathbb{N}^n$ makes $z^p + g$ degenerate. The library proves the pointwise statement for each polynomial $h$, and the vertex statement. It does not define Newton nondegeneracy face by face, and it does not prove the toric resolution of Varchenko and Khovanskii.
