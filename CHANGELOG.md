@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The note of SG0000000Z gives the claim of part 3 in the form of μ-equivalence and the uniqueness of the key polynomial in the step (tamnd/singularity-lean#80).
+
 ## 0.4.7 - 2026-11-25
 
 ### Added
