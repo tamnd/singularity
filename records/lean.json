@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "e71272b03625c182b6e54a91e10747f3c9cdeeff",
+  "commit": "c51aa7040d9b1446fb480d018fa63cc56958663d",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "82bb73d9e144b99c1900d69a7c37b7f14cef3a36",
+ "commit": "c51aa7040d9b1446fb480d018fa63cc56958663d",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -280,6 +280,17 @@
    "line": 119,
    "type": "\u2200 {A : Type u} [inst : CommRing A] (q : Ideal A) [inst_1 : q.IsPrime] (I : Ideal A) {g y : A},\n  g \u2209 q \u2192 g * y \u2208 I \u2192 (algebraMap A (Localization.AtPrime q)) y \u2208 Ideal.map (algebraMap A (Localization.AtPrime q)) I"
   },
+  "Singularity.Algebra.basicOpen_subset_regularLocus_of_flat": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {D S : Type u} [inst : CommRing D] [IsNoetherianRing D] [inst_2 : CommRing S] [inst_3 : Algebra D S] [Module.Flat D S]\n  [Algebra.IsIntegral D S],\n  Function.Injective \u21d1(algebraMap D S) \u2192\n    \u2200 {c : D} {g : S},\n      g \u2223 (algebraMap D S) c \u2192\n        \u2191(PrimeSpectrum.basicOpen g) \u2286 Singularity.Algebra.regularLocus S \u2192\n          \u2191(PrimeSpectrum.basicOpen c) \u2286 Singularity.Algebra.regularLocus D"
+  },
   "Singularity.Algebra.cast_fwdDiff_iter_eq": {
    "axioms": [
     "Classical.choice",
@@ -500,6 +511,17 @@
    "line": 160,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] [Module.Finite A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2203 c, c \u2260 0 \u2227 \u2200 (d : B), (algebraMap A B) c * d \u2208 A[z]"
   },
+  "Singularity.Algebra.exists_finset_mem_adjoin_union": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 230,
+   "type": "\u2200 {k : Type u_1} {P : Type u_2} {F : Type u_3} [inst : Field k] [inst_1 : Field P] [inst_2 : Field F]\n  [inst_3 : Algebra k P] [inst_4 : Algebra P F] [inst_5 : Algebra k F] [IsScalarTower k P F] {T : Set F} {z : F},\n  z \u2208 IntermediateField.adjoin P T \u2192 \u2203 E, z \u2208 IntermediateField.adjoin k (\u21d1(algebraMap P F) '' \u2191E \u222a T)"
+  },
   "Singularity.Algebra.exists_hilbertSamuel_polynomial": {
    "axioms": [
     "Classical.choice",
@@ -643,6 +665,39 @@
    "line": 264,
    "type": "\u2200 (k : Type u) [inst : Field k] [CharZero k] (D : Type u) [inst_2 : CommRing D] [IsDomain D] [inst_4 : Algebra k D]\n  [Algebra.FiniteType k D], \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
   },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_finite": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {D S : Type u} [inst : CommRing D] [IsDomain D] [IsNoetherianRing D] [inst_3 : CommRing S] [IsDomain S]\n  [inst_5 : Algebra D S] [Module.Finite D S],\n  Function.Injective \u21d1(algebraMap D S) \u2192\n    (\u2203 g, g \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen g) \u2286 Singularity.Algebra.regularLocus S) \u2192\n      \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_finiteDimensional": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 273,
+   "type": "\u2200 {k D L F \u03b9 : Type u} [inst : Field k] [inst_1 : CommRing D] [IsDomain D] [inst_3 : Algebra k D]\n  [Algebra.FiniteType k D] [inst_5 : Field L] [inst_6 : Algebra k L] [FiniteDimensional k L] [inst_8 : Field F]\n  [inst_9 : Algebra k F] [inst_10 : Algebra L F] [IsScalarTower k L F] [Finite \u03b9] (\u03c6 : D \u2192\u2090[k] F),\n  Function.Injective \u21d1\u03c6 \u2192\n    \u2200 (X : Finset D),\n      Algebra.adjoin k \u2191X = \u22a4 \u2192\n        \u2200 (y : \u03b9 \u2192 F),\n          (\u2200 (i : \u03b9), y i \u2208 IntermediateField.adjoin L (\u21d1\u03c6 '' \u2191X)) \u2192\n            AlgebraicIndependent L y \u2192\n              (\u2200 x \u2208 X, IsSeparable (\u21a5(IntermediateField.adjoin L (Set.range y))) (\u03c6 x)) \u2192\n                \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_finiteType": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 374,
+   "type": "\u2200 (k : Type u) [inst : Field k] (D : Type u) [inst_1 : CommRing D] [IsDomain D] [inst_3 : Algebra k D]\n  [Algebra.FiniteType k D], \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
   "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_isSeparable": {
    "axioms": [
     "Classical.choice",
@@ -653,6 +708,28 @@
    "kind": "theorem",
    "line": 186,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B] [inst_4 : Algebra A B]\n  [inst_5 : FaithfulSMul A B] [IsRegularRing A] [IsIntegrallyClosed A] [Module.Finite A B]\n  [Algebra.IsSeparable (FractionRing A) (FractionRing B)],\n  \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus B"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_isSeparable_adjoin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 169,
+   "type": "\u2200 {k D K \u03b9 : Type u} [inst : Field k] [inst_1 : CommRing D] [IsDomain D] [inst_3 : Algebra k D] [Algebra.FiniteType k D]\n  [inst_5 : Field K] [inst_6 : Algebra D K] [IsFractionRing D K] [inst_8 : Algebra k K] [IsScalarTower k D K] [Finite \u03b9]\n  (x : \u03b9 \u2192 K),\n  AlgebraicIndependent k x \u2192\n    \u2200 [Algebra.IsSeparable (\u21a5(IntermediateField.adjoin k (Set.range x))) K],\n      \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_isSeparablyGenerated": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 (k : Type u) [inst : Field k] (D : Type u) [inst_1 : CommRing D] [inst_2 : IsDomain D] [inst_3 : Algebra k D]\n  [Algebra.FiniteType k D] [Algebra.IsSeparablyGenerated k (FractionRing D)],\n  \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
   },
   "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_perfectField": {
    "axioms": [
@@ -1178,6 +1255,17 @@
    "kind": "theorem",
    "line": 94,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {x : R} [IsNoetherianRing R],\n  IsSMulRegular R x \u2192\n    \u2200 (n : \u2115) (M : Type u) [inst_2 : AddCommGroup M] [inst_3 : Module R M] [Module.Finite R M],\n      IsSMulRegular M x \u2192\n        CategoryTheory.HasProjectiveDimensionLT (\u21a7M) (n + 1) \u2192\n          CategoryTheory.HasProjectiveDimensionLT (\u21a7(TensorProduct R (R \u29f8 Ideal.span {x}) M)) (n + 1)"
+  },
+  "Singularity.Algebra.hasProjectiveDimensionLT_of_baseChange": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FlatDescent.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : CommRing B] [inst_2 : Algebra A B] [IsLocalRing A] [IsNoetherianRing A]\n  [IsLocalRing B] [Module.Flat A B] [IsLocalHom (algebraMap A B)] (n : \u2115) (M : Type u) [inst_8 : AddCommGroup M]\n  [inst_9 : Module A M] [Module.Finite A M],\n  CategoryTheory.HasProjectiveDimensionLT (\u21a7(TensorProduct A B M)) (n + 1) \u2192\n    CategoryTheory.HasProjectiveDimensionLT (\u21a7M) (n + 1)"
   },
   "Singularity.Algebra.hasProjectiveDimensionLT_of_isRegularLocalRing": {
    "axioms": [
@@ -1784,6 +1872,17 @@
    "line": 432,
    "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A],\n  (\u2200 p \u2208 Singularity.Algebra.regularLocus A,\n      \u2203 U, IsOpen U \u2227 U.Nonempty \u2227 U \u2286 Singularity.Algebra.regularLocus (A \u29f8 p.asIdeal)) \u2192\n    IsOpen (Singularity.Algebra.regularLocus A)"
   },
+  "Singularity.Algebra.isOpen_regularLocus_of_field": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 469,
+   "type": "\u2200 (k : Type u) [inst : Field k] (R : Type u) [inst_1 : CommRing R] [inst_2 : Algebra k R] [Algebra.FiniteType k R],\n  IsOpen (Singularity.Algebra.regularLocus R)"
+  },
   "Singularity.Algebra.isOpen_regularLocus_of_perfectField": {
    "axioms": [
     "Classical.choice",
@@ -1872,6 +1971,17 @@
    "line": 78,
    "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsNoetherianRing A]\n  (D : Derivation k A A) (q : Ideal A) [inst_4 : q.IsPrime] [IsRegularLocalRing (Localization.AtPrime q)] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      \u2200 [inst : (Ideal.map (Ideal.Quotient.mk (Ideal.span {F})) q).IsPrime],\n        IsRegularLocalRing (Localization.AtPrime (Ideal.map (Ideal.Quotient.mk (Ideal.span {F})) q))"
   },
+  "Singularity.Algebra.isRegularLocalRing_of_flat": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FlatDescent.lean",
+   "kind": "theorem",
+   "line": 103,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : CommRing B] [inst_2 : Algebra A B] [IsLocalRing A] [IsNoetherianRing A]\n  [IsRegularLocalRing B] [Module.Flat A B] [IsLocalHom (algebraMap A B)], IsRegularLocalRing A"
+  },
   "Singularity.Algebra.isRegularLocalRing_of_hasProjectiveDimensionLT": {
    "axioms": [
     "Classical.choice",
@@ -1926,6 +2036,17 @@
    "kind": "theorem",
    "line": 123,
    "type": "\u2200 {A : Type u_1} {B : Type u_2} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] (KA : Type u_3) (KB : Type u_4) [inst_6 : Field KA]\n  [inst_7 : Field KB] [inst_8 : Algebra A KA] [IsFractionRing A KA] [inst_10 : Algebra B KB] [IsFractionRing B KB]\n  [inst_12 : Algebra KA KB] [inst_13 : Algebra A KB] [IsScalarTower A KA KB] [IsScalarTower A B KB]\n  [Algebra.IsSeparable KA KB], Algebra.IsSeparable (FractionRing A) (FractionRing B)"
+  },
+  "Singularity.Algebra.isSeparable_of_coeff_mem_range": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 252,
+   "type": "\u2200 {A : Type u_1} {B : Type u_2} {E : Type u_3} [inst : Field A] [inst_1 : Field B] [inst_2 : Field E]\n  [inst_3 : Algebra A E] [inst_4 : Algebra B E] {z : E},\n  IsSeparable A z \u2192\n    (\u2200 (n : \u2115), (algebraMap A E) ((minpoly A z).coeff n) \u2208 Set.range \u21d1(algebraMap B E)) \u2192 IsSeparable B z"
   },
   "Singularity.Algebra.isWeaklyRegular_map_quotient": {
    "axioms": [
@@ -2263,6 +2384,17 @@
    "kind": "theorem",
    "line": 99,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S],\n  Function.Injective \u21d1(algebraMap R S) \u2192\n    \u2200 (P : PrimeSpectrum S) (c : R),\n      (algebraMap R S) c \u2209 P.asIdeal \u2192\n        (\u2200 (s : S), \u2203 r, (algebraMap R S) r = (algebraMap R S) c * s) \u2192\n          { asIdeal := Ideal.comap (algebraMap R S) P.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n            P \u2208 Singularity.Algebra.regularLocus S"
+  },
+  "Singularity.Algebra.mem_regularLocus_of_isLocalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/RegularLocusField.lean",
+   "kind": "theorem",
+   "line": 72,
+   "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S] (M : Submonoid R)\n  [IsLocalization M S] (Q : PrimeSpectrum S),\n  PrimeSpectrum.comap (algebraMap R S) Q \u2208 Singularity.Algebra.regularLocus R \u2192 Q \u2208 Singularity.Algebra.regularLocus S"
   },
   "Singularity.Algebra.mem_regularLocus_of_ringEquiv": {
    "axioms": [
@@ -3341,6 +3473,1884 @@
    "line": 98,
    "type": "{k : Type u} \u2192\n  [inst : Field k] \u2192\n    (X : AlgebraicGeometry.Scheme) \u2192\n      (X \u27f6 AlgebraicGeometry.Spec \u21a7k) \u2192 (U : X.Opens) \u2192 Algebra k \u2191(X.presheaf.obj (Opposite.op U))"
   },
+  "Singularity.Examples.Exp5": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 72,
+   "type": "Type"
+  },
+  "Singularity.Examples.add_one_pow_eq_sum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 383,
+   "type": "\u2200 {A : Type u_2} [inst : CommRing A] [CharP A 2] (a : A) (n : \u2115),\n  (a + 1) ^ n = (List.map (fun x => a ^ x) (Singularity.Examples.binom2 n)).sum"
+  },
+  "Singularity.Examples.add_one_pow_eq_sum_aux": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 351,
+   "type": "\u2200 {A : Type u_2} [inst : CommRing A] [CharP A 2] (f n : \u2115) (a : A),\n  n \u2264 f \u2192 (a + 1) ^ n = (List.map (fun x => a ^ x) (Singularity.Examples.binom2Aux f n)).sum"
+  },
+  "Singularity.Examples.aeval_narasimhanCurve_narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (MvPolynomial.aeval (Singularity.Examples.narasimhanCurve K)) (Singularity.Examples.narasimhanF K) = 0"
+  },
+  "Singularity.Examples.aeval_narasimhanCurve_pderiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2] (i : Fin 4),\n  (MvPolynomial.aeval (Singularity.Examples.narasimhanCurve K))\n      ((MvPolynomial.pderiv i) (Singularity.Examples.narasimhanF K)) =\n    0"
+  },
+  "Singularity.Examples.allDvd5": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 87,
+   "type": "\u2115 \u2192 Singularity.Examples.Exp5 \u2192 Bool"
+  },
+  "Singularity.Examples.allDvd5_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 111,
+   "type": "\u2200 (q : \u2115) (f : Fin 5 \u2192 \u2115),\n  Singularity.Examples.allDvd5 q (Singularity.Examples.ofFun5 f) = true \u2194 \u2200 (i : Fin 5), q \u2223 f i"
+  },
+  "Singularity.Examples.binom2": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 348,
+   "type": "\u2115 \u2192 List \u2115"
+  },
+  "Singularity.Examples.binom2Aux": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 340,
+   "type": "\u2115 \u2192 \u2115 \u2192 List \u2115"
+  },
+  "Singularity.Examples.binom2Aux.eq_def": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 (x x_1 : \u2115),\n  Singularity.Examples.binom2Aux x x_1 =\n    match x, x_1 with\n    | 0, x => [0]\n    | f.succ, n =>\n      if n = 0 then [0]\n      else\n        List.flatMap (fun k => if n % 2 = 0 then [2 * k] else [2 * k, 2 * k + 1])\n          (Singularity.Examples.binom2Aux f (n / 2))"
+  },
+  "Singularity.Examples.blowupDivisor_kangaroo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 226,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [inst_1 : DecidableEq K],\n  Singularity.blowupDivisor Finset.univ 0 Singularity.Examples.kangarooT = {0, 2}"
+  },
+  "Singularity.Examples.blowupDivisor_step1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 712,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K],\n  Singularity.blowupDivisor {0, 1, 2, 4} 0 Singularity.Examples.cycleT1 = {0, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 719,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 4} 0 0 = {0, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 725,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 4} 2 0 = {0, 2, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 731,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 2, 4} 3 0 = {0, 2, 3, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 737,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K],\n  Singularity.blowupDivisor {0, 2, 3, 4} 4 Singularity.Examples.cycleT5 = {0, 2, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step6": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 744,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 2, 4} 2 0 = {0, 2, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 757,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 1, 2, 4} 1 0 = {0, 1, 2, 4}"
+  },
+  "Singularity.Examples.blowupDivisor_step7_first": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 750,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [inst_1 : DecidableEq K], Singularity.blowupDivisor {0, 2, 4} 1 0 = {0, 1, 2, 4}"
+  },
+  "Singularity.Examples.chartStep5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 285,
+   "type": "\u2115 \u2192 Fin 5 \u2192 Singularity.Examples.Exp5 \u2192 Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.coe_toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 125,
+   "type": "\u2200 (e : Singularity.Examples.Exp5), \u21d1(Singularity.Examples.toF5 e) = Singularity.Examples.ev5 e"
+  },
+  "Singularity.Examples.coeff_eq_zero_of_subst_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 206,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {h : MvPowerSeries (Fin 4) K},\n  MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h = 0 \u2192\n    \u2200 {d : Fin 4 \u2192\u2080 \u2115}, Finsupp.degree d \u2264 1 \u2192 (MvPowerSeries.coeff d) h = 0"
+  },
+  "Singularity.Examples.coeff_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 200,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (L : List Singularity.Examples.Exp5) (d : Fin 5 \u2192\u2080 \u2115),\n  (Singularity.Examples.poly5 L).coeff d = \u2191(List.count (Singularity.Examples.ofFun5 \u21d1d) L)"
+  },
+  "Singularity.Examples.coeff_subst_narasimhanCurve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 157,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (h : MvPowerSeries (Fin 4) K) (n : \u2115),\n  (PowerSeries.coeff n) (MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h) =\n    \u2211\u1da0 (d : Fin 4 \u2192\u2080 \u2115), if Singularity.Examples.narasimhanWeight d = n then (MvPowerSeries.coeff d) h else 0"
+  },
+  "Singularity.Examples.coeff_weight_subst_narasimhanCurve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 194,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (h : MvPowerSeries (Fin 4) K) {d : Fin 4 \u2192\u2080 \u2115},\n  Finsupp.degree d \u2264 1 \u2192\n    (PowerSeries.coeff (Singularity.Examples.narasimhanWeight d))\n        (MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h) =\n      (MvPowerSeries.coeff d) h"
+  },
+  "Singularity.Examples.constantCoeff_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 815,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] (L : List Singularity.Examples.Exp5),\n  MvPolynomial.constantCoeff (Singularity.Examples.poly5 L) = \u2191(List.count (0, 0, 0, 0, 0) L)"
+  },
+  "Singularity.Examples.cycleCheck7": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 656,
+   "type": "\u2115 \u2192 Bool"
+  },
+  "Singularity.Examples.cycleCheck7_range": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 670,
+   "type": "(List.range' 1 14).all Singularity.Examples.cycleCheck7 = true"
+  },
+  "Singularity.Examples.cycleF0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 452,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF0_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 490,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  Singularity.Examples.cycleF0 = Singularity.Examples.poly5 Singularity.Examples.cycleL0"
+  },
+  "Singularity.Examples.cycleF0_shape": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 797,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  Singularity.Examples.cycleF0 =\n    MvPolynomial.X 0 ^ 4 * MvPolynomial.X 1 ^ 4 * MvPolynomial.X 2 ^ 0 * MvPolynomial.X 4 ^ 6 *\n      (MvPolynomial.X 4 ^ 2 * (1 + MvPolynomial.X 2 ^ 10 * 0) + MvPolynomial.X 0 ^ 3 * MvPolynomial.X 2 ^ 10 * 1)"
+  },
+  "Singularity.Examples.cycleF1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 460,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF1'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 457,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF1'_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 554,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.Examples.cycleF1' + Singularity.Examples.cycleH1 ^ 8 = Singularity.Examples.cycleF1"
+  },
+  "Singularity.Examples.cycleF2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 463,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 466,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 469,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 472,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF6": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 475,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 478,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 \u2115 \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleF7_shape": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 826,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  \u2203 Q A,\n    MvPolynomial.constantCoeff A = 1 \u2227\n      Singularity.Examples.cycleF7 14 =\n        MvPolynomial.X 0 ^ 12 * MvPolynomial.X 1 ^ 2128 * MvPolynomial.X 2 ^ 84 * MvPolynomial.X 4 ^ 60 *\n          (MvPolynomial.X 4 ^ 4 * (1 + MvPolynomial.X 1 ^ 14 * Q) + MvPolynomial.X 0 ^ 5 * MvPolynomial.X 1 ^ 14 * A)"
+  },
+  "Singularity.Examples.cycleF7_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 677,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], Singularity.Examples.cycleF7 0 = Singularity.Examples.cycleF6"
+  },
+  "Singularity.Examples.cycleG": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 804,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleH1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 487,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 5) K"
+  },
+  "Singularity.Examples.cycleL0": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 420,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL1": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 426,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL1'": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 423,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL2": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 429,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL3": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 432,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL4": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 435,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 438,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL6": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 441,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL7": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 444,
+   "type": "\u2115 \u2192 List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleL7_deg": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 666,
+   "type": "((List.range 15).all fun k => (Singularity.Examples.cycleL7 k).all fun e => decide (8 \u2264 Singularity.Examples.deg5 e)) =\n  true"
+  },
+  "Singularity.Examples.cycleL7_deg_of_le": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 673,
+   "type": "\u2200 {k : \u2115}, k \u2264 14 \u2192 ((Singularity.Examples.cycleL7 k).all fun e => decide (8 \u2264 Singularity.Examples.deg5 e)) = true"
+  },
+  "Singularity.Examples.cycleN": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 811,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.cycleT1": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 481,
+   "type": "{K : Type u_2} \u2192 [Field K] \u2192 Fin 5 \u2192 K"
+  },
+  "Singularity.Examples.cycleT5": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 484,
+   "type": "{K : Type u_2} \u2192 [Field K] \u2192 Fin 5 \u2192 K"
+  },
+  "Singularity.Examples.cycleW": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 807,
+   "type": "List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.deg5": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 81,
+   "type": "Singularity.Examples.Exp5 \u2192 \u2115"
+  },
+  "Singularity.Examples.degree_expVec3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 70,
+   "type": "\u2200 (a b c : \u2115), Finsupp.degree (Singularity.Examples.expVec3 a b c) = a + b + c"
+  },
+  "Singularity.Examples.degree_toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 143,
+   "type": "\u2200 (e : Singularity.Examples.Exp5), Finsupp.degree (Singularity.Examples.toF5 e) = Singularity.Examples.deg5 e"
+  },
+  "Singularity.Examples.eq_of_weight_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 171,
+   "type": "\u2200 {d d' : Fin 4 \u2192\u2080 \u2115},\n  Finsupp.degree d \u2264 1 \u2192 Singularity.Examples.narasimhanWeight d' = Singularity.Examples.narasimhanWeight d \u2192 d' = d"
+  },
+  "Singularity.Examples.ev5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 75,
+   "type": "Singularity.Examples.Exp5 \u2192 Fin 5 \u2192 \u2115"
+  },
+  "Singularity.Examples.ev5_injective": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 105,
+   "type": "Function.Injective Singularity.Examples.ev5"
+  },
+  "Singularity.Examples.ev5_ofFun5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 (f : Fin 5 \u2192 \u2115), Singularity.Examples.ev5 (Singularity.Examples.ofFun5 f) = f"
+  },
+  "Singularity.Examples.expVec3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "def",
+   "line": 53,
+   "type": "\u2115 \u2192 \u2115 \u2192 \u2115 \u2192 Fin 3 \u2192\u2080 \u2115"
+  },
+  "Singularity.Examples.expVec3_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 65,
+   "type": "\u2200 (a b c a' b' c' : \u2115),\n  Singularity.Examples.expVec3 a b c + Singularity.Examples.expVec3 a' b' c' =\n    Singularity.Examples.expVec3 (a + a') (b + b') (c + c')"
+  },
+  "Singularity.Examples.expVec3_apply_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 (a b c : \u2115), (Singularity.Examples.expVec3 a b c) 1 = b"
+  },
+  "Singularity.Examples.expVec3_apply_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 62,
+   "type": "\u2200 (a b c : \u2115), (Singularity.Examples.expVec3 a b c) 2 = c"
+  },
+  "Singularity.Examples.expVec3_apply_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 56,
+   "type": "\u2200 (a b c : \u2115), (Singularity.Examples.expVec3 a b c) 0 = a"
+  },
+  "Singularity.Examples.expVec3_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {u v : Fin 3 \u2192\u2080 \u2115} (i : Fin 3), u i \u2260 v i \u2192 u \u2260 v"
+  },
+  "Singularity.Examples.hasSubst_narasimhanCurve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 142,
+   "type": "\u2200 {K : Type u_1} [inst : Field K], MvPowerSeries.HasSubst (Singularity.Examples.narasimhanCurve K)"
+  },
+  "Singularity.Examples.hauserPerlegaCycle": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 863,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2] [inst_2 : DecidableEq K],\n  Singularity.IsClean 8 Singularity.Examples.cycleF0 \u2227\n    8 \u2264 Singularity.ord Singularity.Examples.cycleF0 \u2227\n      Singularity.residualOrderAlong {0, 1, 2, 4} 8 Singularity.Examples.cycleF0 = 2 \u2227\n        (Singularity.pointChart 0 Singularity.Examples.cycleT1) Singularity.Examples.cycleF0 =\n            MvPolynomial.X 0 ^ 8 * Singularity.Examples.cycleF1' \u2227\n          (Singularity.pointChartZ 0 Singularity.Examples.cycleT1)\n                (Singularity.purelyInseparable 8 Singularity.Examples.cycleF0) =\n              MvPolynomial.X (some 0) ^ 8 * Singularity.purelyInseparable 8 Singularity.Examples.cycleF1' \u2227\n            (Singularity.zShift Singularity.Examples.cycleH1)\n                  (Singularity.purelyInseparable 8 Singularity.Examples.cycleF1') =\n                Singularity.purelyInseparable 8 Singularity.Examples.cycleF1 \u2227\n              8 \u2264 Singularity.ord Singularity.Examples.cycleF1 \u2227\n                Singularity.blowupDivisor {0, 1, 2, 4} 0 Singularity.Examples.cycleT1 = {0, 4} \u2227\n                  Singularity.residualOrderAlong {0, 4} 8 Singularity.Examples.cycleF1 = 6 \u2227\n                    (Singularity.pointChart 0 0) Singularity.Examples.cycleF1 =\n                        MvPolynomial.X 0 ^ 8 * Singularity.Examples.cycleF2 \u2227\n                      (Singularity.pointChartZ 0 0) (Singularity.purelyInseparable 8 Singularity.Examples.cycleF1) =\n                          MvPolynomial.X (some 0) ^ 8 * Singularity.purelyInseparable 8 Singularity.Examples.cycleF2 \u2227\n                        8 \u2264 Singularity.ord Singularity.Examples.cycleF2 \u2227\n                          Singularity.blowupDivisor {0, 4} 0 0 = {0, 4} \u2227\n                            Singularity.residualOrderAlong {0, 4} 8 Singularity.Examples.cycleF2 = 5 \u2227\n                              (Singularity.pointChart 2 0) Singularity.Examples.cycleF2 =\n                                  MvPolynomial.X 2 ^ 8 * Singularity.Examples.cycleF3 \u2227\n                                (Singularity.pointChartZ 2 0)\n                                      (Singularity.purelyInseparable 8 Singularity.Examples.cycleF2) =\n                                    MvPolynomial.X (some 2) ^ 8 *\n                                      Singularity.purelyInseparable 8 Singularity.Examples.cycleF3 \u2227\n                                  8 \u2264 Singularity.ord Singularity.Examples.cycleF3 \u2227\n                                    Singularity.blowupDivisor {0, 4} 2 0 = {0, 2, 4} \u2227\n                                      Singularity.residualOrderAlong {0, 2, 4} 8 Singularity.Examples.cycleF3 = 5 \u2227\n                                        (Singularity.pointChart 3 0) Singularity.Examples.cycleF3 =\n                                            MvPolynomial.X 3 ^ 8 * Singularity.Examples.cycleF4 \u2227\n                                          (Singularity.pointChartZ 3 0)\n                                                (Singularity.purelyInseparable 8 Singularity.Examples.cycleF3) =\n                                              MvPolynomial.X (some 3) ^ 8 *\n                                                Singularity.purelyInseparable 8 Singularity.Examples.cycleF4 \u2227\n                                            8 \u2264 Singularity.ord Singularity.Examples.cycleF4 \u2227\n                                              Singularity.blowupDivisor {0, 2, 4} 3 0 = {0, 2, 3, 4} \u2227\n                                                Singularity.residualOrderAlong {0, 2, 3, 4} 8\n                                                      Singularity.Examples.cycleF4 =\n                                                    5 \u2227\n                                                  (Singularity.pointChart 4 Singularity.Examples.cycleT5)\n                                                        Singularity.Examples.cycleF4 =\n                                                      MvPolynomial.X 4 ^ 8 * Singularity.Examples.cycleF5 \u2227\n                                                    (Singularity.pointChartZ 4 Singularity.Examples.cycleT5)\n                                                          (Singularity.purelyInseparable 8\n                                                            Singularity.Examples.cycleF4) =\n                                                        MvPolynomial.X (some 4) ^ 8 *\n                                                          Singularity.purelyInseparable 8 Singularity.Examples.cycleF5 \u2227\n                                                      8 \u2264 Singularity.ord Singularity.Examples.cycleF5 \u2227\n                                                        Singularity.blowupDivisor {0, 2, 3, 4} 4\n                                                              Singularity.Examples.cycleT5 =\n                                                            {0, 2, 4} \u2227\n                                                          Singularity.residualOrderAlong {0, 2, 4} 8\n                                                                Singularity.Examples.cycleF5 =\n                                                              5 \u2227\n                                                            (Singularity.pointChart 2 0) Singularity.Examples.cycleF5 =\n                                                                MvPolynomial.X 2 ^ 8 * Singularity.Examples.cycleF6 \u2227\n                                                              (Singularity.pointChartZ 2 0)\n                                                                    (Singularity.purelyInseparable 8\n                                                                      Singularity.Examples.cycleF5) =\n                                                                  MvPolynomial.X (some 2) ^ 8 *\n                                                                    Singularity.purelyInseparable 8\n                                                                      Singularity.Examples.cycleF6 \u2227\n                                                                8 \u2264 Singularity.ord Singularity.Examples.cycleF6 \u2227\n                                                                  Singularity.blowupDivisor {0, 2, 4} 2 0 = {0, 2, 4} \u2227\n                                                                    Singularity.residualOrderAlong {0, 2, 4} 8\n                                                                          Singularity.Examples.cycleF6 =\n                                                                        4 \u2227\n                                                                      (\u2200 k < 14,\n                                                                          (Singularity.pointChart 1 0)\n                                                                                (Singularity.Examples.cycleF7 k) =\n                                                                              MvPolynomial.X 1 ^ 8 *\n                                                                                Singularity.Examples.cycleF7 (k + 1) \u2227\n                                                                            (Singularity.pointChartZ 1 0)\n                                                                                  (Singularity.purelyInseparable 8\n                                                                                    (Singularity.Examples.cycleF7 k)) =\n                                                                                MvPolynomial.X (some 1) ^ 8 *\n                                                                                  Singularity.purelyInseparable 8\n                                                                                    (Singularity.Examples.cycleF7\n                                                                                      (k + 1)) \u2227\n                                                                              8 \u2264\n                                                                                  Singularity.ord\n                                                                                    (Singularity.Examples.cycleF7\n                                                                                      (k + 1)) \u2227\n                                                                                Singularity.residualOrderAlong\n                                                                                    {0, 1, 2, 4} 8\n                                                                                    (Singularity.Examples.cycleF7\n                                                                                      (k + 1)) =\n                                                                                  4) \u2227\n                                                                        Singularity.blowupDivisor {0, 2, 4} 1 0 =\n                                                                            {0, 1, 2, 4} \u2227\n                                                                          Singularity.blowupDivisor {0, 1, 2, 4} 1 0 =\n                                                                              {0, 1, 2, 4} \u2227\n                                                                            \u2203 Q A,\n                                                                              MvPolynomial.constantCoeff A = 1 \u2227\n                                                                                Singularity.Examples.cycleF7 14 =\n                                                                                  MvPolynomial.X 0 ^ 12 *\n                                                                                          MvPolynomial.X 1 ^ 2128 *\n                                                                                        MvPolynomial.X 2 ^ 84 *\n                                                                                      MvPolynomial.X 4 ^ 60 *\n                                                                                    (MvPolynomial.X 4 ^ 4 *\n                                                                                        (1 +\n                                                                                          MvPolynomial.X 1 ^ 14 * Q) +\n                                                                                      MvPolynomial.X 0 ^ 5 *\n                                                                                          MvPolynomial.X 1 ^ 14 *\n                                                                                        A)"
+  },
+  "Singularity.Examples.isClean_cycleF0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 527,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], Singularity.IsClean 8 Singularity.Examples.cycleF0"
+  },
+  "Singularity.Examples.isClean_cycleF1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 785,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], Singularity.IsClean 8 Singularity.Examples.cycleF1"
+  },
+  "Singularity.Examples.isClean_kangarooF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 158,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2], Singularity.IsClean 4 Singularity.Examples.kangarooF"
+  },
+  "Singularity.Examples.isClean_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 227,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] {q : \u2115} {L : List Singularity.Examples.Exp5},\n  (L.all fun e => !Singularity.Examples.allDvd5 q e) = true \u2192 Singularity.IsClean q (Singularity.Examples.poly5 L)"
+  },
+  "Singularity.Examples.isClean_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 88,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {u v w : Fin 3 \u2192\u2080 \u2115} {q : \u2115},\n  (\u00ac\u2200 (i : Fin 3), q \u2223 u i) \u2192\n    (\u00ac\u2200 (i : Fin 3), q \u2223 v i) \u2192\n      (\u00ac\u2200 (i : Fin 3), q \u2223 w i) \u2192\n        Singularity.IsClean q ((MvPolynomial.monomial u) 1 + (MvPolynomial.monomial v) 1 + (MvPolynomial.monomial w) 1)"
+  },
+  "Singularity.Examples.kangaroo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 270,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2] [inst_2 : DecidableEq K],\n  Singularity.IsClean 4 Singularity.Examples.kangarooF \u2227\n    4 \u2264 Singularity.ord Singularity.Examples.kangarooF \u2227\n      Singularity.residualOrderAlong Finset.univ 4 Singularity.Examples.kangarooF = 5 \u2227\n        (Singularity.pointChart 0 Singularity.Examples.kangarooT) Singularity.Examples.kangarooF =\n            MvPolynomial.X 0 ^ 4 * Singularity.Examples.kangarooF' \u2227\n          (Singularity.pointChartZ 0 Singularity.Examples.kangarooT)\n                (Singularity.purelyInseparable 4 Singularity.Examples.kangarooF) =\n              MvPolynomial.X (some 0) ^ 4 * Singularity.purelyInseparable 4 Singularity.Examples.kangarooF' \u2227\n            4 \u2264 Singularity.ord Singularity.Examples.kangarooF' \u2227\n              Singularity.blowupDivisor Finset.univ 0 Singularity.Examples.kangarooT = {0, 2} \u2227\n                Singularity.residualOrderAlong (Singularity.blowupDivisor Finset.univ 0 Singularity.Examples.kangarooT)\n                    4 Singularity.Examples.kangarooF' =\n                  7"
+  },
+  "Singularity.Examples.kangarooF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "def",
+   "line": 123,
+   "type": "{K : Type u_1} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 3) K"
+  },
+  "Singularity.Examples.kangarooF'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "def",
+   "line": 130,
+   "type": "{K : Type u_1} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 3) K"
+  },
+  "Singularity.Examples.kangarooF'_add_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 218,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  Singularity.Examples.kangarooF' + Singularity.Examples.kangarooH ^ 4 =\n    (MvPolynomial.monomial (Singularity.Examples.expVec3 8 0 3)) 1 *\n      ((MvPolynomial.monomial (Singularity.Examples.expVec3 0 6 1)) 1 +\n          (MvPolynomial.monomial (Singularity.Examples.expVec3 8 0 0)) 1 +\n        (MvPolynomial.monomial (Singularity.Examples.expVec3 8 2 0)) 1)"
+  },
+  "Singularity.Examples.kangarooF_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 144,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  Singularity.Examples.kangarooF =\n    (MvPolynomial.monomial (Singularity.Examples.expVec3 2 2 3)) 1 *\n      ((MvPolynomial.monomial (Singularity.Examples.expVec3 4 0 1)) 1 +\n          (MvPolynomial.monomial (Singularity.Examples.expVec3 0 4 1)) 1 +\n        (MvPolynomial.monomial (Singularity.Examples.expVec3 13 0 0)) 1)"
+  },
+  "Singularity.Examples.kangarooF_eq_sum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 153,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  Singularity.Examples.kangarooF =\n    (MvPolynomial.monomial (Singularity.Examples.expVec3 6 2 4)) 1 +\n        (MvPolynomial.monomial (Singularity.Examples.expVec3 2 6 4)) 1 +\n      (MvPolynomial.monomial (Singularity.Examples.expVec3 15 2 3)) 1"
+  },
+  "Singularity.Examples.kangarooH": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "def",
+   "line": 135,
+   "type": "{K : Type u_1} \u2192 [inst : Field K] \u2192 MvPolynomial (Fin 3) K"
+  },
+  "Singularity.Examples.kangarooT": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "def",
+   "line": 127,
+   "type": "{K : Type u_1} \u2192 [Field K] \u2192 Fin 3 \u2192 K"
+  },
+  "Singularity.Examples.kangaroo_increase": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 295,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2] [inst_2 : DecidableEq K],\n  Singularity.residualOrderAlong (Singularity.blowupDivisor Finset.univ 0 Singularity.Examples.kangarooT) 4\n        Singularity.Examples.kangarooF' =\n      Singularity.residualOrderAlong Finset.univ 4 Singularity.Examples.kangarooF + 2 \u2227\n    \u2191(5 / 2 * 2 + 2) <\n      Singularity.residualOrderAlong (Singularity.blowupDivisor Finset.univ 0 Singularity.Examples.kangarooT) 4\n        Singularity.Examples.kangarooF'"
+  },
+  "Singularity.Examples.le5": {
+   "axioms": [],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 92,
+   "type": "Singularity.Examples.Exp5 \u2192 Singularity.Examples.Exp5 \u2192 Bool"
+  },
+  "Singularity.Examples.le_ord_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 236,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] {n : \u2115} {L : List Singularity.Examples.Exp5},\n  (L.all fun e => decide (n \u2264 Singularity.Examples.deg5 e)) = true \u2192 \u2191n \u2264 Singularity.ord (Singularity.Examples.poly5 L)"
+  },
+  "Singularity.Examples.map_sub_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 270,
+   "type": "\u2200 {r : Singularity.Examples.Exp5} {L : List Singularity.Examples.Exp5},\n  L.all (Singularity.Examples.le5 r) = true \u2192 List.map (fun x => r + x) (List.map (fun e => e - r) L) = L"
+  },
+  "Singularity.Examples.mem_of_mem_support_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 216,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] {L : List Singularity.Examples.Exp5} {d : Fin 5 \u2192\u2080 \u2115},\n  d \u2208 (Singularity.Examples.poly5 L).support \u2192 Singularity.Examples.ofFun5 \u21d1d \u2208 L"
+  },
+  "Singularity.Examples.mem_support_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {u v w d : Fin 3 \u2192\u2080 \u2115},\n  d = u \u2228 d = v \u2228 d = w \u2192\n    u \u2260 v \u2192\n      u \u2260 w \u2192\n        v \u2260 w \u2192 d \u2208 ((MvPolynomial.monomial u) 1 + (MvPolynomial.monomial v) 1 + (MvPolynomial.monomial w) 1).support"
+  },
+  "Singularity.Examples.monomial_expVec3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 78,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (a b c : \u2115),\n  (MvPolynomial.monomial (Singularity.Examples.expVec3 a b c)) 1 =\n    MvPolynomial.X 0 ^ a * MvPolynomial.X 1 ^ b * MvPolynomial.X 2 ^ c"
+  },
+  "Singularity.Examples.monomial_mul_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 192,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (r : Singularity.Examples.Exp5) (L : List Singularity.Examples.Exp5),\n  (MvPolynomial.monomial (Singularity.Examples.toF5 r)) 1 * Singularity.Examples.poly5 L =\n    Singularity.Examples.poly5 (List.map (fun x => r + x) L)"
+  },
+  "Singularity.Examples.monomial_set5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 288,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (e : Singularity.Examples.Exp5) (i : Fin 5) (k : \u2115),\n  (MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e i k))) 1 =\n    (MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e i 0))) 1 * MvPolynomial.X i ^ k"
+  },
+  "Singularity.Examples.monomial_toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 149,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (e : Singularity.Examples.Exp5),\n  (MvPolynomial.monomial (Singularity.Examples.toF5 e)) 1 =\n    MvPolynomial.X 0 ^ e.1 * MvPolynomial.X 1 ^ e.2.1 * MvPolynomial.X 2 ^ e.2.2.1 * MvPolynomial.X 3 ^ e.2.2.2.1 *\n      MvPolynomial.X 4 ^ e.2.2.2.2"
+  },
+  "Singularity.Examples.narasimhan": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 230,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (MvPolynomial.aeval (Singularity.Examples.narasimhanCurve K)) (Singularity.Examples.narasimhanF K) = 0 \u2227\n    (\u2200 (i : Fin 4),\n        (MvPolynomial.aeval (Singularity.Examples.narasimhanCurve K))\n            ((MvPolynomial.pderiv i) (Singularity.Examples.narasimhanF K)) =\n          0) \u2227\n      (\u2200 (h : MvPowerSeries (Fin 4) K),\n          MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h = 0 \u2192 2 \u2264 h.order) \u2227\n        \u2200 (h : MvPowerSeries (Fin 4) K),\n          (\u2203 i, (MvPowerSeries.coeff (Finsupp.single i 1)) h \u2260 0) \u2192\n            MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h \u2260 0"
+  },
+  "Singularity.Examples.narasimhanCurve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "def",
+   "line": 69,
+   "type": "(K : Type u_1) \u2192 [CommRing K] \u2192 Fin 4 \u2192 PowerSeries K"
+  },
+  "Singularity.Examples.narasimhanExp": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "def",
+   "line": 66,
+   "type": "Fin 4 \u2192 \u2115"
+  },
+  "Singularity.Examples.narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "def",
+   "line": 62,
+   "type": "(K : Type u_1) \u2192 [inst : CommRing K] \u2192 MvPolynomial (Fin 4) K"
+  },
+  "Singularity.Examples.narasimhanWeight": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "def",
+   "line": 73,
+   "type": "(Fin 4 \u2192\u2080 \u2115) \u2192 \u2115"
+  },
+  "Singularity.Examples.not_isClean_cycleF1'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 788,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2], \u00acSingularity.IsClean 8 Singularity.Examples.cycleF1'"
+  },
+  "Singularity.Examples.ofFun5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 78,
+   "type": "(Fin 5 \u2192 \u2115) \u2192 Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.ofFun5_ev5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 (e : Singularity.Examples.Exp5), Singularity.Examples.ofFun5 (Singularity.Examples.ev5 e) = e"
+  },
+  "Singularity.Examples.ofFun5_toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 135,
+   "type": "\u2200 (e : Singularity.Examples.Exp5), Singularity.Examples.ofFun5 \u21d1(Singularity.Examples.toF5 e) = e"
+  },
+  "Singularity.Examples.ord_cycleF0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 532,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF0"
+  },
+  "Singularity.Examples.ord_cycleF1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 568,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF1"
+  },
+  "Singularity.Examples.ord_cycleF1'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 564,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF1'"
+  },
+  "Singularity.Examples.ord_cycleF2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 585,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF2"
+  },
+  "Singularity.Examples.ord_cycleF3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 600,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF3"
+  },
+  "Singularity.Examples.ord_cycleF4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 614,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF4"
+  },
+  "Singularity.Examples.ord_cycleF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 631,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF5"
+  },
+  "Singularity.Examples.ord_cycleF6": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 645,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], 8 \u2264 Singularity.ord Singularity.Examples.cycleF6"
+  },
+  "Singularity.Examples.ord_cycleF7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 686,
+   "type": "\u2200 {K : Type u_2} [inst : Field K], \u2200 k \u2264 14, 8 \u2264 Singularity.ord (Singularity.Examples.cycleF7 k)"
+  },
+  "Singularity.Examples.ord_kangarooF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 171,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2], Singularity.ord Singularity.Examples.kangarooF = 12"
+  },
+  "Singularity.Examples.ord_kangarooF'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 211,
+   "type": "\u2200 {K : Type u_1} [inst : Field K], 4 \u2264 Singularity.ord Singularity.Examples.kangarooF'"
+  },
+  "Singularity.Examples.ord_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 245,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [CharP R 2] {n : \u2115} {L : List Singularity.Examples.Exp5},\n  (L.all fun e => decide (n \u2264 Singularity.Examples.deg5 e)) = true \u2192\n    \u2200 (e : Singularity.Examples.Exp5),\n      Singularity.Examples.deg5 e = n \u2192 List.count e L % 2 = 1 \u2192 Singularity.ord (Singularity.Examples.poly5 L) = \u2191n"
+  },
+  "Singularity.Examples.ord_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 104,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {u v w : Fin 3 \u2192\u2080 \u2115} {n : \u2115},\n  Finsupp.degree u = n \u2192\n    n \u2264 Finsupp.degree v \u2192\n      n \u2264 Finsupp.degree w \u2192\n        u \u2260 v \u2192\n          u \u2260 w \u2192\n            v \u2260 w \u2192\n              Singularity.ord\n                  ((MvPolynomial.monomial u) 1 + (MvPolynomial.monomial v) 1 + (MvPolynomial.monomial w) 1) =\n                \u2191n"
+  },
+  "Singularity.Examples.pderiv_one_narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (MvPolynomial.pderiv 1) (Singularity.Examples.narasimhanF K) =\n    MvPolynomial.X 2 ^ 3 + MvPolynomial.X 1 ^ 6 * MvPolynomial.X 3"
+  },
+  "Singularity.Examples.pderiv_three_narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 113,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (MvPolynomial.pderiv 3) (Singularity.Examples.narasimhanF K) =\n    MvPolynomial.X 2 * MvPolynomial.X 3 ^ 2 + MvPolynomial.X 1 ^ 7"
+  },
+  "Singularity.Examples.pderiv_two_narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (MvPolynomial.pderiv 2) (Singularity.Examples.narasimhanF K) =\n    MvPolynomial.X 1 * MvPolynomial.X 2 ^ 2 + MvPolynomial.X 3 ^ 3"
+  },
+  "Singularity.Examples.pderiv_zero_narasimhanF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2], (MvPolynomial.pderiv 0) (Singularity.Examples.narasimhanF K) = 0"
+  },
+  "Singularity.Examples.pointChart_cycleF0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 545,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  (Singularity.pointChart 0 Singularity.Examples.cycleT1) Singularity.Examples.cycleF0 =\n    MvPolynomial.X 0 ^ 8 * Singularity.Examples.cycleF1'"
+  },
+  "Singularity.Examples.pointChart_cycleF1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 580,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  (Singularity.pointChart 0 0) Singularity.Examples.cycleF1 = MvPolynomial.X 0 ^ 8 * Singularity.Examples.cycleF2"
+  },
+  "Singularity.Examples.pointChart_cycleF2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 595,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  (Singularity.pointChart 2 0) Singularity.Examples.cycleF2 = MvPolynomial.X 2 ^ 8 * Singularity.Examples.cycleF3"
+  },
+  "Singularity.Examples.pointChart_cycleF3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 609,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  (Singularity.pointChart 3 0) Singularity.Examples.cycleF3 = MvPolynomial.X 3 ^ 8 * Singularity.Examples.cycleF4"
+  },
+  "Singularity.Examples.pointChart_cycleF4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 622,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  (Singularity.pointChart 4 Singularity.Examples.cycleT5) Singularity.Examples.cycleF4 =\n    MvPolynomial.X 4 ^ 8 * Singularity.Examples.cycleF5"
+  },
+  "Singularity.Examples.pointChart_cycleF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 640,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  (Singularity.pointChart 2 0) Singularity.Examples.cycleF5 = MvPolynomial.X 2 ^ 8 * Singularity.Examples.cycleF6"
+  },
+  "Singularity.Examples.pointChart_cycleF7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 680,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  \u2200 k < 14,\n    (Singularity.pointChart 1 0) (Singularity.Examples.cycleF7 k) =\n      MvPolynomial.X 1 ^ 8 * Singularity.Examples.cycleF7 (k + 1)"
+  },
+  "Singularity.Examples.pointChart_cycleT1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 494,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  Singularity.pointChart 0 Singularity.Examples.cycleT1 =\n    (Singularity.Examples.shift5 1).comp ((Singularity.Examples.shift5 2).comp (Singularity.pointChart 0 0))"
+  },
+  "Singularity.Examples.pointChart_cycleT5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 500,
+   "type": "\u2200 {K : Type u_2} [inst : Field K],\n  Singularity.pointChart 4 Singularity.Examples.cycleT5 =\n    (Singularity.Examples.shift5 1).comp ((Singularity.Examples.shift5 3).comp (Singularity.pointChart 4 0))"
+  },
+  "Singularity.Examples.pointChart_kangarooF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 196,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  (Singularity.pointChart 0 Singularity.Examples.kangarooT) Singularity.Examples.kangarooF =\n    MvPolynomial.X 0 ^ 4 * Singularity.Examples.kangarooF'"
+  },
+  "Singularity.Examples.pointChart_monomial_toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 301,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (j : Fin 5) (e : Singularity.Examples.Exp5),\n  (Singularity.pointChart j 0) ((MvPolynomial.monomial (Singularity.Examples.toF5 e)) 1) =\n    (MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e j (Singularity.Examples.deg5 e)))) 1"
+  },
+  "Singularity.Examples.pointChart_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 309,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (q : \u2115) (j : Fin 5) (L : List Singularity.Examples.Exp5),\n  (L.all fun e => decide (q \u2264 Singularity.Examples.deg5 e)) = true \u2192\n    (Singularity.pointChart j 0) (Singularity.Examples.poly5 L) =\n      MvPolynomial.X j ^ q * Singularity.Examples.poly5 (List.map (Singularity.Examples.chartStep5 q j) L)"
+  },
+  "Singularity.Examples.pointChart_zero_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 293,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (j i : Fin 5),\n  (Singularity.pointChart j 0) (MvPolynomial.X i) =\n    if i = j then MvPolynomial.X j else MvPolynomial.X j * MvPolynomial.X i"
+  },
+  "Singularity.Examples.poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 155,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 List Singularity.Examples.Exp5 \u2192 MvPolynomial (Fin 5) R"
+  },
+  "Singularity.Examples.poly5_append": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (L L' : List Singularity.Examples.Exp5),\n  Singularity.Examples.poly5 (L ++ L') = Singularity.Examples.poly5 L + Singularity.Examples.poly5 L'"
+  },
+  "Singularity.Examples.poly5_cons": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 163,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (e : Singularity.Examples.Exp5) (L : List Singularity.Examples.Exp5),\n  Singularity.Examples.poly5 (e :: L) =\n    (MvPolynomial.monomial (Singularity.Examples.toF5 e)) 1 + Singularity.Examples.poly5 L"
+  },
+  "Singularity.Examples.poly5_eq_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 821,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {r : Singularity.Examples.Exp5} {L : List Singularity.Examples.Exp5},\n  L.all (Singularity.Examples.le5 r) = true \u2192\n    Singularity.Examples.poly5 L =\n      (MvPolynomial.monomial (Singularity.Examples.toF5 r)) 1 * Singularity.Examples.poly5 (List.map (fun e => e - r) L)"
+  },
+  "Singularity.Examples.poly5_filter_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 178,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (p : Singularity.Examples.Exp5 \u2192 Bool) (L : List Singularity.Examples.Exp5),\n  Singularity.Examples.poly5 (List.filter p L) + Singularity.Examples.poly5 (List.filter (fun e => !p e) L) =\n    Singularity.Examples.poly5 L"
+  },
+  "Singularity.Examples.poly5_flatMap": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (L : List Singularity.Examples.Exp5)\n  (g : Singularity.Examples.Exp5 \u2192 List Singularity.Examples.Exp5),\n  Singularity.Examples.poly5 (List.flatMap g L) = (List.map (fun e => Singularity.Examples.poly5 (g e)) L).sum"
+  },
+  "Singularity.Examples.poly5_map_set5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 388,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (e : Singularity.Examples.Exp5) (i : Fin 5) (B : List \u2115),\n  Singularity.Examples.poly5 (List.map (Singularity.Examples.set5 e i) B) =\n    (MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e i 0))) 1 *\n      (List.map (fun x => MvPolynomial.X i ^ x) B).sum"
+  },
+  "Singularity.Examples.poly5_nil": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 160,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R], Singularity.Examples.poly5 [] = 0"
+  },
+  "Singularity.Examples.prod_narasimhanCurve_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 150,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (d : Fin 4 \u2192\u2080 \u2115),\n  (d.prod fun i e => Singularity.Examples.narasimhanCurve K i ^ e) =\n    PowerSeries.X ^ Singularity.Examples.narasimhanWeight d"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 536,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 1, 2, 4} 8 Singularity.Examples.cycleF0 = 2"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 571,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2], Singularity.residualOrderAlong {0, 4} 8 Singularity.Examples.cycleF1 = 6"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF1'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 766,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2], Singularity.residualOrderAlong {0, 4} 8 Singularity.Examples.cycleF1' = 6"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 588,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2], Singularity.residualOrderAlong {0, 4} 8 Singularity.Examples.cycleF2 = 5"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 603,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 2, 4} 8 Singularity.Examples.cycleF3 = 5"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 617,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 2, 3, 4} 8 Singularity.Examples.cycleF4 = 5"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 634,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 2, 4} 8 Singularity.Examples.cycleF5 = 5"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF6": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 648,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 2, 4} 8 Singularity.Examples.cycleF6 = 4"
+  },
+  "Singularity.Examples.residualOrderAlong_cycleF7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 689,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2] (k : \u2115),\n  1 \u2264 k \u2192 k \u2264 14 \u2192 Singularity.residualOrderAlong {0, 1, 2, 4} 8 (Singularity.Examples.cycleF7 k) = 4"
+  },
+  "Singularity.Examples.residualOrderAlong_kangarooF": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 177,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong Finset.univ 4 Singularity.Examples.kangarooF = 5"
+  },
+  "Singularity.Examples.residualOrderAlong_kangarooF'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 232,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2],\n  Singularity.residualOrderAlong {0, 2} 4 Singularity.Examples.kangarooF' = 7"
+  },
+  "Singularity.Examples.residualOrderAlong_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 252,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [CharP R 2] (\u0394 : Finset (Fin 5)) (q n : \u2115) (r : Singularity.Examples.Exp5)\n  (G : List Singularity.Examples.Exp5),\n  ((List.map (fun x => r + x) G).all fun e => !Singularity.Examples.allDvd5 q e) = true \u2192\n    (\u2200 i \u2209 \u0394, Singularity.Examples.ev5 r i = 0) \u2192\n      (\u2200 i \u2208 \u0394, (G.any fun e => Singularity.Examples.ev5 e i == 0 && List.count e G % 2 == 1) = true) \u2192\n        (G.all fun e => decide (n \u2264 Singularity.Examples.deg5 e)) = true \u2192\n          \u2200 (e : Singularity.Examples.Exp5),\n            Singularity.Examples.deg5 e = n \u2192\n              List.count e G % 2 = 1 \u2192\n                Singularity.residualOrderAlong \u0394 q (Singularity.Examples.poly5 (List.map (fun x => r + x) G)) = \u2191n"
+  },
+  "Singularity.Examples.residualOrderAlong_poly5'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 512,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2] (\u0394 : Finset (Fin 5)) (n : \u2115) (r : Singularity.Examples.Exp5)\n  (L : List Singularity.Examples.Exp5),\n  L.all (Singularity.Examples.le5 r) = true \u2192\n    (L.all fun e => !Singularity.Examples.allDvd5 8 e) = true \u2192\n      (\u2200 i \u2209 \u0394, Singularity.Examples.ev5 r i = 0) \u2192\n        (\u2200 i \u2208 \u0394,\n            ((List.map (fun e => e - r) L).any fun e =>\n                Singularity.Examples.ev5 e i == 0 && List.count e (List.map (fun e => e - r) L) % 2 == 1) =\n              true) \u2192\n          ((List.map (fun e => e - r) L).all fun e => decide (n \u2264 Singularity.Examples.deg5 e)) = true \u2192\n            \u2200 (e : Singularity.Examples.Exp5),\n              Singularity.Examples.deg5 e = n \u2192\n                List.count e (List.map (fun e => e - r) L) % 2 = 1 \u2192\n                  Singularity.residualOrderAlong \u0394 8 (Singularity.Examples.poly5 L) = \u2191n"
+  },
+  "Singularity.Examples.set5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 84,
+   "type": "Singularity.Examples.Exp5 \u2192 Fin 5 \u2192 \u2115 \u2192 Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.set5_ev5_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 (e : Singularity.Examples.Exp5) (i : Fin 5), Singularity.Examples.set5 e i (Singularity.Examples.ev5 e i) = e"
+  },
+  "Singularity.Examples.shift5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 325,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 Fin 5 \u2192 MvPolynomial (Fin 5) R \u2192\u2090[R] MvPolynomial (Fin 5) R"
+  },
+  "Singularity.Examples.shift5_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 329,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (i k : Fin 5),\n  (Singularity.Examples.shift5 i) (MvPolynomial.X k) = if k = i then MvPolynomial.X k + 1 else MvPolynomial.X k"
+  },
+  "Singularity.Examples.shift5_X_pow_of_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 414,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] {i j : Fin 5},\n  j \u2260 i \u2192 \u2200 (n : \u2115), (Singularity.Examples.shift5 i) (MvPolynomial.X j ^ n) = MvPolynomial.X j ^ n"
+  },
+  "Singularity.Examples.shift5_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 396,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [CharP R 2] (i : Fin 5) (e : Singularity.Examples.Exp5),\n  (Singularity.Examples.shift5 i) ((MvPolynomial.monomial (Singularity.Examples.toF5 e)) 1) =\n    Singularity.Examples.poly5\n      (List.map (Singularity.Examples.set5 e i) (Singularity.Examples.binom2 (Singularity.Examples.ev5 e i)))"
+  },
+  "Singularity.Examples.shift5_monomial_set5_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 333,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (i : Fin 5) (e : Singularity.Examples.Exp5),\n  (Singularity.Examples.shift5 i)\n      ((MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e i 0))) 1) =\n    (MvPolynomial.monomial (Singularity.Examples.toF5 (Singularity.Examples.set5 e i 0))) 1"
+  },
+  "Singularity.Examples.shift5_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 407,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [CharP R 2] (i : Fin 5) (L : List Singularity.Examples.Exp5),\n  (Singularity.Examples.shift5 i) (Singularity.Examples.poly5 L) =\n    Singularity.Examples.poly5 (Singularity.Examples.transl5 i L)"
+  },
+  "Singularity.Examples.subst_narasimhanCurve_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 218,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {h : MvPowerSeries (Fin 4) K},\n  (\u2203 i, (MvPowerSeries.coeff (Finsupp.single i 1)) h \u2260 0) \u2192\n    MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h \u2260 0"
+  },
+  "Singularity.Examples.toF5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 119,
+   "type": "Singularity.Examples.Exp5 \u2192 Fin 5 \u2192\u2080 \u2115"
+  },
+  "Singularity.Examples.toF5_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 139,
+   "type": "\u2200 (a b : Singularity.Examples.Exp5),\n  Singularity.Examples.toF5 (a + b) = Singularity.Examples.toF5 a + Singularity.Examples.toF5 b"
+  },
+  "Singularity.Examples.toF5_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 122,
+   "type": "\u2200 (e : Singularity.Examples.Exp5) (i : Fin 5), (Singularity.Examples.toF5 e) i = Singularity.Examples.ev5 e i"
+  },
+  "Singularity.Examples.toF5_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "Function.Injective Singularity.Examples.toF5"
+  },
+  "Singularity.Examples.toF5_mem_support_poly5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 222,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [CharP R 2] {L : List Singularity.Examples.Exp5} {e : Singularity.Examples.Exp5},\n  List.count e L % 2 = 1 \u2192 Singularity.Examples.toF5 e \u2208 (Singularity.Examples.poly5 L).support"
+  },
+  "Singularity.Examples.toF5_ofFun5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 130,
+   "type": "\u2200 (d : Fin 5 \u2192\u2080 \u2115), Singularity.Examples.toF5 (Singularity.Examples.ofFun5 \u21d1d) = d"
+  },
+  "Singularity.Examples.transl5": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "def",
+   "line": 403,
+   "type": "Fin 5 \u2192 List Singularity.Examples.Exp5 \u2192 List Singularity.Examples.Exp5"
+  },
+  "Singularity.Examples.two_eq_zero_five": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 508,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2], 2 = 0"
+  },
+  "Singularity.Examples.two_eq_zero_mvPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlega.lean",
+   "kind": "theorem",
+   "line": 140,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] [CharP K 2], 2 = 0"
+  },
+  "Singularity.Examples.two_le_order_of_subst_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/Narasimhan.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {h : MvPowerSeries (Fin 4) K},\n  MvPowerSeries.subst (Singularity.Examples.narasimhanCurve K) h = 0 \u2192 2 \u2264 h.order"
+  },
+  "Singularity.Examples.zShift_cycleF1'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/HauserPerlegaCycle.lean",
+   "kind": "theorem",
+   "line": 775,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  (Singularity.zShift Singularity.Examples.cycleH1) (Singularity.purelyInseparable 8 Singularity.Examples.cycleF1') =\n    Singularity.purelyInseparable 8 Singularity.Examples.cycleF1"
+  },
   "Singularity.Fidelity.codiag": {
    "axioms": [
     "Classical.choice",
@@ -3406,6 +5416,17 @@
    "kind": "def",
    "line": 21,
    "type": "\u2115 \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.IsClean": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 94,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 Prop"
   },
   "Singularity.IsRegularScheme": {
    "axioms": [
@@ -3792,6 +5813,423 @@
    "line": 28,
    "type": "Prop"
   },
+  "Singularity.blowupDivisor": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 452,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [CommSemiring k] \u2192 [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 Finset \u03c3 \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 Finset \u03c3"
+  },
+  "Singularity.cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 100,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial \u03c3 k"
+  },
+  "Singularity.cleanPart_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 159,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (F h : MvPolynomial \u03c3 k),\n  Singularity.cleanPart (p ^ e) (F + h ^ p ^ e) = Singularity.cleanPart (p ^ e) F"
+  },
+  "Singularity.cleanPart_eq_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {q : \u2115} {F : MvPolynomial \u03c3 k},\n  Singularity.IsClean q F \u2192 Singularity.cleanPart q F = F"
+  },
+  "Singularity.coe_weightedHomogeneousComponent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 269,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) (n : \u2115) (f : MvPolynomial \u03c3 R),\n  \u2191((MvPolynomial.weightedHomogeneousComponent w n) f) = (MvPowerSeries.weightedHomogeneousComponent w n) \u2191f"
+  },
+  "Singularity.coeff_add_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (f g : MvPolynomial \u03c3 k) (d : \u03c3 \u2192\u2080 \u2115),\n  (f + g).coeff d = f.coeff d + g.coeff d"
+  },
+  "Singularity.coeff_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k) (d : \u03c3 \u2192\u2080 \u2115),\n  (Singularity.cleanPart q F).coeff d = if \u2200 (i : \u03c3), q \u2223 d i then 0 else F.coeff d"
+  },
+  "Singularity.coeff_eq_zero_of_lt_ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  \u2191(Finsupp.degree d) < Singularity.ord f \u2192 f.coeff d = 0"
+  },
+  "Singularity.coeff_eq_zero_of_lt_weightedOrd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 175,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {w : \u03c3 \u2192 \u2115} {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  \u2191((Finsupp.weight w) d) < Singularity.weightedOrd w f \u2192 f.coeff d = 0"
+  },
+  "Singularity.coeff_initialForm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 238,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) (f : MvPolynomial \u03c3 R) (d : \u03c3 \u2192\u2080 \u2115),\n  (Singularity.initialForm w f).coeff d =\n    if (Finsupp.weight w) d = (Singularity.weightedOrd w f).toNat then f.coeff d else 0"
+  },
+  "Singularity.coeff_pow_eq_zero_of_not_dvd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 153,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (h : MvPolynomial \u03c3 k)\n  {d : \u03c3 \u2192\u2080 \u2115}, (\u00ac\u2200 (i : \u03c3), p ^ e \u2223 d i) \u2192 (h ^ p ^ e).coeff d = 0"
+  },
+  "Singularity.constantCoeff_linearChange_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 339,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (A : Matrix \u03c3 \u03c3 R) (i : \u03c3),\n  MvPolynomial.constantCoeff ((Singularity.linearChange A) (MvPolynomial.X i)) = 0"
+  },
+  "Singularity.convexHull_orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {\u03c3 : Type u_1}, (convexHull \u211d) (Singularity.orthant \u03c3) = Singularity.orthant \u03c3"
+  },
+  "Singularity.convex_newtonPolyhedron": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 101,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Convex \u211d (Singularity.newtonPolyhedron f)"
+  },
+  "Singularity.convex_orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 81,
+   "type": "\u2200 {\u03c3 : Type u_1}, Convex \u211d (Singularity.orthant \u03c3)"
+  },
+  "Singularity.divisorExponent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 315,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 \u03c3 \u2192\u2080 \u2115"
+  },
+  "Singularity.divisorExponent_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 320,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] (\u0394 : Finset \u03c3) (F : MvPolynomial \u03c3 k)\n  (i : \u03c3), (Singularity.divisorExponent \u0394 F) i = if i \u2208 \u0394 then sInf ((fun d => d i) '' \u2191F.support) else 0"
+  },
+  "Singularity.exists_add_pow_eq_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 264,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [ExpChar k p] [PerfectRing k p] (e : \u2115)\n  (F : MvPolynomial \u03c3 k), \u2203 h, F + h ^ p ^ e = Singularity.cleanPart (p ^ e) F"
+  },
+  "Singularity.exists_coeff_ne_zero_and_ord_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 \u2203 d, f.coeff d \u2260 0 \u2227 Singularity.ord f = \u2191(Finsupp.degree d)"
+  },
+  "Singularity.exists_coeff_ne_zero_and_weightedOrd_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 185,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 \u2203 d, f.coeff d \u2260 0 \u2227 Singularity.weightedOrd w f = \u2191((Finsupp.weight w) d)"
+  },
+  "Singularity.exists_mem_ord_eq_idealOrd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 223,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I : Ideal (MvPolynomial \u03c3 R)),\n  \u2203 f \u2208 I, Singularity.ord f = Singularity.idealOrd I"
+  },
+  "Singularity.expToReal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "def",
+   "line": 69,
+   "type": "{\u03c3 : Type u_1} \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192+ \u03c3 \u2192 \u211d"
+  },
+  "Singularity.expToReal_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 75,
+   "type": "\u2200 {\u03c3 : Type u_1} (d : \u03c3 \u2192\u2080 \u2115) (i : \u03c3), Singularity.expToReal d i = \u2191(d i)"
+  },
+  "Singularity.expToReal_mem_newtonPolyhedron": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 104,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  d \u2208 f.support \u2192 Singularity.expToReal d \u2208 Singularity.newtonPolyhedron f"
+  },
+  "Singularity.idealOrd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "def",
+   "line": 209,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 Ideal (MvPolynomial \u03c3 R) \u2192 \u2115\u221e"
+  },
+  "Singularity.idealOrd_anti": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 235,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {I J : Ideal (MvPolynomial \u03c3 R)},\n  I \u2264 J \u2192 Singularity.idealOrd J \u2264 Singularity.idealOrd I"
+  },
+  "Singularity.idealOrd_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R], Singularity.idealOrd \u22a5 = \u22a4"
+  },
+  "Singularity.idealOrd_idealOfVars": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 285,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [Nontrivial R] [Nonempty \u03c3],\n  Singularity.idealOrd (MvPolynomial.idealOfVars \u03c3 R) = 1"
+  },
+  "Singularity.idealOrd_le_ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 215,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {I : Ideal (MvPolynomial \u03c3 R)} {f : MvPolynomial \u03c3 R},\n  f \u2208 I \u2192 Singularity.idealOrd I \u2264 Singularity.ord f"
+  },
+  "Singularity.idealOrd_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 267,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] (I J : Ideal (MvPolynomial \u03c3 R)),\n  Singularity.idealOrd (I * J) = Singularity.idealOrd I + Singularity.idealOrd J"
+  },
+  "Singularity.idealOrd_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 277,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] [Nontrivial R] (I : Ideal (MvPolynomial \u03c3 R))\n  (n : \u2115), Singularity.idealOrd (I ^ n) = n \u2022 Singularity.idealOrd I"
+  },
+  "Singularity.idealOrd_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 244,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.idealOrd (Ideal.span {f}) = Singularity.ord f"
+  },
+  "Singularity.idealOrd_sup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 252,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I J : Ideal (MvPolynomial \u03c3 R)),\n  Singularity.idealOrd (I \u2294 J) = min (Singularity.idealOrd I) (Singularity.idealOrd J)"
+  },
+  "Singularity.initialForm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "def",
+   "line": 233,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 (\u03c3 \u2192 \u2115) \u2192 MvPolynomial \u03c3 R \u2192 MvPolynomial \u03c3 R"
+  },
+  "Singularity.initialForm_add_of_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 304,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {w : \u03c3 \u2192 \u2115} {P Q : MvPolynomial \u03c3 R} {n : \u2115},\n  MvPolynomial.IsWeightedHomogeneous w P n \u2192\n    P \u2260 0 \u2192 \u2191n < Singularity.weightedOrd w Q \u2192 Singularity.initialForm w (P + Q) = P"
+  },
+  "Singularity.initialForm_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 283,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] (w : \u03c3 \u2192 \u2115) (f g : MvPolynomial \u03c3 R),\n  Singularity.initialForm w (f * g) = Singularity.initialForm w f * Singularity.initialForm w g"
+  },
+  "Singularity.initialForm_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 257,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 Singularity.initialForm w f \u2260 0"
+  },
+  "Singularity.initialForm_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 265,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115), Singularity.initialForm w 0 = 0"
+  },
   "Singularity.integralResolutionInDim_of_resolutionInDim": {
    "axioms": [
     "Classical.choice",
@@ -3802,6 +6240,61 @@
    "kind": "theorem",
    "line": 30,
    "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.IntegralResolutionInDim p n"
+  },
+  "Singularity.isClean_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.IsClean q (Singularity.cleanPart q F)"
+  },
+  "Singularity.isClean_iff_cleanPart_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {q : \u2115} {F : MvPolynomial \u03c3 k},\n  Singularity.IsClean q F \u2194 Singularity.cleanPart q F = F"
+  },
+  "Singularity.isClean_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 136,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115), Singularity.IsClean q 0"
+  },
+  "Singularity.isLeast_sum_newtonPolyhedron": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 227,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 IsLeast ((fun v => \u2211 i, v i) '' Singularity.newtonPolyhedron f) \u2191(Singularity.ord f).toNat"
+  },
+  "Singularity.isLeast_weight_newtonPolyhedron": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 193,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 IsLeast ((fun v => \u2211 i, \u2191(w i) * v i) '' Singularity.newtonPolyhedron f) \u2191(Singularity.weightedOrd w f).toNat"
   },
   "Singularity.isRegularLocalRing_of_isField": {
    "axioms": [
@@ -3858,6 +6351,17 @@
    "line": 89,
    "type": "\u2200 {k : Type u} [inst : Field k] {p n : \u2115} (g : MvPolynomial (Fin n) k),\n  AlgebraicGeometry.IsReduced (Singularity.P1Hypersurface k p n g) \u2192\n    Singularity.IsVariety (Singularity.P1Hypersurface k p n g) (Singularity.p1Structure k p n g)"
   },
+  "Singularity.isWeightedHomogeneous_initialForm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 243,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) (f : MvPolynomial \u03c3 R),\n  MvPolynomial.IsWeightedHomogeneous w (Singularity.initialForm w f) (Singularity.weightedOrd w f).toNat"
+  },
   "Singularity.krullDimLE_zero_stalk": {
    "axioms": [
     "Classical.choice",
@@ -3868,6 +6372,39 @@
    "kind": "theorem",
    "line": 34,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
+  },
+  "Singularity.le_idealOrd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 219,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {I : Ideal (MvPolynomial \u03c3 R)} {n : \u2115\u221e},\n  (\u2200 f \u2208 I, n \u2264 Singularity.ord f) \u2192 n \u2264 Singularity.idealOrd I"
+  },
+  "Singularity.le_idealOrd_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 229,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {I : Ideal (MvPolynomial \u03c3 R)} {n : \u2115},\n  \u2191n \u2264 Singularity.idealOrd I \u2194 I \u2264 MvPolynomial.idealOfVars \u03c3 R ^ n"
+  },
+  "Singularity.le_idealOrd_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 260,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I J : Ideal (MvPolynomial \u03c3 R)),\n  Singularity.idealOrd I + Singularity.idealOrd J \u2264 Singularity.idealOrd (I * J)"
   },
   "Singularity.le_of_add_one_le_add_one": {
    "axioms": [
@@ -3880,6 +6417,127 @@
    "line": 50,
    "type": "\u2200 {d : WithBot \u2115\u221e} {m : \u2115}, d + 1 \u2264 \u2191m + 1 \u2192 d \u2264 \u2191m"
   },
+  "Singularity.le_ord_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 157,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f g : MvPolynomial \u03c3 R} {n : \u2115\u221e},\n  n \u2264 Singularity.ord f \u2192 n \u2264 Singularity.ord g \u2192 n \u2264 Singularity.ord (f + g)"
+  },
+  "Singularity.le_ord_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {n : \u2115},\n  \u2191n \u2264 Singularity.ord f \u2194 \u2200 (d : \u03c3 \u2192\u2080 \u2115), Finsupp.degree d < n \u2192 f.coeff d = 0"
+  },
+  "Singularity.le_ord_iff_mem_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 116,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {n : \u2115},\n  \u2191n \u2264 Singularity.ord f \u2194 f \u2208 MvPolynomial.idealOfVars \u03c3 R ^ n"
+  },
+  "Singularity.le_ord_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 170,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f g : MvPolynomial \u03c3 R),\n  Singularity.ord f + Singularity.ord g \u2264 Singularity.ord (f * g)"
+  },
+  "Singularity.le_ord_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 175,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R) (n : \u2115),\n  n \u2022 Singularity.ord f \u2264 Singularity.ord (f ^ n)"
+  },
+  "Singularity.le_ord_smul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 179,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (a : R) (f : MvPolynomial \u03c3 R),\n  Singularity.ord f \u2264 Singularity.ord (a \u2022 f)"
+  },
+  "Singularity.linearChange": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "def",
+   "line": 331,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 [Fintype \u03c3] \u2192 Matrix \u03c3 \u03c3 R \u2192 MvPolynomial \u03c3 R \u2192\u2090[R] MvPolynomial \u03c3 R"
+  },
+  "Singularity.linearChange_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 335,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (A : Matrix \u03c3 \u03c3 R) (i : \u03c3),\n  (Singularity.linearChange A) (MvPolynomial.X i) = \u2211 j, MvPolynomial.C (A i j) * MvPolynomial.X j"
+  },
+  "Singularity.linearChange_linearChange": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 348,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (A B : Matrix \u03c3 \u03c3 R)\n  (f : MvPolynomial \u03c3 R),\n  (Singularity.linearChange A) ((Singularity.linearChange B) f) = (Singularity.linearChange (B * A)) f"
+  },
+  "Singularity.linearChange_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 359,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] [inst_2 : DecidableEq \u03c3]\n  (f : MvPolynomial \u03c3 R), (Singularity.linearChange 1) f = f"
+  },
+  "Singularity.mem_idealOfVars_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 121,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R},\n  f \u2208 MvPolynomial.idealOfVars \u03c3 R \u2194 MvPolynomial.constantCoeff f = 0"
+  },
   "Singularity.mem_regularLocus_iff_of_isAffineOpen": {
    "axioms": [
     "Classical.choice",
@@ -3888,8 +6546,459 @@
    ],
    "file": "Singularity/Scheme/RegularLocus.lean",
    "kind": "theorem",
-   "line": 41,
+   "line": 44,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme} {U : X.Opens} (hU : AlgebraicGeometry.IsAffineOpen U) (x : \u21a5U),\n  \u2191x \u2208 Singularity.regularLocus X \u2194\n    hU.primeIdealOf x \u2208 Singularity.Algebra.regularLocus \u2191(X.presheaf.obj (Opposite.op U))"
+  },
+  "Singularity.mem_support_initialForm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 247,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {w : \u03c3 \u2192 \u2115} {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  f \u2260 0 \u2192\n    (d \u2208 (Singularity.initialForm w f).support \u2194 d \u2208 f.support \u2227 \u2191((Finsupp.weight w) d) = Singularity.weightedOrd w f)"
+  },
+  "Singularity.min_ord_le_ord_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f g : MvPolynomial \u03c3 R),\n  min (Singularity.ord f) (Singularity.ord g) \u2264 Singularity.ord (f + g)"
+  },
+  "Singularity.moh_bound": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 461,
+   "type": "Prop"
+  },
+  "Singularity.newtonPolyhedron": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "def",
+   "line": 96,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 MvPolynomial \u03c3 R \u2192 Set (\u03c3 \u2192 \u211d)"
+  },
+  "Singularity.newtonPolyhedron_add_orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.newtonPolyhedron f + Singularity.orthant \u03c3 = Singularity.newtonPolyhedron f"
+  },
+  "Singularity.newtonPolyhedron_add_subset": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 148,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f g : MvPolynomial \u03c3 R),\n  Singularity.newtonPolyhedron (f + g) \u2286\n    (convexHull \u211d) (Singularity.newtonPolyhedron f \u222a Singularity.newtonPolyhedron g)"
+  },
+  "Singularity.newtonPolyhedron_eq_convexHull": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 112,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.newtonPolyhedron f = (convexHull \u211d) (\u21d1Singularity.expToReal '' \u2191f.support + Singularity.orthant \u03c3)"
+  },
+  "Singularity.newtonPolyhedron_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 122,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {d : \u03c3 \u2192\u2080 \u2115} {c : R},\n  c \u2260 0 \u2192 Singularity.newtonPolyhedron ((MvPolynomial.monomial d) c) = {Singularity.expToReal d} + Singularity.orthant \u03c3"
+  },
+  "Singularity.newtonPolyhedron_mul_subset": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 129,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f g : MvPolynomial \u03c3 R),\n  Singularity.newtonPolyhedron (f * g) \u2286 Singularity.newtonPolyhedron f + Singularity.newtonPolyhedron g"
+  },
+  "Singularity.newtonPolyhedron_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R], Singularity.newtonPolyhedron 0 = \u2205"
+  },
+  "Singularity.one_le_ord_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R},\n  1 \u2264 Singularity.ord f \u2194 MvPolynomial.constantCoeff f = 0"
+  },
+  "Singularity.ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "def",
+   "line": 60,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 MvPolynomial \u03c3 R \u2192 \u2115\u221e"
+  },
+  "Singularity.ord_C": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 137,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {c : R}, c \u2260 0 \u2192 Singularity.ord (MvPolynomial.C c) = 0"
+  },
+  "Singularity.ord_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 144,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [Nontrivial R] (i : \u03c3), Singularity.ord (MvPolynomial.X i) = 1"
+  },
+  "Singularity.ord_X_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 148,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [Nontrivial R] (i : \u03c3) (n : \u2115),\n  Singularity.ord (MvPolynomial.X i ^ n) = \u2191n"
+  },
+  "Singularity.ord_add_of_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 167,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f g : MvPolynomial \u03c3 R},\n  Singularity.ord f < Singularity.ord g \u2192 Singularity.ord (f + g) = Singularity.ord f"
+  },
+  "Singularity.ord_add_of_ord_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f g : MvPolynomial \u03c3 R},\n  Singularity.ord f \u2260 Singularity.ord g \u2192 Singularity.ord (f + g) = min (Singularity.ord f) (Singularity.ord g)"
+  },
+  "Singularity.ord_add_pow_le_ord_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (F h : MvPolynomial \u03c3 k),\n  Singularity.ord (F + h ^ p ^ e) \u2264 Singularity.ord (Singularity.cleanPart (p ^ e) F)"
+  },
+  "Singularity.ord_add_pow_le_ord_of_isClean": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 183,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) {F : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) F \u2192 \u2200 (h : MvPolynomial \u03c3 k), Singularity.ord (F + h ^ p ^ e) \u2264 Singularity.ord F"
+  },
+  "Singularity.ord_add_pow_le_residualOrder": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 218,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F h : MvPolynomial \u03c3 k),\n  Singularity.ord (F + h ^ q) \u2264 Singularity.residualOrder q F"
+  },
+  "Singularity.ord_algEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 310,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {\u03c4 : Type u_3} (e : MvPolynomial \u03c3 R \u2243\u2090[R] MvPolynomial \u03c4 R),\n  (\u2200 (i : \u03c3), MvPolynomial.constantCoeff (e (MvPolynomial.X i)) = 0) \u2192\n    (\u2200 (i : \u03c4), MvPolynomial.constantCoeff (e.symm (MvPolynomial.X i)) = 0) \u2192\n      \u2200 (f : MvPolynomial \u03c3 R), Singularity.ord (e f) = Singularity.ord f"
+  },
+  "Singularity.ord_def": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 66,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R), Singularity.ord f = (\u2191f).order"
+  },
+  "Singularity.ord_eq_iInf_degree": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.ord f = \u2a05 d \u2208 f.support, \u2191(Finsupp.degree d)"
+  },
+  "Singularity.ord_eq_order_idealOfVars": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 386,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommRing R] (f : MvPolynomial \u03c3 R),\n  Singularity.ord f = Singularity.Algebra.order (MvPolynomial.idealOfVars \u03c3 R) f"
+  },
+  "Singularity.ord_eq_top_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 88,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R}, Singularity.ord f = \u22a4 \u2194 f = 0"
+  },
+  "Singularity.ord_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 78,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  f.coeff d \u2260 0 \u2192 Singularity.ord f \u2264 \u2191(Finsupp.degree d)"
+  },
+  "Singularity.ord_le_ord_aeval": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 295,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {\u03c4 : Type u_3} (\u03c6 : \u03c3 \u2192 MvPolynomial \u03c4 R),\n  (\u2200 (i : \u03c3), MvPolynomial.constantCoeff (\u03c6 i) = 0) \u2192\n    \u2200 (f : MvPolynomial \u03c3 R), Singularity.ord f \u2264 Singularity.ord ((MvPolynomial.aeval \u03c6) f)"
+  },
+  "Singularity.ord_le_ord_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 141,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.ord F \u2264 Singularity.ord (Singularity.cleanPart q F)"
+  },
+  "Singularity.ord_le_ord_linearChange": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 343,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (A : Matrix \u03c3 \u03c3 R) (f : MvPolynomial \u03c3 R),\n  Singularity.ord f \u2264 Singularity.ord ((Singularity.linearChange A) f)"
+  },
+  "Singularity.ord_le_residualOrder": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 222,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {q : \u2115},\n  q \u2260 0 \u2192 \u2200 (F : MvPolynomial \u03c3 k), Singularity.ord F \u2264 Singularity.residualOrder q F"
+  },
+  "Singularity.ord_linearChange": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 365,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] [inst_2 : DecidableEq \u03c3] (A : Matrix \u03c3 \u03c3 R)\n  [Invertible A] (f : MvPolynomial \u03c3 R), Singularity.ord ((Singularity.linearChange A) f) = Singularity.ord f"
+  },
+  "Singularity.ord_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 134,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {d : \u03c3 \u2192\u2080 \u2115} {c : R},\n  c \u2260 0 \u2192 Singularity.ord ((MvPolynomial.monomial d) c) = \u2191(Finsupp.degree d)"
+  },
+  "Singularity.ord_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 188,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] (f g : MvPolynomial \u03c3 R),\n  Singularity.ord (f * g) = Singularity.ord f + Singularity.ord g"
+  },
+  "Singularity.ord_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 95,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R}, f \u2260 0 \u2192 Singularity.ord f \u2260 \u22a4"
+  },
+  "Singularity.ord_neg": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 379,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommRing R] (f : MvPolynomial \u03c3 R), Singularity.ord (-f) = Singularity.ord f"
+  },
+  "Singularity.ord_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 140,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [Nontrivial R], Singularity.ord 1 = 0"
+  },
+  "Singularity.ord_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 193,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] [Nontrivial R] (f : MvPolynomial \u03c3 R)\n  (n : \u2115), Singularity.ord (f ^ n) = n \u2022 Singularity.ord f"
+  },
+  "Singularity.ord_prod": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 198,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] [Nontrivial R] {\u03b9 : Type u_3} (s : Finset \u03b9)\n  (f : \u03b9 \u2192 MvPolynomial \u03c3 R), Singularity.ord (\u220f i \u2208 s, f i) = \u2211 i \u2208 s, Singularity.ord (f i)"
+  },
+  "Singularity.ord_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Order.lean",
+   "kind": "theorem",
+   "line": 92,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R], Singularity.ord 0 = \u22a4"
+  },
+  "Singularity.orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "def",
+   "line": 78,
+   "type": "(\u03c3 : Type u_3) \u2192 Set (\u03c3 \u2192 \u211d)"
+  },
+  "Singularity.orthant_add_orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 88,
+   "type": "\u2200 {\u03c3 : Type u_1}, Singularity.orthant \u03c3 + Singularity.orthant \u03c3 = Singularity.orthant \u03c3"
   },
   "Singularity.p1Structure": {
    "axioms": [
@@ -3912,6 +7021,94 @@
    "kind": "theorem",
    "line": 33,
    "type": "\u2200 {k : Type u} [inst : Field k] {p n : \u2115},\n  p \u2260 0 \u2192 \u2200 (g : MvPolynomial (Fin n) k), MvPolynomial.X none ^ p + (MvPolynomial.rename some) g \u2260 0"
+  },
+  "Singularity.pointChart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 416,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.pointChartZ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 428,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : CommSemiring k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial (Option \u03c3) k \u2192\u2090[k] MvPolynomial (Option \u03c3) k"
+  },
+  "Singularity.pointChartZ_purelyInseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 441,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {q : \u2115}\n  {F F' : MvPolynomial \u03c3 k},\n  (Singularity.pointChart j t) F = MvPolynomial.X j ^ q * F' \u2192\n    (Singularity.pointChartZ j t) (Singularity.purelyInseparable q F) =\n      MvPolynomial.X (some j) ^ q * Singularity.purelyInseparable q F'"
+  },
+  "Singularity.pointChartZ_rename": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 434,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k)\n  (F : MvPolynomial \u03c3 k),\n  (Singularity.pointChartZ j t) ((MvPolynomial.rename some) F) =\n    (MvPolynomial.rename some) ((Singularity.pointChart j t) F)"
+  },
+  "Singularity.pointChart_X_of_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 424,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] {j i : \u03c3} (t : \u03c3 \u2192 k),\n  i \u2260 j \u2192 (Singularity.pointChart j t) (MvPolynomial.X i) = MvPolynomial.X j * (MvPolynomial.X i + MvPolynomial.C (t i))"
+  },
+  "Singularity.pointChart_X_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 421,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.pointChart j t) (MvPolynomial.X j) = MvPolynomial.X j"
+  },
+  "Singularity.pow_eq_zero_of_isClean": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 188,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) {F h : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) F \u2192 Singularity.IsClean (p ^ e) (F + h ^ p ^ e) \u2192 h ^ p ^ e = 0"
+  },
+  "Singularity.purelyInseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 390,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial (Option \u03c3) k"
   },
   "Singularity.purelyInseparableHypersurfaceResolution_four": {
    "axioms": [
@@ -3965,8 +7162,19 @@
    ],
    "file": "Singularity/Scheme/RegularLocus.lean",
    "kind": "theorem",
-   "line": 77,
+   "line": 86,
    "type": "\u2200 {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
+  },
+  "Singularity.regularLocus_isOpen_of_field": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 57,
+   "type": "\u2200 {k : Type u} [inst : Field k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
   },
   "Singularity.regularLocus_isOpen_of_perfectField": {
    "axioms": [
@@ -3976,8 +7184,140 @@
    ],
    "file": "Singularity/Scheme/RegularLocus.lean",
    "kind": "theorem",
-   "line": 54,
+   "line": 81,
    "type": "\u2200 {k : Type u} [inst : Field k] [PerfectField k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
+  },
+  "Singularity.residualFactor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 327,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial \u03c3 k"
+  },
+  "Singularity.residualFactor_monomial_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 336,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {r : \u03c3 \u2192\u2080 \u2115} {G : MvPolynomial \u03c3 k},\n  (\u2200 i \u2209 \u0394, r i = 0) \u2192\n    (\u2200 i \u2208 \u0394, \u2203 d \u2208 G.support, d i = 0) \u2192 Singularity.residualFactor \u0394 ((MvPolynomial.monomial r) 1 * G) = G"
+  },
+  "Singularity.residualOrder": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 212,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
+  },
+  "Singularity.residualOrderAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 331,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 Finset \u03c3 \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
+  },
+  "Singularity.residualOrderAlong_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 371,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (\u0394 : Finset \u03c3) (e : \u2115)\n  (F h : MvPolynomial \u03c3 k),\n  Singularity.residualOrderAlong \u0394 (p ^ e) (F + h ^ p ^ e) = Singularity.residualOrderAlong \u0394 (p ^ e) F"
+  },
+  "Singularity.residualOrderAlong_empty": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 377,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.residualOrderAlong \u2205 q F = Singularity.ord (Singularity.cleanPart q F)"
+  },
+  "Singularity.residualOrderAlong_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 363,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {q : \u2115} {r : \u03c3 \u2192\u2080 \u2115} {G : MvPolynomial \u03c3 k},\n  Singularity.IsClean q ((MvPolynomial.monomial r) 1 * G) \u2192\n    (\u2200 i \u2209 \u0394, r i = 0) \u2192\n      (\u2200 i \u2208 \u0394, \u2203 d \u2208 G.support, d i = 0) \u2192\n        Singularity.residualOrderAlong \u0394 q ((MvPolynomial.monomial r) 1 * G) = Singularity.ord G"
+  },
+  "Singularity.residualOrder_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 246,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [ExpChar k p] (e : \u2115) (F h : MvPolynomial \u03c3 k),\n  Singularity.residualOrder (p ^ e) (F + h ^ p ^ e) = Singularity.residualOrder (p ^ e) F"
+  },
+  "Singularity.residualOrder_eq_ord_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 300,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [ExpChar k p] [PerfectRing k p] (e : \u2115)\n  (F : MvPolynomial \u03c3 k), Singularity.residualOrder (p ^ e) F = Singularity.ord (Singularity.cleanPart (p ^ e) F)"
+  },
+  "Singularity.residualOrder_eq_ord_of_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 259,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [ExpChar k p] (e : \u2115) {F h : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) (F + h ^ p ^ e) \u2192 Singularity.residualOrder (p ^ e) F = Singularity.ord (F + h ^ p ^ e)"
+  },
+  "Singularity.residualOrder_eq_ord_of_isClean": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 234,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) {F : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) F \u2192 Singularity.residualOrder (p ^ e) F = Singularity.ord F"
+  },
+  "Singularity.residualOrder_le_ord_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 229,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.residualOrder (p ^ e) F \u2264 Singularity.ord (Singularity.cleanPart (p ^ e) F)"
   },
   "Singularity.resolutionInDim_charZero": {
    "axioms": [
@@ -4044,6 +7384,105 @@
    "kind": "theorem",
    "line": 77,
    "type": "\u2200 {k : Type u} [inst : Field k] {p n : \u2115},\n  p \u2260 0 \u2192 \u2200 (g : MvPolynomial (Fin n) k), topologicalKrullDim \u21a5(Singularity.P1Hypersurface k p n g) \u2264 \u2191n"
+  },
+  "Singularity.weightedOrd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "def",
+   "line": 163,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 (\u03c3 \u2192 \u2115) \u2192 MvPolynomial \u03c3 R \u2192 \u2115\u221e"
+  },
+  "Singularity.weightedOrd_eq_top_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {w : \u03c3 \u2192 \u2115} {f : MvPolynomial \u03c3 R},\n  Singularity.weightedOrd w f = \u22a4 \u2194 f = 0"
+  },
+  "Singularity.weightedOrd_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 171,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {w : \u03c3 \u2192 \u2115} {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  f.coeff d \u2260 0 \u2192 Singularity.weightedOrd w f \u2264 \u2191((Finsupp.weight w) d)"
+  },
+  "Singularity.weightedOrd_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 276,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] (w : \u03c3 \u2192 \u2115) (f g : MvPolynomial \u03c3 R),\n  Singularity.weightedOrd w (f * g) = Singularity.weightedOrd w f + Singularity.weightedOrd w g"
+  },
+  "Singularity.weightedOrd_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.weightedOrd (fun x => 1) f = Singularity.ord f"
+  },
+  "Singularity.zShift": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "def",
+   "line": 395,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : CommSemiring k] \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial (Option \u03c3) k \u2192\u2090[k] MvPolynomial (Option \u03c3) k"
+  },
+  "Singularity.zShift_purelyInseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 406,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (h F : MvPolynomial \u03c3 k),\n  (Singularity.zShift h) (Singularity.purelyInseparable (p ^ e) F) =\n    Singularity.purelyInseparable (p ^ e) (F + h ^ p ^ e)"
+  },
+  "Singularity.zShift_rename": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Residual.lean",
+   "kind": "theorem",
+   "line": 400,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (h F : MvPolynomial \u03c3 k),\n  (Singularity.zShift h) ((MvPolynomial.rename some) F) = (MvPolynomial.rename some) F"
+  },
+  "Singularity.zero_mem_orthant": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Newton.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {\u03c3 : Type u_1}, 0 \u2208 Singularity.orthant \u03c3"
   }
  },
  "mathlib": "v4.35.0",

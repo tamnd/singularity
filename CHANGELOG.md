@@ -10,6 +10,8 @@ Each release has a section. The newest release is first.
 - The nodes SG0000001B and SG0000001D named Lean proofs that do not exist. They now have only the Lean statement. The status check showed them as stated before, so no status changes.
 - The new node SG00000039 is one cycle of the first example of Hauser and Perlega, certified by Singularity.Examples.hauserPerlegaCycle in tamnd/singularity-lean#49. The node SG00000017 now states the full theorem of [HP19a], with the residual order that tends to infinity. Its Lean statement is planned, because the Lean proof covers only one cycle.
 - The node SG00000018 (the example of Narasimhan) is proved by Singularity.Examples.narasimhan in tamnd/singularity-lean#50. Its statement now gives the equation and the curve.
+- The Lean records are at commit c51aa70 of tamnd/singularity-lean, with 688 declarations. The commit has the declarations of the release v0.2.15, which changes only the changelog. The nodes SG0000000K, SG00000038, SG00000039, SG00000018 and SG00000016 are proved.
+- The releases v0.2.14 and v0.2.15 of tamnd/singularity-lean.
 
 ## 0.2.13 - 2026-11-24
 
