@@ -1,0 +1,15 @@
+tag: SG00000039
+kind: example
+title: One cycle of Hauser and Perlega
+statement: Let $K$ be a field of characteristic 2. The equation $z^8 + x^4 y^4 w^6 (w^2 + x^3 u^{10})$ in the variables $x, y, u, v, w$ has residual order 2 along the divisor $xyuw = 0$. An explicit sequence of 20 point blowups, with one cleaning, keeps the order 8. After it, the equation has the starting shape with $d = 4$ in place of $d = 2$, and with $y$ and $u$ exchanged. The residual order along the divisor goes to 6, then to 5, and then to 4.
+sources:
+- paper: HP19a
+uses:
+- SG00000013
+lean:
+  statement: Singularity.Examples.hauserPerlegaCycle
+  proof: Singularity.Examples.hauserPerlegaCycle
+tier: T4
+notes: This is the cycle of [HP19a, Section 4] for $d = 2$, $a = b = r = 0$, $s = 1$, $\lambda = 1$, $A = 1$ and $Q = 0$. Singularity.Examples.cycleF7_shape proves the final shape. The Lean proof does not cover the other parameters, and it does not prove that the residual order goes to infinity when the cycle is repeated. That claim is the node SG00000017.
+route:
+- R5

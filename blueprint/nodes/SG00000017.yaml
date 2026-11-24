@@ -1,13 +1,15 @@
 tag: SG00000017
 kind: counterexample
 title: The Hauser-Perlega cycle
-statement: An explicit sequence of permissible blowups of a purely inseparable threefold that returns to the same residual order. It disproves the stability claim of Moh.
+statement: Let $K$ be an algebraically closed field of characteristic $p$. There is a purely inseparable equation $z^{p^3} + F(x_1, \dots, x_n)$ and an infinite sequence of point blowups along which the order of the strict transforms stays $p^3$ and the residual order tends to infinity. It disproves the stability theorem of Moh for $e \ge 3$.
 sources:
 - paper: HP19a
 uses:
 - SG00000013
+- SG00000039
 lean:
-  statement: Singularity.Examples.hauserPerlegaCycle
+  statement: Singularity.Examples.hauserPerlega_unbounded
 tier: T4
+notes: The Lean name of the statement is planned. Singularity.Examples.hauserPerlegaCycle certifies one cycle for one choice of the parameters (SG00000039). The iteration of the cycle is not certified.
 route:
 - R5
