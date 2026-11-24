@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The statement of SG0000001G now takes the finite set first, so that the purely inseparable extension depends on it, as in [Tem13] and in the Lean statement.
 - The new note of SG0000001N says that the theorem of Temkin holds over any field, and that the alteration is not proved to be Galois.
 - The note of SG0000000Z gives the limit augmentation of Vaquié from tamnd/singularity-lean#84.
 - The note of SG00000014 gives the case f = z^q + F with F clean, where the polyhedron is (1/q) times the Newton polyhedron of F (tamnd/singularity-lean#83).
