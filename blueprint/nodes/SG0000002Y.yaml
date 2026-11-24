@@ -1,0 +1,8 @@
+tag: SG0000002Y
+kind: theorem
+title: The dimension of a variety
+statement: Let $X$ be an integral scheme of finite type over a field $k$. Then the Krull dimension of $X$ is the transcendence degree of the function field of $X$ over $k$, and each nonempty open subset of $X$ has the same dimension.
+sources:
+- paper: Dim
+- paper: AM69
+tier: T1

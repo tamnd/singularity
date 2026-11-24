@@ -1,0 +1,7 @@
+tag: SG0000002X
+kind: theorem
+title: Zariski's Main Theorem
+statement: Let $f \colon X \to Y$ be a proper birational morphism of integral Noetherian schemes, with $Y$ normal. Then each fibre of $f$ is connected, and $f$ is an isomorphism over the set of points of $Y$ with a finite fibre.
+sources:
+- paper: ZMT
+tier: T1

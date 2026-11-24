@@ -1,0 +1,7 @@
+tag: SG0000002Z
+kind: theorem
+title: A local ring is regular if and only if its completion is regular
+statement: Let $(R, \mathfrak{m})$ be a Noetherian local ring with completion $\hat{R}$. Then $\hat{R}$ is a Noetherian local ring of the same dimension as $R$, and $R$ is regular if and only if $\hat{R}$ is regular.
+sources:
+- paper: Mat
+tier: T1

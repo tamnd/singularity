@@ -1,0 +1,8 @@
+tag: SG00000030
+kind: definition
+title: Excellent rings
+statement: A Noetherian ring $R$ is excellent if it is universally catenary, if it is a G-ring (the formal fibres of each local ring of $R$ are geometrically regular), and if it is J-2 (for each finitely generated $R$-algebra $S$, the regular locus of $\operatorname{Spec} S$ is open).
+sources:
+- paper: EGA4-7
+- paper: Mat
+tier: T1
