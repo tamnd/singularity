@@ -1,0 +1,11 @@
+tag: SG0000004R
+kind: counterexample
+title: The residual order of the log-Jacobian ideal can go up under a blowup in a regular center
+statement: Let $p = 2$, let the coordinates be $(x, y, w)$ with $E = V(w)$, let $g = y^2 w + y^3$ and let $C = V(x, y)$. Then $g$ is clean, $\widetilde\Theta(g) = (y^2)$ and $\rho = 2$, so (H1) holds. The ideal $\widetilde\Theta_C(g) = (y^2 w, x y^2, y^3)$ has order $2$ along $C$ and order $3$ at the origin, so (H2) fails. In the $x$-chart, $g' = y^2 w + x y^3$, the log-Jacobian ideal for $E' = V(x w)$ is $(y^2 w, x y^2)$, and $\rho(g') = 3$.
+uses:
+- SG0000004P
+- SG0000004Q
+tier: T2
+route:
+- R1
+notes: This is Volume 7, Example 3.4.6 of the handbook. It shows that the condition (H2) of SG0000004Q is necessary. The center is too large, because the order of $\widetilde\Theta_C(g)$ at the origin is larger than its order along $C$. A computer search over small polynomials in three variables found it. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.

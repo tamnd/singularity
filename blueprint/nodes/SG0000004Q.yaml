@@ -1,0 +1,15 @@
+tag: SG0000004Q
+kind: theorem
+title: The residual order of the log-Jacobian ideal under a blowup in a regular center
+statement: In the setting of SG0000004P, let $g \ne 0$ be clean with $g = x^r G$ as in SG0000003F, let $\rho = \operatorname{ord}_0 \widetilde\Theta(G)$, and assume (H1) $\operatorname{ord}_C \widetilde\Theta(G) = \rho$ and (H2) $\operatorname{ord}_C \widetilde\Theta_C(G) = \rho + 1$ or $\operatorname{ord}_0 \widetilde\Theta_C(G) = \rho$. Let $g'_c$ be the clean part of $g'$ for $\Delta'$. Then $g'_c \ne 0$ and $\rho(g'_c) \le \rho$.
+sources:
+- paper: Cos87
+uses:
+- SG0000003F
+- SG0000004P
+- SG0000003N
+tier: T2
+route:
+- R1
+- R5
+notes: This is Volume 7, Theorem 3.4.5 of the handbook. The proof holds for each number of variables. For $c = n$ both conditions hold, and the theorem is SG0000003N. For a base of dimension 3, Cossart gives a condition of permissibility for these centers. The statement for each dimension has no published source, and it is the candidate for the new result of the milestone S7. The node SG0000004R shows that (H1) alone is not sufficient. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.
