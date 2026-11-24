@@ -1,11 +1,264 @@
 {
  "base": {
-  "commit": "b939ac737705cfd09614216b8c5d042feef21f7f",
+  "commit": "4c43a6c07c863af11636ed95af6fed1811082d66",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "b939ac737705cfd09614216b8c5d042feef21f7f",
+ "commit": "bb9fc55009098f98ab1f6f8d27f318803e52319e",
  "decls": {
+  "Singularity.Algebra.GrMod": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 598,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 Type v"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "def",
+   "line": 51,
+   "type": "(\u2115 \u2192 \u2124) \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 191,
+   "type": "\u2200 {f g : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192\n    Singularity.Algebra.IsEventuallyPolynomial g d \u2192 Singularity.Algebra.IsEventuallyPolynomial (f + g) d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.comp_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 225,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192\n    \u2200 (k : \u2115), Singularity.Algebra.IsEventuallyPolynomial (fun n => f (n + k)) d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.congr": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 174,
+   "type": "\u2200 {f g : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, f n = g n) \u2192 Singularity.Algebra.IsEventuallyPolynomial g d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.eventually_fwdDiff_iter_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 243,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115} {P : Polynomial \u211a},\n  P.degree < \u2191(d + 1) \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(f n) = Polynomial.eval (\u2191n) P) \u2192\n      \u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191((fwdDiff 1)^[d] f n) = \u2191d.factorial * P.coeff d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.eventually_fwdDiff_iter_eq_eventualValue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f (d + 1) \u2192\n    \u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = Singularity.Algebra.eventualValue ((fwdDiff 1)^[d] f)"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d e : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192 d \u2264 e \u2192 Singularity.Algebra.IsEventuallyPolynomial f e"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.neg": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 207,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192 Singularity.Algebra.IsEventuallyPolynomial (-f) d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.smul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 199,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192 \u2200 (c : \u2124), Singularity.Algebra.IsEventuallyPolynomial (c \u2022 f) d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.sub": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {f g : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192\n    Singularity.Algebra.IsEventuallyPolynomial g d \u2192 Singularity.Algebra.IsEventuallyPolynomial (f - g) d"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.sum_range": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 233,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2192\n    Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2211 k \u2208 Finset.range n, f k) (d + 1)"
+  },
+  "Singularity.Algebra.IsEventuallyPolynomial.unique": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 79,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {P Q : Polynomial \u211a},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(f n) = Polynomial.eval (\u2191n) P) \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(f n) = Polynomial.eval (\u2191n) Q) \u2192 P = Q"
+  },
+  "Singularity.Algebra.IsGradingProj": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "inductive",
+   "line": 65,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {N : Type v} \u2192 [inst_1 : AddCommGroup N] \u2192 [inst_2 : Module R N] \u2192 (\u2115 \u2192 Submodule R N) \u2192 (\u2115 \u2192 N \u2192\u2097[R] N) \u2192 Prop"
+  },
+  "Singularity.Algebra.IsGradingProj.apply_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 110,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N},\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192\n      \u2200 (\u03bc : N \u2192\u2097[R] N), (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 \u2200 (n : \u2115) (y : N), (\u03c0 (n + 1)) (\u03bc y) = \u03bc ((\u03c0 n) y)"
+  },
+  "Singularity.Algebra.IsGradingProj.apply_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 122,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N},\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 \u2200 (\u03bc : N \u2192\u2097[R] N), (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 \u2200 (y : N), (\u03c0 0) (\u03bc y) = 0"
+  },
+  "Singularity.Algebra.IsGradingProj.eq_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 70,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N}, Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192 \u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, (\u03c0 n) y = y"
+  },
+  "Singularity.Algebra.IsGradingProj.eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N}, Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192 \u2200 (n m : \u2115), \u2200 y \u2208 \ud835\udca9 m, m \u2260 n \u2192 (\u03c0 n) y = 0"
+  },
+  "Singularity.Algebra.IsGradingProj.eq_zero_of_mem_iSup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 103,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N},\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192 \u2200 {n : \u2115} {y : N}, y \u2208 \u2a06 m, \u2a06 (_ : m \u2260 n), \ud835\udca9 m \u2192 (\u03c0 n) y = 0"
+  },
+  "Singularity.Algebra.IsGradingProj.mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N}, Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192 \u2200 (n : \u2115) (y : N), (\u03c0 n) y \u2208 \ud835\udca9 n"
+  },
+  "Singularity.Algebra.IsGradingProj.proj_mem_range": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 226,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [IsScalarTower R S N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 \u2200 (n : \u2115) (w : N), (\u03c0 n) (\u03bc w) \u2208 \u03bc.range"
+  },
+  "Singularity.Algebra.IsGradingProj.sum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 72,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N}\n  {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N},\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2200 (y : N), \u2203 D, (\u2200 (n : \u2115), D < n \u2192 (\u03c0 n) y = 0) \u2227 y = \u2211 n \u2208 Finset.range (D + 1), (\u03c0 n) y"
+  },
+  "Singularity.Algebra.adjoin_range_grGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 667,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} (hI : I = Ideal.span (Set.range x)), Algebra.adjoin R (Set.range (Singularity.Algebra.grGen M hI)) = \u22a4"
+  },
   "Singularity.Algebra.algebraMapSubmonoid_primeCompl_eq": {
    "axioms": [
     "Classical.choice",
@@ -26,6 +279,72 @@
    "kind": "theorem",
    "line": 119,
    "type": "\u2200 {A : Type u} [inst : CommRing A] (q : Ideal A) [inst_1 : q.IsPrime] (I : Ideal A) {g y : A},\n  g \u2209 q \u2192 g * y \u2208 I \u2192 (algebraMap A (Localization.AtPrime q)) y \u2208 Ideal.map (algebraMap A (Localization.AtPrime q)) I"
+  },
+  "Singularity.Algebra.cast_fwdDiff_iter_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 56,
+   "type": "\u2200 (f : \u2115 \u2192 \u2124) (g : \u211a \u2192 \u211a) {N : \u2115},\n  (\u2200 (n : \u2115), N \u2264 n \u2192 \u2191(f n) = g \u2191n) \u2192 \u2200 (d : \u2115) {n : \u2115}, N \u2264 n \u2192 \u2191((fwdDiff 1)^[d] f n) = (fwdDiff 1)^[d] g \u2191n"
+  },
+  "Singularity.Algebra.coe_powSmul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 491,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a : R}\n  (ha : a \u2208 I) (n : \u2115) (y : \u21a5(I ^ n \u2022 \u22a4)), \u2191((Singularity.Algebra.powSmul ha n) y) = a \u2022 \u2191y"
+  },
+  "Singularity.Algebra.cokerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 142,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {S : Type w} \u2192\n      [inst_1 : CommRing S] \u2192\n        [inst_2 : Algebra R S] \u2192\n          {N : Type v} \u2192\n            [inst_3 : AddCommGroup N] \u2192\n              [inst_4 : Module S N] \u2192\n                [inst_5 : Module R N] \u2192\n                  [inst_6 : IsScalarTower R S N] \u2192 (\u03bc : N \u2192\u2097[S] N) \u2192 (\u2115 \u2192 Submodule R N) \u2192 \u2115 \u2192 Submodule R (N \u29f8 \u03bc.range)"
+  },
+  "Singularity.Algebra.cokerGradingMk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 215,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {S : Type w} \u2192\n      [inst_1 : CommRing S] \u2192\n        [inst_2 : Algebra R S] \u2192\n          {N : Type v} \u2192\n            [inst_3 : AddCommGroup N] \u2192\n              [inst_4 : Module S N] \u2192\n                [inst_5 : Module R N] \u2192\n                  [inst_6 : IsScalarTower R S N] \u2192\n                    {\ud835\udca9 : \u2115 \u2192 Submodule R N} \u2192\n                      (\u03bc : N \u2192\u2097[S] N) \u2192 (n : \u2115) \u2192 \u21a5(\ud835\udca9 n) \u2192\u2097[R] \u21a5(Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 n)"
+  },
+  "Singularity.Algebra.cokerGradingMk_surjective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 219,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) (n : \u2115), Function.Surjective \u21d1(Singularity.Algebra.cokerGradingMk \u03bc n)"
+  },
+  "Singularity.Algebra.degree_lt_succ_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 153,
+   "type": "\u2200 {P : Polynomial \u211a} {d : \u2115}, P.degree < \u2191(d + 1) \u2194 P.degree \u2264 \u2191d"
   },
   "Singularity.Algebra.derivation_mem_of_mem_sq": {
    "axioms": [
@@ -49,6 +368,116 @@
    "line": 363,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 \u2200 {P : Ideal R} [hP : P.IsPrime], P \u2260 \u22a5 \u2192 P = IsLocalRing.maximalIdeal R"
   },
+  "Singularity.Algebra.eq_of_eventually_eval_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {P Q : Polynomial \u211a}, (\u2200\u1da0 (n : \u2115) in Filter.atTop, Polynomial.eval (\u2191n) P = Polynomial.eval (\u2191n) Q) \u2192 P = Q"
+  },
+  "Singularity.Algebra.eventualValue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "def",
+   "line": 261,
+   "type": "(\u2115 \u2192 \u2124) \u2192 \u2124"
+  },
+  "Singularity.Algebra.eventualValue_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 266,
+   "type": "\u2200 {g : \u2115 \u2192 \u2124} {c : \u2124}, (\u2200\u1da0 (n : \u2115) in Filter.atTop, g n = c) \u2192 Singularity.Algebra.eventualValue g = c"
+  },
+  "Singularity.Algebra.eventualValue_fwdDiff_iter_eq_coeff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115} {P : Polynomial \u211a},\n  P.natDegree \u2264 d \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(f n) = Polynomial.eval (\u2191n) P) \u2192\n      \u2191(Singularity.Algebra.eventualValue ((fwdDiff 1)^[d] f)) = \u2191d.factorial * P.coeff d"
+  },
+  "Singularity.Algebra.eventualValue_fwdDiff_iter_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 323,
+   "type": "\u2200 {f g : \u2115 \u2192 \u2124} {d : \u2115},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, f n \u2264 g n) \u2192\n    (\u2203 c, \u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = c) \u2192\n      (\u2203 c, \u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] g n = c) \u2192\n        Singularity.Algebra.eventualValue ((fwdDiff 1)^[d] f) \u2264 Singularity.Algebra.eventualValue ((fwdDiff 1)^[d] g)"
+  },
+  "Singularity.Algebra.eventualValue_fwdDiff_iter_nonneg": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 308,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, 0 \u2264 f n) \u2192\n    (\u2203 c, \u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = c) \u2192\n      0 \u2264 Singularity.Algebra.eventualValue ((fwdDiff 1)^[d] f)"
+  },
+  "Singularity.Algebra.eventually_eq_bot_of_smul_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 345,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [IsScalarTower R S N] [Module.Finite S N]\n  {r : \u2115} (x : Fin r \u2192 S),\n  Algebra.adjoin R (Set.range x) = \u22a4 \u2192\n    (\u2200 (i : Fin r) (y : N), x i \u2022 y = 0) \u2192\n      \u2200 {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N},\n        Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192 \u2200\u1da0 (n : \u2115) in Filter.atTop, \ud835\udca9 n = \u22a5"
+  },
+  "Singularity.Algebra.eventually_fwdDiff_iter_eq_samuelMultiplicity": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {d : \u2115}\n  {P : Polynomial \u211a},\n  P.natDegree \u2264 d \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n      \u2200\u1da0 (n : \u2115) in Filter.atTop,\n        (fwdDiff 1)^[d] (Singularity.Algebra.hilbertSamuelInt I M) n = \u2191(Singularity.Algebra.samuelMultiplicity I M d)"
+  },
+  "Singularity.Algebra.eventually_fwdDiff_iter_hilbertSamuelInt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 122,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  [IsNoetherianRing R] [Module.Finite R M] {r : \u2115} {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n      \u2200 {d : \u2115},\n        r \u2264 d \u2192\n          \u2200\u1da0 (n : \u2115) in Filter.atTop,\n            (fwdDiff 1)^[d] (Singularity.Algebra.hilbertSamuelInt I M) n =\n              \u2191(Singularity.Algebra.samuelMultiplicity I M d)"
+  },
+  "Singularity.Algebra.eventually_le_neg_one_of_fwdDiff_iter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 274,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} (k : \u2115), (\u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[k] f n \u2264 -1) \u2192 \u2200\u1da0 (n : \u2115) in Filter.atTop, f n \u2264 -1"
+  },
   "Singularity.Algebra.exact_smul_algebraMap_quotient": {
    "axioms": [
     "Classical.choice",
@@ -71,6 +500,17 @@
    "line": 154,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] [Module.Finite A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2203 c, c \u2260 0 \u2227 \u2200 (d : B), (algebraMap A B) c * d \u2208 A[z]"
   },
+  "Singularity.Algebra.exists_hilbertSamuel_polynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 750,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} [IsNoetherianRing R] [Module.Finite R M],\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n      \u2203 P,\n        P.natDegree \u2264 r \u2227\n          \u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P"
+  },
   "Singularity.Algebra.exists_injective_residueField_of_socle": {
    "axioms": [
     "Classical.choice",
@@ -81,6 +521,17 @@
    "kind": "theorem",
    "line": 180,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {s : R},\n  s \u2260 0 \u2192 (\u2200 a \u2208 IsLocalRing.maximalIdeal R, a * s = 0) \u2192 \u2203 j, Function.Injective \u21d1j"
+  },
+  "Singularity.Algebra.exists_isGradingProj": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 74,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {N : Type v} [inst_1 : AddCommGroup N] [inst_2 : Module R N] {\ud835\udca9 : \u2115 \u2192 Submodule R N},\n  iSupIndep \ud835\udca9 \u2192 \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 \u2203 \u03c0, Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0"
   },
   "Singularity.Algebra.exists_isRegular_ofList_eq_maximalIdeal": {
    "axioms": [
@@ -434,6 +885,235 @@
    "line": 73,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M],\n  Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) 1) \u2192 Module.Free R \u2191M"
   },
+  "Singularity.Algebra.fwdDiff_iter_eq_zero_of_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {g : \u2115 \u2192 \u2124} {d N : \u2115},\n  (\u2200 (n : \u2115), N \u2264 n \u2192 (fwdDiff 1)^[d] g n = 0) \u2192 \u2200 {k : \u2115}, d \u2264 k \u2192 \u2200 {n : \u2115}, N \u2264 n \u2192 (fwdDiff 1)^[k] g n = 0"
+  },
+  "Singularity.Algebra.fwdDiff_iter_eval_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {P : Polynomial \u211a} {d : \u2115}, P.degree < \u2191d \u2192 ((fwdDiff 1)^[d] fun x => Polynomial.eval x P) = 0"
+  },
+  "Singularity.Algebra.fwdDiff_iter_sub": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 317,
+   "type": "\u2200 (f g : \u2115 \u2192 \u2124) (d : \u2115), (fwdDiff 1)^[d] (f - g) = (fwdDiff 1)^[d] f - (fwdDiff 1)^[d] g"
+  },
+  "Singularity.Algebra.grAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 640,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      (M : Type v) \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192\n            {r : \u2115} \u2192\n              {x : Fin r \u2192 R} \u2192\n                I = Ideal.span (Set.range x) \u2192 Subalgebra R (Module.End R (Singularity.Algebra.GrMod I M))"
+  },
+  "Singularity.Algebra.grGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 658,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      (M : Type v) \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192\n            {r : \u2115} \u2192\n              {x : Fin r \u2192 R} \u2192 (hI : I = Ideal.span (Set.range x)) \u2192 Fin r \u2192 \u21a5(Singularity.Algebra.grAlgebra M hI)"
+  },
+  "Singularity.Algebra.grGen_smul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 662,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} (hI : I = Ideal.span (Set.range x)) (i : Fin r) (z : Singularity.Algebra.GrMod I M),\n  Singularity.Algebra.grGen M hI i \u2022 z = (Singularity.Algebra.grShift \u22ef) z"
+  },
+  "Singularity.Algebra.grMk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 471,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    (I : Ideal R) \u2192\n      (M : Type v) \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192 (n : \u2115) \u2192 \u21a5(I ^ n \u2022 \u22a4) \u2192\u2097[R] Singularity.Algebra.grPiece I M n"
+  },
+  "Singularity.Algebra.grMk_surjective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 474,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] (n : \u2115),\n  Function.Surjective \u21d1(Singularity.Algebra.grMk I M n)"
+  },
+  "Singularity.Algebra.grMul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 496,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {M : Type v} \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192\n            {a : R} \u2192 a \u2208 I \u2192 (n : \u2115) \u2192 Singularity.Algebra.grPiece I M n \u2192\u2097[R] Singularity.Algebra.grPiece I M (n + 1)"
+  },
+  "Singularity.Algebra.grMul.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {a a_1 : R} (e_a : a = a_1) (ha : a \u2208 I) (n : \u2115), Singularity.Algebra.grMul ha n = Singularity.Algebra.grMul \u22ef n"
+  },
+  "Singularity.Algebra.grMulSum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 521,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {M : Type v} \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192\n            {r : \u2115} \u2192\n              {x : Fin r \u2192 R} \u2192\n                I = Ideal.span (Set.range x) \u2192\n                  (n : \u2115) \u2192 (Fin r \u2192 Singularity.Algebra.grPiece I M n) \u2192\u2097[R] Singularity.Algebra.grPiece I M (n + 1)"
+  },
+  "Singularity.Algebra.grMulSum_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 526,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} (hI : I = Ideal.span (Set.range x)) (n : \u2115) (f : Fin r \u2192 Singularity.Algebra.grPiece I M n),\n  (Singularity.Algebra.grMulSum hI n) f = \u2211 i, (Singularity.Algebra.grMul \u22ef n) (f i)"
+  },
+  "Singularity.Algebra.grMulSum_surjective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 531,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} (hI : I = Ideal.span (Set.range x)) (n : \u2115), Function.Surjective \u21d1(Singularity.Algebra.grMulSum hI n)"
+  },
+  "Singularity.Algebra.grMul_comm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 507,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a b : R}\n  (ha : a \u2208 I) (hb : b \u2208 I) (n : \u2115) (z : Singularity.Algebra.grPiece I M n),\n  (Singularity.Algebra.grMul ha (n + 1)) ((Singularity.Algebra.grMul hb n) z) =\n    (Singularity.Algebra.grMul hb (n + 1)) ((Singularity.Algebra.grMul ha n) z)"
+  },
+  "Singularity.Algebra.grMul_mk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 502,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a : R}\n  (ha : a \u2208 I) (n : \u2115) (y : \u21a5(I ^ n \u2022 \u22a4)),\n  (Singularity.Algebra.grMul ha n) ((Singularity.Algebra.grMk I M n) y) =\n    (Singularity.Algebra.grMk I M (n + 1)) ((Singularity.Algebra.powSmul ha n) y)"
+  },
+  "Singularity.Algebra.grPiece": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 460,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 \u2115 \u2192 Type v"
+  },
+  "Singularity.Algebra.grShift": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 601,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {M : Type v} \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192 {a : R} \u2192 a \u2208 I \u2192 Module.End R (Singularity.Algebra.GrMod I M)"
+  },
+  "Singularity.Algebra.grShift_commute": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 611,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a b : R}\n  (ha : a \u2208 I) (hb : b \u2208 I),\n  Singularity.Algebra.grShift ha * Singularity.Algebra.grShift hb =\n    Singularity.Algebra.grShift hb * Singularity.Algebra.grShift ha"
+  },
+  "Singularity.Algebra.grShift_lof": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 605,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a : R}\n  (ha : a \u2208 I) (n : \u2115) (z : Singularity.Algebra.grPiece I M n),\n  (Singularity.Algebra.grShift ha) ((DirectSum.lof R \u2115 (Singularity.Algebra.grPiece I M) n) z) =\n    (DirectSum.lof R \u2115 (Singularity.Algebra.grPiece I M) (n + 1)) ((Singularity.Algebra.grMul ha n) z)"
+  },
+  "Singularity.Algebra.gradedMap": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 195,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {S : Type w} \u2192\n      [inst_1 : CommRing S] \u2192\n        [inst_2 : Algebra R S] \u2192\n          {N : Type v} \u2192\n            [inst_3 : AddCommGroup N] \u2192\n              [inst_4 : Module S N] \u2192\n                [inst_5 : Module R N] \u2192\n                  [IsScalarTower R S N] \u2192\n                    {\ud835\udca9 : \u2115 \u2192 Submodule R N} \u2192\n                      (\u03bc : N \u2192\u2097[S] N) \u2192 (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 (n : \u2115) \u2192 \u21a5(\ud835\udca9 n) \u2192\u2097[R] \u21a5(\ud835\udca9 (n + 1))"
+  },
+  "Singularity.Algebra.gradedMap.congr_simp": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc \u03bc_1 : N \u2192\u2097[S] N) (e_\u03bc : \u03bc = \u03bc_1) (h\u03bc : \u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) (n : \u2115),\n  Singularity.Algebra.gradedMap \u03bc h\u03bc n = Singularity.Algebra.gradedMap \u03bc_1 \u22ef n"
+  },
   "Singularity.Algebra.hasProjectiveDimensionLT_baseChange_quotient": {
    "axioms": [
     "Classical.choice",
@@ -522,6 +1202,17 @@
    "line": 86,
    "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 \u2115 \u2192 \u2115\u221e"
   },
+  "Singularity.Algebra.hilbertSamuelInt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "def",
+   "line": 90,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 \u2115 \u2192 \u2124"
+  },
   "Singularity.Algebra.hilbertSamuel_anti": {
    "axioms": [
     "Classical.choice",
@@ -532,6 +1223,17 @@
    "kind": "theorem",
    "line": 106,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {J : Ideal R}, I \u2264 J \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel J M n \u2264 Singularity.Algebra.hilbertSamuel I M n"
+  },
+  "Singularity.Algebra.hilbertSamuel_eq_sum_length": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 562,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] (n : \u2115),\n  Singularity.Algebra.hilbertSamuel I M n = \u2211 k \u2208 Finset.range n, Module.length R (Singularity.Algebra.grPiece I M k)"
   },
   "Singularity.Algebra.hilbertSamuel_le_of_pow_le": {
    "axioms": [
@@ -577,6 +1279,17 @@
    "line": 126,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] [IsNoetherianRing R]\n  [Module.Finite R M] (m : Ideal R) [m.IsMaximal] (n : \u2115), Singularity.Algebra.hilbertSamuel m M n \u2260 \u22a4"
   },
+  "Singularity.Algebra.hilbertSamuel_ne_top_of_length_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 589,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel I M n \u2260 \u22a4"
+  },
   "Singularity.Algebra.hilbertSamuel_self_one": {
    "axioms": [
     "Classical.choice",
@@ -610,6 +1323,94 @@
    "line": 90,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M],\n  Singularity.Algebra.hilbertSamuel I M 0 = 0"
   },
+  "Singularity.Algebra.iSupIndep_cokerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 266,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 iSupIndep (Singularity.Algebra.cokerGrading \u03bc \ud835\udca9)"
+  },
+  "Singularity.Algebra.iSupIndep_kerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 149,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N), iSupIndep \ud835\udca9 \u2192 iSupIndep (Singularity.Algebra.kerGrading \u03bc \ud835\udca9)"
+  },
+  "Singularity.Algebra.iSupIndep_range_lof": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 618,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M],\n  iSupIndep fun n => (DirectSum.lof R \u2115 (Singularity.Algebra.grPiece I M) n).range"
+  },
+  "Singularity.Algebra.iSup_cokerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 288,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N), \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 \u2a06 n, Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 n = \u22a4"
+  },
+  "Singularity.Algebra.iSup_kerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 \u2a06 n, Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n = \u22a4"
+  },
+  "Singularity.Algebra.instAddCommGroupGrPiece": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 467,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    (I : Ideal R) \u2192\n      (M : Type v) \u2192\n        [inst_1 : AddCommGroup M] \u2192 [inst_2 : Module R M] \u2192 (n : \u2115) \u2192 AddCommGroup (Singularity.Algebra.grPiece I M n)"
+  },
+  "Singularity.Algebra.instCommRingSubtypeEndGrModMemSubalgebraGrAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 651,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {M : Type v} \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192\n            {r : \u2115} \u2192\n              {x : Fin r \u2192 R} \u2192 (hI : I = Ideal.span (Set.range x)) \u2192 CommRing \u21a5(Singularity.Algebra.grAlgebra M hI)"
+  },
+  "Singularity.Algebra.instModuleGrPiece": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 469,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    (I : Ideal R) \u2192\n      (M : Type v) \u2192\n        [inst_1 : AddCommGroup M] \u2192 [inst_2 : Module R M] \u2192 (n : \u2115) \u2192 Module R (Singularity.Algebra.grPiece I M n)"
+  },
   "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
    "axioms": [
     "Classical.choice",
@@ -631,6 +1432,127 @@
    "kind": "theorem",
    "line": 298,
    "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R = \u2191n \u2192 IsDomain R"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_const": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 186,
+   "type": "\u2200 (c : \u2124), Singularity.Algebra.IsEventuallyPolynomial (fun x => c) 1"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_fwdDiff_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 218,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial (fwdDiff 1 f) d \u2194 Singularity.Algebra.IsEventuallyPolynomial f (d + 1)"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_hilbertSamuel": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 719,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} [IsNoetherianRing R] [Module.Finite R M],\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n      Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat) (r + 1)"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_hilbertSamuel_of_span": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 760,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  [IsNoetherianRing R] [Module.Finite R M] (s : Finset R),\n  I = Ideal.span \u2191s \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n      Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat)\n        (s.card + 1)"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_iff_fwdDiff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 141,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f d \u2194 \u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = 0"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_length_aux": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 391,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {r : \u2115} (x : Fin r \u2192 S),\n  Algebra.adjoin R (Set.range x) = \u22a4 \u2192\n    \u2200 (s : \u2115) (N : Type v) [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [IsScalarTower R S N]\n      [IsNoetherian S N] (\ud835\udca9 : \u2115 \u2192 Submodule R N),\n      iSupIndep \ud835\udca9 \u2192\n        \u2a06 n, \ud835\udca9 n = \u22a4 \u2192\n          (\u2200 (i : Fin r) (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, x i \u2022 y \u2208 \ud835\udca9 (n + 1)) \u2192\n            (\u2200 (n : \u2115), Module.length R \u21a5(\ud835\udca9 n) \u2260 \u22a4) \u2192\n              (\u2200 (i : Fin r), s \u2264 \u2191i \u2192 \u2200 (y : N), x i \u2022 y = 0) \u2192\n                Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2191(Module.length R \u21a5(\ud835\udca9 n)).toNat) s"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_length_of_grading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 441,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [IsScalarTower R S N] [IsNoetherian S N] {r : \u2115}\n  (x : Fin r \u2192 S),\n  Algebra.adjoin R (Set.range x) = \u22a4 \u2192\n    \u2200 (\ud835\udca9 : \u2115 \u2192 Submodule R N),\n      iSupIndep \ud835\udca9 \u2192\n        \u2a06 n, \ud835\udca9 n = \u22a4 \u2192\n          (\u2200 (i : Fin r) (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, x i \u2022 y \u2208 \ud835\udca9 (n + 1)) \u2192\n            (\u2200 (n : \u2115), Module.length R \u21a5(\ud835\udca9 n) \u2260 \u22a4) \u2192\n              Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2191(Module.length R \u21a5(\ud835\udca9 n)).toNat) r"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_of_eventually_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115}, (\u2200\u1da0 (n : \u2115) in Filter.atTop, f n = 0) \u2192 Singularity.Algebra.IsEventuallyPolynomial f d"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_of_fwdDiff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = 0) \u2192 Singularity.Algebra.IsEventuallyPolynomial f d"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_of_ker_coker": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 313,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192\n      (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192\n        (\u2200 (n : \u2115), Module.length R \u21a5(\ud835\udca9 n) \u2260 \u22a4) \u2192\n          \u2200 {s : \u2115},\n            Singularity.Algebra.IsEventuallyPolynomial\n                (fun n => \u2191(Module.length R \u21a5(Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n)).toNat) s \u2192\n              Singularity.Algebra.IsEventuallyPolynomial\n                  (fun n => \u2191(Module.length R \u21a5(Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 n)).toNat) s \u2192\n                Singularity.Algebra.IsEventuallyPolynomial (fun n => \u2191(Module.length R \u21a5(\ud835\udca9 n)).toNat) (s + 1)"
+  },
+  "Singularity.Algebra.isEventuallyPolynomial_succ_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 160,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115},\n  Singularity.Algebra.IsEventuallyPolynomial f (d + 1) \u2194\n    \u2203 P, P.natDegree \u2264 d \u2227 \u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(f n) = Polynomial.eval (\u2191n) P"
   },
   "Singularity.Algebra.isIntegrallyClosed_of_isLocalization_away": {
    "axioms": [
@@ -697,6 +1619,17 @@
    "kind": "theorem",
    "line": 68,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (p : Ideal R) [inst_1 : p.IsPrime],\n  IsLocalization (Algebra.algebraMapSubmonoid (R \u29f8 p) p.primeCompl) p.ResidueField"
+  },
+  "Singularity.Algebra.isMulCommutative_grAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 644,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} (hI : I = Ideal.span (Set.range x)), IsMulCommutative \u21a5(Singularity.Algebra.grAlgebra M hI)"
   },
   "Singularity.Algebra.isOpen_of_stableUnderGeneralization": {
    "axioms": [
@@ -852,6 +1785,36 @@
    "line": 67,
    "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsNoetherianRing A]\n  (D : Derivation k A A) (q : Ideal A) [inst_4 : q.IsPrime] [IsRegularLocalRing (Localization.AtPrime q)] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) (Ideal.span {F}))"
   },
+  "Singularity.Algebra.kerGrading": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 137,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {S : Type w} \u2192\n      [inst_1 : CommRing S] \u2192\n        [inst_2 : Algebra R S] \u2192\n          {N : Type v} \u2192\n            [inst_3 : AddCommGroup N] \u2192\n              [inst_4 : Module S N] \u2192\n                [inst_5 : Module R N] \u2192\n                  [inst_6 : IsScalarTower R S N] \u2192 (\u03bc : N \u2192\u2097[S] N) \u2192 (\u2115 \u2192 Submodule R N) \u2192 \u2115 \u2192 Submodule R \u21a5\u03bc.ker"
+  },
+  "Singularity.Algebra.kerGradingIncl": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 184,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {S : Type w} \u2192\n      [inst_1 : CommRing S] \u2192\n        [inst_2 : Algebra R S] \u2192\n          {N : Type v} \u2192\n            [inst_3 : AddCommGroup N] \u2192\n              [inst_4 : Module S N] \u2192\n                [inst_5 : Module R N] \u2192\n                  [inst_6 : IsScalarTower R S N] \u2192\n                    {\ud835\udca9 : \u2115 \u2192 Submodule R N} \u2192\n                      (\u03bc : N \u2192\u2097[S] N) \u2192 (n : \u2115) \u2192 \u21a5(Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n) \u2192\u2097[R] \u21a5(\ud835\udca9 n)"
+  },
+  "Singularity.Algebra.kerGradingIncl_injective": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 188,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) (n : \u2115), Function.Injective \u21d1(Singularity.Algebra.kerGradingIncl \u03bc n)"
+  },
   "Singularity.Algebra.lTensor_injective_of_isSMulRegular": {
    "axioms": [
     "Classical.choice",
@@ -907,6 +1870,50 @@
    "line": 170,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {f : R} {n : \u2115}, f \u2208 I ^ n \u2192 \u2191n \u2264 Singularity.Algebra.order I f"
   },
+  "Singularity.Algebra.length_cokerGrading_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 308,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N),\n  (\u2200 (n : \u2115), Module.length R \u21a5(\ud835\udca9 n) \u2260 \u22a4) \u2192 \u2200 (n : \u2115), Module.length R \u21a5(Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 n) \u2260 \u22a4"
+  },
+  "Singularity.Algebra.length_eq_kerGrading_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 199,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) (h\u03bc : \u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) (n : \u2115),\n  Module.length R \u21a5(\ud835\udca9 n) =\n    Module.length R \u21a5(Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n) +\n      Module.length R \u21a5(Singularity.Algebra.gradedMap \u03bc h\u03bc n).range"
+  },
+  "Singularity.Algebra.length_grPiece_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 572,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192 \u2200 (n : \u2115), Module.length R (Singularity.Algebra.grPiece I M n) \u2260 \u22a4"
+  },
+  "Singularity.Algebra.length_kerGrading_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 303,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N),\n  (\u2200 (n : \u2115), Module.length R \u21a5(\ud835\udca9 n) \u2260 \u22a4) \u2192 \u2200 (n : \u2115), Module.length R \u21a5(Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n) \u2260 \u22a4"
+  },
   "Singularity.Algebra.length_ne_top_of_smul_eq_bot": {
    "axioms": [
     "Classical.choice",
@@ -928,6 +1935,17 @@
    "kind": "theorem",
    "line": 37,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {N P : Submodule R M},\n  N \u2264 P \u2192 Module.length R (M \u29f8 N) = Module.length R (\u21a5P \u29f8 Submodule.comap P.subtype N) + Module.length R (M \u29f8 P)"
+  },
+  "Singularity.Algebra.length_succ_eq_add_cokerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192\n      \u2200 (h\u03bc : \u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) (n : \u2115),\n        Module.length R \u21a5(\ud835\udca9 (n + 1)) =\n          Module.length R \u21a5(Singularity.Algebra.gradedMap \u03bc h\u03bc n).range +\n            Module.length R \u21a5(Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 (n + 1))"
   },
   "Singularity.Algebra.localizationQuotientEquiv": {
    "axioms": [
@@ -962,6 +1980,16 @@
    "line": 84,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R \u29f8 I)],\n  IsLocalRing.maximalIdeal (R \u29f8 I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)"
   },
+  "Singularity.Algebra.mem_of_eq_span": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 515,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {r : \u2115} {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192 \u2200 (i : Fin r), x i \u2208 I"
+  },
   "Singularity.Algebra.mem_regularLocus": {
    "axioms": [
     "Classical.choice",
@@ -994,6 +2022,28 @@
    "kind": "theorem",
    "line": 52,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (e : R \u2243+* S) (p : PrimeSpectrum S),\n  { asIdeal := Ideal.comap e p.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n    p \u2208 Singularity.Algebra.regularLocus S"
+  },
+  "Singularity.Algebra.module_finite_grAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 684,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R} [IsNoetherianRing R] [Module.Finite R M] (hI : I = Ideal.span (Set.range x)),\n  Module.Finite (\u21a5(Singularity.Algebra.grAlgebra M hI)) (Singularity.Algebra.GrMod I M)"
+  },
+  "Singularity.Algebra.nonneg_of_eventually_fwdDiff_iter_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/FiniteDifference.lean",
+   "kind": "theorem",
+   "line": 299,
+   "type": "\u2200 {f : \u2115 \u2192 \u2124} {d : \u2115} {c : \u2124},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, 0 \u2264 f n) \u2192 (\u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] f n = c) \u2192 0 \u2264 c"
   },
   "Singularity.Algebra.notMem_maximalIdeal_sq_of_derivation": {
    "axioms": [
@@ -1138,6 +2188,28 @@
    "line": 185,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R}, Singularity.Algebra.order I 0 = \u22a4"
   },
+  "Singularity.Algebra.powSmul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "def",
+   "line": 486,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {M : Type v} \u2192\n        [inst_1 : AddCommGroup M] \u2192\n          [inst_2 : Module R M] \u2192 {a : R} \u2192 a \u2208 I \u2192 (n : \u2115) \u2192 \u21a5(I ^ n \u2022 \u22a4) \u2192\u2097[R] \u21a5(I ^ (n + 1) \u2022 \u22a4)"
+  },
+  "Singularity.Algebra.powSmul.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {a a_1 : R} (e_a : a = a_1) (ha : a \u2208 I) (n : \u2115), Singularity.Algebra.powSmul ha n = Singularity.Algebra.powSmul \u22ef n"
+  },
   "Singularity.Algebra.projectiveDimension_le_iff_subsingleton_ext": {
    "axioms": [
     "Classical.choice",
@@ -1247,6 +2319,137 @@
    "kind": "theorem",
    "line": 64,
    "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A], StableUnderGeneralization (Singularity.Algebra.regularLocus A)"
+  },
+  "Singularity.Algebra.samuelMultiplicity": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "def",
+   "line": 95,
+   "type": "{R : Type u} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (M : Type v) \u2192 [inst_1 : AddCommGroup M] \u2192 [Module R M] \u2192 \u2115 \u2192 \u2115"
+  },
+  "Singularity.Algebra.samuelMultiplicity_anti": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 190,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  [IsNoetherianRing R] [Module.Finite R M] {J : Ideal R},\n  I \u2264 J \u2192\n    \u2200 {r s : \u2115} {x : Fin r \u2192 R} {z : Fin s \u2192 R},\n      I = Ideal.span (Set.range x) \u2192\n        J = Ideal.span (Set.range z) \u2192\n          Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n            \u2200 {d : \u2115},\n              r \u2264 d \u2192\n                s \u2264 d \u2192 Singularity.Algebra.samuelMultiplicity J M d \u2264 Singularity.Algebra.samuelMultiplicity I M d"
+  },
+  "Singularity.Algebra.samuelMultiplicity_dvr": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 222,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : IsDiscreteValuationRing R],\n  Singularity.Algebra.samuelMultiplicity (IsLocalRing.maximalIdeal R) R 1 = 1"
+  },
+  "Singularity.Algebra.samuelMultiplicity_eq_coeff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {d : \u2115}\n  {P : Polynomial \u211a},\n  P.natDegree \u2264 d \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n      \u2191(Singularity.Algebra.samuelMultiplicity I M d) = \u2191d.factorial * P.coeff d"
+  },
+  "Singularity.Algebra.samuelMultiplicity_eq_of_eventually": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {d c : \u2115},\n  (\u2200\u1da0 (n : \u2115) in Filter.atTop, (fwdDiff 1)^[d] (Singularity.Algebra.hilbertSamuelInt I M) n = \u2191c) \u2192\n    Singularity.Algebra.samuelMultiplicity I M d = c"
+  },
+  "Singularity.Algebra.samuelMultiplicity_eq_zero_of_natDegree_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 144,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {d : \u2115}\n  {P : Polynomial \u211a},\n  P.natDegree < d \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n      Singularity.Algebra.samuelMultiplicity I M d = 0"
+  },
+  "Singularity.Algebra.samuelMultiplicity_field": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 (K : Type u) [inst : Field K], Singularity.Algebra.samuelMultiplicity (IsLocalRing.maximalIdeal K) K 0 = 1"
+  },
+  "Singularity.Algebra.samuelMultiplicity_pos": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 165,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  [inst_3 : IsLocalRing R] [Module.Finite R M] [Nontrivial M] {r : \u2115} {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192\n    I \u2264 IsLocalRing.maximalIdeal R \u2192\n      Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192\n        \u2200 {P : Polynomial \u211a},\n          (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n            0 < Singularity.Algebra.samuelMultiplicity I M P.natDegree"
+  },
+  "Singularity.Algebra.samuelMultiplicity_pos_of_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/Multiplicity.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {P : Polynomial \u211a},\n  P \u2260 0 \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n      0 < Singularity.Algebra.samuelMultiplicity I M P.natDegree"
+  },
+  "Singularity.Algebra.smul_mem_cokerGrading": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 296,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) {t : S},\n  (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, t \u2022 y \u2208 \ud835\udca9 (n + 1)) \u2192\n    \u2200 (n : \u2115), \u2200 c \u2208 Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 n, t \u2022 c \u2208 Singularity.Algebra.cokerGrading \u03bc \ud835\udca9 (n + 1)"
+  },
+  "Singularity.Algebra.smul_mem_kerGrading": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 179,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) {t : S},\n  (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, t \u2022 y \u2208 \ud835\udca9 (n + 1)) \u2192\n    \u2200 (n : \u2115), \u2200 y \u2208 Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n, t \u2022 y \u2208 Singularity.Algebra.kerGrading \u03bc \ud835\udca9 (n + 1)"
+  },
+  "Singularity.Algebra.smul_mem_pow_smul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/HilbertSerre.lean",
+   "kind": "theorem",
+   "line": 480,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a : R},\n  a \u2208 I \u2192 \u2200 {n : \u2115} {y : M}, y \u2208 I ^ n \u2022 \u22a4 \u2192 a \u2022 y \u2208 I ^ (n + 1) \u2022 \u22a4"
   },
   "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one": {
    "axioms": [
