@@ -10,6 +10,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- `site/handbook.md` links to edition 0.4.7 of the handbook, which adds Volume 6 on threefolds.
 - `records/lean.json` has the record of tamnd/singularity-lean at commit 16a5c93, with 1079 declarations. The new proofs are the characteristic polyhedron (tamnd/singularity-lean#76) and the chain of MacLane (tamnd/singularity-lean#77).
 - SG00000015 now has a Lean proof, `Singularity.moh_bound_holds` (tamnd/singularity-lean#78), for point blowups. The note no longer says that the statement may need a hypothesis on the coordinates. The route report gives the new status of R5 and the next targets.
 - The note of SG0000000Z gives the chain of MacLane and part 4 of the theorem of MacLane-Vaquié for a valuation with discrete values (tamnd/singularity-lean#77). It also says that a nonzero support alone does not make the chain finite.
