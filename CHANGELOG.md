@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.8 - 2026-11-25
+
 ### Changed
 
 - The records are now at tamnd/singularity-lean@93c16b9, with 1163 declarations. They now have the Lean names of tamnd/singularity-lean#78, #80 and #81. The trust record has no nonstandard axiom.
