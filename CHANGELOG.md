@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000000X (the Zariski-Riemann space is quasi-compact) has the Lean proof Singularity.ZariskiRiemann.compactSpace of tamnd/singularity-lean#64.
+- records/lean.json records the Lean build at commit 315082e, with 858 declarations.
 - The node SG0000000Y (the Abhyankar inequality) has the Lean proof Singularity.abhyankar_inequality of tamnd/singularity-lean#63. Its notes name the relative form.
 - records/lean.json records the Lean build at commit 3826806, with 836 declarations.
 - The handbook page links to the handbook edition 0.4.2. Volume 4 of this edition gives the Lean statement of embedded resolution.
