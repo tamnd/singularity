@@ -4,6 +4,9 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000003D (the blowup of a regular curve on a regular surface is an isomorphism) is new. It is proved by Singularity.Algebra.bijective_algebraMap_idealBlowupChart_of_isRegularLocalRing_quotient of tamnd/singularity-lean#57.
+- records/lean.json records the Lean build at commit ad6063d, with 778 declarations.
+
 ## 0.3.1 - 2026-11-24
 
 - The node SG0000003B (the points of the same order lie in the directrix) has the Lean statement and proof Singularity.mem_directrix_of_ord_pointChart_eq of tamnd/singularity-lean#55.

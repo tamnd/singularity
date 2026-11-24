@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "bc7fa0da94386eb949c53565572d10f7e69f72eb",
+  "commit": "ad6063d4c110acc83e949f12976c4efb28607dcc",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "bc7fa0da94386eb949c53565572d10f7e69f72eb",
+ "commit": "ad6063d4c110acc83e949f12976c4efb28607dcc",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -324,6 +324,39 @@
    "line": 86,
    "type": "\u2200 {D S : Type u} [inst : CommRing D] [IsNoetherianRing D] [inst_2 : CommRing S] [inst_3 : Algebra D S] [Module.Flat D S]\n  [Algebra.IsIntegral D S],\n  Function.Injective \u21d1(algebraMap D S) \u2192\n    \u2200 {c : D} {g : S},\n      g \u2223 (algebraMap D S) c \u2192\n        \u2191(PrimeSpectrum.basicOpen g) \u2286 Singularity.Algebra.regularLocus S \u2192\n          \u2191(PrimeSpectrum.basicOpen c) \u2286 Singularity.Algebra.regularLocus D"
   },
+  "Singularity.Algebra.bijective_algebraMap_idealBlowupChart_of_eq_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 216,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {x : R},\n  I = Ideal.span {x} \u2192\n    x \u2208 nonZeroDivisors R \u2192 Function.Bijective \u21d1(algebraMap R \u21a5(Singularity.Algebra.idealBlowupChart R I x))"
+  },
+  "Singularity.Algebra.bijective_algebraMap_idealBlowupChart_of_isRegularLocalRing_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n  ringKrullDim (R \u29f8 P) + 1 = ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R,\n      x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227\n        P = Ideal.span {x} \u2227\n          x \u2208 nonZeroDivisors R \u2227 Function.Bijective \u21d1(algebraMap R \u21a5(Singularity.Algebra.idealBlowupChart R P x))"
+  },
+  "Singularity.Algebra.bijective_algebraMap_idealBlowupChart_of_ringKrullDim_eq_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 259,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  ringKrullDim R = 2 \u2192\n    \u2200 (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n      ringKrullDim (R \u29f8 P) = 1 \u2192\n        \u2203 x \u2208 IsLocalRing.maximalIdeal R,\n          x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227\n            P = Ideal.span {x} \u2227\n              x \u2208 nonZeroDivisors R \u2227 Function.Bijective \u21d1(algebraMap R \u21a5(Singularity.Algebra.idealBlowupChart R P x))"
+  },
   "Singularity.Algebra.blowupChart": {
    "axioms": [
     "Classical.choice",
@@ -389,6 +422,17 @@
    "kind": "def",
    "line": 524,
    "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    [inst_1 : IsRegularLocalRing R] \u2192\n      {d : \u2115} \u2192\n        (x : R) \u2192\n          {y : Fin d \u2192 R} \u2192\n            (\u2200 (i : Fin d), y i \u2208 IsLocalRing.maximalIdeal R) \u2192\n              MvPolynomial (Fin d) R \u2192+*\n                \u21a5(Singularity.Algebra.blowupChart R x) \u29f8\n                  Ideal.span {(algebraMap R \u21a5(Singularity.Algebra.blowupChart R x)) x}"
+  },
+  "Singularity.Algebra.blowupChart_eq_idealBlowupChart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 197,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (x : R),\n  Singularity.Algebra.blowupChart R x = Singularity.Algebra.idealBlowupChart R (IsLocalRing.maximalIdeal R) x"
   },
   "Singularity.Algebra.cast_fwdDiff_iter_eq": {
    "axioms": [
@@ -664,6 +708,28 @@
    "kind": "theorem",
    "line": 160,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] [Module.Finite A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2203 c, c \u2260 0 \u2227 \u2200 (d : B), (algebraMap A B) c * d \u2208 A[z]"
+  },
+  "Singularity.Algebra.exists_eq_span_singleton_of_isRegularLocalRing_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 121,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n  ringKrullDim (R \u29f8 P) + 1 = ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 P = Ideal.span {x}"
+  },
+  "Singularity.Algebra.exists_eq_span_singleton_of_ringKrullDim_eq_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 178,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R],\n  ringKrullDim R = 2 \u2192\n    \u2200 (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n      ringKrullDim (R \u29f8 P) = 1 \u2192\n        \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 P = Ideal.span {x}"
   },
   "Singularity.Algebra.exists_fin_cons_span_eq_maximalIdeal": {
    "axioms": [
@@ -1750,6 +1816,39 @@
    "kind": "theorem",
    "line": 161,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} {\u03c0 : \u2115 \u2192 N \u2192\u2097[R] N} (\u03bc : N \u2192\u2097[S] N),\n  Singularity.Algebra.IsGradingProj \ud835\udca9 \u03c0 \u2192\n    \u2a06 n, \ud835\udca9 n = \u22a4 \u2192 (\u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) \u2192 \u2a06 n, Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n = \u22a4"
+  },
+  "Singularity.Algebra.idealBlowupChart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "def",
+   "line": 190,
+   "type": "(R : Type u) \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 (x : R) \u2192 Subalgebra R (Localization.Away x)"
+  },
+  "Singularity.Algebra.idealBlowupChartEquivOfEqSpanSingleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "def",
+   "line": 230,
+   "type": "{R : Type u} \u2192\n  [inst : CommRing R] \u2192\n    {I : Ideal R} \u2192\n      {x : R} \u2192 I = Ideal.span {x} \u2192 x \u2208 nonZeroDivisors R \u2192 R \u2243\u2090[R] \u21a5(Singularity.Algebra.idealBlowupChart R I x)"
+  },
+  "Singularity.Algebra.idealBlowupChart_eq_bot_of_eq_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {x : R},\n  I = Ideal.span {x} \u2192 Singularity.Algebra.idealBlowupChart R I x = \u22a5"
   },
   "Singularity.Algebra.instAddCommGroupGrPiece": {
    "axioms": [
@@ -3186,6 +3285,17 @@
    "kind": "theorem",
    "line": 480,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {a : R},\n  a \u2208 I \u2192 \u2200 {n : \u2115} {y : M}, y \u2208 I ^ n \u2022 \u22a4 \u2192 a \u2022 y \u2208 I ^ (n + 1) \u2022 \u22a4"
+  },
+  "Singularity.Algebra.spanFinrank_maximalIdeal_le_of_le_sq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/CurveOnSurface.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {I : Ideal R}\n  [inst_3 : IsLocalRing (R \u29f8 I)],\n  I \u2264 IsLocalRing.maximalIdeal R ^ 2 \u2192\n    Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2264 Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 I))"
   },
   "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one": {
    "axioms": [
