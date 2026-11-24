@@ -10,6 +10,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- A review of Volumes 1 and 4 of the handbook found four nodes that did not agree with the library. SG0000002H and SG0000000Q said that a result is not in Lean, but SG0000002M and SG00000032 prove it. SG00000034 did not give the condition $d \ge \max(r, s)$ of the monotony law. The note of SG0000001C did not give the condition on the open $U$ correctly.
 - SG00000014 now names the Lean definition that exists, `Singularity.charPolyhedron` (tamnd/singularity-lean#76). The earlier name `Singularity.characteristicPolyhedron` did not exist. A note gives what the library proves about the polyhedron and what it does not prove.
 - The new site page `site/route-report.md` is the route report of milestone S7. For each route R1 to R9 it gives the idea, the nodes with their Lean status, the literature, the negative results and the smallest next node in Lean, and it ranks the routes by the next feasible step. The routes page links to it.
 - `records/lean.json` has the record of tamnd/singularity-lean at commit 80e2938, with 998 declarations. The new proof is the step of part 4 of the theorem of MacLane-Vaquié (tamnd/singularity-lean#75).

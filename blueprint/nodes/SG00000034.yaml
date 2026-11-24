@@ -1,7 +1,7 @@
 tag: SG00000034
 kind: theorem
 title: The laws of the multiplicity
-statement: Let $(R, \mathfrak{m})$ be a Noetherian local ring, let $M \neq 0$ be a finite module and let $I \subseteq \mathfrak{m}$ be an ideal with $M/IM$ of finite length. Then $e_d(I, M)$ is positive when $d$ is the degree of the Hilbert-Samuel polynomial, and it is $0$ for larger $d$. If $I \subseteq J$, then $e_d(J, M) \le e_d(I, M)$. A field and a discrete valuation ring have multiplicity $1$.
+statement: Let $(R, \mathfrak{m})$ be a Noetherian local ring, let $M \neq 0$ be a finite module and let $I \subseteq \mathfrak{m}$ be an ideal with $M/IM$ of finite length. Then $e_d(I, M)$ is positive when $d$ is the degree of the Hilbert-Samuel polynomial, and it is $0$ for larger $d$. If $I \subseteq J$, where $I$ has $r$ generators and $J$ has $s$ generators, then $e_d(J, M) \le e_d(I, M)$ for each $d \ge \max(r, s)$. A field and a discrete valuation ring have multiplicity $1$.
 sources:
 - paper: AM69
 - paper: Mat
