@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.0 - 2026-11-24
+
 - The handbook page lists the five volumes of the handbook edition 0.4.0, with links to the PDF and EPUB files of the release. Volume 7 of this edition reports the runs of the lab.
 - The lab: `lab/README.md`, the specs of the experiments E1 and E2 in `lab/specs/` and their runs in `lab/runs/`, made with `sing lab` of tamnd/singularity-agent. The runs `e1-p2`, `e1-p3`, `e1-p5`, `e1-p7` and the runs `e2-p2`, `e2-p3`, `e2-p5`, `e2-p7` cover p = 2, 3, 5, 7, n = 2, 3, 4 and q = p, p^2. The runs `e1-hp-section3` and `e1-hp-cycle-p2` compute the examples of Hauser and Perlega (arXiv:1802.05010, sections 3 and 4) again. The page `site/lab.md` is the text of the page /lab/ of the site.
 - With this release the milestone S3 is complete.
