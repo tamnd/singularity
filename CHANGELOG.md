@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.3.0 - 2026-11-24
+
 - The node SG0000003A (the order does not go up under a point blowup) is proved by Singularity.ord_le_of_pointChart in tamnd/singularity-lean#52. The node SG0000003B (the points of the same order lie in the directrix) is new, with no Lean proof.
 - The node SG0000003C (a chart of the blowup of a regular local ring is regular) is proved by Singularity.Algebra.isRegularRing_blowupChart in tamnd/singularity-lean#53.
 - records/lean.json records the Lean build at commit ce778c3, with 745 declarations.
