@@ -12,6 +12,7 @@ Each release has a section. The newest release is first.
 - The node SG00000018 (the example of Narasimhan) is proved by Singularity.Examples.narasimhan in tamnd/singularity-lean#50. Its statement now gives the equation and the curve.
 - The Lean records are at commit c51aa70 of tamnd/singularity-lean, with 688 declarations. The commit has the declarations of the release v0.2.15, which changes only the changelog. The nodes SG0000000K, SG00000038, SG00000039, SG00000018 and SG00000016 are proved.
 - The releases v0.2.14 and v0.2.15 of tamnd/singularity-lean.
+- The node SG0000000K does not use SG00000030 (excellent rings), because its Lean proof does not use excellent rings. Before this change, its status was proved-mod.
 
 ## 0.2.13 - 2026-11-24
 
