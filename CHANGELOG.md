@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes SG00000040 to SG0000004K are new, for the main results of Volumes 2, 5 and 8 of the handbook. SG00000040 to SG00000049 are the resolution theorems in characteristic 0 and the steps of their proof after [Kol07], with maximal contact, the restriction theorem, the coefficient ideal and order reduction. SG0000004A to SG0000004F are the results on local uniformization in Volume 5, with the theorem of Abhyankar on quadratic sequences, the lifting along an étale generator and the monomial valuations. SG0000004G to SG0000004K are the results on curves and moduli in Volume 8 that the proof of de Jong uses. No new node has a Lean name.
+- SG0000001E now uses SG0000004C and SG0000004D, and SG0000001K now uses SG0000004J.
+
 ## 0.4.9 - 2026-11-25
 
 ### Changed
@@ -16,8 +21,6 @@ Each release has a section. The newest release is first.
 
 ### Added
 
-- The nodes SG00000040 to SG0000004K are new, for the main results of Volumes 2, 5 and 8 of the handbook. SG00000040 to SG00000049 are the resolution theorems in characteristic 0 and the steps of their proof after [Kol07], with maximal contact, the restriction theorem, the coefficient ideal and order reduction. SG0000004A to SG0000004F are the results on local uniformization in Volume 5, with the theorem of Abhyankar on quadratic sequences, the lifting along an étale generator and the monomial valuations. SG0000004G to SG0000004K are the results on curves and moduli in Volume 8 that the proof of de Jong uses. No new node has a Lean name.
-- SG0000001E now uses SG0000004C and SG0000004D, and SG0000001K now uses SG0000004J.
 - The paper Knu83 is new, for Volume 8 of the handbook. It is the paper of Knudsen on the stacks of stable pointed curves, which de Jong uses for his alterations [dJ96, 2.24]. The record gives the journal, the volume, the pages and the DOI.
 
 ## 0.4.8 - 2026-11-25
