@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The note of SG00000014 gives the case f = z^q + F with F clean, where the polyhedron is (1/q) times the Newton polyhedron of F (tamnd/singularity-lean#83).
+
 ### Added
 
 - The paper Knu83 is new, for Volume 8 of the handbook. It is the paper of Knudsen on the stacks of stable pointed curves, which de Jong uses for his alterations [dJ96, 2.24]. The record gives the journal, the volume, the pages and the DOI.
