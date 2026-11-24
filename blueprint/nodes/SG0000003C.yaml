@@ -1,0 +1,16 @@
+tag: SG0000003C
+kind: theorem
+title: A chart of the blowup of a regular local ring is regular
+statement: Let $(R, \mathfrak{m}, \kappa)$ be a regular local ring and let $x \in \mathfrak{m} \setminus \mathfrak{m}^2$. Then the chart $R[\mathfrak{m}/x]$, the subring of $R_x$ that the fractions $a/x$ with $a \in \mathfrak{m}$ generate over $R$, is a regular ring. If $x, y_1, \dots, y_d$ generate $\mathfrak{m}$ and $\dim R = d + 1$, then $R[\mathfrak{m}/x]/(x)$ is isomorphic to $\kappa[T_1, \dots, T_d]$.
+sources:
+- paper: Mat
+- paper: Hir64
+uses:
+- SG0000000J
+- SG0000000H
+- SG00000037
+lean:
+  statement: Singularity.Algebra.isRegularRing_blowupChart
+  proof: Singularity.Algebra.isRegularRing_blowupChart
+tier: T1
+notes: Thus the blowup of a regular scheme at a closed point is regular, in each characteristic. The isomorphism with the polynomial ring is `Singularity.Algebra.blowupChartQuotientEquiv`. It gives the exceptional divisor in the chart.
