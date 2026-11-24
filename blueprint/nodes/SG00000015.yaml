@@ -9,7 +9,8 @@ uses:
 - SG00000013
 lean:
   statement: Singularity.moh_bound
+  proof: Singularity.moh_bound_holds
 tier: T4
 route:
 - R5
-notes: The stability claim of the same paper is false (HP19a). Expert question 5 of the spec asks for the exact bound that survives. The Lean Prop Singularity.moh_bound states the bound in the given coordinates. It is not proved, and it may need a hypothesis on the choice of the coordinates.
+notes: The stability claim of the same paper is false (HP19a). Expert question 5 of the spec asks for the exact bound that survives. tamnd/singularity-lean#78 proves the Lean Prop Singularity.moh_bound for point blowups in the given coordinates (Singularity.moh_bound_holds), from Singularity.residualOrderAlong_pointChart_le. The proof works over each field of characteristic p and does not need a hypothesis on the coordinates. If q does not divide the order of F, the residual order does not go up (Singularity.residualOrderAlong_pointChart_le_of_not_dvd). The library does not prove the bound for blowups with larger permissible centers, or for power series.

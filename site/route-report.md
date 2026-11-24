@@ -106,7 +106,7 @@ Weight 0.15.
 
 - Purely inseparable hypersurfaces (P1), [SG00000009](node:SG00000009): open. The Lean statement is `Singularity.PurelyInseparableHypersurfaceResolution`.
 - The residual order, [SG00000013](node:SG00000013): defined (`Singularity.residualOrder`, `Singularity.residualOrderAlong`).
-- Moh's one-step bound, [SG00000015](node:SG00000015): stated (`Singularity.moh_bound`), no proof. The statement may need a hypothesis on the coordinates. No proof may use it as a hypothesis until it is proved.
+- Moh's one-step bound, [SG00000015](node:SG00000015): proved for point blowups in the given coordinates (`Singularity.moh_bound_holds`, tamnd/singularity-lean#78). The proof needs no hypothesis on the coordinates. The bound for larger permissible centers is not proved.
 - A kangaroo point, [SG00000016](node:SG00000016): proved (`Singularity.Examples.kangaroo`, `Singularity.Examples.kangaroo_increase`).
 - One cycle of Hauser-Perlega, [SG00000039](node:SG00000039): proved (`Singularity.Examples.hauserPerlegaCycle`).
 - The Hauser-Perlega cycle, [SG00000017](node:SG00000017): planned. The Lean statement is not in the library.
@@ -118,7 +118,7 @@ Weight 0.15.
 - The lab. The runs E1 and E2 make about 26 million point blowups for $p = 2, 3, 5, 7$ and $n = 2, 3, 4$. No step goes over $p^{e-1}$, and in most cases of the runs the largest increase is equal to $p^{e-1}$ ([e1-p2](/lab/2026-11-24-e1-p2-90966cbf/), [e1-p3](/lab/2026-11-24-e1-p3-08768f1a/), [e1-p5](/lab/2026-11-24-e1-p5-54c44a97/), [e1-p7](/lab/2026-11-24-e1-p7-b358a69f/)). All five candidate secondary invariants of E2 go up at some step ([e2-p2](/lab/2026-11-24-e2-p2-9d8af676/), [e2-p3](/lab/2026-11-24-e2-p3-e8d7d250/), [e2-p5](/lab/2026-11-24-e2-p5-4b5722b1/), [e2-p7](/lab/2026-11-24-e2-p7-9cf24d69/)). The rounded bound of the proof of Moh fails at 111 steps for $p = 2$ and at 30 steps for $p = 3$, all with $q > p$, and at no step for $p = 5$ and $p = 7$. This agrees with [HP19a](paper:HP19a). The random walks do not find the cycle of Hauser-Perlega. The lab computes in the given coordinates at points over $\mathbb{F}_p$ only, and its data proves nothing.
 - The open part. No invariant is known that, after the residual order, pays for the increases at kangaroo points when $g$ has 3 or more variables.
 
-**Next step.** The smallest new node is Moh's bound for $e = 1$: under a point blowup of $z^p + F$ that keeps the order $p$, the residual order goes up by at most 1. It is the case $e = 1$ of `Singularity.moh_bound`. The lab finds no counterexample for $q = p$. The next node after it is SG00000017 for one family of parameters, by induction on the cycle.
+**Next step.** Moh's bound for point blowups is now proved for each $e$, so the case $e = 1$ needs no separate work. The next node is SG00000017 for one family of parameters, by induction on the cycle. A second candidate is Moh's bound for a permissible center of dimension 1.
 
 ## R6. Alterations and descent
 
@@ -172,7 +172,7 @@ Weight 0.05.
 
 The ranking is by the size and the value of the next node in Lean. It is not a ranking by the distance to a proof. Each route is far from a proof.
 
-1. R5. The definitions, the point blowup charts and two certified examples are in Lean. Moh's bound for $e = 1$ is a small statement with a clear target. A proof of it or a counterexample to it in the given coordinates is a result.
+1. R5. The definitions, the point blowup charts, two certified examples and Moh's bound for point blowups are in Lean. The next targets are the unbounded cycle SG00000017 for one family and Moh's bound for a center of dimension 1.
 2. R1. The Newton polyhedron is in Lean. The characteristic polyhedron of $z^q + F$ with $F$ clean is a short argument. It gives the first piece of SG00000014 and joins R1 to R5.
 3. R3, with R4. The lemma of Tschirnhausen for a unit order is short, and it is the positive side of Narasimhan's example. It is the first step toward Target T. Hasse-Schmidt derivations come next.
 4. R2. Many nodes are proved, and local uniformization is proved in transcendence degree at most 1. The next node, the defect, is a definition and an example. The hard theorems SG0000001H and SG0000001J are far.

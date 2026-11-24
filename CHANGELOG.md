@@ -10,6 +10,8 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- `records/lean.json` has the record of tamnd/singularity-lean at commit 16a5c93, with 1079 declarations. The new proofs are the characteristic polyhedron (tamnd/singularity-lean#76) and the chain of MacLane (tamnd/singularity-lean#77).
+- SG00000015 now has a Lean proof, `Singularity.moh_bound_holds` (tamnd/singularity-lean#78), for point blowups. The note no longer says that the statement may need a hypothesis on the coordinates. The route report gives the new status of R5 and the next targets.
 - The note of SG0000000Z gives the chain of MacLane and part 4 of the theorem of MacLane-Vaquié for a valuation with discrete values (tamnd/singularity-lean#77). It also says that a nonzero support alone does not make the chain finite.
 - A review of Volumes 1 and 4 of the handbook found four nodes that did not agree with the library. SG0000002H and SG0000000Q said that a result is not in Lean, but SG0000002M and SG00000032 prove it. SG00000034 did not give the condition $d \ge \max(r, s)$ of the monotony law. The note of SG0000001C did not give the condition on the open $U$ correctly.
 - SG00000014 now names the Lean definition that exists, `Singularity.charPolyhedron` (tamnd/singularity-lean#76). The earlier name `Singularity.characteristicPolyhedron` did not exist. A note gives what the library proves about the polyhedron and what it does not prove.
