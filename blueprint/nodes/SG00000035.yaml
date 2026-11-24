@@ -1,0 +1,13 @@
+tag: SG00000035
+kind: theorem
+title: Generic regularity over a perfect field
+statement: Let $k$ be a perfect field and let $D$ be a domain of finite type over $k$. Then there is $f \neq 0$ in $D$ such that the local ring $D_P$ is regular for each prime $P$ of $D$ with $f \notin P$.
+sources:
+- paper: Mat
+uses:
+- SG0000002R
+- SG0000002S
+lean:
+  statement: Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_perfectField
+  proof: Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_perfectField
+tier: T1

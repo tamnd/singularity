@@ -1,0 +1,14 @@
+tag: SG00000036
+kind: theorem
+title: The regular locus is open over a perfect field
+statement: Let $k$ be a perfect field. Let $R$ be an algebra of finite type over $k$. Then the regular locus of $R$ is open in $\operatorname{Spec} R$. Let $X$ be a scheme that is locally of finite type over $k$. Then the regular locus of $X$ is open in $X$.
+sources:
+- paper: Nag62
+- paper: Mat
+uses:
+- SG0000002Q
+- SG00000035
+lean:
+  statement: Singularity.regularLocus_isOpen_of_perfectField
+  proof: Singularity.regularLocus_isOpen_of_perfectField
+tier: T1
