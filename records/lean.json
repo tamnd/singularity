@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "3826806865bda73bb9bda7889fa416c0467bb7b9",
+  "commit": "315082ef15da5ead0b3711d19a33200f03209d2b",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "3826806865bda73bb9bda7889fa416c0467bb7b9",
+ "commit": "315082ef15da5ead0b3711d19a33200f03209d2b",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -6505,6 +6505,248 @@
    "kind": "def",
    "line": 28,
    "type": "Prop"
+  },
+  "Singularity.ZariskiRiemann": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 47,
+   "type": "(A : Type u) \u2192 (K : Type v) \u2192 [inst : CommRing A] \u2192 [inst_1 : Field K] \u2192 [Algebra A K] \u2192 Type v"
+  },
+  "Singularity.ZariskiRiemann.algebraMap_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  (V : Singularity.ZariskiRiemann A K) (a : A), (algebraMap A K) a \u2208 V.toValuationSubring"
+  },
+  "Singularity.ZariskiRiemann.basicOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 89,
+   "type": "{A : Type u} \u2192\n  {K : Type v} \u2192\n    [inst : CommRing A] \u2192 [inst_1 : Field K] \u2192 [inst_2 : Algebra A K] \u2192 Finset K \u2192 Set (Singularity.ZariskiRiemann A K)"
+  },
+  "Singularity.ZariskiRiemann.basicOpen_empty": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K],\n  Singularity.ZariskiRiemann.basicOpen \u2205 = Set.univ"
+  },
+  "Singularity.ZariskiRiemann.basicOpen_eq_biInter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 112,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] (F : Finset K),\n  Singularity.ZariskiRiemann.basicOpen F = \u22c2 x \u2208 F, {V | x \u2208 V.toValuationSubring}"
+  },
+  "Singularity.ZariskiRiemann.basicOpen_union": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 104,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] [inst_3 : DecidableEq K]\n  (F G : Finset K),\n  Singularity.ZariskiRiemann.basicOpen (F \u222a G) =\n    Singularity.ZariskiRiemann.basicOpen F \u2229 Singularity.ZariskiRiemann.basicOpen G"
+  },
+  "Singularity.ZariskiRiemann.compactSpace": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K],\n  CompactSpace (Singularity.ZariskiRiemann A K)"
+  },
+  "Singularity.ZariskiRiemann.ext": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 74,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  {V W : Singularity.ZariskiRiemann A K}, V.toValuationSubring = W.toValuationSubring \u2192 V = W"
+  },
+  "Singularity.ZariskiRiemann.ext_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 75,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  {V W : Singularity.ZariskiRiemann A K}, V = W \u2194 V.toValuationSubring = W.toValuationSubring"
+  },
+  "Singularity.ZariskiRiemann.instNonempty": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K],\n  Nonempty (Singularity.ZariskiRiemann A K)"
+  },
+  "Singularity.ZariskiRiemann.instTopologicalSpace": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 119,
+   "type": "{A : Type u} \u2192\n  {K : Type v} \u2192\n    [inst : CommRing A] \u2192\n      [inst_1 : Field K] \u2192 [inst_2 : Algebra A K] \u2192 TopologicalSpace (Singularity.ZariskiRiemann A K)"
+  },
+  "Singularity.ZariskiRiemann.isOpen_basicOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] (F : Finset K),\n  IsOpen (Singularity.ZariskiRiemann.basicOpen F)"
+  },
+  "Singularity.ZariskiRiemann.isOpen_setOf_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] (x : K),\n  IsOpen {V | x \u2208 V.toValuationSubring}"
+  },
+  "Singularity.ZariskiRiemann.isTopologicalBasis_basicOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K],\n  TopologicalSpace.IsTopologicalBasis (Set.range Singularity.ZariskiRiemann.basicOpen)"
+  },
+  "Singularity.ZariskiRiemann.le_nhds_limit": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 164,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  (\ud835\udcb0 : Ultrafilter (Singularity.ZariskiRiemann A K)), \u2191\ud835\udcb0 \u2264 nhds (Singularity.ZariskiRiemann.limit \ud835\udcb0)"
+  },
+  "Singularity.ZariskiRiemann.limit": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 140,
+   "type": "{A : Type u} \u2192\n  {K : Type v} \u2192\n    [inst : CommRing A] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra A K] \u2192 Ultrafilter (Singularity.ZariskiRiemann A K) \u2192 Singularity.ZariskiRiemann A K"
+  },
+  "Singularity.ZariskiRiemann.mem_basicOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] {F : Finset K}\n  {V : Singularity.ZariskiRiemann A K}, V \u2208 Singularity.ZariskiRiemann.basicOpen F \u2194 \u2200 x \u2208 F, x \u2208 V.toValuationSubring"
+  },
+  "Singularity.ZariskiRiemann.mem_limit": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 158,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K]\n  {\ud835\udcb0 : Ultrafilter (Singularity.ZariskiRiemann A K)} {x : K},\n  x \u2208 (Singularity.ZariskiRiemann.limit \ud835\udcb0).toValuationSubring \u2194 {W | x \u2208 W.toValuationSubring} \u2208 \ud835\udcb0"
+  },
+  "Singularity.ZariskiRiemann.mk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 64,
+   "type": "{A : Type u} \u2192\n  {K : Type v} \u2192\n    [inst : CommRing A] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra A K] \u2192\n          (V : ValuationSubring K) \u2192 (\u2200 (a : A), (algebraMap A K) a \u2208 V) \u2192 Singularity.ZariskiRiemann A K"
+  },
+  "Singularity.ZariskiRiemann.toValuationSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 55,
+   "type": "{A : Type u} \u2192\n  {K : Type v} \u2192\n    [inst : CommRing A] \u2192\n      [inst_1 : Field K] \u2192 [inst_2 : Algebra A K] \u2192 Singularity.ZariskiRiemann A K \u2192 ValuationSubring K"
+  },
+  "Singularity.ZariskiRiemann.toValuationSubring_mk": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {A : Type u} {K : Type v} [inst : CommRing A] [inst_1 : Field K] [inst_2 : Algebra A K] (V : ValuationSubring K)\n  (hV : \u2200 (a : A), (algebraMap A K) a \u2208 V), (Singularity.ZariskiRiemann.mk V hV).toValuationSubring = V"
+  },
+  "Singularity.ZariskiRiemann.top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ZariskiRiemann.lean",
+   "kind": "def",
+   "line": 81,
+   "type": "(A : Type u) \u2192\n  (K : Type v) \u2192 [inst : CommRing A] \u2192 [inst_1 : Field K] \u2192 [inst_2 : Algebra A K] \u2192 Singularity.ZariskiRiemann A K"
   },
   "Singularity.abhyankar_inequality": {
    "axioms": [
