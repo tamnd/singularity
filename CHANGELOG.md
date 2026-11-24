@@ -4,8 +4,13 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes SG0000004M and SG0000004N are new. SG0000004M is the order at a point by the Hasse-Schmidt derivatives, Volume 7, Proposition 1.1.4 of the handbook. SG0000004N is the test for q-th powers in characteristic p by the Hasse-Schmidt derivatives. Their Lean fields name the theorems of tamnd/singularity-lean#91.
+
 ### Changed
 
+- SG0000000W now names Singularity.Algebra.MvHasse.hasseDeriv. The old name Singularity.HasseDeriv did not exist. The notes give the Leibniz rule, the composition rule and the Taylor formula (tamnd/singularity-lean#91).
 - SG0000003M now has a Lean field. The Lean library proves the transformation law of the log-Jacobian ideal for polynomials, as two inclusions (tamnd/singularity-lean#90).
 - The paper record Cut20 now gives the title, the journal, the volume, the pages and the DOI. The year was 2003, from the number of the preprint, and is now 2022. SG0000001E now cites [Cut20], which removes the condition of separability on the residue field.
 

@@ -1,0 +1,15 @@
+tag: SG0000004M
+kind: theorem
+title: The order at a point by the Hasse-Schmidt derivatives
+statement: Let $R$ be a commutative ring, let $f \in R[x_1, \dots, x_n]$, let $a \in R^n$ and let $d \ge 0$. Then $f(x + a)$ has order at least $d$ at the origin if and only if $(D^\alpha f)(a) = 0$ for each multi-index $\alpha$ with $|\alpha| < d$.
+sources:
+- paper: HSDer
+uses:
+- SG0000000W
+lean:
+  statement: Singularity.Algebra.MvHasse.le_ord_aeval_X_add_C_iff
+  proof: Singularity.Algebra.MvHasse.le_ord_aeval_X_add_C_iff
+tier: T1
+route:
+- R1
+notes: This is Volume 7, Proposition 1.1.4 of the handbook. The proof is the Taylor formula $f(x + a) = \sum_\alpha (D^\alpha f)(a) \, x^\alpha$. In characteristic $p$ the first derivatives do not find the order, because each derivation kills $x^p$. The Hasse-Schmidt derivatives find it in each characteristic. The case $a = 0$ is Singularity.Algebra.MvHasse.le_ord_iff_hasseDeriv (tamnd/singularity-lean#91).

@@ -1,0 +1,15 @@
+tag: SG0000004N
+kind: theorem
+title: The test for q-th powers by the Hasse-Schmidt derivatives
+statement: Let $R$ be a commutative ring of characteristic $p > 0$, let $q = p^e$ and let $f \in R[x_1, \dots, x_n]$. Then $f$ is a polynomial in $x_1^q, \dots, x_n^q$ if and only if $D^\alpha f = 0$ for each multi-index $\alpha \ne 0$ with $\alpha_i < q$ for each $i$. For such $\alpha$, the operator $D^\alpha$ is linear over the polynomials in $x_1^q, \dots, x_n^q$.
+sources:
+- paper: HSDer
+uses:
+- SG0000000W
+lean:
+  statement: Singularity.Algebra.MvHasse.exists_expand_eq_iff_hasseDeriv
+  proof: Singularity.Algebra.MvHasse.exists_expand_eq_iff_hasseDeriv
+tier: T1
+route:
+- R1
+notes: The proof uses the theorem of Lucas. If $\beta$ is not divisible by $q$, put $\alpha_i = \beta_i \bmod q$. Then $\alpha \ne 0$, $\alpha_i < q$ and $\binom{\beta}{\alpha} \equiv 1 \pmod p$, so $D^\alpha$ sees the monomial $x^\beta$. The first derivatives give only the case $e = 1$. The log-Jacobian ideal of SG0000003E uses only the first derivatives, so it sees the $p$-th powers but not the $q$-th powers for $e \ge 2$. The example $x^p y^p$ is killed by each derivation, but $D^{(p, 0)}$ sends it to $y^p$. The linearity is Singularity.Algebra.MvHasse.hasseDeriv_expand_mul, the first claim of Volume 1, Theorem 6.3.6 of the handbook (tamnd/singularity-lean#91).
