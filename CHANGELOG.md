@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 - The node SG0000002V (the regular locus of a scheme is open in characteristic zero), with its Lean proof `Singularity.regularLocus_isOpen_of_charZero`. The node SG0000000K now uses SG0000002V. SG0000000K stays planned, because the case of positive characteristic is not proved.
 - The Lean records are at commit b939ac7 of tamnd/singularity-lean, with 231 declarations.
+- The release v0.2.10 of tamnd/singularity-lean.
 
 ## 0.2.9 - 2026-11-24
 
