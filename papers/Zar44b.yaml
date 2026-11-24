@@ -1,0 +1,9 @@
+key: Zar44b
+title: Zariski, The compactness of the Riemann manifold of an abstract field of algebraic functions, Bull. AMS 50 (1944)
+tag: S
+tier: T2
+why: The Zariski-Riemann space is quasi-compact
+year: 1944
+lean: none
+use:
+- read
