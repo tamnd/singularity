@@ -1,0 +1,15 @@
+tag: SG0000003M
+kind: theorem
+title: The transformation law of the log-Jacobian ideal under a point blowup
+statement: Let $K$ be an algebraically closed field of characteristic $p > 0$, let $g \in K[x_1, \dots, x_n]$ with $\operatorname{ord} g \ge p$, and let $\pi$ be the $x_1$-chart of the blowup of the origin with the translations $t$. Put $g' = x_1^{-p} \pi(g)$ and $\Delta' = \{1\} \cup \{i \in \Delta : i \ne 1, t_i = 0\}$. Then, in $K[[x]]$, the log-Jacobian ideal of $g'$ for $\Delta'$ is $x_1^{-p} \pi(\Theta_0(g))$, where $\Theta_0(g) = (x_i \partial_i g \ (i \in \Delta)) + \mathfrak{m} (\partial_j g \ (j \notin \Delta))$.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000003E
+- SG0000002E
+tier: T2
+route:
+- R1
+- R5
+notes: The formula holds at each point of the exceptional divisor, translated or not. At a translated point the unit $x_j + t_j$ absorbs the derivation that is not logarithmic. For a base of dimension 3 this is in the thesis of Cossart. The Lean library does not prove it yet. It is an item of tamnd/singularity#106.

@@ -1,0 +1,17 @@
+tag: SG0000003N
+kind: theorem
+title: The residual order of the log-Jacobian ideal does not go up under a point blowup
+statement: In the setting of SG0000003M, let $g \ne 0$ be clean with $\operatorname{ord} g \ge p$, and let $g'_c$ be the clean part of $g'$ for $\Delta'$. Then $g'_c \ne 0$ and $\rho(g'_c) \le \rho(g)$. So the residual orders satisfy $d' \le \rho(g'_c) + 1 \le \rho(g) + 1 \le d + 1$.
+sources:
+- paper: Cos87
+- paper: Moh87
+- paper: Hau10
+uses:
+- SG0000003F
+- SG0000003M
+- SG0000003A
+tier: T2
+route:
+- R1
+- R5
+notes: The proof uses part 1 of the dichotomy SG0000003F at the new point and the order of the weak transform SG0000003A. It does not use the number of variables. The corollary is Moh's bound SG00000015 for $q = p$ at each point. The residual order goes up only when $\rho$ stays the same and the type changes from 0 to 1, as at the kangaroo point of $x^3 y + x y^3$ in characteristic 2. The Lean library does not prove it yet. It is an item of tamnd/singularity#106.
