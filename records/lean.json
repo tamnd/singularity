@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "ce778c36a739563dccb595e37649c9204cf517a8",
+  "commit": "bc7fa0da94386eb949c53565572d10f7e69f72eb",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "ce778c36a739563dccb595e37649c9204cf517a8",
+ "commit": "bc7fa0da94386eb949c53565572d10f7e69f72eb",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -6143,6 +6143,17 @@
    "line": 28,
    "type": "Prop"
   },
+  "Singularity.aeval_add_smul_of_mem_directrix": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 121,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {g : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix g \u2192\n    \u2200 (c : k), (MvPolynomial.aeval fun i => MvPolynomial.X i + MvPolynomial.C (c * v i)) g = g"
+  },
   "Singularity.blowupDivisor": {
    "axioms": [
     "Quot.sound",
@@ -6152,6 +6163,28 @@
    "kind": "def",
    "line": 452,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [CommSemiring k] \u2192 [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 Finset \u03c3 \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 Finset \u03c3"
+  },
+  "Singularity.chartLinear": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "def",
+   "line": 146,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.chartLinear_eq_chartRest": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 191,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {m : \u2115}\n  {g : MvPolynomial \u03c3 k},\n  g.IsHomogeneous m \u2192\n    ((Singularity.chartRest j t) g).IsHomogeneous m \u2192 (Singularity.chartLinear j t) g = (Singularity.chartRest j t) g"
   },
   "Singularity.chartRest": {
    "axioms": [
@@ -6163,6 +6196,17 @@
    "kind": "def",
    "line": 44,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.chartRest_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 160,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3),\n  Singularity.chartRest j 0 = Singularity.dehomogenize j"
   },
   "Singularity.chartShift": {
    "axioms": [
@@ -6218,6 +6262,59 @@
    "kind": "def",
    "line": 61,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial \u03c3 k"
+  },
+  "Singularity.chartUnshift": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "def",
+   "line": 200,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial (Option \u03c3) k \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial (Option \u03c3) k"
+  },
+  "Singularity.chartUnshift_comp_chartLinear": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 205,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k)\n  (b : MvPolynomial (Option \u03c3) k),\n  (Singularity.chartUnshift j t b).comp (Singularity.chartLinear j t) =\n    MvPolynomial.aeval fun i => MvPolynomial.X (some i) + MvPolynomial.C (Singularity.chartVector j t i) * b"
+  },
+  "Singularity.chartUnshift_comp_chartRest": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 215,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k)\n  (b : MvPolynomial (Option \u03c3) k),\n  (Singularity.chartUnshift j t b).comp (Singularity.chartRest j t) =\n    (Singularity.chartUnshift j t 0).comp (Singularity.chartRest j t)"
+  },
+  "Singularity.chartVector": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "def",
+   "line": 141,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 \u03c3 \u2192 k"
+  },
+  "Singularity.chartVector.congr_simp": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3] (j j_1 : \u03c3),\n  j = j_1 \u2192\n    \u2200 (t t_1 : \u03c3 \u2192 k),\n      t = t_1 \u2192 \u2200 (a a_1 : \u03c3), a = a_1 \u2192 Singularity.chartVector j t a = Singularity.chartVector j_1 t_1 a_1"
   },
   "Singularity.cleanPart": {
    "axioms": [
@@ -6395,6 +6492,17 @@
    "line": 53,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
   },
+  "Singularity.dehomogenize_comp_chartRest": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 164,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.dehomogenize j).comp (Singularity.chartRest j t) = Singularity.chartRest j t"
+  },
   "Singularity.dehomogenize_monomial": {
    "axioms": [
     "Classical.choice",
@@ -6405,6 +6513,17 @@
    "kind": "theorem",
    "line": 131,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (a : \u03c3 \u2192\u2080 \u2115) (c : k),\n  (Singularity.dehomogenize j) ((MvPolynomial.monomial a) c) = (MvPolynomial.monomial (Finsupp.erase j a)) c"
+  },
+  "Singularity.directrix": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "def",
+   "line": 94,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 MvPolynomial \u03c3 k \u2192 Submodule k (\u03c3 \u2192 k)"
   },
   "Singularity.divisorExponent": {
    "axioms": [
@@ -7010,6 +7129,39 @@
    "kind": "theorem",
    "line": 359,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] [inst_2 : DecidableEq \u03c3]\n  (f : MvPolynomial \u03c3 R), (Singularity.linearChange 1) f = f"
+  },
+  "Singularity.mem_directrix_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 117,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {g : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix g \u2194 (Singularity.translate v) g = (MvPolynomial.rename some) g"
+  },
+  "Singularity.mem_directrix_of_isHomogeneous": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 223,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {m : \u2115}\n  {g : MvPolynomial \u03c3 k},\n  g.IsHomogeneous m \u2192\n    ((Singularity.chartRest j t) g).IsHomogeneous m \u2192 Singularity.chartVector j t \u2208 Singularity.directrix g"
+  },
+  "Singularity.mem_directrix_of_ord_pointChart_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 242,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {f f' : MvPolynomial \u03c3 k}\n  {m : \u2115},\n  Singularity.ord f = \u2191m \u2192\n    (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f' \u2192\n      Singularity.ord f' = \u2191m \u2192\n        Singularity.chartVector j t \u2208 Singularity.directrix ((MvPolynomial.homogeneousComponent m) f)"
   },
   "Singularity.mem_idealOfVars_iff": {
    "axioms": [
@@ -7693,6 +7845,28 @@
    "line": 257,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {f : MvPolynomial \u03c3 k},\n  f \u2260 0 \u2192 (Singularity.pointChart j t) f \u2260 0"
   },
+  "Singularity.pointChart_of_isHomogeneous": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) {m : \u2115}\n  {p : MvPolynomial \u03c3 k},\n  p.IsHomogeneous m \u2192 (Singularity.pointChart j t) p = MvPolynomial.X j ^ m * (Singularity.chartRest j t) p"
+  },
+  "Singularity.pointChart_zero_comp_chartLinear": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 150,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.pointChart j 0).comp (Singularity.chartLinear j t) = Singularity.pointChart j t"
+  },
   "Singularity.pow_eq_zero_of_isClean": {
    "axioms": [
     "Classical.choice",
@@ -7979,6 +8153,50 @@
    "line": 28,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme} (x : \u21a5X), ringKrullDim \u2191(X.presheaf.stalk x) \u2264 topologicalKrullDim \u21a5X"
   },
+  "Singularity.scaleVar_comp_rename": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 74,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (c : k),\n  (MvPolynomial.aeval fun o => o.elim (MvPolynomial.C c * MvPolynomial.X none) fun i => MvPolynomial.X (some i)).comp\n      (MvPolynomial.rename some) =\n    MvPolynomial.rename some"
+  },
+  "Singularity.scaleVar_comp_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 66,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (c : k) (v : \u03c3 \u2192 k),\n  (MvPolynomial.aeval fun o => o.elim (MvPolynomial.C c * MvPolynomial.X none) fun i => MvPolynomial.X (some i)).comp\n      (Singularity.translate v) =\n    Singularity.translate (c \u2022 v)"
+  },
+  "Singularity.shiftVar_comp_rename": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 88,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (w : \u03c3 \u2192 k),\n  (MvPolynomial.aeval fun o =>\n          o.elim (MvPolynomial.X none) fun i =>\n            MvPolynomial.X (some i) + MvPolynomial.C (w i) * MvPolynomial.X none).comp\n      (MvPolynomial.rename some) =\n    Singularity.translate w"
+  },
+  "Singularity.shiftVar_comp_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 80,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (v w : \u03c3 \u2192 k),\n  (MvPolynomial.aeval fun o =>\n          o.elim (MvPolynomial.X none) fun i =>\n            MvPolynomial.X (some i) + MvPolynomial.C (w i) * MvPolynomial.X none).comp\n      (Singularity.translate v) =\n    Singularity.translate (v + w)"
+  },
   "Singularity.topologicalKrullDim_p1Hypersurface_le": {
    "axioms": [
     "Classical.choice",
@@ -8001,6 +8219,17 @@
    "line": 168,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u03c6 : \u03c3 \u2192 MvPolynomial \u03c3 k},\n  (\u2200 (i : \u03c3), (\u03c6 i).totalDegree \u2264 1) \u2192 \u2200 (p : MvPolynomial \u03c3 k), ((MvPolynomial.aeval \u03c6) p).totalDegree \u2264 p.totalDegree"
   },
+  "Singularity.totalDegree_chartRest_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 184,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (p : MvPolynomial \u03c3 k),\n  ((Singularity.chartRest j t) p).totalDegree \u2264 p.totalDegree"
+  },
   "Singularity.totalDegree_chartShift_le": {
    "axioms": [
     "Classical.choice",
@@ -8011,6 +8240,28 @@
    "kind": "theorem",
    "line": 181,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (p : MvPolynomial \u03c3 k),\n  ((Singularity.chartShift j t) p).totalDegree \u2264 p.totalDegree"
+  },
+  "Singularity.translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "def",
+   "line": 57,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial (Option \u03c3) k"
+  },
+  "Singularity.translate_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/Directrix.lean",
+   "kind": "theorem",
+   "line": 62,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k], Singularity.translate 0 = MvPolynomial.rename some"
   },
   "Singularity.weightedOrd": {
    "axioms": [
