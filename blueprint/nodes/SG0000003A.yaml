@@ -9,5 +9,6 @@ uses:
 - SG0000002E
 lean:
   statement: Singularity.ord_le_of_pointChart
+  proof: Singularity.ord_le_of_pointChart
 tier: T1
 notes: This is the case of a hypersurface and a point center of the theorem of Bennett, SG0000000R. The proof does not use the characteristic of $K$.
