@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.9 - 2026-11-25
+
 ### Changed
 
 - The handbook page of the site points to the edition 0.4.9, which has all ten volumes. The new rows are Volumes 2, 5 and 8.
