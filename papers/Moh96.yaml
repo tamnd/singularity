@@ -1,0 +1,9 @@
+key: Moh96
+title: Moh, "On a Newton polygon approach to the uniformization of singularities of characteristic p", in Algebraic Geometry and Singularities (La Rábida, 1991), Progr. Math. 134 (1996) 49-93, doi:10.1007/978-3-0348-9020-5_4
+tag: S
+tier: T4
+why: The weighted order can increase in characteristic $p$
+year: 1996
+lean: none
+use:
+- read
