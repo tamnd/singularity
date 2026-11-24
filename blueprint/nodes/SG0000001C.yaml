@@ -9,5 +9,6 @@ uses:
 - SG0000000T
 - SG0000000V
 lean:
-  statement: Singularity.embeddedResolution_surface
+  statement: Singularity.EmbeddedResolutionSurface
 tier: T5
+notes: The Lean statement of tamnd/singularity-lean#61 is for a regular scheme $Z$ of finite type over a field and a reduced closed subscheme $X$ of dimension at most 2. It asks for a proper morphism $\pi \colon Z' \to Z$ with $Z'$ regular, an open $U$ that contains each point where $X$ is regular, and a divisor $E$ with simple normal crossings, such that $\pi$ is an isomorphism over $U$, the support of $E$ is the preimage of the complement of $U$, and the strict transform of $X$ has normal crossings with $E$. It is weaker than the theorem of [CJS20] in two ways. Mathlib has no excellent schemes, so $Z$ is of finite type over a field. Mathlib has no blowups of schemes, so the statement does not ask for a sequence of permissible blowups. The Lean statement is not proved.
