@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The handbook page of the site points to the edition 0.4.9, which has all ten volumes. The new rows are Volumes 2, 5 and 8.
 - The statement of SG0000001G now takes the finite set first, so that the purely inseparable extension depends on it, as in [Tem13] and in the Lean statement.
 - The new note of SG0000001N says that the theorem of Temkin holds over any field, and that the alteration is not proved to be Galois.
 - The note of SG0000000Z gives the limit augmentation of Vaquié from tamnd/singularity-lean#84.
