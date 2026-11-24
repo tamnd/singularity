@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.2.13 - 2026-11-24
+
 - The Lean records are at commit 82bb73d of tamnd/singularity-lean, with 368 declarations. The node SG00000037 is proved.
 - The release v0.2.13 of tamnd/singularity-lean.
 - The node SG00000037 (a regular local ring has multiplicity one), with its Lean proof in tamnd/singularity-lean#42. The note of SG00000034 now refers to it.
