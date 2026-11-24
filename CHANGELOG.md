@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- SG0000003M now has a Lean field. The Lean library proves the transformation law of the log-Jacobian ideal for polynomials, as two inclusions (tamnd/singularity-lean#90).
 - The paper record Cut20 now gives the title, the journal, the volume, the pages and the DOI. The year was 2003, from the number of the preprint, and is now 2022. SG0000001E now cites [Cut20], which removes the condition of separability on the residue field.
 
 ## 0.4.10 - 2026-11-25
