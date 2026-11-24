@@ -4,6 +4,7 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The note of the trust check Q3 gives the result of lean4lean on each module of Singularity at commit ce778c3, run on a project server. It accepted the 43 modules.
 ## 0.4.0 - 2026-11-24
 
 - The handbook page lists the five volumes of the handbook edition 0.4.0, with links to the PDF and EPUB files of the release. Volume 7 of this edition reports the runs of the lab.
