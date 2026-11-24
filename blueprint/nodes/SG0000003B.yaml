@@ -1,0 +1,11 @@
+tag: SG0000003B
+kind: theorem
+title: The points of the same order lie in the directrix
+statement: In the situation of SG0000003A, let $v$ be the vector of the chart, with $v_j = 1$ and $v_i = t_i$ for $i \ne j$. If $f'$ has order $m$ at the origin of the chart, then $f_m(x + s v) = f_m(x)$ in $K[x, s]$, where $f_m$ is the initial form of $f$.
+sources:
+- paper: Hir67
+- paper: Hir70
+uses:
+- SG0000003A
+tier: T1
+notes: The set of the $v$ with $f_m(x + s v) = f_m(x)$ is a linear subspace, the directrix of $f_m$. In characteristic 2 the directrix of $x^2 + y^2 + z^2$ is a plane, and in characteristic 0 it is 0. See Volume 7, Example 2.2.7 of the handbook.

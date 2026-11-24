@@ -1,0 +1,14 @@
+tag: SG0000003A
+kind: theorem
+title: The order does not go up under a point blowup
+statement: Let $K$ be a field and let $f \in K[x_1, \dots, x_n]$ have order $m$ at the origin. In the $x_j$-chart of the blowup of the origin with the translations $t$, write $\pi(f) = x_j^m f'$. Then $f'$ has order at most $m$ at the origin of the chart.
+sources:
+- paper: Hir64
+- paper: Kol07
+uses:
+- SG0000002E
+lean:
+  statement: Singularity.ord_le_of_pointChart
+  proof: Singularity.ord_le_of_pointChart
+tier: T1
+notes: This is the case of a hypersurface and a point center of the theorem of Bennett, SG0000000R. The proof does not use the characteristic of $K$.
