@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000003N now has a Lean field. The Lean library proves that the residual order of the log-Jacobian ideal does not go up under a point blowup, for polynomials, and the corollary $d' \le d + 1$ (tamnd/singularity-lean#93).
+
 ## 0.4.12 - 2026-11-25
 
 ### Added
