@@ -4,6 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000003A (the order does not go up under a point blowup) is proved by Singularity.ord_le_of_pointChart in tamnd/singularity-lean#52. The node SG0000003B (the points of the same order lie in the directrix) is new, with no Lean proof.
+- The node SG0000003C (a chart of the blowup of a regular local ring is regular) is proved by Singularity.Algebra.isRegularRing_blowupChart in tamnd/singularity-lean#53.
+- records/lean.json records the Lean build at commit ce778c3, with 745 declarations.
+- The trust checks Q3 and Q4 have the state "yes". The note of Q3 gives the results of leanchecker, nanoda and the bundled checkers, and it says that the job of lean4lean on each module gave no result on the hosted runner. The note of Q4 says that the comparator of the base package runs without the sandbox.
+- With this release the milestone S2 is complete.
+
 ## 0.2.14 - 2026-11-24
 
 - The node SG00000016 (a kangaroo point) is proved by Singularity.Examples.kangaroo in tamnd/singularity-lean#45. The nodes SG00000011 and SG00000013 have notes on their Lean definitions, and SG00000015 has the exact statement of the bound of Moh, which Lean states and does not prove.
