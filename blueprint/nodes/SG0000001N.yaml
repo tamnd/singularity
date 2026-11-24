@@ -12,3 +12,4 @@ lean:
 tier: T7
 route:
 - R6
+notes: The statement asks for a perfect field, but [Tem17] proves more. Each scheme of finite type over a quasi-excellent scheme of dimension at most 3 has a regular alteration whose degree has only primes that are not invertible on the scheme. In particular each variety over any field of characteristic p has a regular alteration of degree a power of p. The alteration is not proved to be Galois. Volume 8, Chapter 3 of the handbook gives the statements.
