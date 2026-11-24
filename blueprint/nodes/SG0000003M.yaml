@@ -8,8 +8,11 @@ sources:
 uses:
 - SG0000003E
 - SG0000002E
+lean:
+  statement: Singularity.span_mul_logJacobian_le_map_pointChart
+  proof: Singularity.span_mul_logJacobian_le_map_pointChart
 tier: T2
 route:
 - R1
 - R5
-notes: The formula holds at each point of the exceptional divisor, translated or not. At a translated point the unit $x_j + t_j$ absorbs the derivation that is not logarithmic. For a base of dimension 3 this is in the thesis of Cossart. The Lean library does not prove it yet. It is an item of tamnd/singularity#106.
+notes: The formula holds at each point of the exceptional divisor, translated or not. At a translated point the unit $x_j + t_j$ absorbs the derivation that is not logarithmic. For a base of dimension 3 this is in the thesis of Cossart. The Lean library proves the law for polynomials over each commutative ring of characteristic $p$, as two inclusions, because $x_j + t_j$ is not a unit in $K[x]$. The Lean names are Singularity.map_pointChart_logJacobianTangent_le_span_mul for the first inclusion and Singularity.span_mul_logJacobian_le_map_pointChart for the second, with Singularity.blowupUnit for the product of the factors $x_j + t_j$ (tamnd/singularity-lean#90).
