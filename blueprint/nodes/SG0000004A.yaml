@@ -1,0 +1,13 @@
+tag: SG0000004A
+kind: theorem
+title: Abhyankar's theorem on quadratic sequences
+statement: Let $R$ be a regular local ring of dimension 2, essentially of finite type over a field, and let $v$ be a valuation of $K = \operatorname{Frac} R$ that dominates $R$. Let $R_0 = R$. While $R_n$ has dimension 2, let $R_{n+1}$ be the quadratic transform of $R_n$ along $v$, the local ring at the center of $v$ of the chart $R_n[y/x]$, where $x, y$ is a regular system of parameters of $R_n$ with $v(x) \le v(y)$. If $R_n$ has dimension 1, the sequence stops, and $R_n = \mathcal{O}_v$. Then $\mathcal{O}_v = \bigcup_n R_n$.
+sources:
+- paper: Abh56
+uses:
+- SG0000003C
+- SG00000023
+tier: T2
+route:
+- R2
+notes: Abhyankar proved the theorem for each regular local ring of dimension 2 [Abh56]. Volume 5, Theorem 1.2.6 of the handbook proves the case essentially of finite type, with intersection numbers and the inequality of Noether. Each quadratic transform is again regular by SG0000003C. No Lean statement yet. A Lean proof needs intersection numbers and the branch formula, which are not in Mathlib.

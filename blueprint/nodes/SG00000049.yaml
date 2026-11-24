@@ -1,0 +1,12 @@
+tag: SG00000049
+kind: theorem
+title: Order reduction for marked ideals
+statement: Let $X$ be a smooth variety over a field of characteristic 0, let $E$ be a divisor with simple normal crossings and an ordered index set, let $m \ge 1$, and let $I$ be an ideal sheaf that is nonzero on each irreducible component of $X$. Then there is a blowup sequence of order at least $m$ for $(I, m)$ with $\operatorname{cosupp}(I_r, m) = \emptyset$. If $I$ is a monomial ideal $\mathcal{O}_X(-\sum_D a_D D)$, with $D$ over the components of $E$, the centers can be taken as intersections of components of the transforms of $E$.
+sources:
+- paper: Kol07
+- paper: Wlo05
+uses:
+- SG00000048
+- SG0000000V
+tier: T8
+notes: Volume 2 of the handbook proves the theorem by induction on $n = \dim X$. The case $n = 0$ is trivial. Order reduction for ideals in dimension $n$ implies the theorem in dimension $n$ (Theorem 3.3.10), with the monomial case (Theorem 3.3.8) and the split $I = M(I) \cdot N(I)$ into the monomial and the nonmonomial part (Lemma 3.3.7). With SG00000048 this closes the induction. The proof follows [Kol07, Chapter 3], Section Order reduction for marked ideals. No Lean statement yet.

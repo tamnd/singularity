@@ -1,0 +1,14 @@
+tag: SG0000004E
+kind: theorem
+title: Resolution implies local uniformization
+statement: 'Let $K/k$ be a function field, let $v$ be a valuation of $K/k$, let $X$ be a model of $K/k$ on which $v$ has a center, and let $X'' \to X$ be a proper birational morphism with $X''$ regular. Then the center of $v$ on $X''$ is a regular point of $X''$. In particular, if each model of $K/k$ has a resolution, then each valuation of $K/k$ has local uniformization. With SG0000000D this gives the theorem of Zariski: each valuation of a function field over a field of characteristic 0 has local uniformization.'
+sources:
+- paper: Zar40
+- paper: Hir64
+uses:
+- SG00000004
+- SG0000000D
+tier: T6
+route:
+- R2
+notes: This is Volume 5, Proposition 1.4.5 and Corollary 1.4.6 of the handbook. The theorem of Zariski is [Zar40], and it came before [Hir64]. The step from resolution to local uniformization is not in the library. It needs a link between the models of Volume 3, Definition 4.1.1 and the affine form of `Singularity.HasLocalUniformization` (Volume 3, Proposition 4.1.6). No Lean statement yet.

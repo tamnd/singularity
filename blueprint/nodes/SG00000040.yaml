@@ -1,0 +1,13 @@
+tag: SG00000040
+kind: theorem
+title: Strong resolution in characteristic 0
+statement: Let $X$ be an integral quasi-projective variety over a field $k$ of characteristic 0. Then there is a projective birational morphism $\Pi \colon X' \to X$ such that $X'$ is smooth, $\Pi$ is an isomorphism over the regular locus of $X$, and $\Pi^{-1}(\operatorname{Sing}(X))$ is a divisor with simple normal crossings on $X'$.
+sources:
+- paper: Hir64
+- paper: Kol07
+uses:
+- SG00000043
+- SG0000000V
+- SG0000000S
+tier: T8
+notes: This is the second form of resolution in [Kol07, Chapter 3]. Kollár deduces it from the functorial principalization SG00000043 together with a compatibility with closed embeddings. A morphism with these properties is a resolution in the sense of SG00000004, so the theorem is stronger than SG0000001P for integral quasi-projective varieties. Volume 2, Theorem 1.1.3 of the handbook. No Lean statement yet.

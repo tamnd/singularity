@@ -1,0 +1,10 @@
+tag: SG00000044
+kind: theorem
+title: Resolution from principalization
+statement: Let $X$ be an integral quasi-projective variety over a field $k$ of characteristic 0. Then there are a smooth variety $X'$ and a projective birational morphism $X' \to X$. The proof applies principalization SG00000042, in the second form, to the ideal sheaf of the closure $\bar X$ of $X$ in a projective space $P$ with $\operatorname{codim}(\bar X, P) \ge 2$, and takes the irreducible component through the generic point of $X$ of the first center that contains the point over the generic point of $\bar X$.
+sources:
+- paper: Kol07
+uses:
+- SG00000042
+tier: T8
+notes: This is Volume 2, Theorem 1.2.1 of the handbook, after [Kol07, Chapter 3]. The proof in the handbook uses the characteristic only through principalization. The centers of the induced blowups of $X$ can be singular (Volume 2, Example 1.2.2). No Lean statement yet.

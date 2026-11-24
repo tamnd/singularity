@@ -1,0 +1,10 @@
+tag: SG0000004F
+kind: theorem
+title: Reduction of local uniformization to a larger ground field
+statement: Let $v$ be a valuation of a function field $K/k$, and let $y_1, \dots, y_m \in \mathcal{O}_v$ be elements whose residues are algebraically independent over $k$. Then $y_1, \dots, y_m$ are algebraically independent over $k$, the field $k' = k(y_1, \dots, y_m)$ lies in $\mathcal{O}_v$, and $v$ is a valuation of the function field $K/k'$. If $v$ has local uniformization as a valuation of $K/k'$, then $v$ has local uniformization as a valuation of $K/k$. If the residues form a transcendence basis of the residue field $\kappa_v$ over $k$, then $\kappa_v$ is algebraic over $k'$ and $\operatorname{trdeg}_{k'} K = \operatorname{trdeg}_k K - \operatorname{trdeg}_k \kappa_v$.
+sources:
+- paper: Zar40
+tier: T6
+route:
+- R2
+notes: This is Volume 5, Lemma 1.4.2 of the handbook. It holds in each characteristic. Thus local uniformization in dimension $n$ follows from local uniformization of the valuations with algebraic residue field of function fields of transcendence degree at most $n$, over all ground fields of the given characteristic. The new ground field $k'$ is not algebraically closed, even if $k$ is. No Lean statement yet.

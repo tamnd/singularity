@@ -1,0 +1,14 @@
+tag: SG00000041
+kind: theorem
+title: Embedded resolution in characteristic 0
+statement: Let $Y$ be a smooth variety over a field of characteristic 0 and let $X \subseteq Y$ be a reduced closed subscheme. Then there is a finite sequence of blowups $Y_r \to \dots \to Y_0 = Y$, each in a permissible center for the strict transform $X_i$ of $X$, such that $X_r$ is regular, the union $E_r$ of the exceptional divisors is a divisor with simple normal crossings on $Y_r$, and $X_r$ has normal crossings with $E_r$.
+sources:
+- paper: Hir64
+- paper: Vil89
+- paper: BM97
+uses:
+- SG0000000S
+- SG0000000T
+- SG0000000V
+tier: T8
+notes: This is the second main theorem of [Hir64]. The constructive proofs of [Vil89] and [BM97] give an embedded resolution that is determined by the pair $(Y, X)$ and is compatible with smooth morphisms. The library defines the conclusion in a weak form without the sequence of blowups, `Singularity.IsEmbeddedResolution`, but it does not state the theorem in characteristic 0. The case of surfaces in each characteristic is SG0000001C. Volume 2, Theorem 1.1.4 of the handbook.

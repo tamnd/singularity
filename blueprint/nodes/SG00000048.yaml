@@ -1,0 +1,14 @@
+tag: SG00000048
+kind: theorem
+title: Order reduction for ideals
+statement: 'Let $n \ge 1$. Assume order reduction for marked ideals in dimension $n - 1$, in the functorial form: for each $m \ge 1$ and each smooth $(X, I, E)$ with $\dim X = n - 1$ and $I$ nonzero on each irreducible component, there is a blowup sequence of order at least $m$ for $(I, m)$ with $\operatorname{cosupp}(I_r, m) = \emptyset$. Then order reduction for ideals in dimension $n$ holds, in the functorial form: for each $m \ge 1$ and each $(X, I, E)$ with $X$ smooth of dimension $n$ over a field of characteristic 0 and maximal order of $I$ at most $m$, there is a blowup sequence of order $m$ for $(I, m)$ after which the maximal order is less than $m$.'
+sources:
+- paper: Kol07
+- paper: Wlo05
+uses:
+- SG00000045
+- SG00000047
+- SG0000000S
+- SG0000000V
+tier: T8
+notes: This is Volume 2, Theorem 3.3.6 of the handbook, after [Kol07, Chapter 3], Section Order reduction for ideals. The proof uses maximal contact SG00000045 and the coefficient ideal SG00000047 when there is a global hypersurface of maximal contact (Theorem 3.3.5). The handbook cites from [Kol07] the tuning of the ideal, the étale form of the uniqueness of maximal contact, and the globalization. The functorial form means that the sequences come from rules that commute with smooth morphisms and with change of fields. No Lean statement yet.

@@ -1,0 +1,13 @@
+tag: SG0000004B
+kind: theorem
+title: Local uniformization of surfaces with a regular model
+statement: Let $k$ be a field of any characteristic, let $K/k$ be a function field of transcendence degree 2, and let $v$ be a valuation of $K/k$. Assume that there is an affine model $A \subseteq \mathcal{O}_v$ of $K/k$ whose local ring at the center of $v$ is regular. Then $v$ has local uniformization. In particular each valuation of the field $k(x, y)$ of rational functions over $k$ has local uniformization.
+sources:
+- paper: Abh56
+- paper: Zar39
+uses:
+- SG0000004A
+tier: T6
+route:
+- R2
+notes: This is Volume 5, Corollaries 1.2.7 and 1.2.8 of the handbook. The proof follows the quadratic sequence SG0000004A on affine models. It holds also for valuations with a defect. In characteristic $p$ the difficulty of surfaces is the passage from $k(x, y)$ to a finite extension. Local uniformization is in the affine form of Volume 3, Proposition 4.1.6, the form of `Singularity.HasLocalUniformization`. No Lean statement yet.

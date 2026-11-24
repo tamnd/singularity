@@ -8,6 +8,7 @@ sources:
 uses:
 - SG00000002
 - SG0000000V
+- SG0000004J
 lean:
   statement: Singularity.exists_regular_alteration
 tier: T7

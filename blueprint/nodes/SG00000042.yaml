@@ -1,0 +1,13 @@
+tag: SG00000042
+kind: theorem
+title: Principalization in characteristic 0
+statement: Let $X$ be a smooth variety over a field of characteristic 0, let $I \subseteq \mathcal{O}_X$ be an ideal sheaf that is nonzero on each irreducible component, and let $E$ be a divisor with simple normal crossings on $X$. Then there is a composite of blowups $\Pi \colon X_r \to \dots \to X_0 = X$ with smooth centers $Z_i \subseteq X_i$ such that each $Z_i$ has simple normal crossings with the sum $E_i$ of the strict transform of $E$ and the inverse images of the earlier centers, the image of each $Z_i$ in $X$ lies in the cosupport $V(I)$, and $\Pi^* I = \mathcal{O}_{X_r}(-G)$ for a divisor $G \ge 0$ supported on the exceptional divisors. In particular $\Pi^* I$ is locally principal and $\Pi$ is an isomorphism over $X \setminus V(I)$.
+sources:
+- paper: Hir64
+- paper: Kol07
+uses:
+- SG00000049
+- SG0000000S
+- SG0000000V
+tier: T8
+notes: 'Here $\Pi^* I$ is the inverse image ideal sheaf. The theorem with $E = \emptyset$ gives the first and the second forms of principalization, Volume 2, Theorems 1.1.5 and 1.1.6 of the handbook, and the theorem is the third form, Theorem 1.1.7. The proof is Theorem 3.3.11 of Volume 2: apply order reduction for marked ideals SG00000049 with the mark 1. The proof follows [Kol07, Chapter 3]. No Lean statement yet.'
