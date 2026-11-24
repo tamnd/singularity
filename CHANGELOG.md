@@ -7,6 +7,7 @@ Each release has a section. The newest release is first.
 - The nodes SG0000002R (the Jacobian criterion for a hypersurface over a regular ring), SG0000002S (generic regularity in characteristic zero) and SG0000002T (the regular locus is open in characteristic zero), each with its Lean proof in tamnd/singularity-lean.
 - The node SG0000000K (the regular locus is open) now uses SG0000002T, and SG0000000G (the Jacobian criterion) now uses SG0000002R. SG0000000K stays planned, because the scheme statement and the case of positive characteristic are not proved.
 - The Lean records are at commit 4213622 of tamnd/singularity-lean, with 229 declarations.
+- The release v0.2.9 of tamnd/singularity-lean.
 
 ## 0.2.8 - 2026-11-24
 
