@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.11 - 2026-11-25
+
 ### Added
 
 - The nodes SG0000004M and SG0000004N are new. SG0000004M is the order at a point by the Hasse-Schmidt derivatives, Volume 7, Proposition 1.1.4 of the handbook. SG0000004N is the test for q-th powers in characteristic p by the Hasse-Schmidt derivatives. Their Lean fields name the theorems of tamnd/singularity-lean#91.
