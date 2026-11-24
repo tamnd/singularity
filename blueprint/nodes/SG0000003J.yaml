@@ -1,0 +1,16 @@
+tag: SG0000003J
+kind: theorem
+title: The rigid layer of a multiplicity divisible by p
+statement: Let $R$ be a commutative ring of characteristic $p > 0$, let $m = p^e m_0$ with $p \nmid m_0$, and let $f = z^m + a_1 z^{m-1} + \cdots + a_m$ in $R[z]$. Write $f(z + c) = z^m + a_1' z^{m-1} + \cdots + a_m'$. Then $a_i' = a_i + \sum_{0 < j < i} \binom{m - j}{i - j} a_j c^{i - j}$ for $0 < i < p^e$, so $a_1' = a_1$, and $a_i' = a_i$ when $a_1 = \dots = a_{i-1} = 0$. Also $a_{p^e}' = a_{p^e} + m_0 c^{p^e} + \sum_{0 < j < p^e} \binom{m - j}{p^e - j} a_j c^{p^e - j}$.
+sources:
+- paper: Hir64
+- paper: Cos87
+uses:
+- SG00000013
+lean:
+  statement: Singularity.LEAN_RIGID
+  proof: Singularity.LEAN_RIGID
+tier: T1
+route:
+- R5
+notes: The proof uses the identity $(z + c)^{p^e m_0} = (z^{p^e} + c^{p^e})^{m_0}$ in place of the theorem of Lucas. The Tschirnhausen translation kills $a_1$ when $p \nmid m$. When $p \mid m$, no translation changes $a_1$, and when $a_1 = \dots = a_{p^e - 1} = 0$ the translations change $a_{p^e}$ only by $m_0 c^{p^e}$. This is one reason why the multiplicities divisible by $p$ are hard.
