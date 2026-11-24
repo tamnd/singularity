@@ -8,8 +8,8 @@ sources:
 uses:
 - SG0000003J
 lean:
-  statement: Singularity.LEAN_LIFT
-  proof: Singularity.LEAN_LIFT
+  statement: Singularity.X_pow_add_C_mem_pow_iff
+  proof: Singularity.X_pow_add_C_mem_pow_iff
 tier: T1
 route:
 - R5
