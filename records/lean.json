@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "06a7ed6e62a342de099648520b284626492cd366",
+  "commit": "dbde226c8b09a1c500c9812d090b3e06d007ceed",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "06a7ed6e62a342de099648520b284626492cd366",
+ "commit": "dbde226c8b09a1c500c9812d090b3e06d007ceed",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -5810,7 +5810,7 @@
    ],
    "file": "Singularity/Fidelity/LocalUniformization.lean",
    "kind": "theorem",
-   "line": 55,
+   "line": 61,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K},\n  Singularity.HasLocalUniformization k V \u2192 \u2200 (a : k), (algebraMap k K) a \u2208 V"
   },
   "Singularity.Fidelity.codiag": {
@@ -5824,6 +5824,17 @@
    "line": 23,
    "type": "(X : AlgebraicGeometry.Scheme) \u2192 X \u2a3f X \u27f6 X"
   },
+  "Singularity.Fidelity.exists_regularCenter_of_hasLocalUniformization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/LocalUniformization.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K},\n  Singularity.HasLocalUniformization k V \u2192\n    \u2203 A,\n      \u2203 (hA : \u2200 (a : \u21a5A), \u2191a \u2208 V),\n        Singularity.IsAffineModel A \u2227 IsRegularLocalRing (Localization.AtPrime (Singularity.valuationCenter V A hA))"
+  },
   "Singularity.Fidelity.hasLocalUniformization_top": {
    "axioms": [
     "Classical.choice",
@@ -5832,7 +5843,7 @@
    ],
    "file": "Singularity/Fidelity/LocalUniformization.lean",
    "kind": "theorem",
-   "line": 23,
+   "line": 24,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K],\n  Singularity.IsFunctionField k K \u2192 Singularity.HasLocalUniformization k \u22a4"
   },
   "Singularity.Fidelity.hasNormalCrossings_top": {
@@ -5876,7 +5887,7 @@
    ],
    "file": "Singularity/Fidelity/LocalUniformization.lean",
    "kind": "theorem",
-   "line": 61,
+   "line": 67,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K},\n  Singularity.HasLocalUniformization k V \u2192 Singularity.IsFunctionField k K"
   },
   "Singularity.Fidelity.isResolution_id": {
@@ -5964,7 +5975,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 90,
+   "line": 102,
    "type": "(k : Type u_1) \u2192 {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 Prop"
   },
   "Singularity.HasNormalCrossings": {
@@ -5989,6 +6000,17 @@
    "line": 65,
    "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 [IsLocalRing R] \u2192 Ideal R \u2192 Ideal R \u2192 Prop"
   },
+  "Singularity.HasRegularCenter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 97,
+   "type": "(k : Type u_1) \u2192\n  {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 Set K \u2192 Prop"
+  },
   "Singularity.IntegralResolutionInDim": {
    "axioms": [
     "Classical.choice",
@@ -6008,7 +6030,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 97,
+   "line": 108,
    "type": "(k : Type u_1) \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 (V : ValuationSubring K) \u2192 [Algebra k \u21a5V] \u2192 Prop"
   },
   "Singularity.IsAffineModel": {
@@ -6019,7 +6041,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 74,
+   "line": 81,
    "type": "{k : Type u_1} \u2192 {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [inst_2 : Algebra k K] \u2192 Subalgebra k K \u2192 Prop"
   },
   "Singularity.IsClean": {
@@ -6129,7 +6151,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 68,
+   "line": 75,
    "type": "(k : Type u_1) \u2192 (K : Type u_2) \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 Prop"
   },
   "Singularity.IsMuIrreducible": {
@@ -6547,7 +6569,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 143,
+   "line": 154,
    "type": "Prop"
   },
   "Singularity.LocalUniformizationInDim": {
@@ -6558,7 +6580,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 127,
+   "line": 138,
    "type": "\u2115 \u2192 \u2115 \u2192 Prop"
   },
   "Singularity.MuDvd": {
@@ -8568,7 +8590,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "theorem",
-   "line": 83,
+   "line": 90,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V), (Singularity.valuationCenter V A h).IsPrime"
   },
   "Singularity.isRegularLocalRing_of_isField": {
@@ -8975,7 +8997,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 108,
+   "line": 119,
    "type": "Prop"
   },
   "Singularity.localUniformization_inseparable": {
@@ -8986,7 +9008,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 117,
+   "line": 128,
    "type": "Prop"
   },
   "Singularity.localUniformization_three": {
@@ -8997,7 +9019,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 135,
+   "line": 146,
    "type": "Prop"
   },
   "Singularity.map_ideal_le_stalkIdeal": {
@@ -10251,7 +10273,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 147,
+   "line": 158,
    "type": "Prop"
   },
   "Singularity.ringKrullDim_p1Ring_le": {
@@ -10482,7 +10504,7 @@
    ],
    "file": "Singularity/Statements/LocalUniformization.lean",
    "kind": "def",
-   "line": 78,
+   "line": 85,
    "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192 (V : ValuationSubring K) \u2192 (A : Subalgebra k K) \u2192 (\u2200 (a : \u21a5A), \u2191a \u2208 V) \u2192 Ideal \u21a5A"
   },
   "Singularity.valuation_sum_mul_le": {

@@ -12,3 +12,4 @@ lean:
 tier: T6
 route:
 - R2
+notes: The Lean statement of tamnd/singularity-lean#69 and tamnd/singularity-lean#70 uses the affine form of local uniformization (Singularity.HasLocalUniformization). For each finite subset of the valuation ring, there is a finitely generated k-subalgebra A of K with fraction field K that contains the set and is contained in the valuation ring, such that the localization of A at the center is a regular local ring. Volume 3, Proposition 4.1.6 of the handbook proves that this form is equivalent to the form with proper birational morphisms. The statement is not proved. The statement takes the finite set first, because in the theorem of Temkin the purely inseparable extension L depends on the model. It then asks for L and an extension of the valuation to L with a regular center on an affine model of L that contains the set.
