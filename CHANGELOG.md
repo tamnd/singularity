@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.2.11 - 2026-11-24
+
 - The Lean records are at commit bb9fc55 of tamnd/singularity-lean, with 341 declarations. The nodes SG00000031, SG00000032 and SG00000034 are proved, and SG00000033 is defined.
 - The release v0.2.11 of tamnd/singularity-lean.
 - The nodes SG00000031 (the theorem of Hilbert and Serre), SG00000032 (the Hilbert-Samuel polynomial), SG00000033 (the Samuel multiplicity) and SG00000034 (the laws of the multiplicity), each with its Lean declaration in tamnd/singularity-lean#38.
