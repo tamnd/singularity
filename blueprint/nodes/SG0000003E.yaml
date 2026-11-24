@@ -8,10 +8,10 @@ sources:
 uses:
 - SG00000013
 lean:
-  statement: Singularity.LEAN_THETA
-  proof: Singularity.LEAN_THETA_ADD_POW
+  statement: Singularity.logJacobian_add_pow
+  proof: Singularity.logJacobian_add_pow
 tier: T1
 route:
 - R1
 - R5
-notes: The ideal is the image of $F$ under the logarithmic derivations. It does not depend on the choice of $z$ in $z^p + F$. For a base of dimension 3 it is the ideal of the thesis of Cossart [Cos87]. The transformation law under blowups is in [Pos24, Appendix A], and the library does not prove it yet.
+notes: In Lean the ideal is Singularity.logJacobian. The ideal is the image of $F$ under the logarithmic derivations. It does not depend on the choice of $z$ in $z^p + F$. For a base of dimension 3 it is the ideal of the thesis of Cossart [Cos87]. The transformation law under blowups is in [Pos24, Appendix A], and the library does not prove it yet.

@@ -9,10 +9,10 @@ uses:
 - SG0000003E
 - SG00000013
 lean:
-  statement: Singularity.LEAN_DICHOTOMY
-  proof: Singularity.LEAN_DICHOTOMY
+  statement: Singularity.logJacobianOrder_eq_or
+  proof: Singularity.logJacobianOrder_eq_or
 tier: T1
 route:
 - R1
 - R5
-notes: The proof uses only the exponents of the monomials and the cleanness of $F$, so it holds for each number of variables. The library does not prove that $\rho$ does not go up under a point blowup. That is a later item of tamnd/singularity#106.
+notes: The proof uses only the exponents of the monomials and the cleanness of $F$, so it holds for each number of variables. In Lean the ideal is Singularity.residualLogJacobian, the order $\rho$ is Singularity.logJacobianOrder, part 1 is Singularity.residualLogJacobian_not_le_span_X, and part 3 is Singularity.logJacobianOrder_add_one_eq_iff. The library does not prove that $\rho$ does not go up under a point blowup. That is a later item of tamnd/singularity#106.
