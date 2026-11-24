@@ -13,5 +13,4 @@ uses:
 - SG0000001F
 lean:
   statement: Singularity.ResolutionInDim
-  proof: Singularity.resolutionInDim_three
 tier: T5

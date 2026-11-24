@@ -1,7 +1,7 @@
 tag: SG0000000K
 kind: theorem
 title: The regular locus is open
-statement: The regular locus of a variety is open. For an excellent scheme the same holds.
+statement: Let $k$ be a field, possibly imperfect. Let $X$ be a scheme that is locally of finite type over $k$. Then the regular locus of $X$ is open in $X$.
 sources:
 - paper: EGA4-7
 uses:
@@ -12,6 +12,9 @@ uses:
 - SG0000002V
 - SG00000030
 - SG00000036
+- SG00000038
 lean:
-  statement: Singularity.regularLocus_isOpen
+  statement: Singularity.regularLocus_isOpen_of_field
+  proof: Singularity.regularLocus_isOpen_of_field
 tier: T1
+notes: The proof reduces to a finite extension of $k$ over which the fraction field is separably generated, and it uses the flat descent of regularity (SG00000038). The same statement for an excellent scheme is true [EGA4-7, Section 7.8], and it is not in the library.

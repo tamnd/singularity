@@ -1,5 +1,5 @@
 tag: SG0000001J
-kind: theorem
+kind: conjecture
 title: Patching in dimension 4
 statement: If each valuation of a function field of a fourfold has local uniformization, then the fourfold has a resolution.
 sources:

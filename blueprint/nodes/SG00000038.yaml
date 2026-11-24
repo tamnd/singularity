@@ -1,0 +1,13 @@
+tag: SG00000038
+kind: theorem
+title: Flat descent of regularity
+statement: Let $A \to B$ be a flat local homomorphism of Noetherian local rings. If $B$ is regular, then $A$ is regular.
+sources:
+- paper: Mat
+uses:
+- SG0000002K
+- SG0000002M
+lean:
+  statement: Singularity.Algebra.isRegularLocalRing_of_flat
+  proof: Singularity.Algebra.isRegularLocalRing_of_flat
+tier: T1
