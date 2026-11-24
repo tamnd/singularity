@@ -5,10 +5,10 @@ Each release has a section. The newest release is first.
 ## Unreleased
 
 - The node SG00000016 (a kangaroo point) is proved by Singularity.Examples.kangaroo in tamnd/singularity-lean#45. The nodes SG00000011 and SG00000013 have notes on their Lean definitions, and SG00000015 has the exact statement of the bound of Moh, which Lean states and does not prove.
-
 - The node SG0000000K (the regular locus is open) now states the result over an arbitrary field, which can be imperfect. Its Lean proof is Singularity.regularLocus_isOpen_of_field in tamnd/singularity-lean#47. The new node SG00000038 is the flat descent of regularity, with the proof Singularity.Algebra.isRegularLocalRing_of_flat.
 - The node SG0000001J (patching in dimension 4) has the kind conjecture, because it is open.
 - The nodes SG0000001B and SG0000001D named Lean proofs that do not exist. They now have only the Lean statement. The status check showed them as stated before, so no status changes.
+- The new node SG00000039 is one cycle of the first example of Hauser and Perlega, certified by Singularity.Examples.hauserPerlegaCycle in tamnd/singularity-lean#49. The node SG00000017 now states the full theorem of [HP19a], with the residual order that tends to infinity. Its Lean statement is planned, because the Lean proof covers only one cycle.
 
 ## 0.2.13 - 2026-11-24
 
