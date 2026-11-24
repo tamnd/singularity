@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "0ce0f4d419e47fab02961146da0d03ae0fc2fcc1",
+  "commit": "06a7ed6e62a342de099648520b284626492cd366",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "0ce0f4d419e47fab02961146da0d03ae0fc2fcc1",
+ "commit": "06a7ed6e62a342de099648520b284626492cd366",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -5802,6 +5802,17 @@
    "line": 775,
    "type": "\u2200 {K : Type u_2} [inst : Field K] [CharP K 2],\n  (Singularity.zShift Singularity.Examples.cycleH1) (Singularity.purelyInseparable 8 Singularity.Examples.cycleF1') =\n    Singularity.purelyInseparable 8 Singularity.Examples.cycleF1"
   },
+  "Singularity.Fidelity.algebraMap_mem_of_hasLocalUniformization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/LocalUniformization.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K},\n  Singularity.HasLocalUniformization k V \u2192 \u2200 (a : k), (algebraMap k K) a \u2208 V"
+  },
   "Singularity.Fidelity.codiag": {
    "axioms": [
     "Classical.choice",
@@ -5812,6 +5823,17 @@
    "kind": "def",
    "line": 23,
    "type": "(X : AlgebraicGeometry.Scheme) \u2192 X \u2a3f X \u27f6 X"
+  },
+  "Singularity.Fidelity.hasLocalUniformization_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/LocalUniformization.lean",
+   "kind": "theorem",
+   "line": 23,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K],\n  Singularity.IsFunctionField k K \u2192 Singularity.HasLocalUniformization k \u22a4"
   },
   "Singularity.Fidelity.hasNormalCrossings_top": {
    "axioms": [
@@ -5845,6 +5867,17 @@
    "kind": "theorem",
    "line": 56,
    "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192 Singularity.IsEmbeddedResolution \u22a4 (CategoryTheory.CategoryStruct.id Z) \u22a4 \u22a4"
+  },
+  "Singularity.Fidelity.isFunctionField_of_hasLocalUniformization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/LocalUniformization.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K},\n  Singularity.HasLocalUniformization k V \u2192 Singularity.IsFunctionField k K"
   },
   "Singularity.Fidelity.isResolution_id": {
    "axioms": [
@@ -5923,6 +5956,17 @@
    "line": 47,
    "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} (\u03c0 : Z' \u27f6 Z) (U : Z.Opens), Singularity.strictTransform \u22a4 \u03c0 U = \u22a4"
   },
+  "Singularity.HasLocalUniformization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 90,
+   "type": "(k : Type u_1) \u2192 {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 Prop"
+  },
   "Singularity.HasNormalCrossings": {
    "axioms": [
     "Classical.choice",
@@ -5955,6 +5999,28 @@
    "kind": "def",
    "line": 21,
    "type": "\u2115 \u2192 \u2115 \u2192 Prop"
+  },
+  "Singularity.IsAbhyankarValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 97,
+   "type": "(k : Type u_1) \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 (V : ValuationSubring K) \u2192 [Algebra k \u21a5V] \u2192 Prop"
+  },
+  "Singularity.IsAffineModel": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 74,
+   "type": "{k : Type u_1} \u2192 {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [inst_2 : Algebra k K] \u2192 Subalgebra k K \u2192 Prop"
   },
   "Singularity.IsClean": {
    "axioms": [
@@ -6055,6 +6121,17 @@
    "line": 214,
    "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 \u2191E.support = \u21d1\u03c0 \u207b\u00b9' (\u2191U)\u1d9c"
   },
+  "Singularity.IsFunctionField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 68,
+   "type": "(k : Type u_1) \u2192 (K : Type u_2) \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 Prop"
+  },
   "Singularity.IsMuIrreducible": {
    "axioms": [
     "Classical.choice",
@@ -6076,6 +6153,94 @@
    "kind": "def",
    "line": 81,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type u_2} \u2192 [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Polynomial K \u2192 Prop"
+  },
+  "Singularity.IsMuMinimal.augmentedValuationFun_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 211,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u03b3 \u2264 \u03bc \u03c6 \u2192 \u2200 (f : Polynomial K), Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f \u2264 \u03bc f"
+  },
+  "Singularity.IsMuMinimal.map_add_mul_eq_max": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 137,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  Singularity.IsMuMinimal \u03bc \u03c6 \u2192\n    \u2200 {r : Polynomial K}, r.degree < \u03c6.degree \u2192 \u2200 (q : Polynomial K), \u03bc (r + \u03c6 * q) = max (\u03bc r) (\u03bc (\u03c6 * q))"
+  },
+  "Singularity.IsMuMinimal.map_eq_augmentedValuationFun": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 175,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u2200 (f : Polynomial K), \u03bc f = Singularity.augmentedValuationFun \u03bc \u03c6 (\u03bc \u03c6) f"
+  },
+  "Singularity.IsMuMinimal.map_eq_max": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 151,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u2200 (f : Polynomial K), \u03bc f = max (\u03bc (f %\u2098 \u03c6)) (\u03bc (\u03c6 * (f /\u2098 \u03c6)))"
+  },
+  "Singularity.IsMuMinimal.map_expansionCoeff_mul_pow_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 162,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u2200 (f : Polynomial K) (j : \u2115), \u03bc (Singularity.expansionCoeff \u03c6 f j) * \u03bc \u03c6 ^ j \u2264 \u03bc f"
+  },
+  "Singularity.IsMuMinimal.map_expansionCoeff_pow_mul_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 238,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      Singularity.IsMuMinimal \u03bc \u03c6 \u2192\n        \u03b3 \u2264 \u03bc \u03c6 \u2192 \u2200 (p : Polynomial K) (n k : \u2115), \u03bc (Singularity.expansionCoeff \u03c6 (\u03c6 ^ n * p) k) * \u03b3 ^ k \u2264 \u03bc p * \u03b3 ^ n"
+  },
+  "Singularity.IsMuMinimal.map_modByMonic_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 157,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u2200 (f : Polynomial K), \u03bc (f %\u2098 \u03c6) \u2264 \u03bc f"
+  },
+  "Singularity.IsMuMinimal.not_muDvd_of_degree_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 126,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  Singularity.IsMuMinimal \u03bc \u03c6 \u2192 \u2200 {a : Polynomial K}, a.degree < \u03c6.degree \u2192 \u00acSingularity.MuDvd \u03bc \u03c6 a"
   },
   "Singularity.IsNormallyFlatAt": {
    "axioms": [
@@ -6275,6 +6440,17 @@
    "line": 85,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type u_2} \u2192 [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Polynomial K \u2192 Prop"
   },
+  "Singularity.KeyPolynomial.augmentedValuationFun_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 250,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080},\n  Singularity.KeyPolynomial \u03bc \u03c6 \u2192\n    \u03b3 \u2264 \u03bc \u03c6 \u2192\n      \u2200 (f g : Polynomial K),\n        Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 (f * g) =\n          Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f * Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 g"
+  },
   "Singularity.KeyPolynomial.isMuIrreducible": {
    "axioms": [
     "Classical.choice",
@@ -6296,6 +6472,17 @@
    "kind": "theorem",
    "line": 89,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K}, Singularity.KeyPolynomial \u03bc \u03c6 \u2192 Singularity.IsMuMinimal \u03bc \u03c6"
+  },
+  "Singularity.KeyPolynomial.map_mul_modByMonic": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 224,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {\u03c6 : Polynomial K}\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.KeyPolynomial \u03bc \u03c6 \u2192\n    \u2200 {a b : Polynomial K}, a.degree < \u03c6.degree \u2192 b.degree < \u03c6.degree \u2192 \u03bc (a * b %\u2098 \u03c6) = \u03bc (a * b)"
   },
   "Singularity.KeyPolynomial.monic": {
    "axioms": [
@@ -6351,6 +6538,28 @@
    "kind": "theorem",
    "line": 162,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K}, Singularity.KeyPolynomial \u03bc \u03c6 \u2192 \u00acSingularity.MuDvd \u03bc \u03c6 1"
+  },
+  "Singularity.LocalUniformizationFour": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 143,
+   "type": "Prop"
+  },
+  "Singularity.LocalUniformizationInDim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 127,
+   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
   },
   "Singularity.MuDvd": {
    "axioms": [
@@ -7034,6 +7243,17 @@
    "line": 180,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (A : ValuationSubring K) {k : Type u_2} [inst_1 : CommRing k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5A] [IsScalarTower k (\u21a5A) K] {\u03b9 : Type u_3} {\u03ba : Type u_4} (x : \u03b9 \u2192 K\u02e3),\n  (LinearIndependent \u2124 fun i => Additive.ofMul ((Units.map \u2191A.valuation) (x i))) \u2192\n    \u2200 (y : \u03ba \u2192 \u21a5A),\n      (AlgebraicIndependent k fun j => (IsLocalRing.residue \u21a5A) (y j)) \u2192\n        AlgebraicIndependent k (Sum.elim (fun i => \u2191(x i)) fun j => \u2191(y j))"
   },
+  "Singularity.augmentedValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "def",
+   "line": 353,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type u_2} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        (\u03bc : Valuation (Polynomial K) \u0393\u2080) \u2192\n          (\u03c6 : Polynomial K) \u2192 (\u03b3 : \u0393\u2080) \u2192 Singularity.KeyPolynomial \u03bc \u03c6 \u2192 \u03b3 \u2264 \u03bc \u03c6 \u2192 Valuation (Polynomial K) \u0393\u2080"
+  },
   "Singularity.augmentedValuationFun": {
    "axioms": [
     "Classical.choice",
@@ -7089,6 +7309,17 @@
    "line": 560,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      \u2200 {f : Polynomial K} {c : \u0393\u2080},\n        Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f \u2264 c \u2194 \u2200 (j : \u2115), \u03bc (Singularity.expansionCoeff \u03c6 f j) * \u03b3 ^ j \u2264 c"
   },
+  "Singularity.augmentedValuationFun_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      \u2200 {\u03b3 \u03b3' : \u0393\u2080},\n        \u03b3 \u2264 \u03b3' \u2192\n          \u2200 (f : Polynomial K), Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f \u2264 Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3' f"
+  },
   "Singularity.augmentedValuationFun_neg": {
    "axioms": [
     "Classical.choice",
@@ -7143,6 +7374,116 @@
    "kind": "theorem",
    "line": 566,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080}, Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 0 = 0"
+  },
+  "Singularity.augmentedValuationFun_zero_right": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 417,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 0 < \u03c6.natDegree \u2192 \u2200 (f : Polynomial K), Singularity.augmentedValuationFun \u03bc \u03c6 0 f = \u03bc (f %\u2098 \u03c6)"
+  },
+  "Singularity.augmentedValuation_C": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 380,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6)\n  (c : K), (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) (Polynomial.C c) = \u03bc (Polynomial.C c)"
+  },
+  "Singularity.augmentedValuation_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 364,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6)\n  (f : Polynomial K), (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) f = Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f"
+  },
+  "Singularity.augmentedValuation_eq_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 396,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6),\n  Singularity.augmentedValuation \u03bc \u03c6 (\u03bc \u03c6) h\u03c6 \u22ef = \u03bc"
+  },
+  "Singularity.augmentedValuation_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 402,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6),\n  (\u2200 (f : Polynomial K), \u03bc f = 0 \u2194 f = 0) \u2192\n    \u03b3 \u2260 0 \u2192 \u2200 {f : Polynomial K}, (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) f = 0 \u2194 f = 0"
+  },
+  "Singularity.augmentedValuation_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 370,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6)\n  (f : Polynomial K), (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) f \u2264 \u03bc f"
+  },
+  "Singularity.augmentedValuation_of_degree_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 375,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6)\n  {f : Polynomial K}, f.degree < \u03c6.degree \u2192 (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) f = \u03bc f"
+  },
+  "Singularity.augmentedValuation_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 385,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6),\n  (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) \u03c6 = \u03b3"
+  },
+  "Singularity.augmentedValuation_self_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 390,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 < \u03bc \u03c6),\n  (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 \u22ef) \u03c6 < \u03bc \u03c6"
+  },
+  "Singularity.augmentedValuation_zero_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 429,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6),\n  (\u2200 (f : Polynomial K), \u03bc f = 0 \u2194 f = 0) \u2192\n    \u2200 {f : Polynomial K}, (Singularity.augmentedValuation \u03bc \u03c6 0 h\u03c6 \u22ef) f = 0 \u2194 \u03c6 \u2223 f"
   },
   "Singularity.blowupDivisor": {
    "axioms": [
@@ -7647,6 +7988,17 @@
    "line": 185,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 \u2203 d, f.coeff d \u2260 0 \u2227 Singularity.weightedOrd w f = \u2191((Finsupp.weight w) d)"
   },
+  "Singularity.exists_eq_augmentedValuationFun": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 217,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (f : Polynomial K),\n  \u2203 j, \u03bc (Singularity.expansionCoeff \u03c6 f j) * \u03b3 ^ j = Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f"
+  },
   "Singularity.exists_eq_monomialValuationFun": {
    "axioms": [
     "Classical.choice",
@@ -7801,6 +8153,28 @@
    "line": 512,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 0 < \u03c6.natDegree \u2192 \u2200 {f : Polynomial K} {j : \u2115}, f.natDegree < j \u2192 Singularity.expansionCoeff \u03c6 f j = 0"
   },
+  "Singularity.expansionCoeff_mul_left_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    \u2200 (h : Polynomial K) (j : \u2115), Singularity.expansionCoeff \u03c6 (\u03c6 * h) (j + 1) = Singularity.expansionCoeff \u03c6 h j"
+  },
+  "Singularity.expansionCoeff_mul_left_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 91,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 \u2200 (h : Polynomial K), Singularity.expansionCoeff \u03c6 (\u03c6 * h) 0 = 0"
+  },
   "Singularity.expansionCoeff_neg": {
    "axioms": [
     "Classical.choice",
@@ -7812,6 +8186,28 @@
    "line": 466,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K} (f : Polynomial K) (j : \u2115),\n  Singularity.expansionCoeff \u03c6 (-f) j = -Singularity.expansionCoeff \u03c6 f j"
   },
+  "Singularity.expansionCoeff_pow_mul_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    \u2200 (h : Polynomial K) (n j : \u2115), Singularity.expansionCoeff \u03c6 (\u03c6 ^ n * h) (j + n) = Singularity.expansionCoeff \u03c6 h j"
+  },
+  "Singularity.expansionCoeff_pow_mul_of_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 \u2200 (h : Polynomial K) {n j : \u2115}, j < n \u2192 Singularity.expansionCoeff \u03c6 (\u03c6 ^ n * h) j = 0"
+  },
   "Singularity.expansionCoeff_succ": {
    "axioms": [
     "Classical.choice",
@@ -7822,6 +8218,17 @@
    "kind": "theorem",
    "line": 443,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K} (f : Polynomial K) (j : \u2115),\n  Singularity.expansionCoeff \u03c6 f (j + 1) = Singularity.expansionCoeff \u03c6 (f /\u2098 \u03c6) j"
+  },
+  "Singularity.expansionCoeff_sum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03c6 : Polynomial K} {\u03b9 : Type u_3} (s : Finset \u03b9) (F : \u03b9 \u2192 Polynomial K) (j : \u2115),\n  Singularity.expansionCoeff \u03c6 (\u2211 i \u2208 s, F i) j = \u2211 i \u2208 s, Singularity.expansionCoeff \u03c6 (F i) j"
   },
   "Singularity.expansionCoeff_zero": {
    "axioms": [
@@ -8109,6 +8516,17 @@
    "line": 193,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 IsLeast ((fun v => \u2211 i, \u2191(w i) * v i) '' Singularity.newtonPolyhedron f) \u2191(Singularity.weightedOrd w f).toNat"
   },
+  "Singularity.isMuMinimal_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 181,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      (Singularity.IsMuMinimal \u03bc \u03c6 \u2194 \u2200 (f : Polynomial K), \u03bc f = Singularity.augmentedValuationFun \u03bc \u03c6 (\u03bc \u03c6) f)"
+  },
   "Singularity.isNormallyFlatAt_maximalIdeal": {
    "axioms": [
     "Classical.choice",
@@ -8141,6 +8559,17 @@
    "kind": "theorem",
    "line": 139,
    "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {z : \u21a5Z} (hz : IsClosed {z}),\n  z \u2208 X.support \u2192\n    Singularity.IsPermissible X\n      (AlgebraicGeometry.Scheme.IdealSheafData.vanishingIdeal { carrier := {z}, isClosed' := hz })"
+  },
+  "Singularity.isPrime_valuationCenter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V), (Singularity.valuationCenter V A h).IsPrime"
   },
   "Singularity.isRegularLocalRing_of_isField": {
    "axioms": [
@@ -8537,6 +8966,39 @@
    "kind": "theorem",
    "line": 359,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] [inst_2 : DecidableEq \u03c3]\n  (f : MvPolynomial \u03c3 R), (Singularity.linearChange 1) f = f"
+  },
+  "Singularity.localUniformization_abhyankar": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 108,
+   "type": "Prop"
+  },
+  "Singularity.localUniformization_inseparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 117,
+   "type": "Prop"
+  },
+  "Singularity.localUniformization_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 135,
+   "type": "Prop"
   },
   "Singularity.map_ideal_le_stalkIdeal": {
    "axioms": [
@@ -9781,6 +10243,17 @@
    "line": 120,
    "type": "Singularity.ReductionToIntegral \u2192 \u2200 (n : \u2115), Singularity.ResolutionInDim 0 n"
   },
+  "Singularity.resolution_of_localUniformization_four": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 147,
+   "type": "Prop"
+  },
   "Singularity.ringKrullDim_p1Ring_le": {
    "axioms": [
     "Classical.choice",
@@ -10000,6 +10473,39 @@
    "kind": "theorem",
    "line": 62,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k], Singularity.translate 0 = MvPolynomial.rename some"
+  },
+  "Singularity.valuationCenter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/LocalUniformization.lean",
+   "kind": "def",
+   "line": 78,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192 (V : ValuationSubring K) \u2192 (A : Subalgebra k K) \u2192 (\u2200 (a : \u21a5A), \u2191a \u2208 V) \u2192 Ideal \u21a5A"
+  },
+  "Singularity.valuation_sum_mul_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {\u0393\u2080 : Type u_2} [inst : LinearOrderedCommGroupWithZero \u0393\u2080] {R : Type u_3} [inst_1 : Ring R] (v : Valuation R \u0393\u2080)\n  {\u03b9 : Type u_4} {s : Finset \u03b9} {F : \u03b9 \u2192 R} {c C : \u0393\u2080}, (\u2200 i \u2208 s, v (F i) * c \u2264 C) \u2192 v (\u2211 i \u2208 s, F i) * c \u2264 C"
+  },
+  "Singularity.valuation_sum_mul_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Augmentation.lean",
+   "kind": "theorem",
+   "line": 62,
+   "type": "\u2200 {\u0393\u2080 : Type u_2} [inst : LinearOrderedCommGroupWithZero \u0393\u2080] {R : Type u_3} [inst_1 : Ring R] (v : Valuation R \u0393\u2080)\n  {\u03b9 : Type u_4} {s : Finset \u03b9} {F : \u03b9 \u2192 R} {c C : \u0393\u2080}, 0 < C \u2192 (\u2200 i \u2208 s, v (F i) * c < C) \u2192 v (\u2211 i \u2208 s, F i) * c < C"
   },
   "Singularity.weightedOrd": {
    "axioms": [

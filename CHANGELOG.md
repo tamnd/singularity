@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000000Z has notes on the Lean proof of parts 1 and 2 of the theorem of MacLane-Vaquié, from tamnd/singularity-lean#68.
+- records/lean.json records the Lean build at commit 06a7ed6, with 972 declarations. The build has the statements of local uniformization of tamnd/singularity-lean#69.
 ## 0.4.4 - 2026-11-24
 
 - The handbook page links to the handbook edition 0.4.4. Volume 3 of this edition gives the Lean definitions of the key polynomials.
