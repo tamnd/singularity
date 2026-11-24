@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.7 - 2026-11-25
+
 ### Added
 
 - The papers CP15, Abh59, Cos92, Hir67b, Moh96 and Moh14 are new, for Volume 6 of the handbook. CP15 is the paper of Cossart-Piltant on characteristic polyhedra without completion. Abh59 is the book of Abhyankar on ramification theory, which [CP19, Section 4.2] uses. Cos92 is the paper of Cossart that gives Step 5 of the proof of Cutkosky for threefolds. Hir67b is the Bowdoin lectures of Hironaka on excellent surfaces. Moh96 and Moh14 are two papers of Moh that [CP19] cites. Each record gives the journal, the volume, the pages and the DOI when there is one. The book of Cutkosky already has the record Cut04.
