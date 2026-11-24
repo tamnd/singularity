@@ -1,7 +1,7 @@
 tag: SG0000000Q
 kind: definition
 title: The Hilbert-Samuel function
-statement: For an ideal $I$ of a ring $R$ and an $R$-module $M$, the function $n \mapsto \ell(M/I^n M)$ with values in $\mathbb{N} \cup \{\infty\}$. For a Noetherian local ring $(R, \mathfrak{m})$ the classical function $n \mapsto \ell(R/\mathfrak{m}^{n+1})$ is its value at $n + 1$. The Samuel multiplicity is the normalized leading coefficient of the Hilbert-Samuel polynomial, and it needs the theorem of Hilbert and Samuel, which is not in Lean yet.
+statement: For an ideal $I$ of a ring $R$ and an $R$-module $M$, the function $n \mapsto \ell(M/I^n M)$ with values in $\mathbb{N} \cup \{\infty\}$. For a Noetherian local ring $(R, \mathfrak{m})$ the classical function $n \mapsto \ell(R/\mathfrak{m}^{n+1})$ is its value at $n + 1$. The Samuel multiplicity is the normalized leading coefficient of the Hilbert-Samuel polynomial, and it needs the theorem of Hilbert and Samuel, which is SG00000032.
 sources:
 - paper: Benn70
 - paper: AM69
