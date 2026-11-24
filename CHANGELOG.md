@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The handbook page links to the handbook edition 0.4.2. Volume 4 of this edition gives the Lean statement of embedded resolution.
+
 ## 0.4.2 - 2026-11-24
 
 - The node SG0000001C (embedded resolution of surfaces) has the Lean statement Singularity.EmbeddedResolutionSurface of tamnd/singularity-lean#61. The statement is weaker than the theorem of [CJS20], and it is not proved. The notes of the node give the differences.
