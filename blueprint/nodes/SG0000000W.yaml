@@ -1,9 +1,10 @@
 tag: SG0000000W
 kind: definition
 title: Hasse-Schmidt derivations
-statement: Higher derivations and the differential operators of a polynomial ring in characteristic $p$.
+statement: Higher derivations and the differential operators of a polynomial ring in characteristic $p$. For a multi-index $\alpha$, the Hasse-Schmidt derivative $D^\alpha$ of $R[x_1, \dots, x_n]$ is the coefficient of $y^\alpha$ in $f(x + y)$, so that $D^\alpha(x^\beta) = \binom{\beta}{\alpha} x^{\beta - \alpha}$.
 sources:
 - paper: HSDer
 lean:
-  statement: Singularity.HasseDeriv
+  statement: Singularity.Algebra.MvHasse.hasseDeriv
 tier: T1
+notes: The Lean library defines $D^\alpha$ over each commutative semiring and proves the Leibniz rule (Singularity.Algebra.MvHasse.hasseDeriv_mul), the composition rule $D^\alpha D^\beta = \binom{\alpha + \beta}{\alpha} D^{\alpha + \beta}$ (Singularity.Algebra.MvHasse.hasseDeriv_comp), the Taylor formula (Singularity.Algebra.MvHasse.taylor_eq_sum) and the agreement with Polynomial.hasseDeriv in one variable (Singularity.Algebra.MvHasse.uniqueAlgEquiv_hasseDeriv). This is Volume 1, Section 6.3 of the handbook (tamnd/singularity-lean#91).
