@@ -4,6 +4,9 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The nodes SG0000002W (effective Cartier divisors), SG0000002X (Zariski's Main Theorem) and SG0000002Y (the dimension of a variety). With these nodes, each row of tier T1 in the corpus has a node on the map.
+- The nodes SG0000002Z (a local ring is regular if and only if its completion is regular) and SG00000030 (excellent rings), for Chapters 4 and 5 of Volume 1 of the handbook. The node SG0000000K now uses SG00000030.
+
 ## 0.2.10 - 2026-11-24
 
 - The node SG0000002V (the regular locus of a scheme is open in characteristic zero), with its Lean proof `Singularity.regularLocus_isOpen_of_charZero`. The node SG0000000K now uses SG0000002V. SG0000000K stays planned, because the case of positive characteristic is not proved.

@@ -1,0 +1,8 @@
+tag: SG0000002W
+kind: definition
+title: Effective Cartier divisors
+statement: An effective Cartier divisor on a scheme $X$ is a closed subscheme $D \subseteq X$ whose ideal sheaf is an invertible $\mathcal{O}_X$-module. Locally, $D$ is cut out by one nonzerodivisor.
+sources:
+- paper: Cart
+tier: T1
+notes: The exceptional divisor of a blowup is an effective Cartier divisor. The project takes the definition from the base when the bridge is done.

@@ -10,6 +10,7 @@ uses:
 - SG0000002Q
 - SG0000002T
 - SG0000002V
+- SG00000030
 lean:
   statement: Singularity.regularLocus_isOpen
 tier: T1
