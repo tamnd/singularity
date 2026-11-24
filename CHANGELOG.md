@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The paper Knu83 is new, for Volume 8 of the handbook. It is the paper of Knudsen on the stacks of stable pointed curves, which de Jong uses for his alterations [dJ96, 2.24]. The record gives the journal, the volume, the pages and the DOI.
+
 ## 0.4.8 - 2026-11-25
 
 ### Changed
