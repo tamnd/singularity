@@ -10,8 +10,11 @@ uses:
 - SG0000003F
 - SG0000003M
 - SG0000003A
+lean:
+  statement: Singularity.logJacobianOrder_cleanPart_le
+  proof: Singularity.logJacobianOrder_cleanPart_le
 tier: T2
 route:
 - R1
 - R5
-notes: The proof uses part 1 of the dichotomy SG0000003F at the new point and the order of the weak transform SG0000003A. It does not use the number of variables. The corollary is Moh's bound SG00000015 for $q = p$ at each point. The residual order goes up only when $\rho$ stays the same and the type changes from 0 to 1, as at the kangaroo point of $x^3 y + x y^3$ in characteristic 2. The Lean library does not prove it yet. It is an item of tamnd/singularity#106.
+notes: The proof uses part 1 of the dichotomy SG0000003F at the new point and the order of the weak transform SG0000003A. It does not use the number of variables. The corollary is Moh's bound SG00000015 for $q = p$ at each point. The residual order goes up only when $\rho$ stays the same and the type changes from 0 to 1, as at the kangaroo point of $x^3 y + x y^3$ in characteristic 2. The Lean library proves the theorem and the corollary for polynomials (tamnd/singularity-lean#93). The Lean proof stays in $k[x]$ and replaces unique factorization in $K[[x]]$ with divisibility by monomials.
