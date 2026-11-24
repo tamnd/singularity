@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.6 - 2026-11-24
+
 ### Changed
 
 - `records/lean.json` has the record of tamnd/singularity-lean at commit e66b7a2, with 987 declarations. The new proofs are the first claim of part 3 of the theorem of MacLane-Vaquié (tamnd/singularity-lean#72) and local uniformization in transcendence degree at most 1 (tamnd/singularity-lean#73).
