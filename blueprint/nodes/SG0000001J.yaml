@@ -14,4 +14,4 @@ lean:
 tier: T6
 route:
 - R2
-notes: In dimension 4 this is open. Expert question 6 asks whether it is a separate problem.
+notes: In dimension 4 this is open. Expert question 6 asks whether it is a separate problem. The Lean statement of tamnd/singularity-lean#69 is for characteristic p. Its hypothesis is local uniformization in the affine form (Singularity.HasLocalUniformization) in each transcendence degree at most 4, because a variety of dimension 4 can have components of smaller dimension. Local uniformization is known in transcendence degree at most 3, so this hypothesis is the same as the conjecture SG0000001H. The statement is open.
