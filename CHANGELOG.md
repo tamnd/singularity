@@ -4,6 +4,7 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG00000016 (a kangaroo point) is proved by Singularity.Examples.kangaroo in tamnd/singularity-lean#45. The nodes SG00000011 and SG00000013 have notes on their Lean definitions, and SG00000015 has the exact statement of the bound of Moh, which Lean states and does not prove.
 ## 0.2.13 - 2026-11-24
 
 - The Lean records are at commit 82bb73d of tamnd/singularity-lean, with 368 declarations. The node SG00000037 is proved.

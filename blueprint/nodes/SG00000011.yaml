@@ -7,3 +7,4 @@ sources:
 lean:
   statement: Singularity.newtonPolyhedron
 tier: T3
+notes: The Lean definition is for polynomials. Singularity.newtonPolyhedron_mul_subset proves that the polyhedron of a product is in the Minkowski sum, and Singularity.isLeast_sum_newtonPolyhedron proves that the order is the least total degree on the polyhedron.
