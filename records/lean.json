@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "4c43a6c07c863af11636ed95af6fed1811082d66",
+  "commit": "5a6522057b9d71a6965ee109d4f7b651c2d15771",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "bb9fc55009098f98ab1f6f8d27f318803e52319e",
+ "commit": "4baa0109a570a8e9a66cea7dcdb200fe539124c6",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -497,7 +497,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 154,
+   "line": 160,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] [Module.Finite A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2203 c, c \u2260 0 \u2227 \u2200 (d : B), (algebraMap A B) c * d \u2208 A[z]"
   },
   "Singularity.Algebra.exists_hilbertSamuel_polynomial": {
@@ -596,7 +596,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 125,
+   "line": 131,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [inst_1 : IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] (z : B),\n  IsIntegral A z \u2192\n    (FractionRing A)\u27ee(algebraMap B (FractionRing B)) z\u27ef = \u22a4 \u2192 \u2200 (d : B), \u2203 b, b \u2260 0 \u2227 (algebraMap A B) b * d \u2208 A[z]"
   },
   "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus": {
@@ -607,8 +607,30 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 180,
+   "line": 253,
    "type": "\u2200 {A B : Type u} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [IsDomain B] [inst_4 : Algebra A B]\n  [FaithfulSMul A B] [IsRegularRing A] [IsIntegrallyClosed A] [Module.Finite A B] [CharZero (FractionRing A)],\n  \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus B"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_algebraicIndependent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 146,
+   "type": "\u2200 {k D K \u03b9 : Type u} [inst : Field k] [inst_1 : CommRing D] [IsDomain D] [inst_3 : Algebra k D] [Algebra.FiniteType k D]\n  [inst_5 : Field K] [inst_6 : Algebra D K] [IsFractionRing D K] [inst_8 : Algebra k K] [IsScalarTower k D K] [Finite \u03b9]\n  (y : \u03b9 \u2192 D),\n  AlgebraicIndependent k (\u21d1(algebraMap D K) \u2218 y) \u2192\n    \u2200 [Algebra.IsSeparable (\u21a5(IntermediateField.adjoin k (Set.range (\u21d1(algebraMap D K) \u2218 y)))) K],\n      \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_away": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {D : Type u_1} {B : Type u_2} [inst : CommRing D] [IsDomain D] [inst_2 : CommRing B] [inst_3 : Algebra D B] (h : D)\n  [IsLocalization.Away h B],\n  (\u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus B) \u2192\n    \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
   },
   "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_field": {
    "axioms": [
@@ -618,8 +640,30 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 247,
+   "line": 264,
    "type": "\u2200 (k : Type u) [inst : Field k] [CharZero k] (D : Type u) [inst_2 : CommRing D] [IsDomain D] [inst_4 : Algebra k D]\n  [Algebra.FiniteType k D], \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_isSeparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegular.lean",
+   "kind": "theorem",
+   "line": 186,
+   "type": "\u2200 {A B : Type u} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B] [inst_4 : Algebra A B]\n  [inst_5 : FaithfulSMul A B] [IsRegularRing A] [IsIntegrallyClosed A] [Module.Finite A B]\n  [Algebra.IsSeparable (FractionRing A) (FractionRing B)],\n  \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus B"
+  },
+  "Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_perfectField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 294,
+   "type": "\u2200 (k : Type u) [inst : Field k] [PerfectField k] (D : Type u) [inst_2 : CommRing D] [IsDomain D] [inst_4 : Algebra k D]\n  [Algebra.FiniteType k D], \u2203 f, f \u2260 0 \u2227 \u2191(PrimeSpectrum.basicOpen f) \u2286 Singularity.Algebra.regularLocus D"
   },
   "Singularity.Algebra.exists_notMem_forall_mul_mem": {
    "axioms": [
@@ -1595,7 +1639,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 61,
+   "line": 67,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S],\n  Function.Injective \u21d1(algebraMap R S) \u2192\n    \u2200 (P : Ideal S) [inst_3 : P.IsPrime] (c : R),\n      (algebraMap R S) c \u2209 P \u2192\n        (\u2200 (s : S), \u2203 r, (algebraMap R S) r = (algebraMap R S) c * s) \u2192\n          IsLocalization.AtPrime (Localization.AtPrime P) (Ideal.comap (algebraMap R S) P)"
   },
   "Singularity.Algebra.isLocalization_localization_quotient": {
@@ -1661,7 +1705,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 262,
+   "line": 279,
    "type": "\u2200 (k : Type u) [inst : Field k] [CharZero k] (R : Type u) [inst_2 : CommRing R] [inst_3 : Algebra k R]\n  [Algebra.FiniteType k R], IsOpen (Singularity.Algebra.regularLocus R)"
   },
   "Singularity.Algebra.isOpen_regularLocus_of_exists_isOpen": {
@@ -1674,6 +1718,17 @@
    "kind": "theorem",
    "line": 432,
    "type": "\u2200 {A : Type u} [inst : CommRing A] [IsNoetherianRing A],\n  (\u2200 p \u2208 Singularity.Algebra.regularLocus A,\n      \u2203 U, IsOpen U \u2227 U.Nonempty \u2227 U \u2286 Singularity.Algebra.regularLocus (A \u29f8 p.asIdeal)) \u2192\n    IsOpen (Singularity.Algebra.regularLocus A)"
+  },
+  "Singularity.Algebra.isOpen_regularLocus_of_perfectField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 340,
+   "type": "\u2200 (k : Type u) [inst : Field k] [PerfectField k] (R : Type u) [inst_2 : CommRing R] [inst_3 : Algebra k R]\n  [Algebra.FiniteType k R], IsOpen (Singularity.Algebra.regularLocus R)"
   },
   "Singularity.Algebra.isPrime_map_quotient": {
    "axioms": [
@@ -1784,6 +1839,28 @@
    "kind": "theorem",
    "line": 67,
    "type": "\u2200 {k : Type v} [inst : CommRing k] {A : Type u} [inst_1 : CommRing A] [inst_2 : Algebra k A] [IsNoetherianRing A]\n  (D : Derivation k A A) (q : Ideal A) [inst_4 : q.IsPrime] [IsRegularLocalRing (Localization.AtPrime q)] {F : A},\n  F \u2208 q \u2192\n    D F \u2209 q \u2192\n      IsRegularLocalRing (Localization.AtPrime q \u29f8 Ideal.map (algebraMap A (Localization.AtPrime q)) (Ideal.span {F}))"
+  },
+  "Singularity.Algebra.isRegularRing_of_isLocalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S] [IsRegularRing R]\n  (M : Submonoid R) [IsLocalization M S], IsRegularRing S"
+  },
+  "Singularity.Algebra.isSeparable_fractionRing_of_isFractionRing": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/GenericRegularPerfect.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {A : Type u_1} {B : Type u_2} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] (KA : Type u_3) (KB : Type u_4) [inst_6 : Field KA]\n  [inst_7 : Field KB] [inst_8 : Algebra A KA] [IsFractionRing A KA] [inst_10 : Algebra B KB] [IsFractionRing B KB]\n  [inst_12 : Algebra KA KB] [inst_13 : Algebra A KB] [IsScalarTower A KA KB] [IsScalarTower A B KB]\n  [Algebra.IsSeparable KA KB], Algebra.IsSeparable (FractionRing A) (FractionRing B)"
   },
   "Singularity.Algebra.kerGrading": {
    "axioms": [
@@ -2009,7 +2086,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 93,
+   "line": 99,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] [inst_2 : Algebra R S],\n  Function.Injective \u21d1(algebraMap R S) \u2192\n    \u2200 (P : PrimeSpectrum S) (c : R),\n      (algebraMap R S) c \u2209 P.asIdeal \u2192\n        (\u2200 (s : S), \u2203 r, (algebraMap R S) r = (algebraMap R S) c * s) \u2192\n          { asIdeal := Ideal.comap (algebraMap R S) P.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n            P \u2208 Singularity.Algebra.regularLocus S"
   },
   "Singularity.Algebra.mem_regularLocus_of_ringEquiv": {
@@ -2020,7 +2097,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 52,
+   "line": 58,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (e : R \u2243+* S) (p : PrimeSpectrum S),\n  { asIdeal := Ideal.comap e p.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n    p \u2208 Singularity.Algebra.regularLocus S"
   },
   "Singularity.Algebra.module_finite_grAlgebra": {
@@ -2295,7 +2372,7 @@
    ],
    "file": "Singularity/Algebra/GenericRegular.lean",
    "kind": "theorem",
-   "line": 107,
+   "line": 113,
    "type": "\u2200 {A : Type u} [inst : CommRing A] [IsRegularRing A] (F : Polynomial A),\n  \u2191(PrimeSpectrum.basicOpen ((AdjoinRoot.mk F) (Polynomial.derivative F))) \u2286\n    Singularity.Algebra.regularLocus (AdjoinRoot F)"
   },
   "Singularity.Algebra.regularLocus_quotient_of_derivation": {
@@ -3603,7 +3680,7 @@
    ],
    "file": "Singularity/Scheme/RegularLocus.lean",
    "kind": "theorem",
-   "line": 35,
+   "line": 41,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme} {U : X.Opens} (hU : AlgebraicGeometry.IsAffineOpen U) (x : \u21a5U),\n  \u2191x \u2208 Singularity.regularLocus X \u2194\n    hU.primeIdealOf x \u2208 Singularity.Algebra.regularLocus \u2191(X.presheaf.obj (Opposite.op U))"
   },
   "Singularity.p1Structure": {
@@ -3680,8 +3757,19 @@
    ],
    "file": "Singularity/Scheme/RegularLocus.lean",
    "kind": "theorem",
-   "line": 48,
+   "line": 77,
    "type": "\u2200 {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
+  },
+  "Singularity.regularLocus_isOpen_of_perfectField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 54,
+   "type": "\u2200 {k : Type u} [inst : Field k] [PerfectField k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
   },
   "Singularity.resolutionInDim_charZero": {
    "axioms": [
