@@ -12,5 +12,4 @@ uses:
 - SG0000000M
 lean:
   statement: Singularity.ResolutionInDim
-  proof: Singularity.resolutionInDim_two
 tier: T5
