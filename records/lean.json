@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "4213622cdc6788566c70b16f968758835ee5e21f",
+  "commit": "b939ac737705cfd09614216b8c5d042feef21f7f",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "4213622cdc6788566c70b16f968758835ee5e21f",
+ "commit": "b939ac737705cfd09614216b8c5d042feef21f7f",
  "decls": {
   "Singularity.Algebra.algebraMapSubmonoid_primeCompl_eq": {
    "axioms": [
@@ -2392,6 +2392,17 @@
    "line": 50,
    "type": "\u2200 {d : WithBot \u2115\u221e} {m : \u2115}, d + 1 \u2264 \u2191m + 1 \u2192 d \u2264 \u2191m"
   },
+  "Singularity.mem_regularLocus_iff_of_isAffineOpen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 35,
+   "type": "\u2200 {X : AlgebraicGeometry.Scheme} {U : X.Opens} (hU : AlgebraicGeometry.IsAffineOpen U) (x : \u21a5U),\n  \u2191x \u2208 Singularity.regularLocus X \u2194\n    hU.primeIdealOf x \u2208 Singularity.Algebra.regularLocus \u2191(X.presheaf.obj (Opposite.op U))"
+  },
   "Singularity.p1Structure": {
    "axioms": [
     "Classical.choice",
@@ -2457,6 +2468,17 @@
    "kind": "theorem",
    "line": 59,
    "type": "\u2200 (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = Set.univ \u2194 Singularity.IsRegularScheme X"
+  },
+  "Singularity.regularLocus_isOpen_of_charZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/RegularLocus.lean",
+   "kind": "theorem",
+   "line": 48,
+   "type": "\u2200 {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
   },
   "Singularity.resolutionInDim_charZero": {
    "axioms": [
