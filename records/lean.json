@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "5a6522057b9d71a6965ee109d4f7b651c2d15771",
+  "commit": "e71272b03625c182b6e54a91e10747f3c9cdeeff",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "4baa0109a570a8e9a66cea7dcdb200fe539124c6",
+ "commit": "82bb73d9e144b99c1900d69a7c37b7f14cef3a36",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -929,6 +929,16 @@
    "line": 73,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (M : ModuleCat R) [Module.Finite R \u2191M],\n  Subsingleton (CategoryTheory.Abelian.Ext M (\u21a7(IsLocalRing.ResidueField R)) 1) \u2192 Module.Free R \u2191M"
   },
+  "Singularity.Algebra.fwdDiff_iter_choose_add": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 387,
+   "type": "\u2200 (c k j : \u2115), ((fwdDiff 1)^[j] fun n => \u2191((n + c).choose (k + j))) = fun n => \u2191((n + c).choose k)"
+  },
   "Singularity.Algebra.fwdDiff_iter_eq_zero_of_le": {
    "axioms": [
     "Classical.choice",
@@ -1268,6 +1278,17 @@
    "line": 106,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {J : Ideal R}, I \u2264 J \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel J M n \u2264 Singularity.Algebra.hilbertSamuel I M n"
   },
+  "Singularity.Algebra.hilbertSamuel_eq_choose": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 361,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {d : \u2115},\n  ringKrullDim R = \u2191(d + 1) \u2192\n    \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel (IsLocalRing.maximalIdeal R) R n = \u2191((n + d).choose (d + 1))"
+  },
   "Singularity.Algebra.hilbertSamuel_eq_sum_length": {
    "axioms": [
     "Classical.choice",
@@ -1334,6 +1355,17 @@
    "line": 589,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {r : \u2115}\n  {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192\n    Module.length R (M \u29f8 I \u2022 \u22a4) \u2260 \u22a4 \u2192 \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel I M n \u2260 \u22a4"
   },
+  "Singularity.Algebra.hilbertSamuel_self_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 240,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (n : \u2115),\n  Singularity.Algebra.hilbertSamuel I R n = Module.length R (R \u29f8 I ^ n)"
+  },
   "Singularity.Algebra.hilbertSamuel_self_one": {
    "axioms": [
     "Classical.choice",
@@ -1355,6 +1387,39 @@
    "kind": "theorem",
    "line": 94,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M] (n : \u2115),\n  Singularity.Algebra.hilbertSamuel I M (n + 1) =\n    Singularity.Algebra.hilbertSamuel I M n +\n      Module.length R (\u21a5(I ^ n \u2022 \u22a4) \u29f8 Submodule.comap (I ^ n \u2022 \u22a4).subtype (I ^ (n + 1) \u2022 \u22a4))"
+  },
+  "Singularity.Algebra.hilbertSamuel_succ_aux": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 297,
+   "type": "\u2200 (d : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (rs : List R),\n  rs.length = d \u2192\n    RingTheory.Sequence.IsWeaklyRegular R rs \u2192\n      Ideal.ofList rs = IsLocalRing.maximalIdeal R \u2192\n        \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel (IsLocalRing.maximalIdeal R) R (n + 1) = \u2191((n + d).choose d)"
+  },
+  "Singularity.Algebra.hilbertSamuel_succ_eq_choose": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 353,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {d : \u2115},\n  ringKrullDim R = \u2191d \u2192\n    \u2200 (n : \u2115), Singularity.Algebra.hilbertSamuel (IsLocalRing.maximalIdeal R) R (n + 1) = \u2191((n + d).choose d)"
+  },
+  "Singularity.Algebra.hilbertSamuel_succ_of_isWeaklyRegular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 344,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {rs : List R},\n  RingTheory.Sequence.IsWeaklyRegular R rs \u2192\n    Ideal.ofList rs = IsLocalRing.maximalIdeal R \u2192\n      \u2200 (n : \u2115),\n        Singularity.Algebra.hilbertSamuel (IsLocalRing.maximalIdeal R) R (n + 1) = \u2191((n + rs.length).choose rs.length)"
   },
   "Singularity.Algebra.hilbertSamuel_zero": {
    "axioms": [
@@ -1862,6 +1927,28 @@
    "line": 123,
    "type": "\u2200 {A : Type u_1} {B : Type u_2} [inst : CommRing A] [IsDomain A] [inst_2 : CommRing B] [inst_3 : IsDomain B]\n  [inst_4 : Algebra A B] [inst_5 : FaithfulSMul A B] (KA : Type u_3) (KB : Type u_4) [inst_6 : Field KA]\n  [inst_7 : Field KB] [inst_8 : Algebra A KA] [IsFractionRing A KA] [inst_10 : Algebra B KB] [IsFractionRing B KB]\n  [inst_12 : Algebra KA KB] [inst_13 : Algebra A KB] [IsScalarTower A KA KB] [IsScalarTower A B KB]\n  [Algebra.IsSeparable KA KB], Algebra.IsSeparable (FractionRing A) (FractionRing B)"
   },
+  "Singularity.Algebra.isWeaklyRegular_map_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {a : R} {rs : List R},\n  RingTheory.Sequence.IsWeaklyRegular R (a :: rs) \u2192\n    RingTheory.Sequence.IsWeaklyRegular (R \u29f8 Ideal.span {a}) (List.map (\u21d1(Ideal.Quotient.mk (Ideal.span {a}))) rs)"
+  },
+  "Singularity.Algebra.isWeaklyRegular_tail_of_cons": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {a : R} {rs : List R},\n  RingTheory.Sequence.IsWeaklyRegular R (a :: rs) \u2192\n    (\u2200 r \u2208 a :: rs, r \u2208 IsLocalRing.maximalIdeal R) \u2192\n      RingTheory.Sequence.IsWeaklyRegular R rs \u2227 \u2200 (y : R), a * y \u2208 Ideal.ofList rs \u2192 y \u2208 Ideal.ofList rs"
+  },
   "Singularity.Algebra.kerGrading": {
    "axioms": [
     "Quot.sound",
@@ -1969,6 +2056,17 @@
    "line": 199,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {S : Type w} [inst_1 : CommRing S] [inst_2 : Algebra R S] {N : Type v}\n  [inst_3 : AddCommGroup N] [inst_4 : Module S N] [inst_5 : Module R N] [inst_6 : IsScalarTower R S N]\n  {\ud835\udca9 : \u2115 \u2192 Submodule R N} (\u03bc : N \u2192\u2097[S] N) (h\u03bc : \u2200 (n : \u2115), \u2200 y \u2208 \ud835\udca9 n, \u03bc y \u2208 \ud835\udca9 (n + 1)) (n : \u2115),\n  Module.length R \u21a5(\ud835\udca9 n) =\n    Module.length R \u21a5(Singularity.Algebra.kerGrading \u03bc \ud835\udca9 n) +\n      Module.length R \u21a5(Singularity.Algebra.gradedMap \u03bc h\u03bc n).range"
   },
+  "Singularity.Algebra.length_grPiece_eq_choose": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 371,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {d : \u2115},\n  ringKrullDim R = \u2191(d + 1) \u2192\n    \u2200 (n : \u2115), Module.length R (Singularity.Algebra.grPiece (IsLocalRing.maximalIdeal R) R n) = \u2191((n + d).choose d)"
+  },
   "Singularity.Algebra.length_grPiece_ne_top": {
    "axioms": [
     "Classical.choice",
@@ -2012,6 +2110,28 @@
    "kind": "theorem",
    "line": 37,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M] {N P : Submodule R M},\n  N \u2264 P \u2192 Module.length R (M \u29f8 N) = Module.length R (\u21a5P \u29f8 Submodule.comap P.subtype N) + Module.length R (M \u29f8 P)"
+  },
+  "Singularity.Algebra.length_quotient_pow_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 245,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {a : R} {I : Ideal R},\n  a \u2208 I \u2192\n    \u2200 {n : \u2115},\n      (\u2200 (u : R), a * u \u2208 I ^ (n + 1) \u2192 u \u2208 I ^ n) \u2192\n        Module.length R (R \u29f8 I ^ (n + 1)) =\n          Module.length R (R \u29f8 I ^ n) + Module.length R (R \u29f8 Ideal.span {a} \u2294 I ^ (n + 1))"
+  },
+  "Singularity.Algebra.length_quotient_span_singleton_sup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 285,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (a : R) (J : Ideal R),\n  Module.length R (R \u29f8 Ideal.span {a} \u2294 J) =\n    Module.length (R \u29f8 Ideal.span {a}) ((R \u29f8 Ideal.span {a}) \u29f8 Ideal.map (Ideal.Quotient.mk (Ideal.span {a})) J)"
   },
   "Singularity.Algebra.length_succ_eq_add_cokerGrading": {
    "axioms": [
@@ -2057,6 +2177,17 @@
    "line": 84,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R \u29f8 I)],\n  IsLocalRing.maximalIdeal (R \u29f8 I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)"
   },
+  "Singularity.Algebra.mem_maximalIdeal_pow_of_mul_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 221,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {a : R} {rs : List R},\n  RingTheory.Sequence.IsWeaklyRegular R (a :: rs) \u2192\n    Ideal.ofList (a :: rs) = IsLocalRing.maximalIdeal R \u2192\n      \u2200 {n : \u2115} {u : R}, a * u \u2208 IsLocalRing.maximalIdeal R ^ (n + 1) \u2192 u \u2208 IsLocalRing.maximalIdeal R ^ n"
+  },
   "Singularity.Algebra.mem_of_eq_span": {
    "axioms": [
     "Quot.sound",
@@ -2066,6 +2197,50 @@
    "kind": "theorem",
    "line": 515,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {r : \u2115} {x : Fin r \u2192 R},\n  I = Ideal.span (Set.range x) \u2192 \u2200 (i : Fin r), x i \u2208 I"
+  },
+  "Singularity.Algebra.mem_of_mul_mem_of_isSMulRegular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 105,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {a : R} {J : Ideal R}, IsSMulRegular (R \u29f8 J) a \u2192 \u2200 {y : R}, a * y \u2208 J \u2192 y \u2208 J"
+  },
+  "Singularity.Algebra.mem_pow_of_mul_mem_aux": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 142,
+   "type": "\u2200 (r : \u2115) (R : Type u) [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] (rs : List R),\n  rs.length = r \u2192\n    RingTheory.Sequence.IsWeaklyRegular R rs \u2192\n      (\u2200 a \u2208 rs, a \u2208 IsLocalRing.maximalIdeal R) \u2192\n        \u2200 (z : R),\n          (\u2200 (y : R), z * y \u2208 Ideal.ofList rs \u2192 y \u2208 Ideal.ofList rs) \u2192\n            \u2200 (n : \u2115) (y : R), z * y \u2208 Ideal.ofList rs ^ n \u2192 y \u2208 Ideal.ofList rs ^ n"
+  },
+  "Singularity.Algebra.mem_pow_of_mul_mem_of_isWeaklyRegular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {rs : List R},\n  RingTheory.Sequence.IsWeaklyRegular R rs \u2192\n    (\u2200 a \u2208 rs, a \u2208 IsLocalRing.maximalIdeal R) \u2192\n      \u2200 {z : R},\n        (\u2200 (y : R), z * y \u2208 Ideal.ofList rs \u2192 y \u2208 Ideal.ofList rs) \u2192\n          \u2200 (n : \u2115) {y : R}, z * y \u2208 Ideal.ofList rs ^ n \u2192 y \u2208 Ideal.ofList rs ^ n"
+  },
+  "Singularity.Algebra.mem_pow_of_mul_mem_pow_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {a : R} {J : Ideal R},\n  (\u2200 (n : \u2115) (y : R), a * y \u2208 J ^ n \u2192 y \u2208 J ^ n) \u2192\n    \u2200 {n : \u2115} {u : R}, a * u \u2208 (Ideal.span {a} \u2294 J) ^ (n + 1) \u2192 u \u2208 (Ideal.span {a} \u2294 J) ^ n"
   },
   "Singularity.Algebra.mem_regularLocus": {
    "axioms": [
@@ -2099,6 +2274,17 @@
    "kind": "theorem",
    "line": 58,
    "type": "\u2200 {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (e : R \u2243+* S) (p : PrimeSpectrum S),\n  { asIdeal := Ideal.comap e p.asIdeal, isPrime := \u22ef } \u2208 Singularity.Algebra.regularLocus R \u2192\n    p \u2208 Singularity.Algebra.regularLocus S"
+  },
+  "Singularity.Algebra.mk_mem_map_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 113,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] {a y : R} {J : Ideal R},\n  (Ideal.Quotient.mk (Ideal.span {a})) y \u2208 Ideal.map (Ideal.Quotient.mk (Ideal.span {a})) J \u2194 y \u2208 Ideal.span {a} \u2294 J"
   },
   "Singularity.Algebra.module_finite_grAlgebra": {
    "axioms": [
@@ -2496,6 +2682,17 @@
    "line": 152,
    "type": "\u2200 {R : Type u} [inst : CommRing R] {I : Ideal R} {M : Type v} [inst_1 : AddCommGroup M] [inst_2 : Module R M]\n  {P : Polynomial \u211a},\n  P \u2260 0 \u2192\n    (\u2200\u1da0 (n : \u2115) in Filter.atTop, \u2191(Singularity.Algebra.hilbertSamuel I M n).toNat = Polynomial.eval (\u2191n) P) \u2192\n      0 < Singularity.Algebra.samuelMultiplicity I M P.natDegree"
   },
+  "Singularity.Algebra.samuelMultiplicity_regular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 403,
+   "type": "\u2200 (R : Type u) [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {d : \u2115},\n  ringKrullDim R = \u2191d \u2192 Singularity.Algebra.samuelMultiplicity (IsLocalRing.maximalIdeal R) R d = 1"
+  },
   "Singularity.Algebra.smul_mem_cokerGrading": {
    "axioms": [
     "Classical.choice",
@@ -2549,6 +2746,17 @@
    "kind": "theorem",
    "line": 138,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})],\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 Ideal.span {x})) + 1 \u2264\n          Submodule.spanFinrank (IsLocalRing.maximalIdeal R)"
+  },
+  "Singularity.Algebra.span_singleton_sup_pow_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/MultiplicityRegular.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] (a : R) (J : Ideal R) (n : \u2115),\n  (Ideal.span {a} \u2294 J) ^ (n + 1) = J ^ (n + 1) \u2294 Ideal.span {a} * (Ideal.span {a} \u2294 J) ^ n"
   },
   "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors": {
    "axioms": [
