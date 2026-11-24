@@ -1,7 +1,7 @@
 tag: SG0000001J
 kind: conjecture
 title: Patching in dimension 4
-statement: If each valuation of a function field of a fourfold has local uniformization, then the fourfold has a resolution.
+statement: Let k be a field of characteristic p > 0. If each valuation of a function field over k of transcendence degree at most 4 has local uniformization, then each variety of dimension at most 4 over k has a resolution.
 sources:
 - paper: Zar44
 - paper: Pil

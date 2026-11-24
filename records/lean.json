@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "e66b7a25f224159caf1cd9528c5f5d25f3b4b928",
+  "commit": "80e29382372ca1482fa599f03fb1796b7b6d61e7",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "e66b7a25f224159caf1cd9528c5f5d25f3b4b928",
+ "commit": "80e29382372ca1482fa599f03fb1796b7b6d61e7",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -7474,6 +7474,17 @@
    "line": 368,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (h\u03b3 : \u03b3 \u2264 \u03bc \u03c6)\n  (f : Polynomial K), (Singularity.augmentedValuation \u03bc \u03c6 \u03b3 h\u03c6 h\u03b3) f = Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f"
   },
+  "Singularity.augmentedValuation_eq_of_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 150,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (hle : \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) (h\u03c6 : \u03c6.Monic)\n  (hlt : \u03bd \u03c6 < \u03bc \u03c6) (hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) {f : Polynomial K},\n  f.degree < \u03c6.degree \u2192 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) \u22ef \u22ef) f = \u03bd f"
+  },
   "Singularity.augmentedValuation_eq_self": {
    "axioms": [
     "Classical.choice",
@@ -8109,6 +8120,17 @@
    "line": 39,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192 \u2203 s, Singularity.IsRegularSystemOfParameters s \u2227 x \u2208 s"
   },
+  "Singularity.exists_keyPolynomial_augmentedValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 196,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n      \u03bc \u2260 \u03bd \u2192\n        \u2203 \u03c6,\n          \u2203 (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (hlt : \u03bd \u03c6 < \u03bc \u03c6),\n            (\u2200 (f : Polynomial K), \u03bd f \u2264 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f) \u2227\n              (\u2200 (f : Polynomial K), (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f \u2264 \u03bc f) \u2227\n                (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) \u03c6 = \u03bd \u03c6 \u2227\n                  (\u2200 (f : Polynomial K),\n                      f.degree < \u03c6.degree \u2192 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f = \u03bd f) \u2227\n                    \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f"
+  },
   "Singularity.exists_mem_ord_eq_idealOrd": {
    "axioms": [
     "Classical.choice",
@@ -8119,6 +8141,17 @@
    "kind": "theorem",
    "line": 223,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I : Ideal (MvPolynomial \u03c3 R)),\n  \u2203 f \u2208 I, Singularity.ord f = Singularity.idealOrd I"
+  },
+  "Singularity.exists_monic_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 157,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n      \u03bc \u2260 \u03bd \u2192 \u2203 \u03c6, \u03c6.Monic \u2227 \u03bd \u03c6 < \u03bc \u03c6 \u2227 \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f"
   },
   "Singularity.exists_pointChart_eq_X_pow_mul": {
    "axioms": [
@@ -8835,6 +8868,17 @@
    "line": 406,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03b3 : \u0393\u2080} {\u03bc : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (f : Polynomial K), \u03bc f = Singularity.monomialValuationFun v \u03b3 f) \u2192 Singularity.KeyPolynomial \u03bc Polynomial.X"
   },
+  "Singularity.keyPolynomial_of_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 114,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n    \u03c6.Monic \u2192 \u03bd \u03c6 < \u03bc \u03c6 \u2192 (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) \u2192 Singularity.KeyPolynomial \u03bc \u03c6"
+  },
   "Singularity.killVar": {
    "axioms": [
     "Classical.choice",
@@ -9143,6 +9187,61 @@
    "line": 635,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192 0 < \u03c6.natDegree \u2192 \u2200 (f : Polynomial K), \u03bc f \u2264 Singularity.augmentedValuationFun \u03bc \u03c6 (\u03bc \u03c6) f"
   },
+  "Singularity.map_le_augmentedValuationFun_of_map_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 134,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) \u2192\n        \u2200 (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc \u03c6 (\u03bd \u03c6) f"
+  },
+  "Singularity.map_le_augmentedValuation_of_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 143,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (hle : \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) (h\u03c6 : \u03c6.Monic)\n  (hlt : \u03bd \u03c6 < \u03bc \u03c6) (hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) (f : Polynomial K),\n  \u03bd f \u2264 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) \u22ef \u22ef) f"
+  },
+  "Singularity.map_le_monomialValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 225,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    \u2200 (f : Polynomial K), \u03bd f \u2264 (Singularity.monomialValuation v (\u03bd Polynomial.X)) f"
+  },
+  "Singularity.map_le_monomialValuationFun": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 217,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    \u2200 (f : Polynomial K), \u03bd f \u2264 Singularity.monomialValuationFun v (\u03bd Polynomial.X) f"
+  },
+  "Singularity.map_lt_of_muDvd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 53,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192 \u03bd \u03c6 < \u03bc \u03c6 \u2192 \u2200 {f : Polynomial K}, Singularity.MuDvd \u03bc \u03c6 f \u2192 \u03bd f < \u03bc f"
+  },
   "Singularity.map_modByMonic_le_augmentedValuationFun": {
    "axioms": [
     "Classical.choice",
@@ -9407,6 +9506,17 @@
    "line": 391,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03b3 : \u0393\u2080} {\u03bc : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (f : Polynomial K), \u03bc f = Singularity.monomialValuationFun v \u03b3 f) \u2192\n    \u2200 {f : Polynomial K}, Singularity.MuDvd \u03bc Polynomial.X f \u2194 v (f.coeff 0) < \u03bc f"
   },
+  "Singularity.muDvd_iff_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n    \u03c6.Monic \u2192\n      \u03bd \u03c6 < \u03bc \u03c6 \u2192\n        (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) \u2192\n          \u2200 {f : Polynomial K}, Singularity.MuDvd \u03bc \u03c6 f \u2194 \u03bd f < \u03bc f"
+  },
   "Singularity.muDvd_iff_of_forall_eq": {
    "axioms": [
     "Classical.choice",
@@ -9428,6 +9538,17 @@
    "kind": "theorem",
    "line": 139,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 h : Polynomial K}, \u03bc (\u03c6 * h) \u2260 0 \u2192 Singularity.MuDvd \u03bc \u03c6 (\u03c6 * h)"
+  },
+  "Singularity.muDvd_of_map_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneStep.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n    \u03c6.Monic \u2192\n      \u03bd \u03c6 < \u03bc \u03c6 \u2192\n        (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) \u2192\n          \u2200 {f : Polynomial K}, \u03bd f < \u03bc f \u2192 Singularity.MuDvd \u03bc \u03c6 f"
   },
   "Singularity.muDvd_one_one": {
    "axioms": [
