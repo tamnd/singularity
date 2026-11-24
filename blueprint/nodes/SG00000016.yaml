@@ -4,10 +4,13 @@ title: A kangaroo point
 statement: An explicit hypersurface $z^p + f$ and a permissible blowup at which the residual order goes up. The example is a certified Lean computation.
 sources:
 - paper: Hau08
+- paper: HP19a
 uses:
 - SG00000013
 lean:
   statement: Singularity.Examples.kangaroo
+  proof: Singularity.Examples.kangaroo
 tier: T4
+notes: The Lean example is the example of [HP19a, Section 3] in characteristic 2, $F = x^2 y^2 w^3 (w (x+y)^4 + x^{13})$ in the $x$-chart with $y \mapsto y + 1$. The residual order goes from 5 to 7, and Singularity.Examples.kangaroo_increase proves that 7 exceeds the bound 6 of the proof of Moh.
 route:
 - R5

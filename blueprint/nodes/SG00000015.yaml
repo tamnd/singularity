@@ -1,9 +1,10 @@
 tag: SG00000015
 kind: theorem
 title: Moh's one-step bound
-statement: Under a permissible blowup of $z^p + f$ in dimension 3, the residual order goes up by at most a bound that depends on $p$ only.
+statement: Let $f = z^{p^e} + F$ with $F$ clean and $\operatorname{ord} F \ge p^e$. Under a point blowup at whose new origin the order of $f$ stays $p^e$, the residual order goes up by at most $p^{e-1}$.
 sources:
 - paper: Moh87
+- paper: HP19a
 uses:
 - SG00000013
 lean:
@@ -11,4 +12,4 @@ lean:
 tier: T4
 route:
 - R5
-notes: The stability claim of the same paper is false (HP19a). Expert question 5 of the spec asks for the exact bound that survives.
+notes: The stability claim of the same paper is false (HP19a). Expert question 5 of the spec asks for the exact bound that survives. The Lean Prop Singularity.moh_bound states the bound in the given coordinates. It is not proved, and it may need a hypothesis on the choice of the coordinates.
