@@ -1,7 +1,7 @@
 tag: SG0000001G
 kind: theorem
 title: Inseparable local uniformization
-statement: Each valuation of a function field has local uniformization after a finite purely inseparable extension of the function field.
+statement: For each valuation of a function field and each finite subset of its valuation ring, there is a finite purely inseparable extension of the function field, which depends on the finite set, such that the extension of the valuation has a regular center on an affine model that contains the finite set.
 sources:
 - paper: Tem13
 uses:
