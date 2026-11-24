@@ -1,13 +1,15 @@
 tag: SG00000018
 kind: counterexample
 title: Maximal contact fails in characteristic $p$
-statement: Narasimhan's threefold in characteristic 2 has no hypersurface of maximal contact at a point, also locally in the étale topology.
+statement: Let $K$ be a field of characteristic 2 and let $f = x^2 + y z^3 + z w^3 + y^7 w$. The curve $(t^{32}, t^7, t^{19}, t^{15})$ is in the locus of order 2 of $f$, and no formal power series of order 1 vanishes on it. Thus no smooth hypersurface germ at the origin, also no formal one, contains the points of order 2 of $f$, and $f$ has no hypersurface of maximal contact at the origin, also locally in the étale topology.
 sources:
 - paper: Nar83
 uses:
 - SG00000013
 lean:
   statement: Singularity.Examples.narasimhan
+  proof: Singularity.Examples.narasimhan
 tier: T4
+notes: The Lean proof shows that $f$ and its partial derivatives vanish on the curve, and that each $h$ in $K[[x, y, z, w]]$ with $h(\gamma(t)) = 0$ has order at least 2 (Singularity.Examples.two_le_order_of_subst_eq_zero). The step from the formal statement to the étale statement uses that an étale local ring and the local ring have the same completion, and it is not in Lean.
 route:
 - R3
