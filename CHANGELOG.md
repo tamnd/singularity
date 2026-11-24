@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The nodes SG00000035 (generic regularity over a perfect field) and SG00000036 (the regular locus is open over a perfect field), each with its Lean proof in tamnd/singularity-lean. The node SG0000000K now uses SG00000036. SG0000000K stays planned, because the case of an imperfect field is not proved.
+
 ## 0.2.11 - 2026-11-24
 
 - The Lean records are at commit bb9fc55 of tamnd/singularity-lean, with 341 declarations. The nodes SG00000031, SG00000032 and SG00000034 are proved, and SG00000033 is defined.
