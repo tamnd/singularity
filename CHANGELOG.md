@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records are now at tamnd/singularity-lean@93c16b9, with 1163 declarations. They now have the Lean names of tamnd/singularity-lean#78, #80 and #81. The trust record has no nonstandard axiom.
 - The note of SG0000000Z gives the claim of part 3 in the form of μ-equivalence and the uniqueness of the key polynomial in the step (tamnd/singularity-lean#80).
 - The note of SG0000001E tells that the divisorial case and the case trdeg K/k at most trdeg of the residue field plus one are proved (tamnd/singularity-lean#81). The note also tells why this method does not work for rational rank 2 or more.
 
