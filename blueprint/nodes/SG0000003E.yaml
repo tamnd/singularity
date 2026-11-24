@@ -1,0 +1,17 @@
+tag: SG0000003E
+kind: definition
+title: The log-Jacobian ideal
+statement: Let $K$ be a field of characteristic $p > 0$, let $F \in K[x_1, \dots, x_n]$ and let $\Delta \subseteq \{1, \dots, n\}$. The log-Jacobian ideal of $F$ for the divisor $\prod_{i \in \Delta} x_i = 0$ is $\Theta(F) = (x_i \partial_i F \ (i \in \Delta), \ \partial_j F \ (j \notin \Delta))$. For each $h$, $\Theta(F + h^p) = \Theta(F)$.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG00000013
+lean:
+  statement: Singularity.logJacobian_add_pow
+  proof: Singularity.logJacobian_add_pow
+tier: T1
+route:
+- R1
+- R5
+notes: In Lean the ideal is Singularity.logJacobian. The ideal is the image of $F$ under the logarithmic derivations. It does not depend on the choice of $z$ in $z^p + F$. For a base of dimension 3 it is the ideal of the thesis of Cossart [Cos87]. The transformation law under blowups is in [Pos24, Appendix A], and the library does not prove it yet.

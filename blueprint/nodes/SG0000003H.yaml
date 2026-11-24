@@ -1,0 +1,17 @@
+tag: SG0000003H
+kind: theorem
+title: A mod p Euler identity
+statement: Let $K$ be a field of characteristic $p > 0$, let $h \in K[x_1, \dots, x_n]$ and let $w \in K^n$. If $\sum_i w_i a_i = 1$ in $K$ for each exponent $a$ of a monomial of $h$, then $h = \sum_i w_i x_i \partial_i h$. In particular, each torus critical point of $h$ lies on the zero set of $h$. A face of the Newton polyhedron is resonant if no $w \in \mathbb{F}_p^n$ satisfies this condition for its initial form.
+sources:
+- paper: Newt
+uses:
+- SG0000003E
+- SG0000003G
+lean:
+  statement: Singularity.eq_sum_smul_X_mul_pderiv
+  proof: Singularity.eq_sum_smul_X_mul_pderiv
+tier: T1
+route:
+- R5
+- R7
+notes: In Lean, resonance is Singularity.IsResonant, the weighted corollary is Singularity.eval_eq_zero_of_isCriticalPoint_of_isWeightedHomogeneous, and the statement for a face that is not resonant is Singularity.eval_eq_zero_of_isCriticalPoint_of_not_isResonant. For an integral weight with the value $D$ on a face, the condition holds with $w = D^{-1} \omega$ when $p \nmid D$. So the failures of nondegeneracy that are special to characteristic $p$ occur only on resonant faces. Examples are $x^2 y + x y^2$ for $p = 3$ and $wx + wy + xy$ for $p = 2$.

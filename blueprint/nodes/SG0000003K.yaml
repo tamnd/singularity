@@ -1,0 +1,16 @@
+tag: SG0000003K
+kind: theorem
+title: The lifting test for z^q + g
+statement: Let $R$ be a commutative ring of characteristic $p > 0$, let $q = p^e$, let $I$ be an ideal of $R$ and let $g, h \in R$. Then $z^q + g \in (z - h, I)^q$ in $R[z]$ if and only if $g + h^q \in I^q$.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000003J
+lean:
+  statement: Singularity.X_pow_add_C_mem_pow_iff
+  proof: Singularity.X_pow_add_C_mem_pow_iff
+tier: T1
+route:
+- R5
+notes: One direction uses the Frobenius, $z^q + g = (z - h)^q + (g + h^q)$. The other direction evaluates at $z = h$. So the hypersurface $z^q + g$ has order $q$ along the center $z = h$, $I = 0$ if and only if $g + h^q \in I^q$.

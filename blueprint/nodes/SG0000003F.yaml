@@ -1,0 +1,18 @@
+tag: SG0000003F
+kind: theorem
+title: The dichotomy for the log-Jacobian ideal
+statement: Let $F \ne 0$ be clean, write $F = x^r G$ with $r_j = 0$ for $j \notin \Delta$ and $G$ not divisible by $x_i$ for $i \in \Delta$, and let $d = \operatorname{ord} G$. Then $\Theta(F) = x^r \widetilde\Theta(G)$ with $\widetilde\Theta(G) = (r_i G + x_i \partial_i G, \ \partial_j G)$, no $x_i$ with $i \in \Delta$ divides all of $\widetilde\Theta(G)$, and $\rho = \operatorname{ord} \widetilde\Theta(G)$ satisfies $d - 1 \le \rho \le d$.
+sources:
+- paper: Cos87
+- paper: CP08
+uses:
+- SG0000003E
+- SG00000013
+lean:
+  statement: Singularity.logJacobianOrder_eq_or
+  proof: Singularity.logJacobianOrder_eq_or
+tier: T1
+route:
+- R1
+- R5
+notes: The proof uses only the exponents of the monomials and the cleanness of $F$, so it holds for each number of variables. In Lean the ideal is Singularity.residualLogJacobian, the order $\rho$ is Singularity.logJacobianOrder, part 1 is Singularity.residualLogJacobian_not_le_span_X, and part 3 is Singularity.logJacobianOrder_add_one_eq_iff. The library does not prove that $\rho$ does not go up under a point blowup. That is a later item of tamnd/singularity#106.

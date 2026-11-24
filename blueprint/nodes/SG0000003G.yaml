@@ -1,0 +1,17 @@
+tag: SG0000003G
+kind: theorem
+title: The Newton criterion for z^p + g
+statement: Let $K$ be an algebraically closed field of characteristic $p > 0$ and let $g \in K[x_1, \dots, x_n]$ with $g(0) = 0$. Then $z^p + g$ is Newton nondegenerate if and only if, for each compact face $\sigma$ of the Newton polyhedron of $g$, the initial form $g_\sigma$ has no critical point in the torus. The key step is that $z^p + h$ is singular at a torus point $(v, c)$ if and only if $v$ is a critical point of $h$ and $c^p = -h(v)$.
+sources:
+- paper: Newt
+- paper: Hau10
+uses:
+- SG00000011
+lean:
+  statement: Singularity.exists_torus_isCriticalPoint_iff
+  proof: Singularity.exists_torus_isCriticalPoint_iff
+tier: T2
+route:
+- R5
+- R7
+notes: In Lean the criterion is proved for one face, with $h$ in the place of $g_\sigma$, in Singularity.isSingularPoint_purelyInseparable_iff and Singularity.exists_torus_isCriticalPoint_iff. The vertex case is Singularity.exists_torus_isSingularPoint_purelyInseparable_initialForm. The faces of the Newton polyhedron are not formalized. In characteristic 0 the criterion asks that each $g_\sigma = 0$ be smooth in the torus. In characteristic $p$ it asks that $g_\sigma$ have no torus critical point at all, because $\partial_z z^p = 0$. A vertex of the polyhedron in $p\mathbb{N}^n$ makes $z^p + g$ degenerate. The library proves the pointwise statement for each polynomial $h$, and the vertex statement. It does not define Newton nondegeneracy face by face, and it does not prove the toric resolution of Varchenko and Khovanskii.
