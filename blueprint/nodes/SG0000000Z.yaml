@@ -8,3 +8,4 @@ sources:
 lean:
   statement: Singularity.KeyPolynomial
 tier: T2
+notes: The Lean definition of tamnd/singularity-lean#66 states the two conditions with the relation of μ-equivalence, μ(f - g) < μ(f) in the multiplicative notation of Mathlib, in place of the graded algebra of μ. The library also proves that the monomial valuation [v; y, γ] is a valuation (Singularity.monomialValuation), and that y is a key polynomial for it. Singularity.augmentedValuationFun is the augmented valuation as a function. The library proves its ultrametric inequality, its values on polynomials of degree less than deg φ and on φ, and the inequality μ(f) ≥ min_j(μ(a_j) + j μ(φ)) in additive notation for the φ-expansion of f. The inequality μ ≤ μ' for γ > μ(φ) needs that φ is a key polynomial, and it has no Lean proof. The multiplicativity of the augmented valuation and the theorem of MacLane and Vaquié have no Lean proof.

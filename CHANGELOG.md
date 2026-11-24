@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000000Z (key polynomials) has notes on the Lean definitions of tamnd/singularity-lean#66: the key polynomials, the monomial valuation and the augmented valuation as a function.
+- records/lean.json records the Lean build at commit 0ce0f4d, with 926 declarations.
 - The handbook page links to the handbook edition 0.4.3. Volume 3 of this edition gives the Lean proofs of the Zariski-Riemann theorem and the Abhyankar inequality.
 
 ## 0.4.3 - 2026-11-24
