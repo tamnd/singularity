@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "23305f9e49ea35b7d5e4f9026d9eccbc06dd3d14",
+  "commit": "3826806865bda73bb9bda7889fa416c0467bb7b9",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "23305f9e49ea35b7d5e4f9026d9eccbc06dd3d14",
+ "commit": "3826806865bda73bb9bda7889fa416c0467bb7b9",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -6506,6 +6506,28 @@
    "line": 28,
    "type": "Prop"
   },
+  "Singularity.abhyankar_inequality": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 240,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (A : ValuationSubring K) {k : Type u_2} [inst_1 : Field k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5A] [IsScalarTower k (\u21a5A) K],\n  Module.rank \u211a (TensorProduct \u2124 \u211a (Additive A.ValueGroup\u02e3)) + Algebra.trdeg k (IsLocalRing.ResidueField \u21a5A) \u2264\n    Algebra.trdeg k K"
+  },
+  "Singularity.abhyankar_inequality_relative": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 415,
+   "type": "\u2200 {K : Type u_1} {L : Type uL} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_2} {\u0393\u2081 : Type u\u0393}\n  [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081] (vK : Valuation K \u0393\u2080)\n  (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL],\n  Cardinal.lift.{uL, u\u0393}\n        (Module.rank \u211a\n          (TensorProduct \u2124 \u211a\n            (Additive\n              \u21a5(Subgroup.map (QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup)\n                  (\u2191vL).valueGroup)))) +\n      Cardinal.lift.{u\u0393, uL}\n        (Algebra.trdeg (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n          (IsLocalRing.ResidueField \u21a5vL.valuationSubring)) \u2264\n    Cardinal.lift.{u\u0393, uL} (Algebra.trdeg K L)"
+  },
   "Singularity.aeval_add_smul_of_mem_directrix": {
    "axioms": [
     "Classical.choice",
@@ -6516,6 +6538,50 @@
    "kind": "theorem",
    "line": 121,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {g : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix g \u2192\n    \u2200 (c : k), (MvPolynomial.aeval fun i => MvPolynomial.X i + MvPolynomial.C (c * v i)) g = g"
+  },
+  "Singularity.algebraicIndependent_sumElim_of_hasExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 322,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] {\u03b9 : Type u_5} {\u03ba : Type u_6} (x : \u03b9 \u2192 L\u02e3),\n  (LinearIndependent \u2124 fun i =>\n      Additive.ofMul\n        ((QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup) ((Units.map \u2191vL) (x i)))) \u2192\n    \u2200 (y : \u03ba \u2192 \u21a5vL.valuationSubring),\n      (AlgebraicIndependent (IsLocalRing.ResidueField \u21a5vK.valuationSubring) fun j =>\n          (IsLocalRing.residue \u21a5vL.valuationSubring) (y j)) \u2192\n        AlgebraicIndependent K (Sum.elim (fun i => \u2191(x i)) fun j => \u2191(y j))"
+  },
+  "Singularity.algebraicIndependent_sumElim_of_monoidHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {k : Type u_3}\n  [inst_2 : CommRing k] [inst_3 : Algebra k K] (v : Valuation K \u0393\u2080) {Q : Type u_4} [inst_4 : CommGroup Q] (\u03c0 : K\u02e3 \u2192* Q),\n  (\u2200 (a b : K\u02e3), v \u2191a = v \u2191b \u2192 \u03c0 a = \u03c0 b) \u2192\n    \u2200 {\u03b9 : Type u_5} {\u03ba : Type u_6} (x : \u03b9 \u2192 K\u02e3),\n      (LinearIndependent \u2124 fun i => Additive.ofMul (\u03c0 (x i))) \u2192\n        \u2200 (y : \u03ba \u2192 K),\n          (\u2200 (P : MvPolynomial \u03ba k), P \u2260 0 \u2192 \u2203 c, \u03c0 c = 1 \u2227 v ((MvPolynomial.aeval y) P) = v \u2191c) \u2192\n            AlgebraicIndependent k (Sum.elim (fun i => \u2191(x i)) y)"
+  },
+  "Singularity.algebraicIndependent_sumElim_of_valuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 137,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {k : Type u_3}\n  [inst_2 : CommRing k] [inst_3 : Algebra k K] (v : Valuation K \u0393\u2080) {\u03b9 : Type u_4} {\u03ba : Type u_5} (x : \u03b9 \u2192 K\u02e3),\n  (LinearIndependent \u2124 fun i => Additive.ofMul ((Units.map \u2191v) (x i))) \u2192\n    \u2200 (y : \u03ba \u2192 K),\n      (\u2200 (P : MvPolynomial \u03ba k), P \u2260 0 \u2192 v ((MvPolynomial.aeval y) P) = 1) \u2192\n        AlgebraicIndependent k (Sum.elim (fun i => \u2191(x i)) y)"
+  },
+  "Singularity.algebraicIndependent_sumElim_of_valuationSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (A : ValuationSubring K) {k : Type u_2} [inst_1 : CommRing k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5A] [IsScalarTower k (\u21a5A) K] {\u03b9 : Type u_3} {\u03ba : Type u_4} (x : \u03b9 \u2192 K\u02e3),\n  (LinearIndependent \u2124 fun i => Additive.ofMul ((Units.map \u2191A.valuation) (x i))) \u2192\n    \u2200 (y : \u03ba \u2192 \u21a5A),\n      (AlgebraicIndependent k fun j => (IsLocalRing.residue \u21a5A) (y j)) \u2192\n        AlgebraicIndependent k (Sum.elim (fun i => \u2191(x i)) fun j => \u2191(y j))"
   },
   "Singularity.blowupDivisor": {
    "axioms": [
@@ -6678,6 +6744,17 @@
    "kind": "theorem",
    "line": 0,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3] (j j_1 : \u03c3),\n  j = j_1 \u2192\n    \u2200 (t t_1 : \u03c3 \u2192 k),\n      t = t_1 \u2192 \u2200 (a a_1 : \u03c3), a = a_1 \u2192 Singularity.chartVector j t a = Singularity.chartVector j_1 t_1 a_1"
+  },
+  "Singularity.ciSup_add_ciSup_le_of_forall": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {\u03b9 : Type u_1} {\u03ba : Type u_2} [Nonempty \u03b9] [Nonempty \u03ba] {f : \u03b9 \u2192 Cardinal.{u}} {g : \u03ba \u2192 Cardinal.{u}},\n  BddAbove (Set.range f) \u2192\n    BddAbove (Set.range g) \u2192 \u2200 {c : Cardinal.{u}}, (\u2200 (i : \u03b9) (j : \u03ba), f i + g j \u2264 c) \u2192 iSup f + iSup g \u2264 c"
   },
   "Singularity.cleanPart": {
    "axioms": [
@@ -7009,6 +7086,17 @@
    "line": 101,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {m : \u2115}\n  {f : MvPolynomial \u03c3 k}, \u2191m \u2264 Singularity.ord f \u2192 \u2203 f', (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f'"
   },
+  "Singularity.exists_valuation_aeval_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 261,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] {\u03ba : Type u_5}\n  (y : \u03ba \u2192 \u21a5vL.valuationSubring),\n  (AlgebraicIndependent (IsLocalRing.ResidueField \u21a5vK.valuationSubring) fun j =>\n      (IsLocalRing.residue \u21a5vL.valuationSubring) (y j)) \u2192\n    \u2200 (P : MvPolynomial \u03ba K), P \u2260 0 \u2192 \u2203 c, vL ((MvPolynomial.aeval fun j => \u2191(y j)) P) = vL ((algebraMap K L) \u2191c)"
+  },
   "Singularity.expToReal": {
    "axioms": [
     "Classical.choice",
@@ -7217,6 +7305,17 @@
    "kind": "theorem",
    "line": 265,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115), Singularity.initialForm w 0 = 0"
+  },
+  "Singularity.injective_prod_pow_of_linearIndependent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 {\u03b9 : Type u_1} {G : Type u_2} [inst : CommGroup G] {u : \u03b9 \u2192 G},\n  (LinearIndependent \u2124 fun i => Additive.ofMul (u i)) \u2192 Function.Injective fun a => a.prod fun i n => u i ^ n"
   },
   "Singularity.integralResolutionInDim_of_resolutionInDim": {
    "axioms": [
@@ -8449,6 +8548,28 @@
    "kind": "theorem",
    "line": 99,
    "type": "\u2200 {p n : \u2115}, p \u2260 0 \u2192 Singularity.ResolutionInDim p n \u2192 Singularity.PurelyInseparableHypersurfaceResolution p n"
+  },
+  "Singularity.rank_int_valueGroup_add_trdeg_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 203,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (A : ValuationSubring K) {k : Type u_2} [inst_1 : Field k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5A] [IsScalarTower k (\u21a5A) K],\n  Module.rank \u2124 (Additive A.ValueGroup\u02e3) + Algebra.trdeg k (IsLocalRing.ResidueField \u21a5A) \u2264 Algebra.trdeg k K"
+  },
+  "Singularity.rank_int_valueGroup_map_add_trdeg_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/Abhyankar.lean",
+   "kind": "theorem",
+   "line": 358,
+   "type": "\u2200 {K : Type u_1} {L : Type uL} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_2} {\u0393\u2081 : Type u\u0393}\n  [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081] (vK : Valuation K \u0393\u2080)\n  (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL],\n  Cardinal.lift.{uL, u\u0393}\n        (Module.rank \u2124\n          (Additive\n            \u21a5(Subgroup.map (QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup) (\u2191vL).valueGroup))) +\n      Cardinal.lift.{u\u0393, uL}\n        (Algebra.trdeg (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n          (IsLocalRing.ResidueField \u21a5vL.valuationSubring)) \u2264\n    Cardinal.lift.{u\u0393, uL} (Algebra.trdeg K L)"
   },
   "Singularity.regularLocus": {
    "axioms": [
