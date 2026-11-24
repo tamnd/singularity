@@ -7,5 +7,8 @@ sources:
 - paper: Hir70
 uses:
 - SG0000003A
+lean:
+  statement: Singularity.mem_directrix_of_ord_pointChart_eq
+  proof: Singularity.mem_directrix_of_ord_pointChart_eq
 tier: T1
 notes: The set of the $v$ with $f_m(x + s v) = f_m(x)$ is a linear subspace, the directrix of $f_m$. In characteristic 2 the directrix of $x^2 + y^2 + z^2$ is a plane, and in characteristic 0 it is 0. See Volume 7, Example 2.2.7 of the handbook.

@@ -4,6 +4,7 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The node SG0000003B (the points of the same order lie in the directrix) has the Lean statement and proof Singularity.mem_directrix_of_ord_pointChart_eq of tamnd/singularity-lean#55.
 - The handbook page lists the five volumes of the handbook edition 0.3.2, with links to the PDF and EPUB files of the release.
 
 ## 0.3.0 - 2026-11-24
