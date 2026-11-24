@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The paper record Cut20 now gives the title, the journal, the volume, the pages and the DOI. The year was 2003, from the number of the preprint, and is now 2022. SG0000001E now cites [Cut20], which removes the condition of separability on the residue field.
+
 ## 0.4.10 - 2026-11-25
 
 ### Added

@@ -1,9 +1,9 @@
 key: Cut20
-title: Cutkosky, arXiv:2003.06374
+title: Cutkosky, "Local uniformization of Abhyankar valuations", Michigan Math. J. 71 (2022) 859-891, doi:10.1307/mmj/20205888
 tag: P
 tier: T6
-why: Abhyankar valuations, no separability
-year: 2003
+why: Local uniformization of Abhyankar valuations with no condition of separability on the residue field
+year: 2022
 arxiv:
 - '2003.06374'
 lean: none
