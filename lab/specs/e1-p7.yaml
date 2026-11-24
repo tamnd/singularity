@@ -1,0 +1,29 @@
+name: e1-p7
+experiment: E1
+question: How does the residual order of z^q + F over F_7 change under random point blowups that keep the order q, for q = 7 and q = 49 and n = 2, 3, 4 variables? How many steps go up by more than the bound p^(e-1) of Moh, and what are the kangaroo points?
+tool: sing-lab
+node: SG00000016
+nodes: [SG00000013, SG00000015, SG00000016]
+inputs:
+  seed: 20261124007
+  family:
+    name: random-sparse
+    terms: [2, 6]
+    divisor: all
+  walk:
+    depth: 12
+    max_terms: 400
+    max_expand: 200000
+    max_degree: 400
+  examples: 100
+  stability_examples: 20
+  raw: true
+  cases:
+    - { p: 7, n: 2, q: 7, walks: 1000000, degree: [8, 21] }
+    - { p: 7, n: 3, q: 7, walks: 320000, degree: [8, 21] }
+    - { p: 7, n: 4, q: 7, walks: 37000, degree: [8, 21] }
+    - { p: 7, n: 2, q: 49, walks: 1000000, degree: [50, 147] }
+    - { p: 7, n: 3, q: 49, walks: 178000, degree: [50, 147] }
+    - { p: 7, n: 4, q: 49, walks: 43000, degree: [50, 147] }
+outputs: [histogram, examples]
+notes: The family random-sparse draws F as a sum of 2 to 6 terms with coefficients in 1..p-1. Each term has a total degree in the range of the case, and its exponent vector is uniform among those of that degree. The engine cleans F and draws again when F is zero or ord F < q. The divisor is all the variables x1..xn. At each step the walk takes a point at random among the points over F_p of the exceptional divisor where the order of f stays q, in the n charts. A walk stops after 12 blowups, when no such point exists, when the residual order is 0, or at a cap. The caps are 400 terms, 200000 terms in one expansion and the total degree 400. The number of walks of each case makes a run of about 20 to 40 minutes on 4 threads of a project machine.

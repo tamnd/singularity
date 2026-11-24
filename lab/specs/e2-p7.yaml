@@ -1,0 +1,11 @@
+name: e2-p7
+experiment: E2
+question: Which candidate secondary invariants go up under a point blowup on the walks of e1-p7, and at which step does each one fail first?
+tool: sing-lab
+node: SG00000013
+nodes: [SG00000013, SG00000015, SG00000016]
+inputs:
+  walks_from: e1-p7.yaml
+  candidates: [d-n, d-over-q, d-minus-pr-moh, d-minus-pr-g, d-minus-r, moh-rounded]
+outputs: [histogram, candidates]
+notes: The run makes the walks of e1-p7 again from the same seed and tests each candidate at each step. The candidates (a) to (d) of the question are d-n, d-over-q, d-minus-pr-moh and d-minus-r. d-minus-pr-g is a second form of (c) with r computed on in(G) and not on in(F). moh-rounded is the bound floor(d/p^r) p^r + p^r of the proof of Moh, which Hauser and Perlega show to be false. A failure of moh-rounded is a step where d' is larger than that bound.

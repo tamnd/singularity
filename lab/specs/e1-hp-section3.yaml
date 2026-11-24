@@ -1,0 +1,22 @@
+name: e1-hp-section3
+experiment: E1
+question: Does sing-lab give the residual orders of the example of Section 3 of Hauser and Perlega (arXiv:1802.05010), where the residual order goes from 5 to 7 under one point blowup?
+tool: sing-lab
+node: SG00000016
+nodes: [SG00000013, SG00000015, SG00000016]
+inputs:
+  fixed:
+    p: 2
+    q: 4
+    vars: [x, y, w]
+    f: "x^2*y^2*w^3*(w*(x+y)^4 + x^13)"
+    divisor: [x, y, w]
+    expect: 5
+    source: Hauser and Perlega, Cycles of singularities appearing in the resolution problem in positive characteristic, arXiv:1802.05010, Section 3.
+    steps:
+      - label: point blowup
+        chart: x
+        translate: { y: 1 }
+        expect: 7
+outputs: [steps]
+notes: The paper uses this example to show that the step of the proof of Moh with the bound floor(d/p^r) p^r + p^r is false. Here d = 5 and p^r = 2, so that bound is 6, and the residual order after the blowup is 7. The increase 2 is not more than the bound p^(e-1) = 2 of Moh.

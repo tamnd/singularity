@@ -1,0 +1,25 @@
+name: e1-hp-cycle-p2
+experiment: E1
+question: Does sing-lab give the residual orders of one cycle of the first example of Section 4 of Hauser and Perlega (arXiv:1802.05010), with d = 2, a = b = r = 0, s = 1, lambda = 1, A = 1 and Q = 0?
+tool: sing-lab
+node: SG00000017
+nodes: [SG00000013, SG00000015, SG00000016, SG00000017]
+inputs:
+  fixed:
+    p: 2
+    q: 8
+    vars: [x, y, u, v, w]
+    f: "x^4*y^4*w^6*(w^2 + x^3*u^10)"
+    divisor: [x, y, u, v, w]
+    expect: 2
+    source: Hauser and Perlega, arXiv:1802.05010, Section 4, first example (p = 2, n = 5, ord f = 8), with the choices of the question.
+    steps:
+      - { label: "(1)", chart: x, translate: { y: 1, u: 1 }, expect: 6 }
+      - { label: "(2)", chart: x, expect: 5 }
+      - { label: "(3)", chart: u }
+      - { label: "(4)", chart: v, repeat: 1 }
+      - { label: "(5)", chart: w, translate: { y: 1, v: 1 } }
+      - { label: "(6)", chart: u, expect: 4 }
+      - { label: "(7)", chart: y, repeat: 14, expect: 4 }
+outputs: [steps]
+notes: The paper writes the equations with unspecified units A and B, a series Q and a constant lambda. This run fixes them as in the question, so B and the later values of A and Q are the ones that the blowups give. The paper gives the residual order after the steps (1), (2), (6) and (7). In this run the residual order is 2 at the start and 4 after the step (7).
