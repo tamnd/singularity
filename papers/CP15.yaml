@@ -1,0 +1,9 @@
+key: CP15
+title: Cossart-Piltant, "Characteristic polyhedra of singularities without completion", Math. Ann. 361 (2015) 157-167, doi:10.1007/s00208-014-1064-0
+tag: S
+tier: T4
+why: The characteristic polyhedron is reached without completion
+year: 2015
+lean: none
+use:
+- read

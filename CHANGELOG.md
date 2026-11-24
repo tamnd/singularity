@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The papers CP15, Abh59, Cos92, Hir67b, Moh96 and Moh14 are new, for Volume 6 of the handbook. CP15 is the paper of Cossart-Piltant on characteristic polyhedra without completion. Abh59 is the book of Abhyankar on ramification theory, which [CP19, Section 4.2] uses. Cos92 is the paper of Cossart that gives Step 5 of the proof of Cutkosky for threefolds. Hir67b is the Bowdoin lectures of Hironaka on excellent surfaces. Moh96 and Moh14 are two papers of Moh that [CP19] cites. Each record gives the journal, the volume, the pages and the DOI when there is one. The book of Cutkosky already has the record Cut04.
+
 ### Changed
 
 - SG00000014 now names the Lean definition that exists, `Singularity.charPolyhedron` (tamnd/singularity-lean#76). The earlier name `Singularity.characteristicPolyhedron` did not exist. A note gives what the library proves about the polyhedron and what it does not prove.
