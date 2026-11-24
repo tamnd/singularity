@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+- The handbook page links to the handbook edition 0.4.3. Volume 3 of this edition gives the Lean proofs of the Zariski-Riemann theorem and the Abhyankar inequality.
+
 ## 0.4.3 - 2026-11-24
 
 - The node SG0000000X (the Zariski-Riemann space is quasi-compact) has the Lean proof Singularity.ZariskiRiemann.compactSpace of tamnd/singularity-lean#64.
