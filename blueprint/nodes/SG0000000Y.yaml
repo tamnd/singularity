@@ -4,6 +4,9 @@ title: The Abhyankar inequality
 statement: For a valuation $\nu$ of a function field $K/k$, the rational rank plus the transcendence degree of the residue field is at most the transcendence degree of $K/k$.
 sources:
 - paper: Abh56
+- paper: ZS2
 lean:
   statement: Singularity.abhyankar_inequality
+  proof: Singularity.abhyankar_inequality
 tier: T2
+notes: The Lean proof of tamnd/singularity-lean#63 is for a valuation subring $A$ of $K$ that contains $k$. The rational rank is the dimension of $\mathbb{Q} \otimes_\mathbb{Z} \Gamma$ over $\mathbb{Q}$, and the transcendence degrees are cardinals. The relative form for an extension of valued fields is `Singularity.abhyankar_inequality_relative`. The proof is the monomial argument of [ZS2, Chapter VI, Section 10].
