@@ -1,0 +1,42 @@
+{
+  "id": "2026-11-24-e2-p5-4b5722b1",
+  "name": "e2-p5",
+  "experiment": "E2",
+  "question": "Which candidate secondary invariants go up under a point blowup on the walks of e1-p5, and at which step does each one fail first?",
+  "tool": "sing-lab",
+  "node": "SG00000013",
+  "nodes": [
+    "SG00000013",
+    "SG00000015",
+    "SG00000016"
+  ],
+  "spec": "e2-p5.yaml",
+  "spec_sha256": "4b5722b136003b01562b850593dee35151ff6c2ed64235bd218bead04fa17413",
+  "walks_from": {
+    "spec": "e1-p5.yaml",
+    "sha256": "54c44a97c6861f788f5bd396119430709ad5c33ecf6dd2aa60294f6e57b6f4e8"
+  },
+  "sing": {
+    "version": "dev",
+    "commit": "b52a81e9d961999d239a60252b9aa03e9d583fc6",
+    "go": "go1.27.3"
+  },
+  "seed": 20261124005,
+  "host": "server2",
+  "started": "2026-11-24T04:42:52Z",
+  "wall_seconds": 1242.418,
+  "counts": {
+    "cases": 6,
+    "walks": 1148000,
+    "steps": 2023166,
+    "kangaroo": 280,
+    "moh_violations": 0,
+    "stability_violations": 0,
+    "candidate_failures": 148080
+  },
+  "files": {
+    "candidates.json": "6fd2834e9c6d53f542d5ec262409b7149363c2364fc01dfae8b6909dadaddaac",
+    "histogram.json": "c1d413964eaa5c3be4d7de3adbadcc785a76f8466c4329706f449a0f12e452dc",
+    "summary.md": "43ff507a3caee343ce9c461c06a4897f3e8baf5bccc4e09a528032b72444a81d"
+  }
+}

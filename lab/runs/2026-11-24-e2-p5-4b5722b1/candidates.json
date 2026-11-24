@@ -1,0 +1,1348 @@
+{
+ "spec": "e2-p5",
+ "walks_from": "e1-p5",
+ "candidates": [
+  {
+   "id": "d-n",
+   "definition": "the pair (d, N) in the lexicographic order, with N the number of terms of in(G), the initial form of the residual factor G."
+  },
+  {
+   "id": "d-over-q",
+   "definition": "d/q, the residual order divided by q. Along one walk q does not change, so this candidate fails exactly at the kangaroo points."
+  },
+  {
+   "id": "d-minus-pr-moh",
+   "definition": "d - p^rF, with rF the r of Moh: the largest r such that in(F) is a p^r-th power."
+  },
+  {
+   "id": "d-minus-pr-g",
+   "definition": "d - p^rG, with rG the largest r such that in(G) is a p^r-th power (rG = 0 when d = 0)."
+  },
+  {
+   "id": "d-minus-r",
+   "definition": "the pair (d, -rF) in the lexicographic order, with rF the r of Moh."
+  },
+  {
+   "id": "moh-rounded",
+   "definition": "the one-step bound d' \u003c= floor(d/p^rF) p^rF + p^rF that the proof of Moh uses (Hauser-Perlega, Section 3). This is a bound, not a value that goes down.",
+   "bound": true
+  }
+ ],
+ "totals": [
+  {
+   "id": "d-n",
+   "steps": 2023166,
+   "fail": 108660,
+   "first_failure_case": "p = 5, n = 2, q = 5"
+  },
+  {
+   "id": "d-over-q",
+   "steps": 2023166,
+   "fail": 280,
+   "first_failure_case": "p = 5, n = 2, q = 5"
+  },
+  {
+   "id": "d-minus-pr-moh",
+   "steps": 2023166,
+   "fail": 1553,
+   "first_failure_case": "p = 5, n = 2, q = 5"
+  },
+  {
+   "id": "d-minus-pr-g",
+   "steps": 2023166,
+   "fail": 36976,
+   "first_failure_case": "p = 5, n = 2, q = 5"
+  },
+  {
+   "id": "d-minus-r",
+   "steps": 2023166,
+   "fail": 611,
+   "first_failure_case": "p = 5, n = 2, q = 5"
+  },
+  {
+   "id": "moh-rounded",
+   "steps": 2023166,
+   "fail": 0
+  }
+ ],
+ "cases": [
+  {
+   "p": 5,
+   "n": 2,
+   "q": 5,
+   "steps": 763039,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 763039,
+     "fail": 73672,
+     "equal": 166673,
+     "down": 522694,
+     "first_failure": {
+      "walk": 14,
+      "step": 0,
+      "F": "3*x2^6 + 2*x1^6*x2^3 + 2*x1^2*x2^9 + 4*x1^7*x2^5 + 3*x1^5*x2^9",
+      "terms": 5,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 3,
+      "d_after": 3,
+      "state_before": {
+       "d": 3,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 3,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(3, 1)",
+      "value_after": "(3, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 763039,
+     "fail": 185,
+     "equal": 244787,
+     "down": 518067,
+     "first_failure": {
+      "walk": 2195,
+      "step": 1,
+      "F": "x1^7*x2^3 + 4*x1^2*x2^8",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 2,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5/5",
+      "value_after": "6/5"
+     }
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 763039,
+     "fail": 185,
+     "equal": 244787,
+     "down": 518067,
+     "first_failure": {
+      "walk": 2195,
+      "step": 1,
+      "F": "x1^7*x2^3 + 4*x1^2*x2^8",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 2,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5 - 1 = 4",
+      "value_after": "6 - 1 = 5"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 763039,
+     "fail": 22627,
+     "equal": 250415,
+     "down": 489997,
+     "first_failure": {
+      "walk": 22,
+      "step": 0,
+      "F": "2*x2^6 + 2*x1^3*x2^4 + 4*x1^8*x2 + 3*x1^8*x2^2 + 4*x1^9*x2^2 + 3*x1^2*x2^10",
+      "terms": 6,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 5,
+      "d_after": 3,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 3,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5 - 5 = 0",
+      "value_after": "3 - 1 = 2"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 763039,
+     "fail": 185,
+     "equal": 244787,
+     "down": 518067,
+     "first_failure": {
+      "walk": 2195,
+      "step": 1,
+      "F": "x1^7*x2^3 + 4*x1^2*x2^8",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 2,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(5, 0)",
+      "value_after": "(6, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 763039,
+     "fail": 0
+    }
+   ]
+  },
+  {
+   "p": 5,
+   "n": 3,
+   "q": 5,
+   "steps": 554376,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 554376,
+     "fail": 19732,
+     "equal": 372976,
+     "down": 161668,
+     "first_failure": {
+      "walk": 6,
+      "step": 1,
+      "F": "2*x2^5*x3 + x1*x2^5*x3 + x2^4*x3^3 + 2*x1*x2^4*x3^3 + 4*x1^2*x2^4*x3^3 + 2*x2^3*x3^6 + 3*x1^3*x2^4*x3^3 + x1^4*x2^4*x3^3 + 2*x2^3*x3^8 + 3*x1*x2^3*x3^8 + 4*x1^2*x2^3*x3^8 + x1^5*x2^3*x3^6 + 4*x1^3*x2^3*x3^8 + 4*x2^9*x3^6 + x2^8*x3^7 + x1^5*x2^3*x3^8 + 2*x1*x2^9*x3^6 + 3*x1*x2^8*x3^7 + 4*x1^6*x2^3*x3^8 + 2*x1^7*x2^3*x3^8 + 2*x1^8*x2^3*x3^8",
+      "terms": 21,
+      "divisor": [
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x1": 3
+      },
+      "d_before": 2,
+      "d_after": 2,
+      "state_before": {
+       "d": 2,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 2,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(2, 1)",
+      "value_after": "(2, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 554376,
+     "fail": 18,
+     "equal": 394488,
+     "down": 159870,
+     "first_failure": {
+      "walk": 3774,
+      "step": 1,
+      "F": "3*x1^5*x2*x3^4 + x1^2*x2^6*x3^8 + x1^7*x2^5*x3^7 + 3*x1^2*x2^12*x3^9",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 3,
+      "d_after": 4,
+      "state_before": {
+       "d": 3,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 4,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "3/5",
+      "value_after": "4/5"
+     }
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 554376,
+     "fail": 18,
+     "equal": 394488,
+     "down": 159870,
+     "first_failure": {
+      "walk": 3774,
+      "step": 1,
+      "F": "3*x1^5*x2*x3^4 + x1^2*x2^6*x3^8 + x1^7*x2^5*x3^7 + 3*x1^2*x2^12*x3^9",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 3,
+      "d_after": 4,
+      "state_before": {
+       "d": 3,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 4,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "3 - 1 = 2",
+      "value_after": "4 - 1 = 3"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 554376,
+     "fail": 5958,
+     "equal": 394322,
+     "down": 154096,
+     "first_failure": {
+      "walk": 13,
+      "step": 0,
+      "F": "x2^5*x3 + x1^3*x3^5 + 3*x1^4*x3^6 + 4*x1^8*x2^4*x3 + 3*x1^4*x2^7*x3^4",
+      "terms": 5,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {},
+      "d_before": 5,
+      "d_after": 5,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 5,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5 - 5 = 0",
+      "value_after": "5 - 1 = 4"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 554376,
+     "fail": 18,
+     "equal": 394488,
+     "down": 159870,
+     "first_failure": {
+      "walk": 3774,
+      "step": 1,
+      "F": "3*x1^5*x2*x3^4 + x1^2*x2^6*x3^8 + x1^7*x2^5*x3^7 + 3*x1^2*x2^12*x3^9",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 3,
+      "d_after": 4,
+      "state_before": {
+       "d": 3,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 4,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(3, 0)",
+      "value_after": "(4, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 554376,
+     "fail": 0
+    }
+   ]
+  },
+  {
+   "p": 5,
+   "n": 4,
+   "q": 5,
+   "steps": 113833,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 113833,
+     "fail": 3888,
+     "equal": 79762,
+     "down": 30183,
+     "first_failure": {
+      "walk": 1,
+      "step": 1,
+      "F": "3*x2^4*x3^4 + x2^3*x3^6 + 3*x1*x2^3*x3^6 + 2*x2^4*x3^8 + 4*x1*x2^4*x3^8 + x2^4*x3^8*x4 + 4*x2^4*x3^4*x4^5 + 3*x1^2*x2^4*x3^8 + 2*x1*x2^4*x3^8*x4 + 4*x2^5*x3^9 + x1^3*x2^4*x3^8 + 4*x1^2*x2^4*x3^8*x4 + 2*x1*x2^5*x3^9 + 2*x2^5*x3^9*x4 + 2*x1^4*x2^4*x3^8 + 3*x1^3*x2^4*x3^8*x4 + x1*x2^5*x3^9*x4 + x1^4*x2^4*x3^8*x4 + 3*x2^8*x3^9 + 2*x1*x2^8*x3^9 + 2*x2^8*x3^9*x4 + x1^2*x2^8*x3^9 + 3*x1*x2^8*x3^9*x4 + x2^8*x3^9*x4^2 + x1^3*x2^8*x3^9 + 4*x1^2*x2^8*x3^9*x4 + 4*x1*x2^8*x3^9*x4^2 + x2^8*x3^9*x4^3 + 4*x1^3*x2^8*x3^9*x4 + 2*x1^2*x2^8*x3^9*x4^2 + 4*x1*x2^8*x3^9*x4^3 + 2*x1^3*x2^8*x3^9*x4^2 + 2*x1^2*x2^8*x3^9*x4^3 + 2*x1^3*x2^8*x3^9*x4^3",
+      "terms": 34,
+      "divisor": [
+       "x2",
+       "x3"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x1": 2,
+       "x4": 3
+      },
+      "d_before": 1,
+      "d_after": 1,
+      "state_before": {
+       "d": 1,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 1,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(1, 1)",
+      "value_after": "(1, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 113833,
+     "fail": 3,
+     "equal": 83895,
+     "down": 29935,
+     "first_failure": {
+      "walk": 1767,
+      "step": 0,
+      "F": "x1^5*x2*x3^3*x4 + 2*x2^7*x3^7*x4",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x2",
+      "translate": {
+       "x3": 2,
+       "x4": 3
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 4,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5/5",
+      "value_after": "6/5"
+     }
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 113833,
+     "fail": 3,
+     "equal": 83895,
+     "down": 29935,
+     "first_failure": {
+      "walk": 1767,
+      "step": 0,
+      "F": "x1^5*x2*x3^3*x4 + 2*x2^7*x3^7*x4",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x2",
+      "translate": {
+       "x3": 2,
+       "x4": 3
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 4,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5 - 1 = 4",
+      "value_after": "6 - 1 = 5"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 113833,
+     "fail": 683,
+     "equal": 83832,
+     "down": 29318,
+     "first_failure": {
+      "walk": 42,
+      "step": 1,
+      "F": "2*x2^5*x4 + 4*x1*x2^5*x4 + 4*x3^5*x4^3 + 3*x1*x3^5*x4^3 + 2*x3^12*x4^7",
+      "terms": 5,
+      "divisor": [
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x3",
+      "translate": {},
+      "d_before": 5,
+      "d_after": 4,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 4,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "5 - 5 = 0",
+      "value_after": "4 - 1 = 3"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 113833,
+     "fail": 3,
+     "equal": 83895,
+     "down": 29935,
+     "first_failure": {
+      "walk": 1767,
+      "step": 0,
+      "F": "x1^5*x2*x3^3*x4 + 2*x2^7*x3^7*x4",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x2",
+      "translate": {
+       "x3": 2,
+       "x4": 3
+      },
+      "d_before": 5,
+      "d_after": 6,
+      "state_before": {
+       "d": 5,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 6,
+       "n": 4,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(5, 0)",
+      "value_after": "(6, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 113833,
+     "fail": 0
+    }
+   ]
+  },
+  {
+   "p": 5,
+   "n": 2,
+   "q": 25,
+   "steps": 339174,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 339174,
+     "fail": 8043,
+     "equal": 102760,
+     "down": 228371,
+     "first_failure": {
+      "walk": 14,
+      "step": 1,
+      "F": "x1^5*x2^23 + 4*x1^21*x2^15 + x1^36*x2^24 + 3*x1^35*x2^42 + x1^48*x2^37",
+      "terms": 5,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 8,
+      "d_after": 8,
+      "state_before": {
+       "d": 8,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 8,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(8, 1)",
+      "value_after": "(8, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 339174,
+     "fail": 70,
+     "equal": 110810,
+     "down": 228294,
+     "first_failure": {
+      "walk": 1583,
+      "step": 0,
+      "F": "4*x1^20*x2^30 + 4*x1^16*x2^52",
+      "terms": 2,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 1
+      },
+      "d_before": 4,
+      "d_after": 5,
+      "state_before": {
+       "d": 4,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 5,
+       "n": 1,
+       "rF": 1,
+       "rG": 1,
+       "pF": 5,
+       "pG": 5
+      },
+      "value_before": "4/25",
+      "value_after": "5/25"
+     }
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 339174,
+     "fail": 1169,
+     "equal": 110806,
+     "down": 227199,
+     "first_failure": {
+      "walk": 607,
+      "step": 0,
+      "F": "x1^30 + 2*x1^15*x2^28 + 4*x1^32*x2^16 + x1^2*x2^71",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x2",
+      "translate": {},
+      "d_before": 28,
+      "d_after": 26,
+      "state_before": {
+       "d": 28,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 26,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "28 - 5 = 23",
+      "value_after": "26 - 1 = 25"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 339174,
+     "fail": 5949,
+     "equal": 111919,
+     "down": 221306,
+     "first_failure": {
+      "walk": 79,
+      "step": 2,
+      "F": "2*x1^26*x2^3 + x1^17*x2^19 + 2*x1^16*x2^33",
+      "terms": 3,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x2",
+      "translate": {},
+      "d_before": 10,
+      "d_after": 8,
+      "state_before": {
+       "d": 10,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 8,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "10 - 5 = 5",
+      "value_after": "8 - 1 = 7"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 339174,
+     "fail": 348,
+     "equal": 110522,
+     "down": 228304,
+     "first_failure": {
+      "walk": 1364,
+      "step": 1,
+      "F": "2*x1^15*x2^30 + 2*x1^21*x2^29 + 4*x1^41*x2^17 + 4*x1^69*x2^50",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 13,
+      "d_after": 13,
+      "state_before": {
+       "d": 13,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 13,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(13, -1)",
+      "value_after": "(13, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 339174,
+     "fail": 0
+    }
+   ]
+  },
+  {
+   "p": 5,
+   "n": 3,
+   "q": 25,
+   "steps": 203520,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 203520,
+     "fail": 2714,
+     "equal": 116550,
+     "down": 84256,
+     "first_failure": {
+      "walk": 40,
+      "step": 1,
+      "F": "3*x1^4*x2^17*x3^9 + 2*x1^8*x2^4*x3^20 + x1^21*x2^19*x3^27",
+      "terms": 3,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 13,
+      "d_after": 13,
+      "state_before": {
+       "d": 13,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 13,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(13, 1)",
+      "value_after": "(13, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 203520,
+     "fail": 4,
+     "equal": 119298,
+     "down": 84218,
+     "first_failure": {
+      "walk": 47184,
+      "step": 2,
+      "F": "3*x1^30*x3^20 + x1^30*x3^25 + 2*x1^30*x2^5*x3^25 + 3*x1^30*x3^30 + 3*x1^29*x3^31 + 4*x1^29*x3^32 + 3*x1^29*x2*x3^32 + 4*x1^29*x3^33 + x1^30*x3^33 + x1^29*x2*x3^33 + 3*x1^29*x3^34 + 3*x1^30*x3^34 + x1^29*x2^2*x3^33 + 3*x1^29*x2*x3^34 + 2*x1^30*x2^5*x3^30 + x1^30*x2*x3^34 + 3*x1^30*x3^35 + x1^29*x2^2*x3^34 + 2*x1^29*x3^36 + 2*x1^30*x2*x3^35 + x1^30*x3^36 + 4*x1^29*x2^3*x3^34 + x1^29*x3^37 + 2*x1^30*x2^2*x3^35 + x1^30*x2*x3^36 + 2*x1^29*x2*x3^37 + x1^29*x3^38 + 2*x1^30*x2^2*x3^36 + 3*x1^30*x3^38 + 4*x1^29*x2*x3^38 + 2*x1^29*x3^39 + x1^36*x3^33 + 3*x1^30*x2^3*x3^36 + 4*x1^30*x3^39 + 4*x1^29*x2^2*x3^38 + 2*x1^29*x2*x3^39 + 3*x1^36*x3^34 + 2*x1^30*x2^10*x3^30 + 3*x1^30*x2*x3^39 + 4*x1^30*x3^40 + 4*x1^29*x2^5*x3^36 + 4*x1^29*x2^2*x3^39 + 3*x1^29*x3^41 + x1^36*x2*x3^34 + 3*x1^36*x3^35 + x1^30*x2*x3^40 + 3*x1^30*x3^41 + 2*x1^29*x2^5*x3^37 + x1^29*x2^3*x3^39 + 4*x1^29*x3^42 + 2*x1^36*x2*x3^35 + x1^36*x3^36 + x1^30*x2^2*x3^40 + 3*x1^30*x2*x3^41 + 4*x1^29*x2^6*x3^37 + 2*x1^29*x2^5*x3^38 + 3*x1^29*x2*x3^42 + 4*x1^29*x3^43 + 2*x1^36*x2^2*x3^35 + x1^36*x2*x3^36 + x1^30*x2^5*x3^38 + x1^30*x2^2*x3^41 + 3*x1^30*x3^43 + 3*x1^29*x2^6*x3^38 + 4*x1^29*x2^5*x3^39 + x1^29*x2*x3^43 + 3*x1^29*x3^44 + 2*x1^36*x2^2*x3^36 + 3*x1^30*x2^5*x3^39 + 4*x1^30*x2^3*x3^41 + 4*x1^30*x3^44 + 3*x1^29*x2^7*x3^38 + 4*x1^29*x2^6*x3^39 + x1^29*x2^2*x3^43 + 3*x1^29*x2*x3^44 + 3*x1^36*x2^3*x3^36 + x1^30*x2^6*x3^39 + 3*x1^30*x2^5*x3^40 + 3*x1^30*x2*x3^44 + 4*x1^30*x3^45 + 3*x1^29*x2^7*x3^39 + 2*x1^29*x2^5*x3^41 + x1^29*x2^2*x3^44 + 2*x1^29*x3^46 + 2*x1^30*x2^6*x3^40 + x1^30*x2^5*x3^41 + x1^30*x2*x3^45 + 3*x1^30*x3^46 + 2*x1^29*x2^8*x3^39 + x1^29*x2^5*x3^42 + 4*x1^29*x2^3*x3^44 + x1^29*x3^47 + 2*x1^30*x2^7*x3^40 + x1^30*x2^6*x3^41 + x1^30*x2^2*x3^45 + 3*x1^30*x2*x3^46 + 2*x1^29*x2^6*x3^42 + x1^29*x2^5*x3^43 + 2*x1^29*x2*x3^47 + x1^29*x3^48 + 2*x1^30*x2^7*x3^41 + 2*x1^30*x2^5*x3^43 + x1^30*x2^2*x3^46 + x1^30*x3^48 + 4*x1^29*x2^6*x3^43 + 2*x1^29*x2^5*x3^44 + 4*x1^29*x2*x3^48 + 2*x1^29*x3^49 + 3*x1^30*x2^8*x3^41 + x1^30*x2^5*x3^44 + 4*x1^30*x2^3*x3^46 + 3*x1^30*x3^49 + 4*x1^29*x2^7*x3^43 + 2*x1^29*x2^6*x3^44 + 4*x1^29*x2^2*x3^48 + 2*x1^29*x2*x3^49 + 2*x1^30*x2^6*x3^44 + x1^30*x2^5*x3^45 + x1^30*x2*x3^49 + 3*x1^30*x3^50 + 2*x1^29*x2^10*x3^41 + 4*x1^29*x2^7*x3^44 + 2*x1^29*x2^5*x3^46 + 4*x1^29*x2^2*x3^49 + 3*x1^29*x3^51 + 4*x1^30*x2^6*x3^45 + 2*x1^30*x2^5*x3^46 + 2*x1^30*x2*x3^50 + x1^30*x3^51 + x1^29*x2^10*x3^42 + x1^29*x2^8*x3^44 + x1^29*x2^5*x3^47 + x1^29*x2^3*x3^49 + 4*x1^29*x3^52 + 4*x1^30*x2^7*x3^45 + 2*x1^30*x2^6*x3^46 + 2*x1^30*x2^2*x3^50 + x1^30*x2*x3^51 + 2*x1^29*x2^11*x3^42 + x1^29*x2^10*x3^43 + 2*x1^29*x2^6*x3^47 + x1^29*x2^5*x3^48 + 3*x1^29*x2*x3^52 + 4*x1^29*x3^53 + 2*x1^30*x2^10*x3^43 + 4*x1^30*x2^7*x3^46 + x1^30*x2^5*x3^48 + 2*x1^30*x2^2*x3^51 + 4*x1^29*x2^11*x3^43 + 2*x1^29*x2^10*x3^44 + 4*x1^29*x2^6*x3^48 + 2*x1^29*x2^5*x3^49 + x1^29*x2*x3^53 + 3*x1^29*x3^54 + x1^30*x2^10*x3^44 + x1^30*x2^8*x3^46 + 3*x1^30*x2^5*x3^49 + 3*x1^30*x2^3*x3^51 + 4*x1^29*x2^12*x3^43 + 2*x1^29*x2^11*x3^44 + 4*x1^29*x2^7*x3^48 + 2*x1^29*x2^6*x3^49 + x1^29*x2^2*x3^53 + 3*x1^29*x2*x3^54 + 2*x1^30*x2^11*x3^44 + x1^30*x2^10*x3^45 + x1^30*x2^6*x3^49 + 3*x1^30*x2^5*x3^50 + 4*x1^29*x2^12*x3^44 + 4*x1^29*x2^10*x3^46 + 4*x1^29*x2^7*x3^49 + 4*x1^29*x2^5*x3^51 + x1^29*x2^2*x3^54 + 4*x1^30*x2^11*x3^45 + 2*x1^30*x2^10*x3^46 + 2*x1^30*x2^6*x3^50 + x1^30*x2^5*x3^51 + x1^29*x2^13*x3^44 + 2*x1^29*x2^10*x3^47 + x1^29*x2^8*x3^49 + 2*x1^29*x2^5*x3^52 + 4*x1^29*x2^3*x3^54 + 4*x1^30*x2^12*x3^45 + 2*x1^30*x2^11*x3^46 + 2*x1^30*x2^7*x3^50 + x1^30*x2^6*x3^51 + 4*x1^29*x2^11*x3^47 + 2*x1^29*x2^10*x3^48 + 4*x1^29*x2^6*x3^52 + 2*x1^29*x2^5*x3^53 + 4*x1^30*x2^12*x3^46 + 2*x1^30*x2^10*x3^48 + 2*x1^30*x2^7*x3^51 + 3*x1^29*x2^11*x3^48 + 4*x1^29*x2^10*x3^49 + 3*x1^29*x2^6*x3^53 + 4*x1^29*x2^5*x3^54 + x1^30*x2^13*x3^46 + x1^30*x2^10*x3^49 + 3*x1^30*x2^8*x3^51 + 3*x1^29*x2^12*x3^48 + 4*x1^29*x2^11*x3^49 + 3*x1^29*x2^7*x3^53 + 4*x1^29*x2^6*x3^54 + 2*x1^30*x2^11*x3^49 + x1^30*x2^10*x3^50 + x1^29*x2^15*x3^46 + 3*x1^29*x2^12*x3^49 + 2*x1^29*x2^10*x3^51 + 3*x1^29*x2^7*x3^54 + 4*x1^30*x2^11*x3^50 + 2*x1^30*x2^10*x3^51 + 3*x1^29*x2^15*x3^47 + 2*x1^29*x2^13*x3^49 + x1^29*x2^10*x3^52 + 2*x1^29*x2^8*x3^54 + 4*x1^30*x2^12*x3^50 + 2*x1^30*x2^11*x3^51 + x1^29*x2^16*x3^47 + 3*x1^29*x2^15*x3^48 + 2*x1^29*x2^11*x3^52 + x1^29*x2^10*x3^53 + 3*x1^30*x2^15*x3^48 + 4*x1^30*x2^12*x3^51 + 2*x1^29*x2^16*x3^48 + x1^29*x2^15*x3^49 + 4*x1^29*x2^11*x3^53 + 2*x1^29*x2^10*x3^54 + 4*x1^30*x2^15*x3^49 + x1^30*x2^13*x3^51 + 2*x1^29*x2^17*x3^48 + x1^29*x2^16*x3^49 + 4*x1^29*x2^12*x3^53 + 2*x1^29*x2^11*x3^54 + 3*x1^30*x2^16*x3^49 + 4*x1^30*x2^15*x3^50 + 2*x1^29*x2^17*x3^49 + x1^29*x2^15*x3^51 + 4*x1^29*x2^12*x3^54 + x1^30*x2^16*x3^50 + 3*x1^30*x2^15*x3^51 + 3*x1^29*x2^18*x3^49 + 3*x1^29*x2^15*x3^52 + x1^29*x2^13*x3^54 + x1^30*x2^17*x3^50 + 3*x1^30*x2^16*x3^51 + x1^29*x2^16*x3^52 + 3*x1^29*x2^15*x3^53 + x1^30*x2^17*x3^51 + 2*x1^29*x2^16*x3^53 + x1^29*x2^15*x3^54 + 4*x1^30*x2^18*x3^51 + 2*x1^29*x2^17*x3^53 + x1^29*x2^16*x3^54 + 3*x1^29*x2^20*x3^51 + 2*x1^29*x2^17*x3^54 + 4*x1^29*x2^20*x3^52 + 3*x1^29*x2^18*x3^54 + 3*x1^29*x2^21*x3^52 + 4*x1^29*x2^20*x3^53 + x1^29*x2^21*x3^53 + 3*x1^29*x2^20*x3^54 + x1^29*x2^22*x3^53 + 3*x1^29*x2^21*x3^54 + x1^29*x2^22*x3^54 + 4*x1^29*x2^23*x3^54",
+      "terms": 266,
+      "divisor": [
+       "x1",
+       "x3"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 2,
+       "x3": 3
+      },
+      "d_before": 1,
+      "d_after": 5,
+      "state_before": {
+       "d": 1,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 5,
+       "n": 2,
+       "rF": 1,
+       "rG": 1,
+       "pF": 5,
+       "pG": 5
+      },
+      "value_before": "1/25",
+      "value_after": "5/25"
+     }
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 203520,
+     "fail": 152,
+     "equal": 119049,
+     "down": 84319,
+     "first_failure": {
+      "walk": 386,
+      "step": 2,
+      "F": "2*x1^20*x2^5*x3^10 + 3*x1^20*x2^6*x3^10 + 3*x1^20*x2^7*x3^10 + 3*x1^15*x2^6*x3^16 + 4*x1^15*x2^7*x3^16 + 2*x1^15*x2^8*x3^16 + x1^15*x2^9*x3^16 + 3*x1^15*x2^10*x3^16 + 2*x1^15*x2^11*x3^16 + x1^15*x2^12*x3^16 + 3*x1^15*x2^13*x3^16 + 4*x1^15*x2^14*x3^16 + 2*x1^15*x2^15*x3^16 + 2*x1^15*x2^16*x3^16 + x1^15*x2^17*x3^16 + 3*x1^15*x2^18*x3^16 + 4*x1^15*x2^19*x3^16 + 2*x1^15*x2^20*x3^16 + 3*x1^9*x2^15*x3^31 + x1^9*x2^16*x3^31 + x1^9*x2^20*x3^31 + 2*x1^9*x2^21*x3^31 + 4*x1^13*x2^22*x3^34 + 4*x1^13*x2^23*x3^34 + 3*x1^13*x2^24*x3^34 + 2*x1^13*x2^25*x3^34 + x1^9*x2^40*x3^31 + 2*x1^9*x2^41*x3^31 + 2*x1^9*x2^45*x3^31 + 4*x1^9*x2^46*x3^31 + 3*x1^13*x2^47*x3^34 + 3*x1^13*x2^48*x3^34 + x1^13*x2^49*x3^34 + 4*x1^13*x2^50*x3^34",
+      "terms": 34,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x2",
+      "translate": {
+       "x3": 3
+      },
+      "d_before": 11,
+      "d_after": 8,
+      "state_before": {
+       "d": 11,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 8,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "11 - 5 = 6",
+      "value_after": "8 - 1 = 7"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 203520,
+     "fail": 1561,
+     "equal": 119321,
+     "down": 82638,
+     "first_failure": {
+      "walk": 63,
+      "step": 0,
+      "F": "4*x1^5*x2^7*x3^29 + 3*x1^25*x2^12*x3^8 + 2*x1^29*x2^15*x3^5 + 4*x1^37*x2^12*x3^4 + 4*x1^16*x2^22*x3^19",
+      "terms": 5,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x1",
+      "translate": {
+       "x2": 4
+      },
+      "d_before": 25,
+      "d_after": 8,
+      "state_before": {
+       "d": 25,
+       "n": 1,
+       "rF": 0,
+       "rG": 2,
+       "pF": 1,
+       "pG": 25
+      },
+      "state_after": {
+       "d": 8,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "25 - 25 = 0",
+      "value_after": "8 - 1 = 7"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 203520,
+     "fail": 47,
+     "equal": 119000,
+     "down": 84473,
+     "first_failure": {
+      "walk": 1239,
+      "step": 9,
+      "F": "3*x1^20*x3^5 + x1^4*x2^6*x3^18 + 2*x1^23*x2^93*x3^13",
+      "terms": 3,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3"
+      ],
+      "chart": "x2",
+      "translate": {},
+      "d_before": 16,
+      "d_after": 16,
+      "state_before": {
+       "d": 16,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 16,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(16, -1)",
+      "value_after": "(16, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 203520,
+     "fail": 0
+    }
+   ]
+  },
+  {
+   "p": 5,
+   "n": 4,
+   "q": 25,
+   "steps": 49224,
+   "results": [
+    {
+     "id": "d-n",
+     "steps": 49224,
+     "fail": 611,
+     "equal": 28855,
+     "down": 19758,
+     "first_failure": {
+      "walk": 21,
+      "step": 4,
+      "F": "x1^11*x2^3*x3^11*x4^2 + 2*x2^7*x3^17*x4^4 + 3*x1^5*x2^54*x3^12*x4^78 + 4*x1^26*x2^121*x3^5*x4^199",
+      "terms": 4,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x4",
+      "translate": {},
+      "d_before": 17,
+      "d_after": 17,
+      "state_before": {
+       "d": 17,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 17,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(17, 1)",
+      "value_after": "(17, 2)"
+     }
+    },
+    {
+     "id": "d-over-q",
+     "steps": 49224,
+     "fail": 0,
+     "equal": 29466,
+     "down": 19758
+    },
+    {
+     "id": "d-minus-pr-moh",
+     "steps": 49224,
+     "fail": 26,
+     "equal": 29429,
+     "down": 19769,
+     "first_failure": {
+      "walk": 783,
+      "step": 2,
+      "F": "4*x1^25*x2^10*x4^10 + 3*x1^25*x2^10*x4^11 + 4*x1^25*x2^10*x4^12 + 2*x1^10*x2^19*x3^14*x4^18 + 2*x1^10*x2^19*x3^14*x4^23 + 2*x2^27*x3^19*x4^21 + 4*x2^27*x3^19*x4^22 + x1^9*x2^12*x3^26*x4^22 + 2*x2^27*x3^19*x4^23 + 4*x1^4*x2^46*x3^54*x4^79 + x1^4*x2^46*x3^54*x4^80 + 4*x1^4*x2^46*x3^54*x4^81 + x1^4*x2^46*x3^54*x4^82 + 4*x1^4*x2^46*x3^54*x4^83 + 4*x1^4*x2^46*x3^54*x4^84 + x1^4*x2^46*x3^54*x4^85 + 4*x1^4*x2^46*x3^54*x4^86 + x1^4*x2^46*x3^54*x4^87 + 4*x1^4*x2^46*x3^54*x4^88",
+      "terms": 19,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x2": 4,
+       "x4": 1
+      },
+      "d_before": 25,
+      "d_after": 22,
+      "state_before": {
+       "d": 25,
+       "n": 1,
+       "rF": 1,
+       "rG": 2,
+       "pF": 5,
+       "pG": 25
+      },
+      "state_after": {
+       "d": 22,
+       "n": 1,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "25 - 5 = 20",
+      "value_after": "22 - 1 = 21"
+     }
+    },
+    {
+     "id": "d-minus-pr-g",
+     "steps": 49224,
+     "fail": 198,
+     "equal": 29451,
+     "down": 19575,
+     "first_failure": {
+      "walk": 125,
+      "step": 1,
+      "F": "x1^11*x3^6*x4^12 + x1^20*x3^8*x4^2 + x1^11*x2*x3^6*x4^12 + 4*x1^20*x2*x3^8*x4^2 + 2*x1^11*x2^2*x3^6*x4^12 + 4*x1^20*x2^2*x3^8*x4^2 + 3*x1^11*x2^3*x3^6*x4^12 + 2*x1^20*x2^5*x3^8*x4^2 + 3*x1^20*x2^6*x3^8*x4^2 + 3*x1^20*x2^7*x3^8*x4^2 + 3*x1^21*x3^29*x4^10 + 3*x1^21*x2*x3^29*x4^10 + x1^21*x2^2*x3^29*x4^10 + 4*x1^21*x2^3*x3^29*x4^10 + 3*x1^35*x3^45*x4^3 + 2*x1^35*x2*x3^45*x4^3 + 2*x1^35*x2^2*x3^45*x4^3 + x1^35*x2^5*x3^45*x4^3 + 4*x1^35*x2^6*x3^45*x4^3 + 4*x1^35*x2^7*x3^45*x4^3 + x1^35*x2^25*x3^45*x4^3 + 4*x1^35*x2^26*x3^45*x4^3 + 4*x1^35*x2^27*x3^45*x4^3 + 2*x1^35*x2^30*x3^45*x4^3 + 3*x1^35*x2^31*x3^45*x4^3 + 3*x1^35*x2^32*x3^45*x4^3",
+      "terms": 26,
+      "divisor": [
+       "x1",
+       "x3",
+       "x4"
+      ],
+      "chart": "x3",
+      "translate": {
+       "x2": 3
+      },
+      "d_before": 10,
+      "d_after": 10,
+      "state_before": {
+       "d": 10,
+       "n": 1,
+       "rF": 0,
+       "rG": 1,
+       "pF": 1,
+       "pG": 5
+      },
+      "state_after": {
+       "d": 10,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "10 - 5 = 5",
+      "value_after": "10 - 1 = 9"
+     }
+    },
+    {
+     "id": "d-minus-r",
+     "steps": 49224,
+     "fail": 10,
+     "equal": 29424,
+     "down": 19790,
+     "first_failure": {
+      "walk": 1585,
+      "step": 2,
+      "F": "3*x1^5*x3^15*x4^10 + 2*x1^13*x2^8*x3^5*x4^8 + x1^10*x2^9*x3*x4^14 + 3*x1^16*x2^28*x3^4*x4^9 + 4*x1^22*x2^4*x3^11*x4^32 + 2*x1^69*x2^15*x3^39*x4^35",
+      "terms": 6,
+      "divisor": [
+       "x1",
+       "x2",
+       "x3",
+       "x4"
+      ],
+      "chart": "x1",
+      "translate": {},
+      "d_before": 16,
+      "d_after": 16,
+      "state_before": {
+       "d": 16,
+       "n": 1,
+       "rF": 1,
+       "rG": 0,
+       "pF": 5,
+       "pG": 1
+      },
+      "state_after": {
+       "d": 16,
+       "n": 2,
+       "rF": 0,
+       "rG": 0,
+       "pF": 1,
+       "pG": 1
+      },
+      "value_before": "(16, -1)",
+      "value_after": "(16, 0)"
+     }
+    },
+    {
+     "id": "moh-rounded",
+     "steps": 49224,
+     "fail": 0
+    }
+   ]
+  }
+ ]
+}

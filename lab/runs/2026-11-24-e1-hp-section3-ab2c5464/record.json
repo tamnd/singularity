@@ -1,0 +1,35 @@
+{
+  "id": "2026-11-24-e1-hp-section3-ab2c5464",
+  "name": "e1-hp-section3",
+  "experiment": "E1",
+  "question": "Does sing-lab give the residual orders of the example of Section 3 of Hauser and Perlega (arXiv:1802.05010), where the residual order goes from 5 to 7 under one point blowup?",
+  "tool": "sing-lab",
+  "node": "SG00000016",
+  "nodes": [
+    "SG00000013",
+    "SG00000015",
+    "SG00000016"
+  ],
+  "spec": "lab/specs/e1-hp-section3.yaml",
+  "spec_sha256": "ab2c5464c5ceee8a1522c602eb19bbc9d16ff35bfd84bc3c661d040f346e60c1",
+  "sing": {
+    "version": "dev",
+    "commit": "b52a81e9d961999d239a60252b9aa03e9d583fc6",
+    "go": "go1.27.3"
+  },
+  "host": "laptop",
+  "started": "2026-11-24T04:11:07Z",
+  "wall_seconds": 0,
+  "counts": {
+    "cases": 1,
+    "walks": 1,
+    "steps": 1,
+    "kangaroo": 1,
+    "moh_violations": 0,
+    "stability_violations": 0
+  },
+  "files": {
+    "steps.json": "4931df1a2ebd6bfc480ccab69ec221bc50d1e37beaaf9a55de8d9cf0bed2fa4f",
+    "summary.md": "1a5d6f380bc7eeef498e120327421c5397e7f4d0e95e8b6856864ba39b22af0c"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2026-11-24-e1-hp-cycle-p2-5f991b2a",
+  "name": "e1-hp-cycle-p2",
+  "experiment": "E1",
+  "question": "Does sing-lab give the residual orders of one cycle of the first example of Section 4 of Hauser and Perlega (arXiv:1802.05010), with d = 2, a = b = r = 0, s = 1, lambda = 1, A = 1 and Q = 0?",
+  "tool": "sing-lab",
+  "node": "SG00000017",
+  "nodes": [
+    "SG00000013",
+    "SG00000015",
+    "SG00000016",
+    "SG00000017"
+  ],
+  "spec": "lab/specs/e1-hp-cycle-p2.yaml",
+  "spec_sha256": "5f991b2a028763a1d5168d1edec6e8f5a4317787859a969867e2e265a2ab77e2",
+  "sing": {
+    "version": "dev",
+    "commit": "b52a81e9d961999d239a60252b9aa03e9d583fc6",
+    "go": "go1.27.3"
+  },
+  "host": "laptop",
+  "started": "2026-11-24T04:11:07Z",
+  "wall_seconds": 0.002,
+  "counts": {
+    "cases": 1,
+    "walks": 1,
+    "steps": 20,
+    "kangaroo": 1,
+    "moh_violations": 0,
+    "stability_violations": 0
+  },
+  "files": {
+    "steps.json": "13f3cfdf1f1ee9e6d20d614d8eabbba26c49139b37cf2430ddbc69333369b9c9",
+    "summary.md": "514b68edd6ffa65386d2f7b48ae5ceae4fd69d320a87ef4bdb928eacdd3b4a0b"
+  }
+}

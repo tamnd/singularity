@@ -1,0 +1,62 @@
+{
+ "spec": "e1-hp-section3",
+ "p": 2,
+ "q": 4,
+ "vars": [
+  "x",
+  "y",
+  "w"
+ ],
+ "source": "Hauser and Perlega, Cycles of singularities appearing in the resolution problem in positive characteristic, arXiv:1802.05010, Section 3.",
+ "reduce": false,
+ "steps": [
+  {
+   "index": 0,
+   "label": "start",
+   "F": "x^6*y^2*w^4 + x^2*y^6*w^4 + x^15*y^2*w^3",
+   "terms": 3,
+   "order": 12,
+   "divisor": [
+    "x",
+    "y",
+    "w"
+   ],
+   "state": {
+    "d": 5,
+    "n": 2,
+    "rF": 1,
+    "rG": 0,
+    "pF": 2,
+    "pG": 1
+   },
+   "expect": 5,
+   "match": true
+  },
+  {
+   "index": 1,
+   "label": "point blowup",
+   "chart": "x",
+   "translate": {
+    "y": 1
+   },
+   "F": "x^8*y^6*w^4 + x^16*w^3 + x^16*y^2*w^3",
+   "terms": 3,
+   "order": 18,
+   "divisor": [
+    "x",
+    "w"
+   ],
+   "state": {
+    "d": 7,
+    "n": 1,
+    "rF": 1,
+    "rG": 0,
+    "pF": 2,
+    "pG": 1
+   },
+   "expect": 7,
+   "match": true
+  }
+ ],
+ "match": true
+}

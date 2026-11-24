@@ -1,0 +1,38 @@
+{
+  "id": "2026-11-24-e1-p7-b358a69f",
+  "name": "e1-p7",
+  "experiment": "E1",
+  "question": "How does the residual order of z^q + F over F_7 change under random point blowups that keep the order q, for q = 7 and q = 49 and n = 2, 3, 4 variables? How many steps go up by more than the bound p^(e-1) of Moh, and what are the kangaroo points?",
+  "tool": "sing-lab",
+  "node": "SG00000016",
+  "nodes": [
+    "SG00000013",
+    "SG00000015",
+    "SG00000016"
+  ],
+  "spec": "e1-p7.yaml",
+  "spec_sha256": "b358a69f6151e387b95c5038ccd9e2d2c81575308081381344e54eb34e9d1649",
+  "sing": {
+    "version": "dev",
+    "commit": "b52a81e9d961999d239a60252b9aa03e9d583fc6",
+    "go": "go1.27.3"
+  },
+  "seed": 20261124007,
+  "host": "server3",
+  "started": "2026-11-24T05:06:32Z",
+  "wall_seconds": 1521.614,
+  "counts": {
+    "cases": 6,
+    "walks": 2578000,
+    "steps": 4331049,
+    "kangaroo": 173,
+    "moh_violations": 0,
+    "stability_violations": 0
+  },
+  "files": {
+    "examples.json": "71ee0c52395b43727ca60f780f853f62c690ea7770ac7b67cda64ff08e1bcd72",
+    "histogram.json": "fb46aa5a38f99de458df830bfd817529f570902ffeb557cfba3137a0aee10947",
+    "summary.md": "1ec0f2949214ee8c5724040550aaa9766c28456fdf024f1f642de9a8cee71b34"
+  },
+  "raw": "raw/: every kangaroo point of each case, one JSON line each, gzip. The directory stays on the machine of the run and is not in git."
+}
