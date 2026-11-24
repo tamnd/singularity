@@ -1,0 +1,14 @@
+tag: SG00000037
+kind: theorem
+title: A regular local ring has multiplicity one
+statement: Let $(R, \mathfrak{m})$ be a regular local ring of dimension $d$. Then $\ell(R/\mathfrak{m}^{n+1}) = \binom{n+d}{d}$ for each $n \ge 0$, and the multiplicity $e_d(\mathfrak{m}, R)$ is $1$.
+sources:
+- paper: AM69
+- paper: Mat
+uses:
+- SG00000033
+- SG00000034
+lean:
+  statement: Singularity.Algebra.samuelMultiplicity_regular
+  proof: Singularity.Algebra.samuelMultiplicity_regular
+tier: T1

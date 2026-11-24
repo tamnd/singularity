@@ -11,4 +11,4 @@ lean:
   statement: Singularity.Algebra.samuelMultiplicity_pos
   proof: Singularity.Algebra.samuelMultiplicity_pos
 tier: T1
-notes: The value $1$ for each regular local ring [Mat, Theorem 14.4] is not yet proved in Lean. The equality of the degree with the dimension is not yet proved either.
+notes: The value $1$ for each regular local ring is the node SG00000037. The equality of the degree with the dimension is not yet proved in Lean.
