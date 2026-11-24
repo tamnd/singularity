@@ -1,7 +1,7 @@
 tag: SG0000001P
 kind: theorem
 title: Hironaka's theorem
-statement: Each variety over a field of characteristic 0 has a resolution by a sequence of blowups along regular centres.
+statement: Each variety over a field of characteristic 0 has a resolution.
 sources:
 - paper: Hir64
 - paper: Wlo05
@@ -9,5 +9,7 @@ uses:
 - SG0000000S
 - SG0000000V
 lean:
-  statement: Singularity.Base.hironaka
+  statement: Singularity.ResolutionInDim
+  proof: Singularity.resolutionInDim_charZero
 tier: T8
+notes: The proof of [Hir64] gives a sequence of blowups along regular centres. The Lean statement is the weaker form of SG0000000D, a proper birational morphism from a regular scheme, and the Lean proof is the proof of SG0000000D from Main Theorem I of resolutionorg/hironaka. The earlier Lean name Singularity.Base.hironaka did not exist in the library.

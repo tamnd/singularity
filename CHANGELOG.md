@@ -4,6 +4,13 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- `records/lean.json` has the record of tamnd/singularity-lean at commit 80e2938, with 998 declarations. The new proof is the step of part 4 of the theorem of MacLane-Vaquié (tamnd/singularity-lean#75).
+- The note of SG0000000Z gives the Lean proof of the step.
+- SG0000001P now names the Lean statement and proof that exist (`Singularity.ResolutionInDim` and `Singularity.resolutionInDim_charZero`). The earlier name `Singularity.Base.hironaka` did not exist. The statement no longer says "a sequence of blowups", because the Lean form gives one proper birational morphism.
+- The statement of SG0000001J is now for characteristic p and transcendence degree at most 4, as the Lean statement and Conjecture 2.3.2 of Volume 9 of the handbook.
+
 ## 0.4.6 - 2026-11-24
 
 ### Changed
