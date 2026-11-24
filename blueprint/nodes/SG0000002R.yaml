@@ -1,0 +1,12 @@
+tag: SG0000002R
+kind: lemma
+title: The Jacobian criterion for a hypersurface over a regular ring
+statement: Let $A$ be a regular ring, let $F \in A$ and let $D$ be a derivation of $A$. Then each prime $\mathfrak{q}$ of $A/(F)$ with $\overline{DF} \notin \mathfrak{q}$ is in the regular locus of $A/(F)$.
+sources:
+- paper: Mat
+uses:
+- SG00000021
+lean:
+  statement: Singularity.Algebra.regularLocus_quotient_of_derivation
+  proof: Singularity.Algebra.regularLocus_quotient_of_derivation
+tier: T1

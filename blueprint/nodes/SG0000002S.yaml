@@ -1,0 +1,12 @@
+tag: SG0000002S
+kind: theorem
+title: Generic regularity in characteristic zero
+statement: Let $D$ be a domain of finite type over a field $k$ of characteristic $0$. Then there is $f \neq 0$ in $D$ such that the open set $D(f)$ of $\operatorname{Spec} D$ is in the regular locus.
+sources:
+- paper: Mat
+uses:
+- SG0000002R
+lean:
+  statement: Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_field
+  proof: Singularity.Algebra.exists_ne_zero_basicOpen_subset_regularLocus_of_field
+tier: T1
