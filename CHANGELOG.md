@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The new site page `site/route-report.md` is the route report of milestone S7. For each route R1 to R9 it gives the idea, the nodes with their Lean status, the literature, the negative results and the smallest next node in Lean, and it ranks the routes by the next feasible step. The routes page links to it.
 - `records/lean.json` has the record of tamnd/singularity-lean at commit 80e2938, with 998 declarations. The new proof is the step of part 4 of the theorem of MacLane-Vaquié (tamnd/singularity-lean#75).
 - The note of SG0000000Z gives the Lean proof of the step.
 - SG0000001P now names the Lean statement and proof that exist (`Singularity.ResolutionInDim` and `Singularity.resolutionInDim_charZero`). The earlier name `Singularity.Base.hironaka` did not exist. The statement no longer says "a sequence of blowups", because the Lean form gives one proper birational morphism.
