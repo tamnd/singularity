@@ -9,3 +9,4 @@ uses:
 lean:
   statement: Singularity.IsPermissible
 tier: T1
+notes: The Lean definition of tamnd/singularity-lean#61 states the conditions at the stalks. At each point $z$ of the center $C$, the ring $\mathcal{O}_{Z,z}/C_z$ is regular and $\mathcal{O}_{Z,z}/X_z$ is normally flat along $C_z/X_z$, that is, each quotient $(P^n + Q)/(P^{n+1} + Q)$ is flat over $\mathcal{O}_{Z,z}/P$. The Lean result `Singularity.isPermissible_vanishingIdeal_singleton` proves that a closed point of $X$ is a permissible center, because each module over a field is flat.

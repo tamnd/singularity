@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "ad6063d4c110acc83e949f12976c4efb28607dcc",
+  "commit": "23305f9e49ea35b7d5e4f9026d9eccbc06dd3d14",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "ad6063d4c110acc83e949f12976c4efb28607dcc",
+ "commit": "23305f9e49ea35b7d5e4f9026d9eccbc06dd3d14",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -3913,6 +3913,17 @@
    "line": 98,
    "type": "{k : Type u} \u2192\n  [inst : Field k] \u2192\n    (X : AlgebraicGeometry.Scheme) \u2192\n      (X \u27f6 AlgebraicGeometry.Spec \u21a7k) \u2192 (U : X.Opens) \u2192 Algebra k \u2191(X.presheaf.obj (Opposite.op U))"
   },
+  "Singularity.EmbeddedResolutionSurface": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 222,
+   "type": "Prop"
+  },
   "Singularity.Examples.Exp5": {
    "axioms": [],
    "file": "Singularity/Example/HauserPerlegaCycle.lean",
@@ -5802,6 +5813,17 @@
    "line": 23,
    "type": "(X : AlgebraicGeometry.Scheme) \u2192 X \u2a3f X \u27f6 X"
   },
+  "Singularity.Fidelity.hasNormalCrossings_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 40,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (D : Z.IdealSheafData), Singularity.HasNormalCrossings \u22a4 D"
+  },
   "Singularity.Fidelity.inl_ne_inr": {
    "axioms": [
     "Classical.choice",
@@ -5813,6 +5835,17 @@
    "line": 26,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme} (x : \u21a5X), CategoryTheory.Limits.coprod.inl x \u2260 CategoryTheory.Limits.coprod.inr x"
   },
+  "Singularity.Fidelity.isEmbeddedResolution_id_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 56,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192 Singularity.IsEmbeddedResolution \u22a4 (CategoryTheory.CategoryStruct.id Z) \u22a4 \u22a4"
+  },
   "Singularity.Fidelity.isResolution_id": {
    "axioms": [
     "Classical.choice",
@@ -5823,6 +5856,17 @@
    "kind": "theorem",
    "line": 19,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme X \u2192 Singularity.IsResolution (CategoryTheory.CategoryStruct.id X)"
+  },
+  "Singularity.Fidelity.isSncDivisor_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 33,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme}, Singularity.IsRegularScheme Z \u2192 Singularity.IsSncDivisor \u22a4"
   },
   "Singularity.Fidelity.not_isResolution_codiag": {
    "axioms": [
@@ -5846,6 +5890,61 @@
    "line": 57,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme X \u2192 \u2200 (x : \u21a5X), \u00acSingularity.IsResolution (Singularity.Fidelity.codiag X)"
   },
+  "Singularity.Fidelity.not_isSncAt_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [inst_1 : IsRegularLocalRing R], \u00acSingularity.IsSncAt \u22a5"
+  },
+  "Singularity.Fidelity.not_isSncDivisor_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme}, Singularity.IsRegularScheme Z \u2192 \u2200 (z : \u21a5Z), \u00acSingularity.IsSncDivisor \u22a5"
+  },
+  "Singularity.Fidelity.strictTransform_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Fidelity/Embedded.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} (\u03c0 : Z' \u27f6 Z) (U : Z.Opens), Singularity.strictTransform \u22a4 \u03c0 U = \u22a4"
+  },
+  "Singularity.HasNormalCrossings": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 171,
+   "type": "{Z : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 Z.IdealSheafData \u2192 Prop"
+  },
+  "Singularity.HasNormalCrossingsAt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 65,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 [IsLocalRing R] \u2192 Ideal R \u2192 Ideal R \u2192 Prop"
+  },
   "Singularity.IntegralResolutionInDim": {
    "axioms": [
     "Classical.choice",
@@ -5868,6 +5967,127 @@
    "line": 94,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 Prop"
   },
+  "Singularity.IsEmbeddedResolution": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "inductive",
+   "line": 197,
+   "type": "{Z Z' : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 (Z' \u27f6 Z) \u2192 Z.Opens \u2192 Z'.IdealSheafData \u2192 Prop"
+  },
+  "Singularity.IsEmbeddedResolution.compl_subset": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 (\u2191U)\u1d9c \u2286 \u21d1X.subscheme\u03b9 '' (Singularity.regularLocus X.subscheme)\u1d9c"
+  },
+  "Singularity.IsEmbeddedResolution.isIso_over": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 CategoryTheory.IsIso (\u03c0 \u2223_ U)"
+  },
+  "Singularity.IsEmbeddedResolution.normalCrossings": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 216,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 Singularity.HasNormalCrossings (Singularity.strictTransform X \u03c0 U) E"
+  },
+  "Singularity.IsEmbeddedResolution.proper": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 211,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 AlgebraicGeometry.IsProper \u03c0"
+  },
+  "Singularity.IsEmbeddedResolution.regular": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 210,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 Singularity.IsRegularScheme Z'"
+  },
+  "Singularity.IsEmbeddedResolution.snc": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 215,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 Singularity.IsSncDivisor E"
+  },
+  "Singularity.IsEmbeddedResolution.support_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 214,
+   "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 \u2191E.support = \u21d1\u03c0 \u207b\u00b9' (\u2191U)\u1d9c"
+  },
+  "Singularity.IsNormallyFlatAt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 70,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 Ideal R \u2192 Prop"
+  },
+  "Singularity.IsPermissible": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 177,
+   "type": "{Z : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 Z.IdealSheafData \u2192 Prop"
+  },
+  "Singularity.IsRegularCodimOne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 184,
+   "type": "{Z : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 Prop"
+  },
   "Singularity.IsRegularScheme": {
    "axioms": [
     "Classical.choice",
@@ -5878,6 +6098,17 @@
    "kind": "def",
    "line": 33,
    "type": "AlgebraicGeometry.Scheme \u2192 Prop"
+  },
+  "Singularity.IsRegularSystemOfParameters": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 57,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 [IsLocalRing R] \u2192 Finset R \u2192 Prop"
   },
   "Singularity.IsResolution": {
    "axioms": [
@@ -5933,6 +6164,28 @@
    "kind": "theorem",
    "line": 47,
    "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 Singularity.IsRegularScheme Y"
+  },
+  "Singularity.IsSncAt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 61,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 [IsLocalRing R] \u2192 Ideal R \u2192 Prop"
+  },
+  "Singularity.IsSncDivisor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 165,
+   "type": "{Z : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 Prop"
   },
   "Singularity.IsVariety": {
    "axioms": [
@@ -6668,6 +6921,17 @@
    "line": 264,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [ExpChar k p] [PerfectRing k p] (e : \u2115)\n  (F : MvPolynomial \u03c3 k), \u2203 h, F + h ^ p ^ e = Singularity.cleanPart (p ^ e) F"
   },
+  "Singularity.exists_affineOpens_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (z : \u21a5Z), \u2203 U, z \u2208 \u2191U"
+  },
   "Singularity.exists_coeff_ne_zero_and_ord_eq": {
    "axioms": [
     "Classical.choice",
@@ -6689,6 +6953,39 @@
    "kind": "theorem",
    "line": 185,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 \u2203 d, f.coeff d \u2260 0 \u2227 Singularity.weightedOrd w f = \u2191((Finsupp.weight w) d)"
+  },
+  "Singularity.exists_isRegularSystemOfParameters": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [inst_1 : IsRegularLocalRing R], \u2203 s, Singularity.IsRegularSystemOfParameters s"
+  },
+  "Singularity.exists_isRegularSystemOfParameters_eq_span_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n  ringKrullDim (R \u29f8 P) + 1 = ringKrullDim R \u2192\n    \u2203 s, Singularity.IsRegularSystemOfParameters s \u2227 \u2203 x \u2208 s, P = Ideal.span {x}"
+  },
+  "Singularity.exists_isRegularSystemOfParameters_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 39,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192 \u2203 s, Singularity.IsRegularSystemOfParameters s \u2227 x \u2208 s"
   },
   "Singularity.exists_mem_ord_eq_idealOrd": {
    "axioms": [
@@ -6744,6 +7041,28 @@
    "kind": "theorem",
    "line": 104,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  d \u2208 f.support \u2192 Singularity.expToReal d \u2208 Singularity.newtonPolyhedron f"
+  },
+  "Singularity.hasNormalCrossingsAt_top_of_isRegularLocalRing_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n  ringKrullDim (R \u29f8 P) + 1 = ringKrullDim R \u2192 Singularity.HasNormalCrossingsAt P \u22a4"
+  },
+  "Singularity.hasNormalCrossings_top_of_codim_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192\n    \u2200 {D : Z.IdealSheafData}, Singularity.IsRegularCodimOne D \u2192 Singularity.HasNormalCrossings D \u22a4"
   },
   "Singularity.idealOrd": {
    "axioms": [
@@ -6943,6 +7262,17 @@
    "line": 136,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115), Singularity.IsClean q 0"
   },
+  "Singularity.isEmbeddedResolution_id_of_codim_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 181,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192\n    \u2200 {X : Z.IdealSheafData},\n      Singularity.IsRegularCodimOne X \u2192\n        X.radical = X \u2192 Singularity.IsEmbeddedResolution X (CategoryTheory.CategoryStruct.id Z) \u22a4 \u22a4"
+  },
   "Singularity.isLeast_sum_newtonPolyhedron": {
    "axioms": [
     "Classical.choice",
@@ -6964,6 +7294,39 @@
    "kind": "theorem",
    "line": 193,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 IsLeast ((fun v => \u2211 i, \u2191(w i) * v i) '' Singularity.newtonPolyhedron f) \u2191(Singularity.weightedOrd w f).toNat"
+  },
+  "Singularity.isNormallyFlatAt_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (Q : Ideal R),\n  Singularity.IsNormallyFlatAt (IsLocalRing.maximalIdeal R) Q"
+  },
+  "Singularity.isPermissible_of_stalkIdeal_eq_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 101,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {X C : Z.IdealSheafData},\n  X \u2264 C \u2192\n    (\u2200 z \u2208 C.support, Singularity.stalkIdeal C z = IsLocalRing.maximalIdeal \u2191(Z.presheaf.stalk z)) \u2192\n      Singularity.IsPermissible X C"
+  },
+  "Singularity.isPermissible_vanishingIdeal_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 139,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {z : \u21a5Z} (hz : IsClosed {z}),\n  z \u2208 X.support \u2192\n    Singularity.IsPermissible X\n      (AlgebraicGeometry.Scheme.IdealSheafData.vanishingIdeal { carrier := {z}, isClosed' := hz })"
   },
   "Singularity.isRegularLocalRing_of_isField": {
    "axioms": [
@@ -6987,6 +7350,28 @@
    "line": 37,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R] [IsIntegrallyClosed R],\n  ringKrullDim R \u2264 1 \u2192 IsRegularLocalRing R"
   },
+  "Singularity.isRegularLocalRing_of_isRegularSystemOfParameters": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {s : Finset R},\n  Singularity.IsRegularSystemOfParameters s \u2192 IsRegularLocalRing R"
+  },
+  "Singularity.isRegularLocalRing_quotient_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 80,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R], IsRegularLocalRing (R \u29f8 IsLocalRing.maximalIdeal R)"
+  },
   "Singularity.isRegularScheme_of_isIntegrallyClosed_stalk": {
    "axioms": [
     "Classical.choice",
@@ -7008,6 +7393,39 @@
    "kind": "theorem",
    "line": 44,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsReduced X],\n  topologicalKrullDim \u21a5X \u2264 0 \u2192 Singularity.IsRegularScheme X"
+  },
+  "Singularity.isSncAt_of_isRegularLocalRing_quotient": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 64,
+   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] (P : Ideal R) [IsRegularLocalRing (R \u29f8 P)],\n  ringKrullDim (R \u29f8 P) + 1 = ringKrullDim R \u2192 Singularity.IsSncAt P"
+  },
+  "Singularity.isSncAt_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 92,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [inst_1 : IsRegularLocalRing R], Singularity.IsSncAt \u22a4"
+  },
+  "Singularity.isSncDivisor_of_codim_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192 \u2200 {D : Z.IdealSheafData}, Singularity.IsRegularCodimOne D \u2192 Singularity.IsSncDivisor D"
   },
   "Singularity.isVariety_p1Hypersurface": {
    "axioms": [
@@ -7239,6 +7657,17 @@
    "kind": "theorem",
    "line": 359,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : Fintype \u03c3] [inst_2 : DecidableEq \u03c3]\n  (f : MvPolynomial \u03c3 R), (Singularity.linearChange 1) f = f"
+  },
+  "Singularity.map_ideal_le_stalkIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 115,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (I : Z.IdealSheafData) {z : \u21a5Z} (U : \u2191Z.affineOpens) (h : z \u2208 \u2191U),\n  Ideal.map (CommRingCat.Hom.hom (Z.presheaf.germ (\u2191U) z h)) (I.ideal U) \u2264 Singularity.stalkIdeal I z"
   },
   "Singularity.mem_directrix_iff": {
    "axioms": [
@@ -8306,6 +8735,94 @@
    "kind": "theorem",
    "line": 80,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (v w : \u03c3 \u2192 k),\n  (MvPolynomial.aeval fun o =>\n          o.elim (MvPolynomial.X none) fun i =>\n            MvPolynomial.X (some i) + MvPolynomial.C (w i) * MvPolynomial.X none).comp\n      (Singularity.translate v) =\n    Singularity.translate (v + w)"
+  },
+  "Singularity.stalkIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 105,
+   "type": "{Z : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 (z : \u21a5Z) \u2192 Ideal \u2191(Z.presheaf.stalk z)"
+  },
+  "Singularity.stalkIdeal_bot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 126,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (z : \u21a5Z), Singularity.stalkIdeal \u22a5 z = \u22a5"
+  },
+  "Singularity.stalkIdeal_eq_top_of_notMem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 140,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {I : Z.IdealSheafData} {z : \u21a5Z}, z \u2209 I.support \u2192 Singularity.stalkIdeal I z = \u22a4"
+  },
+  "Singularity.stalkIdeal_le_maximalIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 130,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {I : Z.IdealSheafData} {z : \u21a5Z},\n  z \u2208 I.support \u2192 Singularity.stalkIdeal I z \u2264 IsLocalRing.maximalIdeal \u2191(Z.presheaf.stalk z)"
+  },
+  "Singularity.stalkIdeal_ne_top_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 151,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {I : Z.IdealSheafData} {z : \u21a5Z}, Singularity.stalkIdeal I z \u2260 \u22a4 \u2194 z \u2208 I.support"
+  },
+  "Singularity.stalkIdeal_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "theorem",
+   "line": 120,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (z : \u21a5Z), Singularity.stalkIdeal \u22a4 z = \u22a4"
+  },
+  "Singularity.stalkIdeal_vanishingIdeal_singleton": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Scheme/Embedded.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {z : \u21a5Z} (hz : IsClosed {z}),\n  Singularity.stalkIdeal (AlgebraicGeometry.Scheme.IdealSheafData.vanishingIdeal { carrier := {z}, isClosed' := hz })\n      z =\n    IsLocalRing.maximalIdeal \u2191(Z.presheaf.stalk z)"
+  },
+  "Singularity.strictTransform": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Statements/Embedded.lean",
+   "kind": "def",
+   "line": 189,
+   "type": "{Z Z' : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 (Z' \u27f6 Z) \u2192 Z.Opens \u2192 Z'.IdealSheafData"
   },
   "Singularity.topologicalKrullDim_p1Hypersurface_le": {
    "axioms": [
