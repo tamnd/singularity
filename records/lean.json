@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "c51aa7040d9b1446fb480d018fa63cc56958663d",
+  "commit": "69685f3c22d96137683bc204e856c5219b97f9d6",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-24",
- "commit": "c51aa7040d9b1446fb480d018fa63cc56958663d",
+ "commit": "69685f3c22d96137683bc204e856c5219b97f9d6",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -5823,6 +5823,72 @@
    "line": 452,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [CommSemiring k] \u2192 [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 Finset \u03c3 \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 Finset \u03c3"
   },
+  "Singularity.chartRest": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "def",
+   "line": 44,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.chartShift": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "def",
+   "line": 49,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.chartShift_comp_dehomogenize": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 145,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.chartShift j t).comp (Singularity.dehomogenize j) = Singularity.chartRest j t"
+  },
+  "Singularity.chartShift_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  Function.Injective \u21d1(Singularity.chartShift j t)"
+  },
+  "Singularity.chartShift_neg_comp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 153,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.chartShift j (-t)).comp (Singularity.chartShift j t) = AlgHom.id k (MvPolynomial \u03c3 k)"
+  },
+  "Singularity.chartTransform": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "def",
+   "line": 61,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 (\u03c3 \u2192 k) \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial \u03c3 k"
+  },
   "Singularity.cleanPart": {
    "axioms": [
     "Classical.choice",
@@ -5977,6 +6043,39 @@
    "line": 81,
    "type": "\u2200 {\u03c3 : Type u_1}, Convex \u211d (Singularity.orthant \u03c3)"
   },
+  "Singularity.degree_eq_add_degree_erase": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 197,
+   "type": "\u2200 {\u03c3 : Type u_1} (j : \u03c3) (c : \u03c3 \u2192\u2080 \u2115), Finsupp.degree c = c j + Finsupp.degree (Finsupp.erase j c)"
+  },
+  "Singularity.dehomogenize": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "def",
+   "line": 53,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.dehomogenize_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (a : \u03c3 \u2192\u2080 \u2115) (c : k),\n  (Singularity.dehomogenize j) ((MvPolynomial.monomial a) c) = (MvPolynomial.monomial (Finsupp.erase j a)) c"
+  },
   "Singularity.divisorExponent": {
    "axioms": [
     "Classical.choice",
@@ -6042,6 +6141,17 @@
    "kind": "theorem",
    "line": 223,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I : Ideal (MvPolynomial \u03c3 R)),\n  \u2203 f \u2208 I, Singularity.ord f = Singularity.idealOrd I"
+  },
+  "Singularity.exists_pointChart_eq_X_pow_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 101,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {m : \u2115}\n  {f : MvPolynomial \u03c3 k}, \u2191m \u2264 Singularity.ord f \u2192 \u2203 f', (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f'"
   },
   "Singularity.expToReal": {
    "axioms": [
@@ -6362,6 +6472,39 @@
    "line": 243,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) (f : MvPolynomial \u03c3 R),\n  MvPolynomial.IsWeightedHomogeneous w (Singularity.initialForm w f) (Singularity.weightedOrd w f).toNat"
   },
+  "Singularity.killVar": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "def",
+   "line": 57,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 MvPolynomial \u03c3 k \u2192\u2090[k] MvPolynomial \u03c3 k"
+  },
+  "Singularity.killVar_chartTransform": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 117,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) {m : \u2115}\n  {f : MvPolynomial \u03c3 k},\n  \u2191m \u2264 Singularity.ord f \u2192\n    (Singularity.killVar j) (Singularity.chartTransform j t m f) =\n      (Singularity.chartRest j t) (\u2211 a \u2208 f.support with Finsupp.degree a = m, (MvPolynomial.monomial a) (f.coeff a))"
+  },
+  "Singularity.killVar_comp_chartRest": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.killVar j).comp (Singularity.chartRest j t) = Singularity.chartRest j t"
+  },
   "Singularity.krullDimLE_zero_stalk": {
    "axioms": [
     "Classical.choice",
@@ -6372,6 +6515,17 @@
    "kind": "theorem",
    "line": 34,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
+  },
+  "Singularity.le_degree_of_mem_support": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 89,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {m : \u2115} {f : MvPolynomial \u03c3 k},\n  \u2191m \u2264 Singularity.ord f \u2192 \u2200 {a : \u03c3 \u2192\u2080 \u2115}, a \u2208 f.support \u2192 m \u2264 Finsupp.degree a"
   },
   "Singularity.le_idealOrd": {
    "axioms": [
@@ -6582,6 +6736,17 @@
    "line": 461,
    "type": "Prop"
   },
+  "Singularity.ne_zero_of_pointChart_eq_X_pow_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 271,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {f f' : MvPolynomial \u03c3 k}\n  {m : \u2115}, f \u2260 0 \u2192 (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f' \u2192 f' \u2260 0"
+  },
   "Singularity.newtonPolyhedron": {
    "axioms": [
     "Classical.choice",
@@ -6780,6 +6945,17 @@
    "line": 310,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {\u03c4 : Type u_3} (e : MvPolynomial \u03c3 R \u2243\u2090[R] MvPolynomial \u03c4 R),\n  (\u2200 (i : \u03c3), MvPolynomial.constantCoeff (e (MvPolynomial.X i)) = 0) \u2192\n    (\u2200 (i : \u03c4), MvPolynomial.constantCoeff (e.symm (MvPolynomial.X i)) = 0) \u2192\n      \u2200 (f : MvPolynomial \u03c3 R), Singularity.ord (e f) = Singularity.ord f"
   },
+  "Singularity.ord_chartTransform_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) {m : \u2115}\n  {f : MvPolynomial \u03c3 k}, Singularity.ord f = \u2191m \u2192 Singularity.ord (Singularity.chartTransform j t m f) \u2264 \u2191m"
+  },
   "Singularity.ord_def": {
    "axioms": [
     "Classical.choice",
@@ -6835,6 +7011,17 @@
    "line": 78,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R} {d : \u03c3 \u2192\u2080 \u2115},\n  f.coeff d \u2260 0 \u2192 Singularity.ord f \u2264 \u2191(Finsupp.degree d)"
   },
+  "Singularity.ord_le_of_pointChart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 248,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {f f' : MvPolynomial \u03c3 k}\n  {m : \u2115}, Singularity.ord f = \u2191m \u2192 (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f' \u2192 Singularity.ord f' \u2264 \u2191m"
+  },
   "Singularity.ord_le_ord_aeval": {
    "axioms": [
     "Classical.choice",
@@ -6857,6 +7044,17 @@
    "line": 141,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.ord F \u2264 Singularity.ord (Singularity.cleanPart q F)"
   },
+  "Singularity.ord_le_ord_killVar": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.ord g \u2264 Singularity.ord ((Singularity.killVar j) g)"
+  },
   "Singularity.ord_le_ord_linearChange": {
    "axioms": [
     "Classical.choice",
@@ -6878,6 +7076,17 @@
    "kind": "theorem",
    "line": 222,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {q : \u2115},\n  q \u2260 0 \u2192 \u2200 (F : MvPolynomial \u03c3 k), Singularity.ord F \u2264 Singularity.residualOrder q F"
+  },
+  "Singularity.ord_le_totalDegree": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 189,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {p : MvPolynomial \u03c3 k}, p \u2260 0 \u2192 Singularity.ord p \u2264 \u2191p.totalDegree"
   },
   "Singularity.ord_linearChange": {
    "axioms": [
@@ -7066,6 +7275,17 @@
    "line": 434,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k)\n  (F : MvPolynomial \u03c3 k),\n  (Singularity.pointChartZ j t) ((MvPolynomial.rename some) F) =\n    (MvPolynomial.rename some) ((Singularity.pointChart j t) F)"
   },
+  "Singularity.pointChart_X_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 66,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (i : \u03c3),\n  (Singularity.pointChart j t) (MvPolynomial.X i) = MvPolynomial.X j * (Singularity.chartRest j t) (MvPolynomial.X i)"
+  },
   "Singularity.pointChart_X_of_ne": {
    "axioms": [
     "Classical.choice",
@@ -7087,6 +7307,61 @@
    "kind": "theorem",
    "line": 421,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  (Singularity.pointChart j t) (MvPolynomial.X j) = MvPolynomial.X j"
+  },
+  "Singularity.pointChart_eq_X_pow_mul_chartTransform": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) {m : \u2115}\n  {f : MvPolynomial \u03c3 k},\n  \u2191m \u2264 Singularity.ord f \u2192 (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * Singularity.chartTransform j t m f"
+  },
+  "Singularity.pointChart_eq_sum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 81,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (f : MvPolynomial \u03c3 k),\n  (Singularity.pointChart j t) f =\n    \u2211 a \u2208 f.support,\n      MvPolynomial.X j ^ Finsupp.degree a * (Singularity.chartRest j t) ((MvPolynomial.monomial a) (f.coeff a))"
+  },
+  "Singularity.pointChart_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 267,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k),\n  Function.Injective \u21d1(Singularity.pointChart j t)"
+  },
+  "Singularity.pointChart_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (a : \u03c3 \u2192\u2080 \u2115) (c : k),\n  (Singularity.pointChart j t) ((MvPolynomial.monomial a) c) =\n    MvPolynomial.X j ^ Finsupp.degree a * (Singularity.chartRest j t) ((MvPolynomial.monomial a) c)"
+  },
+  "Singularity.pointChart_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 257,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {f : MvPolynomial \u03c3 k},\n  f \u2260 0 \u2192 (Singularity.pointChart j t) f \u2260 0"
   },
   "Singularity.pow_eq_zero_of_isClean": {
    "axioms": [
@@ -7384,6 +7659,28 @@
    "kind": "theorem",
    "line": 77,
    "type": "\u2200 {k : Type u} [inst : Field k] {p n : \u2115},\n  p \u2260 0 \u2192 \u2200 (g : MvPolynomial (Fin n) k), topologicalKrullDim \u21a5(Singularity.P1Hypersurface k p n g) \u2264 \u2191n"
+  },
+  "Singularity.totalDegree_aeval_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u03c6 : \u03c3 \u2192 MvPolynomial \u03c3 k},\n  (\u2200 (i : \u03c3), (\u03c6 i).totalDegree \u2264 1) \u2192 \u2200 (p : MvPolynomial \u03c3 k), ((MvPolynomial.aeval \u03c6) p).totalDegree \u2264 p.totalDegree"
+  },
+  "Singularity.totalDegree_chartShift_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderBlowup.lean",
+   "kind": "theorem",
+   "line": 181,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (j : \u03c3) (t : \u03c3 \u2192 k) (p : MvPolynomial \u03c3 k),\n  ((Singularity.chartShift j t) p).totalDegree \u2264 p.totalDegree"
   },
   "Singularity.weightedOrd": {
    "axioms": [
