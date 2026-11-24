@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.2 - 2026-11-24
+
 - The node SG0000001C (embedded resolution of surfaces) has the Lean statement Singularity.EmbeddedResolutionSurface of tamnd/singularity-lean#61. The statement is weaker than the theorem of [CJS20], and it is not proved. The notes of the node give the differences.
 - The nodes SG0000000T (permissible center) and SG0000000V (simple normal crossings) have the Lean definitions Singularity.IsPermissible and Singularity.IsSncDivisor of tamnd/singularity-lean#61. Their notes give the Lean results on them.
 - records/lean.json records the Lean build at commit 23305f9, with 825 declarations.
