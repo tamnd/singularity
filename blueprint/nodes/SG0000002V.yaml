@@ -1,0 +1,13 @@
+tag: SG0000002V
+kind: theorem
+title: The regular locus of a scheme is open in characteristic zero
+statement: Let $X$ be a scheme that is locally of finite type over a field $k$ of characteristic $0$. Then the regular locus of $X$ is open in $X$.
+sources:
+- paper: Mat
+- paper: EGA4-7
+uses:
+- SG0000002T
+lean:
+  statement: Singularity.regularLocus_isOpen_of_charZero
+  proof: Singularity.regularLocus_isOpen_of_charZero
+tier: T1
