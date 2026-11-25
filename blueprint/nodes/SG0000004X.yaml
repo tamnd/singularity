@@ -1,0 +1,15 @@
+tag: SG0000004X
+kind: theorem
+title: The points where the log-Jacobian order stays lie in a directrix
+statement: In the setting of SG0000003N, write $g = x^r G$, let $\rho = \rho(g)$ and let $\sigma$ be the order of the ideal $\widetilde\Theta_0(G)$ with $\Theta_0(g) = x^r \widetilde\Theta_0(G)$, so $\sigma \in \{\rho, \rho + 1\}$. Let $v$ be the vector of the chart, and assume that $\rho(g'_c) = \rho$. If $\sigma = \rho$, then $v$ lies in the directrix of $\operatorname{in}(h)$ for each $h \in \widetilde\Theta_0(G)$ of order $\rho$. If $\sigma = \rho + 1$, then $v$ lies in the directrix of $\operatorname{in}(h)$ for each $h \in \widetilde\Theta(G)$ of order $\rho$. So if these directrices meet only in $0$, then $\rho$ goes down at each point of the exceptional divisor. If $\rho = d$ and $p \nmid |r| + d$, then $v$ lies in the directrix of $\operatorname{in}(G)$.
+sources:
+- paper: Hir67
+- paper: Cos87
+uses:
+- SG0000003B
+- SG0000003M
+- SG0000003N
+tier: T2
+route:
+- R1
+notes: This is Volume 7, Section 3.7 of the handbook, the analogue for the log-Jacobian order of the theorem of Hironaka SG0000003B on the points where the order stays. The first case is false with $\widetilde\Theta(G)$ in the place of $\widetilde\Theta_0(G)$. For $p = 3$, $g = x^3 (y^2 + x)$ and $E = V(x)$, the order $\rho = 1$ stays at the origin of the $y$-chart, but $v = (0, 1)$ is not in the directrix of $\partial_y G = 2y$. The theorem gives a place for the points where $\rho$ stays. It does not say that $\rho$ goes down after finitely many blowups. The Lean proof is not yet merged.
