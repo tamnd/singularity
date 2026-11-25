@@ -8,4 +8,7 @@ uses:
 tier: T2
 route:
 - R1
-notes: This is Volume 7, Example 3.4.6 of the handbook. It shows that the condition (H2) of SG0000004Q is necessary. The center is too large, because the order of $\widetilde\Theta_C(g)$ at the origin is larger than its order along $C$. A computer search over small polynomials in three variables found it. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.
+lean:
+  statement: Singularity.centerExample_logJacobianOrder_cleanPart
+  proof: Singularity.centerExample_logJacobianOrder_cleanPart
+notes: This is Volume 7, Example 3.4.6 of the handbook. It shows that the condition (H2) of SG0000004Q is necessary. The center is too large, because the order of $\widetilde\Theta_C(g)$ at the origin is larger than its order along $C$. A computer search over small polynomials in three variables found it. The Lean library proves the example over $\mathbb{F}_2$, with (H1), the failure of (H2), $\rho = 2$ and $\rho(g'_c) = 3$ (tamnd/singularity-lean#96).
