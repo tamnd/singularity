@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "8e6b1dc9eb8b5cbdcc52bef51e2d251ea580e3ce",
+  "commit": "b7487dcaaa694c532112a4286577da1396268105",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "8e6b1dc9eb8b5cbdcc52bef51e2d251ea580e3ce",
+ "commit": "b7487dcaaa694c532112a4286577da1396268105",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -11605,6 +11605,17 @@
    "line": 262,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_3} (y : \u03ba \u2192 \u21a5V) (p : MvPolynomial \u03ba k),\n  \u2191((MvPolynomial.aeval y) p) = (MvPolynomial.aeval fun i => \u2191(y i)) p"
   },
+  "Singularity.coe_aeval_valuationSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGeneratorExistence.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] (z : \u21a5vL.valuationSubring)\n  (p : Polynomial \u21a5vK.valuationSubring),\n  \u2191((Polynomial.aeval z) p) = (Polynomial.aeval \u2191z) (Polynomial.map (algebraMap (\u21a5vK.valuationSubring) K) p)"
+  },
   "Singularity.coe_weightedHomogeneousComponent": {
    "axioms": [
     "Classical.choice",
@@ -12958,6 +12969,17 @@
    "line": 405,
    "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K]\n  [inst_2 : Algebra k K] (V : ValuationSubring K) [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K],\n  Singularity.HasLocalUniformization k V \u2192\n    \u2200 {c : K},\n      (\u2200 (b : K), b ^ p \u2260 c) \u2192\n        \u2203 x,\n          (x = c \u2228 x = c\u207b\u00b9) \u2227\n            x \u2208 V \u2227\n              (\u2200 (b : K), b ^ p \u2260 x) \u2227\n                Irreducible (Polynomial.X ^ p - Polynomial.C x) \u2227 Singularity.HasRegularCenter k V {x}"
   },
+  "Singularity.exists_isEtaleGenerator_of_finrank_residueField_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGeneratorExistence.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {\u0393\u2080 : Type u_3} {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  [inst_4 : LinearOrderedCommGroupWithZero \u0393] (v\u2080 : Valuation (\u21a5K\u2080) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v]\n  [FiniteDimensional (\u21a5K\u2080) K]\n  [Algebra.IsSeparable (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring)],\n  Module.finrank (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) =\n      Module.finrank (\u21a5K\u2080) K \u2192\n    Algebra.IsSeparable (\u21a5K\u2080) K \u2227 \u2203 z, Singularity.IsEtaleGenerator K\u2080 v.valuationSubring z"
+  },
   "Singularity.exists_isRegularSystemOfParameters": {
    "axioms": [
     "Classical.choice",
@@ -13243,6 +13265,17 @@
    "kind": "theorem",
    "line": 261,
    "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] {\u03ba : Type u_5}\n  (y : \u03ba \u2192 \u21a5vL.valuationSubring),\n  (AlgebraicIndependent (IsLocalRing.ResidueField \u21a5vK.valuationSubring) fun j =>\n      (IsLocalRing.residue \u21a5vL.valuationSubring) (y j)) \u2192\n    \u2200 (P : MvPolynomial \u03ba K), P \u2260 0 \u2192 \u2203 c, vL ((MvPolynomial.aeval fun j => \u2191(y j)) P) = vL ((algebraMap K L) \u2191c)"
+  },
+  "Singularity.exists_valuation_aeval_eq_of_natDegree_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGeneratorExistence.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] (z : \u21a5vL.valuationSubring)\n  {p : Polynomial K},\n  p \u2260 0 \u2192\n    p.natDegree <\n        (minpoly (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n            ((IsLocalRing.residue \u21a5vL.valuationSubring) z)).natDegree \u2192\n      \u2203 i,\n        p.coeff i \u2260 0 \u2227\n          (\u2200 (j : \u2115), vK (p.coeff j) \u2264 vK (p.coeff i)) \u2227\n            vL ((Polynomial.aeval \u2191z) p) = vL ((algebraMap K L) (p.coeff i))"
   },
   "Singularity.exists_zShift_zMonic": {
    "axioms": [
@@ -18524,6 +18557,17 @@
    "line": 230,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) (F : MvPolynomial \u03c3 k),\n  Singularity.residualOrder (p ^ e) F \u2264 Singularity.ord (Singularity.cleanPart (p ^ e) F)"
   },
+  "Singularity.residue_aeval_eq_aeval_map_residue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGeneratorExistence.lean",
+   "kind": "theorem",
+   "line": 39,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_3}\n  {\u0393\u2081 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081]\n  (vK : Valuation K \u0393\u2080) (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL] (z : \u21a5vL.valuationSubring)\n  (p : Polynomial \u21a5vK.valuationSubring),\n  (IsLocalRing.residue \u21a5vL.valuationSubring) ((Polynomial.aeval z) p) =\n    (Polynomial.aeval ((IsLocalRing.residue \u21a5vL.valuationSubring) z))\n      (Polynomial.map (IsLocalRing.residue \u21a5vK.valuationSubring) p)"
+  },
   "Singularity.resolutionInDim_charZero": {
    "axioms": [
     "Classical.choice",
@@ -19216,6 +19260,17 @@
    "kind": "theorem",
    "line": 149,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  {F : IntermediateField k K}, (\u2200 c \u2208 F, c \u2208 V) \u2192 \u2200 {c : K}, c \u2208 F \u2192 c \u2260 0 \u2192 V.valuation c = 1"
+  },
+  "Singularity.valuation_eq_one_of_residue_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGeneratorExistence.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {L : Type u_2} [inst : Field L] {\u0393\u2081 : Type u_4} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2081] (vL : Valuation L \u0393\u2081)\n  {x : \u21a5vL.valuationSubring}, (IsLocalRing.residue \u21a5vL.valuationSubring) x \u2260 0 \u2192 vL \u2191x = 1"
   },
   "Singularity.valuation_sum_mul_le": {
    "axioms": [
