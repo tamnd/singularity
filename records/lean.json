@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "a01c6b03d449fda53717e08abd982c2f3eb1b924",
+  "commit": "2ab04e5908674b0e86cc5eebd0d142b439a63636",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "a01c6b03d449fda53717e08abd982c2f3eb1b924",
+ "commit": "2ab04e5908674b0e86cc5eebd0d142b439a63636",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -20353,6 +20353,50 @@
    "kind": "theorem",
    "line": 650,
    "type": "Singularity.IsClean 2\n    (MvPolynomial.X 1 *\n      ((MvPolynomial.X 0 + 1) * MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 ^ 2 * (MvPolynomial.X 0 ^ 2 + 1))) \u2227\n  MvPolynomial.X 1 * MvPolynomial.X 2 ^ 2 \u2209\n      Singularity.logJacobianTangent (Singularity.blowupDivisor {0} 1 ![1, 0, 0])\n        (Singularity.cleanPart 2\n          (MvPolynomial.X 1 *\n            ((MvPolynomial.X 0 + 1) * MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 ^ 2 * (MvPolynomial.X 0 ^ 2 + 1)))) \u2227\n    MvPolynomial.X 1 * ((MvPolynomial.X 0 + 1) * MvPolynomial.X 2 ^ 2) \u2209\n      Singularity.logJacobianTangent (Singularity.blowupDivisor {0} 1 ![1, 0, 0])\n        (Singularity.cleanPart 2\n          (MvPolynomial.X 1 *\n            ((MvPolynomial.X 0 + 1) * MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 ^ 2 * (MvPolynomial.X 0 ^ 2 + 1))))"
+  },
+  "Singularity.tauRhoDropExample_cases": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianDirectrixDrop.lean",
+   "kind": "theorem",
+   "line": 575,
+   "type": "Singularity.idealOrd\n      (Singularity.logJacobianTangent {0, 1, 2, 3}\n        (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n          MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2)) =\n    \u2191(Finsupp.degree\n          (Singularity.divisorExponent {0, 1, 2, 3}\n            (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n              MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2))) +\n      Singularity.logJacobianOrder {0, 1, 2, 3}\n        (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n          MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) \u2227\n  Singularity.idealOrd\n      (Singularity.logJacobianTangent (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n        (Singularity.cleanPart 2\n          (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n              (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n            MvPolynomial.X 4 ^ 2))) =\n    \u2191(Finsupp.degree\n          (Singularity.divisorExponent (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n            (Singularity.cleanPart 2\n              (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n                  (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n                MvPolynomial.X 4 ^ 2)))) +\n      Singularity.logJacobianOrder (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n        (Singularity.cleanPart 2\n          (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n              (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n            MvPolynomial.X 4 ^ 2))"
+  },
+  "Singularity.tauRhoDropExample_codim": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianDirectrixDrop.lean",
+   "kind": "theorem",
+   "line": 606,
+   "type": "Singularity.logJacobianDirectrixCodim {0, 1, 2, 3}\n      (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n        MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) =\n    3 \u2227\n  Singularity.logJacobianDirectrixCodim (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n      (Singularity.cleanPart 2\n        (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) * (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n          MvPolynomial.X 4 ^ 2)) =\n    2"
+  },
+  "Singularity.tauRhoDropExample_finrank": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianDirectrixDrop.lean",
+   "kind": "theorem",
+   "line": 588,
+   "type": "Singularity.logJacobianOrder {0, 1, 2, 3}\n      (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n        MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) =\n    3 \u2227\n  Singularity.logJacobianOrder (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n        (Singularity.cleanPart 2\n          (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n              (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n            MvPolynomial.X 4 ^ 2)) =\n      3 \u2227\n    Module.finrank (ZMod 2)\n          \u21a5(Singularity.logJacobianDirectrix {0, 1, 2, 3}\n              (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n                MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2)) =\n        2 \u2227\n      Module.finrank (ZMod 2)\n          \u21a5(Singularity.logJacobianDirectrix (Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1))\n              (Singularity.cleanPart 2\n                (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n                    (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n                  MvPolynomial.X 4 ^ 2))) =\n        3"
+  },
+  "Singularity.tauRhoDropExample_hyp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianDirectrixDrop.lean",
+   "kind": "theorem",
+   "line": 558,
+   "type": "MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n      MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 \u2260\n    0 \u2227\n  Singularity.IsClean 2\n      (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n        MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) \u2227\n    \u21912 \u2264\n        Singularity.ord\n          (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n            MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) \u2227\n      (Singularity.pointChart 3 (Pi.single 0 1))\n            (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n              MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) =\n          MvPolynomial.X 3 ^ 2 *\n            (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n                (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n              MvPolynomial.X 4 ^ 2) \u2227\n        Singularity.blowupDivisor {0, 1, 2, 3} 3 (Pi.single 0 1) = {1, 2, 3} \u2227\n          Singularity.cleanPart 2\n                (MvPolynomial.X 3 ^ 4 * (MvPolynomial.X 0 + 1) *\n                    (MvPolynomial.X 2 ^ 2 + MvPolynomial.X 1 * MvPolynomial.X 2) *\n                  MvPolynomial.X 4 ^ 2) =\n              MvPolynomial.X 3 ^ 4 *\n                (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 4 ^ 2 +\n                  (MvPolynomial.X 0 + 1) * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 4 ^ 2) \u2227\n            Singularity.divisorExponent {0, 1, 2, 3}\n                  (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n                    MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2) =\n                Finsupp.single 0 1 + Finsupp.single 2 1 + Finsupp.single 3 1 \u2227\n              Singularity.residualFactor {0, 1, 2, 3}\n                    (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n                      MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 *\n                        MvPolynomial.X 4 ^ 2) =\n                  (MvPolynomial.X 1 + MvPolynomial.X 2) * MvPolynomial.X 4 ^ 2 \u2227\n                \u2191(Finsupp.degree\n                        (Singularity.divisorExponent {0, 1, 2, 3}\n                          (MvPolynomial.X 0 * MvPolynomial.X 2 ^ 2 * MvPolynomial.X 3 * MvPolynomial.X 4 ^ 2 +\n                            MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 *\n                              MvPolynomial.X 4 ^ 2)) +\n                      3) =\n                  0"
   },
   "Singularity.tauRhoExample_cases": {
    "axioms": [
