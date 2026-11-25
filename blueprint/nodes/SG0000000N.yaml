@@ -7,3 +7,4 @@ sources:
 lean:
   statement: Singularity.isRegularLocalRing_iff_flat_frobenius
 tier: T1
+notes: The Lean name of the statement is planned. The library does not have it yet.
