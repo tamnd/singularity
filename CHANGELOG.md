@@ -12,6 +12,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The note of SG0000000Z now says that part 4 of MacLane-Vaquié is complete in Lean for a discrete valuation of rank 1 (tamnd/singularity-lean#101).
 - The note of SG0000000Z now says that the limit key polynomial is a key polynomial for the limit augmentation, by tamnd/singularity-lean#99 (#146).
 
 ## 0.4.15 - 2026-11-25
