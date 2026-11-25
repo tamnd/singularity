@@ -7,7 +7,10 @@ sources:
 uses:
 - SG00000052
 - SG00000054
+lean:
+  statement: Singularity.idealOrd_logJacobianTangent_cleanPart_of_forall_eq_zero
+  proof: Singularity.idealOrd_logJacobianTangent_cleanPart_of_forall_eq_zero
 tier: T2
 route:
 - R1
-notes: In the first case $\rho = \sigma = d$ with no hypothesis on $p$, since each generator of $\widetilde\Theta_0(G)$ has order at least $d$ and $\rho \le d$. So $R$ is not empty. The proof of SG00000052 needs one element of $\widetilde\Theta_0(G)$ of order $d$ with an exact transport. If $i \in R$, $i \ne j$ and $t_i = 0$, the element $e_i$ has this property, since the chart sends $x_i \partial_i g$ to $x_j^p \, x_i \partial_i g'$. If $R = \{j\}$, the Euler element has the homogeneous part $\Phi_j \ne 0$ of degree $d$, and it has this property. In the example SG00000054, $R = \{x, z\}$, the direction is $x$, and $z$ leaves, so neither hypothesis holds.
+notes: In the first case $\rho = \sigma = d$ with no hypothesis on $p$, since each generator of $\widetilde\Theta_0(G)$ has order at least $d$ and $\rho \le d$. So $R$ is not empty. The proof of SG00000052 needs one element of $\widetilde\Theta_0(G)$ of order $d$ with an exact transport. If $i \in R$, $i \ne j$ and $t_i = 0$, the element $e_i$ has this property, since the chart sends $x_i \partial_i g$ to $x_j^p \, x_i \partial_i g'$. If $R = \{j\}$, the Euler element has the homogeneous part $\Phi_j \ne 0$ of degree $d$, and it has this property. In the example SG00000054, $R = \{x, z\}$, the direction is $x$, and $z$ leaves, so neither hypothesis holds. The Lean library proves the node in `Singularity/Invariant/LogJacobianNoLeave.lean`, with no hypothesis on $p$. `Singularity.idealOrd_logJacobianTangent_cleanPart_of_ne_of_eq_zero` is the form with an index $i \ne j$ that does not leave, and `Singularity.idealOrd_logJacobianTangent_cleanPart_of_lt_ord` is the form with $R = \{j\}$. `Singularity.exists_mem_ord_smul_add_X_mul_pderiv_eq` shows that $R$ is not empty.

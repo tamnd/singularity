@@ -8,7 +8,10 @@ uses:
 - SG00000050
 - SG00000053
 - SG00000055
+lean:
+  statement: Singularity.logJacobianDirectrixCodim_le_cleanPart_of_forall_eq_zero
+  proof: Singularity.logJacobianDirectrixCodim_le_cleanPart_of_forall_eq_zero
 tier: T2
 route:
 - R1
-notes: If $|r| + d$ is not $0$ in the base field, this is SG00000053. Otherwise both points are in the first case by SG00000055, and the proof of SG00000050 applies to each form $\Phi_i$ with $i \ne j$, since $e_i$ has an exact transport. The Euler identity gives $\sum_{k \in R} \Phi_k = (|r| + d) F = 0$, so $\Phi_j$ is a linear combination of the other forms, and each vector $w$ of the directrix of $g'_c$ with $w_j = 0$ is in $T(\Phi_j)$. So with SG0000004Z and SG00000053, $\tau_\rho$ can go down at a step where $\rho$ stays only from the second case to the first case, or from the first case with $p \mid |r| + d$ to the first case with a leaving component.
+notes: If $|r| + d$ is not $0$ in the base field, this is SG00000053. Otherwise both points are in the first case by SG00000055, and the proof of SG00000050 applies to each form $\Phi_i$ with $i \ne j$, since $e_i$ has an exact transport. The Euler identity gives $\sum_{k \in R} \Phi_k = (|r| + d) F = 0$, so $\Phi_j$ is a linear combination of the other forms, and each vector $w$ of the directrix of $g'_c$ with $w_j = 0$ is in $T(\Phi_j)$. So with SG0000004Z and SG00000053, $\tau_\rho$ can go down at a step where $\rho$ stays only from the second case to the first case, or from the first case with $p \mid |r| + d$ to the first case with a leaving component. The Lean library proves the node in `Singularity/Invariant/LogJacobianNoLeave.lean`, with no hypothesis on $p$. `Singularity.finrank_logJacobianDirectrix_cleanPart_le_of_forall_eq_zero` is the form with the dimensions of the directrices.

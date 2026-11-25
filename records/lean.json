@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "b1c2ad8235413ba10f9e369ee502ce0d8fd54dbd",
+  "commit": "3b63a7b0934fc409506ca5444b4d9498a8683330",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "b1c2ad8235413ba10f9e369ee502ce0d8fd54dbd",
+ "commit": "3b63a7b0934fc409506ca5444b4d9498a8683330",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -13459,6 +13459,17 @@
    "line": 223,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (I : Ideal (MvPolynomial \u03c3 R)),\n  \u2203 f \u2208 I, Singularity.ord f = Singularity.idealOrd I"
   },
+  "Singularity.exists_mem_ord_smul_add_X_mul_pderiv_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 105,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n    Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n        \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n      \u2203 i \u2208 \u0394,\n        Singularity.ord\n            (\u2191((Singularity.divisorExponent \u0394 g) i) \u2022 Singularity.residualFactor \u0394 g +\n              MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.residualFactor \u0394 g)) =\n          \u2191d"
+  },
   "Singularity.exists_mem_support_residualFactor_apply_eq_zero": {
    "axioms": [
     "Classical.choice",
@@ -13953,6 +13964,17 @@
    "kind": "theorem",
    "line": 349,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n              Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n                Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                  Singularity.idealOrd\n                        (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')) =\n                      \u2191(Finsupp.degree\n                            (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) +\n                          d) \u2192\n                    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2260 0 \u2192\n                      Module.finrank k\n                          \u21a5(Singularity.logJacobianDirectrix (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) \u2264\n                        Module.finrank k \u21a5(Singularity.logJacobianDirectrix \u0394 g)"
+  },
+  "Singularity.finrank_logJacobianDirectrix_cleanPart_le_of_forall_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 261,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n              Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n                Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n                    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n                  Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                    (\u2200 i \u2208 \u0394, i \u2260 j \u2192 t i = 0) \u2192\n                      Module.finrank k\n                          \u21a5(Singularity.logJacobianDirectrix (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) \u2264\n                        Module.finrank k \u21a5(Singularity.logJacobianDirectrix \u0394 g)"
   },
   "Singularity.finrank_logJacobianDirectrix_cleanPart_le_of_ne_zero": {
    "axioms": [
@@ -14501,6 +14523,39 @@
    "kind": "theorem",
    "line": 90,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n              Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n                Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                  \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2260 0 \u2192\n                    Singularity.idealOrd\n                        (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')) =\n                      \u2191(Finsupp.degree\n                            (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) +\n                          d)"
+  },
+  "Singularity.idealOrd_logJacobianTangent_cleanPart_of_forall_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 228,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n              Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n                  \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n                Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                  (\u2200 i \u2208 \u0394, i \u2260 j \u2192 t i = 0) \u2192\n                    Singularity.idealOrd\n                        (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')) =\n                      \u2191(Finsupp.degree\n                            (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) +\n                          d)"
+  },
+  "Singularity.idealOrd_logJacobianTangent_cleanPart_of_lt_ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 181,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n              Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n                  \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n                Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                  Singularity.ord\n                        (\u2191((Singularity.divisorExponent \u0394 g) j) \u2022 Singularity.residualFactor \u0394 g +\n                          MvPolynomial.X j * (MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) =\n                      \u2191d \u2192\n                    (\u2200 i \u2208 \u0394,\n                        i \u2260 j \u2192\n                          \u2191d <\n                            Singularity.ord\n                              (\u2191((Singularity.divisorExponent \u0394 g) i) \u2022 Singularity.residualFactor \u0394 g +\n                                MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.residualFactor \u0394 g))) \u2192\n                      Singularity.idealOrd\n                          (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                            (Singularity.cleanPart p g')) =\n                        \u2191(Finsupp.degree\n                              (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                                (Singularity.cleanPart p g')) +\n                            d)"
+  },
+  "Singularity.idealOrd_logJacobianTangent_cleanPart_of_ne_of_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 152,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n                \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n              Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                \u2200 {i : \u03c3},\n                  i \u2208 \u0394 \u2192\n                    i \u2260 j \u2192\n                      t i = 0 \u2192\n                        Singularity.ord\n                              (\u2191((Singularity.divisorExponent \u0394 g) i) \u2022 Singularity.residualFactor \u0394 g +\n                                MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.residualFactor \u0394 g)) =\n                            \u2191d \u2192\n                          Singularity.idealOrd\n                              (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                                (Singularity.cleanPart p g')) =\n                            \u2191(Finsupp.degree\n                                  (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                                    (Singularity.cleanPart p g')) +\n                                d)"
   },
   "Singularity.idealOrd_mul": {
    "axioms": [
@@ -15855,6 +15910,17 @@
    "line": 269,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {G : MvPolynomial \u03c3 k} {d : \u2115},\n  \u2191d \u2264 Singularity.ord G \u2192\n    \u2200 (r : \u03c3 \u2192\u2080 \u2115) (i : \u03c3), \u2191d \u2264 Singularity.ord (\u2191(r i) \u2022 G + MvPolynomial.X i * (MvPolynomial.pderiv i) G)"
   },
+  "Singularity.le_ord_smul_add_X_mul_pderiv_of_idealOrd_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) = \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n    \u2200 {i : \u03c3},\n      i \u2208 \u0394 \u2192\n        \u2191d \u2264\n          Singularity.ord\n            (\u2191((Singularity.divisorExponent \u0394 g) i) \u2022 Singularity.residualFactor \u0394 g +\n              MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.residualFactor \u0394 g))"
+  },
   "Singularity.le_ord_translate_zMonic_iff": {
    "axioms": [
     "Classical.choice",
@@ -16118,6 +16184,17 @@
    "kind": "theorem",
    "line": 460,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n              Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n                Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                  Singularity.idealOrd\n                        (Singularity.logJacobianTangent (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')) =\n                      \u2191(Finsupp.degree\n                            (Singularity.divisorExponent (Singularity.blowupDivisor \u0394 j t)\n                              (Singularity.cleanPart p g')) +\n                          d) \u2192\n                    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2260 0 \u2192\n                      Singularity.logJacobianDirectrixCodim \u0394 g \u2264\n                        Singularity.logJacobianDirectrixCodim (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')"
+  },
+  "Singularity.logJacobianDirectrixCodim_le_cleanPart_of_forall_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 354,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {d : \u2115},\n            Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n              Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n                Singularity.idealOrd (Singularity.logJacobianTangent \u0394 g) =\n                    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g) + d) \u2192\n                  Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191d \u2192\n                    (\u2200 i \u2208 \u0394, i \u2260 j \u2192 t i = 0) \u2192\n                      Singularity.logJacobianDirectrixCodim \u0394 g \u2264\n                        Singularity.logJacobianDirectrixCodim (Singularity.blowupDivisor \u0394 j t)\n                          (Singularity.cleanPart p g')"
   },
   "Singularity.logJacobianDirectrixCodim_le_cleanPart_of_ne_zero": {
    "axioms": [
@@ -17681,6 +17758,17 @@
    "line": 180,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 * Singularity.residualFactor \u0394 g = g"
   },
+  "Singularity.monomial_mul_smul_add_X_mul_pderiv_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {i : \u03c3},\n  i \u2208 \u0394 \u2192\n    (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 *\n        (\u2191((Singularity.divisorExponent \u0394 g) i) \u2022 Singularity.residualFactor \u0394 g +\n          MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.residualFactor \u0394 g)) \u2208\n      Singularity.logJacobianTangent \u0394 g"
+  },
   "Singularity.monomial_mul_sum_smul_add_X_mul_pderiv_mem": {
    "axioms": [
     "Classical.choice",
@@ -17856,6 +17944,28 @@
    "kind": "theorem",
    "line": 491,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {f : MvPolynomial \u03c3 k} {n : \u2115},\n  \u2191n \u2264 Singularity.ord f \u2192 \u2200 (m : \u03c3), \u2191(n + 1) \u2264 Singularity.ord (MvPolynomial.X m * f)"
+  },
+  "Singularity.natCast_succ_le_ord_X_mul_pderiv_residualFactor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 66,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n    \u2200 {l : \u03c3},\n      l \u2209 \u0394 \u2192\n        \u2200 (m : \u03c3),\n          \u2191(d + 1) \u2264 Singularity.ord (MvPolynomial.X m * (MvPolynomial.pderiv l) (Singularity.residualFactor \u0394 g))"
+  },
+  "Singularity.natCast_succ_le_ord_smul_add_X_mul_pderiv_of_notMem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianNoLeave.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.logJacobianOrder \u0394 g = \u2191d \u2192\n    \u2200 {l : \u03c3},\n      l \u2209 \u0394 \u2192\n        \u2191(d + 1) \u2264\n          Singularity.ord\n            (\u2191((Singularity.divisorExponent \u0394 g) l) \u2022 Singularity.residualFactor \u0394 g +\n              MvPolynomial.X l * (MvPolynomial.pderiv l) (Singularity.residualFactor \u0394 g))"
   },
   "Singularity.natDegree_eq_of_map_lt": {
    "axioms": [
