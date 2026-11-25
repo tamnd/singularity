@@ -7,7 +7,10 @@ sources:
 uses:
 - SG00000050
 - SG00000052
+lean:
+  statement: Singularity.logJacobianDirectrixCodim_le_cleanPart_of_ne_zero
+  proof: Singularity.logJacobianDirectrixCodim_le_cleanPart_of_ne_zero
 tier: T2
 route:
 - R1
-notes: By SG00000052 the new point is in the first case, and SG00000050 applies. With SG0000004Z, SG00000051 and the example of SG0000004Z from the second case to the first case, each combination of the cases at a point where $\rho$ stays has an answer. The codimension $\tau_\rho$ can go down only if the new point is in the first case and the old point is in the second case or $p$ divides $|r| + d$. A random test of sequences of blowups found 93, 49 and 43 drops from the second case to the first case for $(p, n) = (2, 3), (2, 4)$ and $(3, 3)$, 2 drops from the first case to the first case with $p \mid |r| + d$ for $(p, n) = (2, 4)$, and no other drop.
+notes: By SG00000052 the new point is in the first case, and SG00000050 applies. With SG0000004Z, SG00000051 and the example of SG0000004Z from the second case to the first case, each combination of the cases at a point where $\rho$ stays has an answer. The codimension $\tau_\rho$ can go down only if the new point is in the first case and the old point is in the second case or $p$ divides $|r| + d$. A random test of sequences of blowups found 93, 49 and 43 drops from the second case to the first case for $(p, n) = (2, 3), (2, 4)$ and $(3, 3)$, 2 drops from the first case to the first case with $p \mid |r| + d$ for $(p, n) = (2, 4)$, and no other drop. The Lean proof is for polynomials. The form with the dimensions of the directrices is `finrank_logJacobianDirectrix_cleanPart_le_of_ne_zero`.
