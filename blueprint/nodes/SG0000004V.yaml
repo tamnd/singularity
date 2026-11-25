@@ -1,0 +1,17 @@
+tag: SG0000004V
+kind: theorem
+title: The lemma of Tschirnhausen
+statement: Let $f = z^m + \sum_{i < m} a_i(x) z^i$ with $m$ a unit in the ring of coefficients. The change $z \mapsto z - a_{m-1}/m$ gives $a_{m-1} = 0$. For $f$ in this form, each point where $f$ has order at least $m$ lies on the hypersurface $z = 0$. Over a field with $m \ne 0$, let $f$ have order $m$ at the origin, and let a chart of the point blowup give a weak transform $f'$ of order at least $m$ at the origin of the chart. Then the chart is an $x_j$-chart with translation 0 for $z$, and $f'$ is again of this form.
+sources:
+- paper: Hau03
+- paper: Nar83
+uses:
+- SG00000013
+- SG00000018
+lean:
+  statement: Singularity.tschirnhausen_pointChart
+  proof: Singularity.tschirnhausen_pointChart
+tier: T1
+route:
+- R3
+notes: The Lean file is Singularity/Invariant/Tschirnhausen.lean of tamnd/singularity-lean#98. The other Lean names are Singularity.tschirnhausen_transformation, Singularity.eq_zero_of_le_ord_translate and Singularity.le_ord_translate_zMonic_iff. The hypothesis that $m$ is a unit is necessary. The example of Narasimhan (SG00000018) is in this form with $m = 2$ in characteristic 2, and it has a point of order 2 with $z = 1$ (Singularity.not_tschirnhausen_charTwo). This node is the case where $m$ is a unit. It is not the reduction of Cossart-Piltant to $z^p + g$, which is about the case $p \mid m$.
