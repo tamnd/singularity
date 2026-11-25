@@ -11,4 +11,4 @@ uses:
 - SG0000000T
 - SG0000000V
 tier: T8
-notes: This is the second main theorem of [Hir64]. The constructive proofs of [Vil89] and [BM97] give an embedded resolution that is determined by the pair $(Y, X)$ and is compatible with smooth morphisms. The library defines the conclusion in a weak form without the sequence of blowups, `Singularity.IsEmbeddedResolution`, but it does not state the theorem in characteristic 0. The case of surfaces in each characteristic is SG0000001C. Volume 2, Theorem 1.1.4 of the handbook.
+notes: Hironaka proves the theorem in [Hir64]. Later papers do not agree on which numbered main theorem of [Hir64] gives this form, so the note gives no number. The constructive proofs of [Vil89] and [BM97] give an embedded resolution that is determined by the pair $(Y, X)$ and is compatible with smooth morphisms. The library defines the conclusion in a weak form without the sequence of blowups, `Singularity.IsEmbeddedResolution`, but it does not state the theorem in characteristic 0. The case of surfaces in each characteristic is SG0000001C. Volume 2, Theorem 1.1.4 of the handbook.
