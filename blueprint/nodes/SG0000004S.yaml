@@ -1,0 +1,15 @@
+tag: SG0000004S
+kind: theorem
+title: The end case of the log-Jacobian ideal
+statement: Let $g \ne 0$ be clean with $g = x^r G$ as in SG0000003F. Then $\rho(g) = 0$ if and only if $G(0) \ne 0$ and $p \nmid r_i$ for some $i \in \Delta$ (type 0), or $G(0) = 0$ and $\partial_j G(0) \ne 0$ for some $j \notin \Delta$ (type 1). Over $K[[x]]$ with $K$ algebraically closed, a change of the coordinates adapted to $E$ then gives $g = x^r$ in type 0 and $g = x^r x_j$ in type 1, so $z^p + g$ is a binomial equation.
+sources:
+- paper: Cos87
+- paper: CP08
+uses:
+- SG0000003F
+- SG0000001S
+tier: T2
+route:
+- R1
+- R5
+notes: This is Volume 7, Proposition 3.5.1 and Theorem 3.5.3 of the handbook. The proof holds for each number of variables. In Cossart's thesis the end case for a base of dimension 3 gives the form $t^p + x^a$ in the étale topology, after Giraud. The node SG0000001S gives the resolution of the binomial equations. The node does not say how to glue the local normal forms, and it does not say how to make $\rho$ go down.
