@@ -6,6 +6,8 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records now pin the Lean library at df659d4, with the unramified part of Step 4 of the reduction of Cossart-Piltant and the codimension of the directrix of the log-Jacobian order.
+- SG0000004Z has the Lean statement and proof `logJacobianDirectrixCodim_le_cleanPart` of tamnd/singularity-lean#122.
 - Note the unramified part of Step 4 of Cossart-Piltant (tamnd/singularity-lean#124) on SG0000001F.
 - The records now pin the Lean library at 1db66bb, with the induction on the degree in the reduction of Cossart-Piltant.
 - The notes of SG0000001F give the steps of degree p of tamnd/singularity-lean#105 and the induction on the degree of tamnd/singularity-lean#123, with the step of degree p as a hypothesis.
