@@ -1,0 +1,42 @@
+{
+  "id": "2026-11-25-e4-p2-b049ce95",
+  "name": "e4-p2",
+  "experiment": "E4",
+  "question": "On the walks of e1-p2 with q = p = 2, do the Cossart-Piltant invariants omega and iota = (m, omega, kappa) go up under a point blowup, and does a jump of epsilon meet the condition of Theorem 3.13(1) of Cossart-Piltant, for n = 3 (dimension 3) and n = 4 (dimension 4)?",
+  "tool": "sing-lab",
+  "node": "SG00000014",
+  "nodes": [
+    "SG00000013",
+    "SG00000014",
+    "SG00000015"
+  ],
+  "spec": "e4-p2.yaml",
+  "spec_sha256": "b049ce95142e1df477972a9ff52d653664aaa37414af53ae9a7fabf5b3c68a8f",
+  "walks_from": {
+    "spec": "e1-p2.yaml",
+    "sha256": "90966cbf6b0ccd3d0fdf4a2787f6feb144ce6b1eed6fdd4bfadfa00bda743541"
+  },
+  "sing": {
+    "version": "dev",
+    "commit": "a9f346e548a0f428700b676ab4a1e59cf7263e21",
+    "go": "go1.27.3"
+  },
+  "seed": 20261124002,
+  "host": "server2",
+  "started": "2026-11-25T01:28:37Z",
+  "wall_seconds": 256.73,
+  "counts": {
+    "cases": 2,
+    "walks": 547000,
+    "steps": 2625908,
+    "kangaroo": 4988,
+    "moh_violations": 0,
+    "stability_violations": 0,
+    "candidate_failures": 4988
+  },
+  "files": {
+    "candidates.json": "7f89a9cab597493a4f87cb206a7396feb5d759e33c75eee5d68b881a80a11ec4",
+    "histogram.json": "344f0b98129730dfe141d458e790346132e23c1d19d2eff531ed20e1c4dd1263",
+    "summary.md": "e9d07be33bf1ee6c2582a864b4d5d33c52343379f35272d6b57e49c2964eb13d"
+  }
+}
