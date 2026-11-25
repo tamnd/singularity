@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "d17dcd2b9ccf6750c8969c96fcd25dcbbceeca0a",
+  "commit": "07c64a4ca2e1d2068e7b901dcbe75f6473c06e7f",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "d17dcd2b9ccf6750c8969c96fcd25dcbbceeca0a",
+ "commit": "07c64a4ca2e1d2068e7b901dcbe75f6473c06e7f",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -7951,7 +7951,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "inductive",
-   "line": 112,
+   "line": 116,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u03b9 : Type u_2} \u2192\n      [Fintype \u03b9] \u2192 (k : Type u_3) \u2192 [inst_2 : Field k] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 (\u03b9 \u2192 K) \u2192 Prop"
   },
   "Singularity.IsMonomialValuation.adjoin_eq_top": {
@@ -7962,7 +7962,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 117,
+   "line": 121,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 IntermediateField.adjoin k (Set.range x) = \u22a4"
   },
   "Singularity.IsMonomialValuation.independent": {
@@ -7973,8 +7973,19 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 118,
+   "line": 122,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 \u2200 (a : \u03b9 \u2192 \u2124), V.valuation (Singularity.laurentMonomial x a) = 1 \u2192 a = 0"
+  },
+  "Singularity.IsMonomialValuation.isAbhyankarValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 575,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 Singularity.IsAbhyankarValuation k V"
   },
   "Singularity.IsMonomialValuation.ne_zero": {
    "axioms": [
@@ -7984,7 +7995,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 116,
+   "line": 120,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 \u2200 (i : \u03b9), x i \u2260 0"
   },
   "Singularity.IsMuIrreducible": {
@@ -8548,6 +8559,37 @@
    "line": 48,
    "type": "{\u03b9 : Type u_1} \u2192 [Fintype \u03b9] \u2192 [DecidableEq \u03b9] \u2192 (\u03b9 \u2192 \u211d) \u2192 Finset (\u03b9 \u2192 \u2124) \u2192 Matrix \u03b9 \u03b9 \u2124 \u2192 Prop"
   },
+  "Singularity.LatticeLemma.abs_int_smul": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 53,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [IsOrderedAddMonoid \u0393] (n : \u2124) (a : \u0393),\n  |n \u2022 a| = n.natAbs \u2022 |a|"
+  },
+  "Singularity.LatticeLemma.abs_le_nsmul_sum_abs": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 375,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [IsOrderedAddMonoid \u0393] {\u03ba : Type u_2}\n  [inst_3 : Fintype \u03ba] (b : Module.Basis \u03ba \u2124 \u0393) (a : \u0393), \u2203 M, |a| \u2264 M \u2022 \u2211 i, |b i|"
+  },
+  "Singularity.LatticeLemma.abs_lt_abs_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t}\n  {a h : \u0393},\n  h \u2208 Singularity.LatticeLemma.infinitesimal t ht \u2192 a \u2209 Singularity.LatticeLemma.infinitesimal t ht \u2192 |h| < |a|"
+  },
   "Singularity.LatticeLemma.cast_det": {
    "axioms": [
     "Classical.choice",
@@ -8581,6 +8623,17 @@
    "line": 54,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] (a : \u03b9 \u2192 \u2124) (C : Matrix \u03b9 \u03b9 \u2124),\n  Matrix.vecMul (fun i => \u2191(a i)) (C.map Int.cast) = fun j => \u2191(Matrix.vecMul a C j)"
   },
+  "Singularity.LatticeLemma.coe_kerProj": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 193,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x) (x : \u0393),\n  \u2191((Singularity.LatticeLemma.kerProj hf) x) = x - \u2191(f x)"
+  },
   "Singularity.LatticeLemma.coord_ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -8592,6 +8645,27 @@
    "line": 72,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 {C : Matrix \u03b9 \u03b9 \u2124}, C.det \u2260 0 \u2192 \u2200 {\u03bc : \u03b9 \u2192 \u211d}, (C.map Int.cast).mulVec \u03bc = \u03b3 \u2192 \u2200 (l : \u03b9), \u03bc l \u2260 0"
   },
+  "Singularity.LatticeLemma.eq_zero_of_coe_mem": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 226,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H},\n  (\u2200 (x : \u21a5H), f \u2191x = x) \u2192 \u2200 (w : \u21a5f.ker), \u2191w \u2208 H \u2192 w = 0"
+  },
+  "Singularity.LatticeLemma.exists_basis_fin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 397,
+   "type": "\u2200 (n : \u2115) {\u0393 : Type u} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [IsOrderedAddMonoid \u0393]\n  (a : Module.Basis (Fin n) \u2124 \u0393) (D : Finset \u0393),\n  (\u2200 d \u2208 D, 0 \u2264 d) \u2192 \u2203 q, (\u2200 (l : Fin n), 0 < q l) \u2227 \u2200 d \u2208 D, \u2200 (l : Fin n), 0 \u2264 (q.repr d) l"
+  },
   "Singularity.LatticeLemma.exists_basis_of_isGoodCone": {
    "axioms": [
     "Classical.choice",
@@ -8602,6 +8676,28 @@
    "kind": "theorem",
    "line": 257,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d} {E : Finset (\u03b9 \u2192 \u2124)} {C : Matrix \u03b9 \u03b9 \u2124},\n  Singularity.LatticeLemma.IsGoodCone \u03b3 E C \u2192\n    C.det.natAbs = 1 \u2192\n      \u2203 B, B * C = 1 \u2227 C * B = 1 \u2227 (\u2200 (l : \u03b9), 0 < \u2211 i, \u2191(B l i) * \u03b3 i) \u2227 \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l"
+  },
+  "Singularity.LatticeLemma.exists_basis_of_split": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H}\n  (hf : \u2200 (x : \u21a5H), f \u2191x = x) {\u03ba : Type u_2} {\u03bd : Type u_3} [Fintype \u03ba] [Fintype \u03bd] [DecidableEq \u03ba] [DecidableEq \u03bd],\n  (\u2200 (a h : \u0393), a \u2209 H \u2192 0 < a \u2192 h \u2208 H \u2192 0 < a + h) \u2192\n    \u2200 (D : Finset \u0393) (m : Module.Basis \u03ba \u2124 \u21a5H),\n      (\u2200 (j : \u03ba), 0 < \u2191(m j)) \u2192\n        (\u2200 d \u2208 D, \u2200 (hd : d \u2208 H) (j : \u03ba), 0 \u2264 (m.repr \u27e8d, hd\u27e9) j) \u2192\n          \u2200 (q : Module.Basis \u03bd \u2124 \u21a5f.ker),\n            (\u2200 (i : \u03bd), 0 < \u2191(q i)) \u2192\n              (\u2200 d \u2208 D, \u2200 (i : \u03bd), 0 \u2264 (q.repr ((Singularity.LatticeLemma.kerProj hf) d)) i) \u2192\n                \u2203 F, (\u2200 (s : \u03ba \u2295 \u03bd), 0 < F s) \u2227 \u2200 d \u2208 D, \u2200 (s : \u03ba \u2295 \u03bd), 0 \u2264 (F.repr d) s"
+  },
+  "Singularity.LatticeLemma.exists_basis_pos_of_archimedean": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 121,
+   "type": "\u2200 {W : Type u_1} [inst : AddCommGroup W] [inst_1 : LinearOrder W] [IsOrderedAddMonoid W] [Archimedean W] {\u03ba : Type u_2}\n  [Fintype \u03ba] [DecidableEq \u03ba] (b : Module.Basis \u03ba \u2124 W) (D : Finset W),\n  (\u2200 d \u2208 D, 0 \u2264 d) \u2192 \u2203 q, (\u2200 (l : \u03ba), 0 < q l) \u2227 \u2200 d \u2208 D, \u2200 (l : \u03ba), 0 \u2264 (q.repr d) l"
   },
   "Singularity.LatticeLemma.exists_isGoodCone": {
    "axioms": [
@@ -8635,6 +8731,168 @@
    "kind": "theorem",
    "line": 93,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 {E : Finset (\u03b9 \u2192 \u2124)} {C : Matrix \u03b9 \u03b9 \u2124},\n      Singularity.LatticeLemma.IsGoodCone \u03b3 E C \u2192\n        1 < C.det.natAbs \u2192 \u2203 C', Singularity.LatticeLemma.IsGoodCone \u03b3 E C' \u2227 C'.det.natAbs < C.det.natAbs"
+  },
+  "Singularity.LatticeLemma.exists_le_nsmul_of_not_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t}\n  {a : \u0393}, a \u2209 Singularity.LatticeLemma.infinitesimal t ht \u2192 \u2203 N, t \u2264 N \u2022 |a|"
+  },
+  "Singularity.LatticeLemma.infinitesimal": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "def",
+   "line": 59,
+   "type": "{\u0393 : Type u_1} \u2192\n  [inst : AddCommGroup \u0393] \u2192 [inst_1 : LinearOrder \u0393] \u2192 [IsOrderedAddMonoid \u0393] \u2192 (t : \u0393) \u2192 0 < t \u2192 Submodule \u2124 \u0393"
+  },
+  "Singularity.LatticeLemma.isTorsionFree_quotient_infinitesimal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 387,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} (ht : 0 < t),\n  Module.IsTorsionFree \u2124 (\u0393 \u29f8 Singularity.LatticeLemma.infinitesimal t ht)"
+  },
+  "Singularity.LatticeLemma.kerProj": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "def",
+   "line": 188,
+   "type": "{\u0393 : Type u_1} \u2192\n  [inst : AddCommGroup \u0393] \u2192 {H : Submodule \u2124 \u0393} \u2192 {f : \u0393 \u2192\u2097[\u2124] \u21a5H} \u2192 (\u2200 (x : \u21a5H), f \u2191x = x) \u2192 \u0393 \u2192\u2097[\u2124] \u21a5f.ker"
+  },
+  "Singularity.LatticeLemma.kerProj.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x),\n  Singularity.LatticeLemma.kerProj hf = Singularity.LatticeLemma.kerProj hf"
+  },
+  "Singularity.LatticeLemma.kerProj_coe": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 220,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x) (w : \u21a5f.ker),\n  (Singularity.LatticeLemma.kerProj hf) \u2191w = w"
+  },
+  "Singularity.LatticeLemma.kerProj_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 216,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x) {x : \u0393},\n  x \u2208 H \u2192 (Singularity.LatticeLemma.kerProj hf) x = 0"
+  },
+  "Singularity.LatticeLemma.mem_infinitesimal": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t}\n  {a : \u0393}, a \u2208 Singularity.LatticeLemma.infinitesimal t ht \u2194 \u2200 (N : \u2115), N \u2022 |a| < t"
+  },
+  "Singularity.LatticeLemma.mem_of_zsmul_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t}\n  {n : \u2124},\n  n \u2260 0 \u2192\n    \u2200 {a : \u0393}, n \u2022 a \u2208 Singularity.LatticeLemma.infinitesimal t ht \u2192 a \u2208 Singularity.LatticeLemma.infinitesimal t ht"
+  },
+  "Singularity.LatticeLemma.not_mem_infinitesimal_self": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 109,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t},\n  t \u2209 Singularity.LatticeLemma.infinitesimal t ht"
+  },
+  "Singularity.LatticeLemma.pos_add_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [inst_2 : IsOrderedAddMonoid \u0393] {t : \u0393} {ht : 0 < t}\n  {a h : \u0393},\n  a \u2209 Singularity.LatticeLemma.infinitesimal t ht \u2192 0 < a \u2192 h \u2208 Singularity.LatticeLemma.infinitesimal t ht \u2192 0 < a + h"
+  },
+  "Singularity.LatticeLemma.splitEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "def",
+   "line": 195,
+   "type": "{\u0393 : Type u_1} \u2192\n  [inst : AddCommGroup \u0393] \u2192 {H : Submodule \u2124 \u0393} \u2192 {f : \u0393 \u2192\u2097[\u2124] \u21a5H} \u2192 (\u2200 (x : \u21a5H), f \u2191x = x) \u2192 \u0393 \u2243\u2097[\u2124] \u21a5H \u00d7 \u21a5f.ker"
+  },
+  "Singularity.LatticeLemma.splitEquiv.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 0,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x),\n  Singularity.LatticeLemma.splitEquiv hf = Singularity.LatticeLemma.splitEquiv hf"
+  },
+  "Singularity.LatticeLemma.splitEquiv_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 210,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x) (x : \u0393),\n  (Singularity.LatticeLemma.splitEquiv hf) x = (f x, (Singularity.LatticeLemma.kerProj hf) x)"
+  },
+  "Singularity.LatticeLemma.splitEquiv_symm_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x)\n  (x : \u21a5H \u00d7 \u21a5f.ker), (Singularity.LatticeLemma.splitEquiv hf).symm x = \u2191x.1 + \u2191x.2"
   },
   "Singularity.LocalUniformizationFour": {
    "axioms": [
@@ -8699,7 +8957,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 213,
+   "line": 217,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {z : K},\n      z \u2208 V \u2192\n        \u2203 E,\n          (\u2200 a \u2208 E, V.valuation (Singularity.laurentMonomial x a) \u2264 1) \u2227\n            \u2200 (S : Subalgebra k K),\n              (\u2200 a \u2208 E, Singularity.laurentMonomial x a \u2208 S) \u2192 \u2203 f g, f \u2208 S \u2227 g \u2208 S \u2227 V.valuation g = 1 \u2227 z * g = f"
   },
   "Singularity.MonomialValuation.exists_leadingTerm": {
@@ -8710,7 +8968,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 142,
+   "line": 146,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {y : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), y i \u2260 0) \u2192\n    (\u2200 (a : \u03b9 \u2192 \u2124), V.valuation (Singularity.laurentMonomial y a) = 1 \u2192 a = 0) \u2192\n      \u2200 {f : MvPolynomial \u03b9 k},\n        f \u2260 0 \u2192\n          \u2203 c \u03b1 D F,\n            c \u2260 0 \u2227\n              (MvPolynomial.aeval y) f = (algebraMap k K) c * Singularity.laurentMonomial y \u03b1 * (1 + F) \u2227\n                (\u2200 a \u2208 D, V.valuation (Singularity.laurentMonomial y a) < 1) \u2227\n                  (\u2200 (S : Subalgebra k K), (\u2200 a \u2208 D, Singularity.laurentMonomial y a \u2208 S) \u2192 F \u2208 S) \u2227 V.valuation F < 1"
   },
   "Singularity.MonomialValuation.hasRegularCenter_of_basis": {
@@ -8721,7 +8979,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 270,
+   "line": 274,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K]\n  [inst_6 : DecidableEq \u03b9] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {B C : Matrix \u03b9 \u03b9 \u2124},\n      B * C = 1 \u2192\n        C * B = 1 \u2192\n          (\u2200 (l : \u03b9), V.valuation (Singularity.laurentMonomial x (B l)) < 1) \u2192\n            \u2200 (s : Finset K),\n              (\u2200 z \u2208 s, z \u2208 V) \u2192\n                (\u2200 z \u2208 s,\n                    \u2203 f g,\n                      f \u2208 Algebra.adjoin k (Set.range fun l => Singularity.laurentMonomial x (B l)) \u2227\n                        g \u2208 Algebra.adjoin k (Set.range fun l => Singularity.laurentMonomial x (B l)) \u2227\n                          V.valuation g = 1 \u2227 z * g = f) \u2192\n                  Singularity.HasRegularCenter k V \u2191s"
   },
   "Singularity.MonomialValuation.mem_subalgebra": {
@@ -8732,7 +8990,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 140,
+   "line": 144,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [inst_4 : IsScalarTower k (\u21a5V) K] {z : K},\n  z \u2208 Singularity.MonomialValuation.subalgebra k V \u2194 z \u2208 V"
   },
   "Singularity.MonomialValuation.subalgebra": {
@@ -8743,7 +9001,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "def",
-   "line": 133,
+   "line": 137,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    (k : Type u_3) \u2192\n      [inst_1 : Field k] \u2192\n        [inst_2 : Algebra k K] \u2192\n          (V : ValuationSubring K) \u2192 [inst_3 : Algebra k \u21a5V] \u2192 [IsScalarTower k (\u21a5V) K] \u2192 Subalgebra k K"
   },
   "Singularity.MonomialValuation.valuation_algebraMap_eq_one": {
@@ -8754,7 +9012,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 128,
+   "line": 132,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {c : k}, c \u2260 0 \u2192 V.valuation ((algebraMap k K) c) = 1"
   },
   "Singularity.MonomialValuation.valuation_algebraMap_le_one": {
@@ -8765,8 +9023,41 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 124,
+   "line": 128,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] (c : k), V.valuation ((algebraMap k K) c) \u2264 1"
+  },
+  "Singularity.MonomialValuation.valueHom": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "def",
+   "line": 532,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u03b9 : Type u_2} \u2192\n      [Fintype \u03b9] \u2192 {V : ValuationSubring K} \u2192 {x : \u03b9 \u2192 K} \u2192 (\u2200 (i : \u03b9), x i \u2260 0) \u2192 (\u03b9 \u2192 \u2124) \u2192+ Additive V.ValueGroup\u02e3"
+  },
+  "Singularity.MonomialValuation.valueHom_nonneg_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 542,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {V : ValuationSubring K} {x : \u03b9 \u2192 K}\n  (hx : \u2200 (i : \u03b9), x i \u2260 0) (a : \u03b9 \u2192 \u2124),\n  0 \u2264 -(Singularity.MonomialValuation.valueHom hx) a \u2194 V.valuation (Singularity.laurentMonomial x a) \u2264 1"
+  },
+  "Singularity.MonomialValuation.valueHom_pos_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 549,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {V : ValuationSubring K} {x : \u03b9 \u2192 K}\n  (hx : \u2200 (i : \u03b9), x i \u2260 0) (a : \u03b9 \u2192 \u2124),\n  0 < -(Singularity.MonomialValuation.valueHom hx) a \u2194 V.valuation (Singularity.laurentMonomial x a) < 1"
   },
   "Singularity.MuDvd": {
    "axioms": [
@@ -12788,6 +13079,17 @@
    "line": 50,
    "type": "\u2200 {k K : Type u} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] [Algebra.EssFiniteType k \u21a5V], Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_isMonomialValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 556,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 Singularity.HasLocalUniformization k V"
+  },
   "Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice": {
    "axioms": [
     "Classical.choice",
@@ -12796,7 +13098,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 451,
+   "line": 455,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K]\n  [inst_6 : DecidableEq \u03b9] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    (\u2200 (E : Finset (\u03b9 \u2192 \u2124)),\n        (\u2200 a \u2208 E, V.valuation (Singularity.laurentMonomial x a) \u2264 1) \u2192\n          \u2203 B C,\n            B * C = 1 \u2227\n              C * B = 1 \u2227\n                (\u2200 (l : \u03b9), V.valuation (Singularity.laurentMonomial x (B l)) < 1) \u2227\n                  \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l) \u2192\n      Singularity.HasLocalUniformization k V"
   },
   "Singularity.hasLocalUniformization_of_isMonomialValuation_of_rankOne": {
@@ -12807,7 +13109,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 477,
+   "line": 481,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 (\u03c6 : V.ValueGroup \u2192*\u2080 NNReal), StrictMono \u21d1\u03c6 \u2192 Singularity.HasLocalUniformization k V"
   },
   "Singularity.hasLocalUniformization_of_trdeg_le_one": {
@@ -13723,6 +14025,28 @@
    "line": 34,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
   },
+  "Singularity.latticeLemma": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 491,
+   "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] [inst_1 : LinearOrder \u0393] [IsOrderedAddMonoid \u0393] {\u03b9 : Type u_2} [Fintype \u03b9]\n  (b : Module.Basis \u03b9 \u2124 \u0393) (D : Finset \u0393),\n  (\u2200 d \u2208 D, 0 \u2264 d) \u2192 \u2203 m, (\u2200 (i : \u03b9), 0 < m i) \u2227 \u2200 d \u2208 D, \u2200 (i : \u03b9), 0 \u2264 (m.repr d) i"
+  },
+  "Singularity.latticeLemma_of_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemmaOrdered.lean",
+   "kind": "theorem",
+   "line": 503,
+   "type": "\u2200 {\u03b9 : Type u_2} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {G : Type u_3} [inst_2 : AddCommGroup G]\n  [inst_3 : LinearOrder G] [IsOrderedAddMonoid G] (w : (\u03b9 \u2192 \u2124) \u2192+ G),\n  Function.Injective \u21d1w \u2192\n    \u2200 (E : Finset (\u03b9 \u2192 \u2124)),\n      (\u2200 a \u2208 E, 0 \u2264 w a) \u2192\n        \u2203 B C, B * C = 1 \u2227 C * B = 1 \u2227 (\u2200 (l : \u03b9), 0 < w (B l)) \u2227 \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l"
+  },
   "Singularity.latticeLemma_real": {
    "axioms": [
     "Classical.choice",
@@ -13753,7 +14077,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "def",
-   "line": 48,
+   "line": 52,
    "type": "{K : Type u_1} \u2192 [Field K] \u2192 {\u03b9 : Type u_2} \u2192 [Fintype \u03b9] \u2192 (\u03b9 \u2192 K) \u2192 (\u03b9 \u2192 \u2124) \u2192 K"
   },
   "Singularity.laurentMonomial_add": {
@@ -13764,7 +14088,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 67,
+   "line": 71,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (a b : \u03b9 \u2192 \u2124),\n      Singularity.laurentMonomial x (a + b) = Singularity.laurentMonomial x a * Singularity.laurentMonomial x b"
   },
   "Singularity.laurentMonomial_eq_units": {
@@ -13775,7 +14099,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 56,
+   "line": 60,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K} (hx : \u2200 (i : \u03b9), x i \u2260 0) (a : \u03b9 \u2192 \u2124),\n  Singularity.laurentMonomial x a = \u2191(\u220f i, Units.mk0 (x i) \u22ef ^ a i)"
   },
   "Singularity.laurentMonomial_natCast": {
@@ -13786,7 +14110,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 76,
+   "line": 80,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] (x : \u03b9 \u2192 K) (\u03b2 : \u03b9 \u2192\u2080 \u2115),\n  (Singularity.laurentMonomial x fun i => \u2191(\u03b2 i)) = \u220f i, x i ^ \u03b2 i"
   },
   "Singularity.laurentMonomial_ne_zero": {
@@ -13797,7 +14121,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 60,
+   "line": 64,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192 \u2200 (a : \u03b9 \u2192 \u2124), Singularity.laurentMonomial x a \u2260 0"
   },
   "Singularity.laurentMonomial_single": {
@@ -13808,7 +14132,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 80,
+   "line": 84,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] [inst_2 : DecidableEq \u03b9] (x : \u03b9 \u2192 K) (i : \u03b9),\n  Singularity.laurentMonomial x (Pi.single i 1) = x i"
   },
   "Singularity.laurentMonomial_sub": {
@@ -13819,7 +14143,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 72,
+   "line": 76,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (a b : \u03b9 \u2192 \u2124),\n      Singularity.laurentMonomial x (a - b) = Singularity.laurentMonomial x a / Singularity.laurentMonomial x b"
   },
   "Singularity.laurentMonomial_vecMul": {
@@ -13830,7 +14154,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 94,
+   "line": 98,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (n : \u03b9 \u2192 \u2124) (B : Matrix \u03b9 \u03b9 \u2124),\n      Singularity.laurentMonomial x (Matrix.vecMul n B) =\n        Singularity.laurentMonomial (fun l => Singularity.laurentMonomial x (B l)) n"
   },
   "Singularity.laurentMonomial_zero": {
@@ -13841,7 +14165,7 @@
    ],
    "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
    "kind": "theorem",
-   "line": 64,
+   "line": 68,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] (x : \u03b9 \u2192 K), Singularity.laurentMonomial x 0 = 1"
   },
   "Singularity.le_augmentedValuationFun": {
