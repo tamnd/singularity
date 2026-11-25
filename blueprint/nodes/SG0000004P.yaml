@@ -9,8 +9,11 @@ uses:
 - SG0000003E
 - SG0000003M
 - SG0000003A
+lean:
+  statement: Singularity.span_mul_logJacobian_le_map_centerChart
+  proof: Singularity.span_mul_logJacobian_le_map_centerChart
 tier: T2
 route:
 - R1
 - R5
-notes: This is Volume 7, Theorem 3.4.3 and Lemma 3.4.4 of the handbook. For $c = n$ the center is the origin, and the law is SG0000003M. The second statement is the equimultiple case of the bound SG0000003A for the order of a weak transform. Without the condition $\operatorname{ord}_0 h = s$ it is false, for example for $h = x_2 x_3$ and $s = 1$. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.
+notes: This is Volume 7, Theorem 3.4.3 and Lemma 3.4.4 of the handbook. For $c = n$ the center is the origin, and the law is SG0000003M. The second statement is the equimultiple case of the bound SG0000003A for the order of a weak transform. Without the condition $\operatorname{ord}_0 h = s$ it is false, for example for $h = x_2 x_3$ and $s = 1$. The Lean library proves the law for polynomials as two inclusions, and the lemma on the equimultiple weak transform (tamnd/singularity-lean#95).
