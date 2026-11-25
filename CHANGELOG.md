@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000055 and SG00000056 for the milestone S7.14. If $\rho$ stays, the old point is in the first case and no component of the divisor leaves, then the new point is in the first case, and $\tau_\rho$ does not go down. The two nodes have no hypothesis on $p$.
+
 ## 0.4.31 - 2026-11-26
 
 ### Changed
