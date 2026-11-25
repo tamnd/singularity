@@ -1,0 +1,13 @@
+tag: SG00000054
+kind: counterexample
+title: The new point can be in the second case if p divides the sum
+statement: In the setting of SG00000052, the hypothesis that $|r| + d$ is not $0$ in the base field is necessary. Over $\mathbb{F}_3$ in the variables $x, y, z$, let $g = x^3 y^2 z^3 + 2 x^2 y^3 z$ and $\Delta = \{x, z\}$, so $|r| + d = 6$. Then $\rho(g) = 3$, the point is in the first case, and $\tau_\rho(g) = 1$. At the point of the $x$-chart with $t_y = 0$ and $t_z = 1$, the new point has $\rho(g'_c) = 3$, it is in the second case, and $\tau_\rho(g'_c) = 2$.
+sources:
+- paper: Hir67
+uses:
+- SG0000004Z
+- SG00000052
+tier: T2
+route:
+- R1
+notes: Here $r = (2, 0, 1)$ and $G = x y^2 z^2 + 2 y^3$, with $d = 3$ and the initial form $F = 2 y^3$. The elements $e_i = r_i G + x_i \partial_i G$ are $e_x = y^3$ and $e_z = 2 y^3$, and $\partial_y G = 2 x y z^2$ has order $4$. So $T_\rho(g) = \{y = 0\}$. The Euler element is $2 x y^2 z^2$, of order $5$, since $e_x + e_z = 6 y^3 = 0$. The chart gives $g' = x^5 y^2 (z^3 + 1) + 2 x^3 y^3 z + 2 x^3 y^3$. The monomial $2 x^3 y^3$ is a cube, so $g'_c = x^3 (x^2 y^2 (z^3 + 1) + 2 y^3 z)$. The component $z = 0$ leaves the divisor, so $\Delta' = \{x\}$, with $r' = (3, 0, 0)$ and $G' = x^2 y^2 (z^3 + 1) + 2 y^3 z$. Here $e'_x = 2 x^2 y^2 (z^3 + 1)$ has order $4$, and $\partial_y G' = 2 x^2 y (z^3 + 1)$ and $\partial_z G' = 2 y^3$ have order $3$. So $\rho' = 3$ and $\sigma' = 4$. The old form $F$ is the initial form of $\partial_z G'$, the derivative in the direction that left the divisor. A random test of sequences of blowups found many steps from the first case with $p \mid |r| + d$ to the second case, and at each of them a component of the divisor leaves.
