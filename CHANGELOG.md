@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The notes of SG0000000Z give the criterion for a finite chain in part 4 of MacLane-Vaquié from tamnd/singularity-lean#115.
 - The records now pin the Lean library at 656c128, with 1747 declarations and no nonstandard axioms.
 
 ## 0.4.20 - 2026-11-25
