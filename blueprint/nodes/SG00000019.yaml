@@ -1,7 +1,7 @@
 tag: SG00000019
 kind: theorem
 title: The Samuel slope characterizes regularity
-statement: A Noetherian local ring is regular if and only if its Samuel slope is infinite.
+statement: Let $R$ be an excellent local ring. Then the Samuel slope of $R$ is infinite if and only if $R_{\mathrm{red}}$ is a regular local ring.
 sources:
 - paper: BBE25
 uses:
@@ -11,3 +11,4 @@ lean:
 tier: T4
 route:
 - R3
+notes: This is [BBE25, Corollary 3.7]. For a reduced excellent local ring that is not regular, the Samuel slope is a rational number [BBE25, Theorem 3.5]. The old statement for each Noetherian local ring was false. A nonreduced ring with a regular reduction has an infinite Samuel slope and is not regular. The Lean name is planned.
