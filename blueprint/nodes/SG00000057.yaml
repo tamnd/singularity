@@ -1,0 +1,13 @@
+tag: SG00000057
+kind: theorem
+title: The full codimension of the directrix does not go down from the second case
+statement: In the setting of SG0000004Z, let $\widetilde H(g)$ be the set of the elements of $\widetilde\Theta(G)$ of order $\rho$, in both cases. Let $\widetilde T(g)$ be the intersection of the subspaces $T(\operatorname{in}(h))$ for $h \in \widetilde H(g)$, and let $\widetilde\tau(g) = n - \dim \widetilde T(g)$. Assume that $\rho(g'_c) = \rho(g)$ and that the old point is in the second case. Then $\widetilde\tau(g'_c) \ge \widetilde\tau(g) = \tau_\rho(g)$. There is no hypothesis on the case of the new point.
+sources:
+- paper: Hir67
+uses:
+- SG0000004X
+- SG0000004Z
+tier: T2
+route:
+- R1
+notes: In the second case $\widetilde H(g) = H(g)$, so $\widetilde\tau(g) = \tau_\rho(g)$. In the first case $\widetilde\tau(g) \ge \tau_\rho(g)$. The proof is the proof of SG0000004Z with $\widetilde H(g'_c)$ in the place of $H(g'_c)$. The proof of SG0000004X shows that the weak transform of each $h \in H(g)$ is an element of $\widetilde\Theta(G')$ of order $\rho$, and this does not use the case of the new point. So at a step from the second case to the first case, $\tau_\rho$ can go down, but $\widetilde\tau$ does not go down. A random test of sequences of blowups found 48,399 steps from the second case where $\rho$ stays, and $\widetilde\tau$ did not go down at any of them.
