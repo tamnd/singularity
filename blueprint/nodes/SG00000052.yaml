@@ -1,0 +1,13 @@
+tag: SG00000052
+kind: theorem
+title: The first case of the log-Jacobian order is stable if the order stays and p does not divide the sum
+statement: In the setting of SG0000004Z, write $g = x^r G$ and let $d = \operatorname{ord} G$. Assume that $\rho(g'_c) = \rho(g)$, that the old point is in the first case, that is, $\operatorname{ord} \widetilde\Theta_0(G) = \rho$, and that $|r| + d$ is not $0$ in the base field. Then the new point is in the first case, that is, $\operatorname{ord} \widetilde\Theta_0(G') = \rho(g'_c)$.
+sources:
+- paper: Hir67
+uses:
+- SG0000003N
+- SG00000050
+tier: T2
+route:
+- R1
+notes: The Euler element $e = |r| G + \sum_k x_k \partial_k G$ is in $\widetilde\Theta_0(G)$ and has the initial form $(|r| + d) F \ne 0$, so $\rho = d$. The chart sends $x^r e$ to $x_j^p \, x_j \partial_j g'$, and $x_j \partial_j$ is a logarithmic derivation for the new divisor, so $x_j \partial_j g' \in \Theta'_0(g'_c)$. This element is $u \, x^b e'$, with a unit $u$, the weak transform $e'$ of order at most $d$, and $b \le r'$ by the proof of SG0000003N. So $|r'| + \operatorname{ord} \widetilde\Theta_0(G') \le |b| + d \le |r'| + d$, and $\operatorname{ord} \widetilde\Theta_0(G') \le d = \rho(g'_c)$. The other inequality holds always. If $|r| + d$ is $0$ in the base field, the new point can be in the second case. A random test of sequences of at most four point blowups for $(p, n) = (2, 3), (2, 4)$ and $(3, 3)$ found 5,961, 1,403 and 2,288 steps from the first case with $p \nmid |r| + d$, and the new point is in the first case at each of them. It found 501, 123 and 63 steps from the first case with $p \mid |r| + d$ to the second case.

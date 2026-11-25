@@ -1,0 +1,13 @@
+tag: SG00000053
+kind: theorem
+title: The codimension of the directrix of the log-Jacobian order does not go down from the first case if p does not divide the sum
+statement: In the setting of SG0000004Z, write $g = x^r G$ and let $d = \operatorname{ord} G$. Assume that $\rho(g'_c) = \rho(g)$, that the old point is in the first case, and that $|r| + d$ is not $0$ in the base field. Then $\tau_\rho(g'_c) \ge \tau_\rho(g)$.
+sources:
+- paper: Hir67
+uses:
+- SG00000050
+- SG00000052
+tier: T2
+route:
+- R1
+notes: By SG00000052 the new point is in the first case, and SG00000050 applies. With SG0000004Z, SG00000051 and the example of SG0000004Z from the second case to the first case, each combination of the cases at a point where $\rho$ stays has an answer. The codimension $\tau_\rho$ can go down only if the new point is in the first case and the old point is in the second case or $p$ divides $|r| + d$. A random test of sequences of blowups found 93, 49 and 43 drops from the second case to the first case for $(p, n) = (2, 3), (2, 4)$ and $(3, 3)$, 2 drops from the first case to the first case with $p \mid |r| + d$ for $(p, n) = (2, 4)$, and no other drop.
