@@ -12,4 +12,7 @@ tier: T2
 route:
 - R1
 - R5
-notes: This is Volume 7, Theorem 3.4.5 of the handbook. The proof holds for each number of variables. For $c = n$ both conditions hold, and the theorem is SG0000003N. For a base of dimension 3, Cossart gives a condition of permissibility for these centers. The statement for each dimension has no published source, and it is the candidate for the new result of the milestone S7. The node SG0000004R shows that (H1) alone is not sufficient. The Lean library does not prove it yet. It is an item of tamnd/singularity#130.
+lean:
+  statement: Singularity.logJacobianOrder_cleanPart_le_center
+  proof: Singularity.logJacobianOrder_cleanPart_le_center
+notes: This is Volume 7, Theorem 3.4.5 of the handbook. The proof holds for each number of variables. For $c = n$ both conditions hold, and the theorem is SG0000003N. For a base of dimension 3, Cossart gives a condition of permissibility for these centers. The statement for each dimension has no published source, and it is the candidate for the new result of the milestone S7. The node SG0000004R shows that (H1) alone is not sufficient. The Lean library proves the theorem for polynomials (tamnd/singularity-lean#96). It states (H1) and (H2) in an elementary form, in which each element of the ideal is $x^r$ times an element of a power of $I_C$. It does not assume that $g$ is clean, only that $\rho$ is finite.
