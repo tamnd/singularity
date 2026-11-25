@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "656c128db39816038a7dcddf2b713aa32d76262c",
+  "commit": "70659f8ac1de79f2419361ae0dc55f8e3e867bff",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "656c128db39816038a7dcddf2b713aa32d76262c",
+ "commit": "70659f8ac1de79f2419361ae0dc55f8e3e867bff",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -4877,6 +4877,17 @@
    "line": 0,
    "type": "Sort u \u2192\n  {K : Type u_1} \u2192\n    [inst : Field K] \u2192\n      {\u0393\u2080 : Type u_2} \u2192\n        [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n          {\u03bc : Valuation (Polynomial K) \u0393\u2080} \u2192\n            {\u03b9 : Type u_3} \u2192\n              [inst_2 : LinearOrder \u03b9] \u2192\n                Singularity.ContinuousFamily \u03bc \u03b9 \u2192\n                  {K' : Type u_1} \u2192\n                    [inst' : Field K'] \u2192\n                      {\u0393\u2080' : Type u_2} \u2192\n                        [inst'_1 : LinearOrderedCommGroupWithZero \u0393\u2080'] \u2192\n                          {\u03bc' : Valuation (Polynomial K') \u0393\u2080'} \u2192\n                            {\u03b9' : Type u_3} \u2192 [inst'_2 : LinearOrder \u03b9'] \u2192 Singularity.ContinuousFamily \u03bc' \u03b9' \u2192 Sort u"
   },
+  "Singularity.ContinuousFamily.not_forall_isStable_of_isMuMinimal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 554,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03b9 : Type u_2} [inst_2 : LinearOrder \u03b9] [Nonempty \u03b9] [NoMaxOrder \u03b9]\n  {F : Singularity.ContinuousFamily \u03bc \u03b9},\n  (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2192\n    (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2192\n      \u03bc \u2260 \u03bd \u2192\n        \u2200 {\u03c6 : Polynomial K},\n          \u03c6.Monic \u2192 0 < \u03c6.natDegree \u2192 Singularity.IsMuMinimal \u03bd \u03c6 \u2192 \u00ac\u2200 (f : Polynomial K), F.IsStable f"
+  },
   "Singularity.ContinuousFamily.not_isLimitKeyPolynomial": {
    "axioms": [
     "Classical.choice",
@@ -4907,7 +4918,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 440,
+   "line": 444,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03b9 : Type u_2} [inst_2 : LinearOrder \u03b9] [NoMaxOrder \u03b9]\n  {F : Singularity.ContinuousFamily \u03bc \u03b9},\n  (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2192\n    (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2192\n      \u03bc \u2260 \u03bd \u2192 \u2200 {P : Polynomial K}, P \u2260 0 \u2192 \u03bd P = 0 \u2192 \u00acF.IsStable P"
   },
   "Singularity.ContinuousFamily.stableValue": {
@@ -9056,8 +9067,19 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "inductive",
-   "line": 124,
+   "line": 128,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        Valuation (Polynomial K) \u0393\u2080 \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Prop"
+  },
+  "Singularity.MacLaneVaquieStep.exists_keyPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 532,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080}, Singularity.MacLaneVaquieStep \u03bd \u03bc \u03bc' \u2192 \u2203 \u03c6, Singularity.KeyPolynomial \u03bc' \u03c6"
   },
   "Singularity.MacLaneVaquieStep.macLaneBelow": {
    "axioms": [
@@ -9067,7 +9089,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 137,
+   "line": 141,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.MacLaneVaquieStep \u03bd \u03bc \u03bc' \u2192\n    (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n      (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc' (Polynomial.C c)) \u2227 \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc' f"
   },
   "Singularity.MonomialValuation.exists_eq_mul_one_add": {
@@ -11745,7 +11767,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "def",
-   "line": 207,
+   "line": 211,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        {\u03bd w : Valuation (Polynomial K) \u0393\u2080} \u2192\n          {\u03c6 : Polynomial K} \u2192\n            (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n              \u03c6.Monic \u2192\n                \u03bd \u03c6 < w \u03c6 \u2192\n                  (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f) \u2192\n                    Singularity.ContinuousFamily w (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
   },
   "Singularity.completeFamily_isStable": {
@@ -11756,7 +11778,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 277,
+   "line": 281,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f} {\u03c8 : Polynomial K},\n  \u03c8.Monic \u2192 \u03c8.natDegree = \u03c6.natDegree \u2192 (Singularity.completeFamily hle hm hlt hlow).IsStable \u03c8"
   },
   "Singularity.completeFamily_key": {
@@ -11767,7 +11789,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 237,
+   "line": 241,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f}\n  (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeFamily hle hm hlt hlow).key i = Singularity.completeKey i"
   },
   "Singularity.completeFamily_le": {
@@ -11778,7 +11800,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 250,
+   "line": 254,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f},\n  (\u2200 (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48) (f : Polynomial K),\n      \u03bd f \u2264\n        Singularity.augmentedValuationFun w ((Singularity.completeFamily hle hm hlt hlow).key i)\n          ((Singularity.completeFamily hle hm hlt hlow).value i) f) \u2227\n    \u2200 (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48) (a : Polynomial K),\n      a.degree < ((Singularity.completeFamily hle hm hlt hlow).key i).degree \u2192 \u03bd a = w a"
   },
   "Singularity.completeFamily_value": {
@@ -11789,7 +11811,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 241,
+   "line": 245,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f}\n  (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeFamily hle hm hlt hlow).value i = \u2191(OrderDual.ofDual i)"
   },
   "Singularity.completeKey": {
@@ -11800,7 +11822,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "def",
-   "line": 198,
+   "line": 202,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        {\u03bd : Valuation (Polynomial K) \u0393\u2080} \u2192 {\u03c6 : Polynomial K} \u2192 (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48 \u2192 Polynomial K"
   },
   "Singularity.completeKey_spec": {
@@ -11811,7 +11833,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 202,
+   "line": 206,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeKey i).Monic \u2227\n    (Singularity.completeKey i).natDegree = \u03c6.natDegree \u2227 \u03bd (Singularity.completeKey i) = \u2191(OrderDual.ofDual i)"
   },
   "Singularity.completeValues": {
@@ -11822,7 +11844,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "def",
-   "line": 168,
+   "line": 172,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192 [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Polynomial K \u2192 Set \u0393\u2080"
   },
   "Singularity.completeValues_noMaxOrder": {
@@ -11833,7 +11855,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 265,
+   "line": 269,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (\u03c8\u2080 : Polynomial K),\n      \u03c8\u2080.Monic \u2192 \u03c8\u2080.natDegree = \u03c6.natDegree \u2192 \u2203 \u03c8, \u03c8.Monic \u2227 \u03c8.natDegree = \u03c6.natDegree \u2227 \u03bd \u03c8 < \u03bd \u03c8\u2080) \u2192\n    NoMaxOrder (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
   },
   "Singularity.completeValues_nonempty": {
@@ -11844,7 +11866,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 245,
+   "line": 249,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K}, \u03c6.Monic \u2192 Nonempty (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
   },
   "Singularity.completeValues_spec": {
@@ -11855,7 +11877,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 194,
+   "line": 198,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  \u2203 \u03c8, \u03c8.Monic \u2227 \u03c8.natDegree = \u03c6.natDegree \u2227 \u03bd \u03c8 = \u2191(OrderDual.ofDual i)"
   },
   "Singularity.constantCoeff_blowupUnit_ne_zero": {
@@ -12320,6 +12342,17 @@
    "line": 269,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : Field k] {w : \u03c3 \u2192 \u2115} {D : \u2115} {h : MvPolynomial \u03c3 k},\n  MvPolynomial.IsWeightedHomogeneous w h D \u2192\n    \u2191D \u2260 0 \u2192 h = (\u2191D)\u207b\u00b9 \u2022 \u2211 i, \u2191(w i) \u2022 (MvPolynomial.X i * (MvPolynomial.pderiv i) h)"
   },
+  "Singularity.eq_of_isMuMinimal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 519,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n    \u2200 {\u03c6 : Polynomial K},\n      \u03c6.Monic \u2192\n        0 < \u03c6.natDegree \u2192\n          Singularity.IsMuMinimal \u03bd \u03c6 \u2192 (\u2200 (a : Polynomial K), a.degree < \u03c6.degree \u2192 w a = \u03bd a) \u2192 w \u03c6 = \u03bd \u03c6 \u2192 w = \u03bd"
+  },
   "Singularity.eq_of_map_eq_zero_of_degree_lt": {
    "axioms": [
     "Classical.choice",
@@ -12328,7 +12361,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 57,
+   "line": 61,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {D : WithBot \u2115},\n  (\u2200 (f : Polynomial K), f.degree < D \u2192 w f = \u03bd f) \u2192 \u2200 {a : Polynomial K}, a \u2260 0 \u2192 a.degree < D \u2192 \u03bd a = 0 \u2192 w = \u03bd"
   },
   "Singularity.eq_of_specializes_of_isDiscrete": {
@@ -12782,6 +12815,17 @@
    "line": 196,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n      \u03bc \u2260 \u03bd \u2192\n        \u2203 \u03c6,\n          \u2203 (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6) (hlt : \u03bd \u03c6 < \u03bc \u03c6),\n            (\u2200 (f : Polynomial K), \u03bd f \u2264 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f) \u2227\n              (\u2200 (f : Polynomial K), (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f \u2264 \u03bc f) \u2227\n                (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) \u03c6 = \u03bd \u03c6 \u2227\n                  (\u2200 (f : Polynomial K),\n                      f.degree < \u03c6.degree \u2192 (Singularity.augmentedValuation \u03bc \u03c6 (\u03bd \u03c6) h\u03c6 \u22ef) f = \u03bd f) \u2227\n                    \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f"
   },
+  "Singularity.exists_keyPolynomial_of_reflTransGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 539,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 \u03bc : Valuation (Polynomial K) \u0393\u2080},\n  Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bc \u2192 w\u2080 \u2260 \u03bc \u2192 \u2203 \u03c6, Singularity.KeyPolynomial \u03bc \u03c6"
+  },
   "Singularity.exists_logJacobianOrder_eq": {
    "axioms": [
     "Classical.choice",
@@ -12823,7 +12867,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 305,
+   "line": 309,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n      w \u2260 \u03bd \u2192\n        \u2203 d,\n          (\u2200 (f : Polynomial K), f.natDegree < d \u2192 w f = \u03bd f) \u2227\n            (\u2203 \u03c6, \u03c6.Monic \u2227 \u03c6.natDegree = d \u2227 \u03bd \u03c6 < w \u03c6) \u2227\n              ((\u2203 w', Singularity.MacLaneVaquieStep \u03bd w w' \u2227 \u2200 (f : Polynomial K), f.natDegree \u2264 d \u2192 w' f = \u03bd f) \u2228\n                \u2203 \u03b9 x,\n                  \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                    \u2203 F,\n                      (\u2200 (i : \u03b9) (f : Polynomial K),\n                          \u03bd f \u2264 Singularity.augmentedValuationFun w (F.key i) (F.value i) f) \u2227\n                        (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = w a) \u2227\n                          \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f)"
   },
   "Singularity.exists_macLaneVaquie_seq_or_forall_isStable": {
@@ -12834,7 +12878,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 371,
+   "line": 375,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      (\u2203 w,\n          w 0 = w\u2080 \u2227\n            (\u2200 (n : \u2115), Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (w n) (w (n + 1))) \u2227\n              \u2200 (n : \u2115) (f : Polynomial K), f.natDegree \u2264 n \u2192 (w n) f = \u03bd f) \u2228\n        \u2203 \u03bc,\n          Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bc \u2227\n            \u03bc \u2260 \u03bd \u2227\n              \u2203 \u03b9 x,\n                \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                  \u2203 F,\n                    (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2227\n                      (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2227\n                        \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f"
   },
   "Singularity.exists_mem_ord_eq_idealOrd": {
@@ -14176,7 +14220,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 176,
+   "line": 180,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n    \u03c6.Monic \u2192\n      \u03bd \u03c6 < w \u03c6 \u2192\n        (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f) \u2192\n          \u2200 {\u03c8 : Polynomial K},\n            \u03c8.Monic \u2192\n              \u03c8.natDegree = \u03c6.natDegree \u2192\n                \u03bd \u03c8 \u2264 \u03bd \u03c6 \u2192\n                  w \u03c8 = w \u03c6 \u2227\n                    \u03bd \u03c8 < w \u03c8 \u2227 (\u2200 (f : Polynomial K), f.degree < \u03c8.degree \u2192 \u03bd f = w f) \u2227 Singularity.KeyPolynomial w \u03c8"
   },
   "Singularity.keyPolynomial_of_map_lt": {
@@ -15243,7 +15287,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 153,
+   "line": 157,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080},\n  Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) \u03bc \u03bc' \u2192\n    (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n      (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n        (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc' (Polynomial.C c)) \u2227 \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc' f"
   },
   "Singularity.macLaneChain": {
@@ -15595,7 +15639,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 77,
+   "line": 81,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n    \u2200 {\u03c6 : Polynomial K},\n      \u03c6.Monic \u2192\n        0 < \u03c6.natDegree \u2192\n          (\u2200 (a : Polynomial K), a.degree < \u03c6.degree \u2192 w a = \u03bd a) \u2192\n            w \u03c6 = \u03bd \u03c6 \u2192\n              (\u2200 (\u03c8 : Polynomial K), \u03c8.Monic \u2192 \u03c8.natDegree = \u03c6.natDegree \u2192 \u03bd \u03c6 \u2264 \u03bd \u03c8) \u2192\n                \u2200 {f : Polynomial K}, f.natDegree \u2264 \u03c6.natDegree \u2192 w f = \u03bd f"
   },
   "Singularity.map_ideal_le_stalkIdeal": {
@@ -17842,6 +17886,28 @@
    "line": 358,
    "type": "\u2200 {K : Type u_1} {L : Type uL} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_2} {\u0393\u2081 : Type u\u0393}\n  [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081] (vK : Valuation K \u0393\u2080)\n  (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL],\n  Cardinal.lift.{uL, u\u0393}\n        (Module.rank \u2124\n          (Additive\n            \u21a5(Subgroup.map (QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup) (\u2191vL).valueGroup))) +\n      Cardinal.lift.{u\u0393, uL}\n        (Algebra.trdeg (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n          (IsLocalRing.ResidueField \u21a5vL.valuationSubring)) \u2264\n    Cardinal.lift.{u\u0393, uL} (Algebra.trdeg K L)"
   },
+  "Singularity.reflTransGen_macLaneVaquieStep_iff_exists_keyPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 614,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      w\u2080 \u2260 \u03bd \u2192 (Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bd \u2194 \u2203 \u03c6, Singularity.KeyPolynomial \u03bd \u03c6)"
+  },
+  "Singularity.reflTransGen_macLaneVaquieStep_of_isMuMinimal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 594,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      \u2200 {\u03c6 : Polynomial K},\n        \u03c6.Monic \u2192\n          0 < \u03c6.natDegree \u2192 Singularity.IsMuMinimal \u03bd \u03c6 \u2192 Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bd"
+  },
   "Singularity.reflTransGen_macLaneVaquieStep_of_map_eq_zero": {
    "axioms": [
     "Classical.choice",
@@ -17850,8 +17916,19 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 477,
+   "line": 481,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      \u2200 {F : Polynomial K}, F \u2260 0 \u2192 \u03bd F = 0 \u2192 Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bd"
+  },
+  "Singularity.reflTransGen_macLaneVaquieStep_or_forall_not_keyPolynomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 622,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bd \u2228\n        (\u2200 (\u03c6 : Polynomial K), \u00acSingularity.KeyPolynomial \u03bd \u03c6) \u2227\n          ((\u2203 w,\n              w 0 = w\u2080 \u2227\n                (\u2200 (n : \u2115), Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (w n) (w (n + 1))) \u2227\n                  (\u2200 (n : \u2115) (f : Polynomial K), f.natDegree \u2264 n \u2192 (w n) f = \u03bd f) \u2227 \u2200 (n : \u2115), w n \u2260 \u03bd) \u2228\n            \u2203 \u03bc,\n              Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bc \u2227\n                \u03bc \u2260 \u03bd \u2227\n                  \u2203 \u03b9 x,\n                    \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                      \u2203 F,\n                        (\u2200 (i : \u03b9) (f : Polynomial K),\n                            \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2227\n                          (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2227\n                            \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f)"
   },
   "Singularity.reflTransGen_monomialValuation_of_map_eq_zero": {
    "axioms": [
@@ -17861,7 +17938,7 @@
    ],
    "file": "Singularity/Valuation/MacLaneVaquie.lean",
    "kind": "theorem",
-   "line": 502,
+   "line": 506,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {v : Valuation K \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    \u2200 {F : Polynomial K},\n      F \u2260 0 \u2192\n        \u03bd F = 0 \u2192\n          Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (Singularity.monomialValuation v (\u03bd Polynomial.X)) \u03bd"
   },
   "Singularity.regularAlterationInDim_of_deJongAlteration": {
