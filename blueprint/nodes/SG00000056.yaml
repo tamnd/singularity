@@ -1,0 +1,14 @@
+tag: SG00000056
+kind: theorem
+title: The codimension of the directrix does not go down from the first case if no component of the divisor leaves
+statement: In the setting of SG00000055, assume that $\rho(g'_c) = \rho(g)$, that the old point is in the first case, and that no component of $\Delta$ leaves, that is, $t_i = 0$ for each $i \in \Delta$ with $i \ne j$. Then $\tau_\rho(g'_c) \ge \tau_\rho(g)$. There is no hypothesis on $p$.
+sources:
+- paper: Hir67
+uses:
+- SG00000050
+- SG00000053
+- SG00000055
+tier: T2
+route:
+- R1
+notes: If $|r| + d$ is not $0$ in the base field, this is SG00000053. Otherwise both points are in the first case by SG00000055, and the proof of SG00000050 applies to each form $\Phi_i$ with $i \ne j$, since $e_i$ has an exact transport. The Euler identity gives $\sum_{k \in R} \Phi_k = (|r| + d) F = 0$, so $\Phi_j$ is a linear combination of the other forms, and each vector $w$ of the directrix of $g'_c$ with $w_j = 0$ is in $T(\Phi_j)$. So with SG0000004Z and SG00000053, $\tau_\rho$ can go down at a step where $\rho$ stays only from the second case to the first case, or from the first case with $p \mid |r| + d$ to the first case with a leaving component.

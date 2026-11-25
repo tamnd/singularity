@@ -1,0 +1,13 @@
+tag: SG00000055
+kind: theorem
+title: The first case of the log-Jacobian order is stable if the order stays and no component of the divisor leaves
+statement: In the setting of SG0000004Z, write $g = x^r G$ and let $d = \operatorname{ord} G$. For $i \in \Delta$ let $e_i = r_i G + x_i \partial_i G$, let $\Phi_i$ be its homogeneous part of degree $d$, and let $R$ be the set of the $i \in \Delta$ with $\Phi_i \ne 0$. A component $i \in \Delta$ with $i \ne j$ leaves in the chart in the direction $j$ if $t_i \ne 0$. Assume that $\rho(g'_c) = \rho(g)$ and that the old point is in the first case. Assume that $R$ contains an index $i \ne j$ that does not leave, or that $R = \{j\}$. Then the new point is in the first case. In particular, this holds if no component of $\Delta$ leaves. There is no hypothesis on $p$.
+sources:
+- paper: Hir67
+uses:
+- SG00000052
+- SG00000054
+tier: T2
+route:
+- R1
+notes: In the first case $\rho = \sigma = d$ with no hypothesis on $p$, since each generator of $\widetilde\Theta_0(G)$ has order at least $d$ and $\rho \le d$. So $R$ is not empty. The proof of SG00000052 needs one element of $\widetilde\Theta_0(G)$ of order $d$ with an exact transport. If $i \in R$, $i \ne j$ and $t_i = 0$, the element $e_i$ has this property, since the chart sends $x_i \partial_i g$ to $x_j^p \, x_i \partial_i g'$. If $R = \{j\}$, the Euler element has the homogeneous part $\Phi_j \ne 0$ of degree $d$, and it has this property. In the example SG00000054, $R = \{x, z\}$, the direction is $x$, and $z$ leaves, so neither hypothesis holds.
