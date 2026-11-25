@@ -9,7 +9,10 @@ uses:
 - SG0000003B
 - SG0000003M
 - SG0000003N
+lean:
+  statement: Singularity.chartVector_mem_directrix_of_logJacobianOrder_eq
+  proof: Singularity.chartVector_mem_directrix_of_logJacobianOrder_eq
 tier: T2
 route:
 - R1
-notes: This is Volume 7, Section 3.7 of the handbook, the analogue for the log-Jacobian order of the theorem of Hironaka SG0000003B on the points where the order stays. The first case is false with $\widetilde\Theta(G)$ in the place of $\widetilde\Theta_0(G)$. For $p = 3$, $g = x^3 (y^2 + x)$ and $E = V(x)$, the order $\rho = 1$ stays at the origin of the $y$-chart, but $v = (0, 1)$ is not in the directrix of $\partial_y G = 2y$. The theorem gives a place for the points where $\rho$ stays. It does not say that $\rho$ goes down after finitely many blowups. The Lean proof is not yet merged.
+notes: This is Volume 7, Section 3.7 of the handbook, the analogue for the log-Jacobian order of the theorem of Hironaka SG0000003B on the points where the order stays. The first case is false with $\widetilde\Theta(G)$ in the place of $\widetilde\Theta_0(G)$. For $p = 3$, $g = x^3 (y^2 + x)$ and $E = V(x)$, the order $\rho = 1$ stays at the origin of the $y$-chart, but $v = (0, 1)$ is not in the directrix of $\partial_y G = 2y$. The theorem gives a place for the points where $\rho$ stays. It does not say that $\rho$ goes down after finitely many blowups. The Lean proofs are in tamnd/singularity-lean#119. The second case is `Singularity.chartVector_mem_directrix_of_logJacobianOrder_eq_of_idealOrd`, the two corollaries for a zero directrix are `Singularity.logJacobianOrder_cleanPart_lt_of_directrix_eq_bot` and `Singularity.logJacobianOrder_cleanPart_lt_of_directrix_eq_bot_of_idealOrd`, the results for $\operatorname{in}(G)$ and its partial derivatives are `Singularity.chartVector_mem_directrix_initialForm_of_logJacobianOrder_eq` and `Singularity.chartVector_mem_directrix_pderiv_initialForm_of_logJacobianOrder_eq`, and the example is `Singularity.nearPointExample_not_mem_directrix`.

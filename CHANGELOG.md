@@ -10,6 +10,8 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records now pin the Lean library at 3d28b00, with the points where the log-Jacobian order stays.
+- SG0000004X, the points where the log-Jacobian order stays lie in a directrix, has the Lean statement and proof Singularity.chartVector_mem_directrix_of_logJacobianOrder_eq of tamnd/singularity-lean#119. The notes give the Lean names of the second case, the corollaries and the example.
 - The records now pin the Lean library at b7487dc, with the existence of an étale generator in the case of one extension.
 - The notes of SG0000004Y give the case of one extension from tamnd/singularity-lean#118.
 - The records now pin the Lean library at 8e6b1dc, with the lifting theorem along an étale generator.
