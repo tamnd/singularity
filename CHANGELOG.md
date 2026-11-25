@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records now pin the Lean library at 569368b, with local uniformization over a monomial subfield in the case of one extension.
 - The notes of SG0000001E give the case of the theorem of Knaf-Kuhlmann without ramification, defect and splitting from tamnd/singularity-lean#121.
 
 ## 0.4.22 - 2026-11-25
