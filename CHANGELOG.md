@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.28 - 2026-11-26
+
 ### Added
 
 - SG00000052, a proposition for the milestone S7.12. If $\rho$ stays, the old point is in the first case and $p$ does not divide $|r| + d$, then the new point is in the first case.
