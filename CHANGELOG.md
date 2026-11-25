@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The Lean records are now at tamnd/singularity-lean@103e07f, with 1459 declarations and no axioms outside the standard three. The last refresh was at 93c16b9, with 1163 declarations.
+
 ## 0.4.14 - 2026-11-25
 
 ### Added
