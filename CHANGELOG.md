@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records now pin the Lean library at 656c128, with 1747 declarations and no nonstandard axioms.
+
 ## 0.4.20 - 2026-11-25
 
 ### Changed
