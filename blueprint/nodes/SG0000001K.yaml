@@ -10,8 +10,8 @@ uses:
 - SG0000000V
 - SG0000004J
 lean:
-  statement: Singularity.exists_regular_alteration
+  statement: Singularity.deJongAlteration
 tier: T7
 route:
 - R6
-notes: 'Open question Q-08: the first form takes the moduli of stable curves as a hypothesis.'
+notes: 'The Lean statement Singularity.deJongAlteration of tamnd/singularity-lean#104 is a Prop with no proof. It has the strict normal crossings divisor. It is weaker than [dJ96, 4.1] in two points. The compactification is proper and not projective, because Mathlib has no projective morphisms. The statement does not ask for a generically étale alteration. Open question Q-08 asks for the moduli of stable curves as a hypothesis. This is not possible yet, because Mathlib has no stable or nodal curves.'
