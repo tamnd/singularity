@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.23 - 2026-11-25
+
 ### Changed
 
 - The records now pin the Lean library at df659d4, with the unramified part of Step 4 of the reduction of Cossart-Piltant and the codimension of the directrix of the log-Jacobian order.
