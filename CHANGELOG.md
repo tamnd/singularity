@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.20 - 2026-11-25
+
 ### Changed
 
 - The notes of SG0000004D and SG0000004F now give the Lean proofs of tamnd/singularity-lean#113: Lemma 2.1.2, Corollary 2.1.6 in the form over $k$, and each claim of the reduction to a larger ground field but the last one.
