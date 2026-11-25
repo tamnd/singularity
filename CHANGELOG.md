@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000057 and SG00000058 for the milestone S7.15. The full codimension $\widetilde\tau$ of the directrix, which uses all of $\widetilde\Theta(G)$ in both cases, does not go down at a step from the second case where $\rho$ stays. An example over $\mathbb{F}_2$ shows that it can go down at a step from the first case.
+
 ## 0.4.33 - 2026-11-26
 
 ### Changed
