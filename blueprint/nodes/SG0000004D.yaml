@@ -6,7 +6,10 @@ sources:
 - paper: KK05
 uses:
 - SG0000000Y
+lean:
+  statement: Singularity.hasLocalUniformization_of_isMonomialValuation
+  proof: Singularity.hasLocalUniformization_of_isMonomialValuation
 tier: T6
 route:
 - R2
-notes: This is Volume 5, Lemma 2.1.4 and Theorem 2.1.5 of the handbook. A monomial valuation is an Abhyankar valuation with residue field $k$. Corollary 2.1.6 gives the same result over the ground field $k(y_1, \dots, y_t)$, and this is the form that the proof of SG0000001E uses. The charts $k[u_1, \dots, u_r]$ are smooth affine toric charts. The library has the one-variable step Singularity.monomialValuation. tamnd/singularity-lean#110 proves the case of rank 1. The lattice lemma holds for real weights that are linearly independent over ℤ (Singularity.latticeLemma_real). A monomial valuation has local uniformization if the lattice lemma holds for its values, in each characteristic (Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice). So a monomial valuation with an injective ordered map of the value group to ℝ≥0 has local uniformization (Singularity.hasLocalUniformization_of_isMonomialValuation_of_rankOne). The lattice lemma for higher rank has no Lean proof, so the node has no Lean proof.
+notes: This is Volume 5, Lemma 2.1.4 and Theorem 2.1.5 of the handbook. A monomial valuation is an Abhyankar valuation with residue field $k$. Corollary 2.1.6 gives the same result over the ground field $k(y_1, \dots, y_t)$, and this is the form that the proof of SG0000001E uses. The charts $k[u_1, \dots, u_r]$ are smooth affine toric charts. tamnd/singularity-lean#110 and tamnd/singularity-lean#111 prove the node in Lean, in each characteristic and for value groups of each rank. The lattice lemma is Singularity.latticeLemma, for a basis of an ordered group isomorphic to $\mathbb{Z}^r$. A monomial valuation has local uniformization (Singularity.hasLocalUniformization_of_isMonomialValuation). The Lean statement is the last claim of the node. The claim on the charts $k[u_1, \dots, u_r]$ is in the proof of Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice, and it is not a separate Lean statement. A monomial valuation is an Abhyankar valuation (Singularity.IsMonomialValuation.isAbhyankarValuation). The library does not prove that the residue field is $k$, and it does not prove Corollary 2.1.6.
