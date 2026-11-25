@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.19 - 2026-11-25
+
 ### Changed
 
 - The records now come from tamnd/singularity-lean at d17dcd2, with 1688 declarations and no nonstandard axioms.
