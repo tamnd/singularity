@@ -7,7 +7,10 @@ sources:
 uses:
 - SG0000004X
 - SG0000004Z
+lean:
+  statement: Singularity.logJacobianFullDirectrixCodim_le_cleanPart
+  proof: Singularity.logJacobianFullDirectrixCodim_le_cleanPart
 tier: T2
 route:
 - R1
-notes: In the second case $\widetilde H(g) = H(g)$, so $\widetilde\tau(g) = \tau_\rho(g)$. In the first case $\widetilde\tau(g) \ge \tau_\rho(g)$. The proof is the proof of SG0000004Z with $\widetilde H(g'_c)$ in the place of $H(g'_c)$. The proof of SG0000004X shows that the weak transform of each $h \in H(g)$ is an element of $\widetilde\Theta(G')$ of order $\rho$, and this does not use the case of the new point. So at a step from the second case to the first case, $\tau_\rho$ can go down, but $\widetilde\tau$ does not go down. A random test of sequences of blowups found 48,399 steps from the second case where $\rho$ stays, and $\widetilde\tau$ did not go down at any of them.
+notes: In the second case $\widetilde H(g) = H(g)$, so $\widetilde\tau(g) = \tau_\rho(g)$. In the first case $\widetilde\tau(g) \ge \tau_\rho(g)$. The proof is the proof of SG0000004Z with $\widetilde H(g'_c)$ in the place of $H(g'_c)$. The proof of SG0000004X shows that the weak transform of each $h \in H(g)$ is an element of $\widetilde\Theta(G')$ of order $\rho$, and this does not use the case of the new point. So at a step from the second case to the first case, $\tau_\rho$ can go down, but $\widetilde\tau$ does not go down. A random test of sequences of blowups found 48,399 steps from the second case where $\rho$ stays, and $\widetilde\tau$ did not go down at any of them. The Lean library proves the node in `Singularity/Invariant/LogJacobianFullDirectrix.lean`. `Singularity.finrank_logJacobianFullDirectrix_cleanPart_le` is the form with the dimensions, and `Singularity.finrank_logJacobianFullDirectrix_cleanPart_le_logJacobianDirectrix` gives $\dim \widetilde T(g'_c) \le \dim T_\rho(g)$ with no hypothesis on the cases, so $\widetilde\tau(g'_c) \ge \tau_\rho(g)$ at each step where $\rho$ stays.

@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records are pinned at tamnd/singularity-lean 084346f, the merge commit of tamnd/singularity-lean#136, with 1952 declarations.
+- SG00000057 has the Lean statement and proof `Singularity.logJacobianFullDirectrixCodim_le_cleanPart`, and SG00000058 has `Singularity.fullDirectrixExample_codim`. Their notes give the other Lean names.
+
 ## 0.4.34 - 2026-11-26
 
 ### Added
