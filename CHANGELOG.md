@@ -8,6 +8,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The note of SG0000004D now gives the Lean proof of local uniformization for monomial valuations of rank 1 (tamnd/singularity-lean#110).
 - The note of SG0000000Z now says that part 4 of MacLane-Vaquié has a Lean proof for each valuation with nonzero support and any value group, and gives the weak form for each valuation (tamnd/singularity-lean#109).
 - SG0000004S now has the Lean field `Singularity.logJacobianOrder_eq_zero_iff`, the end case for polynomials, by tamnd/singularity-lean#100. This entry was in the section of 0.4.16 by mistake.
 - SG0000004T now has the Lean field `Singularity.cpOmega_eq_logJacobianOrder`, the equality of omega and the log-Jacobian order for polynomials, by tamnd/singularity-lean#107.
