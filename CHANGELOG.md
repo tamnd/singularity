@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.14 - 2026-11-25
+
 ### Added
 
 - Experiment E4 of the lab: the specs `lab/specs/e4-p2.yaml`, `e4-p3.yaml` and `e4-p5.yaml` and their runs in `lab/runs/`. They compute the invariants delta, epsilon, omega and iota of Cossart-Piltant [CP19] on the walks of E1 with q = p, for n = 3 and n = 4, with tamnd/singularity-agent#9. `lab/README.md` and the page `/lab/` describe E4.
