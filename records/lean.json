@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "70659f8ac1de79f2419361ae0dc55f8e3e867bff",
+  "commit": "8e6b1dc9eb8b5cbdcc52bef51e2d251ea580e3ce",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "70659f8ac1de79f2419361ae0dc55f8e3e867bff",
+ "commit": "8e6b1dc9eb8b5cbdcc52bef51e2d251ea580e3ce",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -7954,6 +7954,149 @@
    "line": 214,
    "type": "\u2200 {Z Z' : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {\u03c0 : Z' \u27f6 Z} {U : Z.Opens} {E : Z'.IdealSheafData},\n  Singularity.IsEmbeddedResolution X \u03c0 U E \u2192 \u2191E.support = \u21d1\u03c0 \u207b\u00b9' (\u2191U)\u1d9c"
   },
+  "Singularity.IsEtaleGenerator": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "inductive",
+   "line": 263,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192 [inst_2 : Algebra k K] \u2192 IntermediateField k K \u2192 ValuationSubring K \u2192 K \u2192 Prop"
+  },
+  "Singularity.IsEtaleGenerator.adjoin_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 267,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 (\u21a5K\u2080)\u27eez\u27ef = \u22a4"
+  },
+  "Singularity.IsEtaleGenerator.aeval_derivative_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 275,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192 (Polynomial.aeval z) (Polynomial.derivative (minpoly (\u21a5K\u2080) z)) \u2260 0"
+  },
+  "Singularity.IsEtaleGenerator.algebra_adjoin_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 290,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 (\u21a5K\u2080)[z] = \u22a4"
+  },
+  "Singularity.IsEtaleGenerator.centerSubring_closure_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 418,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192\n    Singularity.centerSubring V (Subring.closure (insert z (\u2191K\u2080 \u2229 \u2191V))) = V.toSubring"
+  },
+  "Singularity.IsEtaleGenerator.coeff_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 268,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 \u2200 (i : \u2115), \u2191((minpoly (\u21a5K\u2080) z).coeff i) \u2208 V"
+  },
+  "Singularity.IsEtaleGenerator.exists_mul_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 305,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192\n    \u2200 {x : K},\n      x \u2208 V \u2192\n        \u2203 p q,\n          (\u2200 (i : \u2115), \u2191(p.coeff i) \u2208 V) \u2227\n            (\u2200 (i : \u2115), \u2191(q.coeff i) \u2208 V) \u2227\n              V.valuation ((Polynomial.aeval z) q) = 1 \u2227 x * (Polynomial.aeval z) q = (Polynomial.aeval z) p"
+  },
+  "Singularity.IsEtaleGenerator.finiteDimensional": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 294,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 FiniteDimensional (\u21a5K\u2080) K"
+  },
+  "Singularity.IsEtaleGenerator.isIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 281,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 IsIntegral (\u21a5K\u2080) z"
+  },
+  "Singularity.IsEtaleGenerator.isSeparable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 299,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 Algebra.IsSeparable (\u21a5K\u2080) K"
+  },
+  "Singularity.IsEtaleGenerator.mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 266,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 z \u2208 V"
+  },
+  "Singularity.IsEtaleGenerator.separable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 286,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K}, Singularity.IsEtaleGenerator K\u2080 V z \u2192 (minpoly (\u21a5K\u2080) z).Separable"
+  },
+  "Singularity.IsEtaleGenerator.valuation_derivative": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 269,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192 V.valuation ((Polynomial.aeval z) (Polynomial.derivative (minpoly (\u21a5K\u2080) z))) = 1"
+  },
   "Singularity.IsFunctionField": {
    "axioms": [
     "Classical.choice",
@@ -10170,6 +10313,39 @@
    "line": 121,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {g : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix g \u2192\n    \u2200 (c : k), (MvPolynomial.aeval fun i => MvPolynomial.X i + MvPolynomial.C (c * v i)) g = g"
   },
+  "Singularity.aeval_derivative_minpoly_mul_mem_adjoin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 174,
+   "type": "\u2200 {A : Type u_1} {F : Type u_2} {L : Type u_3} [inst : CommRing A] [IsDomain A] [IsIntegrallyClosed A]\n  [inst_3 : Field F] [inst_4 : Field L] [inst_5 : Algebra A F] [IsFractionRing A F] [inst_7 : Algebra F L]\n  [inst_8 : Algebra A L] [IsScalarTower A F L] [FiniteDimensional F L] [Algebra.IsSeparable F L] {x : L},\n  F[x] = \u22a4 \u2192\n    IsIntegral A x \u2192 \u2200 {u : L}, IsIntegral A u \u2192 (Polynomial.aeval x) (Polynomial.derivative (minpoly F x)) * u \u2208 A[x]"
+  },
+  "Singularity.aeval_divX_iterate_succ": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {R : Type u_1} {L : Type u_2} [inst : CommRing R] [inst_1 : CommRing L] [inst_2 : Algebra R L] (f : Polynomial R)\n  (\u03b2 : L) (m : \u2115),\n  (Polynomial.aeval \u03b2) (Polynomial.divX^[m] f) =\n    (Polynomial.aeval \u03b2) (Polynomial.divX^[m + 1] f) * \u03b2 + (algebraMap R L) (f.coeff m)"
+  },
+  "Singularity.aeval_eq_pow_mul_aeval_divX_iterate_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 {R : Type u_1} {L : Type u_2} [inst : CommRing R] [inst_1 : CommRing L] [inst_2 : Algebra R L] (f : Polynomial R)\n  (\u03b2 : L) (m : \u2115),\n  (Polynomial.aeval \u03b2) f =\n    \u03b2 ^ m * (Polynomial.aeval \u03b2) (Polynomial.divX^[m] f) + \u2211 i \u2208 Finset.range m, (algebraMap R L) (f.coeff i) * \u03b2 ^ i"
+  },
   "Singularity.aeval_residue": {
    "axioms": [
     "Classical.choice",
@@ -11023,6 +11199,17 @@
    "kind": "theorem",
    "line": 86,
    "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} {R S : Subring K},\n  S \u2264 Singularity.centerSubring V R \u2192 Singularity.centerSubring V S \u2264 Singularity.centerSubring V R"
+  },
+  "Singularity.centerSubring_le_toSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 205,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {V : ValuationSubring K} {R : Subring K},\n  R \u2264 V.toSubring \u2192 Singularity.centerSubring V R \u2264 V.toSubring"
   },
   "Singularity.centerSubring_mono": {
    "axioms": [
@@ -12254,6 +12441,17 @@
    "line": 523,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (f : Polynomial K), f /\u2098 Polynomial.X = f.divX"
   },
+  "Singularity.divX_iterate_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (f : Polynomial R) {n : \u2115}, f.natDegree < n \u2192 Polynomial.divX^[n] f = 0"
+  },
   "Singularity.divisorExponent": {
    "axioms": [
     "Classical.choice",
@@ -13343,6 +13541,17 @@
    "line": 50,
    "type": "\u2200 {k K : Type u} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] [Algebra.EssFiniteType k \u21a5V], Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_etaleGenerator": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 438,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192\n    Singularity.HasLocalUniformization k (V.comap (algebraMap (\u21a5K\u2080) K)) \u2192 Singularity.HasLocalUniformization k V"
+  },
   "Singularity.hasLocalUniformization_of_isMonomialValuation": {
    "axioms": [
     "Classical.choice",
@@ -13904,6 +14113,17 @@
    "line": 53,
    "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} (f : X \u27f6 Y) {U V : Y.Opens},\n  V \u2264 U \u2192 \u2200 [AlgebraicGeometry.IsFinite (f \u2223_ U)], AlgebraicGeometry.IsFinite (f \u2223_ V)"
   },
+  "Singularity.isIntegral_aeval_divX_iterate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 81,
+   "type": "\u2200 {R : Type u_1} {L : Type u_2} [inst : CommRing R] [inst_1 : CommRing L] [inst_2 : Algebra R L] {f : Polynomial R}\n  {\u03b2 : L}, (Polynomial.aeval \u03b2) f = 0 \u2192 \u2200 (m : \u2115), IsIntegral R ((Polynomial.aeval \u03b2) (Polynomial.divX^[m] f))"
+  },
   "Singularity.isLeast_sum_newtonPolyhedron": {
    "axioms": [
     "Classical.choice",
@@ -13981,6 +14201,17 @@
    "line": 90,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V), (Singularity.valuationCenter V A h).IsPrime"
   },
+  "Singularity.isRegularLocalRing_localization_adjoinRoot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleRegular.lean",
+   "kind": "theorem",
+   "line": 34,
+   "type": "\u2200 {A : Type u_1} [inst : CommRing A] [IsNoetherianRing A] {P : Polynomial A},\n  P.Monic \u2192\n    \u2200 (Q : Ideal (AdjoinRoot P)) [inst_2 : Q.IsPrime],\n      (AdjoinRoot.mk P) (Polynomial.derivative P) \u2209 Q \u2192\n        \u2200 (p : Ideal A) [inst_3 : p.IsPrime],\n          Ideal.comap (algebraMap A (AdjoinRoot P)) Q = p \u2192\n            IsRegularLocalRing (Localization.AtPrime p) \u2192 IsRegularLocalRing (Localization.AtPrime Q)"
+  },
   "Singularity.isRegularLocalRing_localization_iff": {
    "axioms": [
     "Classical.choice",
@@ -13991,6 +14222,17 @@
    "kind": "theorem",
    "line": 101,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V),\n  IsRegularLocalRing (Localization.AtPrime (Singularity.valuationCenter V A h)) \u2194\n    IsRegularLocalRing \u21a5(Singularity.centerSubring V A.toSubring)"
+  },
+  "Singularity.isRegularLocalRing_localization_iff_of_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {V : ValuationSubring K} {S : Type u_2} [inst_1 : CommRing S] {\u03c6 : S \u2192+* K},\n  Function.Injective \u21d1\u03c6 \u2192\n    \u2200 (hV : \u2200 (y : S), \u03c6 y \u2208 V),\n      IsRegularLocalRing (Localization.AtPrime (Ideal.comap (\u03c6.codRestrict V hV) (IsLocalRing.maximalIdeal \u21a5V))) \u2194\n        IsRegularLocalRing \u21a5(Singularity.centerSubring V \u03c6.range)"
   },
   "Singularity.isRegularLocalRing_of_isField": {
    "axioms": [
@@ -18941,6 +19183,17 @@
    "kind": "theorem",
    "line": 59,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {b : K} {n : \u2115}, n \u2260 0 \u2192 (b ^ n \u2208 V \u2194 b \u2208 V)"
+  },
+  "Singularity.valuation_aeval_divX_iterate_lt_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/EtaleGenerator.lean",
+   "kind": "theorem",
+   "line": 143,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {R : Type u_2} [inst_1 : CommRing R] [inst_2 : Algebra R K]\n  (f : Polynomial R) {\u03b2 : K},\n  \u03b2 \u2208 V \u2192\n    \u2200 (m : \u2115),\n      (\u2200 (i : \u2115), m \u2264 i \u2192 V.valuation ((algebraMap R K) (f.coeff i)) < 1) \u2192\n        V.valuation ((Polynomial.aeval \u03b2) (Polynomial.divX^[m] f)) < 1"
   },
   "Singularity.valuation_eq_max_of_ne": {
    "axioms": [
