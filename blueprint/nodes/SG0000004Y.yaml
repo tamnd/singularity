@@ -1,0 +1,13 @@
+tag: SG0000004Y
+kind: theorem
+title: Existence of an étale generator
+statement: 'Let $K/k$ be a function field, let $K_0$ be a subfield with $k \subseteq K_0$ and $[K : K_0]$ finite, let $v$ be a valuation of $K/k$ and let $v_0$ be its restriction to $K_0$. If $v$ is not trivial, the ramification index of $v$ over $v_0$ is 1, the residue field extension is separable and the defect is 1, then $K/K_0$ is separable and there is an étale generator of $K/K_0$ at $v$ in the sense of SG0000004C.'
+sources:
+- paper: Kuh-book
+uses:
+- SG00000010
+- SG0000004C
+tier: T6
+route:
+- R2
+notes: This is the second part of Lemma 1.3.3 in Volume 5 of the handbook. The proof uses the henselization and Hensel's lemma [Kuh-book]. With SG0000004C it reduces local uniformization of $v$ to local uniformization of $v_0$ when the extension is defectless, unramified and has a separable residue extension. The Lean name of the statement is planned. The library does not have it yet.
