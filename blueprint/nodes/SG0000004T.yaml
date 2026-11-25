@@ -1,0 +1,16 @@
+tag: SG0000004T
+kind: theorem
+title: The log-Jacobian order is the invariant omega of Cossart-Piltant
+statement: Let $k$ be perfect, $S = k[[u_1, \dots, u_n]]$, $E = \operatorname{div}(u_1 \cdots u_e)$ and $h = Z^p + f$ with $f$ clean and $m(x) = p$. Then $\omega(x) = \rho(f)$, the residual order of the log-Jacobian ideal of SG0000003F. So $\omega(x)$ depends only on $S$, $h$ and $E$. For $k$ algebraically closed, $\omega$ does not go up under a point blowup (SG0000003N) or under the blowup of a regular center that satisfies (H1) and (H2) (SG0000004Q), in each dimension and without condition (E).
+sources:
+- paper: CP19
+- paper: Cos87
+uses:
+- SG0000003F
+- SG0000003N
+- SG0000004Q
+tier: T2
+route:
+- R1
+- R5
+notes: This is Volume 7, Section 3.6 of the handbook. The invariant omega is Volume 6, Definition 3.2.5, after [CP19, Definition 2.68]. The independence of the coordinates is [CP19, Remark 2.69] in this case. [CP19, Theorem 3.13] gives the non-increase of the invariant iota under condition (E). The node SG0000004R gives a blowup in a regular center at which omega goes up from 2 to 3, and condition (E) fails there.
