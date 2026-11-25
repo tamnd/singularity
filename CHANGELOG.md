@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000004Z, the codimension of the directrix of the log-Jacobian order does not go down at a point where $\rho$ stays and the new point is in the second case, with the counterexample for $p = 2$ in the first case, for the milestone S7.9 (#173).
+
 ### Changed
 
 - The records now pin the Lean library at 8e6b1dc, with the lifting theorem along an étale generator.
