@@ -1,13 +1,16 @@
 tag: SG0000004C
 kind: theorem
 title: Lifting local uniformization along an étale generator
-statement: 'Let $K/k$ be a function field, let $K_0$ be a subfield with $k \subseteq K_0$ and $[K : K_0]$ finite, let $v$ be a valuation of $K/k$ and let $v_0$ be its restriction to $K_0$. An étale generator of $K/K_0$ at $v$ is an element $z \in \mathcal{O}_v$ with $K = K_0(z)$ such that the minimal polynomial $P$ of $z$ over $K_0$ has coefficients in $\mathcal{O}_{v_0}$ and $P''(z)$ is a unit of $\mathcal{O}_v$. If there is an étale generator of $K/K_0$ at $v$ and $v_0$ has local uniformization as a valuation of $K_0/k$, then $v$ has local uniformization as a valuation of $K/k$. If $v$ is not trivial, the ramification index of $v$ over $v_0$ is 1, the residue field extension is separable and the defect is 1, then there is an étale generator of $K/K_0$ at $v$.'
+statement: 'Let $K/k$ be a function field, let $K_0$ be a subfield with $k \subseteq K_0$ and $[K : K_0]$ finite, let $v$ be a valuation of $K/k$ and let $v_0$ be its restriction to $K_0$. An étale generator of $K/K_0$ at $v$ is an element $z \in \mathcal{O}_v$ with $K = K_0(z)$ such that the minimal polynomial $P$ of $z$ over $K_0$ has coefficients in $\mathcal{O}_{v_0}$ and $P'(z)$ is a unit of $\mathcal{O}_v$. If $z$ is an étale generator of $K/K_0$ at $v$, then $\mathcal{O}_v$ is the localization of $\mathcal{O}_{v_0}[z]$ at the center of $v$. If there is an étale generator of $K/K_0$ at $v$ and $v_0$ has local uniformization as a valuation of $K_0/k$, then $v$ has local uniformization as a valuation of $K/k$.'
 sources:
 - paper: Zar40
 - paper: Kuh-book
 uses:
 - SG00000010
 tier: T6
+lean:
+  statement: Singularity.hasLocalUniformization_of_etaleGenerator
+  proof: Singularity.hasLocalUniformization_of_etaleGenerator
 route:
 - R2
-notes: This is Volume 5, Theorem 1.3.4 and Lemma 1.3.3 of the handbook. The idea to lift along an extension that is unramified at the valuation is the idea of Zariski [Zar40]. The lifting holds in each characteristic and each dimension. The existence of the generator uses the henselization [Kuh-book]. The handbook uses the theorem for surfaces in characteristic 0 and for Abhyankar valuations (SG0000001E). No Lean statement yet.
+notes: This is Volume 5, Theorem 1.3.4 and the first part of Lemma 1.3.3 of the handbook. The idea to lift along an extension that is unramified at the valuation is the idea of Zariski [Zar40]. The lifting holds in each characteristic and each dimension. The handbook uses the theorem for surfaces in characteristic 0 and for Abhyankar valuations (SG0000001E). The existence of an étale generator is the node SG0000004Y. tamnd/singularity-lean#116 proves the node. The definition of an étale generator is Singularity.IsEtaleGenerator. The first part of Lemma 1.3.3 is Singularity.IsEtaleGenerator.centerSubring_closure_eq, and the lemma of Euler (Lemma 1.3.1) is Singularity.aeval_derivative_minpoly_mul_mem_adjoin. The regularity step is Singularity.isRegularLocalRing_localization_adjoinRoot. If P is monic, P' is not in the prime Q, and A is regular at the prime under Q, then A[X]/(P) is regular at Q.

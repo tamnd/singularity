@@ -9,6 +9,7 @@ uses:
 - SG0000000Y
 - SG0000000Z
 - SG0000004C
+- SG0000004Y
 - SG0000004D
 lean:
   statement: Singularity.localUniformization_abhyankar

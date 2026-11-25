@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000004C, the lifting of local uniformization along an étale generator, has the Lean statement and proof Singularity.hasLocalUniformization_of_etaleGenerator of tamnd/singularity-lean#116. The existence of an étale generator is the new node SG0000004Y, with no Lean statement. The statement of SG0000004C now says $P'(z)$ in place of $P''(z)$.
+
 ## 0.4.21 - 2026-11-25
 
 ### Changed
