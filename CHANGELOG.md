@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.16 - 2026-11-25
+
 ### Added
 
 - SG0000004W, the definition of an alteration, with the Lean definition Singularity.IsAlteration of tamnd/singularity-lean#104.
