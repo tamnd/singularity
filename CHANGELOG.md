@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records now pin the Lean library at a01c6b0, with the codimension of the directrix of the log-Jacobian order from the first case to the first case.
+- SG00000050 has the Lean statement and proof `logJacobianDirectrixCodim_le_cleanPart_of_caseA` of tamnd/singularity-lean#126.
+
 ## 0.4.24 - 2026-11-26
 
 ### Added
