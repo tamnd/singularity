@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000004S, the end case of the log-Jacobian ideal: $\rho = 0$ if and only if the equation is of type 0 or of type 1, and then $z^p + g$ is a binomial equation after a change of the coordinates. It is the next step on route R1 for S7, in #142.
+
 ## 0.4.15 - 2026-11-25
 
 ### Changed
