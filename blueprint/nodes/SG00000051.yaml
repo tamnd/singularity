@@ -1,0 +1,13 @@
+tag: SG00000051
+kind: counterexample
+title: The codimension of the directrix of the log-Jacobian order can go down from the first case to the first case
+statement: In the setting of SG00000050, the hypothesis that $|r| + d$ is not $0$ in the base field is necessary. Over $\mathbb{F}_2$ in the variables $x, y, z, w, u$, let $g = x z^2 w u^2 + x y z w u^2$ and $\Delta = \{x, y, z, w\}$, so $|r| + d = 6$. Then $\rho(g) = 3$, the point is in the first case, and $\tau_\rho(g) = 3$. At the point of the $w$-chart with $t_x = 1$ and the other $t_i = 0$, the new point is in the first case with $\rho(g'_c) = 3$, and $\tau_\rho(g'_c) = 2$.
+sources:
+- paper: Hir67
+uses:
+- SG0000004Z
+- SG00000050
+tier: T2
+route:
+- R1
+notes: Here $r = (1, 0, 1, 1, 0)$ and $G = (y + z) u^2$, with $d = 3$. The elements $e_i = r_i G + x_i \partial_i G$ are $e_x = e_w = G$ and $e_y = e_z = y u^2$, and $\partial_u G = 0$. So $T_\rho(g) = \{y = z = u = 0\}$. The chart gives $g' = w^4 (x + 1)(z^2 + y z) u^2$. The monomial $z^2 w^4 u^2$ is a square, so $g'_c = w^4 (x z^2 u^2 + (x + 1) y z u^2)$. The new divisor is $\{y, z, w\}$, with $G' = x z u^2 + (x + 1) y u^2$. The new elements are $e'_y = e'_z = (x + 1) y u^2$ and $e'_w = 0$, so the only new form is $y u^2$ and $T_\rho(g'_c) = \{y = u = 0\}$. The element $\partial_x G' = (y + z) u^2$ has order $3$, but it is not in $\widetilde\Theta_0(G')$, because $x$ is no longer a component of the divisor. The proof of SG00000050 fails at one place. The Euler element is $2 G = 0$, and $v_x = v_w = 1$, so no exact transport has the initial form $G$. If $\tau$ is defined with $\widetilde\Theta(G)$ also in the first case, a random test finds many points where it goes down from the first case to the first case, also if $|r| + d$ is not $0$. So the pair $(\rho, -\tau_\rho)$ is not a resolution invariant in the first case, and route R1 needs a different secondary invariant. The Lean proof is not yet merged.
