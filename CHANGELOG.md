@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000052, a proposition for the milestone S7.12. If $\rho$ stays, the old point is in the first case and $p$ does not divide $|r| + d$, then the new point is in the first case.
+- SG00000053, a corollary for the milestone S7.12. In the same situation $\tau_\rho$ does not go down, so SG00000050 holds with no hypothesis on the new point.
+
 ## 0.4.27 - 2026-11-26
 
 ### Changed
