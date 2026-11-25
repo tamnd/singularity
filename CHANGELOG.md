@@ -4,6 +4,14 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000050, the codimension of the directrix of the log-Jacobian order does not go down from the first case to the first case if $|r| + \operatorname{ord} G$ is not $0$ in the base field, with the example for $p = 2$ where the plain transport fails, for the milestone S7.10 (#193).
+
+### Changed
+
+- The notes of SG0000004Z refer to SG00000050 for the case from the first case to the first case.
+
 ## 0.4.23 - 2026-11-25
 
 ### Changed

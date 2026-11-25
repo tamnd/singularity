@@ -1,0 +1,14 @@
+tag: SG00000050
+kind: theorem
+title: The codimension of the directrix of the log-Jacobian order does not go down from the first case to the first case
+statement: In the setting of SG0000004Z, write $g = x^r G$, let $d = \operatorname{ord} G$ and $F = \operatorname{in}(G)$. Assume that $\rho(g'_c) = \rho(g)$, that both points are in the first case, that is, $\operatorname{ord} \widetilde\Theta_0(G) = \rho$ and $\operatorname{ord} \widetilde\Theta_0(G') = \rho$, and that $|r| + d$ is not $0$ in the base field. Then $\rho = d$, and $\tau_\rho(g'_c) \ge \tau_\rho(g)$.
+sources:
+- paper: Hir67
+uses:
+- SG0000003N
+- SG0000004X
+- SG0000004Z
+tier: T2
+route:
+- R1
+notes: Each element of $\widetilde\Theta_0(G)$ has order at least $d$, so $\rho \ge d$ in the first case. The Euler element $(|r| + E) G = \sum_{i \in \Delta} (r_i G + x_i \partial_i G) + \sum_{l \notin \Delta} x_l \partial_l G$ is in $\widetilde\Theta_0(G)$ and has the initial form $(|r| + d) F \ne 0$, so $\rho = d$. The initial forms of the elements of order $\rho$ of $\widetilde\Theta_0(G)$ are the nonzero elements of the span of the forms $\Phi_i = r_i F + x_i \partial_i F$ for $i \in \Delta$. Let $v$ be the vector of the chart. Then $v$ is in the directrix of $F$ by SG0000004X, applied to the Euler element. So $\partial_v \Phi_i = v_i \partial_i F$, so $\Phi_i = r_i F$ if $v_i \ne 0$. For $i \in \Delta$ with $v_i = 0$ the derivation $x_i \partial_i$ lifts to $x_i \partial_i$ in the chart, and $E$ lifts to $x_j \partial_j$. So the weak transforms of $r_i G + x_i \partial_i G$ and of the Euler element are in $\widetilde\Theta_0(G')$ with order $\rho$, and the proof of SG0000004Z applies to them. But the weak transform of an element of $H(g)$ is not always in $H(g'_c)$. For $p = 2$, $g = x z^2 + x^2 y^3$ and $\Delta = \{x\}$, the element $G + x \partial_x G = z^2$ has the weak transform $z^2$ in the $y$-chart with $t_x = 1$, but the new forms are the multiples of $z^2 + y^2$. The case where $|r| + d$ is $0$ in the base field is open. A random test at 2,583 points from the first case to the first case found no point where $\tau_\rho$ goes down. The Lean proof is not yet merged.
