@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The notes of SG0000001E give the case of the theorem of Knaf-Kuhlmann without ramification, defect and splitting from tamnd/singularity-lean#121.
+
 ## 0.4.22 - 2026-11-25
 
 ### Added
