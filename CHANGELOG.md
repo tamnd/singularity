@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.15 - 2026-11-25
+
 ### Changed
 
 - SG0000004Q and SG0000004R now have Lean fields. The Lean library proves the non-increase of the residual order under the blowup in a regular center with (H1) and (H2), and the counterexample over the field with two elements (tamnd/singularity-lean#96).
