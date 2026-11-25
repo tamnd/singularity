@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The note of SG00000041 no longer calls the theorem the second main theorem of [Hir64]. The note of SG00000049 says that the induction needs the functorial form, which Volume 2 cites from [Kol07].
 - SG0000004P now has a Lean field. The Lean library proves the transformation law of the log-Jacobian ideal for the blowup in a regular center, for polynomials, as two inclusions, and the lemma on the equimultiple weak transform (tamnd/singularity-lean#95).
 
 ## 0.4.13 - 2026-11-25
