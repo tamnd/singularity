@@ -7,3 +7,4 @@ sources:
 lean:
   statement: Singularity.Valuation.defect
 tier: T2
+notes: The Lean name of the statement is planned. The library does not have it yet.

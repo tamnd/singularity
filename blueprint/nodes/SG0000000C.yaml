@@ -9,3 +9,4 @@ uses:
 lean:
   statement: Singularity.exists_regular_not_smooth
 tier: S
+notes: The Lean name of the statement is planned. The library does not have it yet.

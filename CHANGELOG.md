@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- Referee notes from Volume 1 of the handbook. The nodes SG0000000P, SG0000000N, SG0000000C, SG0000001V and SG00000010 now have a note that says that the Lean name of the statement is planned. SG00000023 now says the theorem of Auslander-Buchsbaum.
+
 ## 0.4.16 - 2026-11-25
 
 ### Added

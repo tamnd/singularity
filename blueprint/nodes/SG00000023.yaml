@@ -1,7 +1,7 @@
 tag: SG00000023
 kind: theorem
 title: A regular local ring is a unique factorization domain
-statement: A regular local ring is a unique factorization domain. In particular it is integrally closed. This is the theorem of Auslander and Buchsbaum.
+statement: A regular local ring is a unique factorization domain. In particular it is integrally closed. This is the theorem of Auslander-Buchsbaum.
 sources:
 - paper: Ser55
 - paper: Mat
