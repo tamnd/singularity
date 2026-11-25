@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Added
 
+- SG0000004T, the log-Jacobian order is the invariant omega of Cossart-Piltant for $Z^p + f$ over a perfect field. So omega does not depend on the coordinates, and it does not go up under a point blowup or under the blowup of a regular center with (H1) and (H2), in each dimension and without condition (E). It connects the routes R1 and R5, in #144.
 - SG0000004S, the end case of the log-Jacobian ideal: $\rho = 0$ if and only if the equation is of type 0 or of type 1, and then $z^p + g$ is a binomial equation after a change of the coordinates. It is the next step on route R1 for S7, in #142.
 
 ## 0.4.15 - 2026-11-25
