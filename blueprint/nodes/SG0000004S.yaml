@@ -12,4 +12,7 @@ tier: T2
 route:
 - R1
 - R5
-notes: This is Volume 7, Proposition 3.5.1 and Theorem 3.5.3 of the handbook. The proof holds for each number of variables. In Cossart's thesis the end case for a base of dimension 3 gives the form $t^p + x^a$ in the étale topology, after Giraud. The node SG0000001S gives the resolution of the binomial equations. The node does not say how to glue the local normal forms, and it does not say how to make $\rho$ go down.
+lean:
+  statement: Singularity.logJacobianOrder_eq_zero_iff
+  proof: Singularity.logJacobianOrder_eq_zero_iff
+notes: This is Volume 7, Proposition 3.5.1 and Theorem 3.5.3 of the handbook. The proof holds for each number of variables. In Cossart's thesis the end case for a base of dimension 3 gives the form $t^p + x^a$ in the étale topology, after Giraud. The node SG0000001S gives the resolution of the binomial equations. The Lean library proves the equivalence for polynomials (tamnd/singularity-lean#100). Only the direction to type 0 uses that $g$ is clean. The change of the coordinates over $K[[x]]$ is not in Lean. The node does not say how to glue the local normal forms, and it does not say how to make $\rho$ go down.
