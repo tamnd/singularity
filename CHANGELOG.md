@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.18 - 2026-11-25
+
 ### Changed
 
 - The note of SG0000000Z now says that part 4 of MacLane-Vaquié has a Lean proof for each valuation with nonzero support and any value group, and gives the weak form for each valuation (tamnd/singularity-lean#109).
