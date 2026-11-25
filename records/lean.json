@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "3d28b001269e31104a526f1da83783aa95943e59",
+  "commit": "569368b84c4b175edd42a0cae9f2536e3c5959fa",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "3d28b001269e31104a526f1da83783aa95943e59",
+ "commit": "569368b84c4b175edd42a0cae9f2536e3c5959fa",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -10806,6 +10806,17 @@
    "line": 433,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (h\u03c6 : Singularity.KeyPolynomial \u03bc \u03c6),\n  (\u2200 (f : Polynomial K), \u03bc f = 0 \u2194 f = 0) \u2192\n    \u2200 {f : Polynomial K}, (Singularity.augmentedValuation \u03bc \u03c6 0 h\u03c6 \u22ef) f = 0 \u2194 \u03c6 \u2223 f"
   },
+  "Singularity.bijective_algebraMap_residueField_of_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 105,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u0393\u2080 : Type u_3}\n  {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393]\n  (v\u2080 : Valuation (\u21a5\u22a4) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v],\n  Function.Bijective\n    \u21d1(algebraMap (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring))"
+  },
   "Singularity.blowupDivisor": {
    "axioms": [
     "Quot.sound",
@@ -12022,6 +12033,17 @@
    "kind": "theorem",
    "line": 131,
    "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [inst_3 : ExpChar K p] [inst_4 : IsPurelyInseparable K L] (V : ValuationSubring K),\n  (Singularity.purelyInseparableExtension p V).comap (algebraMap K L) = V"
+  },
+  "Singularity.comap_valuationSubring_eq_of_hasExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 44,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {\u0393\u2080 : Type u_3} {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  [inst_4 : LinearOrderedCommGroupWithZero \u0393] (v\u2080 : Valuation (\u21a5K\u2080) \u0393\u2080) (v : Valuation K \u0393) [v\u2080.HasExtension v],\n  v.valuationSubring.comap (algebraMap (\u21a5K\u2080) K) = v\u2080.valuationSubring"
   },
   "Singularity.completeFamily": {
    "axioms": [
@@ -13618,6 +13640,17 @@
    "line": 69,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (\u03bd : Valuation (Polynomial K) (WithZero (Multiplicative \u2124)))\n  (c d : WithZero (Multiplicative \u2124)), c \u2260 0 \u2192 (Set.Icc c d \u2229 Set.range \u21d1\u03bd).Finite"
   },
+  "Singularity.finrank_residueField_eq_of_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 117,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u0393\u2080 : Type u_3}\n  {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393]\n  (v\u2080 : Valuation (\u21a5\u22a4) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v],\n  Algebra.IsSeparable (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) \u2227\n    Module.finrank (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) =\n      Module.finrank (\u21a5\u22a4) K"
+  },
   "Singularity.genericPoint_mem_of_nonempty": {
    "axioms": [
     "Classical.choice",
@@ -13662,6 +13695,17 @@
    "line": 438,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192\n    Singularity.HasLocalUniformization k (V.comap (algebraMap (\u21a5K\u2080) K)) \u2192 Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_finrank_residueField_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 51,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {\u0393\u2080 : Type u_3} {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  [inst_4 : LinearOrderedCommGroupWithZero \u0393] (v\u2080 : Valuation (\u21a5K\u2080) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v]\n  [FiniteDimensional (\u21a5K\u2080) K]\n  [Algebra.IsSeparable (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring)],\n  Module.finrank (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) =\n      Module.finrank (\u21a5K\u2080) K \u2192\n    Singularity.HasLocalUniformization k v\u2080.valuationSubring \u2192 Singularity.HasLocalUniformization k v.valuationSubring"
+  },
   "Singularity.hasLocalUniformization_of_isMonomialValuation": {
    "axioms": [
     "Classical.choice",
@@ -13684,6 +13728,17 @@
    "line": 483,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {\u03ba : Type u_4} [Fintype \u03ba] {V : ValuationSubring K} {y : \u03ba \u2192 K} {x : \u03b9 \u2192 K},\n  (\u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 V) \u2192\n    Singularity.IsMonomialValuation (\u21a5(IntermediateField.adjoin k (Set.range y))) V x \u2192\n      Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_isMonomialValuation_of_finrank_residueField_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 84,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {\u0393\u2080 : Type u_3} {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  [inst_4 : LinearOrderedCommGroupWithZero \u0393] (v\u2080 : Valuation (\u21a5K\u2080) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v]\n  [FiniteDimensional (\u21a5K\u2080) K]\n  [Algebra.IsSeparable (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring)],\n  Module.finrank (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) =\n      Module.finrank (\u21a5K\u2080) K \u2192\n    \u2200 [inst_8 : Algebra k \u21a5v\u2080.valuationSubring] [IsScalarTower k \u21a5v\u2080.valuationSubring \u21a5K\u2080] {\u03b9 : Type u_5}\n      [inst_10 : Fintype \u03b9] {x : \u03b9 \u2192 \u21a5K\u2080},\n      Singularity.IsMonomialValuation k v\u2080.valuationSubring x \u2192 Singularity.HasLocalUniformization k v.valuationSubring"
+  },
   "Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice": {
    "axioms": [
     "Classical.choice",
@@ -13705,6 +13760,17 @@
    "kind": "theorem",
    "line": 481,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 (\u03c6 : V.ValueGroup \u2192*\u2080 NNReal), StrictMono \u21d1\u03c6 \u2192 Singularity.HasLocalUniformization k V"
+  },
+  "Singularity.hasLocalUniformization_of_monomial_of_finrank_residueField_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialFiniteExtension.lean",
+   "kind": "theorem",
+   "line": 65,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {\u0393\u2080 : Type u_3} {\u0393 : Type u_4} [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  [inst_4 : LinearOrderedCommGroupWithZero \u0393] (v\u2080 : Valuation (\u21a5K\u2080) \u0393\u2080) (v : Valuation K \u0393) [inst_5 : v\u2080.HasExtension v]\n  [FiniteDimensional (\u21a5K\u2080) K]\n  [Algebra.IsSeparable (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring)],\n  Module.finrank (IsLocalRing.ResidueField \u21a5v\u2080.valuationSubring) (IsLocalRing.ResidueField \u21a5v.valuationSubring) =\n      Module.finrank (\u21a5K\u2080) K \u2192\n    \u2200 {\u03ba : Type u_5} {\u03b9 : Type u_6} [Fintype \u03ba] [inst_9 : Fintype \u03b9] {y : \u03ba \u2192 \u21a5K\u2080} {x : \u03b9 \u2192 \u21a5K\u2080},\n      (\u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 v\u2080.valuationSubring) \u2192\n        Singularity.IsMonomialValuation (\u21a5(IntermediateField.adjoin k (Set.range y))) v\u2080.valuationSubring x \u2192\n          Singularity.HasLocalUniformization k v.valuationSubring"
   },
   "Singularity.hasLocalUniformization_of_trdeg_le_one": {
    "axioms": [
