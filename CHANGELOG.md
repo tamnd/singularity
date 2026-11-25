@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.30 - 2026-11-26
+
 ### Added
 
 - SG00000054, an example over $\mathbb{F}_3$ in three variables for the milestone S7.13. The old point is in the first case with $p \mid |r| + d$, $\rho$ stays, and the new point is in the second case. So the hypothesis of SG00000052 on $|r| + d$ is necessary.
