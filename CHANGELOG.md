@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000004X, the points where the log-Jacobian order stays lie in a directrix, the analogue for $\rho$ of SG0000003B, for the milestone S7.8 (#164).
+
 ## 0.4.19 - 2026-11-25
 
 ### Changed
