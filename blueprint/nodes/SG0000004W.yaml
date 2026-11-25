@@ -1,0 +1,14 @@
+tag: SG0000004W
+kind: definition
+title: Alterations
+statement: An alteration is a proper dominant morphism $f \colon X' \to X$ of integral schemes that is finite over a nonempty open subset of $X$. The identity and a composite of alterations are alterations, and a proper morphism that is an isomorphism over a nonempty open subset is an alteration. A resolution of an integral scheme is an alteration.
+sources:
+- paper: dJ96
+uses:
+- SG00000002
+lean:
+  statement: Singularity.IsAlteration
+tier: T7
+route:
+- R6
+notes: This is the definition of [dJ96, 2.20], except that the Lean definition does not ask for a Noetherian target. The Lean file is Singularity/Alteration of tamnd/singularity-lean#104, with Singularity.IsAlteration.id, Singularity.IsAlteration.comp, Singularity.IsAlteration.of_isIso_restrict and Singularity.IsResolution.isAlteration. The bridge Singularity.regularAlterationInDim_of_resolutionInDim says that resolution in dimension n gives regular alterations in dimension n.
