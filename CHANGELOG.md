@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.21 - 2026-11-25
+
 ### Changed
 
 - The records now pin the Lean library at 70659f8, with the finite chain criterion of MacLane-Vaquié.
