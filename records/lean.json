@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "07c64a4ca2e1d2068e7b901dcbe75f6473c06e7f",
+  "commit": "656c128db39816038a7dcddf2b713aa32d76262c",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "07c64a4ca2e1d2068e7b901dcbe75f6473c06e7f",
+ "commit": "656c128db39816038a7dcddf2b713aa32d76262c",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -7569,6 +7569,17 @@
    "line": 102,
    "type": "(k : Type u_1) \u2192 {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 Prop"
   },
+  "Singularity.HasLocalUniformization.of_intermediateField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 250,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  {F : IntermediateField k K},\n  F.FG \u2192 (\u2200 c \u2208 F, c \u2208 V) \u2192 Singularity.HasLocalUniformization (\u21a5F) V \u2192 Singularity.HasLocalUniformization k V"
+  },
   "Singularity.HasNormalCrossings": {
    "axioms": [
     "Classical.choice",
@@ -7601,6 +7612,17 @@
    "kind": "def",
    "line": 97,
    "type": "(k : Type u_1) \u2192\n  {K : Type u_2} \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 Set K \u2192 Prop"
+  },
+  "Singularity.HasRegularCenter.of_intermediateField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 166,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  {F : IntermediateField k K},\n  F.FG \u2192\n    (\u2200 c \u2208 F, c \u2208 V) \u2192 \u2200 {s : Finset K}, Singularity.HasRegularCenter (\u21a5F) V \u2191s \u2192 Singularity.HasRegularCenter k V \u2191s"
   },
   "Singularity.IntegralResolutionInDim": {
    "axioms": [
@@ -7965,6 +7987,39 @@
    "line": 121,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 IntermediateField.adjoin k (Set.range x) = \u22a4"
   },
+  "Singularity.IsMonomialValuation.adjoin_residue_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 532,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_4}\n  {y : \u03ba \u2192 K} {x : \u03b9 \u2192 K} (hyV : \u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 V),\n  Singularity.IsMonomialValuation (\u21a5(IntermediateField.adjoin k (Set.range y))) V x \u2192\n    IntermediateField.adjoin k (Set.range fun i => (IsLocalRing.residue \u21a5V) \u27e8y i, \u22ef\u27e9) = \u22a4"
+  },
+  "Singularity.IsMonomialValuation.algebraMap_residueField_bijective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 433,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 Function.Bijective \u21d1(algebraMap k (IsLocalRing.ResidueField \u21a5V))"
+  },
+  "Singularity.IsMonomialValuation.existsUnique_valuation_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 398,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 (\u03b3 : V.ValueGroup\u02e3), \u2203! a, V.valuation (Singularity.laurentMonomial x a) = \u2191\u03b3"
+  },
   "Singularity.IsMonomialValuation.independent": {
    "axioms": [
     "Classical.choice",
@@ -7987,6 +8042,17 @@
    "line": 575,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 Singularity.IsAbhyankarValuation k V"
   },
+  "Singularity.IsMonomialValuation.isAbhyankarValuation_adjoin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 497,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_4}\n  [Fintype \u03ba] {y : \u03ba \u2192 K} {x : \u03b9 \u2192 K},\n  AlgebraicIndependent k y \u2192\n    (\u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 V) \u2192\n      Singularity.IsMonomialValuation (\u21a5(IntermediateField.adjoin k (Set.range y))) V x \u2192\n        Singularity.IsAbhyankarValuation k V"
+  },
   "Singularity.IsMonomialValuation.ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -7997,6 +8063,61 @@
    "kind": "theorem",
    "line": 120,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 \u2200 (i : \u03b9), x i \u2260 0"
+  },
+  "Singularity.IsMonomialValuation.residueFieldEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "def",
+   "line": 472,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192\n          {\u03b9 : Type u_3} \u2192\n            [inst_3 : Fintype \u03b9] \u2192\n              {V : ValuationSubring K} \u2192\n                [inst_4 : Algebra k \u21a5V] \u2192\n                  [IsScalarTower k (\u21a5V) K] \u2192\n                    {x : \u03b9 \u2192 K} \u2192 Singularity.IsMonomialValuation k V x \u2192 k \u2243\u2090[k] IsLocalRing.ResidueField \u21a5V"
+  },
+  "Singularity.IsMonomialValuation.valueGroupBasis": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "def",
+   "line": 418,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192\n          {\u03b9 : Type u_3} \u2192\n            [inst_3 : Fintype \u03b9] \u2192\n              {V : ValuationSubring K} \u2192\n                [inst_4 : Algebra k \u21a5V] \u2192\n                  [IsScalarTower k (\u21a5V) K] \u2192\n                    [DecidableEq \u03b9] \u2192\n                      {x : \u03b9 \u2192 K} \u2192 Singularity.IsMonomialValuation k V x \u2192 Module.Basis \u03b9 \u2124 (Additive V.ValueGroup\u02e3)"
+  },
+  "Singularity.IsMonomialValuation.valueGroupBasis_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 423,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [inst_5 : IsScalarTower k (\u21a5V) K]\n  [inst_6 : DecidableEq \u03b9] {x : \u03b9 \u2192 K} (hV : Singularity.IsMonomialValuation k V x) (i : \u03b9),\n  hV.valueGroupBasis i = Additive.ofMul (Units.mk0 (V.valuation (x i)) \u22ef)"
+  },
+  "Singularity.IsMonomialValuation.valueGroupEquiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "def",
+   "line": 413,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192\n          {\u03b9 : Type u_3} \u2192\n            [inst_3 : Fintype \u03b9] \u2192\n              {V : ValuationSubring K} \u2192\n                [inst_4 : Algebra k \u21a5V] \u2192\n                  [IsScalarTower k (\u21a5V) K] \u2192\n                    {x : \u03b9 \u2192 K} \u2192 Singularity.IsMonomialValuation k V x \u2192 (\u03b9 \u2192 \u2124) \u2243+ Additive V.ValueGroup\u02e3"
+  },
+  "Singularity.IsMonomialValuation.valueHom_bijective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 377,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K}\n  (hV : Singularity.IsMonomialValuation k V x), Function.Bijective \u21d1(Singularity.MonomialValuation.valueHom \u22ef)"
   },
   "Singularity.IsMuIrreducible": {
    "axioms": [
@@ -8949,6 +9070,17 @@
    "line": 137,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.MacLaneVaquieStep \u03bd \u03bc \u03bc' \u2192\n    (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n      (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc' (Polynomial.C c)) \u2227 \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc' f"
   },
+  "Singularity.MonomialValuation.exists_eq_mul_one_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 331,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {z : K},\n      z \u2260 0 \u2192\n        \u2203 c a F G,\n          c \u2260 0 \u2227\n            V.valuation F < 1 \u2227\n              V.valuation G < 1 \u2227 z * (1 + G) = (algebraMap k K) c * Singularity.laurentMonomial x a * (1 + F)"
+  },
   "Singularity.MonomialValuation.exists_exponents": {
    "axioms": [
     "Classical.choice",
@@ -8970,6 +9102,17 @@
    "kind": "theorem",
    "line": 146,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {y : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), y i \u2260 0) \u2192\n    (\u2200 (a : \u03b9 \u2192 \u2124), V.valuation (Singularity.laurentMonomial y a) = 1 \u2192 a = 0) \u2192\n      \u2200 {f : MvPolynomial \u03b9 k},\n        f \u2260 0 \u2192\n          \u2203 c \u03b1 D F,\n            c \u2260 0 \u2227\n              (MvPolynomial.aeval y) f = (algebraMap k K) c * Singularity.laurentMonomial y \u03b1 * (1 + F) \u2227\n                (\u2200 a \u2208 D, V.valuation (Singularity.laurentMonomial y a) < 1) \u2227\n                  (\u2200 (S : Subalgebra k K), (\u2200 a \u2208 D, Singularity.laurentMonomial y a \u2208 S) \u2192 F \u2208 S) \u2227 V.valuation F < 1"
+  },
+  "Singularity.MonomialValuation.exists_valuation_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 363,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {z : K}, z \u2260 0 \u2192 \u2203 a, V.valuation z = V.valuation (Singularity.laurentMonomial x a)"
   },
   "Singularity.MonomialValuation.hasRegularCenter_of_basis": {
    "axioms": [
@@ -10005,6 +10148,17 @@
    "line": 121,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {g : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix g \u2192\n    \u2200 (c : k), (MvPolynomial.aeval fun i => MvPolynomial.X i + MvPolynomial.C (c * v i)) g = g"
   },
+  "Singularity.aeval_residue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 258,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] {V : ValuationSubring K} [inst_2 : Algebra k \u21a5V]\n  {\u03ba : Type u_3} (y : \u03ba \u2192 \u21a5V) (p : MvPolynomial \u03ba k),\n  (IsLocalRing.residue \u21a5V) ((MvPolynomial.aeval y) p) = (MvPolynomial.aeval fun i => (IsLocalRing.residue \u21a5V) (y i)) p"
+  },
   "Singularity.aeval_translate_eq": {
    "axioms": [
     "Classical.choice",
@@ -10025,6 +10179,28 @@
    "kind": "theorem",
    "line": 199,
    "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (\u03c3 : Gal(L/K)) (n : \u2115)\n  (x : L), (\u03c3.toLinearMap ^ n) x = (\u03c3 ^ n) x"
+  },
+  "Singularity.algebraicIndependent_of_residue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 266,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_3} {y : \u03ba \u2192 \u21a5V},\n  (AlgebraicIndependent k fun i => (IsLocalRing.residue \u21a5V) (y i)) \u2192 AlgebraicIndependent k fun i => \u2191(y i)"
+  },
+  "Singularity.algebraicIndependent_residue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 298,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_3} {y : \u03ba \u2192 K},\n  AlgebraicIndependent k y \u2192\n    \u2200 (hyV : \u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 V),\n      AlgebraicIndependent k fun i => (IsLocalRing.residue \u21a5V) \u27e8y i, \u22ef\u27e9"
   },
   "Singularity.algebraicIndependent_sumElim_of_hasExtension": {
    "axioms": [
@@ -10804,6 +10980,39 @@
    "line": 197,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] (S : Finset \u03c3)\n  (j : \u03c3) (t : \u03c3 \u2192 k) (r : \u03c3 \u2192\u2080 \u2115),\n  (Singularity.centerRest S j t) ((MvPolynomial.monomial r) 1) =\n    (MvPolynomial.monomial (Singularity.centerExponent S j t r)) 1 * Singularity.centerChartUnit S j t r"
   },
+  "Singularity.centerSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "def",
+   "line": 45,
+   "type": "{K : Type u_2} \u2192 [inst : Field K] \u2192 ValuationSubring K \u2192 Subring K \u2192 Subring K"
+  },
+  "Singularity.centerSubring_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} {R S : Subring K},\n  S \u2264 Singularity.centerSubring V R \u2192 Singularity.centerSubring V S \u2264 Singularity.centerSubring V R"
+  },
+  "Singularity.centerSubring_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} {R S : Subring K},\n  R \u2264 S \u2192 Singularity.centerSubring V R \u2264 Singularity.centerSubring V S"
+  },
   "Singularity.centerUnit": {
    "axioms": [
     "Classical.choice",
@@ -11175,6 +11384,17 @@
    "kind": "theorem",
    "line": 124,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {q : \u2115} {F : MvPolynomial \u03c3 k},\n  Singularity.IsClean q F \u2192 Singularity.cleanPart q F = F"
+  },
+  "Singularity.coe_aeval": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 262,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_3} (y : \u03ba \u2192 \u21a5V) (p : MvPolynomial \u03ba k),\n  \u2191((MvPolynomial.aeval y) p) = (MvPolynomial.aeval fun i => \u2191(y i)) p"
   },
   "Singularity.coe_weightedHomogeneousComponent": {
    "axioms": [
@@ -13090,6 +13310,17 @@
    "line": 556,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_isMonomialValuation_adjoin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 483,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {\u03b9 : Type u_3}\n  [inst_3 : Fintype \u03b9] {\u03ba : Type u_4} [Fintype \u03ba] {V : ValuationSubring K} {y : \u03ba \u2192 K} {x : \u03b9 \u2192 K},\n  (\u2200 c \u2208 IntermediateField.adjoin k (Set.range y), c \u2208 V) \u2192\n    Singularity.IsMonomialValuation (\u21a5(IntermediateField.adjoin k (Set.range y))) V x \u2192\n      Singularity.HasLocalUniformization k V"
+  },
   "Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice": {
    "axioms": [
     "Classical.choice",
@@ -13464,6 +13695,17 @@
    "line": 30,
    "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.IntegralResolutionInDim p n"
   },
+  "Singularity.inv_mem_centerSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 76,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} {R : Subring K} {z : K},\n  z \u2208 Singularity.centerSubring V R \u2192 V.valuation z = 1 \u2192 z\u207b\u00b9 \u2208 Singularity.centerSubring V R"
+  },
   "Singularity.irreducible_X_pow_sub_C_iff": {
    "axioms": [
     "Classical.choice",
@@ -13694,6 +13936,17 @@
    "kind": "theorem",
    "line": 90,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V), (Singularity.valuationCenter V A h).IsPrime"
+  },
+  "Singularity.isRegularLocalRing_localization_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 101,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  (A : Subalgebra k K) (h : \u2200 (a : \u21a5A), \u2191a \u2208 V),\n  IsRegularLocalRing (Localization.AtPrime (Singularity.valuationCenter V A h)) \u2194\n    IsRegularLocalRing \u21a5(Singularity.centerSubring V A.toSubring)"
   },
   "Singularity.isRegularLocalRing_of_isField": {
    "axioms": [
@@ -14178,6 +14431,17 @@
    "kind": "theorem",
    "line": 552,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {\u03b3 : \u0393\u2080},\n  \u03c6.Monic \u2192\n    0 < \u03c6.natDegree \u2192\n      \u2200 (f : Polynomial K) (j : \u2115),\n        \u03bc (Singularity.expansionCoeff \u03c6 f j) * \u03b3 ^ j \u2264 Singularity.augmentedValuationFun \u03bc \u03c6 \u03b3 f"
+  },
+  "Singularity.le_centerSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} (R : Subring K), R \u2264 Singularity.centerSubring V R"
   },
   "Singularity.le_degree_of_mem_support": {
    "axioms": [
@@ -15532,6 +15796,17 @@
    "line": 196,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k]\n  {\u0394 S : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {i : \u03c3},\n  i \u2208 Singularity.centerDivisor \u0394 S j t \u2194 i = j \u2228 i \u2208 \u0394 \u2227 i \u2260 j \u2227 (i \u2209 S \u2228 t i = 0)"
   },
+  "Singularity.mem_centerSubring": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {K : Type u_2} [inst : Field K] {V : ValuationSubring K} {R : Subring K} {z : K},\n  z \u2208 Singularity.centerSubring V R \u2194 \u2203 a \u2208 R, \u2203 c \u2208 R, V.valuation c = 1 \u2227 z * c = a"
+  },
   "Singularity.mem_directrix_iff": {
    "axioms": [
     "Classical.choice",
@@ -15575,6 +15850,17 @@
    "kind": "theorem",
    "line": 121,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R},\n  f \u2208 MvPolynomial.idealOfVars \u03c3 R \u2194 MvPolynomial.constantCoeff f = 0"
+  },
+  "Singularity.mem_of_mem_adjoin_residue": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 274,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {\u03ba : Type u_3} {y : \u03ba \u2192 \u21a5V},\n  (AlgebraicIndependent k fun i => (IsLocalRing.residue \u21a5V) (y i)) \u2192\n    \u2200 {c : K}, c \u2208 IntermediateField.adjoin k (Set.range fun i => \u2191(y i)) \u2192 c \u2208 V"
   },
   "Singularity.mem_of_mem_support_of_degree_le": {
    "axioms": [
@@ -18315,6 +18601,28 @@
    "line": 189,
    "type": "{Z Z' : AlgebraicGeometry.Scheme} \u2192 Z.IdealSheafData \u2192 (Z' \u27f6 Z) \u2192 Z.Opens \u2192 Z'.IdealSheafData"
   },
+  "Singularity.subfieldAlgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "def",
+   "line": 156,
+   "type": "{k : Type u_1} \u2192\n  {K : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [inst_1 : Field K] \u2192\n        [inst_2 : Algebra k K] \u2192\n          (V : ValuationSubring K) \u2192 (F : IntermediateField k K) \u2192 (\u2200 c \u2208 F, c \u2208 V) \u2192 Algebra \u21a5F \u21a5V"
+  },
+  "Singularity.subfieldAlgebra_isScalarTower": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 160,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  (F : IntermediateField k K) (hFV : \u2200 c \u2208 F, c \u2208 V), IsScalarTower (\u21a5F) (\u21a5V) K"
+  },
   "Singularity.subset_convexHull_add_orthant": {
    "axioms": [
     "Classical.choice",
@@ -18567,6 +18875,17 @@
    "kind": "theorem",
    "line": 55,
    "type": "\u2200 {\u0393\u2080 : Type u_2} [inst : LinearOrderedCommGroupWithZero \u0393\u2080] {R : Type u_3} [inst_1 : Ring R] (v : Valuation R \u0393\u2080)\n  {x y : R}, v x \u2260 v (x + y) \u2192 v y = max (v x) (v (x + y))"
+  },
+  "Singularity.valuation_eq_one_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MonomialGroundField.lean",
+   "kind": "theorem",
+   "line": 149,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  {F : IntermediateField k K}, (\u2200 c \u2208 F, c \u2208 V) \u2192 \u2200 {c : K}, c \u2208 F \u2192 c \u2260 0 \u2192 V.valuation c = 1"
   },
   "Singularity.valuation_sum_mul_le": {
    "axioms": [
