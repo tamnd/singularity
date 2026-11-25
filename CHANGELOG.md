@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records are pinned at tamnd/singularity-lean acb8b07, the merge commit of tamnd/singularity-lean#130, with 1921 declarations.
+- SG00000052 has the Lean statement and proof `Singularity.idealOrd_logJacobianTangent_cleanPart_of_caseA`, and SG00000053 has `Singularity.logJacobianDirectrixCodim_le_cleanPart_of_ne_zero`. Their notes give the other Lean names.
+
 ## 0.4.28 - 2026-11-26
 
 ### Added
