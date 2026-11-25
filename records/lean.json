@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "01471ae3941de69a3be01d4dcfc437f32b4d6d55",
+  "commit": "d17dcd2b9ccf6750c8969c96fcd25dcbbceeca0a",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-25",
- "commit": "01471ae3941de69a3be01d4dcfc437f32b4d6d55",
+ "commit": "d17dcd2b9ccf6750c8969c96fcd25dcbbceeca0a",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -4899,6 +4899,17 @@
    "line": 225,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03b9 : Type u_3} [inst_2 : LinearOrder \u03b9] {F : Singularity.ContinuousFamily \u03bc \u03b9}\n  [NoMaxOrder \u03b9] {f : Polynomial K}, \u00acF.IsStable f \u2194 \u2200 (i j : \u03b9), i < j \u2192 (F.val j) f < (F.val i) f"
   },
+  "Singularity.ContinuousFamily.not_isStable_of_map_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 440,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03b9 : Type u_2} [inst_2 : LinearOrder \u03b9] [NoMaxOrder \u03b9]\n  {F : Singularity.ContinuousFamily \u03bc \u03b9},\n  (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2192\n    (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2192\n      \u03bc \u2260 \u03bd \u2192 \u2200 {P : Polynomial K}, P \u2260 0 \u2192 \u03bd P = 0 \u2192 \u00acF.IsStable P"
+  },
   "Singularity.ContinuousFamily.stableValue": {
    "axioms": [
     "Classical.choice",
@@ -7921,6 +7932,61 @@
    "line": 75,
    "type": "(k : Type u_1) \u2192 (K : Type u_2) \u2192 [inst : Field k] \u2192 [inst_1 : Field K] \u2192 [Algebra k K] \u2192 Prop"
   },
+  "Singularity.IsInseparableStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "def",
+   "line": 311,
+   "type": "{K : Type u_1} \u2192\n  {L : Type u_2} \u2192\n    [inst : Field K] \u2192\n      [inst_1 : Field L] \u2192\n        [inst_2 : Algebra K L] \u2192 \u2115 \u2192 ValuationSubring L \u2192 IntermediateField K L \u2192 IntermediateField K L \u2192 L \u2192 Prop"
+  },
+  "Singularity.IsMonomialValuation": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "inductive",
+   "line": 112,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u03b9 : Type u_2} \u2192\n      [Fintype \u03b9] \u2192 (k : Type u_3) \u2192 [inst_2 : Field k] \u2192 [Algebra k K] \u2192 ValuationSubring K \u2192 (\u03b9 \u2192 K) \u2192 Prop"
+  },
+  "Singularity.IsMonomialValuation.adjoin_eq_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 117,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 IntermediateField.adjoin k (Set.range x) = \u22a4"
+  },
+  "Singularity.IsMonomialValuation.independent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 \u2200 (a : \u03b9 \u2192 \u2124), V.valuation (Singularity.laurentMonomial x a) = 1 \u2192 a = 0"
+  },
+  "Singularity.IsMonomialValuation.ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 116,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192 \u2200 (i : \u03b9), x i \u2260 0"
+  },
   "Singularity.IsMuIrreducible": {
    "axioms": [
     "Classical.choice",
@@ -8471,6 +8537,105 @@
    "line": 162,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K}, Singularity.KeyPolynomial \u03bc \u03c6 \u2192 \u00acSingularity.MuDvd \u03bc \u03c6 1"
   },
+  "Singularity.LatticeLemma.IsGoodCone": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "def",
+   "line": 48,
+   "type": "{\u03b9 : Type u_1} \u2192 [Fintype \u03b9] \u2192 [DecidableEq \u03b9] \u2192 (\u03b9 \u2192 \u211d) \u2192 Finset (\u03b9 \u2192 \u2124) \u2192 Matrix \u03b9 \u03b9 \u2124 \u2192 Prop"
+  },
+  "Singularity.LatticeLemma.cast_det": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] (C : Matrix \u03b9 \u03b9 \u2124), \u2191C.det = (C.map Int.cast).det"
+  },
+  "Singularity.LatticeLemma.cast_mulVec": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] (C : Matrix \u03b9 \u03b9 \u2124) (v : \u03b9 \u2192 \u2124),\n  ((C.map Int.cast).mulVec fun i => \u2191(v i)) = fun j => \u2191(C.mulVec v j)"
+  },
+  "Singularity.LatticeLemma.cast_vecMul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 54,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] (a : \u03b9 \u2192 \u2124) (C : Matrix \u03b9 \u03b9 \u2124),\n  Matrix.vecMul (fun i => \u2191(a i)) (C.map Int.cast) = fun j => \u2191(Matrix.vecMul a C j)"
+  },
+  "Singularity.LatticeLemma.coord_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 72,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 {C : Matrix \u03b9 \u03b9 \u2124}, C.det \u2260 0 \u2192 \u2200 {\u03bc : \u03b9 \u2192 \u211d}, (C.map Int.cast).mulVec \u03bc = \u03b3 \u2192 \u2200 (l : \u03b9), \u03bc l \u2260 0"
+  },
+  "Singularity.LatticeLemma.exists_basis_of_isGoodCone": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 257,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d} {E : Finset (\u03b9 \u2192 \u2124)} {C : Matrix \u03b9 \u03b9 \u2124},\n  Singularity.LatticeLemma.IsGoodCone \u03b3 E C \u2192\n    C.det.natAbs = 1 \u2192\n      \u2203 B, B * C = 1 \u2227 C * B = 1 \u2227 (\u2200 (l : \u03b9), 0 < \u2211 i, \u2191(B l i) * \u03b3 i) \u2227 \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l"
+  },
+  "Singularity.LatticeLemma.exists_isGoodCone": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 281,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (i : \u03b9), 0 < \u03b3 i) \u2192\n    (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n      \u2200 (E : Finset (\u03b9 \u2192 \u2124)), (\u2200 a \u2208 E, 0 \u2264 \u2211 i, \u2191(a i) * \u03b3 i) \u2192 \u2203 C, Singularity.LatticeLemma.IsGoodCone \u03b3 E C"
+  },
+  "Singularity.LatticeLemma.exists_isGoodCone_natAbs_det_eq_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 242,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 {E : Finset (\u03b9 \u2192 \u2124)} (m : \u2115) (C : Matrix \u03b9 \u03b9 \u2124),\n      C.det.natAbs = m \u2192\n        Singularity.LatticeLemma.IsGoodCone \u03b3 E C \u2192 \u2203 C', Singularity.LatticeLemma.IsGoodCone \u03b3 E C' \u2227 C'.det.natAbs = 1"
+  },
+  "Singularity.LatticeLemma.exists_isGoodCone_natAbs_det_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b3 : \u03b9 \u2192 \u211d},\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 {E : Finset (\u03b9 \u2192 \u2124)} {C : Matrix \u03b9 \u03b9 \u2124},\n      Singularity.LatticeLemma.IsGoodCone \u03b3 E C \u2192\n        1 < C.det.natAbs \u2192 \u2203 C', Singularity.LatticeLemma.IsGoodCone \u03b3 E C' \u2227 C'.det.natAbs < C.det.natAbs"
+  },
   "Singularity.LocalUniformizationFour": {
    "axioms": [
     "Classical.choice",
@@ -8503,6 +8668,105 @@
    "kind": "def",
    "line": 159,
    "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type u_2} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Prop"
+  },
+  "Singularity.MacLaneVaquieStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "inductive",
+   "line": 124,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        Valuation (Polynomial K) \u0393\u2080 \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Prop"
+  },
+  "Singularity.MacLaneVaquieStep.macLaneBelow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 137,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.MacLaneVaquieStep \u03bd \u03bc \u03bc' \u2192\n    (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n      (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc' (Polynomial.C c)) \u2227 \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc' f"
+  },
+  "Singularity.MonomialValuation.exists_exponents": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {z : K},\n      z \u2208 V \u2192\n        \u2203 E,\n          (\u2200 a \u2208 E, V.valuation (Singularity.laurentMonomial x a) \u2264 1) \u2227\n            \u2200 (S : Subalgebra k K),\n              (\u2200 a \u2208 E, Singularity.laurentMonomial x a \u2208 S) \u2192 \u2203 f g, f \u2208 S \u2227 g \u2208 S \u2227 V.valuation g = 1 \u2227 z * g = f"
+  },
+  "Singularity.MonomialValuation.exists_leadingTerm": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 142,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {y : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), y i \u2260 0) \u2192\n    (\u2200 (a : \u03b9 \u2192 \u2124), V.valuation (Singularity.laurentMonomial y a) = 1 \u2192 a = 0) \u2192\n      \u2200 {f : MvPolynomial \u03b9 k},\n        f \u2260 0 \u2192\n          \u2203 c \u03b1 D F,\n            c \u2260 0 \u2227\n              (MvPolynomial.aeval y) f = (algebraMap k K) c * Singularity.laurentMonomial y \u03b1 * (1 + F) \u2227\n                (\u2200 a \u2208 D, V.valuation (Singularity.laurentMonomial y a) < 1) \u2227\n                  (\u2200 (S : Subalgebra k K), (\u2200 a \u2208 D, Singularity.laurentMonomial y a \u2208 S) \u2192 F \u2208 S) \u2227 V.valuation F < 1"
+  },
+  "Singularity.MonomialValuation.hasRegularCenter_of_basis": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 270,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K]\n  [inst_6 : DecidableEq \u03b9] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 {B C : Matrix \u03b9 \u03b9 \u2124},\n      B * C = 1 \u2192\n        C * B = 1 \u2192\n          (\u2200 (l : \u03b9), V.valuation (Singularity.laurentMonomial x (B l)) < 1) \u2192\n            \u2200 (s : Finset K),\n              (\u2200 z \u2208 s, z \u2208 V) \u2192\n                (\u2200 z \u2208 s,\n                    \u2203 f g,\n                      f \u2208 Algebra.adjoin k (Set.range fun l => Singularity.laurentMonomial x (B l)) \u2227\n                        g \u2208 Algebra.adjoin k (Set.range fun l => Singularity.laurentMonomial x (B l)) \u2227\n                          V.valuation g = 1 \u2227 z * g = f) \u2192\n                  Singularity.HasRegularCenter k V \u2191s"
+  },
+  "Singularity.MonomialValuation.mem_subalgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 140,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [inst_4 : IsScalarTower k (\u21a5V) K] {z : K},\n  z \u2208 Singularity.MonomialValuation.subalgebra k V \u2194 z \u2208 V"
+  },
+  "Singularity.MonomialValuation.subalgebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "def",
+   "line": 133,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    (k : Type u_3) \u2192\n      [inst_1 : Field k] \u2192\n        [inst_2 : Algebra k K] \u2192\n          (V : ValuationSubring K) \u2192 [inst_3 : Algebra k \u21a5V] \u2192 [IsScalarTower k (\u21a5V) K] \u2192 Subalgebra k K"
+  },
+  "Singularity.MonomialValuation.valuation_algebraMap_eq_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 128,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {c : k}, c \u2260 0 \u2192 V.valuation ((algebraMap k K) c) = 1"
+  },
+  "Singularity.MonomialValuation.valuation_algebraMap_le_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 124,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {k : Type u_3} [inst_1 : Field k] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] (c : k), V.valuation ((algebraMap k K) c) \u2264 1"
   },
   "Singularity.MuDvd": {
    "axioms": [
@@ -9120,6 +9384,39 @@
    "line": 215,
    "type": "\u2200 {R : Type u_1} [inst : CommRing R] (p : \u2115) [ExpChar R p] (I : Ideal R) (g h : R) (e : \u2115),\n  Polynomial.X ^ p ^ e + Polynomial.C g \u2208\n      (Ideal.span {Polynomial.X - Polynomial.C h} \u2294 Ideal.map Polynomial.C I) ^ p ^ e \u2194\n    g + h ^ p ^ e \u2208 I ^ p ^ e"
   },
+  "Singularity.X_pow_add_C_pow_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 434,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] (a : R),\n  Polynomial.X ^ p + Polynomial.C (a ^ p) = (Polynomial.X + Polynomial.C a) ^ p"
+  },
+  "Singularity.X_pow_add_C_tfae": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 471,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [IsDomain R] [CharP R p] [IsIntegrallyClosed R]\n  (g : R),\n  [IsReduced (Polynomial R \u29f8 Ideal.span {Polynomial.X ^ p + Polynomial.C g}),\n      IsDomain (Polynomial R \u29f8 Ideal.span {Polynomial.X ^ p + Polynomial.C g}),\n      Irreducible (Polynomial.X ^ p + Polynomial.C g), \u2200 (a : R), a ^ p \u2260 g].TFAE"
+  },
+  "Singularity.X_pow_add_C_tfae_threefold": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 500,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] (k : Type u_2) [inst : Field k] [CharP k p] (g : MvPolynomial (Fin 3) k),\n  [IsReduced (Polynomial (MvPolynomial (Fin 3) k) \u29f8 Ideal.span {Polynomial.X ^ p + Polynomial.C g}),\n      IsDomain (Polynomial (MvPolynomial (Fin 3) k) \u29f8 Ideal.span {Polynomial.X ^ p + Polynomial.C g}),\n      Irreducible (Polynomial.X ^ p + Polynomial.C g), \u2200 (a : MvPolynomial (Fin 3) k), a ^ p \u2260 g].TFAE"
+  },
   "Singularity.ZariskiRiemann": {
    "axioms": [
     "Classical.choice",
@@ -9428,6 +9725,16 @@
    "line": 260,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommRing R] (b : Option \u03c3 \u2192 R) (f : MvPolynomial (Option \u03c3) R),\n  (MvPolynomial.aeval fun o => MvPolynomial.X o + MvPolynomial.C (b o)) f =\n    (Singularity.zShift (MvPolynomial.C (b none))) ((Singularity.xTranslate fun l => b (some l)) f)"
   },
+  "Singularity.algEquiv_toLinearMap_pow_apply": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 199,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (\u03c3 : Gal(L/K)) (n : \u2115)\n  (x : L), (\u03c3.toLinearMap ^ n) x = (\u03c3 ^ n) x"
+  },
   "Singularity.algebraicIndependent_sumElim_of_hasExtension": {
    "axioms": [
     "Classical.choice",
@@ -9482,6 +9789,16 @@
    "kind": "theorem",
    "line": 70,
    "type": "\u2200 {X X' : AlgebraicGeometry.Scheme} [inst : IrreducibleSpace \u21a5X'] [inst_1 : IrreducibleSpace \u21a5X] (f : X' \u27f6 X)\n  [AlgebraicGeometry.IsDominant f], f (genericPoint \u21a5X') = genericPoint \u21a5X"
+  },
+  "Singularity.artinSchreier_integral": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 298,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {R : Type u_3} [inst : CommRing R] (\u03b8 a g : R),\n  \u03b8 ^ p - \u03b8 = a \u2192 (g * \u03b8) ^ p - g ^ (p - 1) * (g * \u03b8) - g ^ p * a = 0"
   },
   "Singularity.augmentedValuation": {
    "axioms": [
@@ -10075,6 +10392,39 @@
    "line": 645,
    "type": "(Singularity.centerChart {0, 1} 0 0) (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 1 ^ 3) =\n  MvPolynomial.X 0 ^ 2 * (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 0 * MvPolynomial.X 1 ^ 3)"
   },
+  "Singularity.centerExample_cpOmega": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 259,
+   "type": "Singularity.cpOmega {2} (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 1 ^ 3) = 2"
+  },
+  "Singularity.centerExample_cpOmega_cleanPart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 267,
+   "type": "Singularity.cpOmega (Singularity.centerDivisor {2} {0, 1} 0 0)\n    (Singularity.cleanPart 2 (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 0 * MvPolynomial.X 1 ^ 3)) =\n  3"
+  },
+  "Singularity.centerExample_cpOmega_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 279,
+   "type": "Singularity.cpOmega {2} (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 1 ^ 3) <\n  Singularity.cpOmega (Singularity.centerDivisor {2} {0, 1} 0 0)\n    (Singularity.cleanPart 2 (MvPolynomial.X 1 ^ 2 * MvPolynomial.X 2 + MvPolynomial.X 0 * MvPolynomial.X 1 ^ 3))"
+  },
   "Singularity.centerExample_hyp": {
    "axioms": [
     "Classical.choice",
@@ -10612,6 +10962,17 @@
    "line": 107,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (q : \u2115) (F : MvPolynomial \u03c3 k) (d : \u03c3 \u2192\u2080 \u2115),\n  (Singularity.cleanPart q F).coeff d = if \u2200 (i : \u03c3), q \u2223 d i then 0 else F.coeff d"
   },
+  "Singularity.coeff_divisorExponent": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 138,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  g.coeff (Singularity.divisorExponent \u0394 g) = MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g)"
+  },
   "Singularity.coeff_eq_zero_of_lt_ord": {
    "axioms": [
     "Classical.choice",
@@ -10854,6 +11215,138 @@
    "line": 77,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommRing R] (m : \u2115) (a : \u2115 \u2192 MvPolynomial \u03c3 R) (e : Option \u03c3 \u2192\u2080 \u2115),\n  (Singularity.zMonic m a).coeff e =\n    if e none < m then (a (e none)).coeff e.some else if e none = m then (AddMonoidAlgebra.coeff 1) e.some else 0"
   },
+  "Singularity.comap_purelyInseparableExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [inst_3 : ExpChar K p] [inst_4 : IsPurelyInseparable K L] (V : ValuationSubring K),\n  (Singularity.purelyInseparableExtension p V).comap (algebraMap K L) = V"
+  },
+  "Singularity.completeFamily": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "def",
+   "line": 207,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        {\u03bd w : Valuation (Polynomial K) \u0393\u2080} \u2192\n          {\u03c6 : Polynomial K} \u2192\n            (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n              \u03c6.Monic \u2192\n                \u03bd \u03c6 < w \u03c6 \u2192\n                  (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f) \u2192\n                    Singularity.ContinuousFamily w (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
+  },
+  "Singularity.completeFamily_isStable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 277,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f} {\u03c8 : Polynomial K},\n  \u03c8.Monic \u2192 \u03c8.natDegree = \u03c6.natDegree \u2192 (Singularity.completeFamily hle hm hlt hlow).IsStable \u03c8"
+  },
+  "Singularity.completeFamily_key": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 237,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f}\n  (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeFamily hle hm hlt hlow).key i = Singularity.completeKey i"
+  },
+  "Singularity.completeFamily_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 250,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f},\n  (\u2200 (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48) (f : Polynomial K),\n      \u03bd f \u2264\n        Singularity.augmentedValuationFun w ((Singularity.completeFamily hle hm hlt hlow).key i)\n          ((Singularity.completeFamily hle hm hlt hlow).value i) f) \u2227\n    \u2200 (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48) (a : Polynomial K),\n      a.degree < ((Singularity.completeFamily hle hm hlt hlow).key i).degree \u2192 \u03bd a = w a"
+  },
+  "Singularity.completeFamily_value": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 241,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} {hle : \u2200 (f : Polynomial K), \u03bd f \u2264 w f} {hm : \u03c6.Monic}\n  {hlt : \u03bd \u03c6 < w \u03c6} {hlow : \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f}\n  (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeFamily hle hm hlt hlow).value i = \u2191(OrderDual.ofDual i)"
+  },
+  "Singularity.completeKey": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "def",
+   "line": 198,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192\n      [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192\n        {\u03bd : Valuation (Polynomial K) \u0393\u2080} \u2192 {\u03c6 : Polynomial K} \u2192 (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48 \u2192 Polynomial K"
+  },
+  "Singularity.completeKey_spec": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  (Singularity.completeKey i).Monic \u2227\n    (Singularity.completeKey i).natDegree = \u03c6.natDegree \u2227 \u03bd (Singularity.completeKey i) = \u2191(OrderDual.ofDual i)"
+  },
+  "Singularity.completeValues": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "def",
+   "line": 168,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192\n    {\u0393\u2080 : Type uV} \u2192 [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] \u2192 Valuation (Polynomial K) \u0393\u2080 \u2192 Polynomial K \u2192 Set \u0393\u2080"
+  },
+  "Singularity.completeValues_noMaxOrder": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 265,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (\u03c8\u2080 : Polynomial K),\n      \u03c8\u2080.Monic \u2192 \u03c8\u2080.natDegree = \u03c6.natDegree \u2192 \u2203 \u03c8, \u03c8.Monic \u2227 \u03c8.natDegree = \u03c6.natDegree \u2227 \u03bd \u03c8 < \u03bd \u03c8\u2080) \u2192\n    NoMaxOrder (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
+  },
+  "Singularity.completeValues_nonempty": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 245,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K}, \u03c6.Monic \u2192 Nonempty (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48"
+  },
+  "Singularity.completeValues_spec": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 194,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K} (i : (\u2191(Singularity.completeValues \u03bd \u03c6))\u1d52\u1d48),\n  \u2203 \u03c8, \u03c8.Monic \u2227 \u03c8.natDegree = \u03c6.natDegree \u2227 \u03bd \u03c8 = \u2191(OrderDual.ofDual i)"
+  },
   "Singularity.constantCoeff_blowupUnit_ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -10908,6 +11401,17 @@
    "kind": "theorem",
    "line": 320,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {v : \u03c3 \u2192\u2080 \u2115},\n  v \u2260 0 \u2192 \u2200 (c : k), MvPowerSeries.constantCoeff ((MvPowerSeries.monomial v) c) = 0"
+  },
+  "Singularity.constantCoeff_smul_add_X_mul_pderiv": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 89,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (r : \u03c3 \u2192\u2080 \u2115) (i : \u03c3) (G : MvPolynomial \u03c3 k),\n  MvPolynomial.constantCoeff (\u2191(r i) \u2022 G + MvPolynomial.X i * (MvPolynomial.pderiv i) G) =\n    \u2191(r i) * MvPolynomial.constantCoeff G"
   },
   "Singularity.convexHull_add_orthant_add_orthant": {
    "axioms": [
@@ -11007,6 +11511,72 @@
    "kind": "theorem",
    "line": 140,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (f : Polynomial (MvPowerSeries \u03c3 k)),\n  Convex \u211d (Singularity.projPolyhedron f)"
+  },
+  "Singularity.cpOmega": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "def",
+   "line": 74,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
+  },
+  "Singularity.cpOmega_cleanPart_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [Fintype \u03c3] (p : \u2115)\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          Singularity.cpOmega (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') \u2264 Singularity.cpOmega \u0394 g"
+  },
+  "Singularity.cpOmega_cleanPart_le_center": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 232,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] (p : \u2115) [CharP k p]\n  {\u0394 S : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    j \u2208 S \u2192\n      g \u2208 Ideal.span (MvPolynomial.X '' \u2191S) ^ p \u2192\n        (Singularity.centerChart S j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {\u03c1 : \u2115},\n            Singularity.logJacobianOrder \u0394 g = \u2191\u03c1 \u2192\n              (\u2200 f \u2208 Singularity.logJacobian \u0394 g,\n                  \u2203 q \u2208 Ideal.span (MvPolynomial.X '' \u2191S) ^ \u03c1,\n                    f = (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 * q) \u2192\n                ((\u2200 f \u2208 Singularity.logJacobianCenter \u0394 S g,\n                      \u2203 q \u2208 Ideal.span (MvPolynomial.X '' \u2191S) ^ (\u03c1 + 1),\n                        f = (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 * q) \u2228\n                    \u2203 q,\n                      (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 * q \u2208\n                          Singularity.logJacobianCenter \u0394 S g \u2227\n                        Singularity.ord q = \u2191\u03c1) \u2192\n                  Singularity.cpOmega (Singularity.centerDivisor \u0394 S j t) (Singularity.cleanPart p g') \u2264\n                    Singularity.cpOmega \u0394 g"
+  },
+  "Singularity.cpOmega_eq_logJacobianOrder": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 169,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192 Singularity.IsClean p g \u2192 Singularity.cpOmega \u0394 g = Singularity.logJacobianOrder \u0394 g"
+  },
+  "Singularity.cpOmega_of_exists": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 84,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) \u2260 0) \u2192\n    Singularity.cpOmega \u0394 g = Singularity.ord (Singularity.residualFactor \u0394 g) - 1"
+  },
+  "Singularity.cpOmega_of_forall": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2200 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) = 0) \u2192\n    Singularity.cpOmega \u0394 g = Singularity.ord (Singularity.residualFactor \u0394 g)"
   },
   "Singularity.deJongAlteration": {
    "axioms": [
@@ -11239,6 +11809,17 @@
    "line": 269,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : Field k] {w : \u03c3 \u2192 \u2115} {D : \u2115} {h : MvPolynomial \u03c3 k},\n  MvPolynomial.IsWeightedHomogeneous w h D \u2192\n    \u2191D \u2260 0 \u2192 h = (\u2191D)\u207b\u00b9 \u2022 \u2211 i, \u2191(w i) \u2022 (MvPolynomial.X i * (MvPolynomial.pderiv i) h)"
   },
+  "Singularity.eq_of_map_eq_zero_of_degree_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 57,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {D : WithBot \u2115},\n  (\u2200 (f : Polynomial K), f.degree < D \u2192 w f = \u03bd f) \u2192 \u2200 {a : Polynomial K}, a \u2260 0 \u2192 a.degree < D \u2192 \u03bd a = 0 \u2192 w = \u03bd"
+  },
   "Singularity.eq_of_specializes_of_isDiscrete": {
    "axioms": [
     "Classical.choice",
@@ -11249,6 +11830,17 @@
    "kind": "theorem",
    "line": 82,
    "type": "\u2200 {T : Type u_1} [inst : TopologicalSpace T] {s : Set T}, IsDiscrete s \u2192 \u2200 {x y : T}, x \u2208 s \u2192 y \u2208 s \u2192 x \u2933 y \u2192 x = y"
+  },
+  "Singularity.eq_purelyInseparableExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 145,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [inst_3 : ExpChar K p] [inst_4 : IsPurelyInseparable K L] (V : ValuationSubring K) (W : ValuationSubring L),\n  W.comap (algebraMap K L) = V \u2192 W = Singularity.purelyInseparableExtension p V"
   },
   "Singularity.eq_sum_expansionCoeff": {
    "axioms": [
@@ -11426,6 +12018,17 @@
    "line": 128,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c d : \u0393\u2080), c \u2260 0 \u2192 (Set.Icc c d \u2229 Set.range \u21d1\u03bd).Finite) \u2192\n    \u2200 {\u03bc : \u2115 \u2192 Valuation (Polynomial K) \u0393\u2080},\n      (\u2200 (n : \u2115) (f : Polynomial K), (\u03bc (n + 1)) f \u2264 (\u03bc n) f) \u2192\n        (\u2200 (n : \u2115) (f : Polynomial K), \u03bd f < (\u03bc n) f \u2192 (\u03bc (n + 1)) f < (\u03bc n) f) \u2192\n          (\u2200 (n : \u2115) (f : Polynomial K), (\u03bc n) f \u2208 Set.range \u21d1\u03bd) \u2192\n            \u2200 (f : Polynomial K) {c : \u0393\u2080}, c \u2260 0 \u2192 \u03bd f \u2264 c \u2192 \u2203 N, \u2200 (n : \u2115), N \u2264 n \u2192 (\u03bc n) f \u2264 c"
   },
+  "Singularity.existsUnique_valuationSubring_comap_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 155,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115) [ExpChar K p]\n  [IsPurelyInseparable K L] (V : ValuationSubring K), \u2203! W, W.comap (algebraMap K L) = V"
+  },
   "Singularity.exists_add_pow_eq_cleanPart": {
    "axioms": [
     "Classical.choice",
@@ -11447,6 +12050,17 @@
    "kind": "theorem",
    "line": 109,
    "type": "\u2200 {Z : AlgebraicGeometry.Scheme} (z : \u21a5Z), \u2203 U, z \u2208 \u2191U"
+  },
+  "Singularity.exists_artinSchreier_generator": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 206,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [hp : Fact (Nat.Prime p)] [CharP K p] [FiniteDimensional K L] [IsGalois K L],\n  Module.finrank K L = p \u2192 \u2203 \u03b8, \u03b8 ^ p - \u03b8 \u2208 \u22a5 \u2227 K\u27ee\u03b8\u27ef = \u22a4 \u2227 \u2203 \u03c3, \u03c3 \u03b8 = \u03b8 + 1"
   },
   "Singularity.exists_centerChart_X_eq_X_mul": {
    "axioms": [
@@ -11514,6 +12128,28 @@
    "line": 185,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (w : \u03c3 \u2192 \u2115) {f : MvPolynomial \u03c3 R},\n  f \u2260 0 \u2192 \u2203 d, f.coeff d \u2260 0 \u2227 Singularity.weightedOrd w f = \u2191((Finsupp.weight w) d)"
   },
+  "Singularity.exists_constantCoeff_pderiv_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 191,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.logJacobianOrder \u0394 g = 0 \u2192\n    Singularity.ord (Singularity.residualFactor \u0394 g) = 1 \u2192\n      \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0"
+  },
+  "Singularity.exists_constantCoeff_pderiv_ne_zero_of_constantCoeff_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 180,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.logJacobianOrder \u0394 g = 0 \u2192\n    MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) = 0 \u2192\n      \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0"
+  },
   "Singularity.exists_eq_augmentedValuationFun": {
    "axioms": [
     "Classical.choice",
@@ -11568,6 +12204,17 @@
    "kind": "theorem",
    "line": 388,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] (p : \u2115) [CharP k p] [inst_2 : Fintype \u03c3] {h : MvPolynomial \u03c3 k},\n  \u00acSingularity.IsResonant p h.support \u2192 \u2203 w, h = \u2211 i, w i \u2022 (MvPolynomial.X i * (MvPolynomial.pderiv i) h)"
+  },
+  "Singularity.exists_inseparableStep_model": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 405,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K]\n  [inst_2 : Algebra k K] (V : ValuationSubring K) [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K],\n  Singularity.HasLocalUniformization k V \u2192\n    \u2200 {c : K},\n      (\u2200 (b : K), b ^ p \u2260 c) \u2192\n        \u2203 x,\n          (x = c \u2228 x = c\u207b\u00b9) \u2227\n            x \u2208 V \u2227\n              (\u2200 (b : K), b ^ p \u2260 x) \u2227\n                Irreducible (Polynomial.X ^ p - Polynomial.C x) \u2227 Singularity.HasRegularCenter k V {x}"
   },
   "Singularity.exists_isRegularSystemOfParameters": {
    "axioms": [
@@ -11657,6 +12304,28 @@
    "line": 486,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    (\u2200 (c d : \u0393\u2080), c \u2260 0 \u2192 (Set.Icc c d \u2229 Set.range \u21d1\u03bd).Finite) \u2192\n      \u2200 {F : Polynomial K},\n        F \u2260 0 \u2192\n          \u03bd F = 0 \u2192\n            \u2200 {c : \u0393\u2080},\n              c \u2260 0 \u2192\n                (\u2200 (n : \u2115),\n                    Singularity.macLaneChain v \u03bd n \u2260 \u03bd \u2192\n                      \u03bd (Singularity.macLaneChainKey v \u03bd n) \u2260 0 \u2192 c \u2264 \u03bd (Singularity.macLaneChainKey v \u03bd n)) \u2192\n                  \u2203 n, Singularity.macLaneChain v \u03bd n = \u03bd"
   },
+  "Singularity.exists_macLaneVaquieStep_or_forall_isStable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 305,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n      w \u2260 \u03bd \u2192\n        \u2203 d,\n          (\u2200 (f : Polynomial K), f.natDegree < d \u2192 w f = \u03bd f) \u2227\n            (\u2203 \u03c6, \u03c6.Monic \u2227 \u03c6.natDegree = d \u2227 \u03bd \u03c6 < w \u03c6) \u2227\n              ((\u2203 w', Singularity.MacLaneVaquieStep \u03bd w w' \u2227 \u2200 (f : Polynomial K), f.natDegree \u2264 d \u2192 w' f = \u03bd f) \u2228\n                \u2203 \u03b9 x,\n                  \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                    \u2203 F,\n                      (\u2200 (i : \u03b9) (f : Polynomial K),\n                          \u03bd f \u2264 Singularity.augmentedValuationFun w (F.key i) (F.value i) f) \u2227\n                        (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = w a) \u2227\n                          \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f)"
+  },
+  "Singularity.exists_macLaneVaquie_seq_or_forall_isStable": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 371,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      (\u2203 w,\n          w 0 = w\u2080 \u2227\n            (\u2200 (n : \u2115), Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (w n) (w (n + 1))) \u2227\n              \u2200 (n : \u2115) (f : Polynomial K), f.natDegree \u2264 n \u2192 (w n) f = \u03bd f) \u2228\n        \u2203 \u03bc,\n          Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bc \u2227\n            \u03bc \u2260 \u03bd \u2227\n              \u2203 \u03b9 x,\n                \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                  \u2203 F,\n                    (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2227\n                      (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2227\n                        \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f"
+  },
   "Singularity.exists_mem_ord_eq_idealOrd": {
    "axioms": [
     "Classical.choice",
@@ -11690,6 +12359,17 @@
    "line": 157,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n      \u03bc \u2260 \u03bd \u2192 \u2203 \u03c6, \u03c6.Monic \u2227 \u03bd \u03c6 < \u03bc \u03c6 \u2227 \u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f"
   },
+  "Singularity.exists_not_dvd_divisorExponent_of_constantCoeff_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 144,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) \u2260 0 \u2192 \u2203 i \u2208 \u0394, \u00acp \u2223 (Singularity.divisorExponent \u0394 g) i"
+  },
   "Singularity.exists_ord_data": {
    "axioms": [
     "Classical.choice",
@@ -11700,6 +12380,17 @@
    "kind": "theorem",
    "line": 532,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {F : MvPolynomial \u03c3 k},\n  F \u2260 0 \u2192\n    \u2203 \u03b1 d,\n      F.coeff \u03b1 \u2260 0 \u2227\n        Singularity.ord F = \u2191(Finsupp.degree \u03b1) \u2227\n          Singularity.ord (F.divMonomial (Singularity.divisorExponent \u0394 F)) = \u2191d \u2227\n            Finsupp.degree \u03b1 = Finsupp.degree (Singularity.divisorExponent \u0394 F) + d"
+  },
+  "Singularity.exists_pderiv_initialForm_ne_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 147,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n    ((\u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) \u2260 0) \u2194\n      \u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent d) (Singularity.residualFactor \u0394 g)) \u2260 0)"
   },
   "Singularity.exists_pointChart_X_eq_X_mul": {
    "axioms": [
@@ -11722,6 +12413,39 @@
    "kind": "theorem",
    "line": 101,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {t : \u03c3 \u2192 k} {m : \u2115}\n  {f : MvPolynomial \u03c3 k}, \u2191m \u2264 Singularity.ord f \u2192 \u2203 f', (Singularity.pointChart j t) f = MvPolynomial.X j ^ m * f'"
+  },
+  "Singularity.exists_pow_mem_range": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115) [ExpChar K p]\n  [IsPurelyInseparable K L] (b : L), \u2203 n y, (algebraMap K L) y = b ^ p ^ n"
+  },
+  "Singularity.exists_purelyInseparable_tower": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 375,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [hp : Fact (Nat.Prime p)] [CharP K p] [FiniteDimensional K L] [IsPurelyInseparable K L] (V : ValuationSubring K),\n  \u2203 W,\n    W.comap (algebraMap K L) = V \u2227\n      (\u2200 (W' : ValuationSubring L), W'.comap (algebraMap K L) = V \u2192 W' = W) \u2227\n        \u2203 r E \u03b8,\n          E 0 = \u22a5 \u2227\n            E r = \u22a4 \u2227\n              Module.finrank K L = p ^ r \u2227\n                \u2200 i < r,\n                  E (i + 1) = E i \u2294 K\u27ee\u03b8 i\u27ef \u2227 \u03b8 i \u2209 E i \u2227 \u03b8 i ^ p \u2208 E i \u2227 (E i).relfinrank (E (i + 1)) = p \u2227 \u03b8 i \u2208 W"
+  },
+  "Singularity.exists_purelyInseparable_tower_from": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 315,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [hp : Fact (Nat.Prime p)] [CharP K p] [FiniteDimensional K L] [IsPurelyInseparable K L] (W : ValuationSubring L)\n  (M : IntermediateField K L),\n  \u2203 r E \u03b8, E 0 = M \u2227 E r = \u22a4 \u2227 \u2200 i < r, Singularity.IsInseparableStep p W (E i) (E (i + 1)) (\u03b8 i)"
   },
   "Singularity.exists_torus_isCriticalPoint_iff": {
    "axioms": [
@@ -12064,6 +12788,28 @@
    "line": 50,
    "type": "\u2200 {k K : Type u} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] (V : ValuationSubring K)\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] [Algebra.EssFiniteType k \u21a5V], Singularity.HasLocalUniformization k V"
   },
+  "Singularity.hasLocalUniformization_of_isMonomialValuation_of_lattice": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 451,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K]\n  [inst_6 : DecidableEq \u03b9] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    (\u2200 (E : Finset (\u03b9 \u2192 \u2124)),\n        (\u2200 a \u2208 E, V.valuation (Singularity.laurentMonomial x a) \u2264 1) \u2192\n          \u2203 B C,\n            B * C = 1 \u2227\n              C * B = 1 \u2227\n                (\u2200 (l : \u03b9), V.valuation (Singularity.laurentMonomial x (B l)) < 1) \u2227\n                  \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l) \u2192\n      Singularity.HasLocalUniformization k V"
+  },
+  "Singularity.hasLocalUniformization_of_isMonomialValuation_of_rankOne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 477,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {k : Type u_3} [inst_2 : Field k]\n  [inst_3 : Algebra k K] {V : ValuationSubring K} [inst_4 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {x : \u03b9 \u2192 K},\n  Singularity.IsMonomialValuation k V x \u2192\n    \u2200 (\u03c6 : V.ValueGroup \u2192*\u2080 NNReal), StrictMono \u21d1\u03c6 \u2192 Singularity.HasLocalUniformization k V"
+  },
   "Singularity.hasLocalUniformization_of_trdeg_le_one": {
    "axioms": [
     "Classical.choice",
@@ -12162,6 +12908,17 @@
    "kind": "theorem",
    "line": 281,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {i j : \u03c3},\n  i \u2260 j \u2192\n    \u2200 (t : \u03c3 \u2192 k) (n : \u2115) (P : MvPolynomial \u03c3 k),\n      (Singularity.hasse i n) ((Singularity.pointChart j t) P) =\n        MvPolynomial.X j ^ n * (Singularity.pointChart j t) ((Singularity.hasse i n) P)"
+  },
+  "Singularity.homogeneousComponent_monomial_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 104,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (r : \u03c3 \u2192\u2080 \u2115) (m : \u2115) (G : MvPolynomial \u03c3 k),\n  (MvPolynomial.homogeneousComponent (Finsupp.degree r + m)) ((MvPolynomial.monomial r) 1 * G) =\n    (MvPolynomial.monomial r) 1 * (MvPolynomial.homogeneousComponent m) G"
   },
   "Singularity.homogeneousComponent_zMonic": {
    "axioms": [
@@ -12262,6 +13019,17 @@
    "line": 277,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] [Nontrivial R] (I : Ideal (MvPolynomial \u03c3 R))\n  (n : \u2115), Singularity.idealOrd (I ^ n) = n \u2022 Singularity.idealOrd I"
   },
+  "Singularity.idealOrd_residualLogJacobian_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 96,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (\u0394 : Finset \u03c3) (r : \u03c3 \u2192\u2080 \u2115) (G : MvPolynomial \u03c3 k),\n  Singularity.idealOrd (Singularity.residualLogJacobian \u0394 r G) = 0 \u2194\n    (\u2203 i \u2208 \u0394, \u2191(r i) * MvPolynomial.constantCoeff G \u2260 0) \u2228\n      \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) G) \u2260 0"
+  },
   "Singularity.idealOrd_residualLogJacobian_lt_iff": {
    "axioms": [
     "Classical.choice",
@@ -12272,6 +13040,17 @@
    "kind": "theorem",
    "line": 297,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} (r : \u03c3 \u2192\u2080 \u2115) {G : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.ord G = \u2191d \u2192\n    (Singularity.idealOrd (Singularity.residualLogJacobian \u0394 r G) < \u2191d \u2194\n      \u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent d) G) \u2260 0)"
+  },
+  "Singularity.idealOrd_span_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 74,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {S : Set (MvPolynomial \u03c3 k)},\n  Singularity.idealOrd (Ideal.span S) = 0 \u2194 \u2203 s \u2208 S, MvPolynomial.constantCoeff s \u2260 0"
   },
   "Singularity.idealOrd_span_singleton": {
    "axioms": [
@@ -12382,6 +13161,28 @@
    "kind": "theorem",
    "line": 30,
    "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.IntegralResolutionInDim p n"
+  },
+  "Singularity.irreducible_X_pow_sub_C_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 70,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (p : \u2115) [hp : Fact (Nat.Prime p)] [CharP K p] (a : K),\n  Irreducible (Polynomial.X ^ p - Polynomial.C a) \u2194 \u2200 (b : K), b ^ p \u2260 a"
+  },
+  "Singularity.irreducible_map_X_pow_add_C": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 455,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [IsDomain R] [CharP R p] [IsIntegrallyClosed R]\n  {g : R},\n  (\u2200 (a : R), a ^ p \u2260 g) \u2192\n    Irreducible (Polynomial.map (algebraMap R (FractionRing R)) (Polynomial.X ^ p + Polynomial.C g))"
   },
   "Singularity.isClean_cleanPart": {
    "axioms": [
@@ -12812,6 +13613,17 @@
    "line": 180,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.MacLaneBelow \u03bd \u03bc \u2192 \u03bc \u2260 \u03bd \u2192 Singularity.KeyPolynomial \u03bc (Singularity.macLaneKey \u03bd \u03bc)"
   },
+  "Singularity.keyPolynomial_of_map_le_of_natDegree_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 176,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080} {\u03c6 : Polynomial K},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n    \u03c6.Monic \u2192\n      \u03bd \u03c6 < w \u03c6 \u2192\n        (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = w f) \u2192\n          \u2200 {\u03c8 : Polynomial K},\n            \u03c8.Monic \u2192\n              \u03c8.natDegree = \u03c6.natDegree \u2192\n                \u03bd \u03c8 \u2264 \u03bd \u03c6 \u2192\n                  w \u03c8 = w \u03c6 \u2227\n                    \u03bd \u03c8 < w \u03c8 \u2227 (\u2200 (f : Polynomial K), f.degree < \u03c8.degree \u2192 \u03bd f = w f) \u2227 Singularity.KeyPolynomial w \u03c8"
+  },
   "Singularity.keyPolynomial_of_map_lt": {
    "axioms": [
     "Classical.choice",
@@ -12910,6 +13722,127 @@
    "kind": "theorem",
    "line": 34,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
+  },
+  "Singularity.latticeLemma_real": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 428,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] (\u03b3 : \u03b9 \u2192 \u211d),\n  (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n    \u2200 (E : Finset (\u03b9 \u2192 \u2124)),\n      (\u2200 a \u2208 E, 0 \u2264 \u2211 i, \u2191(a i) * \u03b3 i) \u2192\n        \u2203 B C,\n          B * C = 1 \u2227 C * B = 1 \u2227 (\u2200 (l : \u03b9), 0 < \u2211 i, \u2191(B l i) * \u03b3 i) \u2227 \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l"
+  },
+  "Singularity.latticeLemma_real_of_pos": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LatticeLemma.lean",
+   "kind": "theorem",
+   "line": 417,
+   "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] (\u03b3 : \u03b9 \u2192 \u211d),\n  (\u2200 (i : \u03b9), 0 < \u03b3 i) \u2192\n    (\u2200 (a : \u03b9 \u2192 \u2124), \u2211 i, \u2191(a i) * \u03b3 i = 0 \u2192 a = 0) \u2192\n      \u2200 (E : Finset (\u03b9 \u2192 \u2124)),\n        (\u2200 a \u2208 E, 0 \u2264 \u2211 i, \u2191(a i) * \u03b3 i) \u2192\n          \u2203 B C,\n            B * C = 1 \u2227 C * B = 1 \u2227 (\u2200 (l : \u03b9), 0 < \u2211 i, \u2191(B l i) * \u03b3 i) \u2227 \u2200 a \u2208 E, \u2200 (l : \u03b9), 0 \u2264 Matrix.vecMul a C l"
+  },
+  "Singularity.laurentMonomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "def",
+   "line": 48,
+   "type": "{K : Type u_1} \u2192 [Field K] \u2192 {\u03b9 : Type u_2} \u2192 [Fintype \u03b9] \u2192 (\u03b9 \u2192 K) \u2192 (\u03b9 \u2192 \u2124) \u2192 K"
+  },
+  "Singularity.laurentMonomial_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (a b : \u03b9 \u2192 \u2124),\n      Singularity.laurentMonomial x (a + b) = Singularity.laurentMonomial x a * Singularity.laurentMonomial x b"
+  },
+  "Singularity.laurentMonomial_eq_units": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 56,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K} (hx : \u2200 (i : \u03b9), x i \u2260 0) (a : \u03b9 \u2192 \u2124),\n  Singularity.laurentMonomial x a = \u2191(\u220f i, Units.mk0 (x i) \u22ef ^ a i)"
+  },
+  "Singularity.laurentMonomial_natCast": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 76,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] (x : \u03b9 \u2192 K) (\u03b2 : \u03b9 \u2192\u2080 \u2115),\n  (Singularity.laurentMonomial x fun i => \u2191(\u03b2 i)) = \u220f i, x i ^ \u03b2 i"
+  },
+  "Singularity.laurentMonomial_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 60,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192 \u2200 (a : \u03b9 \u2192 \u2124), Singularity.laurentMonomial x a \u2260 0"
+  },
+  "Singularity.laurentMonomial_single": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 80,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] [inst_2 : DecidableEq \u03b9] (x : \u03b9 \u2192 K) (i : \u03b9),\n  Singularity.laurentMonomial x (Pi.single i 1) = x i"
+  },
+  "Singularity.laurentMonomial_sub": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 72,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (a b : \u03b9 \u2192 \u2124),\n      Singularity.laurentMonomial x (a - b) = Singularity.laurentMonomial x a / Singularity.laurentMonomial x b"
+  },
+  "Singularity.laurentMonomial_vecMul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] {x : \u03b9 \u2192 K},\n  (\u2200 (i : \u03b9), x i \u2260 0) \u2192\n    \u2200 (n : \u03b9 \u2192 \u2124) (B : Matrix \u03b9 \u03b9 \u2124),\n      Singularity.laurentMonomial x (Matrix.vecMul n B) =\n        Singularity.laurentMonomial (fun l => Singularity.laurentMonomial x (B l)) n"
+  },
+  "Singularity.laurentMonomial_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LocalUniformizationMonomial.lean",
+   "kind": "theorem",
+   "line": 64,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u03b9 : Type u_2} [inst_1 : Fintype \u03b9] (x : \u03b9 \u2192 K), Singularity.laurentMonomial x 0 = 1"
   },
   "Singularity.le_augmentedValuationFun": {
    "axioms": [
@@ -13428,6 +14361,72 @@
    "line": 486,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    Singularity.logJacobianOrder \u0394 g = Singularity.residualOrderAlong \u0394 p g \u2228\n      Singularity.logJacobianOrder \u0394 g + 1 = Singularity.residualOrderAlong \u0394 p g"
   },
+  "Singularity.logJacobianOrder_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 206,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    (Singularity.logJacobianOrder \u0394 g = 0 \u2194\n      (MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) \u2260 0 \u2227\n          \u2203 i \u2208 \u0394, \u00acp \u2223 (Singularity.divisorExponent \u0394 g) i) \u2228\n        MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) = 0 \u2227\n          \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0)"
+  },
+  "Singularity.logJacobianOrder_eq_zero_iff_exists": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 112,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.logJacobianOrder \u0394 g = 0 \u2194\n    (\u2203 i \u2208 \u0394,\n        \u2191((Singularity.divisorExponent \u0394 g) i) * MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) \u2260 0) \u2228\n      \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0"
+  },
+  "Singularity.logJacobianOrder_eq_zero_iff_ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 223,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    (Singularity.logJacobianOrder \u0394 g = 0 \u2194\n      (Singularity.ord (Singularity.residualFactor \u0394 g) = 0 \u2227 \u2203 i \u2208 \u0394, \u00acp \u2223 (Singularity.divisorExponent \u0394 g) i) \u2228\n        Singularity.ord (Singularity.residualFactor \u0394 g) = 1 \u2227\n          \u2203 j \u2209 \u0394, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0)"
+  },
+  "Singularity.logJacobianOrder_eq_zero_of_type_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 165,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {j : \u03c3},\n  j \u2209 \u0394 \u2192\n    MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) (Singularity.residualFactor \u0394 g)) \u2260 0 \u2192\n      Singularity.logJacobianOrder \u0394 g = 0"
+  },
+  "Singularity.logJacobianOrder_eq_zero_of_type_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 157,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) \u2260 0 \u2192\n    \u2200 {i : \u03c3}, i \u2208 \u0394 \u2192 \u00acp \u2223 (Singularity.divisorExponent \u0394 g) i \u2192 Singularity.logJacobianOrder \u0394 g = 0"
+  },
+  "Singularity.logJacobianOrder_eq_zero_type_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 170,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192\n    Singularity.ord (Singularity.residualFactor \u0394 g) = 0 \u2192\n      Singularity.logJacobianOrder \u0394 g = 0 \u2227\n        MvPolynomial.constantCoeff (Singularity.residualFactor \u0394 g) \u2260 0 \u2227\n          \u2203 i \u2208 \u0394, \u00acp \u2223 (Singularity.divisorExponent \u0394 g) i"
+  },
   "Singularity.logJacobianOrder_le": {
    "axioms": [
     "Classical.choice",
@@ -13471,6 +14470,17 @@
    "kind": "theorem",
    "line": 511,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k} {d : \u2115},\n  Singularity.ord (Singularity.residualFactor \u0394 g) = \u2191d \u2192\n    (Singularity.logJacobianOrder \u0394 g < \u2191d \u2194\n      \u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent d) (Singularity.residualFactor \u0394 g)) \u2260 0)"
+  },
+  "Singularity.logJacobianOrder_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3), Singularity.logJacobianOrder \u0394 0 = \u22a4"
   },
   "Singularity.logJacobianTangent": {
    "axioms": [
@@ -13636,6 +14646,17 @@
    "kind": "theorem",
    "line": 217,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc : Valuation (Polynomial K) \u0393\u2080},\n  Singularity.MacLaneBelow \u03bd \u03bc \u2192 Singularity.MacLaneBelow \u03bd (Singularity.macLaneStep \u03bd \u03bc)"
+  },
+  "Singularity.macLaneBelow_of_reflTransGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 153,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd \u03bc \u03bc' : Valuation (Polynomial K) \u0393\u2080},\n  Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) \u03bc \u03bc' \u2192\n    (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc (Polynomial.C c)) \u2192\n      (\u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc f) \u2192\n        (\u2200 (c : K), \u03bd (Polynomial.C c) = \u03bc' (Polynomial.C c)) \u2227 \u2200 (f : Polynomial K), \u03bd f \u2264 \u03bc' f"
   },
   "Singularity.macLaneChain": {
    "axioms": [
@@ -13978,6 +14999,17 @@
    "line": 496,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] (p : \u2115)\n  [CharP k p] {\u0394 S : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  j \u2208 S \u2192\n    (Singularity.centerChart S j t) g = MvPolynomial.X j ^ p * g' \u2192\n      Ideal.map (Singularity.centerChart S j t) (Singularity.logJacobianCenter \u0394 S g) \u2264\n        Ideal.span {MvPolynomial.X j ^ p} * Singularity.logJacobian (Singularity.centerDivisor \u0394 S j t) g'"
   },
+  "Singularity.map_eq_of_natDegree_le_of_forall_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (f : Polynomial K), \u03bd f \u2264 w f) \u2192\n    \u2200 {\u03c6 : Polynomial K},\n      \u03c6.Monic \u2192\n        0 < \u03c6.natDegree \u2192\n          (\u2200 (a : Polynomial K), a.degree < \u03c6.degree \u2192 w a = \u03bd a) \u2192\n            w \u03c6 = \u03bd \u03c6 \u2192\n              (\u2200 (\u03c8 : Polynomial K), \u03c8.Monic \u2192 \u03c8.natDegree = \u03c6.natDegree \u2192 \u03bd \u03c6 \u2264 \u03bd \u03c8) \u2192\n                \u2200 {f : Polynomial K}, f.natDegree \u2264 \u03c6.natDegree \u2192 w f = \u03bd f"
+  },
   "Singularity.map_ideal_le_stalkIdeal": {
    "axioms": [
     "Classical.choice",
@@ -14231,6 +15263,17 @@
    "line": 586,
    "type": "\u2200 {\u03c3 : Type u_1} [DecidableEq \u03c3] {S : Finset \u03c3} {n : \u2115} {a : \u03c3 \u2192\u2080 \u2115},\n  Finsupp.degree a = n \u2192 n \u2264 \u2211 i \u2208 S, a i \u2192 \u2200 i \u2208 a.support, i \u2208 S"
   },
+  "Singularity.mem_purelyInseparableExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [inst_3 : ExpChar K p] [inst_4 : IsPurelyInseparable K L] (V : ValuationSubring K) (b : L),\n  b \u2208 Singularity.purelyInseparableExtension p V \u2194 \u2203 n, \u2203 y \u2208 V, (algebraMap K L) y = b ^ p ^ n"
+  },
   "Singularity.mem_regularLocus_iff_of_isAffineOpen": {
    "axioms": [
     "Classical.choice",
@@ -14285,6 +15328,28 @@
    "kind": "theorem",
    "line": 457,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {q : \u2115} {P : MvPolynomial \u03c3 k} {\u03b2 : \u03c3 \u2192\u2080 \u2115},\n  \u03b2 \u2208 (Singularity.cleanPart q P).support \u2192 \u03b2 \u2208 P.support"
+  },
+  "Singularity.mem_valuationSubring_iff_of_comap_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115) [ExpChar K p]\n  (V : ValuationSubring K) (W : ValuationSubring L),\n  W.comap (algebraMap K L) = V \u2192 \u2200 {b : L} {n : \u2115} {y : K}, (algebraMap K L) y = b ^ p ^ n \u2192 (b \u2208 W \u2194 y \u2208 V)"
+  },
+  "Singularity.mem_valuationSubring_of_pow_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 419,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {K : Type u_2} [inst : Field K] {L : Type u_3} [inst_1 : Field L]\n  [inst_2 : Algebra K L] (V : ValuationSubring K) (W : ValuationSubring L),\n  W.comap (algebraMap K L) = V \u2192 \u2200 {x : K}, x \u2208 V \u2192 \u2200 {\u03b8 : L}, \u03b8 ^ p = (algebraMap K L) x \u2192 \u03b8 \u2208 W"
   },
   "Singularity.min_ord_le_ord_add": {
    "axioms": [
@@ -14703,6 +15768,28 @@
    "kind": "theorem",
    "line": 378,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    \u2200 {n : \u2115},\n      Singularity.macLaneChain v \u03bd (n + 1) \u2260 \u03bd \u2192\n        (Singularity.macLaneChainKey v \u03bd n).natDegree \u2264 (Singularity.macLaneChainKey v \u03bd (n + 1)).natDegree"
+  },
+  "Singularity.ne_pow_of_isReduced": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 438,
+   "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [IsDomain R] [CharP R p] (g : R),\n  IsReduced (Polynomial R \u29f8 Ideal.span {Polynomial.X ^ p + Polynomial.C g}) \u2192 \u2200 (a : R), a ^ p \u2260 g"
+  },
+  "Singularity.ne_zero_of_logJacobianOrder_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 141,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.logJacobianOrder \u0394 g \u2260 \u22a4 \u2192 g \u2260 0"
   },
   "Singularity.ne_zero_of_pointChart_eq_X_pow_mul": {
    "axioms": [
@@ -15210,6 +16297,17 @@
    "line": 106,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] (f : MvPolynomial \u03c3 R),\n  Singularity.ord f = \u2a05 d \u2208 f.support, \u2191(Finsupp.degree d)"
   },
+  "Singularity.ord_eq_one_of_constantCoeff_pderiv_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 120,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {G : MvPolynomial \u03c3 k},\n  MvPolynomial.constantCoeff G = 0 \u2192\n    \u2200 {j : \u03c3}, MvPolynomial.constantCoeff ((MvPolynomial.pderiv j) G) \u2260 0 \u2192 Singularity.ord G = 1"
+  },
   "Singularity.ord_eq_order_idealOfVars": {
    "axioms": [
     "Classical.choice",
@@ -15231,6 +16329,17 @@
    "kind": "theorem",
    "line": 88,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R}, Singularity.ord f = \u22a4 \u2194 f = 0"
+  },
+  "Singularity.ord_eq_zero_iff_constantCoeff_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {f : MvPolynomial \u03c3 k},\n  Singularity.ord f = 0 \u2194 MvPolynomial.constantCoeff f \u2260 0"
   },
   "Singularity.ord_killOutside": {
    "axioms": [
@@ -15496,6 +16605,17 @@
    "line": 468,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.ord (Singularity.residualFactor \u0394 g) \u2264 Singularity.logJacobianOrder \u0394 g + 1"
   },
+  "Singularity.ord_residualFactor_le_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianEndCase.lean",
+   "kind": "theorem",
+   "line": 200,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.logJacobianOrder \u0394 g = 0 \u2192 Singularity.ord (Singularity.residualFactor \u0394 g) \u2264 1"
+  },
   "Singularity.ord_zero": {
    "axioms": [
     "Classical.choice",
@@ -15649,6 +16769,17 @@
    "kind": "theorem",
    "line": 297,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [CharP k p] {a : \u03c3 \u2192\u2080 \u2115},\n  (\u2200 (i : \u03c3), p \u2223 a i) \u2192 \u2200 (c : k) (i : \u03c3), (MvPolynomial.pderiv i) ((MvPolynomial.monomial a) c) = 0"
+  },
+  "Singularity.pderiv_monomial_mul_of_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmega.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {r : \u03c3 \u2192\u2080 \u2115} {j : \u03c3},\n  r j = 0 \u2192\n    \u2200 (G : MvPolynomial \u03c3 k),\n      (MvPolynomial.pderiv j) ((MvPolynomial.monomial r) 1 * G) =\n        (MvPolynomial.monomial r) 1 * (MvPolynomial.pderiv j) G"
   },
   "Singularity.pderiv_none_purelyInseparable": {
    "axioms": [
@@ -16046,6 +17177,17 @@
    "line": 391,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 \u2115 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial (Option \u03c3) k"
   },
+  "Singularity.purelyInseparableExtension": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "def",
+   "line": 91,
+   "type": "{K : Type u_1} \u2192\n  {L : Type u_2} \u2192\n    [inst : Field K] \u2192\n      [inst_1 : Field L] \u2192\n        [inst_2 : Algebra K L] \u2192\n          (p : \u2115) \u2192 [ExpChar K p] \u2192 [IsPurelyInseparable K L] \u2192 ValuationSubring K \u2192 ValuationSubring L"
+  },
   "Singularity.purelyInseparableHypersurfaceResolution_four": {
    "axioms": [
     "Classical.choice",
@@ -16089,6 +17231,28 @@
    "kind": "theorem",
    "line": 358,
    "type": "\u2200 {K : Type u_1} {L : Type uL} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_2} {\u0393\u2081 : Type u\u0393}\n  [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081] (vK : Valuation K \u0393\u2080)\n  (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL],\n  Cardinal.lift.{uL, u\u0393}\n        (Module.rank \u2124\n          (Additive\n            \u21a5(Subgroup.map (QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup) (\u2191vL).valueGroup))) +\n      Cardinal.lift.{u\u0393, uL}\n        (Algebra.trdeg (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n          (IsLocalRing.ResidueField \u21a5vL.valuationSubring)) \u2264\n    Cardinal.lift.{u\u0393, uL} (Algebra.trdeg K L)"
+  },
+  "Singularity.reflTransGen_macLaneVaquieStep_of_map_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 477,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      \u2200 {F : Polynomial K}, F \u2260 0 \u2192 \u03bd F = 0 \u2192 Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bd"
+  },
+  "Singularity.reflTransGen_monomialValuation_of_map_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/MacLaneVaquie.lean",
+   "kind": "theorem",
+   "line": 502,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd : Valuation (Polynomial K) \u0393\u2080} {v : Valuation K \u0393\u2080},\n  (\u2200 (a : K), \u03bd (Polynomial.C a) = v a) \u2192\n    \u2200 {F : Polynomial K},\n      F \u2260 0 \u2192\n        \u03bd F = 0 \u2192\n          Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (Singularity.monomialValuation v (\u03bd Polynomial.X)) \u03bd"
   },
   "Singularity.regularAlterationInDim_of_deJongAlteration": {
    "axioms": [
@@ -16177,6 +17341,17 @@
    "kind": "theorem",
    "line": 81,
    "type": "\u2200 {k : Type u} [inst : Field k] [PerfectField k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.LocallyOfFiniteType f], IsOpen (Singularity.regularLocus X)"
+  },
+  "Singularity.relfinrank_sup_adjoin_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 167,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (p : \u2115)\n  [hp : Fact (Nat.Prime p)] [CharP K p] (M : IntermediateField K L) {\u03b8 : L},\n  \u03b8 \u2209 M \u2192 \u03b8 ^ p \u2208 M \u2192 M.relfinrank (M \u2294 K\u27ee\u03b8\u27ef) = p"
   },
   "Singularity.residualFactor": {
    "axioms": [
@@ -17046,6 +18221,17 @@
    "kind": "theorem",
    "line": 132,
    "type": "\u2200 (R : Type u_1) [inst : CommRing R] [inst_1 : IsDomain R] [IsRegularLocalRing R], ringKrullDim R \u2264 1 \u2192 ValuationRing R"
+  },
+  "Singularity.valuationSubring_pow_mem_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DegreePSteps.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {b : K} {n : \u2115}, n \u2260 0 \u2192 (b ^ n \u2208 V \u2194 b \u2208 V)"
   },
   "Singularity.valuation_eq_max_of_ne": {
    "axioms": [
