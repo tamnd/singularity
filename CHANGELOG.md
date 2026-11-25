@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.27 - 2026-11-26
+
 ### Changed
 
 - The records are pinned at tamnd/singularity-lean 2ab04e5, the merge commit of tamnd/singularity-lean#128, with 1917 declarations.
