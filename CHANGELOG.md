@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records are pinned at tamnd/singularity-lean b1c2ad8, the merge commit of tamnd/singularity-lean#132, with 1927 declarations.
+- SG00000054 has the Lean statement and proof `Singularity.caseAToCaseBExample_cases`. Its notes give the other Lean names.
+
 ## 0.4.30 - 2026-11-26
 
 ### Added
