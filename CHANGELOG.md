@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records now pin the Lean library at 8e6b1dc, with the lifting theorem along an étale generator.
 - SG0000004C, the lifting of local uniformization along an étale generator, has the Lean statement and proof Singularity.hasLocalUniformization_of_etaleGenerator of tamnd/singularity-lean#116. The existence of an étale generator is the new node SG0000004Y, with no Lean statement.
 
 ## 0.4.21 - 2026-11-25
