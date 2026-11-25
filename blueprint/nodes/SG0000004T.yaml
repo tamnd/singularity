@@ -13,4 +13,7 @@ tier: T2
 route:
 - R1
 - R5
-notes: This is Volume 7, Section 3.6 of the handbook. The invariant omega is Volume 6, Definition 3.2.5, after [CP19, Definition 2.68]. The independence of the coordinates is [CP19, Remark 2.69] in this case. [CP19, Theorem 3.13] gives the non-increase of the invariant iota under condition (E). The node SG0000004R gives a blowup in a regular center at which omega goes up from 2 to 3, and condition (E) fails there.
+lean:
+  statement: Singularity.cpOmega_eq_logJacobianOrder
+  proof: Singularity.cpOmega_eq_logJacobianOrder
+notes: This is Volume 7, Section 3.6 of the handbook. The invariant omega is Volume 6, Definition 3.2.5, after [CP19, Definition 2.68]. The independence of the coordinates is [CP19, Remark 2.69] in this case. [CP19, Theorem 3.13] gives the non-increase of the invariant iota under condition (E). The node SG0000004R gives a blowup in a regular center at which omega goes up from 2 to 3, and condition (E) fails there. The Lean library proves the equality for polynomials (tamnd/singularity-lean#107), and the non-increase under the blowups of SG0000003N and SG0000004Q follows (`Singularity.cpOmega_cleanPart_le`, `Singularity.cpOmega_cleanPart_le_center`). The independence of the coordinates is not in Lean.
