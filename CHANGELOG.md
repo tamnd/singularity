@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.26 - 2026-11-26
+
 ### Added
 
 - SG00000051, an example over $\mathbb{F}_2$ in five variables where the codimension of the directrix of the log-Jacobian order goes down from the first case to the first case, since $|r| + d$ is $0$ in the base field.
