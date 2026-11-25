@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000001R now has a note that says that the Lean name of the statement is planned, after the referee report on Volume 0 of the handbook.
+
 ### Added
 
 - SG0000004X, the points where the log-Jacobian order stays lie in a directrix, the analogue for $\rho$ of SG0000003B, for the milestone S7.8 (#164).
