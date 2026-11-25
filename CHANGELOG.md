@@ -6,6 +6,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records now come from tamnd/singularity-lean at d17dcd2, with 1688 declarations and no nonstandard axioms.
 - The note of SG0000004D now gives the Lean proof of local uniformization for monomial valuations of rank 1 (tamnd/singularity-lean#110).
 
 ## 0.4.18 - 2026-11-25
