@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.22 - 2026-11-25
+
 ### Added
 
 - SG0000004Z, the codimension of the directrix of the log-Jacobian order does not go down at a point where $\rho$ stays and the new point is in the second case, with the counterexample for $p = 2$ in the first case, for the milestone S7.9 (#173).
