@@ -1,0 +1,235 @@
+{
+ "spec": "e1-p3",
+ "cases": [
+  {
+   "p": 3,
+   "n": 3,
+   "q": 3,
+   "e": 1,
+   "walks": 1000000,
+   "depth": 12,
+   "degree": [
+    4,
+    9
+   ],
+   "terms": [
+    2,
+    6
+   ],
+   "divisor": "all",
+   "steps": 4716878,
+   "stops": {
+    "cap": 32741,
+    "depth": 258993,
+    "order-drops": 100873,
+    "residual-zero": 607393
+   },
+   "start_residual_order": [
+    {
+     "value": 0,
+     "count": 76955
+    },
+    {
+     "value": 1,
+     "count": 95231
+    },
+    {
+     "value": 2,
+     "count": 169576
+    },
+    {
+     "value": 3,
+     "count": 259624
+    },
+    {
+     "value": 4,
+     "count": 265510
+    },
+    {
+     "value": 5,
+     "count": 94910
+    },
+    {
+     "value": 6,
+     "count": 27309
+    },
+    {
+     "value": 7,
+     "count": 9580
+    },
+    {
+     "value": 8,
+     "count": 1288
+    },
+    {
+     "value": 9,
+     "count": 17
+    }
+   ],
+   "change": [
+    {
+     "value": -8,
+     "count": 742
+    },
+    {
+     "value": -7,
+     "count": 6162
+    },
+    {
+     "value": -6,
+     "count": 13108
+    },
+    {
+     "value": -5,
+     "count": 30370
+    },
+    {
+     "value": -4,
+     "count": 94031
+    },
+    {
+     "value": -3,
+     "count": 163299
+    },
+    {
+     "value": -2,
+     "count": 354586
+    },
+    {
+     "value": -1,
+     "count": 628755
+    },
+    {
+     "value": 0,
+     "count": 3424284
+    },
+    {
+     "value": 1,
+     "count": 1541
+    }
+   ],
+   "kangaroo": 1541,
+   "max_increase": 1,
+   "moh_bound": 1,
+   "moh_violations": 0,
+   "stability_violations": 0,
+   "max_terms": 128242,
+   "z_shift_steps": 0
+  },
+  {
+   "p": 3,
+   "n": 4,
+   "q": 3,
+   "e": 1,
+   "walks": 267000,
+   "depth": 12,
+   "degree": [
+    4,
+    9
+   ],
+   "terms": [
+    2,
+    6
+   ],
+   "divisor": "all",
+   "steps": 1322391,
+   "stops": {
+    "cap": 93545,
+    "depth": 36475,
+    "order-drops": 2577,
+    "residual-zero": 134403
+   },
+   "start_residual_order": [
+    {
+     "value": 0,
+     "count": 9662
+    },
+    {
+     "value": 1,
+     "count": 16484
+    },
+    {
+     "value": 2,
+     "count": 34880
+    },
+    {
+     "value": 3,
+     "count": 65950
+    },
+    {
+     "value": 4,
+     "count": 89835
+    },
+    {
+     "value": 5,
+     "count": 35191
+    },
+    {
+     "value": 6,
+     "count": 10906
+    },
+    {
+     "value": 7,
+     "count": 3539
+    },
+    {
+     "value": 8,
+     "count": 530
+    },
+    {
+     "value": 9,
+     "count": 23
+    }
+   ],
+   "change": [
+    {
+     "value": -8,
+     "count": 278
+    },
+    {
+     "value": -7,
+     "count": 1984
+    },
+    {
+     "value": -6,
+     "count": 3893
+    },
+    {
+     "value": -5,
+     "count": 10860
+    },
+    {
+     "value": -4,
+     "count": 29902
+    },
+    {
+     "value": -3,
+     "count": 47564
+    },
+    {
+     "value": -2,
+     "count": 109520
+    },
+    {
+     "value": -1,
+     "count": 163101
+    },
+    {
+     "value": 0,
+     "count": 954935
+    },
+    {
+     "value": 1,
+     "count": 354
+    }
+   ],
+   "kangaroo": 354,
+   "max_increase": 1,
+   "moh_bound": 1,
+   "moh_violations": 0,
+   "stability_violations": 0,
+   "max_terms": 132348,
+   "z_shift_steps": 0
+  }
+ ]
+}

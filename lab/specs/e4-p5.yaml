@@ -1,0 +1,12 @@
+name: e4-p5
+experiment: E4
+question: On the walks of e1-p5 with q = p = 5, do the Cossart-Piltant invariants omega and iota = (m, omega, kappa) go up under a point blowup, and does a jump of epsilon meet the condition of Theorem 3.13(1) of Cossart-Piltant, for n = 3 (dimension 3) and n = 4 (dimension 4)?
+tool: sing-lab
+node: SG00000014
+nodes: [SG00000013, SG00000014, SG00000015]
+inputs:
+  walks_from: e1-p5.yaml
+  select: [{ n: 3, q: 5 }, { n: 4, q: 5 }]
+  candidates: [cp-omega, cp-iota, cp-eps-jump, d-over-q]
+outputs: [histogram, candidates]
+notes: The run makes the walks of the cases n = 3 and n = 4 with q = p of e1-p5 again from the same seed. At each step it computes the invariants of Cossart and Piltant (arXiv:1412.0868, key CP19) for f = z^p + F with F clean. The multiplicity m is p on each step. ord F is p times delta (Def. 2.11). epsilon is ord F minus the sum of the divisor exponents (Def. 2.25), which is the residual order d. omega is epsilon - 1 when a term of the initial form of F has an exponent prime to p in a variable outside the divisor, and epsilon otherwise (Def. 2.68 with (2.44)). kappa is 1 when omega = 0 and at least 2 otherwise (Def. 2.68). The engine does not compute kappa in 2, 3, 4 (Def. 5.1) or the projection invariants. cp-omega fails when omega goes up, at each step. cp-iota fails when (m, omega, kappa) goes up in the lexicographic order. cp-eps-jump fails when epsilon goes up and epsilon(x) = omega(x) with delta(x) an integer does not hold. Both count only steps with omega(x) > 0, the scope of Theorem 3.13. d-over-q is the candidate of E2, for comparison. The engine does not check condition (E) of the paper (Def. 2.32), and it uses point centres and points over F_p only.

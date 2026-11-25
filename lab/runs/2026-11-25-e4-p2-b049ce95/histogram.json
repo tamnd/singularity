@@ -1,0 +1,187 @@
+{
+ "spec": "e1-p2",
+ "cases": [
+  {
+   "p": 2,
+   "n": 3,
+   "q": 2,
+   "e": 1,
+   "walks": 489000,
+   "depth": 12,
+   "degree": [
+    3,
+    6
+   ],
+   "terms": [
+    2,
+    6
+   ],
+   "divisor": "all",
+   "steps": 2360914,
+   "stops": {
+    "cap": 13782,
+    "depth": 139548,
+    "order-drops": 0,
+    "residual-zero": 335670
+   },
+   "start_residual_order": [
+    {
+     "value": 0,
+     "count": 80498
+    },
+    {
+     "value": 1,
+     "count": 81611
+    },
+    {
+     "value": 2,
+     "count": 149109
+    },
+    {
+     "value": 3,
+     "count": 145538
+    },
+    {
+     "value": 4,
+     "count": 25227
+    },
+    {
+     "value": 5,
+     "count": 6965
+    },
+    {
+     "value": 6,
+     "count": 52
+    }
+   ],
+   "change": [
+    {
+     "value": -5,
+     "count": 3687
+    },
+    {
+     "value": -4,
+     "count": 9886
+    },
+    {
+     "value": -3,
+     "count": 34506
+    },
+    {
+     "value": -2,
+     "count": 169248
+    },
+    {
+     "value": -1,
+     "count": 304371
+    },
+    {
+     "value": 0,
+     "count": 1834700
+    },
+    {
+     "value": 1,
+     "count": 4516
+    }
+   ],
+   "kangaroo": 4516,
+   "max_increase": 1,
+   "moh_bound": 1,
+   "moh_violations": 0,
+   "stability_violations": 0,
+   "max_terms": 27986,
+   "z_shift_steps": 0
+  },
+  {
+   "p": 2,
+   "n": 4,
+   "q": 2,
+   "e": 1,
+   "walks": 58000,
+   "depth": 12,
+   "degree": [
+    3,
+    6
+   ],
+   "terms": [
+    2,
+    6
+   ],
+   "divisor": "all",
+   "steps": 264994,
+   "stops": {
+    "cap": 21261,
+    "depth": 1400,
+    "order-drops": 0,
+    "residual-zero": 35339
+   },
+   "start_residual_order": [
+    {
+     "value": 0,
+     "count": 5419
+    },
+    {
+     "value": 1,
+     "count": 6761
+    },
+    {
+     "value": 2,
+     "count": 15872
+    },
+    {
+     "value": 3,
+     "count": 23850
+    },
+    {
+     "value": 4,
+     "count": 4910
+    },
+    {
+     "value": 5,
+     "count": 1152
+    },
+    {
+     "value": 6,
+     "count": 36
+    }
+   ],
+   "change": [
+    {
+     "value": -5,
+     "count": 515
+    },
+    {
+     "value": -4,
+     "count": 1232
+    },
+    {
+     "value": -3,
+     "count": 5886
+    },
+    {
+     "value": -2,
+     "count": 24330
+    },
+    {
+     "value": -1,
+     "count": 40093
+    },
+    {
+     "value": 0,
+     "count": 192466
+    },
+    {
+     "value": 1,
+     "count": 472
+    }
+   ],
+   "kangaroo": 472,
+   "max_increase": 1,
+   "moh_bound": 1,
+   "moh_violations": 0,
+   "stability_violations": 0,
+   "max_terms": 66481,
+   "z_shift_steps": 0
+  }
+ ]
+}
