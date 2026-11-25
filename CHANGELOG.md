@@ -14,6 +14,7 @@ Each release has a section. The newest release is first.
 ### Changed
 
 - Referee fixes from Volume 9 of the handbook. SG00000019 now has the statement of [BBE25, Corollary 3.7]: for an excellent local ring $R$, the Samuel slope is infinite if and only if $R_{\mathrm{red}}$ is regular. The old statement for each Noetherian local ring was false. The papers Kol20, BMP20 and KR23 now have the right year. Kol20 now names its two papers. The why of Wlo22 now says characteristic 0, and the why of AS22 now says what the paper proves.
+- Referee fixes from Volume 3 of the handbook. The note of SG0000000Z now gives four Lean names with the namespace ContinuousFamily, it says that the limit augmentations add nothing when the values of ν are discrete of rank 1, and it does not repeat a sentence.
 - SG0000001K now has the Lean statement Singularity.deJongAlteration, a Prop with no proof. The note says how it is weaker than [dJ96, 4.1].
 - The note of SG0000000Z now says that part 4 of MacLane-Vaquié is complete in Lean for a discrete valuation of rank 1 (tamnd/singularity-lean#101).
 - The note of SG0000000Z now says that the limit key polynomial is a key polynomial for the limit augmentation, by tamnd/singularity-lean#99 (#146).
