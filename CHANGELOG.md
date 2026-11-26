@@ -4,6 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000005D: the field `negation` is `Singularity.KangarooCounterexample.not_kangarooPathConjecture`. The status is now refuted. The entry of release 0.4.41 said that the map has no status for a false conjecture. That was not correct.
+- SG0000005G: the Lean proof is `Singularity.KangarooCounterexample.not_kangarooPathConjecture`, over $\mathbb{F}_2$ in three variables (tamnd/singularity-lean#150). The node no longer uses SG0000005D, since the proof does not use the conjecture. The status is now proved.
+- The records are pinned at tamnd/singularity-lean c42c2c0, the merge commit of the release 0.4.31, with 2143 declarations.
+
 ### Fixed
 
 - CP14 and CP15: the arXiv identifier 1203.2484 belongs to CP15, "Characteristic polyhedra of singularities without completion". It was on CP14 by mistake. CP14 now has the full title of the RACSAM paper and no arXiv identifier.

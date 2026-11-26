@@ -11,6 +11,7 @@ uses:
 - SG0000005A
 lean:
   statement: Singularity.KangarooPathConjecture
+  negation: Singularity.KangarooCounterexample.not_kangarooPathConjecture
 tier: T2
 route:
 - R1
