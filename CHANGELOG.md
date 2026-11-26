@@ -4,6 +4,14 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The node SG0000005Q is the run of Example 3.13.15 of Volume 7 of the handbook: along each sequence of the two corner charts, the point is clean, the log-Jacobian ideal is $(x^p, y^m z^l)$ and $\rho = p$. It is proved in Lean by `Singularity.CornerRuns.cornerRun_of_charts` (tamnd/singularity-lean#171). The node SG0000005M uses it. The records pin the Lean release 0.4.37.
+
+### Changed
+
+- The notes of SG0000005M say which parts are in Lean. The claim on subvarieties is not in Lean.
+
 ## 0.4.50 - 2026-11-27
 
 ### Added
