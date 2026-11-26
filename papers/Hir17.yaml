@@ -1,0 +1,10 @@
+key: Hir17
+title: Hironaka, "Resolution of singularities in positive characteristics", manuscript dated 2017-03-23, https://people.math.harvard.edu/~hironaka/pRes.pdf
+tag: P
+tier: T4
+why: An announced proof of embedded resolution in characteristic p in each dimension
+year: 2017
+lean: none
+use:
+- read
+notes: Not refereed and not published. No independent account confirms the proof.

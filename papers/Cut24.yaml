@@ -1,0 +1,11 @@
+key: Cut24
+title: Cutkosky, "A counterexample to strong local monomialization in a tower of two independent defect Artin-Schreier extensions", Ann. Fac. Sci. Toulouse Math. (6) 33 (2024) 915-935, doi:10.5802/afst.1790
+tag: P
+tier: T6
+why: Strong local monomialization fails for independent defect
+year: 2024
+arxiv:
+- '2302.07710'
+lean: none
+use:
+- ex

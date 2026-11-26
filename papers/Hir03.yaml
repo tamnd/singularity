@@ -1,0 +1,9 @@
+key: Hir03
+title: Hironaka, "Theory of infinitely near singular points", J. Korean Math. Soc. 40 (2003) 901-920, doi:10.4134/JKMS.2003.40.5.901
+tag: P
+tier: T4
+why: Infinitely near singular points in each dimension, for the program in characteristic p
+year: 2003
+lean: none
+use:
+- read

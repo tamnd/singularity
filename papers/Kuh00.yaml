@@ -1,0 +1,9 @@
+key: Kuh00
+title: Kuhlmann, "Valuation theoretic and model theoretic aspects of local uniformization", Resolution of Singularities (Obergurgl 1997), Progr. Math. 181, Birkhäuser (2000) 381-456, doi:10.1007/978-3-0348-8399-3_15
+tag: S
+tier: T6
+why: The program of local uniformization by reduction to tame fields
+year: 2000
+lean: none
+use:
+- read
