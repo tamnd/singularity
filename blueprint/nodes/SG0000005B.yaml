@@ -1,0 +1,17 @@
+tag: SG0000005B
+kind: theorem
+title: The codimension of the directrix does not go down along a run of points of the second case
+statement: In the setting of SG0000004Z, let $P_0, P_1, \dots, P_m$ be a sequence of points, where each $P_{i+1}$ is a point of a chart of the blowup of $P_i$ with $\rho(P_{i+1}) = \rho(P_i)$, and where $P_1, \dots, P_{m-1}$ are in the second case. There is no hypothesis on the case of $P_0$ and of $P_m$, and a component of the divisor can leave at each step. Then $\tau_\rho(P_0) \le \tau_\rho(P_1) \le \dots \le \tau_\rho(P_{m-1}) \le \widetilde\tau(P_m)$, with $\widetilde\tau$ as in SG00000057.
+sources:
+- paper: Hir67
+- paper: Hau10
+uses:
+- SG0000004Z
+- SG00000057
+lean:
+  statement: Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_reflTransGen
+  proof: Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_reflTransGen
+tier: T2
+route:
+- R1
+notes: The proof of SG0000004Z uses only two hypotheses, that $\rho$ stays and that the new point is in the second case. It does not use the case of the old point, and it does not use the hypothesis that no component leaves. So it applies at each step into a point of the second case, and an induction gives the first inequalities. At the last step, the same transport lands in $\widetilde\Theta(G')$, and this gives $\tau_\rho(P_{m-1}) \le \widetilde\tau(P_m)$. The Lean proof is for polynomials. A step is `Singularity.RhoStep`, a point of the second case is `Singularity.IsLogJacobianCaseB`, and the run is the reflexive and transitive closure of the relation. The form without the last step is `logJacobianDirectrixCodim_le_of_reflTransGen`.
