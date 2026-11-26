@@ -1,7 +1,7 @@
 tag: SG0000005D
 kind: conjecture
 title: The codimension of the directrix does not go down along a kangaroo path
-statement: In the setting of SG0000005B, assume that $m \ge 2$ and that $P_0$ and $P_m$ are in the first case. Then $\tau_\rho(P_m) \ge \tau_\rho(P_0)$. This is open.
+statement: In the setting of SG0000005B, assume that $m \ge 2$ and that $P_0$ and $P_m$ are in the first case. Then $\tau_\rho(P_m) \ge \tau_\rho(P_0)$. This is false. SG0000005G is a counterexample with $p = 2$ and three variables.
 sources:
 - paper: Hir67
 - paper: Hau10
@@ -14,4 +14,4 @@ lean:
 tier: T2
 route:
 - R1
-notes: By SG0000005B, $\tau_\rho(P_0) \le \widetilde\tau(P_m)$, but $\tau_\rho(P_m) \le \widetilde\tau(P_m)$, so the conjecture does not follow. SG0000005C shows that $\tau_\rho$ can go down at the last step, back to its value at $P_0$. In random tests with $(p, n) = (2, 3), (2, 4), (3, 3)$ and $(5, 3)$, there were 249 comparisons on a kangaroo path and $\tau_\rho$ did not go down in any of them. At the 26 drops at the last step that a second test found, $\tau_\rho$ went down to exactly $\tau_\rho(P_0)$. If the conjecture holds, the only steps where the triple $(\rho, d, \tau_\rho)$ of SG0000005A can get worse are the steps from the first case to the first case with a leaving component, as in SG00000051. The hypothesis $m \ge 2$ is necessary because of SG00000051.
+notes: The conjecture is false. By SG0000005F it holds if $\tau_\rho(P_0) \le 1$, and SG0000005G is a counterexample with $\tau_\rho(P_0) = 2$ and $\tau_\rho(P_2) = 1$. The early tests below had $\tau_\rho(P_0) \le 1$ on each kangaroo path, so they did not test the case where the conjecture has content. By SG0000005B, $\tau_\rho(P_0) \le \widetilde\tau(P_m)$, but $\tau_\rho(P_m) \le \widetilde\tau(P_m)$, so the conjecture does not follow. SG0000005C shows that $\tau_\rho$ can go down at the last step, back to its value at $P_0$. In random tests with $(p, n) = (2, 3), (2, 4), (3, 3)$ and $(5, 3)$, there were 249 comparisons on a kangaroo path and $\tau_\rho$ did not go down in any of them. At the 26 drops at the last step that a second test found, $\tau_\rho$ went down to exactly $\tau_\rho(P_0)$. If the conjecture were true, the only steps where the triple $(\rho, d, \tau_\rho)$ of SG0000005A can get worse are the steps from the first case to the first case with a leaving component, as in SG00000051. The hypothesis $m \ge 2$ is necessary because of SG00000051.

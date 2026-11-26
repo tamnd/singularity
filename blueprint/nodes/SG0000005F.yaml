@@ -1,0 +1,16 @@
+tag: SG0000005F
+kind: theorem
+title: The kangaroo path conjecture holds if the codimension at the start is at most 1
+statement: In the setting of SG0000004Z, let $\rho = \rho(g)$ be finite. If $\rho = 0$, then $\tau_\rho(g) = 0$. If $\rho \ge 1$ and $g$ is in the first case, then $\tau_\rho(g) \ge 1$. Thus the conclusion of SG0000005D holds for each kangaroo path with $\tau_\rho(P_0) \le 1$.
+sources:
+- paper: Hir67
+uses:
+- SG0000004Z
+- SG0000005D
+lean:
+  statement: Singularity.kangarooPath_of_codim_le_one
+  proof: Singularity.kangarooPath_of_codim_le_one
+tier: T2
+route:
+- R1
+notes: A form $F$ of positive degree with $T(F) = K^n$ is $0$. For each $i$, the substitution $s \mapsto x_i$, $x_i \mapsto 0$ in the identity $F(x + s e_i) = F(x)$ gives $F = F|_{x_i = 0}$, so no monomial of $F$ contains $x_i$. This argument holds over each field, also over a finite field. In the first case $\Theta_0(g)$ has an element $x^r \psi$ of order $|r| + \rho$, so $\operatorname{ord} \psi = \rho$, and the part of degree $\rho$ of $\psi$ is a nonzero form of positive degree. So a counterexample to SG0000005D must have $\tau_\rho(P_0) \ge 2$, and SG0000005G is one.

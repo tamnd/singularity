@@ -4,6 +4,17 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000005E: in the first case the directrix of the log-Jacobian order is the intersection of the directrices of the forms $E_i F = r_i F + x_i \partial_i F$ for $i \in \Delta$ (Volume 7, Lemma 3.11.4 of the handbook). The Lean statement and proof are `Singularity.logJacobianDirectrix_eq_iInf_caseAForm`.
+- SG0000005F: the kangaroo path conjecture holds if the codimension of the directrix at the start is at most 1 (Volume 7, Proposition 3.11.5 of the handbook). The Lean statement and proof are `Singularity.kangarooPath_of_codim_le_one`.
+- SG0000005G: a kangaroo path over $\mathbb{F}_2$ in three variables where the codimension of the directrix goes down from 2 to 1 (Volume 7, Example 3.11.6 of the handbook). This is a counterexample to SG0000005D. There is no Lean computation yet.
+
+### Changed
+
+- SG0000005D: the statement and the notes now say that the conjecture is false, with SG0000005G as the counterexample. The map has no status for a false conjecture, thus the status stays open.
+- The records are pinned at tamnd/singularity-lean d081656, the merge commit of tamnd/singularity-lean#149, with 2018 declarations.
+
 ## 0.4.40 - 2026-11-26
 
 ### Changed

@@ -1,0 +1,15 @@
+tag: SG0000005E
+kind: lemma
+title: In the first case the directrix of the log-Jacobian order is the directrix of the forms E_i F
+statement: In the setting of SG0000004Z, let $g = x^r G$ be in the first case, and let $F$ be the part of degree $\rho$ of $G$. For $i \in \Delta$ put $E_i F = r_i F + x_i \partial_i F$. Then $T_\rho(g) = \bigcap_{i \in \Delta} T(E_i F)$.
+sources:
+- paper: Hir67
+uses:
+- SG0000004Z
+lean:
+  statement: Singularity.logJacobianDirectrix_eq_iInf_caseAForm
+  proof: Singularity.logJacobianDirectrix_eq_iInf_caseAForm
+tier: T2
+route:
+- R1
+notes: The generators $e_i = r_i G + x_i \partial_i G$ of $\widetilde\Theta_0(G)$ have order at least $\rho$ with the part $E_i F$ of degree $\rho$, and the generators $x_a \partial_l G$ with $l \notin \Delta$ have order at least $\rho + 1$. So in the first case the part of degree $\rho$ of each element of the definition of $T_\rho(g)$ is a linear combination of the $E_i F$, and each $E_i F \ne 0$ is such a part. The lemma needs no hypothesis on the field and no hypothesis that $g$ is clean. If $g$ is clean, the decomposition of $F$ by the characters $\chi(\alpha) = (r_i + \alpha_i \bmod p)_{i \in \Delta}$ gives $E_i F = \sum_\chi \chi_i F_\chi$, so $T_\rho(g)$ contains the joint directrix of the $F_\chi$.
