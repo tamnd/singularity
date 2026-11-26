@@ -1,0 +1,14 @@
+tag: SG00000064
+kind: theorem
+title: In a corner run with an infinite number of nonzero translations the derivative in x is a monomial times a unit
+statement: Let $g \in K[[y, z]][x]$ be clean at $P_N$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations with an infinite number of nonzero translations. If $g_x \ne 0$, then there is an $m_0$ such that for each $m \ge m_0$ the derivative $\partial_x g_m$ is $\mu_m \varepsilon_m$, with $\mu_m$ a nonzero constant times a monomial in $y_m, z_m$ and $\varepsilon_m$ a unit. In a new free coordinate $x''$ at $P_m$, $g_m = \mu_m x'' + Q(x''^p, y_m, z_m)$.
+sources:
+- paper: CJS20
+uses:
+- SG00000062
+- SG0000005R
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.15.10 and Corollary 3.15.11 of Volume 7 of the handbook, with Lemma 3.15.8. By Proposition 3.15.7 (SG00000062) the values of $g_x$ and of its Hasse derivatives at the sequence of the translations are constant, and the value of $g_x$ is less than the values of the other coefficients of $g_x(\varphi_m + M_m X)$. The dominance argument of Lemma 3.13.19 (SG0000005R), in the form of Lemma 3.15.4, then makes the image of the least monomial divide all the other monomials at each later point. The proof is in note 30 of the research notes, with the full proof in note 33. The result is not in Lean.

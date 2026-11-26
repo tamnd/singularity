@@ -1,0 +1,13 @@
+tag: SG00000068
+kind: example
+title: A corner run of x^2 y^(p-2) z^(p-2) keeps rho equal to 1
+statement: Let $p \ge 3$, $n = 3$, $\Delta = \{y, z\}$ and $g = x^2 y^{p-2} z^{p-2}$, so $g = x^2 y z$ for $p = 3$. The origin of the $y$-chart and the origin of the $z$-chart send $g$ to $g$, and $\rho = 1$ at each point. So each sequence of the two charts at the origin in which both charts occur an infinite number of times is a corner run with free translations, with all translations $0$, $\rho = 1$ and $\deg_x g = 2 < p$.
+sources:
+- paper: CJS20
+uses:
+- SG0000003F
+- SG0000005N
+tier: T2
+route:
+- R1
+notes: This is Example 3.15.18 of Volume 7 of the handbook. Here $r = (0, p-2, p-2)$, $G = x^2$ and $\widetilde\Theta(G)$ contains $2x$, so $\rho = 1$ and $d = 2$. It is Example 3.13.10 (SG0000005N) with $x^2$ in place of $x^p$. It shows that Theorem 6 of note 30, which says that no such run keeps $\rho \ge 1$ when $\deg_x g < p$, is false. Note 33 of the research notes gives the counterexample $x^2 y z$ with the total transform, and checks with a computer that $\rho$ stays constant along the run that takes the two charts in turn. The result is not in Lean.

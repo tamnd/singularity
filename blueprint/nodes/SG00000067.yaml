@@ -1,0 +1,16 @@
+tag: SG00000067
+kind: theorem
+title: A corner run with free translations of a point of degree less than p in x has only a finite number of nonzero translations
+statement: Let $n = 3$ and let $g \in K[[y, z]][x]$ be clean at $P_N$ with $\deg_x g < p$. Then each corner run with free translations from $P_N$ has only a finite number of nonzero translations. After the last one, at $P_{J+1}$, the run is a run of Theorem 3.13.20 in the coordinates of $P_{J+1}$, so Question 3.13.18 has a positive answer for it.
+sources:
+- paper: CJS20
+uses:
+- SG00000063
+- SG00000064
+- SG00000066
+- SG0000005R
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.15.17 of Volume 7 of the handbook. If $g_x = 0$, then $g \in K[[y, z]]$, and Proposition 3.13.26 (SG0000005W) gives $\rho = 0$. If there are an infinite number of nonzero translations and $g_x \ne 0$, Proposition 3.15.10 (SG00000064) gives a point where $g_m = \mu_m x'' + a_0(y_m, z_m)$ in a new free coordinate. Lemma 3.15.2 (SG00000063) makes the rest of the run a corner run with free translations in the new coordinates, and Theorem 3.15.16 (SG00000066) gives a contradiction. Note 30 of the research notes states that no such run keeps $\rho \ge 1$, and this is false by Example 3.15.18 (SG00000068). Note 33 gives the corrected statement. Conjecture V of note 28 is still open in this class. The result is not in Lean.

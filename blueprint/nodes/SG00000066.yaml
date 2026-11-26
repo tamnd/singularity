@@ -1,0 +1,14 @@
+tag: SG00000066
+kind: theorem
+title: No corner run with free translations of mu x + B0 keeps rho at least 1
+statement: Let $n = 3$ and let $g = \mu x + B_0$ be clean at $P_N$, with $\mu$ a nonzero constant times a monomial in $y, z$ and $B_0 \in K[[y, z]]$. Then no corner run with free translations from $P_N$ keeps $\rho \ge 1$. The same holds for $g = \mu \varepsilon^p x + B_0$ with $\varepsilon \in K[[y, z]]$ a unit.
+sources:
+- paper: CJS20
+uses:
+- SG00000063
+- SG0000005R
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.15.16 of Volume 7 of the handbook, with Lemmas 3.15.14 and 3.15.15. At $P_m$, $g_m = \mu M_m x_m + C_m$ with $C_m$ the cleaning of $\mu \varphi_m + B_0$. Only a finite number of translations have $\mu M_{j+1}$ not a $p$-th power, and after the last one $C_m = C$ is constant. The dominance argument of Lemma 3.13.19 (SG0000005R) with the monomial $\mu y_N z_N$ added to the support of $C$ makes $\mu M_m$ divide $C$, and then $\partial_x G_m$ is a unit. The extension needs $\varepsilon \in K[[y, z]]$. For $\varepsilon = 1 + x$ the point $\mu x + \mu x^{p+1} + B_0$ is not in the class. The proof is in note 30 of the research notes, with the details of note 33 and a computer test. The result is not in Lean.
