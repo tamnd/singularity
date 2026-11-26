@@ -6,6 +6,8 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The records are pinned at tamnd/singularity-lean 1d8b1df, the merge commit of tamnd/singularity-lean#139, with 1989 declarations.
+- SG00000059 has the Lean statement and proof `Singularity.idealOrd_logJacobianTangent_eq_ord`, and SG0000005A has `Singularity.residualOrderAlong_cleanPart_le_of_forall_eq_zero`. Their notes give the other Lean names.
 - Note the choice of the monomial subfield of an Abhyankar valuation (tamnd/singularity-lean#138) on SG0000001E.
 
 ## 0.4.36 - 2026-11-26

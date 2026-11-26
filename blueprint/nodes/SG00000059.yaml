@@ -7,7 +7,10 @@ sources:
 - paper: CP08
 uses:
 - SG0000003F
+lean:
+  statement: Singularity.idealOrd_logJacobianTangent_eq_ord
+  proof: Singularity.idealOrd_logJacobianTangent_eq_ord
 tier: T2
 route:
 - R1
-notes: Each generator has order at least $d$. For a monomial $x^\alpha$ of degree $d$ of $G$, cleanness gives an index $k$ such that $p$ does not divide $r_k + \alpha_k$. Then $r_k G + x_k \partial_k G$ for $k \in \Delta$, or $x_k \partial_k G$ for $k \notin \Delta$, has a nonzero term of degree $d$. This is the proof of part 2 of SG0000003F with $x_k \partial_k G$ in the place of $\partial_k G$. The lemma shows that the case of the log-Jacobian order is a function of $d$ and $\rho$ only. An earlier remark of the handbook said that both cases can occur if $\rho = d$. The lemma shows that this is false.
+notes: Each generator has order at least $d$. For a monomial $x^\alpha$ of degree $d$ of $G$, cleanness gives an index $k$ such that $p$ does not divide $r_k + \alpha_k$. Then $r_k G + x_k \partial_k G$ for $k \in \Delta$, or $x_k \partial_k G$ for $k \notin \Delta$, has a nonzero term of degree $d$. This is the proof of part 2 of SG0000003F with $x_k \partial_k G$ in the place of $\partial_k G$. The lemma shows that the case of the log-Jacobian order is a function of $d$ and $\rho$ only. An earlier remark of the handbook said that both cases can occur if $\rho = d$. The lemma shows that this is false. The Lean proof is for polynomials and has the form $\operatorname{ord} \Theta_0(g) = \operatorname{ord} g$, since $\Theta_0(g) = x^r \widetilde\Theta_0(G)$ and $\operatorname{ord} g = |r| + d$. The forms with the type are `idealOrd_logJacobianTangent_eq_degree_add_iff` for the first case and `idealOrd_logJacobianTangent_eq_degree_add_add_one_iff` for the second case.
