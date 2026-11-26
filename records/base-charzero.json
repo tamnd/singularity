@@ -1,889 +1,550 @@
-{
- "built": "2026-11-24",
- "commit": "dbde226c8b09a1c500c9812d090b3e06d007ceed",
- "decls": {
-  "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 363,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 \u2200 {P : Ideal R} [hP : P.IsPrime], P \u2260 \u22a5 \u2192 P = IsLocalRing.maximalIdeal R"
-  },
-  "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_notMem_minimalPrimes": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 203,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  0 < ringKrullDim R \u2192\n    \u2203 x \u2208 IsLocalRing.maximalIdeal R, x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2227 \u2200 p \u2208 minimalPrimes R, x \u2209 p"
-  },
-  "Singularity.Algebra.exists_ringKrullDim_eq_natCast": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 63,
-   "type": "\u2200 (R : Type u) [inst : CommRing R] [FiniteRingKrullDim R], \u2203 n, ringKrullDim R = \u2191n"
-  },
-  "Singularity.Algebra.exists_span_insert_eq_maximalIdeal": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 91,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2203 t,\n        \u2191t \u2286 \u2191(IsLocalRing.maximalIdeal R) \u2227\n          t.card + 1 = Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2227\n            IsLocalRing.maximalIdeal R = Ideal.span (insert x \u2191t)"
-  },
-  "Singularity.Algebra.isDomain_of_isRegularLocalRing": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 344,
-   "type": "\u2200 (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], IsDomain R"
-  },
-  "Singularity.Algebra.isDomain_of_isRegularLocalRing_of_ringKrullDim_eq": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 298,
-   "type": "\u2200 (n : \u2115) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R = \u2191n \u2192 IsDomain R"
-  },
-  "Singularity.Algebra.isLocalRing_quotient_of_le_maximalIdeal": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 77,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I \u2264 IsLocalRing.maximalIdeal R \u2192 IsLocalRing (R \u29f8 I)"
-  },
-  "Singularity.Algebra.isRegularLocalRing_iff_isDiscreteValuationRing": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 378,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [inst_3 : IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsDiscreteValuationRing R)"
-  },
-  "Singularity.Algebra.isRegularLocalRing_iff_isIntegrallyClosed": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 389,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 \u2192 (IsRegularLocalRing R \u2194 IsIntegrallyClosed R)"
-  },
-  "Singularity.Algebra.maximalIdeal_quotient_eq_map": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 84,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R \u29f8 I)],\n  IsLocalRing.maximalIdeal (R \u29f8 I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)"
-  },
-  "Singularity.Algebra.not_isField_of_ringKrullDim_eq_one": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 357,
-   "type": "\u2200 {R : Type u} [inst : CommRing R], ringKrullDim R = 1 \u2192 \u00acIsField R"
-  },
-  "Singularity.Algebra.of_quotient_span_singleton": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 275,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2208 nonZeroDivisors R \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2192\n        IsRegularLocalRing R \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
-  },
-  "Singularity.Algebra.quotient_span_singleton": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 241,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      IsRegularLocalRing (R \u29f8 Ideal.span {x}) \u2227 ringKrullDim (R \u29f8 Ideal.span {x}) + 1 = ringKrullDim R"
-  },
-  "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 152,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})],\n      Submodule.spanFinrank (IsLocalRing.maximalIdeal R) \u2264\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 Ideal.span {x})) + 1"
-  },
-  "Singularity.Algebra.spanFinrank_maximalIdeal_quotient_add_one_le": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Algebra/Regular.lean",
-   "kind": "theorem",
-   "line": 138,
-   "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x \u2208 IsLocalRing.maximalIdeal R \u2192\n    x \u2209 IsLocalRing.maximalIdeal R ^ 2 \u2192\n      \u2200 [inst_3 : IsLocalRing (R \u29f8 Ideal.span {x})],\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R \u29f8 Ideal.span {x})) + 1 \u2264\n          Submodule.spanFinrank (IsLocalRing.maximalIdeal R)"
-  },
-  "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 33,
-   "type": "\u2200 {A : Type u_1} [inst : CommRing A] {g : A}, g \u2208 nonZeroDivisors A \u2192 Dense \u2191(PrimeSpectrum.basicOpen g)"
-  },
-  "Singularity.Base.dense_compl_support_of_locally_nonZeroDivisor": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 47,
-   "type": "\u2200 {Y : AlgebraicGeometry.Scheme} (J : Y.IdealSheafData),\n  (\u2200 (y : \u21a5Y), \u2203 U, y \u2208 \u2191U \u2227 \u2203 g \u2208 nonZeroDivisors \u2191(Y.presheaf.obj (Opposite.op \u2191U)), J.ideal U = Ideal.span {g}) \u2192\n    Dense (\u2191J.support)\u1d9c"
-  },
-  "Singularity.Base.exists_isResolution_of_isIntegral": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 82,
-   "type": "\u2200 {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [hX : Singularity.IsVariety X f] [AlgebraicGeometry.IsIntegral X], \u2203 Y \u03c0, Singularity.IsResolution \u03c0"
-  },
-  "Singularity.Base.fcResolutionCharZero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 99,
-   "type": "Singularity.Bridge.FCResolutionCharZero"
-  },
-  "Singularity.Base.fcResolutionInDim_of_integralResolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 86,
-   "type": "\u2200 {p n : \u2115}, Singularity.IntegralResolutionInDim p n \u2192 Singularity.Bridge.FCResolutionInDim p n"
-  },
-  "Singularity.Base.fcResolutionInDim_of_resolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 94,
-   "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.Bridge.FCResolutionInDim p n"
-  },
-  "Singularity.Base.genericPoint_mem_regularLocus": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 32,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X], genericPoint \u21a5X \u2208 Singularity.regularLocus X"
-  },
-  "Singularity.Base.hasResolution_of_isResolution": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 45,
-   "type": "\u2200 {k : Type u} [inst : Field k] [PerfectField k] {X Y : AlgebraicGeometry.Scheme} (sX : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [AlgebraicGeometry.IsIntegral X] [AlgebraicGeometry.LocallyOfFiniteType sX] (\u03c0 : Y \u27f6 X),\n  Singularity.IsResolution \u03c0 \u2192 Singularity.Bridge.HasResolution sX"
-  },
-  "Singularity.Base.integralResolutionInDim_zero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 110,
-   "type": "\u2200 (n : \u2115), Singularity.IntegralResolutionInDim 0 n"
-  },
-  "Singularity.Base.isReduced_of_isRegularScheme": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/Bridge.lean",
-   "kind": "theorem",
-   "line": 38,
-   "type": "\u2200 {Y : AlgebraicGeometry.Scheme}, Singularity.IsRegularScheme Y \u2192 AlgebraicGeometry.IsReduced Y"
-  },
-  "Singularity.Base.regularLocus_eq_compl_singularLocus": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 76,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = X.singularLocus\u1d9c"
-  },
-  "Singularity.Bridge.FCResolutionCharZero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Bridge/FormalConjectures.lean",
-   "kind": "def",
-   "line": 41,
-   "type": "Prop"
-  },
-  "Singularity.Bridge.FCResolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Bridge/FormalConjectures.lean",
-   "kind": "def",
-   "line": 35,
-   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
-  },
-  "Singularity.Bridge.HasResolution": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Bridge/FormalConjectures.lean",
-   "kind": "def",
-   "line": 30,
-   "type": "{S X : AlgebraicGeometry.Scheme} \u2192 (X \u27f6 S) \u2192 Prop"
-  },
-  "Singularity.Components.eq_of_mem_of_isDomain": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 27,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme} {x : \u21a5X} [IsDomain \u2191(X.presheaf.stalk x)] {Z\u2081 Z\u2082 : Set \u21a5X},\n  Z\u2081 \u2208 irreducibleComponents \u21a5X \u2192 Z\u2082 \u2208 irreducibleComponents \u21a5X \u2192 x \u2208 Z\u2081 \u2192 x \u2208 Z\u2082 \u2192 Z\u2081 = Z\u2082"
-  },
-  "Singularity.Components.exists_mem_irreducibleComponents": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 21,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme} (x : \u21a5X), \u2203 Z \u2208 irreducibleComponents \u21a5X, x \u2208 Z"
-  },
-  "Singularity.Components.irreducibleComponentOpen_subset": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 70,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X),\n  \u2191(X.irreducibleComponentOpen Z) \u2286 Z"
-  },
-  "Singularity.Components.isIntegral_irreducibleComponent": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 63,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X)\n  (hZ : Z \u2208 irreducibleComponents \u21a5X) [AlgebraicGeometry.IsReduced X],\n  AlgebraicGeometry.IsIntegral (X.irreducibleComponent Z hZ)"
-  },
-  "Singularity.Components.isIso_irreducibleComponent\u03b9_restrict": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 84,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X)\n  (hZ : Z \u2208 irreducibleComponents \u21a5X) [AlgebraicGeometry.IsReduced X],\n  \u2200 V \u2264 X.irreducibleComponentOpen Z, CategoryTheory.IsIso (X.irreducibleComponent\u03b9 Z hZ \u2223_ V)"
-  },
-  "Singularity.Components.isReduced_irreducibleComponent": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 49,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X)\n  (hZ : Z \u2208 irreducibleComponents \u21a5X) [AlgebraicGeometry.IsReduced X],\n  AlgebraicGeometry.IsReduced (X.irreducibleComponent Z hZ)"
-  },
-  "Singularity.Components.mem_irreducibleComponentOpen": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 78,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X) {x : \u21a5X},\n  (\u2200 Z' \u2208 irreducibleComponents \u21a5X, x \u2208 Z' \u2192 Z' = Z) \u2192 x \u2208 X.irreducibleComponentOpen Z"
-  },
-  "Singularity.Components.range_irreducibleComponent\u03b9": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Components.lean",
-   "kind": "theorem",
-   "line": 67,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set \u21a5X)\n  (hZ : Z \u2208 irreducibleComponents \u21a5X), Set.range \u21d1(X.irreducibleComponent\u03b9 Z hZ) = Z"
-  },
-  "Singularity.Fidelity.isResolution_id": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Fidelity/Positive.lean",
-   "kind": "theorem",
-   "line": 19,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme X \u2192 Singularity.IsResolution (CategoryTheory.CategoryStruct.id X)"
-  },
-  "Singularity.IntegralResolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Hypotheses/Integral.lean",
-   "kind": "def",
-   "line": 21,
-   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
-  },
-  "Singularity.IsRegularScheme": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "def",
-   "line": 33,
-   "type": "AlgebraicGeometry.Scheme \u2192 Prop"
-  },
-  "Singularity.IsResolution": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "inductive",
-   "line": 37,
-   "type": "{X Y : AlgebraicGeometry.Scheme} \u2192 (Y \u27f6 X) \u2192 Prop"
-  },
-  "Singularity.IsResolution.dense": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 50,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 Dense (\u21d1\u03c0 \u207b\u00b9' Singularity.regularLocus X)"
-  },
-  "Singularity.IsResolution.isIso_over": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 49,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X},\n  Singularity.IsResolution \u03c0 \u2192 \u2203 U, \u2191U = Singularity.regularLocus X \u2227 CategoryTheory.IsIso (\u03c0 \u2223_ U)"
-  },
-  "Singularity.IsResolution.proper": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 48,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 AlgebraicGeometry.IsProper \u03c0"
-  },
-  "Singularity.IsResolution.regular": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 47,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} {\u03c0 : Y \u27f6 X}, Singularity.IsResolution \u03c0 \u2192 Singularity.IsRegularScheme Y"
-  },
-  "Singularity.IsVariety": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "inductive",
-   "line": 52,
-   "type": "{k : Type u} \u2192 [inst : Field k] \u2192 (X : AlgebraicGeometry.Scheme) \u2192 (X \u27f6 AlgebraicGeometry.Spec \u21a7k) \u2192 Prop"
-  },
-  "Singularity.IsVariety.finiteType": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 55,
-   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.LocallyOfFiniteType f"
-  },
-  "Singularity.IsVariety.quasiCompact": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 56,
-   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.QuasiCompact f"
-  },
-  "Singularity.IsVariety.reduced": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 54,
-   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsReduced X"
-  },
-  "Singularity.IsVariety.separated": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 57,
-   "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsSeparated f"
-  },
-  "Singularity.Reduction.compactSpace_sigma": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 112,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} [Finite \u03c3] [\u2200 (i : \u03c3), CompactSpace \u21a5(Y i)], CompactSpace \u21a5(\u2210 Y)"
-  },
-  "Singularity.Reduction.eq_of_sigma\u03b9_eq": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 93,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} {i j : \u03c3} (x : \u21a5(Y i)) (y : \u21a5(Y j)),\n  (CategoryTheory.Limits.Sigma.\u03b9 Y i) x = (CategoryTheory.Limits.Sigma.\u03b9 Y j) y \u2192 i = j"
-  },
-  "Singularity.Reduction.exists_range_subset_of_field": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 125,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (K : Type u) [inst : Field K] (a : AlgebraicGeometry.Spec \u21a7K \u27f6 \u2210 Y),\n  \u2203 i, Set.range \u21d1a \u2286 Set.range \u21d1(CategoryTheory.Limits.Sigma.\u03b9 Y i)"
-  },
-  "Singularity.Reduction.exists_sigma\u03b9_eq": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 84,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (y : \u21a5(\u2210 Y)), \u2203 i x, (CategoryTheory.Limits.Sigma.\u03b9 Y i) x = y"
-  },
-  "Singularity.Reduction.isClosed_range_sigma\u03b9": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 97,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (i : \u03c3), IsClosed (Set.range \u21d1(CategoryTheory.Limits.Sigma.\u03b9 Y i))"
-  },
-  "Singularity.Reduction.isIso_restrict_iSup": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 52,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} (f : X \u27f6 Y) {\u03b9 : Type u_1} (V : \u03b9 \u2192 Y.Opens),\n  (\u2200 (i : \u03b9), CategoryTheory.IsIso (f \u2223_ V i)) \u2192 CategoryTheory.IsIso (f \u2223_ \u2a06 i, V i)"
-  },
-  "Singularity.Reduction.isIso_restrict_of_le": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 39,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} (f : X \u27f6 Y) {U V : Y.Opens},\n  V \u2264 U \u2192 \u2200 [CategoryTheory.IsIso (f \u2223_ U)], CategoryTheory.IsIso (f \u2223_ V)"
-  },
-  "Singularity.Reduction.isIso_stalkMap_of_isIso_restrict": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 71,
-   "type": "\u2200 {X Y : AlgebraicGeometry.Scheme} (f : X \u27f6 Y) (U : Y.Opens) [CategoryTheory.IsIso (f \u2223_ U)] (x : \u21a5X),\n  f x \u2208 U \u2192 CategoryTheory.IsIso (AlgebraicGeometry.Scheme.Hom.stalkMap f x)"
-  },
-  "Singularity.Reduction.isNoetherian_of_isVariety": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 221,
-   "type": "\u2200 {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} (f : X \u27f6 AlgebraicGeometry.Spec \u21a7k)\n  [Singularity.IsVariety X f], AlgebraicGeometry.IsNoetherian X"
-  },
-  "Singularity.Reduction.isProper_sigmaDesc": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 204,
-   "type": "\u2200 {\u03c3 : Type u} {X : AlgebraicGeometry.Scheme} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (g : (i : \u03c3) \u2192 Y i \u27f6 X) [Finite \u03c3]\n  [\u2200 (i : \u03c3), AlgebraicGeometry.IsProper (g i)] [QuasiSeparatedSpace \u21a5(\u2210 Y)],\n  AlgebraicGeometry.IsProper (CategoryTheory.Limits.Sigma.desc g)"
-  },
-  "Singularity.Reduction.nonempty_irreducibleComponentOpen": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 232,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme} [inst : AlgebraicGeometry.IsNoetherian X] {Z : Set \u21a5X},\n  Z \u2208 irreducibleComponents \u21a5X \u2192 \u2203 x \u2208 Z, x \u2208 X.irreducibleComponentOpen Z"
-  },
-  "Singularity.Reduction.quasiCompact_sigmaDesc": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 185,
-   "type": "\u2200 {\u03c3 : Type u} {X : AlgebraicGeometry.Scheme} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (g : (i : \u03c3) \u2192 Y i \u27f6 X) [Finite \u03c3]\n  [\u2200 (i : \u03c3), AlgebraicGeometry.QuasiCompact (g i)], AlgebraicGeometry.QuasiCompact (CategoryTheory.Limits.Sigma.desc g)"
-  },
-  "Singularity.Reduction.range_subset_of_preconnected": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 136,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} {T : AlgebraicGeometry.Scheme} [PreconnectedSpace \u21a5T] (a : T \u27f6 \u2210 Y)\n  (i : \u03c3) (t : \u21a5T),\n  a t \u2208 Set.range \u21d1(CategoryTheory.Limits.Sigma.\u03b9 Y i) \u2192 Set.range \u21d1a \u2286 Set.range \u21d1(CategoryTheory.Limits.Sigma.\u03b9 Y i)"
-  },
-  "Singularity.Reduction.reductionToIntegral": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 245,
-   "type": "Singularity.ReductionToIntegral"
-  },
-  "Singularity.Reduction.sigmaDesc_apply": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 122,
-   "type": "\u2200 {\u03c3 : Type u} {X : AlgebraicGeometry.Scheme} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (g : (i : \u03c3) \u2192 Y i \u27f6 X) (i : \u03c3)\n  (x : \u21a5(Y i)), (CategoryTheory.Limits.Sigma.desc g) ((CategoryTheory.Limits.Sigma.\u03b9 Y i) x) = (g i) x"
-  },
-  "Singularity.Reduction.sigma\u03b9_eq_sigma\u03b9_iff": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 88,
-   "type": "\u2200 {\u03c3 : Type u} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} {i j : \u03c3} (x : \u21a5(Y i)) (y : \u21a5(Y j)),\n  (CategoryTheory.Limits.Sigma.\u03b9 Y i) x = (CategoryTheory.Limits.Sigma.\u03b9 Y j) y \u2194 \u27e8i, x\u27e9 = \u27e8j, y\u27e9"
-  },
-  "Singularity.Reduction.valuativeCriterion_sigmaDesc": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Scheme/Reduction.lean",
-   "kind": "theorem",
-   "line": 147,
-   "type": "\u2200 {\u03c3 : Type u} {X : AlgebraicGeometry.Scheme} {Y : \u03c3 \u2192 AlgebraicGeometry.Scheme} (g : (i : \u03c3) \u2192 Y i \u27f6 X),\n  (\u2200 (i : \u03c3), AlgebraicGeometry.ValuativeCriterion (g i)) \u2192\n    AlgebraicGeometry.ValuativeCriterion (CategoryTheory.Limits.Sigma.desc g)"
-  },
-  "Singularity.ReductionToIntegral": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Hypotheses/Integral.lean",
-   "kind": "def",
-   "line": 26,
-   "type": "Prop"
-  },
-  "Singularity.ResolutionDimFourCharP": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Main.lean",
-   "kind": "def",
-   "line": 32,
-   "type": "Prop"
-  },
-  "Singularity.ResolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Main.lean",
-   "kind": "def",
-   "line": 21,
-   "type": "\u2115 \u2192 \u2115 \u2192 Prop"
-  },
-  "Singularity.ResolutionOfSingularities": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Main.lean",
-   "kind": "def",
-   "line": 28,
-   "type": "Prop"
-  },
-  "Singularity.integralResolutionInDim_of_resolutionInDim": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Hypotheses/Integral.lean",
-   "kind": "theorem",
-   "line": 30,
-   "type": "\u2200 {p n : \u2115}, Singularity.ResolutionInDim p n \u2192 Singularity.IntegralResolutionInDim p n"
-  },
-  "Singularity.isRegularLocalRing_of_isField": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Known/DimZero.lean",
-   "kind": "theorem",
-   "line": 28,
-   "type": "\u2200 {R : Type u_1} [inst : CommRing R], IsField R \u2192 IsRegularLocalRing R"
-  },
-  "Singularity.isRegularScheme_of_topologicalKrullDim_le_zero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Known/DimZero.lean",
-   "kind": "theorem",
-   "line": 44,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsReduced X],\n  topologicalKrullDim \u21a5X \u2264 0 \u2192 Singularity.IsRegularScheme X"
-  },
-  "Singularity.krullDimLE_zero_stalk": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Known/DimZero.lean",
-   "kind": "theorem",
-   "line": 34,
-   "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
-  },
-  "Singularity.regularLocus": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "def",
-   "line": 29,
-   "type": "(X : AlgebraicGeometry.Scheme) \u2192 Set \u21a5X"
-  },
-  "Singularity.regularLocus_eq_univ_iff": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Statements/Basic.lean",
-   "kind": "theorem",
-   "line": 59,
-   "type": "\u2200 (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = Set.univ \u2194 Singularity.IsRegularScheme X"
-  },
-  "Singularity.resolutionInDim_charZero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 124,
-   "type": "\u2200 (n : \u2115), Singularity.ResolutionInDim 0 n"
-  },
-  "Singularity.resolutionInDim_dim_zero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "Singularity/Known/DimZero.lean",
-   "kind": "theorem",
-   "line": 50,
-   "type": "\u2200 (p : \u2115), Singularity.ResolutionInDim p 0"
-  },
-  "Singularity.resolutionInDim_zero": {
-   "axioms": [
-    "Classical.choice",
-    "Quot.sound",
-    "propext"
-   ],
-   "file": "base/SingularityBase/CharZero.lean",
-   "kind": "theorem",
-   "line": 120,
-   "type": "Singularity.ReductionToIntegral \u2192 \u2200 (n : \u2115), Singularity.ResolutionInDim 0 n"
-  }
- },
- "mathlib": "v4.35.0",
+{"toolchain": "4.35.0",
  "repository": "https://github.com/tamnd/singularity-lean",
- "toolchain": "4.35.0"
-}
+ "mathlib": "v4.35.0",
+ "decls":
+ {"Singularity.resolutionInDim_zero":
+  {"type":
+   "Singularity.ReductionToIntegral → ∀ (n : ℕ), Singularity.ResolutionInDim 0 n",
+   "line": 120,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.resolutionInDim_dim_zero":
+  {"type": "∀ (p : ℕ), Singularity.ResolutionInDim p 0",
+   "line": 50,
+   "kind": "theorem",
+   "file": "Singularity/Known/DimZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.resolutionInDim_charZero":
+  {"type": "∀ (n : ℕ), Singularity.ResolutionInDim 0 n",
+   "line": 124,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.regularLocus_eq_univ_iff":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = Set.univ ↔ Singularity.IsRegularScheme X",
+   "line": 59,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.regularLocus":
+  {"type": "(X : AlgebraicGeometry.Scheme) → Set ↥X",
+   "line": 29,
+   "kind": "def",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.krullDimLE_zero_stalk":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme}, topologicalKrullDim ↥X ≤ 0 → ∀ (x : ↥X), Ring.KrullDimLE 0 ↑(X.presheaf.stalk x)",
+   "line": 34,
+   "kind": "theorem",
+   "file": "Singularity/Known/DimZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.isRegularScheme_of_topologicalKrullDim_le_zero":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme} [AlgebraicGeometry.IsReduced X],\n  topologicalKrullDim ↥X ≤ 0 → Singularity.IsRegularScheme X",
+   "line": 44,
+   "kind": "theorem",
+   "file": "Singularity/Known/DimZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.isRegularLocalRing_of_isField":
+  {"type":
+   "∀ {R : Type u_1} [inst : CommRing R], IsField R → IsRegularLocalRing R",
+   "line": 28,
+   "kind": "theorem",
+   "file": "Singularity/Known/DimZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.integralResolutionInDim_of_resolutionInDim":
+  {"type":
+   "∀ {p n : ℕ}, Singularity.ResolutionInDim p n → Singularity.IntegralResolutionInDim p n",
+   "line": 30,
+   "kind": "theorem",
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.ResolutionOfSingularities":
+  {"type": "Prop",
+   "line": 28,
+   "kind": "def",
+   "file": "Singularity/Statements/Main.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.ResolutionInDim":
+  {"type": "ℕ → ℕ → Prop",
+   "line": 21,
+   "kind": "def",
+   "file": "Singularity/Statements/Main.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.ResolutionDimFourCharP":
+  {"type": "Prop",
+   "line": 32,
+   "kind": "def",
+   "file": "Singularity/Statements/Main.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.ReductionToIntegral":
+  {"type": "Prop",
+   "line": 26,
+   "kind": "def",
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.valuativeCriterion_sigmaDesc":
+  {"type":
+   "∀ {σ : Type u} {X : AlgebraicGeometry.Scheme} {Y : σ → AlgebraicGeometry.Scheme} (g : (i : σ) → Y i ⟶ X),\n  (∀ (i : σ), AlgebraicGeometry.ValuativeCriterion (g i)) →\n    AlgebraicGeometry.ValuativeCriterion (CategoryTheory.Limits.Sigma.desc g)",
+   "line": 147,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.sigmaι_eq_sigmaι_iff":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} {i j : σ} (x : ↥(Y i)) (y : ↥(Y j)),\n  (CategoryTheory.Limits.Sigma.ι Y i) x = (CategoryTheory.Limits.Sigma.ι Y j) y ↔ ⟨i, x⟩ = ⟨j, y⟩",
+   "line": 88,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.sigmaDesc_apply":
+  {"type":
+   "∀ {σ : Type u} {X : AlgebraicGeometry.Scheme} {Y : σ → AlgebraicGeometry.Scheme} (g : (i : σ) → Y i ⟶ X) (i : σ)\n  (x : ↥(Y i)), (CategoryTheory.Limits.Sigma.desc g) ((CategoryTheory.Limits.Sigma.ι Y i) x) = (g i) x",
+   "line": 122,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.reductionToIntegral":
+  {"type": "Singularity.ReductionToIntegral",
+   "line": 245,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.range_subset_of_preconnected":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} {T : AlgebraicGeometry.Scheme} [PreconnectedSpace ↥T] (a : T ⟶ ∐ Y)\n  (i : σ) (t : ↥T),\n  a t ∈ Set.range ⇑(CategoryTheory.Limits.Sigma.ι Y i) → Set.range ⇑a ⊆ Set.range ⇑(CategoryTheory.Limits.Sigma.ι Y i)",
+   "line": 136,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.quasiCompact_sigmaDesc":
+  {"type":
+   "∀ {σ : Type u} {X : AlgebraicGeometry.Scheme} {Y : σ → AlgebraicGeometry.Scheme} (g : (i : σ) → Y i ⟶ X) [Finite σ]\n  [∀ (i : σ), AlgebraicGeometry.QuasiCompact (g i)], AlgebraicGeometry.QuasiCompact (CategoryTheory.Limits.Sigma.desc g)",
+   "line": 185,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.nonempty_irreducibleComponentOpen":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme} [inst : AlgebraicGeometry.IsNoetherian X] {Z : Set ↥X},\n  Z ∈ irreducibleComponents ↥X → ∃ x ∈ Z, x ∈ X.irreducibleComponentOpen Z",
+   "line": 232,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isProper_sigmaDesc":
+  {"type":
+   "∀ {σ : Type u} {X : AlgebraicGeometry.Scheme} {Y : σ → AlgebraicGeometry.Scheme} (g : (i : σ) → Y i ⟶ X) [Finite σ]\n  [∀ (i : σ), AlgebraicGeometry.IsProper (g i)] [QuasiSeparatedSpace ↥(∐ Y)],\n  AlgebraicGeometry.IsProper (CategoryTheory.Limits.Sigma.desc g)",
+   "line": 204,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isNoetherian_of_isVariety":
+  {"type":
+   "∀ {k : Type u} [inst : Field k] {X : AlgebraicGeometry.Scheme} (f : X ⟶ AlgebraicGeometry.Spec ↧k)\n  [Singularity.IsVariety X f], AlgebraicGeometry.IsNoetherian X",
+   "line": 221,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isIso_stalkMap_of_isIso_restrict":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} (f : X ⟶ Y) (U : Y.Opens) [CategoryTheory.IsIso (f ∣_ U)] (x : ↥X),\n  f x ∈ U → CategoryTheory.IsIso (AlgebraicGeometry.Scheme.Hom.stalkMap f x)",
+   "line": 71,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isIso_restrict_of_le":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} (f : X ⟶ Y) {U V : Y.Opens},\n  V ≤ U → ∀ [CategoryTheory.IsIso (f ∣_ U)], CategoryTheory.IsIso (f ∣_ V)",
+   "line": 39,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isIso_restrict_iSup":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} (f : X ⟶ Y) {ι : Type u_1} (V : ι → Y.Opens),\n  (∀ (i : ι), CategoryTheory.IsIso (f ∣_ V i)) → CategoryTheory.IsIso (f ∣_ ⨆ i, V i)",
+   "line": 52,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.isClosed_range_sigmaι":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} (i : σ), IsClosed (Set.range ⇑(CategoryTheory.Limits.Sigma.ι Y i))",
+   "line": 97,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.exists_sigmaι_eq":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} (y : ↥(∐ Y)), ∃ i x, (CategoryTheory.Limits.Sigma.ι Y i) x = y",
+   "line": 84,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.exists_range_subset_of_field":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} (K : Type u) [inst : Field K] (a : AlgebraicGeometry.Spec ↧K ⟶ ∐ Y),\n  ∃ i, Set.range ⇑a ⊆ Set.range ⇑(CategoryTheory.Limits.Sigma.ι Y i)",
+   "line": 125,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.eq_of_sigmaι_eq":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} {i j : σ} (x : ↥(Y i)) (y : ↥(Y j)),\n  (CategoryTheory.Limits.Sigma.ι Y i) x = (CategoryTheory.Limits.Sigma.ι Y j) y → i = j",
+   "line": 93,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Reduction.compactSpace_sigma":
+  {"type":
+   "∀ {σ : Type u} {Y : σ → AlgebraicGeometry.Scheme} [Finite σ] [∀ (i : σ), CompactSpace ↥(Y i)], CompactSpace ↥(∐ Y)",
+   "line": 112,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Reduction.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsVariety.separated":
+  {"type":
+   "∀ {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X ⟶ AlgebraicGeometry.Spec ↧k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsSeparated f",
+   "line": 57,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsVariety.reduced":
+  {"type":
+   "∀ {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} (f : X ⟶ AlgebraicGeometry.Spec ↧k)\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsReduced X",
+   "line": 54,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsVariety.quasiCompact":
+  {"type":
+   "∀ {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X ⟶ AlgebraicGeometry.Spec ↧k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.QuasiCompact f",
+   "line": 56,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsVariety.finiteType":
+  {"type":
+   "∀ {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X ⟶ AlgebraicGeometry.Spec ↧k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.LocallyOfFiniteType f",
+   "line": 55,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsVariety":
+  {"type":
+   "{k : Type u} → [inst : Field k] → (X : AlgebraicGeometry.Scheme) → (X ⟶ AlgebraicGeometry.Spec ↧k) → Prop",
+   "line": 52,
+   "kind": "inductive",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsResolution.regular":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} {π : Y ⟶ X}, Singularity.IsResolution π → Singularity.IsRegularScheme Y",
+   "line": 47,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsResolution.proper":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} {π : Y ⟶ X}, Singularity.IsResolution π → AlgebraicGeometry.IsProper π",
+   "line": 48,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsResolution.isIso_over":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} {π : Y ⟶ X},\n  Singularity.IsResolution π → ∃ U, ↑U = Singularity.regularLocus X ∧ CategoryTheory.IsIso (π ∣_ U)",
+   "line": 49,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsResolution.dense":
+  {"type":
+   "∀ {X Y : AlgebraicGeometry.Scheme} {π : Y ⟶ X}, Singularity.IsResolution π → Dense (⇑π ⁻¹' Singularity.regularLocus X)",
+   "line": 50,
+   "kind": "theorem",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsResolution":
+  {"type": "{X Y : AlgebraicGeometry.Scheme} → (Y ⟶ X) → Prop",
+   "line": 37,
+   "kind": "inductive",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IsRegularScheme":
+  {"type": "AlgebraicGeometry.Scheme → Prop",
+   "line": 33,
+   "kind": "def",
+   "file": "Singularity/Statements/Basic.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.IntegralResolutionInDim":
+  {"type": "ℕ → ℕ → Prop",
+   "line": 21,
+   "kind": "def",
+   "file": "Singularity/Hypotheses/Integral.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Fidelity.isResolution_id":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme X → Singularity.IsResolution (CategoryTheory.CategoryStruct.id X)",
+   "line": 19,
+   "kind": "theorem",
+   "file": "Singularity/Fidelity/Positive.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.range_irreducibleComponentι":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X)\n  (hZ : Z ∈ irreducibleComponents ↥X), Set.range ⇑(X.irreducibleComponentι Z hZ) = Z",
+   "line": 67,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.mem_irreducibleComponentOpen":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X) {x : ↥X},\n  (∀ Z' ∈ irreducibleComponents ↥X, x ∈ Z' → Z' = Z) → x ∈ X.irreducibleComponentOpen Z",
+   "line": 78,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.isReduced_irreducibleComponent":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X)\n  (hZ : Z ∈ irreducibleComponents ↥X) [AlgebraicGeometry.IsReduced X],\n  AlgebraicGeometry.IsReduced (X.irreducibleComponent Z hZ)",
+   "line": 49,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.isIso_irreducibleComponentι_restrict":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X)\n  (hZ : Z ∈ irreducibleComponents ↥X) [AlgebraicGeometry.IsReduced X],\n  ∀ V ≤ X.irreducibleComponentOpen Z, CategoryTheory.IsIso (X.irreducibleComponentι Z hZ ∣_ V)",
+   "line": 84,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.isIntegral_irreducibleComponent":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X)\n  (hZ : Z ∈ irreducibleComponents ↥X) [AlgebraicGeometry.IsReduced X],\n  AlgebraicGeometry.IsIntegral (X.irreducibleComponent Z hZ)",
+   "line": 63,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.irreducibleComponentOpen_subset":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsNoetherian X] (Z : Set ↥X),\n  ↑(X.irreducibleComponentOpen Z) ⊆ Z",
+   "line": 70,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.exists_mem_irreducibleComponents":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme} (x : ↥X), ∃ Z ∈ irreducibleComponents ↥X, x ∈ Z",
+   "line": 21,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Components.eq_of_mem_of_isDomain":
+  {"type":
+   "∀ {X : AlgebraicGeometry.Scheme} {x : ↥X} [IsDomain ↑(X.presheaf.stalk x)] {Z₁ Z₂ : Set ↥X},\n  Z₁ ∈ irreducibleComponents ↥X → Z₂ ∈ irreducibleComponents ↥X → x ∈ Z₁ → x ∈ Z₂ → Z₁ = Z₂",
+   "line": 27,
+   "kind": "theorem",
+   "file": "Singularity/Scheme/Components.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Bridge.HasResolution":
+  {"type": "{S X : AlgebraicGeometry.Scheme} → (X ⟶ S) → Prop",
+   "line": 30,
+   "kind": "def",
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Bridge.FCResolutionInDim":
+  {"type": "ℕ → ℕ → Prop",
+   "line": 35,
+   "kind": "def",
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Bridge.FCResolutionCharZero":
+  {"type": "Prop",
+   "line": 41,
+   "kind": "def",
+   "file": "Singularity/Bridge/FormalConjectures.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.regularLocus_eq_compl_singularLocus":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme), Singularity.regularLocus X = X.singularLocusᶜ",
+   "line": 76,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.isReduced_of_isRegularScheme":
+  {"type":
+   "∀ {Y : AlgebraicGeometry.Scheme}, Singularity.IsRegularScheme Y → AlgebraicGeometry.IsReduced Y",
+   "line": 38,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.integralResolutionInDim_zero":
+  {"type": "∀ (n : ℕ), Singularity.IntegralResolutionInDim 0 n",
+   "line": 110,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.hasResolution_of_isResolution":
+  {"type":
+   "∀ {k : Type u} [inst : Field k] [PerfectField k] {X Y : AlgebraicGeometry.Scheme} (sX : X ⟶ AlgebraicGeometry.Spec ↧k)\n  [AlgebraicGeometry.IsIntegral X] [AlgebraicGeometry.LocallyOfFiniteType sX] (π : Y ⟶ X),\n  Singularity.IsResolution π → Singularity.Bridge.HasResolution sX",
+   "line": 45,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.genericPoint_mem_regularLocus":
+  {"type":
+   "∀ (X : AlgebraicGeometry.Scheme) [inst : AlgebraicGeometry.IsIntegral X], genericPoint ↥X ∈ Singularity.regularLocus X",
+   "line": 32,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.fcResolutionInDim_of_resolutionInDim":
+  {"type":
+   "∀ {p n : ℕ}, Singularity.ResolutionInDim p n → Singularity.Bridge.FCResolutionInDim p n",
+   "line": 94,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.fcResolutionInDim_of_integralResolutionInDim":
+  {"type":
+   "∀ {p n : ℕ}, Singularity.IntegralResolutionInDim p n → Singularity.Bridge.FCResolutionInDim p n",
+   "line": 86,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.fcResolutionCharZero":
+  {"type": "Singularity.Bridge.FCResolutionCharZero",
+   "line": 99,
+   "kind": "theorem",
+   "file": "base/SingularityBase/Bridge.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.exists_isResolution_of_isIntegral":
+  {"type":
+   "∀ {k : Type u} [inst : Field k] [CharZero k] (X : AlgebraicGeometry.Scheme) (f : X ⟶ AlgebraicGeometry.Spec ↧k)\n  [hX : Singularity.IsVariety X f] [AlgebraicGeometry.IsIntegral X], ∃ Y π, Singularity.IsResolution π",
+   "line": 82,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.dense_compl_support_of_locally_nonZeroDivisor":
+  {"type":
+   "∀ {Y : AlgebraicGeometry.Scheme} (J : Y.IdealSheafData),\n  (∀ (y : ↥Y), ∃ U, y ∈ ↑U ∧ ∃ g ∈ nonZeroDivisors ↑(Y.presheaf.obj (Opposite.op ↑U)), J.ideal U = Ideal.span {g}) →\n    Dense (↑J.support)ᶜ",
+   "line": 47,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Base.dense_basicOpen_of_mem_nonZeroDivisors":
+  {"type":
+   "∀ {A : Type u_1} [inst : CommRing A] {g : A}, g ∈ nonZeroDivisors A → Dense ↑(PrimeSpectrum.basicOpen g)",
+   "line": 33,
+   "kind": "theorem",
+   "file": "base/SingularityBase/CharZero.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.spanFinrank_maximalIdeal_quotient_add_one_le":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x ∈ IsLocalRing.maximalIdeal R →\n    x ∉ IsLocalRing.maximalIdeal R ^ 2 →\n      ∀ [inst_3 : IsLocalRing (R ⧸ Ideal.span {x})],\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R ⧸ Ideal.span {x})) + 1 ≤\n          Submodule.spanFinrank (IsLocalRing.maximalIdeal R)",
+   "line": 138,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.spanFinrank_maximalIdeal_le_spanFinrank_maximalIdeal_quotient_add_one":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x ∈ IsLocalRing.maximalIdeal R →\n    ∀ [inst_3 : IsLocalRing (R ⧸ Ideal.span {x})],\n      Submodule.spanFinrank (IsLocalRing.maximalIdeal R) ≤\n        Submodule.spanFinrank (IsLocalRing.maximalIdeal (R ⧸ Ideal.span {x})) + 1",
+   "line": 152,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.quotient_span_singleton":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {x : R},\n  x ∈ IsLocalRing.maximalIdeal R →\n    x ∉ IsLocalRing.maximalIdeal R ^ 2 →\n      IsRegularLocalRing (R ⧸ Ideal.span {x}) ∧ ringKrullDim (R ⧸ Ideal.span {x}) + 1 = ringKrullDim R",
+   "line": 241,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.of_quotient_span_singleton":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x ∈ IsLocalRing.maximalIdeal R →\n    x ∈ nonZeroDivisors R →\n      IsRegularLocalRing (R ⧸ Ideal.span {x}) →\n        IsRegularLocalRing R ∧ ringKrullDim (R ⧸ Ideal.span {x}) + 1 = ringKrullDim R",
+   "line": 275,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.not_isField_of_ringKrullDim_eq_one":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R], ringKrullDim R = 1 → ¬IsField R",
+   "line": 357,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.maximalIdeal_quotient_eq_map":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] (I : Ideal R) [inst_2 : IsLocalRing (R ⧸ I)],\n  IsLocalRing.maximalIdeal (R ⧸ I) = Ideal.map (Ideal.Quotient.mk I) (IsLocalRing.maximalIdeal R)",
+   "line": 84,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.isRegularLocalRing_iff_isIntegrallyClosed":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 → (IsRegularLocalRing R ↔ IsIntegrallyClosed R)",
+   "line": 389,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.isRegularLocalRing_iff_isDiscreteValuationRing":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [IsLocalRing R] [IsNoetherianRing R] [inst_3 : IsDomain R],\n  ringKrullDim R = 1 → (IsRegularLocalRing R ↔ IsDiscreteValuationRing R)",
+   "line": 378,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.isLocalRing_quotient_of_le_maximalIdeal":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] {I : Ideal R},\n  I ≤ IsLocalRing.maximalIdeal R → IsLocalRing (R ⧸ I)",
+   "line": 77,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.isDomain_of_isRegularLocalRing_of_ringKrullDim_eq":
+  {"type":
+   "∀ (n : ℕ) (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], ringKrullDim R = ↑n → IsDomain R",
+   "line": 298,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.isDomain_of_isRegularLocalRing":
+  {"type":
+   "∀ (R : Type u) [inst : CommRing R] [IsRegularLocalRing R], IsDomain R",
+   "line": 344,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.exists_span_insert_eq_maximalIdeal":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] {x : R},\n  x ∈ IsLocalRing.maximalIdeal R →\n    x ∉ IsLocalRing.maximalIdeal R ^ 2 →\n      ∃ t,\n        ↑t ⊆ ↑(IsLocalRing.maximalIdeal R) ∧\n          t.card + 1 = Submodule.spanFinrank (IsLocalRing.maximalIdeal R) ∧\n            IsLocalRing.maximalIdeal R = Ideal.span (insert x ↑t)",
+   "line": 91,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.exists_ringKrullDim_eq_natCast":
+  {"type":
+   "∀ (R : Type u) [inst : CommRing R] [FiniteRingKrullDim R], ∃ n, ringKrullDim R = ↑n",
+   "line": 63,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.exists_mem_maximalIdeal_notMem_sq_notMem_minimalPrimes":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R],\n  0 < ringKrullDim R →\n    ∃ x ∈ IsLocalRing.maximalIdeal R, x ∉ IsLocalRing.maximalIdeal R ^ 2 ∧ ∀ p ∈ minimalPrimes R, x ∉ p",
+   "line": 203,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]},
+  "Singularity.Algebra.eq_maximalIdeal_of_isPrime_of_ne_bot":
+  {"type":
+   "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsLocalRing R] [IsNoetherianRing R] [IsDomain R],\n  ringKrullDim R = 1 → ∀ {P : Ideal R} [hP : P.IsPrime], P ≠ ⊥ → P = IsLocalRing.maximalIdeal R",
+   "line": 363,
+   "kind": "theorem",
+   "file": "Singularity/Algebra/Regular.lean",
+   "axioms": ["Classical.choice", "Quot.sound", "propext"]}},
+ "commit": "93569f04468849dd451999198bd0e1aed041e97c",
+ "built": "2026-11-26"}

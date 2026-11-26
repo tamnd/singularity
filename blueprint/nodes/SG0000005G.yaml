@@ -1,0 +1,13 @@
+tag: SG0000005G
+kind: counterexample
+title: A kangaroo path where the codimension of the directrix goes down from 2 to 1
+statement: Over a field of characteristic 2 in the variables $x, y, z$, let $g_0 = x^2 y^3 z + x^2 y z^3 + x^4 y z^2$ and $\Delta = \{y, z\}$. Then $P_0$ is in the first case with $\rho = 4$ and $\tau_\rho(P_0) = 2$. At the point of the $y$-chart with $t_x = 0$ and $t_z = 1$, the new point $P_1$ is in the second case with $\rho = 4$ and $\tau_\rho(P_1) = 2$, and the component $z = 0$ leaves. At the origin of the $y$-chart of $P_1$, the new point $P_2$ is in the first case with $\rho = 4$ and $\tau_\rho(P_2) = 1$. So $P_0, P_1, P_2$ is a kangaroo path with $\tau_\rho(P_2) < \tau_\rho(P_0)$, and SG0000005D is false.
+sources:
+- paper: Hau10
+uses:
+- SG0000005D
+- SG0000005E
+tier: T2
+route:
+- R1
+notes: Here $r = (0, 1, 1)$ and $G_0 = x^2 y^2 + x^2 z^2 + x^4 z$. The generators of $\widetilde\Theta(G_0)$ are $e_y = G_0$, $e_z = x^2 y^2 + x^2 z^2$ and $\partial_x G_0 = 0$, and the part of degree 4 of $G_0$ is $F_0 = x^2 (y + z)^2$. By SG0000005E, $T_\rho(P_0) = T(F_0) = \{a_x = 0, a_y = a_z\}$. At $P_1$, $g_1 = y^4 G_1$ with $G_1 = x^2 z^3 + x^4 y + x^4 y z^2$, the element $e_y$ has order 5, and the only form of degree 4 is $\operatorname{in}(\partial_z G_1) = x^2 z^2$. At $P_2$, $g_2 = y^7 G_2$ with $G_2 = x^4 + x^2 z^3 + x^4 y^2 z^2$, and $e_y = G_2$ has the initial form $x^4$, so $T_\rho(P_2) = \{a_x = 0\}$. The form $x^2 z^2$ of the free derivative $\partial_z G_2$ does not count in the first case, so $\widetilde\tau(P_2) = 2$ but $\tau_\rho(P_2) = 1$. This agrees with SG0000005B. The example was checked by hand and by the test `kverify.py`, and the test `tau35.py` found a longer form with three points of the second case. There is no Lean computation yet.
