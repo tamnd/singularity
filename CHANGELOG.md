@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.40 - 2026-11-26
+
 ### Changed
 
 - SG0000000Y: the note says that the value group of an Abhyankar valuation is free of finite rank in Lean (tamnd/singularity-lean#146). The residue field part is not in Lean.
