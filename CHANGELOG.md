@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000005F: the node no longer uses SG0000005D. The theorem proves a case of the conjecture, and its proof does not use the conjecture. The status is now proved.
+
 ## 0.4.41 - 2026-11-26
 
 ### Added
