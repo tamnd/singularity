@@ -1,0 +1,13 @@
+tag: SG0000005R
+kind: theorem
+title: The corner curves of a two-chart origin run have the order of G at least rho
+statement: Let $n = 3$ with the variables $x, y, z$, and let $P_N, P_{N+1}, \dots$ be an infinite run where each step is at the origin of the $y$-chart or of the $z$-chart and each chart occurs an infinite number of times. Then there is an $m_0$ such that for each $m \ge m_0$ the initial form of $G_m$ is $c \, x_m^{d_m}$ with $c \ne 0$, and the corner curves $V(x_m, y_m)$ and $V(x_m, z_m)$ have $\nu^G = d_m \ge \rho$. If also $p \nmid d_m$ and $\rho = d_m - 1$, then the forms of degree $\rho$ of $\widetilde\Theta(G_m)$ are the multiples of $x_m^{\rho}$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005K
+- SG0000005M
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.13.20 of Volume 7 of the handbook, with Lemma 3.13.19. It gives a positive answer to Question 3.13.18 for these runs. The exponents of $y$ and $z$ at $P_m$ are given by two integer columns with the determinant $\pm 1$, and the cones that they span shrink to a ray with an irrational slope $\theta$. The monomial of $g_N$ with the least value of $(i + j) + \theta (i + k)$ and the largest exponent of $x$ gives the initial form of $G_m$ and the order along both corner curves for $m$ large. The proof is in note 26 of the research notes, with a computer test over $\mathbb{F}_2$ and $\mathbb{F}_3$. The result is not in Lean.

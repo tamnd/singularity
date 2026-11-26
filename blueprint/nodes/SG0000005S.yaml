@@ -1,0 +1,12 @@
+tag: SG0000005S
+kind: example
+title: Blowups of corner curves alone can keep rho for ever
+statement: Let $n = 3$, $\Delta = \{y, z\}$ and $g = x^a y^b z^c$ with $a \ge 2$, $p \nmid a$ and $a + b \ge p$. Then $\rho = a - 1$ and $d = a$. The corner curve $V(x, y)$ has $\nu^G = a \ge \rho$ and satisfies the conditions (H1) and (H2) of a permissible center. After its blowup, the only point over the origin with the same $\rho$ is the origin of the $y$-chart, where $g' = x'^a y^{a + b - p} z^c$. The same holds for $V(x, z)$. So each sequence of blowups of corner curves keeps $\rho = a - 1$ for ever.
+sources:
+- paper: CJS20
+uses:
+- SG0000005R
+tier: T2
+route:
+- R1
+notes: This is Example 3.13.21 of Volume 7 of the handbook. The surface $V(x)$ has $\nu^G = a \ge \rho$, and its blowup gives $\rho = 0$. In Example 3.13.15 (SG0000005M) the corner curves work and no surface works. So the centers must come from the whole locus where $\nu^G \ge \rho$. The proof is in note 26 of the research notes. The result is not in Lean.
