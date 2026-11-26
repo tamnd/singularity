@@ -1,0 +1,13 @@
+tag: SG0000005Z
+kind: theorem
+title: The corner curves of an origin run with k charts have the order of G at least rho
+statement: Let $P_N, P_{N+1}, \dots$ be an origin run in $n$ variables, let $L$ be a set of $k$ letters with $2 \le k \le n - 1$, and assume that each step has a letter in $L$, that each letter of $L$ occurs an infinite number of times, and that $L \subseteq \Delta_N$. Let $U$ be the other coordinates. Then the cones of the exponent columns shrink to one ray with positive and rationally independent entries. There is an $m_0$ such that for each $m \ge m_0$ the initial form of $G_m$ is a nonzero form $h$ in the variables of $U$ of a degree $d_m \in \{\rho(P_m), \rho(P_m) + 1\}$, and for each $t \in L$ the curve $C_t$, the zero set of $x_U$ and of the $x_s$ with $s \in L$ and $s \ne t$, lies in a component of $\Delta_m$ and has $\nu^G_{C_t}(P_m) = d_m$. If $U = \{u\}$ and $\rho(P_m) = d_m - 1$, the forms of degree $\rho$ of $\widetilde\Theta(G_m)$ are the multiples of $x_u^\rho$. For $m$ large the coordinate strata between the curves and $V(x_U)$ have an explicit order of $G$, and it is less than $d_m$ unless the monomials of the least value have one value of $\sigma$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005X
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.14.7 of Volume 7 of the handbook, with Lemma 3.14.3, Proposition 3.14.4 and Lemma 3.14.6. It is the Theorem 2 and Proposition 3.5 of note 31 of the research notes with the statement of note 32. With $\sigma(e)$ the sum of the exponents of the variables of $U$ and $q_t(e) = (k - 1) e_t + \sigma(e) - p$, the exponent of $x_s$ at $P_m$ is $(q(e) \cdot c_s - \sigma(e) + p)/(k - 1)$. SG0000005X shows that no nonzero integer vector is orthogonal to a vector of the limit cone, so the cone is one ray $\omega$. The monomials with the least value of $q \cdot \omega$ and the largest $\sigma$ give $h$. The dichotomy SG0000003F gives $d_m \in \{\rho, \rho + 1\}$. For $n = 3$ and $k = 2$ this is Theorem 3.13.20 (SG0000005R). The case $|U| \ge 2$ of the directrix and the runs with translations are open. Note 32 checks the theorem on $14530$ random runs for $(n, k)$ equal to $(3, 2)$, $(4, 2)$, $(4, 3)$, $(5, 3)$ and $(5, 4)$, with no failure. The result is not in Lean.

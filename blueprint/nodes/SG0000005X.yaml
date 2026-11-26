@@ -1,0 +1,11 @@
+tag: SG0000005X
+kind: lemma
+title: A potential for the difference of two exponent vectors along an origin run
+statement: Let $\delta \in \mathbb{Z}^k$, let $P$ be the sum of the positive entries of $\delta$, let $Q$ be the sum of the absolute values of the negative entries, and let $\Phi(\delta) = \min(P, Q)$. A step with the letter $j$ replaces $\delta_j$ by $\delta_1 + \dots + \delta_k$. Then $\Phi$ does not go up under a step. If $\delta \ge 0$ or $\delta \le 0$, then the same holds after each step. If $W_1, \dots, W_w$ are disjoint windows of consecutive steps, each with all $k$ letters, and $\delta$ has a negative entry and a positive entry at the end of $W_w$, then $w \le \Phi(\delta_0) - 1$.
+sources:
+- paper: CJS20
+uses: []
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.14.2 of Volume 7 of the handbook, the Lemma Y of note 31 of the research notes. An origin step with the letter $j$ changes each exponent vector $e$ by $e_j \mapsto |e| - p$, so the difference of two exponent vectors changes by the rule of the lemma. If the sum $S$ of the entries is positive, then a step at a negative entry makes $Q$ smaller and a step at another entry keeps $Q$, and the case $S \le 0$ is the same. In a window where $\Phi$ does not change, no step is at an entry that is negative at the start, so a window with all letters makes $\Phi$ smaller. It replaces the angle and the primitive vector of the proof of Theorem 3.13.20 (SG0000005R), which work only for two letters. Note 32 checks the lemma by an exhaustive test for $k = 2, 3, 4$ in a box and by a full search of the words to the depth $10$, with no failure. The bound is reached for $\Phi(\delta_0) = 1, 2, 3$. The result is not in Lean.
