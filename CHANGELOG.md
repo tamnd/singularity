@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- Note the passage from the base field to the decomposition field (tamnd/singularity-lean#141) on SG0000001F.
+
 ## 0.4.37 - 2026-11-26
 
 ### Changed
