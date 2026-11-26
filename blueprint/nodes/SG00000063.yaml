@@ -1,0 +1,13 @@
+tag: SG00000063
+kind: lemma
+title: The residual order of the log-Jacobian ideal does not depend on the free coordinate
+statement: Let $n = 3$, $\Delta = \{V(y), V(z)\}$, and let $g$ be clean with $\Theta(g) = (g_x, y g_y, z g_z) = x^r \widetilde\Theta(G)$. Then $\Theta(g + h^p) = \Theta(g)$, $x^r$ is the largest monomial in $y, z$ that divides $\Theta(g)$, and $\rho = \operatorname{ord} \widetilde\Theta(G)$. These do not change if $x$ is replaced by any $x''$ such that $(x'', y, z)$ is a regular system of parameters, or if $g$ is multiplied by $\varepsilon^p$ with $\varepsilon$ a unit. A corner run with free translations from $P_m$ is a corner run with free translations in the coordinates $(x'', y_m, z_m)$ for each such $x''$, with the same points and the same $\rho$.
+sources:
+- paper: CJS20
+uses:
+- SG0000003E
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.15.2 of Volume 7 of the handbook, with Remark 3.15.3. The module of the logarithmic derivations does not depend on the free coordinate, and a change of the coordinate and the cleaning change $g$ by a $p$-th power. For the run, write $x'' = x u + f(y, z)$ with $u$ a unit. After a chart with the chart variable $L$, the function $x'' / L$ minus its value $t''$ at the new point is again a free coordinate, since its derivative in $x_1$ at the point is $u(0)$. The claim of note 30 that the new coordinate is $x_1$ times a unit is false, with the counterexample $u = 1 + y$, $t = 1$ and the $y$-chart. The fix and the proof of the second claim are in note 33 of the research notes. The result is not in Lean.

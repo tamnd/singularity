@@ -1,0 +1,14 @@
+tag: SG00000065
+kind: theorem
+title: If the dominant index is 1 then only a finite number of nonzero translations have y^b M_{j+1} not a p-th power
+statement: Let $g \in K[[y, z]][x]$ be clean at $P_N$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations with an infinite number of nonzero translations. Assume that the dominant index of Kaplansky of $g$ and the sequence of the translations is $1$, for example that $\deg_x g < p$. Let $y^b$ be the leading monomial of $g_x(\varphi_\infty)$. Then only a finite number of the $t_j \ne 0$ have $y^b M_{j+1}$ not a $p$-th power.
+sources:
+- paper: CJS20
+uses:
+- SG00000062
+- SG0000005R
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.15.12 of Volume 7 of the handbook, with Lemma 3.15.9. The proof works in the Hahn field $K((t^{\mathbb{Z} + \theta \mathbb{Z}}))$, where $\varphi_\infty$ is defined. With $W = \beta_1 + 1 + \theta$, the Taylor expansion of $g$ at $\varphi_\infty$ shows that the cleaning of $g(\varphi_m)$ is $-c_b \sum_{j \ge m} t_j (y^b M_{j+1})^\natural$ modulo terms of value at least $W$. The left side has only a finite number of monomials below $W$. The proof of part 3 in note 30 compares the terms with the wrong number, and note 33 of the research notes gives the correct proof. The case of a dominant index larger than $1$ is open, with a partial result in Remark 3.15.13. The result is not in Lean.

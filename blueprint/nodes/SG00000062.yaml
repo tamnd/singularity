@@ -1,0 +1,13 @@
+tag: SG00000062
+kind: theorem
+title: The translations of a corner run give a pseudo Cauchy sequence of transcendental type
+statement: Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a sequence of points where $V(y)$ and $V(z)$ are in $\Delta$ and $V(x)$ is not, each step is the $y$-chart or the $z$-chart followed by a translation $t_m \in K$ in $x$, and each chart occurs an infinite number of times. Let $v$ be the monomial valuation of the irrational ray of the run on $H = K(y_N, z_N)$, let $\hat H$ be the completion, let $j_1 < j_2 < \cdots$ be the indices with $t_j \ne 0$, and put $a_i = \varphi_{j_i + 1}$. If an infinite number of the $t_j$ are not $0$, then $(a_i)$ is a pseudo Cauchy sequence of transcendental type over $\hat H$. So for each $f \in \hat H[X]$ the value $v(f(a_i))$ is constant for $i$ large.
+sources:
+- paper: Kuh10
+- paper: CJS20
+uses:
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.15.7 of Volume 7 of the handbook, with Lemma 3.15.6. The sequence has no limit in $\hat H$, since each element of $\hat H$ has only a finite number of terms below each value in the Hahn field $K((t^{\mathbb{Z} + \theta \mathbb{Z}}))$ and a limit would contain all the terms $t_j M_{j+1}$. The valuation is an Abhyankar valuation, so the henselization $H^h$ is defectless by the generalized stability theorem of Kuhlmann [Kuh10, Theorem 1.1], and a henselian defectless field is algebraically maximal. A density argument moves a polynomial over $\hat H$ to a polynomial over $H$ with the same values at the $a_i$. A theorem of Kaplansky (Maximal fields with valuations, Duke Math. J. 9 (1942)) then gives a limit in $H^h$, which is contained in $\hat H$. The proof is in note 30 of the research notes, with the density argument of the referee report in note 33. The result is not in Lean.
