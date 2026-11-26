@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.48 - 2026-11-26
+
 ### Added
 
 - The nodes SG0000005H and SG0000005J are the two infinite runs of Volume 7, Section 3.12 of the handbook: the run along the $y$-axis and the run at an isolated point of the locus of $\rho$. Both are proved in Lean by `Singularity.CurveRuns.curveRun` and `Singularity.CurveRuns.isolatedRun` (tamnd/singularity-lean#162). The Lean proof does not give the claim that the origin is isolated in the locus.
