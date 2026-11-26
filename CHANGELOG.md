@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.59 - 2026-11-27
+
 ### Added
 
 - SG00000062, SG00000063, SG00000064, SG00000065, SG00000066, SG00000067 and SG00000068 for the runs with free translations of Volume 7, Section 3.15 of the handbook. SG00000062 says that the sequence of the translations of a corner run is a pseudo Cauchy sequence of transcendental type over the completion. SG00000063 says that $\rho$ does not depend on the cleaning, on the free coordinate or on a factor $\varepsilon^p$, and that a change of the free coordinate gives again a corner run with free translations. SG00000064 makes $\partial_x g_m$ a monomial times a unit for $m$ large when the run has an infinite number of nonzero translations. SG00000065 is the tame case, where the dominant index of Kaplansky is $1$. SG00000066 says that no corner run with free translations of $\mu x + B_0$ keeps $\rho \ge 1$. SG00000067 gives only a finite number of nonzero translations when $\deg_x g < p$. SG00000068 is the run of $x^2 y^{p-2} z^{p-2}$, with $\rho = 1$ at each point. The proofs are in notes 30 and 33 of the research notes. Note 33 corrects Theorem 6 of note 30, which said that no such run keeps $\rho \ge 1$. None of the nodes has a Lean proof.
