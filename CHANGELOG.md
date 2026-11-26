@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The node SG0000005R is Theorem 3.13.20 of Volume 7 of the handbook: for $n = 3$ and an infinite run of the two corner charts at the origin, both corner curves have $\nu^G \ge \rho$ for $m$ large. The node SG0000005S is Example 3.13.21: the blowups of the corner curves alone can keep $\rho$ for ever. Both nodes have proofs in the text and no Lean proof.
+
 ## 0.4.51 - 2026-11-27
 
 ### Added
