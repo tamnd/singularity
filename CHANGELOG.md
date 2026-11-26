@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- Note the choice of the monomial subfield of an Abhyankar valuation (tamnd/singularity-lean#138) on SG0000001E.
+
 ## 0.4.36 - 2026-11-26
 
 ### Added
