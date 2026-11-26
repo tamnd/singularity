@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.43 - 2026-11-26
+
 ### Changed
 
 - SG0000005D: the field `negation` is `Singularity.KangarooCounterexample.not_kangarooPathConjecture`. The status is now refuted. The entry of release 0.4.41 said that the map has no status for a false conjecture. That was not correct.
