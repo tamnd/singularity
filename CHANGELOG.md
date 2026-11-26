@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.53 - 2026-11-27
+
 ### Added
 
 - The node SG0000005T is Lemma 3.13.14 of Volume 7 of the handbook for a coordinate subvariety and polynomial $h$: the order of $G$ along $Z$ is at most the order of the log-Jacobian ideal along $Z$ plus 1. It is proved in Lean by `Singularity.orderGAlong_le_idealOrdAlong_add_one` (tamnd/singularity-lean#173). The node SG0000005M uses it. The records pin the Lean release 0.4.38.
