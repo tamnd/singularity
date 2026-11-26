@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.49 - 2026-11-27
+
 ### Added
 
 - The node SG0000005M is Example 3.13.15 of Volume 7 of the handbook: a run of $g = x^p y z + y^{p+2} z^{p+1}$ with $\Delta = \{y, z\}$ that takes the corners for ever and lies on no subvariety of positive dimension along which the order of $G$ is at least $\rho$. It shows that the conjecture SG0000005K is false. It has no Lean proof yet.
