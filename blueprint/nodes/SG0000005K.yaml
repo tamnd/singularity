@@ -1,0 +1,15 @@
+tag: SG0000005K
+kind: conjecture
+title: Each infinite run where rho stays lies in a subvariety of the locus of the order of G
+statement: Let $P_0, P_1, \dots$ be an infinite run of point blowups where $\rho \ge 1$ stays. Then from some index on, the points lie on the strict transforms of a regular formal subvariety $Z$ of positive dimension, and the order of $G$ along $Z$ is at least $\rho$.
+sources:
+- paper: CJS20
+- paper: CP19
+- paper: Chr79
+uses:
+- SG0000005H
+- SG0000005J
+tier: T2
+route:
+- R1
+notes: This is Hypothesis 3.13.12 of Volume 7 of the handbook, and Hypothesis H4' of milestone S7.18 (tamnd/singularity#245). The order along $Z$ is the intrinsic order of the clean part of $g$ along $Z$, minus the entries of $r$ for the components of $\Delta$ that contain $Z$. The case $\rho = 0$ is excluded, because $g = x^{p+1} y^{p+1}$ with $\Delta = \{x, y\}$ has $\rho = 0$ and the corner charts keep it. In two variables the form with a regular curve not in $\Delta$ holds. In three variables a curve is not enough. For example, $g = x^p y z$ with $\Delta = \{y, z\}$ has a run that takes the $y$-chart and the $z$-chart in turn, and it lies on the surface $x = 0$. The example of [CP19, Example 3.18], $g = x_2^p x_3^p x_4 + x_1^p x_3$ with $\Delta = \{1, 2\}$, has runs along transcendental arcs in the plane $x_1 = x_3 = 0$, so the subvariety $Z$ can be needed in place of the arc. The open step is a run with infinitely many corner steps (Lemma C of note 20 of the research notes). If the conjecture holds, a run at an isolated point of the locus of the order of $G$ ends.

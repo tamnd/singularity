@@ -4,6 +4,16 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes SG0000005H and SG0000005J are the two infinite runs of Volume 7, Section 3.12 of the handbook: the run along the $y$-axis and the run at an isolated point of the locus of $\rho$. Both are proved in Lean by `Singularity.CurveRuns.curveRun` and `Singularity.CurveRuns.isolatedRun` (tamnd/singularity-lean#162). The Lean proof does not give the claim that the origin is isolated in the locus.
+- The node SG0000005K is the hypothesis H4' of Volume 7, Section 3.13: each infinite run where $\rho \ge 1$ stays lies on a subvariety of positive dimension along which the order of $G$ is at least $\rho$. It is open.
+- The paper Chr79 is new. It is the theorem of Christol on automatic series, which Volume 7, Section 3.13 uses for the transcendental curve of the example of Cossart and Piltant.
+
+### Changed
+
+- The records are pinned at singularity-lean fb37ddb (release v0.4.35), with 2607 declarations.
+
 ## 0.4.47 - 2026-11-26
 
 ### Added
