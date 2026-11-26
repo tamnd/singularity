@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.41 - 2026-11-26
+
 ### Added
 
 - SG0000005E: in the first case the directrix of the log-Jacobian order is the intersection of the directrices of the forms $E_i F = r_i F + x_i \partial_i F$ for $i \in \Delta$ (Volume 7, Lemma 3.11.4 of the handbook). The Lean statement and proof are `Singularity.logJacobianDirectrix_eq_iInf_caseAForm`.
