@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "dd13454338dc13e56bd8f5a118e22d8f2ef8e883",
+  "commit": "2aaf5381be452c41764d162bd912d46ab2b945f8",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-26",
- "commit": "d11f452ce72357e9b749d03522552137f9eb5128",
+ "commit": "5001424f92de31e3f182afd0d890b0825d82f515",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -5224,14 +5224,14 @@
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "inductive",
-   "line": 62,
+   "line": 71,
    "type": "Type"
   },
   "Singularity.CornerRuns.CornerData.IsGood": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 85,
+   "line": 94,
    "type": "Singularity.CornerRuns.CornerData \u2192 Prop"
   },
   "Singularity.CornerRuns.CornerData.IsGood.y": {
@@ -5240,7 +5240,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 90,
+   "line": 99,
    "type": "\u2200 {D : Singularity.CornerRuns.CornerData}, D.IsGood \u2192 D.y.IsGood"
   },
   "Singularity.CornerRuns.CornerData.IsGood.z": {
@@ -5249,21 +5249,21 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 96,
+   "line": 105,
    "type": "\u2200 {D : Singularity.CornerRuns.CornerData}, D.IsGood \u2192 D.z.IsGood"
   },
   "Singularity.CornerRuns.CornerData.a": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 66,
+   "line": 75,
    "type": "Singularity.CornerRuns.CornerData \u2192 \u2115"
   },
   "Singularity.CornerRuns.CornerData.b": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 68,
+   "line": 77,
    "type": "Singularity.CornerRuns.CornerData \u2192 \u2115"
   },
   "Singularity.CornerRuns.CornerData.ctorIdx": {
@@ -5276,14 +5276,14 @@
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 88,
+   "line": 97,
    "type": "Singularity.CornerRuns.CornerData.start.IsGood"
   },
   "Singularity.CornerRuns.CornerData.lam": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 72,
+   "line": 81,
    "type": "Singularity.CornerRuns.CornerData \u2192 \u2115"
   },
   "Singularity.CornerRuns.CornerData.mk.inj": {
@@ -5310,7 +5310,7 @@
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 70,
+   "line": 79,
    "type": "Singularity.CornerRuns.CornerData \u2192 \u2115"
   },
   "Singularity.CornerRuns.CornerData.noConfusionType": {
@@ -5323,21 +5323,21 @@
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 76,
+   "line": 85,
    "type": "Singularity.CornerRuns.CornerData"
   },
   "Singularity.CornerRuns.CornerData.y": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 79,
+   "line": 88,
    "type": "Singularity.CornerRuns.CornerData \u2192 Singularity.CornerRuns.CornerData"
   },
   "Singularity.CornerRuns.CornerData.z": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 82,
+   "line": 91,
    "type": "Singularity.CornerRuns.CornerData \u2192 Singularity.CornerRuns.CornerData"
   },
   "Singularity.CornerRuns.X_mul_pderiv_one_cornerM": {
@@ -5348,7 +5348,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 259,
+   "line": 268,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115),\n  MvPolynomial.X 1 * (MvPolynomial.pderiv 1) (Singularity.CornerRuns.cornerM p mu lam) =\n    \u2191(mu + p) * Singularity.CornerRuns.cornerM p mu lam"
   },
   "Singularity.CornerRuns.X_mul_pderiv_two_cornerM": {
@@ -5359,7 +5359,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 271,
+   "line": 280,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115),\n  MvPolynomial.X 2 * (MvPolynomial.pderiv 2) (Singularity.CornerRuns.cornerM p mu lam) =\n    \u2191(lam + p) * Singularity.CornerRuns.cornerM p mu lam"
   },
   "Singularity.CornerRuns.cornerE1": {
@@ -5370,7 +5370,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 126,
+   "line": 135,
    "type": "\u2115 \u2192 Singularity.CornerRuns.CornerData \u2192 Fin 3 \u2192\u2080 \u2115"
   },
   "Singularity.CornerRuns.cornerE2": {
@@ -5381,7 +5381,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 130,
+   "line": 139,
    "type": "\u2115 \u2192 Singularity.CornerRuns.CornerData \u2192 Fin 3 \u2192\u2080 \u2115"
   },
   "Singularity.CornerRuns.cornerE2_ne_cornerE1": {
@@ -5392,7 +5392,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 138,
+   "line": 147,
    "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.CornerRuns.cornerE2 p D \u2260 Singularity.CornerRuns.cornerE1 p D"
   },
   "Singularity.CornerRuns.cornerG": {
@@ -5403,7 +5403,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 112,
+   "line": 121,
    "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 MvPolynomial (Fin 3) (ZMod p)"
   },
   "Singularity.CornerRuns.cornerG_eq": {
@@ -5414,7 +5414,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 219,
+   "line": 228,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115),\n  Singularity.CornerRuns.cornerG p mu lam =\n    (MvPolynomial.monomial (Finsupp.single 0 p)) 1 +\n      (MvPolynomial.monomial (Finsupp.single 1 (mu + p) + Finsupp.single 2 (lam + p))) 1"
   },
   "Singularity.CornerRuns.cornerM": {
@@ -5425,7 +5425,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 108,
+   "line": 117,
    "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 MvPolynomial (Fin 3) (ZMod p)"
   },
   "Singularity.CornerRuns.cornerPoint": {
@@ -5436,7 +5436,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 120,
+   "line": 129,
    "type": "(p : \u2115) \u2192\n  [inst : Fact (Nat.Prime p)] \u2192 Singularity.CornerRuns.CornerData \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
   },
   "Singularity.CornerRuns.cornerPoly": {
@@ -5447,7 +5447,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 116,
+   "line": 125,
    "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 Singularity.CornerRuns.CornerData \u2192 MvPolynomial (Fin 3) (ZMod p)"
   },
   "Singularity.CornerRuns.cornerPoly_eq_monomial": {
@@ -5458,7 +5458,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 134,
+   "line": 143,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.CornerRuns.cornerPoly p D =\n    (MvPolynomial.monomial (Singularity.CornerRuns.cornerE1 p D)) 1 +\n      (MvPolynomial.monomial (Singularity.CornerRuns.cornerE2 p D)) 1"
   },
   "Singularity.CornerRuns.cornerPoly_eq_mul": {
@@ -5469,7 +5469,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 211,
+   "line": 220,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.CornerRuns.cornerPoly p D =\n    (MvPolynomial.monomial (Finsupp.single 1 D.a + Finsupp.single 2 D.b)) 1 *\n      Singularity.CornerRuns.cornerG p D.mu D.lam"
   },
   "Singularity.CornerRuns.cornerPoly_ne_zero": {
@@ -5480,7 +5480,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 145,
+   "line": 154,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData), Singularity.CornerRuns.cornerPoly p D \u2260 0"
   },
   "Singularity.CornerRuns.cornerRun": {
@@ -5491,7 +5491,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 543,
+   "line": 575,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  (\u2200 (k : \u2115),\n      Singularity.RhoStep p p (Singularity.CornerRuns.cornerRunPoint p Singularity.SurfaceRuns.alternate k)\n        (Singularity.CornerRuns.cornerRunPoint p Singularity.SurfaceRuns.alternate (k + 1))) \u2227\n    (\u2200 (k : \u2115),\n        Singularity.logJacobianOrder (Singularity.CornerRuns.cornerRunPoint p Singularity.SurfaceRuns.alternate k).1\n            (Singularity.CornerRuns.cornerRunPoint p Singularity.SurfaceRuns.alternate k).2 =\n          \u2191p) \u2227\n      Function.Injective (Singularity.CornerRuns.cornerRunPoint p Singularity.SurfaceRuns.alternate)"
   },
   "Singularity.CornerRuns.cornerRunPoint": {
@@ -5502,7 +5502,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 508,
+   "line": 540,
    "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 (\u2115 \u2192 Bool) \u2192 \u2115 \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
   },
   "Singularity.CornerRuns.cornerRunPoint_injective": {
@@ -5513,7 +5513,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 523,
+   "line": 555,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool), Function.Injective (Singularity.CornerRuns.cornerRunPoint p c)"
   },
   "Singularity.CornerRuns.cornerRun_of_charts": {
@@ -5524,8 +5524,19 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 533,
+   "line": 565,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool),\n  (\u2200 (k : \u2115),\n      Singularity.RhoStep p p (Singularity.CornerRuns.cornerRunPoint p c k)\n        (Singularity.CornerRuns.cornerRunPoint p c (k + 1))) \u2227\n    (\u2200 (k : \u2115),\n        Singularity.logJacobianOrder (Singularity.CornerRuns.cornerRunPoint p c k).1\n            (Singularity.CornerRuns.cornerRunPoint p c k).2 =\n          \u2191p) \u2227\n      Function.Injective (Singularity.CornerRuns.cornerRunPoint p c)"
+  },
+  "Singularity.CornerRuns.cornerRun_orderGAlong_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
+   "kind": "theorem",
+   "line": 586,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool) (k : \u2115) (S : Finset (Fin 3)),\n  \u00ac(0 \u2208 S \u2227 (1 \u2208 S \u2228 2 \u2208 S)) \u2192\n    Singularity.orderGAlong p (Singularity.CornerRuns.cornerRunPoint p c k).1 S\n        (Singularity.CornerRuns.cornerRunPoint p c k).2 <\n      \u2191p"
   },
   "Singularity.CornerRuns.cornerRun_two": {
    "axioms": [
@@ -5535,14 +5546,14 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 556,
+   "line": 597,
    "type": "(\u2200 (k : \u2115),\n    Singularity.RhoStep 2 2 (Singularity.CornerRuns.cornerRunPoint 2 Singularity.SurfaceRuns.alternate k)\n      (Singularity.CornerRuns.cornerRunPoint 2 Singularity.SurfaceRuns.alternate (k + 1))) \u2227\n  (\u2200 (k : \u2115),\n      Singularity.logJacobianOrder (Singularity.CornerRuns.cornerRunPoint 2 Singularity.SurfaceRuns.alternate k).1\n          (Singularity.CornerRuns.cornerRunPoint 2 Singularity.SurfaceRuns.alternate k).2 =\n        2) \u2227\n    Function.Injective (Singularity.CornerRuns.cornerRunPoint 2 Singularity.SurfaceRuns.alternate)"
   },
   "Singularity.CornerRuns.cornerSeq": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "def",
-   "line": 454,
+   "line": 486,
    "type": "(\u2115 \u2192 Bool) \u2192 \u2115 \u2192 Singularity.CornerRuns.CornerData"
   },
   "Singularity.CornerRuns.cornerSeq_modEq": {
@@ -5553,7 +5564,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 477,
+   "line": 509,
    "type": "\u2200 (p : \u2115) (c : \u2115 \u2192 Bool) (k : \u2115),\n  \u2191(Singularity.CornerRuns.cornerSeq c k).a * (\u2191(Singularity.CornerRuns.cornerSeq c k).lam + \u2191p) -\n      \u2191(Singularity.CornerRuns.cornerSeq c k).b * (\u2191(Singularity.CornerRuns.cornerSeq c k).mu + \u2191p) \u2261\n    -1 [ZMOD \u2191p]"
   },
   "Singularity.CornerRuns.cornerSeq_not_dvd": {
@@ -5564,7 +5575,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 487,
+   "line": 519,
    "type": "\u2200 (p : \u2115) [Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool) (k : \u2115),\n  \u00ac(p \u2223 (Singularity.CornerRuns.cornerSeq c k).a \u2227 p \u2223 (Singularity.CornerRuns.cornerSeq c k).b) \u2227\n    \u00ac(p \u2223 (Singularity.CornerRuns.cornerSeq c k).a + (Singularity.CornerRuns.cornerSeq c k).mu + p \u2227\n        p \u2223 (Singularity.CornerRuns.cornerSeq c k).b + (Singularity.CornerRuns.cornerSeq c k).lam + p)"
   },
   "Singularity.CornerRuns.cornerSeq_spec": {
@@ -5574,14 +5585,14 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 463,
+   "line": 495,
    "type": "\u2200 (c : \u2115 \u2192 Bool) (k : \u2115),\n  (Singularity.CornerRuns.cornerSeq c k).IsGood \u2227\n    1 \u2264 (Singularity.CornerRuns.cornerSeq c k).a \u2227 1 \u2264 (Singularity.CornerRuns.cornerSeq c k).b"
   },
   "Singularity.CornerRuns.cornerSeq_succ": {
    "axioms": [],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 460,
+   "line": 492,
    "type": "\u2200 (c : \u2115 \u2192 Bool) (k : \u2115),\n  Singularity.CornerRuns.cornerSeq c (k + 1) =\n    if c k = true then (Singularity.CornerRuns.cornerSeq c k).y else (Singularity.CornerRuns.cornerSeq c k).z"
   },
   "Singularity.CornerRuns.cornerSeq_sum_lt": {
@@ -5591,7 +5602,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 494,
+   "line": 526,
    "type": "\u2200 (c : \u2115 \u2192 Bool) (k : \u2115),\n  (Singularity.CornerRuns.cornerSeq c k).a + (Singularity.CornerRuns.cornerSeq c k).b <\n    (Singularity.CornerRuns.cornerSeq c (k + 1)).a + (Singularity.CornerRuns.cornerSeq c (k + 1)).b"
   },
   "Singularity.CornerRuns.corner_hG": {
@@ -5602,7 +5613,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 223,
+   "line": 232,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115),\n  \u2200 i \u2208 {1, 2}, \u2203 d \u2208 (Singularity.CornerRuns.cornerG p mu lam).support, d i = 0"
   },
   "Singularity.CornerRuns.divisorExponent_cornerPoly": {
@@ -5613,7 +5624,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 239,
+   "line": 248,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.divisorExponent {1, 2} (Singularity.CornerRuns.cornerPoly p D) =\n    Finsupp.single 1 D.a + Finsupp.single 2 D.b"
   },
   "Singularity.CornerRuns.isClean_cornerPoly": {
@@ -5624,7 +5635,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 176,
+   "line": 185,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 Singularity.IsClean p (Singularity.CornerRuns.cornerPoly p D)"
   },
   "Singularity.CornerRuns.le_ord_cornerM": {
@@ -5635,7 +5646,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 191,
+   "line": 200,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115), \u2191p \u2264 Singularity.ord (Singularity.CornerRuns.cornerM p mu lam)"
   },
   "Singularity.CornerRuns.le_ord_cornerPoly": {
@@ -5646,7 +5657,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 202,
+   "line": 211,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  \u2191p \u2264 Singularity.ord (Singularity.CornerRuns.cornerPoly p D)"
   },
   "Singularity.CornerRuns.logJacobianOrder_cornerPoly": {
@@ -5657,7 +5668,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 376,
+   "line": 385,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 Singularity.logJacobianOrder {1, 2} (Singularity.CornerRuns.cornerPoly p D) = \u2191p"
   },
   "Singularity.CornerRuns.lt_ord_cornerM": {
@@ -5668,7 +5679,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 196,
+   "line": 205,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115), \u2191p < Singularity.ord (Singularity.CornerRuns.cornerM p mu lam)"
   },
   "Singularity.CornerRuns.not_X_dvd_cornerPoly_add_pow": {
@@ -5679,7 +5690,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 434,
+   "line": 443,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 \u2200 (h : MvPolynomial (Fin 3) (ZMod p)), \u00acMvPolynomial.X 0 \u2223 Singularity.CornerRuns.cornerPoly p D + h ^ p"
   },
   "Singularity.CornerRuns.not_dvd_and_dvd_a_b": {
@@ -5688,7 +5699,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 153,
+   "line": 162,
    "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData}, D.IsGood \u2192 \u00ac(p \u2223 D.a \u2227 p \u2223 D.b)"
   },
   "Singularity.CornerRuns.not_dvd_and_dvd_add": {
@@ -5699,7 +5710,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 161,
+   "line": 170,
    "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 \u00ac(p \u2223 D.a + D.mu + p \u2227 p \u2223 D.b + D.lam + p)"
   },
   "Singularity.CornerRuns.ord_residualFactor_cornerPoly": {
@@ -5710,8 +5721,19 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 249,
+   "line": 258,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.ord (Singularity.residualFactor {1, 2} (Singularity.CornerRuns.cornerPoly p D)) = \u2191p"
+  },
+  "Singularity.CornerRuns.orderGAlong_cornerPoly_le_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
+   "kind": "theorem",
+   "line": 459,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192\n    \u2200 (S : Finset (Fin 3)),\n      \u00ac(0 \u2208 S \u2227 (1 \u2208 S \u2228 2 \u2208 S)) \u2192 Singularity.orderGAlong p {1, 2} S (Singularity.CornerRuns.cornerPoly p D) \u2264 1"
   },
   "Singularity.CornerRuns.pderiv_zero_cornerM": {
    "axioms": [
@@ -5721,7 +5743,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 256,
+   "line": 265,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (mu lam : \u2115),\n  (MvPolynomial.pderiv 0) (Singularity.CornerRuns.cornerM p mu lam) = 0"
   },
   "Singularity.CornerRuns.pointChart_cornerPoly_y": {
@@ -5732,7 +5754,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 386,
+   "line": 395,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  (Singularity.pointChart 1 0) (Singularity.CornerRuns.cornerPoly p D) =\n    MvPolynomial.X 1 ^ p * Singularity.CornerRuns.cornerPoly p D.y"
   },
   "Singularity.CornerRuns.pointChart_cornerPoly_z": {
@@ -5743,7 +5765,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 397,
+   "line": 406,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  (Singularity.pointChart 2 0) (Singularity.CornerRuns.cornerPoly p D) =\n    MvPolynomial.X 2 ^ p * Singularity.CornerRuns.cornerPoly p D.z"
   },
   "Singularity.CornerRuns.residualFactor_cornerPoly": {
@@ -5754,7 +5776,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 244,
+   "line": 253,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (D : Singularity.CornerRuns.CornerData),\n  Singularity.residualFactor {1, 2} (Singularity.CornerRuns.cornerPoly p D) =\n    Singularity.CornerRuns.cornerG p D.mu D.lam"
   },
   "Singularity.CornerRuns.residualLogJacobian_cornerG": {
@@ -5765,7 +5787,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 283,
+   "line": 292,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192\n    Singularity.residualLogJacobian {1, 2} (Finsupp.single 1 D.a + Finsupp.single 2 D.b)\n        (Singularity.CornerRuns.cornerG p D.mu D.lam) =\n      Ideal.span {MvPolynomial.X 0 ^ p, Singularity.CornerRuns.cornerM p D.mu D.lam}"
   },
   "Singularity.CornerRuns.rhoStep_cornerPoint_y": {
@@ -5776,7 +5798,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 408,
+   "line": 417,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 Singularity.RhoStep p p (Singularity.CornerRuns.cornerPoint p D) (Singularity.CornerRuns.cornerPoint p D.y)"
   },
   "Singularity.CornerRuns.rhoStep_cornerPoint_z": {
@@ -5787,7 +5809,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 421,
+   "line": 430,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {D : Singularity.CornerRuns.CornerData},\n  D.IsGood \u2192 Singularity.RhoStep p p (Singularity.CornerRuns.cornerPoint p D) (Singularity.CornerRuns.cornerPoint p D.z)"
   },
   "Singularity.CornerRuns.rhoStep_cornerRunPoint": {
@@ -5798,7 +5820,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianCornerRuns.lean",
    "kind": "theorem",
-   "line": 515,
+   "line": 547,
    "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool) (k : \u2115),\n  Singularity.RhoStep p p (Singularity.CornerRuns.cornerRunPoint p c k)\n    (Singularity.CornerRuns.cornerRunPoint p c (k + 1))"
   },
   "Singularity.CurveRuns.X_mul_pderiv_one_mono": {
@@ -16588,6 +16610,28 @@
    "line": 180,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (A : ValuationSubring K) {k : Type u_2} [inst_1 : CommRing k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5A] [IsScalarTower k (\u21a5A) K] {\u03b9 : Type u_3} {\u03ba : Type u_4} (x : \u03b9 \u2192 K\u02e3),\n  (LinearIndependent \u2124 fun i => Additive.ofMul ((Units.map \u2191A.valuation) (x i))) \u2192\n    \u2200 (y : \u03ba \u2192 \u21a5A),\n      (AlgebraicIndependent k fun j => (IsLocalRing.residue \u21a5A) (y j)) \u2192\n        AlgebraicIndependent k (Sum.elim (fun i => \u2191(x i)) fun j => \u2191(y j))"
   },
+  "Singularity.alongIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 163,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 \u2115\u221e \u2192 Ideal (MvPolynomial \u03c3 R)"
+  },
+  "Singularity.alongWeight": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 43,
+   "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 \u03c3 \u2192 \u2115"
+  },
   "Singularity.anXChartEquiv": {
    "axioms": [
     "Classical.choice",
@@ -18191,6 +18235,27 @@
    "kind": "theorem",
    "line": 152,
    "type": "\u2200 {\u03b9 : Type u_1} {\u03ba : Type u_2} [Nonempty \u03b9] [Nonempty \u03ba] {f : \u03b9 \u2192 Cardinal.{u}} {g : \u03ba \u2192 Cardinal.{u}},\n  BddAbove (Set.range f) \u2192\n    BddAbove (Set.range g) \u2192 \u2200 {c : Cardinal.{u}}, (\u2200 (i : \u03b9) (j : \u03ba), f i + g j \u2264 c) \u2192 iSup f + iSup g \u2264 c"
+  },
+  "Singularity.cleanOrdAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 261,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
+  },
+  "Singularity.cleanOrdAlong.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3] (p p_1 : \u2115),\n  p = p_1 \u2192\n    \u2200 (S S_1 : Finset \u03c3),\n      S = S_1 \u2192\n        \u2200 (g g_1 : MvPolynomial \u03c3 k), g = g_1 \u2192 Singularity.cleanOrdAlong p S g = Singularity.cleanOrdAlong p_1 S_1 g_1"
   },
   "Singularity.cleanPart": {
    "axioms": [
@@ -21683,6 +21748,28 @@
    "line": 209,
    "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 Ideal (MvPolynomial \u03c3 R) \u2192 \u2115\u221e"
   },
+  "Singularity.idealOrdAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 230,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 Ideal (MvPolynomial \u03c3 R) \u2192 \u2115\u221e"
+  },
+  "Singularity.idealOrdAlong_le_ordAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 234,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3}\n  {I : Ideal (MvPolynomial \u03c3 R)} {f : MvPolynomial \u03c3 R},\n  f \u2208 I \u2192 Singularity.idealOrdAlong S I \u2264 Singularity.ordAlong S f"
+  },
   "Singularity.idealOrd_anti": {
    "axioms": [
     "Classical.choice",
@@ -23239,6 +23326,17 @@
    "line": 219,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {I : Ideal (MvPolynomial \u03c3 R)} {n : \u2115\u221e},\n  (\u2200 f \u2208 I, n \u2264 Singularity.ord f) \u2192 n \u2264 Singularity.idealOrd I"
   },
+  "Singularity.le_idealOrdAlong_span": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 238,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3}\n  {T : Set (MvPolynomial \u03c3 R)} {n : \u2115\u221e},\n  (\u2200 s \u2208 T, n \u2264 Singularity.ordAlong S s) \u2192 n \u2264 Singularity.idealOrdAlong S (Ideal.span T)"
+  },
   "Singularity.le_idealOrd_derivIdeal": {
    "axioms": [
     "Classical.choice",
@@ -23425,6 +23523,61 @@
    "kind": "theorem",
    "line": 135,
    "type": "\u2200 {G : Type u_1} [inst : CommGroup G] [inst_1 : LinearOrder G] [IsOrderedMonoid G] {r : \u2115},\n  Module.rank \u211a (TensorProduct \u2124 \u211a (Additive G)) = \u2191r \u2192\n    \u2200 (t : \u2115) (f : Fin (t + 1) \u2192 Subgroup G),\n      StrictMono f \u2192 (\u2200 (i : Fin (t + 1)), Singularity.IsConvexSubgroup (f i)) \u2192 t \u2264 r"
+  },
+  "Singularity.le_ordAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3} {f : MvPolynomial \u03c3 R}\n  {n : \u2115\u221e}, (\u2200 d \u2208 f.support, n \u2264 \u2191(\u2211 i \u2208 S, d i)) \u2192 n \u2264 Singularity.ordAlong S f"
+  },
+  "Singularity.le_ordAlong_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3} {f g : MvPolynomial \u03c3 R}\n  {n : \u2115\u221e}, n \u2264 Singularity.ordAlong S f \u2192 n \u2264 Singularity.ordAlong S g \u2192 n \u2264 Singularity.ordAlong S (f + g)"
+  },
+  "Singularity.le_ordAlong_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3} {f : MvPolynomial \u03c3 R}\n  {n : \u2115\u221e}, n \u2264 Singularity.ordAlong S f \u2194 \u2200 d \u2208 f.support, n \u2264 \u2191(\u2211 i \u2208 S, d i)"
+  },
+  "Singularity.le_ordAlong_iff_mem_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 218,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] [Nontrivial R] {S : Finset \u03c3}\n  {f : MvPolynomial \u03c3 R} {n : \u2115}, \u2191n \u2264 Singularity.ordAlong S f \u2194 f \u2208 Singularity.varsIdeal S ^ n"
+  },
+  "Singularity.le_ordAlong_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 121,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3)\n  (f g : MvPolynomial \u03c3 R), Singularity.ordAlong S f + Singularity.ordAlong S g \u2264 Singularity.ordAlong S (f * g)"
   },
   "Singularity.le_ord_X_mul": {
    "axioms": [
@@ -25161,6 +25314,17 @@
    "line": 142,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc \u03bd : Valuation (Polynomial K) \u0393\u2080} {\u03c6 \u03c8 : Polynomial K},\n  \u03c6.Monic \u2192\n    (\u2200 (f : Polynomial K), f.degree < \u03c6.degree \u2192 \u03bd f = \u03bc f) \u2192\n      \u03c8.Monic \u2192 \u03c8.natDegree = \u03c6.natDegree \u2192 \u03bd \u03c6 \u2264 \u03bd \u03c8 \u2192 \u03bc (\u03c8 - \u03c6) \u2264 \u03bd \u03c8"
   },
+  "Singularity.mem_alongIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 173,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3} {n : \u2115\u221e}\n  {f : MvPolynomial \u03c3 R}, f \u2208 Singularity.alongIdeal S n \u2194 n \u2264 Singularity.ordAlong S f"
+  },
   "Singularity.mem_blowupDivisor": {
    "axioms": [
     "Classical.choice",
@@ -25643,6 +25807,17 @@
    "line": 419,
    "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {K : Type u_2} [inst : Field K] {L : Type u_3} [inst_1 : Field L]\n  [inst_2 : Algebra K L] (V : ValuationSubring K) (W : ValuationSubring L),\n  W.comap (algebraMap K L) = V \u2192 \u2200 {x : K}, x \u2208 V \u2192 \u2200 {\u03b8 : L}, \u03b8 ^ p = (algebraMap K L) x \u2192 \u03b8 \u2208 W"
   },
+  "Singularity.min_le_ordAlong_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 116,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3)\n  (f g : MvPolynomial \u03c3 R), min (Singularity.ordAlong S f) (Singularity.ordAlong S g) \u2264 Singularity.ordAlong S (f + g)"
+  },
   "Singularity.min_ord_le_ord_add": {
    "axioms": [
     "Classical.choice",
@@ -25829,6 +26004,17 @@
    "kind": "theorem",
    "line": 375,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080] {v : Valuation K \u0393\u2080}\n  {\u03b3 : \u0393\u2080}, \u03b3 \u2260 0 \u2192 \u2200 {f : Polynomial K}, (Singularity.monomialValuation v \u03b3) f = 0 \u2194 f = 0"
+  },
+  "Singularity.monomial_mem_pow_varsIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 197,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [DecidableEq \u03c3] (S : Finset \u03c3) (n : \u2115) (d : \u03c3 \u2192\u2080 \u2115) (c : R),\n  n \u2264 \u2211 i \u2208 S, d i \u2192 (MvPolynomial.monomial d) c \u2208 Singularity.varsIdeal S ^ n"
   },
   "Singularity.monomial_mul_chartUnit_mul_mem_logJacobian_cleanPart": {
    "axioms": [
@@ -26716,6 +26902,170 @@
    "line": 60,
    "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 MvPolynomial \u03c3 R \u2192 \u2115\u221e"
   },
+  "Singularity.ordAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 55,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 R \u2192 \u2115\u221e"
+  },
+  "Singularity.ordAlong.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3]\n  (S S_1 : Finset \u03c3),\n  S = S_1 \u2192 \u2200 (f f_1 : MvPolynomial \u03c3 R), f = f_1 \u2192 Singularity.ordAlong S f = Singularity.ordAlong S_1 f_1"
+  },
+  "Singularity.ordAlong_X": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] [Nontrivial R] (S : Finset \u03c3) (i : \u03c3),\n  Singularity.ordAlong S (MvPolynomial.X i) = \u2191(if i \u2208 S then 1 else 0)"
+  },
+  "Singularity.ordAlong_X_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 96,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] [Nontrivial R] (S : Finset \u03c3) (i : \u03c3)\n  (n : \u2115), Singularity.ordAlong S (MvPolynomial.X i ^ n) = \u2191(if i \u2208 S then n else 0)"
+  },
+  "Singularity.ordAlong_add_pow_le_cleanOrdAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 272,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (p : \u2115) (S : Finset \u03c3)\n  (g h : MvPolynomial \u03c3 k), Singularity.ordAlong S (g + h ^ p) \u2264 Singularity.cleanOrdAlong p S g"
+  },
+  "Singularity.ordAlong_eq_iInf": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 81,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3) (f : MvPolynomial \u03c3 R),\n  Singularity.ordAlong S f = \u2a05 d \u2208 f.support, \u2191(\u2211 i \u2208 S, d i)"
+  },
+  "Singularity.ordAlong_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] {S : Finset \u03c3} {f : MvPolynomial \u03c3 R}\n  {d : \u03c3 \u2192\u2080 \u2115}, f.coeff d \u2260 0 \u2192 Singularity.ordAlong S f \u2264 \u2191(\u2211 i \u2208 S, d i)"
+  },
+  "Singularity.ordAlong_le_cleanOrdAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 276,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] {p : \u2115},\n  p \u2260 0 \u2192 \u2200 (S : Finset \u03c3) (g : MvPolynomial \u03c3 k), Singularity.ordAlong S g \u2264 Singularity.cleanOrdAlong p S g"
+  },
+  "Singularity.ordAlong_le_ordAlong_X_mul_pderiv_add_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 151,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3) (j : \u03c3)\n  (F : MvPolynomial \u03c3 R),\n  Singularity.ordAlong S F \u2264 Singularity.ordAlong S (MvPolynomial.X j * (MvPolynomial.pderiv j) F) + 1"
+  },
+  "Singularity.ordAlong_le_ordAlong_mul_left": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3)\n  (a f : MvPolynomial \u03c3 R), Singularity.ordAlong S f \u2264 Singularity.ordAlong S (a * f)"
+  },
+  "Singularity.ordAlong_le_ordAlong_pderiv_add_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 138,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3) (j : \u03c3)\n  (F : MvPolynomial \u03c3 R), Singularity.ordAlong S F \u2264 Singularity.ordAlong S ((MvPolynomial.pderiv j) F) + 1"
+  },
+  "Singularity.ordAlong_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 91,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3) {d : \u03c3 \u2192\u2080 \u2115} {c : R},\n  c \u2260 0 \u2192 Singularity.ordAlong S ((MvPolynomial.monomial d) c) = \u2191(\u2211 i \u2208 S, d i)"
+  },
+  "Singularity.ordAlong_monomial_mul_add_pow_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 287,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (p : \u2115) [CharP k p] (S : Finset \u03c3)\n  {\u0394 : Finset \u03c3} {r : \u03c3 \u2192\u2080 \u2115},\n  (\u2200 i \u2209 \u0394, r i = 0) \u2192\n    \u2200 (G h : MvPolynomial \u03c3 k) {e : MvPolynomial \u03c3 k},\n      e \u2208\n          (fun i => \u2191(r i) \u2022 G + MvPolynomial.X i * (MvPolynomial.pderiv i) G) '' \u2191\u0394 \u222a\n            (fun j => (MvPolynomial.pderiv j) G) '' (\u2191\u0394)\u1d9c \u2192\n        Singularity.ordAlong S ((MvPolynomial.monomial r) 1 * G + h ^ p) \u2264\n          \u2191(\u2211 i \u2208 S, r i) + Singularity.ordAlong S e + 1"
+  },
+  "Singularity.ordAlong_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] [NoZeroDivisors R] (S : Finset \u03c3)\n  (f g : MvPolynomial \u03c3 R), Singularity.ordAlong S (f * g) = Singularity.ordAlong S f + Singularity.ordAlong S g"
+  },
+  "Singularity.ordAlong_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 87,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] (S : Finset \u03c3),\n  Singularity.ordAlong S 0 = \u22a4"
+  },
   "Singularity.ord_C": {
    "axioms": [
     "Classical.choice",
@@ -27299,6 +27649,28 @@
    "line": 92,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R], Singularity.ord 0 = \u22a4"
   },
+  "Singularity.orderGAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 267,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
+  },
+  "Singularity.orderGAlong_le_idealOrdAlong_add_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 319,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (p : \u2115) [CharP k p] (\u0394 S : Finset \u03c3)\n  (g : MvPolynomial \u03c3 k),\n  Singularity.orderGAlong p \u0394 S g \u2264\n    Singularity.idealOrdAlong S\n        (Singularity.residualLogJacobian \u0394 (Singularity.divisorExponent \u0394 g) (Singularity.residualFactor \u0394 g)) +\n      1"
+  },
   "Singularity.orthant": {
    "axioms": [
     "Classical.choice",
@@ -27353,6 +27725,17 @@
    "kind": "theorem",
    "line": 209,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {i j : \u03c3},\n  i \u2260 j \u2192\n    \u2200 (n : \u2115) (u : MvPolynomial \u03c3 k),\n      (MvPolynomial.pderiv i) (MvPolynomial.X j ^ n * u) = MvPolynomial.X j ^ n * (MvPolynomial.pderiv i) u"
+  },
+  "Singularity.pderiv_add_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 283,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] (j : \u03c3) (g h : MvPolynomial \u03c3 k),\n  (MvPolynomial.pderiv j) (g + h ^ p) = (MvPolynomial.pderiv j) g"
   },
   "Singularity.pderiv_centerChart_of_mem": {
    "axioms": [
@@ -27805,6 +28188,17 @@
    "line": 189,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) {F h : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) F \u2192 Singularity.IsClean (p ^ e) (F + h ^ p ^ e) \u2192 h ^ p ^ e = 0"
   },
+  "Singularity.pow_varsIdeal_le_alongIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 176,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [inst_1 : DecidableEq \u03c3] [Nontrivial R] (S : Finset \u03c3) (n : \u2115),\n  Singularity.varsIdeal S ^ n \u2264 Singularity.alongIdeal S \u2191n"
+  },
   "Singularity.primeSpectrumEquivConvexSubgroup": {
    "axioms": [
     "Classical.choice",
@@ -28255,6 +28649,17 @@
    "kind": "def",
    "line": 66,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 MvPolynomial \u03c3 k \u2192 Ideal (MvPolynomial \u03c3 k)"
+  },
+  "Singularity.residualLogJacobian_le_pow_varsIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 337,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] (p : \u2115) [CharP k p] {\u0394 S : Finset \u03c3}\n  {g : MvPolynomial \u03c3 k} {n : \u2115},\n  \u2191n + 1 \u2264 Singularity.orderGAlong p \u0394 S g \u2192\n    Singularity.residualLogJacobian \u0394 (Singularity.divisorExponent \u0394 g) (Singularity.residualFactor \u0394 g) \u2264\n      Singularity.varsIdeal S ^ n"
   },
   "Singularity.residualLogJacobian_not_le_span_X": {
    "axioms": [
@@ -29749,6 +30154,17 @@
    "line": 66,
    "type": "\u2200 {\u0393\u2080 : Type u_2} [inst : LinearOrderedCommGroupWithZero \u0393\u2080] {R : Type u_3} [inst_1 : Ring R] (v : Valuation R \u0393\u2080)\n  {\u03b9 : Type u_4} {s : Finset \u03b9} {F : \u03b9 \u2192 R} {c C : \u0393\u2080}, 0 < C \u2192 (\u2200 i \u2208 s, v (F i) * c < C) \u2192 v (\u2211 i \u2208 s, F i) * c < C"
   },
+  "Singularity.varsIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "def",
+   "line": 159,
+   "type": "{\u03c3 : Type u_1} \u2192 {R : Type u_2} \u2192 [inst : CommSemiring R] \u2192 Finset \u03c3 \u2192 Ideal (MvPolynomial \u03c3 R)"
+  },
   "Singularity.vertexPoly": {
    "axioms": [
     "Classical.choice",
@@ -29803,6 +30219,17 @@
    "kind": "theorem",
    "line": 348,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommRing k] {f : Polynomial (MvPowerSeries \u03c3 k)} {v : \u03c3 \u2192\u2080 \u2115} {c : k},\n  Singularity.IsSolvableVertex f v c \u2192\n    Singularity.vertexPoly ((Polynomial.taylor ((MvPowerSeries.monomial v) (-c))) f) v = Polynomial.X ^ f.natDegree"
+  },
+  "Singularity.weight_alongWeight": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OrderAlong.lean",
+   "kind": "theorem",
+   "line": 47,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : DecidableEq \u03c3] (S : Finset \u03c3) (d : \u03c3 \u2192\u2080 \u2115),\n  (Finsupp.weight (Singularity.alongWeight S)) d = \u2211 i \u2208 S, d i"
   },
   "Singularity.weightedOrd": {
    "axioms": [
