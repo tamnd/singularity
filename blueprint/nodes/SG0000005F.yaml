@@ -6,7 +6,6 @@ sources:
 - paper: Hir67
 uses:
 - SG0000004Z
-- SG0000005D
 lean:
   statement: Singularity.kangarooPath_of_codim_le_one
   proof: Singularity.kangarooPath_of_codim_le_one
