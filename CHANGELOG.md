@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes SG0000005N and SG0000005P are Examples 3.13.10 and 3.13.11 of Volume 7 of the handbook: the run that takes the corners on the surface $x = 0$, and the run of Cossart and Piltant that follows a curve in a plane. Both are proved in Lean by `Singularity.SurfaceRuns.surfaceRun_of_charts` and `Singularity.SurfaceRuns.cpRun` (tamnd/singularity-lean#169). The records pin the Lean release 0.4.36.
+
 ## 0.4.49 - 2026-11-27
 
 ### Added

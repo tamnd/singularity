@@ -1,0 +1,15 @@
+tag: SG0000005N
+kind: example
+title: A run of point blowups that takes the corners lies on a surface
+statement: Let $p$ be a prime, $n = 3$ with the variables $x, y, z$, $\Delta = \{y, z\}$ and $g = x^p y^a z^b$ with $\gcd(a, b) = 1$. The origin of the $y$-chart sends $g$ to $x^p y^{a+b} z^b$, the origin of the $z$-chart sends it to $x^p y^a z^{a+b}$, and $\rho = p$ at each point. So from $(a, b) = (1, 1)$ each sequence of the two charts is an infinite run with $\rho = p$ and distinct points. The run that takes the two charts in turn follows no formal curve, and each point of the run is on the strict transform of the surface $x = 0$, along which the order of $G$ is $p$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005H
+lean:
+  statement: Singularity.SurfaceRuns.surfaceRun_of_charts
+  proof: Singularity.SurfaceRuns.surfaceRun_of_charts
+tier: T2
+route:
+- R1
+notes: This is Example 3.13.10 of Volume 7 of the handbook. Here $r = (0, a, b)$, $G = x^p$ and $\widetilde\Theta(G) = (x^p)$. The Lean proof is over `ZMod p`. The step lemmas are `Singularity.SurfaceRuns.rhoStep_surfacePoint_y` and `Singularity.SurfaceRuns.rhoStep_surfacePoint_z`, the run where the charts alternate is `Singularity.SurfaceRuns.surfaceRun`, and the case $p = 2$ is `Singularity.SurfaceRuns.surfaceRun_two`. The Lean file does not prove that the run follows no formal curve. That claim is Lemmas 3.13.4 and 3.13.5 of the handbook.

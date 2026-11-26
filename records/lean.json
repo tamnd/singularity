@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "fb37ddbab26c4cbb8db113f6d595e50400cb4750",
+  "commit": "c238b829f783c6b0cdcac495e4cf7c4e66ece835",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-26",
- "commit": "fb37ddbab26c4cbb8db113f6d595e50400cb4750",
+ "commit": "84c4a57c0dcfb8daed0f985819c13cfec0429b55",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -13567,6 +13567,176 @@
    "line": 213,
    "type": "\u2200 {\u0393 : Type u_1} [inst : AddCommGroup \u0393] {H : Submodule \u2124 \u0393} {f : \u0393 \u2192\u2097[\u2124] \u21a5H} (hf : \u2200 (x : \u21a5H), f \u2191x = x)\n  (x : \u21a5H \u00d7 \u21a5f.ker), (Singularity.LatticeLemma.splitEquiv hf).symm x = \u2191x.1 + \u2191x.2"
   },
+  "Singularity.LexZn": {
+   "axioms": [],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "def",
+   "line": 29,
+   "type": "\u2115 \u2192 Type"
+  },
+  "Singularity.LexZn.coord": {
+   "axioms": [
+    "Quot.sound"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "def",
+   "line": 36,
+   "type": "{n : \u2115} \u2192 Singularity.LexZn n \u2192 Fin n \u2192 \u2124"
+  },
+  "Singularity.LexZn.coord_inv": {
+   "axioms": [
+    "Quot.sound"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 43,
+   "type": "\u2200 {n : \u2115} (a : Singularity.LexZn n) (i : Fin n), a\u207b\u00b9.coord i = -a.coord i"
+  },
+  "Singularity.LexZn.coord_le_of_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {n : \u2115} {a b : Singularity.LexZn n}, a \u2264 b \u2192 \u2200 {i : Fin n}, (\u2200 j < i, a.coord j = b.coord j) \u2192 a.coord i \u2264 b.coord i"
+  },
+  "Singularity.LexZn.coord_mul": {
+   "axioms": [
+    "Quot.sound"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 39,
+   "type": "\u2200 {n : \u2115} (a b : Singularity.LexZn n) (i : Fin n), (a * b).coord i = a.coord i + b.coord i"
+  },
+  "Singularity.LexZn.coord_one": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 41,
+   "type": "\u2200 {n : \u2115} (i : Fin n), Singularity.LexZn.coord 1 i = 0"
+  },
+  "Singularity.LexZn.coord_pow": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 45,
+   "type": "\u2200 {n : \u2115} (a : Singularity.LexZn n) (k : \u2115) (i : Fin n), (a ^ k).coord i = \u2191k * a.coord i"
+  },
+  "Singularity.LexZn.delta": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "def",
+   "line": 67,
+   "type": "(n : \u2115) \u2192 \u2115 \u2192 Subgroup (Singularity.LexZn n)"
+  },
+  "Singularity.LexZn.delta_injOn": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 188,
+   "type": "\u2200 {n m m' : \u2115}, m \u2264 n \u2192 m' \u2264 n \u2192 Singularity.LexZn.delta n m = Singularity.LexZn.delta n m' \u2192 m = m'"
+  },
+  "Singularity.LexZn.delta_ne_of_lt": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 170,
+   "type": "\u2200 {n m m' : \u2115}, m < m' \u2192 m' \u2264 n \u2192 Singularity.LexZn.delta n m \u2260 Singularity.LexZn.delta n m'"
+  },
+  "Singularity.LexZn.eq_one_of_coord": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 {n : \u2115} {g : Singularity.LexZn n}, (\u2200 (i : Fin n), g.coord i = 0) \u2192 g = 1"
+  },
+  "Singularity.LexZn.finEquivConvexSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "def",
+   "line": 195,
+   "type": "(n : \u2115) \u2192 Fin (n + 1) \u2243 { H // Singularity.IsConvexSubgroup H }"
+  },
+  "Singularity.LexZn.isConvexSubgroup_delta": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 91,
+   "type": "\u2200 {n : \u2115} (m : \u2115), Singularity.IsConvexSubgroup (Singularity.LexZn.delta n m)"
+  },
+  "Singularity.LexZn.isConvexSubgroup_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {n : \u2115} (H : Subgroup (Singularity.LexZn n)),\n  Singularity.IsConvexSubgroup H \u2194 \u2203 m \u2264 n, H = Singularity.LexZn.delta n m"
+  },
+  "Singularity.LexZn.lt_of_coord": {
+   "axioms": [
+    "Quot.sound"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {n : \u2115} {a b : Singularity.LexZn n} (i : Fin n), (\u2200 j < i, a.coord j = b.coord j) \u2192 a.coord i < b.coord i \u2192 a < b"
+  },
+  "Singularity.LexZn.mem_delta": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 87,
+   "type": "\u2200 {n m : \u2115} {g : Singularity.LexZn n}, g \u2208 Singularity.LexZn.delta n m \u2194 \u2200 (i : Fin n), \u2191i < m \u2192 g.coord i = 0"
+  },
+  "Singularity.LexZn.natCard_convexSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/LexConvexSubgroup.lean",
+   "kind": "theorem",
+   "line": 207,
+   "type": "\u2200 (n : \u2115), Nat.card { H // Singularity.IsConvexSubgroup H } = n + 1"
+  },
   "Singularity.LocalUniformizationFour": {
    "axioms": [
     "Classical.choice",
@@ -14182,6 +14352,724 @@
    "kind": "def",
    "line": 67,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 \u2115 \u2192 \u2115 \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
+  },
+  "Singularity.SurfaceRuns.Poly4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 374,
+   "type": "Type"
+  },
+  "Singularity.SurfaceRuns.alternate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 267,
+   "type": "\u2115 \u2192 Bool"
+  },
+  "Singularity.SurfaceRuns.blowupDivisor_cp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 496,
+   "type": "Singularity.blowupDivisor {0, 1} 1 0 = {0, 1}"
+  },
+  "Singularity.SurfaceRuns.blowupDivisor_cp_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 526,
+   "type": "Singularity.blowupDivisor {0, 1} 1 Singularity.SurfaceRuns.cpTranslate = {0, 1}"
+  },
+  "Singularity.SurfaceRuns.blowupDivisor_surface_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 195,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], Singularity.blowupDivisor {1, 2} 1 0 = {1, 2}"
+  },
+  "Singularity.SurfaceRuns.blowupDivisor_surface_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 200,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], Singularity.blowupDivisor {1, 2} 2 0 = {1, 2}"
+  },
+  "Singularity.SurfaceRuns.coeff_cpPoly_cpE1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 403,
+   "type": "\u2200 (k : \u2115), (Singularity.SurfaceRuns.cpPoly k).coeff (Singularity.SurfaceRuns.cpE1 k) = 1"
+  },
+  "Singularity.SurfaceRuns.cpE1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 386,
+   "type": "\u2115 \u2192 Fin 4 \u2192\u2080 \u2115"
+  },
+  "Singularity.SurfaceRuns.cpE2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 389,
+   "type": "\u2115 \u2192 Fin 4 \u2192\u2080 \u2115"
+  },
+  "Singularity.SurfaceRuns.cpE2_ne_cpE1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 398,
+   "type": "\u2200 (k l : \u2115), Singularity.SurfaceRuns.cpE2 k \u2260 Singularity.SurfaceRuns.cpE1 l"
+  },
+  "Singularity.SurfaceRuns.cpG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 377,
+   "type": "Singularity.SurfaceRuns.Poly4"
+  },
+  "Singularity.SurfaceRuns.cpG_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 447,
+   "type": "Singularity.SurfaceRuns.cpG =\n  (MvPolynomial.monomial (Singularity.SurfaceRuns.cpE1 0)) 1 +\n    (MvPolynomial.monomial (Singularity.SurfaceRuns.cpE2 0)) 1"
+  },
+  "Singularity.SurfaceRuns.cpPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 383,
+   "type": "\u2115 \u2192 Finset (Fin 4) \u00d7 Singularity.SurfaceRuns.Poly4"
+  },
+  "Singularity.SurfaceRuns.cpPoint_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 563,
+   "type": "Function.Injective Singularity.SurfaceRuns.cpPoint"
+  },
+  "Singularity.SurfaceRuns.cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 380,
+   "type": "\u2115 \u2192 Singularity.SurfaceRuns.Poly4"
+  },
+  "Singularity.SurfaceRuns.cpPoly_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 392,
+   "type": "\u2200 (k : \u2115),\n  Singularity.SurfaceRuns.cpPoly k =\n    (MvPolynomial.monomial (Singularity.SurfaceRuns.cpE1 k)) 1 +\n      (MvPolynomial.monomial (Singularity.SurfaceRuns.cpE2 k)) 1"
+  },
+  "Singularity.SurfaceRuns.cpPoly_eq_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 440,
+   "type": "\u2200 (k : \u2115),\n  Singularity.SurfaceRuns.cpPoly k = (MvPolynomial.monomial (Finsupp.single 1 k)) 1 * Singularity.SurfaceRuns.cpG"
+  },
+  "Singularity.SurfaceRuns.cpPoly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 407,
+   "type": "\u2200 (k : \u2115), Singularity.SurfaceRuns.cpPoly k \u2260 0"
+  },
+  "Singularity.SurfaceRuns.cpRun": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 568,
+   "type": "(\u2200 (k : \u2115), Singularity.RhoStep 2 2 (Singularity.SurfaceRuns.cpPoint k) (Singularity.SurfaceRuns.cpPoint (k + 1))) \u2227\n  (\u2200 (k : \u2115),\n      Singularity.logJacobianOrder (Singularity.SurfaceRuns.cpPoint k).1 (Singularity.SurfaceRuns.cpPoint k).2 = 2) \u2227\n    Function.Injective Singularity.SurfaceRuns.cpPoint"
+  },
+  "Singularity.SurfaceRuns.cpTranslate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 523,
+   "type": "Fin 4 \u2192 ZMod 2"
+  },
+  "Singularity.SurfaceRuns.cp_hG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 451,
+   "type": "\u2200 i \u2208 {0, 1}, \u2203 d \u2208 MvPolynomial.support Singularity.SurfaceRuns.cpG, d i = 0"
+  },
+  "Singularity.SurfaceRuns.cp_hr": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 443,
+   "type": "\u2200 (k : \u2115), \u2200 i \u2209 {0, 1}, (Finsupp.single 1 k) i = 0"
+  },
+  "Singularity.SurfaceRuns.divisorExponent_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 466,
+   "type": "\u2200 (k : \u2115), Singularity.divisorExponent {0, 1} (Singularity.SurfaceRuns.cpPoly k) = Finsupp.single 1 k"
+  },
+  "Singularity.SurfaceRuns.divisorExponent_surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 113,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  Singularity.divisorExponent {1, 2} (Singularity.SurfaceRuns.surfacePoly p a b) =\n    Finsupp.single 1 a + Finsupp.single 2 b"
+  },
+  "Singularity.SurfaceRuns.idealOrd_span_eq'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 63,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {S : Set (MvPolynomial \u03c3 R)} {n : \u2115},\n  (\u2200 s \u2208 S, \u2191n \u2264 Singularity.ord s) \u2192\n    \u2200 {f : MvPolynomial \u03c3 R}, f \u2208 S \u2192 Singularity.ord f = \u2191n \u2192 Singularity.idealOrd (Ideal.span S) = \u2191n"
+  },
+  "Singularity.SurfaceRuns.isClean_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 413,
+   "type": "\u2200 (k : \u2115), Singularity.IsClean 2 (Singularity.SurfaceRuns.cpPoly k)"
+  },
+  "Singularity.SurfaceRuns.isClean_surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 127,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00ac(p \u2223 a \u2227 p \u2223 b) \u2192 Singularity.IsClean p (Singularity.SurfaceRuns.surfacePoly p a b)"
+  },
+  "Singularity.SurfaceRuns.le_ord_cpG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 428,
+   "type": "\u21913 \u2264 Singularity.ord Singularity.SurfaceRuns.cpG"
+  },
+  "Singularity.SurfaceRuns.le_ord_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 435,
+   "type": "\u2200 (k : \u2115), \u21912 \u2264 Singularity.ord (Singularity.SurfaceRuns.cpPoly k)"
+  },
+  "Singularity.SurfaceRuns.le_ord_surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 136,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115), \u2191p \u2264 Singularity.ord (Singularity.SurfaceRuns.surfacePoly p a b)"
+  },
+  "Singularity.SurfaceRuns.logJacobianOrder_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 483,
+   "type": "\u2200 (k : \u2115), Singularity.logJacobianOrder {0, 1} (Singularity.SurfaceRuns.cpPoly k) = \u21912"
+  },
+  "Singularity.SurfaceRuns.logJacobianOrder_surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 151,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00ac(p \u2223 a \u2227 p \u2223 b) \u2192 Singularity.logJacobianOrder {1, 2} (Singularity.SurfaceRuns.surfacePoly p a b) = \u2191p"
+  },
+  "Singularity.SurfaceRuns.not_dvd_and_dvd_of_coprime": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 190,
+   "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)] {a b : \u2115}, a.Coprime b \u2192 \u00ac(p \u2223 a \u2227 p \u2223 b)"
+  },
+  "Singularity.SurfaceRuns.ord_smul_X_zero_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 147,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {c : ZMod p}, c \u2260 0 \u2192 Singularity.ord (c \u2022 MvPolynomial.X 0 ^ p) = \u2191p"
+  },
+  "Singularity.SurfaceRuns.pderiv_X_zero_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 140,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (i : Fin 3), (MvPolynomial.pderiv i) (MvPolynomial.X 0 ^ p) = 0"
+  },
+  "Singularity.SurfaceRuns.pderiv_two_cpG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 478,
+   "type": "(MvPolynomial.pderiv 2) Singularity.SurfaceRuns.cpG = MvPolynomial.X 0 ^ 2"
+  },
+  "Singularity.SurfaceRuns.pointChart_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 501,
+   "type": "\u2200 (k : \u2115),\n  (Singularity.pointChart 1 0) (Singularity.SurfaceRuns.cpPoly k) =\n    MvPolynomial.X 1 ^ 2 * Singularity.SurfaceRuns.cpPoly (k + 1)"
+  },
+  "Singularity.SurfaceRuns.pointChart_cpPoly_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 531,
+   "type": "\u2200 (m : \u2115),\n  (Singularity.pointChart 1 Singularity.SurfaceRuns.cpTranslate) (Singularity.SurfaceRuns.cpPoly (2 * m + 1)) =\n    MvPolynomial.X 1 ^ 2 *\n      (Singularity.SurfaceRuns.cpPoly (2 * m + 2) + (MvPolynomial.X 1 ^ (m + 2) * MvPolynomial.X 2) ^ 2)"
+  },
+  "Singularity.SurfaceRuns.pointChart_surfacePoly_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 205,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  (Singularity.pointChart 1 0) (Singularity.SurfaceRuns.surfacePoly p a b) =\n    MvPolynomial.X 1 ^ p * Singularity.SurfaceRuns.surfacePoly p (a + b) b"
+  },
+  "Singularity.SurfaceRuns.pointChart_surfacePoly_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 216,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  (Singularity.pointChart 2 0) (Singularity.SurfaceRuns.surfacePoly p a b) =\n    MvPolynomial.X 2 ^ p * Singularity.SurfaceRuns.surfacePoly p a (a + b)"
+  },
+  "Singularity.SurfaceRuns.residualFactor_cpPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 470,
+   "type": "\u2200 (k : \u2115), Singularity.residualFactor {0, 1} (Singularity.SurfaceRuns.cpPoly k) = Singularity.SurfaceRuns.cpG"
+  },
+  "Singularity.SurfaceRuns.residualFactor_surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 118,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  Singularity.residualFactor {1, 2} (Singularity.SurfaceRuns.surfacePoly p a b) = MvPolynomial.X 0 ^ p"
+  },
+  "Singularity.SurfaceRuns.rhoStep_cpPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 514,
+   "type": "\u2200 (k : \u2115), Singularity.RhoStep 2 2 (Singularity.SurfaceRuns.cpPoint k) (Singularity.SurfaceRuns.cpPoint (k + 1))"
+  },
+  "Singularity.SurfaceRuns.rhoStep_cpPoint_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 546,
+   "type": "\u2200 {k : \u2115},\n  2 \u2223 k + 1 \u2192 Singularity.RhoStep 2 2 (Singularity.SurfaceRuns.cpPoint k) (Singularity.SurfaceRuns.cpPoint (k + 1))"
+  },
+  "Singularity.SurfaceRuns.rhoStep_surfacePoint_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 227,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  a.Coprime b \u2192\n    Singularity.RhoStep p p (Singularity.SurfaceRuns.surfacePoint p a b)\n      (Singularity.SurfaceRuns.surfacePoint p (a + b) b)"
+  },
+  "Singularity.SurfaceRuns.rhoStep_surfacePoint_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 242,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  a.Coprime b \u2192\n    Singularity.RhoStep p p (Singularity.SurfaceRuns.surfacePoint p a b)\n      (Singularity.SurfaceRuns.surfacePoint p a (a + b))"
+  },
+  "Singularity.SurfaceRuns.rhoStep_surfaceRunPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 323,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool) (k : \u2115),\n  Singularity.RhoStep p p (Singularity.SurfaceRuns.surfaceRunPoint p c k)\n    (Singularity.SurfaceRuns.surfaceRunPoint p c (k + 1))"
+  },
+  "Singularity.SurfaceRuns.surfacePoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 79,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.SurfaceRuns.surfacePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 75,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.SurfaceRuns.surfacePoly_eq_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 85,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  Singularity.SurfaceRuns.surfacePoly p a b =\n    (MvPolynomial.monomial (Finsupp.single 0 p + Finsupp.single 1 a + Finsupp.single 2 b)) 1"
+  },
+  "Singularity.SurfaceRuns.surfacePoly_eq_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 90,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115),\n  Singularity.SurfaceRuns.surfacePoly p a b =\n    (MvPolynomial.monomial (Finsupp.single 1 a + Finsupp.single 2 b)) 1 * MvPolynomial.X 0 ^ p"
+  },
+  "Singularity.SurfaceRuns.surfacePoly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 123,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b : \u2115), Singularity.SurfaceRuns.surfacePoly p a b \u2260 0"
+  },
+  "Singularity.SurfaceRuns.surfaceRun": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 351,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  (\u2200 (k : \u2115),\n      Singularity.RhoStep p p (Singularity.SurfaceRuns.surfaceRunPoint p Singularity.SurfaceRuns.alternate k)\n        (Singularity.SurfaceRuns.surfaceRunPoint p Singularity.SurfaceRuns.alternate (k + 1))) \u2227\n    (\u2200 (k : \u2115),\n        Singularity.logJacobianOrder (Singularity.SurfaceRuns.surfaceRunPoint p Singularity.SurfaceRuns.alternate k).1\n            (Singularity.SurfaceRuns.surfaceRunPoint p Singularity.SurfaceRuns.alternate k).2 =\n          \u2191p) \u2227\n      Function.Injective (Singularity.SurfaceRuns.surfaceRunPoint p Singularity.SurfaceRuns.alternate)"
+  },
+  "Singularity.SurfaceRuns.surfaceRunPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 315,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 (\u2115 \u2192 Bool) \u2192 \u2115 \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.SurfaceRuns.surfaceRunPoint_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 332,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool), Function.Injective (Singularity.SurfaceRuns.surfaceRunPoint p c)"
+  },
+  "Singularity.SurfaceRuns.surfaceRun_of_charts": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 340,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (c : \u2115 \u2192 Bool),\n  (\u2200 (k : \u2115),\n      Singularity.RhoStep p p (Singularity.SurfaceRuns.surfaceRunPoint p c k)\n        (Singularity.SurfaceRuns.surfaceRunPoint p c (k + 1))) \u2227\n    (\u2200 (k : \u2115),\n        Singularity.logJacobianOrder (Singularity.SurfaceRuns.surfaceRunPoint p c k).1\n            (Singularity.SurfaceRuns.surfaceRunPoint p c k).2 =\n          \u2191p) \u2227\n      Function.Injective (Singularity.SurfaceRuns.surfaceRunPoint p c)"
+  },
+  "Singularity.SurfaceRuns.surfaceRun_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 364,
+   "type": "(\u2200 (k : \u2115),\n    Singularity.RhoStep 2 2 (Singularity.SurfaceRuns.surfaceRunPoint 2 Singularity.SurfaceRuns.alternate k)\n      (Singularity.SurfaceRuns.surfaceRunPoint 2 Singularity.SurfaceRuns.alternate (k + 1))) \u2227\n  (\u2200 (k : \u2115),\n      Singularity.logJacobianOrder (Singularity.SurfaceRuns.surfaceRunPoint 2 Singularity.SurfaceRuns.alternate k).1\n          (Singularity.SurfaceRuns.surfaceRunPoint 2 Singularity.SurfaceRuns.alternate k).2 =\n        2) \u2227\n    Function.Injective (Singularity.SurfaceRuns.surfaceRunPoint 2 Singularity.SurfaceRuns.alternate)"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "def",
+   "line": 259,
+   "type": "(\u2115 \u2192 Bool) \u2192 \u2115 \u2192 \u2115 \u00d7 \u2115"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq.eq_def": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "type": "\u2200 (c : \u2115 \u2192 Bool) (x : \u2115),\n  Singularity.SurfaceRuns.surfaceSeq c x =\n    match x with\n    | 0 => (1, 1)\n    | k.succ =>\n      if c k = true then\n        ((Singularity.SurfaceRuns.surfaceSeq c k).1 + (Singularity.SurfaceRuns.surfaceSeq c k).2,\n          (Singularity.SurfaceRuns.surfaceSeq c k).2)\n      else\n        ((Singularity.SurfaceRuns.surfaceSeq c k).1,\n          (Singularity.SurfaceRuns.surfaceSeq c k).1 + (Singularity.SurfaceRuns.surfaceSeq c k).2)"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq_injective": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 305,
+   "type": "\u2200 (c : \u2115 \u2192 Bool), Function.Injective (Singularity.SurfaceRuns.surfaceSeq c)"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq_spec": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 279,
+   "type": "\u2200 (c : \u2115 \u2192 Bool) (k : \u2115),\n  (Singularity.SurfaceRuns.surfaceSeq c k).1.Coprime (Singularity.SurfaceRuns.surfaceSeq c k).2 \u2227\n    1 \u2264 (Singularity.SurfaceRuns.surfaceSeq c k).1 \u2227 1 \u2264 (Singularity.SurfaceRuns.surfaceSeq c k).2"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq_succ_of_false": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 275,
+   "type": "\u2200 {c : \u2115 \u2192 Bool} {k : \u2115},\n  c k = false \u2192\n    Singularity.SurfaceRuns.surfaceSeq c (k + 1) =\n      ((Singularity.SurfaceRuns.surfaceSeq c k).1,\n        (Singularity.SurfaceRuns.surfaceSeq c k).1 + (Singularity.SurfaceRuns.surfaceSeq c k).2)"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq_succ_of_true": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 271,
+   "type": "\u2200 {c : \u2115 \u2192 Bool} {k : \u2115},\n  c k = true \u2192\n    Singularity.SurfaceRuns.surfaceSeq c (k + 1) =\n      ((Singularity.SurfaceRuns.surfaceSeq c k).1 + (Singularity.SurfaceRuns.surfaceSeq c k).2,\n        (Singularity.SurfaceRuns.surfaceSeq c k).2)"
+  },
+  "Singularity.SurfaceRuns.surfaceSeq_sum_lt": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 293,
+   "type": "\u2200 (c : \u2115 \u2192 Bool) (k : \u2115),\n  (Singularity.SurfaceRuns.surfaceSeq c k).1 + (Singularity.SurfaceRuns.surfaceSeq c k).2 <\n    (Singularity.SurfaceRuns.surfaceSeq c (k + 1)).1 + (Singularity.SurfaceRuns.surfaceSeq c (k + 1)).2"
+  },
+  "Singularity.SurfaceRuns.surface_hG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 103,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], \u2200 i \u2208 {1, 2}, \u2203 d \u2208 (MvPolynomial.X 0 ^ p).support, d i = 0"
+  },
+  "Singularity.SurfaceRuns.surface_hr": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 (a b : \u2115), \u2200 i \u2209 {1, 2}, (Finsupp.single 1 a + Finsupp.single 2 b) i = 0"
+  },
+  "Singularity.SurfaceRuns.two_poly4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianSurfaceRuns.lean",
+   "kind": "theorem",
+   "line": 474,
+   "type": "2 = 0"
   },
   "Singularity.Valuation.exists_hasExtension": {
    "axioms": [
@@ -20181,6 +21069,28 @@
    "line": 321,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [DecidableEq \u03c3] (m : \u2115) (a : \u2115 \u2192 MvPolynomial \u03c3 k),\n  (MvPolynomial.homogeneousComponent m) (Singularity.zMonic m a) =\n    Singularity.zMonic m fun i => (MvPolynomial.homogeneousComponent (m - i)) (a i)"
   },
+  "Singularity.idealOfSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "def",
+   "line": 66,
+   "type": "{K : Type u_1} \u2192 [inst : Field K] \u2192 (V : ValuationSubring K) \u2192 Subgroup V.ValueGroup\u02e3 \u2192 Ideal \u21a5V"
+  },
+  "Singularity.idealOfSubgroup_subgroupOfIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 147,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) (P : Ideal \u21a5V) [inst_1 : P.IsPrime],\n  Singularity.idealOfSubgroup V (Singularity.subgroupOfIdeal V P) = P"
+  },
   "Singularity.idealOrd": {
    "axioms": [
     "Classical.choice",
@@ -20738,6 +21648,17 @@
    "line": 39,
    "type": "\u2200 {G : Type u_1} [inst : CommGroup G] [inst_1 : LinearOrder G] [inst_2 : IsOrderedMonoid G] (a : G),\n  Singularity.IsConvexSubgroup (Singularity.boundedSubgroup a)"
   },
+  "Singularity.isConvexSubgroup_subgroupOfIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 138,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) (P : Ideal \u21a5V) [inst_1 : P.IsPrime],\n  Singularity.IsConvexSubgroup (Singularity.subgroupOfIdeal V P)"
+  },
   "Singularity.isConvexSubgroup_top": {
    "axioms": [
     "propext"
@@ -20955,6 +21876,17 @@
    "kind": "theorem",
    "line": 139,
    "type": "\u2200 {Z : AlgebraicGeometry.Scheme} {X : Z.IdealSheafData} {z : \u21a5Z} (hz : IsClosed {z}),\n  z \u2208 X.support \u2192\n    Singularity.IsPermissible X\n      (AlgebraicGeometry.Scheme.IdealSheafData.vanishingIdeal { carrier := {z}, isClosed' := hz })"
+  },
+  "Singularity.isPrime_idealOfSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) (H : Subgroup V.ValueGroup\u02e3),\n  (Singularity.idealOfSubgroup V H).IsPrime"
   },
   "Singularity.isPrime_valuationCenter": {
    "axioms": [
@@ -21472,6 +22404,17 @@
    "kind": "theorem",
    "line": 34,
    "type": "\u2200 {X : AlgebraicGeometry.Scheme}, topologicalKrullDim \u21a5X \u2264 0 \u2192 \u2200 (x : \u21a5X), Ring.KrullDimLE 0 \u2191(X.presheaf.stalk x)"
+  },
+  "Singularity.krullDim_eq_natCard_sub_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 36,
+   "type": "\u2200 {\u03b1 : Type u_1} [inst : PartialOrder \u03b1] [Finite \u03b1] [Nonempty \u03b1],\n  (\u2200 (a b : \u03b1), a \u2264 b \u2228 b \u2264 a) \u2192 Order.krullDim \u03b1 = \u2191(Nat.card \u03b1 - 1)"
   },
   "Singularity.latticeLemma": {
    "axioms": [
@@ -23856,6 +24799,17 @@
    "line": 141,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {F : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k},\n  v \u2208 Singularity.directrix F \u2192 \u2200 (i : \u03c3), v \u2208 Singularity.directrix ((MvPolynomial.pderiv i) F)"
   },
+  "Singularity.mem_idealOfSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 89,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) (H : Subgroup V.ValueGroup\u02e3) (x : \u21a5V),\n  x \u2208 Singularity.idealOfSubgroup V H \u2194 \u2200 h \u2208 H, V.valuation \u2191x < \u2191h"
+  },
   "Singularity.mem_idealOfVars_iff": {
    "axioms": [
     "Classical.choice",
@@ -24020,6 +24974,17 @@
    "kind": "theorem",
    "line": 311,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g \u03c8 : MvPolynomial \u03c3 k},\n  (MvPolynomial.monomial (Singularity.divisorExponent \u0394 g)) 1 * \u03c8 \u2208 Singularity.logJacobian \u0394 g \u2192\n    \u03c8 \u2208 Singularity.residualLogJacobian \u0394 (Singularity.divisorExponent \u0394 g) (Singularity.residualFactor \u0394 g)"
+  },
+  "Singularity.mem_subgroupOfIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) (P : Ideal \u21a5V) [inst_1 : P.IsPrime] (\u03b3 : V.ValueGroup\u02e3),\n  \u03b3 \u2208 Singularity.subgroupOfIdeal V P \u2194 \u2203 x \u2209 P, V.valuation \u2191x \u2264 \u2191\u03b3 \u2227 V.valuation \u2191x \u2264 \u2191\u03b3\u207b\u00b9"
   },
   "Singularity.mem_subgroupToIntSubmodule": {
    "axioms": [
@@ -24916,6 +25881,17 @@
    "kind": "theorem",
    "line": 62,
    "type": "\u2200 {K : Type u_1} {M : Type u_2} {L' : Type u_3} [inst : Field K] [inst_1 : Field M] [inst_2 : Field L']\n  [inst_3 : Algebra K M] [inst_4 : Algebra M L'] [inst_5 : Algebra K L'] [inst_6 : IsScalarTower K M L']\n  [FiniteDimensional M L'] [IsGalois M L'] {\u2113 p e : \u2115} [Fact (Nat.Prime \u2113)],\n  Nat.Prime p \u2192\n    p \u2260 \u2113 \u2192\n      Module.finrank K M = p ^ e \u2192 \u2200 (P : Sylow \u2113 Gal(L'/M)), \u00ac\u2113 \u2223 Module.finrank K \u21a5(IntermediateField.fixedField \u2191P)"
+  },
+  "Singularity.not_isField_of_ne_top": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ValuationRingProperties.lean",
+   "kind": "theorem",
+   "line": 32,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] {V : ValuationSubring K}, V \u2260 \u22a4 \u2192 \u00acIsField \u21a5V"
   },
   "Singularity.not_isResonant_initialForm": {
    "axioms": [
@@ -26248,6 +27224,17 @@
    "line": 189,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (p : \u2115) [ExpChar k p] (e : \u2115) {F h : MvPolynomial \u03c3 k},\n  Singularity.IsClean (p ^ e) F \u2192 Singularity.IsClean (p ^ e) (F + h ^ p ^ e) \u2192 h ^ p ^ e = 0"
   },
+  "Singularity.primeSpectrumEquivConvexSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "def",
+   "line": 211,
+   "type": "{K : Type u_1} \u2192\n  [inst : Field K] \u2192 (V : ValuationSubring K) \u2192 PrimeSpectrum \u21a5V \u2243 { H // Singularity.IsConvexSubgroup H }"
+  },
   "Singularity.projPoints": {
    "axioms": [
     "Classical.choice",
@@ -26467,6 +27454,17 @@
    "kind": "theorem",
    "line": 358,
    "type": "\u2200 {K : Type u_1} {L : Type uL} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {\u0393\u2080 : Type u_2} {\u0393\u2081 : Type u\u0393}\n  [inst_3 : LinearOrderedCommGroupWithZero \u0393\u2080] [inst_4 : LinearOrderedCommGroupWithZero \u0393\u2081] (vK : Valuation K \u0393\u2080)\n  (vL : Valuation L \u0393\u2081) [inst_5 : vK.HasExtension vL],\n  Cardinal.lift.{uL, u\u0393}\n        (Module.rank \u2124\n          (Additive\n            \u21a5(Subgroup.map (QuotientGroup.mk' (\u2191(Valuation.comap (algebraMap K L) vL)).valueGroup) (\u2191vL).valueGroup))) +\n      Cardinal.lift.{u\u0393, uL}\n        (Algebra.trdeg (IsLocalRing.ResidueField \u21a5vK.valuationSubring)\n          (IsLocalRing.ResidueField \u21a5vL.valuationSubring)) \u2264\n    Cardinal.lift.{u\u0393, uL} (Algebra.trdeg K L)"
+  },
+  "Singularity.rank_le_and_ringKrullDim_le_trdeg": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 229,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {k : Type u_2} [inst_1 : Field k] [inst_2 : Algebra k K]\n  [inst_3 : Algebra k \u21a5V] [IsScalarTower k (\u21a5V) K] {d : \u2115},\n  Algebra.trdeg k K = \u2191d \u2192\n    Module.rank \u211a (TensorProduct \u2124 \u211a (Additive V.ValueGroup\u02e3)) \u2264 \u2191d \u2227\n      Algebra.trdeg k (IsLocalRing.ResidueField \u21a5V) \u2264 \u2191d \u2227\n        Finite { H // Singularity.IsConvexSubgroup H } \u2227\n          Nat.card { H // Singularity.IsConvexSubgroup H } - 1 \u2264 d \u2227 ringKrullDim \u21a5V \u2264 \u2191d"
   },
   "Singularity.ratFunc_pow_ne_X": {
    "axioms": [
@@ -26952,6 +27950,17 @@
    "line": 158,
    "type": "Prop"
   },
+  "Singularity.ringKrullDim_eq_natCard_convexSubgroup_sub_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 219,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) [Finite { H // Singularity.IsConvexSubgroup H }],\n  ringKrullDim \u21a5V = \u2191(Nat.card { H // Singularity.IsConvexSubgroup H } - 1)"
+  },
   "Singularity.ringKrullDim_le_of_isIntegral": {
    "axioms": [
     "Classical.choice",
@@ -27411,6 +28420,28 @@
    "kind": "theorem",
    "line": 160,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {V : ValuationSubring K}\n  (F : IntermediateField k K) (hFV : \u2200 c \u2208 F, c \u2208 V), IsScalarTower (\u21a5F) (\u21a5V) K"
+  },
+  "Singularity.subgroupOfIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "def",
+   "line": 111,
+   "type": "{K : Type u_1} \u2192 [inst : Field K] \u2192 (V : ValuationSubring K) \u2192 (P : Ideal \u21a5V) \u2192 [P.IsPrime] \u2192 Subgroup V.ValueGroup\u02e3"
+  },
+  "Singularity.subgroupOfIdeal_idealOfSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/RankDimension.lean",
+   "kind": "theorem",
+   "line": 178,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {H : Subgroup V.ValueGroup\u02e3},\n  Singularity.IsConvexSubgroup H \u2192 Singularity.subgroupOfIdeal V (Singularity.idealOfSubgroup V H) = H"
   },
   "Singularity.subgroupToIntSubmodule": {
    "axioms": [
@@ -27883,6 +28914,17 @@
    "kind": "theorem",
    "line": 59,
    "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K) {b : K} {n : \u2115}, n \u2260 0 \u2192 (b ^ n \u2208 V \u2194 b \u2208 V)"
+  },
+  "Singularity.valuationSubring_properties": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/ValuationRingProperties.lean",
+   "kind": "theorem",
+   "line": 53,
+   "type": "\u2200 {K : Type u_1} [inst : Field K] (V : ValuationSubring K),\n  (\u2200 (W : Subring K), V.toSubring \u2264 W \u2192 \u2203 W', W'.toSubring = W) \u2227\n    (\u2200 (I J : Ideal \u21a5V), I \u2264 J \u2228 J \u2264 I) \u2227\n      (\u2200 (I : Ideal \u21a5V), I.FG \u2192 Submodule.IsPrincipal I) \u2227\n        IsIntegrallyClosed \u21a5V \u2227 (IsNoetherianRing \u21a5V \u2192 V \u2260 \u22a4 \u2192 IsDiscreteValuationRing \u21a5V)"
   },
   "Singularity.valuation_aeval_divX_iterate_lt_one": {
    "axioms": [

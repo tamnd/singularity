@@ -1,0 +1,16 @@
+tag: SG0000005P
+kind: example
+title: The run of Cossart and Piltant follows a curve in a plane of the locus
+statement: Over $\mathbb{F}_2$ in the variables $x_1, x_2, x_3, x_4$, let $\Delta = \{x_1, x_2\}$ and $g_k = x_2^k (x_2^2 x_3^2 x_4 + x_1^2 x_3)$ for $k \ge 0$. The origin of the $x_2$-chart sends $g_k$ to $g_{k+1}$, and $\rho = 2$ at each point. So the run of point blowups does not end. If $2$ divides $k + 1$, the point of the $x_2$-chart with $x_4 = 1$ also gives $g_{k+1}$, since the cleaning removes the extra square. So a run can follow the curve $x_1 = x_3 = 0$, $x_4 = \varphi(x_2)$ for a series $\varphi$ that is transcendental, and the Zariski closure of the curve is the plane $x_1 = x_3 = 0$.
+sources:
+- paper: CP19
+- paper: Chr79
+uses:
+- SG0000005H
+lean:
+  statement: Singularity.SurfaceRuns.cpRun
+  proof: Singularity.SurfaceRuns.cpRun
+tier: T2
+route:
+- R1
+notes: This is Example 3.13.11 of Volume 7 of the handbook, and Example 3.18 of [CP19] in the coordinates of the handbook. The handbook gives the example for each prime $p$, and the Lean proof is for $p = 2$. The step at the origin is `Singularity.SurfaceRuns.rhoStep_cpPoint`, and the step with the translation is `Singularity.SurfaceRuns.rhoStep_cpPoint_translate`. The Lean file does not prove that the curve is transcendental, which uses the theorem of Christol [Chr79], or the facts on the locus and the residual order at the generic point of the plane.
