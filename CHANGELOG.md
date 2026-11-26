@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.54 - 2026-11-27
+
 ### Added
 
 - The node SG0000005V is Corollary 3.13.23 of Volume 7 of the handbook: at the end of a long enough stretch of corner charts with no translation, both corner curves have $\nu^G \ge \rho$. It has a proof in the text and no Lean proof.
