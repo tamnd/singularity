@@ -1,0 +1,14 @@
+tag: SG0000005H
+kind: example
+title: A run of point blowups along a curve does not end
+statement: Over $\mathbb{F}_2$ in the variables $x, y, z$, let $\Delta = \{y\}$ and $g_k = x^4 y^{2k+1} + x^2 y^{3k+1} z^3$ for $k \ge 0$. Then $\rho = 4$ at each point $P_k = (\Delta, g_k)$, and the origin of the $y$-chart of $P_k$ is $P_{k+1}$. So the run of point blowups at the origin keeps $\rho = 4$ and does not end. The order is 4 at each point of the curve $x = z = 0$.
+sources:
+- paper: CJS20
+uses: []
+lean:
+  statement: Singularity.CurveRuns.curveRun
+  proof: Singularity.CurveRuns.curveRun
+tier: T2
+route:
+- R1
+notes: Here $G_k = x^4 + x^2 y^k z^3$. The chart sends $g_k$ to $y^2 g_{k+1}$, and $g_{k+1}$ is clean. The center is the point of the strict transform of the curve $x = z = 0$, so a point blowup does not separate the curve from the locus where the order is $\rho$. The Lean proof is symbolic in $k$, and `Singularity.CurveRuns.logJacobianOrder_localPoint_curvePoint` proves that $\rho = 4$ at the point $(0, 1, 0)$ of the curve. This is Example 3.12.2 of Volume 7 of the handbook.

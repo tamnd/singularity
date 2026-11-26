@@ -1,0 +1,9 @@
+key: Chr79
+title: Christol, Ensembles presque periodiques k-reconnaissables, Theoret. Comput. Sci. 9 (1979), 141-145
+tag: S
+tier: T4
+why: An automatic series is algebraic, and conversely, over a finite field
+year: 1979
+lean: none
+use:
+- ex

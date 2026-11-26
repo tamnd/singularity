@@ -1,0 +1,14 @@
+tag: SG0000005J
+kind: counterexample
+title: A run at an isolated point of the locus of rho does not end
+statement: Over $\mathbb{F}_2$ in the variables $x, y, z$, let $\Delta = \{x, z\}$ and $g_k = x^{5+3k} y^2 z^3 + x^{10+3k} y^3 z^2$ for $k \ge 0$. Then $G = y^2 z + x^5 y^3$ at each point $P_k = (\Delta, g_k)$, $\rho = 3$ at the origin, and the origin of the $x$-chart of $P_k$ is $P_{k+1}$. So the run does not end. The origin is an isolated point of the locus where $\rho \ge 3$, and $\rho = 2$ at the other points of the $x$-axis. The order of $G$ is 3 along the $x$-axis.
+sources:
+- paper: CJS20
+uses: []
+lean:
+  statement: Singularity.CurveRuns.isolatedRun
+  proof: Singularity.CurveRuns.isolatedRun
+tier: T2
+route:
+- R1
+notes: The generators of $\widetilde\Theta(G)$ are $e_x = e_z = y^2 z$ and $\partial_y G = x^5 y^2$, so $\widetilde\Theta(G) = (y^2 z, x^5 y^2)$. So the form of the hypothesis on runs with $\widetilde\Theta(G)$ in place of $G$ is false, and the centers must come from the locus of the order of $G$. The Lean proof is symbolic in $k$, and `Singularity.CurveRuns.logJacobianOrder_localPoint_isolatedPoint` proves that $\rho = 2$ at the point $(1, 0, 0)$. The Lean file does not prove that the origin is isolated in the locus, because that statement is over an algebraically closed field. This is Example 3.12.4 of Volume 7 of the handbook, and the test `inv39.py` found it.
