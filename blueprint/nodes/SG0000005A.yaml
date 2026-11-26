@@ -10,7 +10,10 @@ uses:
 - SG0000004Z
 - SG00000055
 - SG00000056
+lean:
+  statement: Singularity.residualOrderAlong_cleanPart_le_of_forall_eq_zero
+  proof: Singularity.residualOrderAlong_cleanPart_le_of_forall_eq_zero
 tier: T2
 route:
 - R1
-notes: By SG00000059 the first case is $d = \rho$ and the second case is $d = \rho + 1$. From the first case, SG00000055 keeps the first case, so $d' = d$, and SG00000056 gives the inequality for $\tau_\rho$. From the second case to the second case, $d' = d$ and SG0000004Z gives the inequality. From the second case to the first case, $d' = d - 1$. So each step from the second case to the first case where $\tau_\rho$ goes down, as in the example of SG0000004Z, is a step where $d$ goes down. The steps from the first case to the second case have a leaving component, as at the kangaroo points, and the drop of $\tau_\rho$ in SG00000051 has a leaving component. So at the points where $\rho$ stays, every known step where the triple gets worse has a leaving component.
+notes: By SG00000059 the first case is $d = \rho$ and the second case is $d = \rho + 1$. From the first case, SG00000055 keeps the first case, so $d' = d$, and SG00000056 gives the inequality for $\tau_\rho$. From the second case to the second case, $d' = d$ and SG0000004Z gives the inequality. From the second case to the first case, $d' = d - 1$. So each step from the second case to the first case where $\tau_\rho$ goes down, as in the example of SG0000004Z, is a step where $d$ goes down. The steps from the first case to the second case have a leaving component, as at the kangaroo points, and the drop of $\tau_\rho$ in SG00000051 has a leaving component. So at the points where $\rho$ stays, every known step where the triple gets worse has a leaving component. The Lean proof is for polynomials. The form $d' \le d$ is `residualOrderAlong_cleanPart_le_of_forall_eq_zero`, and the form with $\tau_\rho$ when $d' = d$ is `logJacobianDirectrixCodim_le_cleanPart_of_residualOrderAlong_eq`. In both forms the hypothesis that no component leaves is $t_i = 0$ for each $i \in \Delta$ with $i \ne j$.
