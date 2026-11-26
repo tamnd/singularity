@@ -1,0 +1,16 @@
+tag: SG0000005A
+kind: theorem
+title: The residual order and the codimension of the directrix do not get worse if no component of the divisor leaves
+statement: In the setting of SG0000004Z, assume that $\rho(g'_c) = \rho(g)$ and that no component of $\Delta$ leaves. Let $d$ and $d'$ be the residual orders of $g$ and $g'_c$. Then $d' \le d$. If $d' = d$, then $\tau_\rho(g'_c) \ge \tau_\rho(g)$. So the triple $(\rho, d, \tau_\rho)$, ordered by a smaller $\rho$, then a smaller $d$, then a larger $\tau_\rho$, does not get worse at such a step.
+sources:
+- paper: Hir67
+- paper: CP08
+uses:
+- SG00000059
+- SG0000004Z
+- SG00000055
+- SG00000056
+tier: T2
+route:
+- R1
+notes: By SG00000059 the first case is $d = \rho$ and the second case is $d = \rho + 1$. From the first case, SG00000055 keeps the first case, so $d' = d$, and SG00000056 gives the inequality for $\tau_\rho$. From the second case to the second case, $d' = d$ and SG0000004Z gives the inequality. From the second case to the first case, $d' = d - 1$. So each step from the second case to the first case where $\tau_\rho$ goes down, as in the example of SG0000004Z, is a step where $d$ goes down. The steps from the first case to the second case have a leaving component, as at the kangaroo points, and the drop of $\tau_\rho$ in SG00000051 has a leaving component. So at the points where $\rho$ stays, every known step where the triple gets worse has a leaving component.
