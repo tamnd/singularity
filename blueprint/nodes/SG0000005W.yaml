@@ -1,0 +1,12 @@
+tag: SG0000005W
+kind: theorem
+title: A corner run of B1 x^p + B0 with free translations has only a finite number of nonzero translations
+statement: Let $n = 3$ and let $g = B_1(y, z) x^p + B_0(y, z)$ with $B_0, B_1 \in K[[y, z]]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a run where $V(y)$ and $V(z)$ are in $\Delta$ and $V(x)$ is not, each step is the $y$-chart or the $z$-chart followed by a translation in $x$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point. Then only a finite number of the translations are not $0$, and for $m$ large both corner curves at $P_m$ have $\nu^G \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005R
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.13.27 and Corollary 3.13.28 of Volume 7 of the handbook, with Lemmas 3.13.24 and 3.13.25 and Proposition 3.13.26. The proof uses the monomial valuation of the irrational ray of the chart sequence. In this class no step needs a cleaning, and an infinite number of nonzero translations gives a point where the value of $g$ at $x = \varphi_m$ is less than the value of the coefficient of $x^p$, so $\rho$ drops to $0$. The corollary applies Theorem 3.13.20 (SG0000005R) at the point after the last translation. The proofs are in notes 27, 28 and 29 of the research notes, with a computer test. The result is not in Lean. The case of a general $g$ is open, because the cleaning can remove the least term.
