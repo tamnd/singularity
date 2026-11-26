@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "93569f04468849dd451999198bd0e1aed041e97c",
+  "commit": "fdc6bb29e7b97b6a748f6396ec75a5926a9e45bf",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-26",
- "commit": "d081656e8788de533a6b45320519b147a7fd4dbd",
+ "commit": "c42c2c06fe60b2ec718e075d25cc162a0ec909e4",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -8172,7 +8172,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "def",
-   "line": 79,
+   "line": 80,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
   },
   "Singularity.IsLogJacobianCaseB": {
@@ -8183,7 +8183,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "def",
-   "line": 74,
+   "line": 75,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
   },
   "Singularity.IsMonomialValuation": {
@@ -8703,6 +8703,1375 @@
    "line": 57,
    "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsSeparated f"
   },
+  "Singularity.KangarooCounterexample.G0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 334,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.G1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 340,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.G2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 344,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.P0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 350,
+   "type": "Finset (Fin 3) \u00d7 Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.P1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 352,
+   "type": "Finset (Fin 3) \u00d7 Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.P2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 353,
+   "type": "Finset (Fin 3) \u00d7 Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.Poly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 32,
+   "type": "Type"
+  },
+  "Singularity.KangarooCounterexample.blowupDivisor_P0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 379,
+   "type": "Singularity.blowupDivisor {1, 2} 1 Singularity.KangarooCounterexample.t0 = {1}"
+  },
+  "Singularity.KangarooCounterexample.blowupDivisor_P1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 383,
+   "type": "Singularity.blowupDivisor {1} 1 0 = {1}"
+  },
+  "Singularity.KangarooCounterexample.caseA0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 712,
+   "type": "Singularity.IsLogJacobianCaseA Singularity.KangarooCounterexample.P0"
+  },
+  "Singularity.KangarooCounterexample.caseA2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 726,
+   "type": "Singularity.IsLogJacobianCaseA Singularity.KangarooCounterexample.P2"
+  },
+  "Singularity.KangarooCounterexample.caseAForm_g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 751,
+   "type": "Singularity.caseAForm {1, 2} Singularity.KangarooCounterexample.g0 4 1 =\n  Singularity.KangarooCounterexample.poly [(2, 2, 0), (2, 0, 2)]"
+  },
+  "Singularity.KangarooCounterexample.caseAForm_g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 762,
+   "type": "Singularity.caseAForm {1} Singularity.KangarooCounterexample.g2 4 1 = Singularity.KangarooCounterexample.mono 4 0 0"
+  },
+  "Singularity.KangarooCounterexample.caseB1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 719,
+   "type": "Singularity.IsLogJacobianCaseB Singularity.KangarooCounterexample.P1"
+  },
+  "Singularity.KangarooCounterexample.cleanPart_g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 396,
+   "type": "Singularity.cleanPart 2 Singularity.KangarooCounterexample.g2 = Singularity.KangarooCounterexample.g2"
+  },
+  "Singularity.KangarooCounterexample.cleanPart_h0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 387,
+   "type": "Singularity.cleanPart 2 Singularity.KangarooCounterexample.h0 = Singularity.KangarooCounterexample.g1"
+  },
+  "Singularity.KangarooCounterexample.codim_P0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 828,
+   "type": "2 \u2264\n  Singularity.logJacobianDirectrixCodim Singularity.KangarooCounterexample.P0.1 Singularity.KangarooCounterexample.P0.2"
+  },
+  "Singularity.KangarooCounterexample.codim_P2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 835,
+   "type": "Singularity.logJacobianDirectrixCodim Singularity.KangarooCounterexample.P2.1 Singularity.KangarooCounterexample.P2.2 \u2264\n  1"
+  },
+  "Singularity.KangarooCounterexample.coeff_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 70,
+   "type": "\u2200 (a b c : \u2115) (d : Fin 3 \u2192\u2080 \u2115),\n  (Singularity.KangarooCounterexample.mono a b c).coeff d = if d 0 = a \u2227 d 1 = b \u2227 d 2 = c then 1 else 0"
+  },
+  "Singularity.KangarooCounterexample.coeff_poly_expo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 101,
+   "type": "\u2200 (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)) (a b c : \u2115),\n  (Singularity.KangarooCounterexample.poly L).coeff (Singularity.KangarooCounterexample.expo a b c) =\n    \u2191(List.countP (fun e => decide (e = (a, b, c))) L)"
+  },
+  "Singularity.KangarooCounterexample.coeff_poly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 {L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)} {a b c : \u2115},\n  List.countP (fun e => decide (e = (a, b, c))) L % 2 = 1 \u2192\n    (Singularity.KangarooCounterexample.poly L).coeff (Singularity.KangarooCounterexample.expo a b c) \u2260 0"
+  },
+  "Singularity.KangarooCounterexample.degree_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 49,
+   "type": "\u2200 (d : Fin 3 \u2192\u2080 \u2115), Finsupp.degree d = d 0 + d 1 + d 2"
+  },
+  "Singularity.KangarooCounterexample.degree_expo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 (a b c : \u2115), Finsupp.degree (Singularity.KangarooCounterexample.expo a b c) = a + b + c"
+  },
+  "Singularity.KangarooCounterexample.directrix_F0_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 775,
+   "type": "Singularity.directrix (Singularity.KangarooCounterexample.poly [(2, 2, 0), (2, 0, 2)]) \u2264 ZMod 2 \u2219 ![0, 1, 1]"
+  },
+  "Singularity.KangarooCounterexample.divisorExponent_g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 443,
+   "type": "Singularity.divisorExponent {1, 2} Singularity.KangarooCounterexample.g0 = Singularity.KangarooCounterexample.expo 0 1 1"
+  },
+  "Singularity.KangarooCounterexample.divisorExponent_g1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 451,
+   "type": "Singularity.divisorExponent {1} Singularity.KangarooCounterexample.g1 = Singularity.KangarooCounterexample.expo 0 4 0"
+  },
+  "Singularity.KangarooCounterexample.divisorExponent_g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 459,
+   "type": "Singularity.divisorExponent {1} Singularity.KangarooCounterexample.g2 = Singularity.KangarooCounterexample.expo 0 7 0"
+  },
+  "Singularity.KangarooCounterexample.divisorExponent_monomial_mul'": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 198,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {r : \u03c3 \u2192\u2080 \u2115} {G : MvPolynomial \u03c3 k},\n  (\u2200 i \u2209 \u0394, r i = 0) \u2192\n    (\u2200 i \u2208 \u0394, \u2203 d \u2208 G.support, d i = 0) \u2192 Singularity.divisorExponent \u0394 ((MvPolynomial.monomial r) 1 * G) = r"
+  },
+  "Singularity.KangarooCounterexample.exists_of_coeff_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 88,
+   "type": "\u2200 (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)) (d : Fin 3 \u2192\u2080 \u2115),\n  (Singularity.KangarooCounterexample.poly L).coeff d \u2260 0 \u2192 \u2203 e \u2208 L, d 0 = e.1 \u2227 d 1 = e.2.1 \u2227 d 2 = e.2.2"
+  },
+  "Singularity.KangarooCounterexample.expo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 37,
+   "type": "\u2115 \u2192 \u2115 \u2192 \u2115 \u2192 Fin 3 \u2192\u2080 \u2115"
+  },
+  "Singularity.KangarooCounterexample.expo_apply_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 43,
+   "type": "\u2200 (a b c : \u2115), (Singularity.KangarooCounterexample.expo a b c) 1 = b"
+  },
+  "Singularity.KangarooCounterexample.expo_apply_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 46,
+   "type": "\u2200 (a b c : \u2115), (Singularity.KangarooCounterexample.expo a b c) 2 = c"
+  },
+  "Singularity.KangarooCounterexample.expo_apply_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 40,
+   "type": "\u2200 (a b c : \u2115), (Singularity.KangarooCounterexample.expo a b c) 0 = a"
+  },
+  "Singularity.KangarooCounterexample.expo_eq_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 (a b c : \u2115) (d : Fin 3 \u2192\u2080 \u2115), Singularity.KangarooCounterexample.expo a b c = d \u2194 d 0 = a \u2227 d 1 = b \u2227 d 2 = c"
+  },
+  "Singularity.KangarooCounterexample.factPrimeTwo": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 30,
+   "type": "Fact (Nat.Prime 2)"
+  },
+  "Singularity.KangarooCounterexample.finrank_T0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 798,
+   "type": "Module.finrank (ZMod 2) \u21a5(Singularity.logJacobianDirectrix {1, 2} Singularity.KangarooCounterexample.g0) \u2264 1"
+  },
+  "Singularity.KangarooCounterexample.finrank_ker": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 819,
+   "type": "Module.finrank (ZMod 2) \u21a5(LinearMap.proj 0).ker = 2"
+  },
+  "Singularity.KangarooCounterexample.g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 332,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.g0_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 401,
+   "type": "Singularity.KangarooCounterexample.g0 =\n  (MvPolynomial.monomial (Singularity.KangarooCounterexample.expo 0 1 1)) 1 * Singularity.KangarooCounterexample.G0"
+  },
+  "Singularity.KangarooCounterexample.g1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 338,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.g1_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 406,
+   "type": "Singularity.KangarooCounterexample.g1 =\n  (MvPolynomial.monomial (Singularity.KangarooCounterexample.expo 0 4 0)) 1 * Singularity.KangarooCounterexample.G1"
+  },
+  "Singularity.KangarooCounterexample.g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 342,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.g2_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 411,
+   "type": "Singularity.KangarooCounterexample.g2 =\n  (MvPolynomial.monomial (Singularity.KangarooCounterexample.expo 0 7 0)) 1 * Singularity.KangarooCounterexample.G2"
+  },
+  "Singularity.KangarooCounterexample.h0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 336,
+   "type": "Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.hG0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 424,
+   "type": "\u2200 i \u2208 {1, 2}, \u2203 d \u2208 MvPolynomial.support Singularity.KangarooCounterexample.G0, d i = 0"
+  },
+  "Singularity.KangarooCounterexample.hG1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 431,
+   "type": "\u2200 i \u2208 {1}, \u2203 d \u2208 MvPolynomial.support Singularity.KangarooCounterexample.G1, d i = 0"
+  },
+  "Singularity.KangarooCounterexample.hG2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 437,
+   "type": "\u2200 i \u2208 {1}, \u2203 d \u2208 MvPolynomial.support Singularity.KangarooCounterexample.G2, d i = 0"
+  },
+  "Singularity.KangarooCounterexample.homogeneousComponent_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 160,
+   "type": "\u2200 (n a b c : \u2115),\n  (MvPolynomial.homogeneousComponent n) (Singularity.KangarooCounterexample.mono a b c) =\n    if a + b + c = n then Singularity.KangarooCounterexample.mono a b c else 0"
+  },
+  "Singularity.KangarooCounterexample.homogeneousComponent_poly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 168,
+   "type": "\u2200 (n : \u2115) (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)),\n  (MvPolynomial.homogeneousComponent n) (Singularity.KangarooCounterexample.poly L) =\n    Singularity.KangarooCounterexample.poly (List.filter (fun e => decide (e.1 + e.2.1 + e.2.2 = n)) L)"
+  },
+  "Singularity.KangarooCounterexample.hr0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 416,
+   "type": "\u2200 i \u2209 {1, 2}, (Singularity.KangarooCounterexample.expo 0 1 1) i = 0"
+  },
+  "Singularity.KangarooCounterexample.hr1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 420,
+   "type": "\u2200 (b : \u2115), \u2200 i \u2209 {1}, (Singularity.KangarooCounterexample.expo 0 b 0) i = 0"
+  },
+  "Singularity.KangarooCounterexample.idealOrd_span_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 224,
+   "type": "\u2200 {S : Set Singularity.KangarooCounterexample.Poly} {n : \u2115},\n  (\u2200 s \u2208 S, \u2191n \u2264 Singularity.ord s) \u2192\n    \u2200 {f : Singularity.KangarooCounterexample.Poly},\n      f \u2208 S \u2192 Singularity.ord f = \u2191n \u2192 Singularity.idealOrd (Ideal.span S) = \u2191n"
+  },
+  "Singularity.KangarooCounterexample.isClean_poly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 154,
+   "type": "\u2200 (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)),\n  (\u2200 e \u2208 L, \u00ac(2 \u2223 e.1 \u2227 2 \u2223 e.2.1 \u2227 2 \u2223 e.2.2)) \u2192 Singularity.IsClean 2 (Singularity.KangarooCounterexample.poly L)"
+  },
+  "Singularity.KangarooCounterexample.ker_le_T2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 807,
+   "type": "(LinearMap.proj 0).ker \u2264 Singularity.logJacobianDirectrix {1} Singularity.KangarooCounterexample.g2"
+  },
+  "Singularity.KangarooCounterexample.le_ord_X_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 566,
+   "type": "\u2200 {n : \u2115} {f : Singularity.KangarooCounterexample.Poly},\n  \u2191n \u2264 Singularity.ord f \u2192 \u2200 (a : Fin 3), \u2191(n + 1) \u2264 Singularity.ord (MvPolynomial.X a * f)"
+  },
+  "Singularity.KangarooCounterexample.le_ord_poly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 132,
+   "type": "\u2200 (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)) (n : \u2115),\n  (\u2200 e \u2208 L, n \u2264 e.1 + e.2.1 + e.2.2) \u2192 \u2191n \u2264 Singularity.ord (Singularity.KangarooCounterexample.poly L)"
+  },
+  "Singularity.KangarooCounterexample.mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 64,
+   "type": "\u2115 \u2192 \u2115 \u2192 \u2115 \u2192 Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.mono_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 (a b c : \u2115),\n  Singularity.KangarooCounterexample.mono a b c =\n    (MvPolynomial.monomial (Singularity.KangarooCounterexample.expo a b c)) 1"
+  },
+  "Singularity.KangarooCounterexample.not_kangarooPathConjecture": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 843,
+   "type": "\u00acSingularity.KangarooPathConjecture 2"
+  },
+  "Singularity.KangarooCounterexample.num10": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 263,
+   "type": "10 = 0"
+  },
+  "Singularity.KangarooCounterexample.num11": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 267,
+   "type": "11 = 1"
+  },
+  "Singularity.KangarooCounterexample.num12": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 271,
+   "type": "12 = 0"
+  },
+  "Singularity.KangarooCounterexample.num13": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 275,
+   "type": "13 = 1"
+  },
+  "Singularity.KangarooCounterexample.num14": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 279,
+   "type": "14 = 0"
+  },
+  "Singularity.KangarooCounterexample.num15": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 283,
+   "type": "15 = 1"
+  },
+  "Singularity.KangarooCounterexample.num16": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 287,
+   "type": "16 = 0"
+  },
+  "Singularity.KangarooCounterexample.num17": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 291,
+   "type": "17 = 1"
+  },
+  "Singularity.KangarooCounterexample.num18": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 295,
+   "type": "18 = 0"
+  },
+  "Singularity.KangarooCounterexample.num19": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 299,
+   "type": "19 = 1"
+  },
+  "Singularity.KangarooCounterexample.num2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 231,
+   "type": "2 = 0"
+  },
+  "Singularity.KangarooCounterexample.num20": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 303,
+   "type": "20 = 0"
+  },
+  "Singularity.KangarooCounterexample.num21": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 307,
+   "type": "21 = 1"
+  },
+  "Singularity.KangarooCounterexample.num22": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 311,
+   "type": "22 = 0"
+  },
+  "Singularity.KangarooCounterexample.num23": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 315,
+   "type": "23 = 1"
+  },
+  "Singularity.KangarooCounterexample.num24": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 319,
+   "type": "24 = 0"
+  },
+  "Singularity.KangarooCounterexample.num3": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 235,
+   "type": "3 = 1"
+  },
+  "Singularity.KangarooCounterexample.num4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 239,
+   "type": "4 = 0"
+  },
+  "Singularity.KangarooCounterexample.num5": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 243,
+   "type": "5 = 1"
+  },
+  "Singularity.KangarooCounterexample.num6": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 247,
+   "type": "6 = 0"
+  },
+  "Singularity.KangarooCounterexample.num7": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 251,
+   "type": "7 = 1"
+  },
+  "Singularity.KangarooCounterexample.num8": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 255,
+   "type": "8 = 0"
+  },
+  "Singularity.KangarooCounterexample.num9": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 259,
+   "type": "9 = 1"
+  },
+  "Singularity.KangarooCounterexample.ord_poly_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 148,
+   "type": "\u2200 {L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)} (a b c : \u2115),\n  List.countP (fun e => decide (e = (a, b, c))) L % 2 = 1 \u2192\n    (\u2200 e \u2208 L, a + b + c \u2264 e.1 + e.2.1 + e.2.2) \u2192\n      Singularity.ord (Singularity.KangarooCounterexample.poly L) = \u2191(a + b + c)"
+  },
+  "Singularity.KangarooCounterexample.ord_poly_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 142,
+   "type": "\u2200 {L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)} {a b c : \u2115},\n  List.countP (fun e => decide (e = (a, b, c))) L % 2 = 1 \u2192\n    Singularity.ord (Singularity.KangarooCounterexample.poly L) \u2264 \u2191(a + b + c)"
+  },
+  "Singularity.KangarooCounterexample.pderiv_one_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 186,
+   "type": "\u2200 (a b c : \u2115),\n  (MvPolynomial.pderiv 1) (Singularity.KangarooCounterexample.mono a b c) =\n    \u2191b * Singularity.KangarooCounterexample.mono a (b - 1) c"
+  },
+  "Singularity.KangarooCounterexample.pderiv_two_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 191,
+   "type": "\u2200 (a b c : \u2115),\n  (MvPolynomial.pderiv 2) (Singularity.KangarooCounterexample.mono a b c) =\n    \u2191c * Singularity.KangarooCounterexample.mono a b (c - 1)"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_G0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 475,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.G0 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_G1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 485,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.G1 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_G2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 495,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.G2 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 470,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.g0 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_g1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 480,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.g1 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 490,
+   "type": "(MvPolynomial.pderiv 0) Singularity.KangarooCounterexample.g2 = 0"
+  },
+  "Singularity.KangarooCounterexample.pderiv_zero_mono": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 181,
+   "type": "\u2200 (a b c : \u2115),\n  (MvPolynomial.pderiv 0) (Singularity.KangarooCounterexample.mono a b c) =\n    \u2191a * Singularity.KangarooCounterexample.mono (a - 1) b c"
+  },
+  "Singularity.KangarooCounterexample.pointChart_g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 357,
+   "type": "(Singularity.pointChart 1 Singularity.KangarooCounterexample.t0) Singularity.KangarooCounterexample.g0 =\n  MvPolynomial.X 1 ^ 2 * Singularity.KangarooCounterexample.h0"
+  },
+  "Singularity.KangarooCounterexample.pointChart_g1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 368,
+   "type": "(Singularity.pointChart 1 0) Singularity.KangarooCounterexample.g1 =\n  MvPolynomial.X 1 ^ 2 * Singularity.KangarooCounterexample.g2"
+  },
+  "Singularity.KangarooCounterexample.poly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 79,
+   "type": "List (\u2115 \u00d7 \u2115 \u00d7 \u2115) \u2192 Singularity.KangarooCounterexample.Poly"
+  },
+  "Singularity.KangarooCounterexample.poly_cons": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 84,
+   "type": "\u2200 (e : \u2115 \u00d7 \u2115 \u00d7 \u2115) (L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)),\n  Singularity.KangarooCounterexample.poly (e :: L) =\n    Singularity.KangarooCounterexample.mono e.1 e.2.1 e.2.2 + Singularity.KangarooCounterexample.poly L"
+  },
+  "Singularity.KangarooCounterexample.poly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 125,
+   "type": "\u2200 {L : List (\u2115 \u00d7 \u2115 \u00d7 \u2115)} {a b c : \u2115},\n  List.countP (fun e => decide (e = (a, b, c))) L % 2 = 1 \u2192 Singularity.KangarooCounterexample.poly L \u2260 0"
+  },
+  "Singularity.KangarooCounterexample.poly_nil": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 82,
+   "type": "Singularity.KangarooCounterexample.poly [] = 0"
+  },
+  "Singularity.KangarooCounterexample.pt": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 772,
+   "type": "ZMod 2 \u2192 ZMod 2 \u2192 ZMod 2 \u2192 ZMod 2 \u2192 Option (Fin 3) \u2192 ZMod 2"
+  },
+  "Singularity.KangarooCounterexample.res0_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 500,
+   "type": "\u2191((Singularity.KangarooCounterexample.expo 0 1 1) 1) \u2022 Singularity.KangarooCounterexample.G0 +\n    MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.G0 =\n  Singularity.KangarooCounterexample.G0"
+  },
+  "Singularity.KangarooCounterexample.res0_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 506,
+   "type": "\u2191((Singularity.KangarooCounterexample.expo 0 1 1) 2) \u2022 Singularity.KangarooCounterexample.G0 +\n    MvPolynomial.X 2 * (MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.G0 =\n  Singularity.KangarooCounterexample.poly [(2, 2, 0), (2, 0, 2)]"
+  },
+  "Singularity.KangarooCounterexample.res1_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 513,
+   "type": "\u2191((Singularity.KangarooCounterexample.expo 0 4 0) 1) \u2022 Singularity.KangarooCounterexample.G1 +\n    MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.G1 =\n  Singularity.KangarooCounterexample.poly [(4, 1, 0), (4, 1, 2)]"
+  },
+  "Singularity.KangarooCounterexample.res1_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 520,
+   "type": "(MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.G1 = Singularity.KangarooCounterexample.poly [(2, 0, 2)]"
+  },
+  "Singularity.KangarooCounterexample.res2_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 525,
+   "type": "\u2191((Singularity.KangarooCounterexample.expo 0 7 0) 1) \u2022 Singularity.KangarooCounterexample.G2 +\n    MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.G2 =\n  Singularity.KangarooCounterexample.G2"
+  },
+  "Singularity.KangarooCounterexample.res2_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 531,
+   "type": "(MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.G2 = Singularity.KangarooCounterexample.poly [(2, 0, 2)]"
+  },
+  "Singularity.KangarooCounterexample.residualFactor_g0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 447,
+   "type": "Singularity.residualFactor {1, 2} Singularity.KangarooCounterexample.g0 = Singularity.KangarooCounterexample.G0"
+  },
+  "Singularity.KangarooCounterexample.residualFactor_g1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 455,
+   "type": "Singularity.residualFactor {1} Singularity.KangarooCounterexample.g1 = Singularity.KangarooCounterexample.G1"
+  },
+  "Singularity.KangarooCounterexample.residualFactor_g2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 463,
+   "type": "Singularity.residualFactor {1} Singularity.KangarooCounterexample.g2 = Singularity.KangarooCounterexample.G2"
+  },
+  "Singularity.KangarooCounterexample.rho0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 573,
+   "type": "Singularity.logJacobianOrder {1, 2} Singularity.KangarooCounterexample.g0 = \u21914"
+  },
+  "Singularity.KangarooCounterexample.rho1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 597,
+   "type": "Singularity.logJacobianOrder {1} Singularity.KangarooCounterexample.g1 = \u21914"
+  },
+  "Singularity.KangarooCounterexample.rho2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 619,
+   "type": "Singularity.logJacobianOrder {1} Singularity.KangarooCounterexample.g2 = \u21914"
+  },
+  "Singularity.KangarooCounterexample.step01": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 735,
+   "type": "Singularity.RhoStep 2 4 Singularity.KangarooCounterexample.P0 Singularity.KangarooCounterexample.P1"
+  },
+  "Singularity.KangarooCounterexample.step12": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 742,
+   "type": "Singularity.RhoStep 2 4 Singularity.KangarooCounterexample.P1 Singularity.KangarooCounterexample.P2"
+  },
+  "Singularity.KangarooCounterexample.t0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 347,
+   "type": "Fin 3 \u2192 ZMod 2"
+  },
+  "Singularity.KangarooCounterexample.tacticChar2": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "def",
+   "line": 325,
+   "type": "Lean.ParserDescr"
+  },
+  "Singularity.KangarooCounterexample.tan0_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 536,
+   "type": "MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.g0 = Singularity.KangarooCounterexample.g0"
+  },
+  "Singularity.KangarooCounterexample.tan0_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 541,
+   "type": "MvPolynomial.X 2 * (MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.g0 =\n  Singularity.KangarooCounterexample.poly [(2, 3, 1), (2, 1, 3)]"
+  },
+  "Singularity.KangarooCounterexample.tan1_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 546,
+   "type": "MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.g1 =\n  Singularity.KangarooCounterexample.poly [(4, 5, 0), (4, 5, 2)]"
+  },
+  "Singularity.KangarooCounterexample.tan1_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 551,
+   "type": "(MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.g1 = Singularity.KangarooCounterexample.poly [(2, 4, 2)]"
+  },
+  "Singularity.KangarooCounterexample.tan2_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 556,
+   "type": "MvPolynomial.X 1 * (MvPolynomial.pderiv 1) Singularity.KangarooCounterexample.g2 = Singularity.KangarooCounterexample.g2"
+  },
+  "Singularity.KangarooCounterexample.tan2_two": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 561,
+   "type": "(MvPolynomial.pderiv 2) Singularity.KangarooCounterexample.g2 = Singularity.KangarooCounterexample.poly [(2, 7, 2)]"
+  },
+  "Singularity.KangarooCounterexample.tangent0": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 643,
+   "type": "Singularity.idealOrd (Singularity.logJacobianTangent {1, 2} Singularity.KangarooCounterexample.g0) = \u21916"
+  },
+  "Singularity.KangarooCounterexample.tangent1": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 666,
+   "type": "Singularity.idealOrd (Singularity.logJacobianTangent {1} Singularity.KangarooCounterexample.g1) = \u21919"
+  },
+  "Singularity.KangarooCounterexample.tangent2": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangarooCounterexample.lean",
+   "kind": "theorem",
+   "line": 688,
+   "type": "Singularity.idealOrd (Singularity.logJacobianTangent {1} Singularity.KangarooCounterexample.g2) = \u219111"
+  },
   "Singularity.KangarooPathConjecture": {
    "axioms": [
     "Classical.choice",
@@ -8711,7 +10080,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "def",
-   "line": 84,
+   "line": 85,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [Field k] \u2192 [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 [Fintype \u03c3] \u2192 \u2115 \u2192 Prop"
   },
   "Singularity.KeyPolynomial": {
@@ -9858,7 +11227,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "def",
-   "line": 65,
+   "line": 66,
    "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 \u2115 \u2192 \u2115 \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
   },
   "Singularity.X_add_C_pow_pow_mul": {
@@ -16897,7 +18266,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "theorem",
-   "line": 132,
+   "line": 133,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q R : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Relation.ReflTransGen (fun A B => Singularity.RhoStep p m A B \u2227 Singularity.IsLogJacobianCaseB B) P Q \u2192\n    Singularity.RhoStep p m Q R \u2192\n      Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianFullDirectrixCodim R.1 R.2"
   },
   "Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_rhoStep": {
@@ -16908,7 +18277,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "theorem",
-   "line": 112,
+   "line": 113,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Singularity.RhoStep p m P Q \u2192\n    Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianFullDirectrixCodim Q.1 Q.2"
   },
   "Singularity.logJacobianDirectrixCodim_le_of_le_one": {
@@ -16930,7 +18299,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "theorem",
-   "line": 121,
+   "line": 122,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Relation.ReflTransGen (fun A B => Singularity.RhoStep p m A B \u2227 Singularity.IsLogJacobianCaseB B) P Q \u2192\n    Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianDirectrixCodim Q.1 Q.2"
   },
   "Singularity.logJacobianDirectrixCodim_le_of_rhoStep": {
@@ -16941,7 +18310,7 @@
    ],
    "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
    "kind": "theorem",
-   "line": 100,
+   "line": 101,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Singularity.RhoStep p m P Q \u2192\n    Singularity.IsLogJacobianCaseB Q \u2192\n      Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianDirectrixCodim Q.1 Q.2"
   },
   "Singularity.logJacobianDirectrixSet": {
