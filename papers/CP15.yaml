@@ -4,6 +4,8 @@ tag: S
 tier: T4
 why: The characteristic polyhedron is reached without completion
 year: 2015
+arxiv:
+- '1203.2484'
 lean: none
 use:
 - read

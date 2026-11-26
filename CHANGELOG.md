@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Fixed
+
+- CP14 and CP15: the arXiv identifier 1203.2484 belongs to CP15, "Characteristic polyhedra of singularities without completion". It was on CP14 by mistake. CP14 now has the full title of the RACSAM paper and no arXiv identifier.
+
 ## 0.4.42 - 2026-11-26
 
 ### Changed
