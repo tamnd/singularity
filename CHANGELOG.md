@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000005C: the Lean statement and proof are `Singularity.KangarooExample.kangarooExample`, over $\mathbb{F}_2$ in three variables (tamnd/singularity-lean#158). The proof checks the two steps, the cases of the three points and the values 1, 2 and 1 of $\tau_\rho$. The status is now proved.
+- The records are pinned at tamnd/singularity-lean cadf65e, the merge commit of the release 0.4.33, with 2337 declarations. The base record is at cbfeb79.
+
 ## 0.4.44 - 2026-11-26
 
 ### Changed

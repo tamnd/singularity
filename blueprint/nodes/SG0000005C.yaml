@@ -6,7 +6,10 @@ sources:
 - paper: Hau10
 uses:
 - SG0000005B
+lean:
+  statement: Singularity.KangarooExample.kangarooExample
+  proof: Singularity.KangarooExample.kangarooExample
 tier: T2
 route:
 - R1
-notes: Here $r = (1, 0, 1)$ and $G = x^2 + z^2 + x^3 y$, so $|r| + d = 4$. The generators of $\widetilde\Theta(G)$ are $e_x = x^2 + z^2$, $e_z = G$ and $\partial_y G = x^3$. At $P_1$, $g_1 = x^2 G_1$ with $G_1 = z^3 + x^2 y z + x^2 y + x^2 z$, and the forms of degree 2 are $x^2$ and $x^2 + z^2$. At $P_2$, $g_2 = x^2 y^3 G_2$ with $G_2 = x^2 + z^3 + x^2 z + x^2 y z$ and the divisor $\{x, y\}$. The only form of $H(P_2)$ is $x^2$. The old form $(x + z)^2$ is the initial form of $\partial_z G_2$, so it is in $\widetilde\Theta(G_2)$ but not in $\widetilde\Theta_0(G_2)$. So the forms of $P_0$ do not transport into $H(P_2)$, and a proof of SG0000005D must compare the dimensions in a different way. The example was checked by hand and by the test `tau30.py`. There is no Lean computation yet.
+notes: Here $r = (1, 0, 1)$ and $G = x^2 + z^2 + x^3 y$, so $|r| + d = 4$. The generators of $\widetilde\Theta(G)$ are $e_x = x^2 + z^2$, $e_z = G$ and $\partial_y G = x^3$. At $P_1$, $g_1 = x^2 G_1$ with $G_1 = z^3 + x^2 y z + x^2 y + x^2 z$, and the forms of degree 2 are $x^2$ and $x^2 + z^2$. At $P_2$, $g_2 = x^2 y^3 G_2$ with $G_2 = x^2 + z^3 + x^2 z + x^2 y z$ and the divisor $\{x, y\}$. The only form of $H(P_2)$ is $x^2$. The old form $(x + z)^2$ is the initial form of $\partial_z G_2$, so it is in $\widetilde\Theta(G_2)$ but not in $\widetilde\Theta_0(G_2)$. So the forms of $P_0$ do not transport into $H(P_2)$, and a proof of SG0000005D must compare the dimensions in a different way. The example was checked by hand and by the test `tau30.py`. The Lean proof is over $\mathbb{F}_2$, with the variables $x, y, z$ as the indices $0, 1, 2$ of `Fin 3`. It proves the two steps with $\rho = 2$, the cases of $P_0$, $P_1$ and $P_2$, and the values 1, 2 and 1 of $\tau_\rho$. It does not compute $\widetilde\tau(P_2)$ or compare the two directrices.
