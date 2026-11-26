@@ -1,0 +1,14 @@
+tag: SG0000005T
+kind: lemma
+title: The order of G along a coordinate subvariety is at most the order of the log-Jacobian ideal plus one
+statement: Let $K$ be a field of characteristic $p$, let $g$ be a polynomial in $x_1, \dots, x_n$ over $K$, let $\Delta$ be a set of the variables, and write $g = x^r G$ as in Theorem 3.1.4. Let $Z$ be the zero set of the $x_i$ with $i \in S$, for a set $S$ of the indices. Let $\nu^G_Z$ be the supremum over the polynomials $h$ of the order of $g + h^p$ along $Z$, minus the sum of $r_i$ for $i \in \Delta \cap S$. Then $\nu^G_Z \le \operatorname{ord}_Z \widetilde\Theta(G) + 1$.
+sources:
+- paper: CJS20
+uses: []
+tier: T2
+route:
+- R1
+lean:
+  statement: Singularity.orderGAlong_le_idealOrdAlong_add_one
+  proof: Singularity.orderGAlong_le_idealOrdAlong_add_one
+notes: This is Lemma 3.13.14 of Volume 7 of the handbook for a coordinate subvariety and with $h$ a polynomial. The handbook states the lemma for each regular formal subvariety and with $h$ a formal series, and that form is not in Lean. The order along $Z$ is defined in `Singularity/Invariant/OrderAlong.lean` (tamnd/singularity-lean#173), where `le_ordAlong_iff_mem_pow` proves that the order is the largest $m$ with $f$ is in the $m$-th power of the ideal of $Z$. The consequence `Singularity.CornerRuns.cornerRun_orderGAlong_lt` proves part 2 of Example 3.13.15 (SG0000005M) for the coordinate subvarieties.
