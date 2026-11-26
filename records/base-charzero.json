@@ -546,5 +546,5 @@
    "kind": "theorem",
    "file": "Singularity/Algebra/Regular.lean",
    "axioms": ["Classical.choice", "Quot.sound", "propext"]}},
- "commit": "17e98b6c4ca65367539ca8858d479fd90af6b5ea",
+ "commit": "42abe9832ceab96622d1ff1e3e900dd36a0b3100",
  "built": "2026-11-26"}
