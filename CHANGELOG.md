@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000000Y: the notes say that tamnd/singularity-lean#153 proves that the residue field of an Abhyankar valuation is finitely generated (Volume 3, Corollary 2.2.4 of the handbook). The Lean name is `Singularity.IsAbhyankarValuation.fg_residueField`.
+
 ## 0.4.43 - 2026-11-26
 
 ### Changed
