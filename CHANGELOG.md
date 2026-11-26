@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.47 - 2026-11-26
+
 ### Added
 
 - The papers Hir77, Hir03, Hir05, Hir17, Kuh00, Cut99, CP04, Cut24 and San17 are new, for Volume 5, Chapter 5 of the handbook. Hir77, Hir03 and Hir05 are the papers of Hironaka on idealistic exponents and infinitely near singular points. Hir17 is the manuscript of Hironaka of 2017 on his web page, which announces resolution in characteristic $p$. It is not refereed. Kuh00 is the paper of Kuhlmann on the valuation theoretic and model theoretic aspects of local uniformization. Cut99 is the memoir of Cutkosky on local monomialization. CP04 is the paper of Cutkosky-Piltant on the ramification of valuations. Cut24 is the counterexample of Cutkosky to strong local monomialization for independent defect, arXiv:2302.07710, now in Ann. Fac. Sci. Toulouse Math. San17 is the paper of San Saturnino on the defect and key polynomials, arXiv:1412.7697, now in J. Algebra 481 (2017). Each record gives the journal, the volume, the pages and the DOI when there is one.
