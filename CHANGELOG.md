@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000005X, SG0000005Y, SG0000005Z, SG00000060 and SG00000061 for the origin runs of Volume 7, Section 3.14 of the handbook. SG0000005X is the potential for the difference of two exponent vectors. SG0000005Y says that an origin run that uses all the charts an infinite number of times reaches $\rho = 0$. SG0000005Z gives the corner curves with the order of $G$ at least $\rho$ for an origin run that uses $k$ charts, with $2 \le k \le n - 1$. SG00000060 answers Question 3.13.18 for each origin run in each dimension $n \ge 3$. SG00000061 is an origin run in four variables that uses three charts for ever and has no surface with the order of $G$ at least $\rho$. The proofs are in notes 31 and 32 of the research notes. None of the nodes has a Lean proof.
+
 ## 0.4.57 - 2026-11-27
 
 ### Changed

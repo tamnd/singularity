@@ -1,0 +1,12 @@
+tag: SG0000005Y
+kind: theorem
+title: An origin run that uses all charts reaches rho equal to 0 after a bounded number of windows
+statement: Let $n \ge 2$, and let $P_N, P_{N+1}, \dots$ be an origin run. Let $P_M$ be a point such that each of the $n$ letters occurs among the steps from $P_N$ to $P_M$. Let $V$ be the set of the minimal exponent vectors of $g_M$, and let $W$ be $0$ or the largest value of $\Phi(e - e') - 1$ for $e, e'$ in $V$ with $e - e'$ not $\ge 0$ and not $\le 0$. If $G_m$ is a unit for some $m \ge M$, then $G$ is a unit and $\rho = 0$ at $P_m$ and at each later point. If the steps after $P_M$ contain $W + 1$ disjoint windows, each with all $n$ letters, then $\rho = 0$ at the end of the last window. So in an origin run with $\rho \ge 1$ at each point, at least one letter occurs only a finite number of times.
+sources:
+- paper: CJS20
+uses:
+- SG0000005X
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.14.5 of Volume 7 of the handbook, the Theorem 1 of note 31 of the research notes with the statement of note 32. The step map is injective and keeps the componentwise order, so the minimal vectors at $P_m$ are images of vectors of $V$, and $V$ is finite by Dickson's lemma. $G_m$ is a unit if and only if one minimal vector is below all the others, that is, no pair of minimal vectors has a negative entry and a positive entry in its difference. SG0000005X bounds the number of windows for each such pair. When $\Delta$ has all coordinates and $G$ is a unit, the clean monomial $x^r$ has an entry $r_i$ that $p$ does not divide, so $\rho = 0$. For $n = 3$ the theorem shows that an origin run with $\rho \ge 1$ uses at most two charts from some point on. Note 32 checks the bound by a full search of the words for $n = 3$ and $n = 4$, with no failure. The result is not in Lean.

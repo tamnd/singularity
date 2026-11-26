@@ -1,0 +1,13 @@
+tag: SG00000060
+kind: theorem
+title: Each origin run with an infinite number of corner steps has corner curves with the order of G at least rho
+statement: Let $n \ge 3$, and let $P_0, P_1, \dots$ be an infinite origin run with $\rho \ge 1$ at each point and an infinite number of corner steps. Then the set $L$ of the letters that occur an infinite number of times has $2 \le |L| \le n - 1$. For each $m$ large enough there are $|L|$ regular coordinate curves at $P_m$, each in a component of $\Delta_m$, with $\nu^G = d_m \ge \rho$. So Question 3.13.18 of Volume 7 has a positive answer for each origin run, in each dimension $n \ge 3$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005Y
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.14.8 of Volume 7 of the handbook. A run has an infinite number of corner steps if and only if at least two letters occur an infinite number of times, and SG0000005Y shows that at most $n - 1$ letters do. SG0000005Z applies from a point after the last step with a letter not in $L$ and after the first step of each letter of $L$. For $n = 3$, $|L| = 2$, and the corollary is Theorem 3.13.20 (SG0000005R) after a change of the names of the variables. The answer is for origin runs only. The runs with translations are open, except for the class of SG0000005W. The result is not in Lean.
