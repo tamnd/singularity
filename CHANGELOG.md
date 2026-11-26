@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG0000003D cites Stacks tag 00NR (a regular quotient of a regular local ring) in place of 00NQ.
+
 ## 0.4.35 - 2026-11-26
 
 ### Changed
