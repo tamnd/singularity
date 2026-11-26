@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.57 - 2026-11-27
+
 ### Changed
 
 - The records pin tamnd/singularity-lean 0.4.40 at commit c1f9cda, with 2876 declarations. The base record is from commit 42abe98.
