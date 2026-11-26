@@ -4,6 +4,16 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000005B: the codimension of the directrix does not go down along a run of points of the second case, and at the last step it is at most the full codimension (Volume 7, Proposition 3.11.1 of the handbook). The Lean statement and proof are `Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_reflTransGen`.
+- SG0000005C: an example over $\mathbb{F}_2$ where the codimension of the directrix goes down at the last step of a kangaroo path, back to its value at the start (Volume 7, Example 3.11.2 of the handbook). There is no Lean computation yet.
+- SG0000005D: the conjecture that the codimension of the directrix does not go down along a kangaroo path (Volume 7, Conjecture 3.11.3 of the handbook). The Lean statement is `Singularity.KangarooPathConjecture`. It is open.
+
+### Changed
+
+- The records are pinned at tamnd/singularity-lean 979cb14, the merge commit of tamnd/singularity-lean#143, with 2013 declarations.
+
 ## 0.4.38 - 2026-11-26
 
 ### Changed

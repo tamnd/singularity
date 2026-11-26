@@ -1,0 +1,12 @@
+tag: SG0000005C
+kind: example
+title: The codimension of the directrix goes down at the last step of a kangaroo path
+statement: Over $\mathbb{F}_2$ in the variables $x, y, z$, let $g = x^3 z + x z^3 + x^4 y z$ and $\Delta = \{x, z\}$. Then $\rho = 2$, the point $P_0$ is in the first case, and $\tau_\rho(P_0) = 1$. At the point of the $x$-chart with $t_y = t_z = 1$, the new point $P_1$ is in the second case with $\rho = 2$ and $\tau_\rho(P_1) = 2$, and the component $z = 0$ leaves. At the origin of the $y$-chart of $P_1$, the new point $P_2$ is in the first case with $\rho = 2$, $\tau_\rho(P_2) = 1$ and $\widetilde\tau(P_2) = 2$. The directrices $T_\rho(P_0) = \{a_x = a_z\}$ and $T_\rho(P_2) = \{a_x = 0\}$ are different.
+sources:
+- paper: Hau10
+uses:
+- SG0000005B
+tier: T2
+route:
+- R1
+notes: Here $r = (1, 0, 1)$ and $G = x^2 + z^2 + x^3 y$, so $|r| + d = 4$. The generators of $\widetilde\Theta(G)$ are $e_x = x^2 + z^2$, $e_z = G$ and $\partial_y G = x^3$. At $P_1$, $g_1 = x^2 G_1$ with $G_1 = z^3 + x^2 y z + x^2 y + x^2 z$, and the forms of degree 2 are $x^2$ and $x^2 + z^2$. At $P_2$, $g_2 = x^2 y^3 G_2$ with $G_2 = x^2 + z^3 + x^2 z + x^2 y z$ and the divisor $\{x, y\}$. The only form of $H(P_2)$ is $x^2$. The old form $(x + z)^2$ is the initial form of $\partial_z G_2$, so it is in $\widetilde\Theta(G_2)$ but not in $\widetilde\Theta_0(G_2)$. So the forms of $P_0$ do not transport into $H(P_2)$, and a proof of SG0000005D must compare the dimensions in a different way. The example was checked by hand and by the test `tau30.py`. There is no Lean computation yet.

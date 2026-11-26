@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "1d8b1df",
+  "commit": "979cb14",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-26",
- "commit": "1d8b1df6834d1c07dbe858aa263c7a14e8cd7f85",
+ "commit": "979cb143937711f2e896ec00e9ced7f729eaab28",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -8142,6 +8142,28 @@
    "line": 311,
    "type": "{K : Type u_1} \u2192\n  {L : Type u_2} \u2192\n    [inst : Field K] \u2192\n      [inst_1 : Field L] \u2192\n        [inst_2 : Algebra K L] \u2192 \u2115 \u2192 ValuationSubring L \u2192 IntermediateField K L \u2192 IntermediateField K L \u2192 L \u2192 Prop"
   },
+  "Singularity.IsLogJacobianCaseA": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "def",
+   "line": 79,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
+  },
+  "Singularity.IsLogJacobianCaseB": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "def",
+   "line": 74,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
+  },
   "Singularity.IsMonomialValuation": {
    "axioms": [
     "Classical.choice",
@@ -8658,6 +8680,17 @@
    "kind": "theorem",
    "line": 57,
    "type": "\u2200 {k : Type u} {inst : Field k} {X : AlgebraicGeometry.Scheme} {f : X \u27f6 AlgebraicGeometry.Spec \u21a7k}\n  [self : Singularity.IsVariety X f], AlgebraicGeometry.IsSeparated f"
+  },
+  "Singularity.KangarooPathConjecture": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "def",
+   "line": 84,
+   "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [Field k] \u2192 [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 [Fintype \u03c3] \u2192 \u2115 \u2192 Prop"
   },
   "Singularity.KeyPolynomial": {
    "axioms": [
@@ -9795,6 +9828,17 @@
    "line": 28,
    "type": "Prop"
   },
+  "Singularity.RhoStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "def",
+   "line": 65,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [DecidableEq \u03c3] \u2192 [DecidableEq k] \u2192 \u2115 \u2192 \u2115 \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
+  },
   "Singularity.X_add_C_pow_pow_mul": {
    "axioms": [
     "Classical.choice",
@@ -10541,6 +10585,17 @@
    "kind": "theorem",
    "line": 70,
    "type": "\u2200 {X X' : AlgebraicGeometry.Scheme} [inst : IrreducibleSpace \u21a5X'] [inst_1 : IrreducibleSpace \u21a5X] (f : X' \u27f6 X)\n  [AlgebraicGeometry.IsDominant f], f (genericPoint \u21a5X') = genericPoint \u21a5X"
+  },
+  "Singularity.apply_mem_iff_of_mem_decompositionSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {W : ValuationSubring L}\n  {\u03b4 : Gal(L/K)}, \u03b4 \u2208 ValuationSubring.decompositionSubgroup K W \u2192 \u2200 (x : L), \u03b4 x \u2208 W \u2194 x \u2208 W"
   },
   "Singularity.artinSchreier_integral": {
    "axioms": [
@@ -12249,6 +12304,17 @@
    "line": 77,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommRing R] (m : \u2115) (a : \u2115 \u2192 MvPolynomial \u03c3 R) (e : Option \u03c3 \u2192\u2080 \u2115),\n  (Singularity.zMonic m a).coeff e =\n    if e none < m then (a (e none)).coeff e.some else if e none = m then (AddMonoidAlgebra.coeff 1) e.some else 0"
   },
+  "Singularity.comap_pointwise_smul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 91,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (\u03c3 : Gal(L/K))\n  (W : ValuationSubring L), (\u03c3 \u2022 W).comap (algebraMap K L) = W.comap (algebraMap K L)"
+  },
   "Singularity.comap_purelyInseparableExtension": {
    "axioms": [
     "Classical.choice",
@@ -13404,6 +13470,28 @@
    "line": 182,
    "type": "\u2200 (p : \u2115) [hp : Fact (Nat.Prime p)] {K L : Type u} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L]\n  [FiniteDimensional K L] [IsGalois K L] {r : \u2115},\n  Module.finrank K L = p ^ (r + 1) \u2192 \u2203 M, IsGalois K \u21a5M \u2227 Module.finrank K \u21a5M = p \u2227 Module.finrank (\u21a5M) L = p ^ r"
   },
+  "Singularity.exists_isIntegral_mul_eq_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 136,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {A : ValuationSubring K}\n  [inst_3 : Algebra (\u21a5A) L] [IsScalarTower (\u21a5A) K L] [FiniteDimensional K L] {W : ValuationSubring L},\n  W.comap (algebraMap K L) = A \u2192 \u2200 {x : L}, x \u2208 W \u2192 \u2203 u, IsIntegral (\u21a5A) u \u2227 IsIntegral (\u21a5A) (u * x) \u2227 W.valuation u = 1"
+  },
+  "Singularity.exists_isIntegral_sub_one_of_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 221,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {A : ValuationSubring K}\n  [inst_3 : Algebra (\u21a5A) L] [IsScalarTower (\u21a5A) K L] [FiniteDimensional K L] {W\u2081 W\u2082 : ValuationSubring L},\n  W\u2081.comap (algebraMap K L) = A \u2192\n    W\u2082.comap (algebraMap K L) = A \u2192 W\u2081 \u2260 W\u2082 \u2192 \u2203 a, IsIntegral (\u21a5A) a \u2227 W\u2081.valuation (a - 1) < 1 \u2227 W\u2082.valuation a < 1"
+  },
   "Singularity.exists_isRegularSystemOfParameters": {
    "axioms": [
     "Classical.choice",
@@ -13535,6 +13623,17 @@
    "kind": "theorem",
    "line": 375,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type uV} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bd w\u2080 : Valuation (Polynomial K) \u0393\u2080},\n  (\u2200 (c : K), \u03bd (Polynomial.C c) = w\u2080 (Polynomial.C c)) \u2192\n    (\u2200 (f : Polynomial K), \u03bd f \u2264 w\u2080 f) \u2192\n      (\u2203 w,\n          w 0 = w\u2080 \u2227\n            (\u2200 (n : \u2115), Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) (w n) (w (n + 1))) \u2227\n              \u2200 (n : \u2115) (f : Polynomial K), f.natDegree \u2264 n \u2192 (w n) f = \u03bd f) \u2228\n        \u2203 \u03bc,\n          Relation.ReflTransGen (Singularity.MacLaneVaquieStep \u03bd) w\u2080 \u03bc \u2227\n            \u03bc \u2260 \u03bd \u2227\n              \u2203 \u03b9 x,\n                \u2203 (_ : Nonempty \u03b9) (_ : NoMaxOrder \u03b9),\n                  \u2203 F,\n                    (\u2200 (i : \u03b9) (f : Polynomial K), \u03bd f \u2264 Singularity.augmentedValuationFun \u03bc (F.key i) (F.value i) f) \u2227\n                      (\u2200 (i : \u03b9) (a : Polynomial K), a.degree < (F.key i).degree \u2192 \u03bd a = \u03bc a) \u2227\n                        \u2200 (f : Polynomial K), F.IsStable f \u2227 F.stableValue f = \u03bd f"
+  },
+  "Singularity.exists_mem_fixedField_decompositionSubgroup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 287,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [FiniteDimensional K L]\n  [IsGalois K L] (W : ValuationSubring L),\n  \u2203 z \u2208 IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W),\n    (\u2200 (i : \u2115), (algebraMap K L) ((minpoly K z).coeff i) \u2208 W) \u2227\n      W.valuation (z - 1) < 1 \u2227 \u2200 \u03c3 \u2209 ValuationSubring.decompositionSubgroup K W, W.valuation (\u03c3 z) < 1"
   },
   "Singularity.exists_mem_logJacobianTangent_of_mem_logJacobianDirectrixSet": {
    "axioms": [
@@ -14260,6 +14359,17 @@
    "line": 168,
    "type": "\u2200 {K : Type u_1} {M : Type u_2} {L : Type u_3} [inst : Field K] [inst_1 : Field M] [inst_2 : Field L]\n  [inst_3 : Algebra K M] [inst_4 : Algebra M L] [inst_5 : Algebra K L] [IsScalarTower K M L] {\u0393 : Type u_4}\n  [inst_7 : LinearOrderedCommGroupWithZero \u0393] (w : Valuation L \u0393),\n  (Valuation.comap (algebraMap K L) w).HasExtension (Valuation.comap (algebraMap M L) w)"
   },
+  "Singularity.hasLocalUniformization_decompositionField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 492,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} {L : Type u_3} [inst : Field k] [inst_1 : Field K] [inst_2 : Field L]\n  [inst_3 : Algebra k K] [inst_4 : Algebra k L] [inst_5 : Algebra K L] [inst_6 : IsScalarTower k K L]\n  [FiniteDimensional K L] [IsGalois K L] (W : ValuationSubring L),\n  Singularity.HasLocalUniformization k (W.comap (algebraMap K L)) \u2192\n    Singularity.HasLocalUniformization k\n      (W.comap (algebraMap (\u21a5(IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W))) L))"
+  },
   "Singularity.hasLocalUniformization_inertiaField": {
    "axioms": [
     "Classical.choice",
@@ -14281,6 +14391,17 @@
    "kind": "theorem",
    "line": 451,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} {L : Type u_3} [inst : Field k] [inst_1 : Field K] [inst_2 : Field L]\n  [inst_3 : Algebra k K] [inst_4 : Algebra k L] [inst_5 : Algebra K L] [inst_6 : IsScalarTower k K L]\n  [FiniteDimensional K L] [IsGalois K L] (W : ValuationSubring L),\n  Singularity.HasLocalUniformization k\n      (W.comap (algebraMap (\u21a5(IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W))) L)) \u2192\n    Singularity.HasLocalUniformization k\n      (W.comap\n        (algebraMap\n          (\u21a5(Singularity.inertiaField (\u21a5(IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W))) W))\n          L))"
+  },
+  "Singularity.hasLocalUniformization_inertiaField_of_base": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 503,
+   "type": "\u2200 {k : Type u_1} {K : Type u_2} {L : Type u_3} [inst : Field k] [inst_1 : Field K] [inst_2 : Field L]\n  [inst_3 : Algebra k K] [inst_4 : Algebra k L] [inst_5 : Algebra K L] [inst_6 : IsScalarTower k K L]\n  [FiniteDimensional K L] [IsGalois K L] (W : ValuationSubring L),\n  Singularity.HasLocalUniformization k (W.comap (algebraMap K L)) \u2192\n    Singularity.HasLocalUniformization k\n      (W.comap\n        (algebraMap\n          (\u21a5(Singularity.inertiaField (\u21a5(IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W))) W))\n          L))"
   },
   "Singularity.hasLocalUniformization_of_bot_eq_top": {
    "axioms": [
@@ -14325,6 +14446,28 @@
    "kind": "theorem",
    "line": 438,
    "type": "\u2200 {k : Type u_1} {K : Type u_2} [inst : Field k] [inst_1 : Field K] [inst_2 : Algebra k K] {K\u2080 : IntermediateField k K}\n  {V : ValuationSubring K} {z : K},\n  Singularity.IsEtaleGenerator K\u2080 V z \u2192\n    Singularity.HasLocalUniformization k (V.comap (algebraMap (\u21a5K\u2080) K)) \u2192 Singularity.HasLocalUniformization k V"
+  },
+  "Singularity.hasLocalUniformization_of_etaleGenerator_of_algebra": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 409,
+   "type": "\u2200 {k : Type u_1} {E : Type u_2} {E' : Type u_3} [inst : Field k] [inst_1 : Field E] [inst_2 : Field E']\n  [inst_3 : Algebra k E] [inst_4 : Algebra k E'] [inst_5 : Algebra E E'] [IsScalarTower k E E']\n  {V : ValuationSubring E'} {z : E'},\n  z \u2208 V \u2192\n    E\u27eez\u27ef = \u22a4 \u2192\n      (\u2200 (i : \u2115), (algebraMap E E') ((minpoly E z).coeff i) \u2208 V) \u2192\n        V.valuation ((Polynomial.aeval z) (Polynomial.derivative (minpoly E z))) = 1 \u2192\n          Singularity.HasLocalUniformization k (V.comap (algebraMap E E')) \u2192 Singularity.HasLocalUniformization k V"
+  },
+  "Singularity.hasLocalUniformization_of_etaleGenerator_of_intermediateField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 457,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] {K : Type u_4} {L : Type u_5} [inst_1 : Field K] [inst_2 : Field L]\n  [inst_3 : Algebra k K] [inst_4 : Algebra k L] [inst_5 : Algebra K L] [inst_6 : IsScalarTower k K L]\n  {F : IntermediateField K L} {W : ValuationSubring L} {z : L},\n  z \u2208 W \u2192\n    K\u27eez\u27ef = F \u2192\n      (\u2200 (i : \u2115), (algebraMap K L) ((minpoly K z).coeff i) \u2208 W) \u2192\n        W.valuation ((Polynomial.aeval z) (Polynomial.derivative (minpoly K z))) = 1 \u2192\n          Singularity.HasLocalUniformization k (W.comap (algebraMap K L)) \u2192\n            Singularity.HasLocalUniformization k (W.comap (algebraMap (\u21a5F) L))"
   },
   "Singularity.hasLocalUniformization_of_finrank_residueField_eq": {
    "axioms": [
@@ -15205,6 +15348,17 @@
    "kind": "theorem",
    "line": 181,
    "type": "\u2200 {Z : AlgebraicGeometry.Scheme},\n  Singularity.IsRegularScheme Z \u2192\n    \u2200 {X : Z.IdealSheafData},\n      Singularity.IsRegularCodimOne X \u2192\n        X.radical = X \u2192 Singularity.IsEmbeddedResolution X (CategoryTheory.CategoryStruct.id Z) \u22a4 \u22a4"
+  },
+  "Singularity.isEtaleGenerator_decompositionField": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 347,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [FiniteDimensional K L]\n  [IsGalois K L] {W : ValuationSubring L} {z : L},\n  z \u2208 IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W) \u2192\n    W.valuation (z - 1) < 1 \u2192\n      (\u2200 \u03c3 \u2209 ValuationSubring.decompositionSubgroup K W, W.valuation (\u03c3 z) < 1) \u2192\n        z \u2208 W \u2227\n          K\u27eez\u27ef = IntermediateField.fixedField (ValuationSubring.decompositionSubgroup K W) \u2227\n            W.valuation ((Polynomial.aeval z) (Polynomial.derivative (minpoly K z))) = 1"
   },
   "Singularity.isFinite_restrict_of_le": {
    "axioms": [
@@ -16581,6 +16735,50 @@
    "line": 231,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : Fintype \u03c3] [inst_3 : DecidableEq k]\n  (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {t : \u03c3 \u2192 k} {g g' : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        (Singularity.pointChart j t) g = MvPolynomial.X j ^ p * g' \u2192\n          \u2200 {m : \u2115},\n            Singularity.logJacobianOrder \u0394 g = \u2191m \u2192\n              Singularity.logJacobianOrder (Singularity.blowupDivisor \u0394 j t) (Singularity.cleanPart p g') = \u2191m \u2192\n                Singularity.logJacobianDirectrixCodim \u0394 g \u2264\n                  Singularity.logJacobianFullDirectrixCodim (Singularity.blowupDivisor \u0394 j t)\n                    (Singularity.cleanPart p g')"
   },
+  "Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_reflTransGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "theorem",
+   "line": 128,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q R : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Relation.ReflTransGen (fun A B => Singularity.RhoStep p m A B \u2227 Singularity.IsLogJacobianCaseB B) P Q \u2192\n    Singularity.RhoStep p m Q R \u2192\n      Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianFullDirectrixCodim R.1 R.2"
+  },
+  "Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_rhoStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Singularity.RhoStep p m P Q \u2192\n    Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianFullDirectrixCodim Q.1 Q.2"
+  },
+  "Singularity.logJacobianDirectrixCodim_le_of_reflTransGen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "theorem",
+   "line": 117,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Relation.ReflTransGen (fun A B => Singularity.RhoStep p m A B \u2227 Singularity.IsLogJacobianCaseB B) P Q \u2192\n    Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianDirectrixCodim Q.1 Q.2"
+  },
+  "Singularity.logJacobianDirectrixCodim_le_of_rhoStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianKangaroo.lean",
+   "kind": "theorem",
+   "line": 96,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [inst_1 : DecidableEq \u03c3] [inst_2 : DecidableEq k] [inst_3 : Fintype \u03c3]\n  {p : \u2115} [CharP k p] {m : \u2115} {P Q : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k},\n  Singularity.RhoStep p m P Q \u2192\n    Singularity.IsLogJacobianCaseB Q \u2192\n      Singularity.logJacobianDirectrixCodim P.1 P.2 \u2264 Singularity.logJacobianDirectrixCodim Q.1 Q.2"
+  },
   "Singularity.logJacobianDirectrixSet": {
    "axioms": [
     "Classical.choice",
@@ -17923,6 +18121,17 @@
    "line": 284,
    "type": "\u2200 (K : Type u_1) {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {W : ValuationSubring L}\n  {\u03c3 : Gal(L/K)}, \u03c3 \u2208 Singularity.inertiaGroup K W \u2194 (\u2200 (x : L), \u03c3 x \u2208 W \u2194 x \u2208 W) \u2227 \u2200 x \u2208 W, W.valuation (\u03c3 x - x) < 1"
   },
+  "Singularity.mem_maximalIdeal_iff_of_comap_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 128,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {A : ValuationSubring K}\n  [inst_3 : Algebra (\u21a5A) L] [IsScalarTower (\u21a5A) K L] {W : ValuationSubring L},\n  W.comap (algebraMap K L) = A \u2192 \u2200 (a : \u21a5A), a \u2208 IsLocalRing.maximalIdeal \u21a5A \u2194 W.valuation ((algebraMap K L) \u2191a) < 1"
+  },
   "Singularity.mem_maximalIdeal_valuationSubring_iff": {
    "axioms": [
     "Classical.choice",
@@ -17933,6 +18142,17 @@
    "kind": "theorem",
    "line": 154,
    "type": "\u2200 {L : Type u_5} {\u0393 : Type u_6} [inst : Field L] [inst_1 : LinearOrderedCommGroupWithZero \u0393] (w : Valuation L \u0393)\n  (b : \u21a5w.valuationSubring), b \u2208 IsLocalRing.maximalIdeal \u21a5w.valuationSubring \u2194 w \u2191b < 1"
+  },
+  "Singularity.mem_of_isIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 113,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] {A : ValuationSubring K}\n  [inst_3 : Algebra (\u21a5A) L] [IsScalarTower (\u21a5A) K L] {W : ValuationSubring L},\n  W.comap (algebraMap K L) = A \u2192 \u2200 {x : L}, IsIntegral (\u21a5A) x \u2192 x \u2208 W"
   },
   "Singularity.mem_of_mem_adjoin_residue": {
    "axioms": [
@@ -21476,6 +21696,17 @@
    "line": 65,
    "type": "\u2200 {K : Type u_2} {K' : Type u_3} [inst : Field K] [inst_1 : Field K'] (V : ValuationSubring K') (f : K \u2192+* K') (x : K),\n  (V.comap f).valuation x = 1 \u2194 V.valuation (f x) = 1"
   },
+  "Singularity.valuation_comap_lt_one_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 55,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] (W : ValuationSubring L) (f : K \u2192+* L) (x : K),\n  (W.comap f).valuation x < 1 \u2194 W.valuation (f x) < 1"
+  },
   "Singularity.valuation_eq_max_of_ne": {
    "axioms": [
     "Classical.choice",
@@ -21530,6 +21761,39 @@
    "kind": "theorem",
    "line": 47,
    "type": "\u2200 {L : Type u_2} [inst : Field L] {\u0393\u2081 : Type u_4} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2081] (vL : Valuation L \u0393\u2081)\n  {x : \u21a5vL.valuationSubring}, (IsLocalRing.residue \u21a5vL.valuationSubring) x \u2260 0 \u2192 vL \u2191x = 1"
+  },
+  "Singularity.valuation_inv_smul_lt_one_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 84,
+   "type": "\u2200 {K : Type u_1} {L : Type u_2} [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] (\u03c3 : Gal(L/K))\n  (W : ValuationSubring L) (x : L), (\u03c3\u207b\u00b9 \u2022 W).valuation x < 1 \u2194 W.valuation (\u03c3 x) < 1"
+  },
+  "Singularity.valuation_lt_one_iff_eq_zero_or_inv_notMem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 50,
+   "type": "\u2200 {L : Type u_2} [inst : Field L] (W : ValuationSubring L) (x : L), W.valuation x < 1 \u2194 x = 0 \u2228 x\u207b\u00b9 \u2209 W"
+  },
+  "Singularity.valuation_prod_sub_one_lt_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Valuation/DecompositionField.lean",
+   "kind": "theorem",
+   "line": 61,
+   "type": "\u2200 {L : Type u_2} [inst : Field L] {\u03b9 : Type u_3} (W : ValuationSubring L) (s : Finset \u03b9) (f : \u03b9 \u2192 L),\n  (\u2200 i \u2208 s, W.valuation (f i - 1) < 1) \u2192 W.valuation (\u220f i \u2208 s, f i - 1) < 1"
   },
   "Singularity.valuation_sum_mul_le": {
    "axioms": [
