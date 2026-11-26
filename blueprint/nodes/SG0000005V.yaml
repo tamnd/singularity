@@ -1,0 +1,12 @@
+tag: SG0000005V
+kind: theorem
+title: A long stretch of corner charts with no translation ends at a corner curve with the order of G at least rho
+statement: Let $n = 3$, and let $P_j, \dots, P_m$ be a stretch of a run where each step is at the origin of the $y$-chart or of the $z$-chart, with $V(y)$ and $V(z)$ in $\Delta$. Let $c_1$ and $c_2$ be the columns of the exponents from $P_j$ to $P_m$, and assume that the monomials of $g_j$ satisfy the two inequalities of Lemma 3.13.19 for $c_1$ and $c_2$. Then at $P_m$ the initial form of $G_m$ is a monomial $c \, x_m^{d_m}$, and the corner curves $V(x_m, y_m)$ and $V(x_m, z_m)$ have $\nu^G = d_m \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005R
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.13.23 of Volume 7 of the handbook. The proof of SG0000005R uses Lemma 3.13.19 only through its two inequalities, and the run need not be infinite. By Lemma 3.13.19 the inequalities hold for each long enough stretch where both charts occur often enough, so the corollary gives a positive answer to Question 3.13.18 at the end of such a stretch, also if the run has translations before or after it. The case where the stretches between the translations stay short is open. Note 27 of the research notes has the proof and a computer test of 759 branches with translations. The result is not in Lean.
