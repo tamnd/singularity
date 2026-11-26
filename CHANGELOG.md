@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.36 - 2026-11-26
+
 ### Added
 
 - SG00000059 and SG0000005A for the milestone S7.16. For a clean $F$, the order of $\widetilde\Theta_0(G)$ is the residual order $d$, so the case of the log-Jacobian order is the type $d - \rho$. At a step where $\rho$ stays and no component of the divisor leaves, $d$ does not go up, and $\tau_\rho$ does not go down if $d$ stays.
