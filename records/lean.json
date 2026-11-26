@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "2aaf5381be452c41764d162bd912d46ab2b945f8",
+  "commit": "17e98b6c4ca65367539ca8858d479fd90af6b5ea",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-26",
- "commit": "5001424f92de31e3f182afd0d890b0825d82f515",
+ "commit": "5f87c06ba36dff9a67bee375239790279e52c3af",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -5219,6 +5219,570 @@
    "kind": "theorem",
    "line": 73,
    "type": "\u2200 {K : Type u_1} [inst : Field K] {\u0393\u2080 : Type u_2} [inst_1 : LinearOrderedCommGroupWithZero \u0393\u2080]\n  {\u03bc : Valuation (Polynomial K) \u0393\u2080} {\u03b9 : Type u_3} [inst_2 : LinearOrder \u03b9] (self : Singularity.ContinuousFamily \u03bc \u03b9),\n  StrictAnti self.value"
+  },
+  "Singularity.CornerCurves.CenterRhoStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 77,
+   "type": "{\u03c3 : Type u_1} \u2192\n  {k : Type u_2} \u2192\n    [inst : Field k] \u2192\n      [DecidableEq \u03c3] \u2192\n        [DecidableEq k] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 \u2115 \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Finset \u03c3 \u00d7 MvPolynomial \u03c3 k \u2192 Prop"
+  },
+  "Singularity.CornerCurves.CenterRhoStep.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3]\n  {inst_3 : DecidableEq k} [inst_4 : DecidableEq k] (p p_1 : \u2115),\n  p = p_1 \u2192\n    \u2200 (S S_1 : Finset \u03c3),\n      S = S_1 \u2192\n        \u2200 (m m_1 : \u2115),\n          m = m_1 \u2192\n            \u2200 (P P_1 : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k),\n              P = P_1 \u2192\n                \u2200 (Q Q_1 : Finset \u03c3 \u00d7 MvPolynomial \u03c3 k),\n                  Q = Q_1 \u2192\n                    Singularity.CornerCurves.CenterRhoStep p S m P Q =\n                      Singularity.CornerCurves.CenterRhoStep p_1 S_1 m_1 P_1 Q_1"
+  },
+  "Singularity.CornerCurves.X_mul_pderiv_monomial_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 635,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (i : Fin 3) (N : Fin 3 \u2192\u2080 \u2115),\n  MvPolynomial.X i * (MvPolynomial.pderiv i) ((MvPolynomial.monomial N) 1) = (MvPolynomial.monomial N) 1 * \u2191(N i)"
+  },
+  "Singularity.CornerCurves.X_pow_mul_X_pow_eq_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 547,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (i j : Fin 3) (m n : \u2115),\n  MvPolynomial.X i ^ m * MvPolynomial.X j ^ n = (MvPolynomial.monomial (Finsupp.single i m + Finsupp.single j n)) 1"
+  },
+  "Singularity.CornerCurves.centerChart_curvePoly_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 345,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  p \u2264 a + b \u2192\n    \u2200 (c : \u2115),\n      (Singularity.centerChart {0, 1} 1 0) (Singularity.CornerCurves.curvePoly p a b c) =\n        MvPolynomial.X 1 ^ p * Singularity.CornerCurves.curvePoly p a (a + b - p) c"
+  },
+  "Singularity.CornerCurves.centerChart_curvePoly_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 362,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a c : \u2115},\n  p \u2264 a + c \u2192\n    \u2200 (b : \u2115),\n      (Singularity.centerChart {0, 2} 2 0) (Singularity.CornerCurves.curvePoly p a b c) =\n        MvPolynomial.X 2 ^ p * Singularity.CornerCurves.curvePoly p a b (a + c - p)"
+  },
+  "Singularity.CornerCurves.centerDivisor_curve_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 335,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (t : Fin 3 \u2192 ZMod p), Singularity.centerDivisor {1, 2} {0, 1} 1 t = {1, 2}"
+  },
+  "Singularity.CornerCurves.centerDivisor_curve_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 340,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (t : Fin 3 \u2192 ZMod p), Singularity.centerDivisor {1, 2} {0, 2} 2 t = {1, 2}"
+  },
+  "Singularity.CornerCurves.centerRhoStep_curvePoint_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 379,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + b \u2192\n      \u2200 (c : \u2115),\n        Singularity.CornerCurves.CenterRhoStep p {0, 1} (a - 1) (Singularity.CornerCurves.curvePoint p a b c)\n          (Singularity.CornerCurves.curvePoint p a (a + b - p) c)"
+  },
+  "Singularity.CornerCurves.centerRhoStep_curvePoint_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 396,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a c : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + c \u2192\n      \u2200 (b : \u2115),\n        Singularity.CornerCurves.CenterRhoStep p {0, 2} (a - 1) (Singularity.CornerCurves.curvePoint p a b c)\n          (Singularity.CornerCurves.curvePoint p a b (a + c - p))"
+  },
+  "Singularity.CornerCurves.centerRhoStep_curveRunPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 452,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192\n    \u2200 (b c : \u2115) (ch : \u2115 \u2192 Bool) (k : \u2115),\n      Singularity.CornerCurves.curveStepOK p a (ch k) (Singularity.CornerCurves.curveSeq p a b c ch k) \u2192\n        Singularity.CornerCurves.CenterRhoStep p (Singularity.CornerCurves.curveCenter (ch k)) (a - 1)\n          (Singularity.CornerCurves.curveRunPoint p a b c ch k)\n          (Singularity.CornerCurves.curveRunPoint p a b c ch (k + 1))"
+  },
+  "Singularity.CornerCurves.cleanOrdAlong_curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 296,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192\n    \u2200 (b c : \u2115) (S : Finset (Fin 3)),\n      Singularity.cleanOrdAlong p S (Singularity.CornerCurves.curvePoly p a b c) =\n        Singularity.ordAlong S (Singularity.CornerCurves.curvePoly p a b c)"
+  },
+  "Singularity.CornerCurves.constantCoeff_natCast_mul_X_add_C_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 535,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {n : \u2115},\n  \u2191n \u2260 0 \u2192\n    \u2200 (i : Fin 3) {s : ZMod p},\n      s \u2260 0 \u2192 \u2200 (m : \u2115), MvPolynomial.constantCoeff (\u2191n * (MvPolynomial.X i + MvPolynomial.C s) ^ m) \u2260 0"
+  },
+  "Singularity.CornerCurves.curveCenter": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 437,
+   "type": "Bool \u2192 Finset (Fin 3)"
+  },
+  "Singularity.CornerCurves.curvePoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 153,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 \u2115 \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.CornerCurves.curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 149,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 \u2115 \u2192 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.CornerCurves.curvePoly_eq_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 159,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.CornerCurves.curvePoly p a b c =\n    (MvPolynomial.monomial (Finsupp.single 0 a + Finsupp.single 1 b + Finsupp.single 2 c)) 1"
+  },
+  "Singularity.CornerCurves.curvePoly_eq_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 164,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.CornerCurves.curvePoly p a b c =\n    (MvPolynomial.monomial (Finsupp.single 1 b + Finsupp.single 2 c)) 1 * MvPolynomial.X 0 ^ a"
+  },
+  "Singularity.CornerCurves.curvePoly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 192,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115), Singularity.CornerCurves.curvePoly p a b c \u2260 0"
+  },
+  "Singularity.CornerCurves.curveRunPoint": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 444,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 \u2115 \u2192 \u2115 \u2192 \u2115 \u2192 (\u2115 \u2192 Bool) \u2192 \u2115 \u2192 Finset (Fin 3) \u00d7 MvPolynomial (Fin 3) (ZMod p)"
+  },
+  "Singularity.CornerCurves.curveRunPoint_injective": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 490,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  p < a \u2192 \u2200 (b c : \u2115) (ch : \u2115 \u2192 Bool), Function.Injective (Singularity.CornerCurves.curveRunPoint p a b c ch)"
+  },
+  "Singularity.CornerCurves.curveRun_of_charts": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 501,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192\n    p < a \u2192\n      \u2200 (b c : \u2115) (ch : \u2115 \u2192 Bool),\n        (\u2200 (k : \u2115),\n            Singularity.CornerCurves.CenterRhoStep p (Singularity.CornerCurves.curveCenter (ch k)) (a - 1)\n              (Singularity.CornerCurves.curveRunPoint p a b c ch k)\n              (Singularity.CornerCurves.curveRunPoint p a b c ch (k + 1))) \u2227\n          (\u2200 (k : \u2115),\n              Singularity.logJacobianOrder (Singularity.CornerCurves.curveRunPoint p a b c ch k).1\n                  (Singularity.CornerCurves.curveRunPoint p a b c ch k).2 =\n                \u2191(a - 1)) \u2227\n            Function.Injective (Singularity.CornerCurves.curveRunPoint p a b c ch)"
+  },
+  "Singularity.CornerCurves.curveRun_of_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 467,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192\n    \u2200 (b c : \u2115) (ch : \u2115 \u2192 Bool),\n      (\u2200 (k : \u2115),\n          Singularity.logJacobianOrder (Singularity.CornerCurves.curveRunPoint p a b c ch k).1\n              (Singularity.CornerCurves.curveRunPoint p a b c ch k).2 =\n            \u2191(a - 1)) \u2227\n        \u2200 (k : \u2115),\n          Singularity.CornerCurves.curveStepOK p a (ch k) (Singularity.CornerCurves.curveSeq p a b c ch k) \u2192\n            Singularity.CornerCurves.CenterRhoStep p (Singularity.CornerCurves.curveCenter (ch k)) (a - 1)\n              (Singularity.CornerCurves.curveRunPoint p a b c ch k)\n              (Singularity.CornerCurves.curveRunPoint p a b c ch (k + 1))"
+  },
+  "Singularity.CornerCurves.curveSeq": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 423,
+   "type": "\u2115 \u2192 \u2115 \u2192 \u2115 \u2192 \u2115 \u2192 (\u2115 \u2192 Bool) \u2192 \u2115 \u2192 \u2115 \u00d7 \u2115"
+  },
+  "Singularity.CornerCurves.curveSeq_succ": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 429,
+   "type": "\u2200 (p a b c : \u2115) (ch : \u2115 \u2192 Bool) (k : \u2115),\n  Singularity.CornerCurves.curveSeq p a b c ch (k + 1) =\n    Singularity.CornerCurves.curveStepData p a (ch k) (Singularity.CornerCurves.curveSeq p a b c ch k)"
+  },
+  "Singularity.CornerCurves.curveSeq_sum_lt": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 479,
+   "type": "\u2200 {p a : \u2115},\n  p < a \u2192\n    \u2200 (b c : \u2115) (ch : \u2115 \u2192 Bool) (k : \u2115),\n      (Singularity.CornerCurves.curveSeq p a b c ch k).1 + (Singularity.CornerCurves.curveSeq p a b c ch k).2 <\n        (Singularity.CornerCurves.curveSeq p a b c ch (k + 1)).1 +\n          (Singularity.CornerCurves.curveSeq p a b c ch (k + 1)).2"
+  },
+  "Singularity.CornerCurves.curveStepData": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 417,
+   "type": "\u2115 \u2192 \u2115 \u2192 Bool \u2192 \u2115 \u00d7 \u2115 \u2192 \u2115 \u00d7 \u2115"
+  },
+  "Singularity.CornerCurves.curveStepOK": {
+   "axioms": [],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "def",
+   "line": 432,
+   "type": "\u2115 \u2192 \u2115 \u2192 Bool \u2192 \u2115 \u00d7 \u2115 \u2192 Prop"
+  },
+  "Singularity.CornerCurves.curve_hG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 172,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a : \u2115), \u2200 i \u2208 {1, 2}, \u2203 d \u2208 (MvPolynomial.X 0 ^ a).support, d i = 0"
+  },
+  "Singularity.CornerCurves.divisorExponent_curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 182,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.divisorExponent {1, 2} (Singularity.CornerCurves.curvePoly p a b c) =\n    Finsupp.single 1 b + Finsupp.single 2 c"
+  },
+  "Singularity.CornerCurves.isClean_curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 196,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192 \u2200 (b c : \u2115), Singularity.IsClean p (Singularity.CornerCurves.curvePoly p a b c)"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_cleanPart_eq_zero_of": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 108,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g' : MvPolynomial \u03c3 k}\n  {N : \u03c3 \u2192\u2080 \u2115},\n  (\u2200 i \u2209 \u0394, N i = 0) \u2192\n    (\u2200 \u03b2 \u2208 g'.support, N \u2264 \u03b2) \u2192\n      \u2200 {w : MvPolynomial \u03c3 k},\n        (MvPolynomial.monomial N) 1 * w \u2208 Singularity.logJacobian \u0394 g' \u2192\n          MvPolynomial.constantCoeff w \u2260 0 \u2192 Singularity.logJacobianOrder \u0394 (Singularity.cleanPart p g') = 0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 262,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192 \u2200 (b c : \u2115), Singularity.logJacobianOrder {1, 2} (Singularity.CornerCurves.curvePoly p a b c) = \u2191(a - 1)"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_x_origin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 640,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + b \u2192\n      \u2200 (c : \u2115),\n        (Singularity.centerChart {0, 1} 0 0) (Singularity.CornerCurves.curvePoly p a b c) =\n            MvPolynomial.X 0 ^ p * Singularity.CornerCurves.curvePoly p (a + b - p) b c \u2227\n          Singularity.centerDivisor {1, 2} {0, 1} 0 0 = {0, 1, 2} \u2227\n            Singularity.logJacobianOrder {0, 1, 2}\n                (Singularity.cleanPart p (Singularity.CornerCurves.curvePoly p (a + b - p) b c)) =\n              0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_x_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 729,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + b \u2192\n      \u2200 (c : \u2115) {t : Fin 3 \u2192 ZMod p},\n        t 1 \u2260 0 \u2192\n          (Singularity.centerChart {0, 1} 0 t) (Singularity.CornerCurves.curvePoly p a b c) =\n              MvPolynomial.X 0 ^ p *\n                (MvPolynomial.X 0 ^ (a + b - p) * MvPolynomial.X 2 ^ c *\n                  (MvPolynomial.X 1 + MvPolynomial.C (t 1)) ^ b) \u2227\n            Singularity.centerDivisor {1, 2} {0, 1} 0 t = {0, 2} \u2227\n              Singularity.logJacobianOrder {0, 2}\n                  (Singularity.cleanPart p\n                    (MvPolynomial.X 0 ^ (a + b - p) * MvPolynomial.X 2 ^ c *\n                      (MvPolynomial.X 1 + MvPolynomial.C (t 1)) ^ b)) =\n                0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_xz_origin": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 686,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a c : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + c \u2192\n      \u2200 (b : \u2115),\n        (Singularity.centerChart {0, 2} 0 0) (Singularity.CornerCurves.curvePoly p a b c) =\n            MvPolynomial.X 0 ^ p * Singularity.CornerCurves.curvePoly p (a + c - p) b c \u2227\n          Singularity.centerDivisor {1, 2} {0, 2} 0 0 = {0, 1, 2} \u2227\n            Singularity.logJacobianOrder {0, 1, 2}\n                (Singularity.cleanPart p (Singularity.CornerCurves.curvePoly p (a + c - p) b c)) =\n              0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_xz_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 795,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a c : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + c \u2192\n      \u2200 (b : \u2115) {t : Fin 3 \u2192 ZMod p},\n        t 2 \u2260 0 \u2192\n          (Singularity.centerChart {0, 2} 0 t) (Singularity.CornerCurves.curvePoly p a b c) =\n              MvPolynomial.X 0 ^ p *\n                (MvPolynomial.X 0 ^ (a + c - p) * MvPolynomial.X 1 ^ b *\n                  (MvPolynomial.X 2 + MvPolynomial.C (t 2)) ^ c) \u2227\n            Singularity.centerDivisor {1, 2} {0, 2} 0 t = {0, 1} \u2227\n              Singularity.logJacobianOrder {0, 1}\n                  (Singularity.cleanPart p\n                    (MvPolynomial.X 0 ^ (a + c - p) * MvPolynomial.X 1 ^ b *\n                      (MvPolynomial.X 2 + MvPolynomial.C (t 2)) ^ c)) =\n                0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_y_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 551,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + b \u2192\n      \u2200 (c : \u2115) {t : Fin 3 \u2192 ZMod p},\n        t 0 \u2260 0 \u2192\n          (Singularity.centerChart {0, 1} 1 t) (Singularity.CornerCurves.curvePoly p a b c) =\n              MvPolynomial.X 1 ^ p *\n                (MvPolynomial.X 1 ^ (a + b - p) * MvPolynomial.X 2 ^ c *\n                  (MvPolynomial.X 0 + MvPolynomial.C (t 0)) ^ a) \u2227\n            Singularity.centerDivisor {1, 2} {0, 1} 1 t = {1, 2} \u2227\n              Singularity.logJacobianOrder {1, 2}\n                  (Singularity.cleanPart p\n                    (MvPolynomial.X 1 ^ (a + b - p) * MvPolynomial.X 2 ^ c *\n                      (MvPolynomial.X 0 + MvPolynomial.C (t 0)) ^ a)) =\n                0"
+  },
+  "Singularity.CornerCurves.logJacobianOrder_curve_z_translate": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 591,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a c : \u2115},\n  \u00acp \u2223 a \u2192\n    p \u2264 a + c \u2192\n      \u2200 (b : \u2115) {t : Fin 3 \u2192 ZMod p},\n        t 0 \u2260 0 \u2192\n          (Singularity.centerChart {0, 2} 2 t) (Singularity.CornerCurves.curvePoly p a b c) =\n              MvPolynomial.X 2 ^ p *\n                (MvPolynomial.X 1 ^ b * MvPolynomial.X 2 ^ (a + c - p) *\n                  (MvPolynomial.X 0 + MvPolynomial.C (t 0)) ^ a) \u2227\n            Singularity.centerDivisor {1, 2} {0, 2} 2 t = {1, 2} \u2227\n              Singularity.logJacobianOrder {1, 2}\n                  (Singularity.cleanPart p\n                    (MvPolynomial.X 1 ^ b * MvPolynomial.X 2 ^ (a + c - p) *\n                      (MvPolynomial.X 0 + MvPolynomial.C (t 0)) ^ a)) =\n                0"
+  },
+  "Singularity.CornerCurves.monomial_le_of_mem_support": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 541,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {N \u03b2 : Fin 3 \u2192\u2080 \u2115} {w : MvPolynomial (Fin 3) (ZMod p)},\n  \u03b2 \u2208 ((MvPolynomial.monomial N) 1 * w).support \u2192 N \u2264 \u03b2"
+  },
+  "Singularity.CornerCurves.natCast_sub_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 628,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a b : \u2115}, \u00acp \u2223 a \u2192 p \u2264 a + b \u2192 p \u2223 b \u2192 \u2191(a + b - p) \u2260 0"
+  },
+  "Singularity.CornerCurves.ordAlong_curvePoly_xy": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 284,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.ordAlong {0, 1} (Singularity.CornerCurves.curvePoly p a b c) = \u2191(a + b)"
+  },
+  "Singularity.CornerCurves.ordAlong_curvePoly_xz": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 290,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.ordAlong {0, 2} (Singularity.CornerCurves.curvePoly p a b c) = \u2191(a + c)"
+  },
+  "Singularity.CornerCurves.ord_eq_zero_of_constantCoeff_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {w : MvPolynomial \u03c3 k},\n  MvPolynomial.constantCoeff w \u2260 0 \u2192 Singularity.ord w = 0"
+  },
+  "Singularity.CornerCurves.orderGAlong_curvePoly_xy": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 313,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192 \u2200 (b c : \u2115), Singularity.orderGAlong p {1, 2} {0, 1} (Singularity.CornerCurves.curvePoly p a b c) = \u2191a"
+  },
+  "Singularity.CornerCurves.orderGAlong_curvePoly_xz": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 323,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {a : \u2115},\n  \u00acp \u2223 a \u2192 \u2200 (b c : \u2115), Singularity.orderGAlong p {1, 2} {0, 2} (Singularity.CornerCurves.curvePoly p a b c) = \u2191a"
+  },
+  "Singularity.CornerCurves.pderiv_X_add_C_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 524,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (i : Fin 3) (s : ZMod p) (n : \u2115),\n  (MvPolynomial.pderiv i) ((MvPolynomial.X i + MvPolynomial.C s) ^ n) =\n    \u2191n * (MvPolynomial.X i + MvPolynomial.C s) ^ (n - 1)"
+  },
+  "Singularity.CornerCurves.pderiv_X_add_C_pow_of_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 530,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {i j : Fin 3},\n  i \u2260 j \u2192 \u2200 (s : ZMod p) (n : \u2115), (MvPolynomial.pderiv j) ((MvPolynomial.X i + MvPolynomial.C s) ^ n) = 0"
+  },
+  "Singularity.CornerCurves.pderiv_X_zero_pow_of_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 204,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {i : Fin 3}, i \u2260 0 \u2192 \u2200 (a : \u2115), (MvPolynomial.pderiv i) (MvPolynomial.X 0 ^ a) = 0"
+  },
+  "Singularity.CornerCurves.pderiv_monomial_of_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {N : \u03c3 \u2192\u2080 \u2115} {i : \u03c3},\n  N i = 0 \u2192 \u2200 (c : k), (MvPolynomial.pderiv i) ((MvPolynomial.monomial N) c) = 0"
+  },
+  "Singularity.CornerCurves.pderiv_zero_X_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 208,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a : \u2115),\n  (MvPolynomial.pderiv 0) (MvPolynomial.X 0 ^ a) = \u2191a * MvPolynomial.X 0 ^ (a - 1)"
+  },
+  "Singularity.CornerCurves.residualFactor_curvePoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 187,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.residualFactor {1, 2} (Singularity.CornerCurves.curvePoly p a b c) = MvPolynomial.X 0 ^ a"
+  },
+  "Singularity.CornerCurves.residualLogJacobian_curve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/LogJacobianCornerCurves.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (a b c : \u2115),\n  Singularity.residualLogJacobian {1, 2} (Finsupp.single 1 b + Finsupp.single 2 c) (MvPolynomial.X 0 ^ a) =\n    Ideal.span {\u2191b * MvPolynomial.X 0 ^ a, \u2191c * MvPolynomial.X 0 ^ a, \u2191a * MvPolynomial.X 0 ^ (a - 1)}"
   },
   "Singularity.CornerRuns.CornerData": {
    "axioms": [],

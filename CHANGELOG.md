@@ -4,6 +4,14 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records pin tamnd/singularity-lean 0.4.39 at commit 5f87c06, with 2857 declarations. The base record is from commit 17e98b6.
+
+### Fixed
+
+- SG0000005S: the statement now separates the cases $a > p$ and $a < p$. If $a < p$, the run of corner curves stops after a finite number of steps with $\rho = a - 1$. The notes name the Lean coverage in Singularity/Invariant/LogJacobianCornerCurves.lean.
+
 ## 0.4.55 - 2026-11-27
 
 ### Added
