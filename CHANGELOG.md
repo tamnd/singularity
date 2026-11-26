@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records pin tamnd/singularity-lean 0.4.40 at commit c1f9cda, with 2876 declarations. The base record is from commit 42abe98.
+- SG0000005S has a Lean proof: Singularity.CornerCurves.curveRun_end. It no longer lists SG0000005R in uses, because its proof is a direct computation. The notes name the Lean proofs of the conditions (H1) and (H2) and of the two cases $a > p$ and $a < p$.
+
 ## 0.4.56 - 2026-11-27
 
 ### Changed
