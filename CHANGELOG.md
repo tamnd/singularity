@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.39 - 2026-11-26
+
 ### Added
 
 - SG0000005B: the codimension of the directrix does not go down along a run of points of the second case, and at the last step it is at most the full codimension (Volume 7, Proposition 3.11.1 of the handbook). The Lean statement and proof are `Singularity.logJacobianDirectrixCodim_le_fullDirectrixCodim_of_reflTransGen`.
