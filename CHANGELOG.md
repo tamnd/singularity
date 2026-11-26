@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.46 - 2026-11-26
+
 ### Changed
 
 - SG0000000Y: the notes tell that tamnd/singularity-lean#156 proves that a divisorial valuation is discrete of rank 1 (Volume 3, Corollary 2.2.4 of the handbook).
