@@ -1,0 +1,15 @@
+tag: SG000000BN
+kind: conjecture
+title: The initial forms and the corner curves of the linear corner runs of cubics in characteristic 2
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$. Let $p = 2$, let $g \in K[[y, z]][x, w]$ be clean with $\deg_{x, w} g = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run in four variables of $g$ with an infinite number of nonzero translations. A corner run in four variables is a sequence $P_N, P_{N+1}, \dots$ in which each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, $\operatorname{ord} \ge p$ at each point, and $\rho \ge 1$ is the same at each point. Let $(x', w')$ be adapted coordinates, a linear free coordinate system at a point $P_J$ such that the translations of $x'$ are $0$ after $J$. Then for $m$ large, $\operatorname{in} G_m$ is one of $c\, x_m'^2$, $c\, x_m'^3$ and $x_m'^2 (c\, x'_m + c' w'_m)$ with $c$ or $c'$ not $0$, $\rho = 2$, and the corner curves $V(x'_m, w'_m, y_m)$ and $V(x'_m, w'_m, z_m)$ have $\nu^G \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG000000BJ
+- SG000000BM
+- SG0000009H
+- SG00000075
+tier: T2
+route:
+- R1
+notes: This is Conjecture 3.19.21 of Volume 7 of the handbook (Section 3.19). It is Conjecture 4.4' of note 79 of the research notes, the corrected form of Conjecture 4.4 of note 69 (SG0000009J), which SG000000BJ shows to be false. The corner surfaces are not part of the statement, since SG000000BK gives a run of a cubic with corner surfaces of order $1 < \rho$. By SG000000BM the list of forms and $\rho = 2$ hold at the points before a nonzero translation when the initial form there is binary. SG0000009H proves the claim when the function of $P_J$ has no monomial $x'^2 w'$, $w'^2$ or $w'^3$. The tests of notes 79 and 84 found no counterexample. It is open.

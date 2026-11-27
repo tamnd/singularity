@@ -11,4 +11,4 @@ uses:
 tier: T2
 route:
 - R1
-notes: This is Proposition 3.17.30 of Volume 7 of the handbook (Section 3.17). The type is $1$ by the Euler identity. Theorem 3.7.1, part 2 (SG0000004X), applied to $G_x$ and $G_w$ gives $D_u h_x = D_u h_w = 0$, so $D_u h = 0$, and $h$ is a form in $\ell$ alone since $d < p$. It is Proposition 4.1 of note 40 of the research notes (Proposition H). The result is not in Lean.
+notes: This is Proposition 3.17.30 of Volume 7 of the handbook (Section 3.17). The type is $1$ by the Euler identity. Theorem 3.7.1, part 2 (SG0000004X), applied to $G_x$ and $G_w$ gives $D_u h_x = D_u h_w = 0$, so $D_u h = 0$, and $h$ is a form in $\ell$ alone since $d < p$. It is Proposition 4.1 of note 40 of the research notes (Proposition H). The statement is true, but it does not extend to $d = p + 1$, since the form $x^p (\lambda x + w)$ of SG000000BJ keeps $\rho$ under nonzero translations and is not a power of a line. The form for each degree is SG000000BM, which contains this result. The result is not in Lean.
