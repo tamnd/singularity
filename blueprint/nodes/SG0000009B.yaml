@@ -1,0 +1,14 @@
+tag: SG0000009B
+kind: theorem
+title: 'Two weighted forms in characteristic 3 that no change of coordinates prepares'
+statement: 'Let $k$ be an algebraically closed field of characteristic $3$, and let $F_1 = z^3 + x^3 y^2 + y^4$ and $F_2 = z^3 + x^4 y^4 + x^2 y^5$. Then for each automorphism $\Psi$ of $k[[x, y, z]]$ and each unit $u$, the series $u \cdot (F_1 \circ \Psi)$ and $u \cdot (F_2 \circ \Psi)$ are Newton degenerate. Let $W = (2, 3, 4)$ for $F_1$ and $W = (1, 2, 4)$ for $F_2$, and add to $F_1$ or $F_2$ any series of $W$-weight greater than $12$. Then the same holds for each automorphism $\Psi$ whose linear part sends each variable into the span of the variables of weight at least its own.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+- SG0000008T
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 5.1 of research note 68, with the scope that the referee report in note 70 corrected, and Proposition 5.2 of note 68 (Proposition 3.1 of note 70) for the terms of higher order. $F_1$ is Example 5.5 of research note 05 and note 55, and $F_2$ is Counterexample 5.4a of note 55 (SG0000008T). The first part uses a structure result (Corollary 2.2 of note 68): if an irreducible germ of order at least $2$ in three variables becomes Newton nondegenerate after a change of coordinates and a unit, then its singular locus is the image of at most three coordinate axes, so its branches are smooth with independent tangent lines. The singular locus of $F_1$ has a cusp $(t^2, t^3, t^4)$, and that of $F_2$ has two branches with the same tangent line. The first part is only for $F_1$ and $F_2$ without terms of higher order. The second part covers terms of higher order, but not all changes. The case of terms of higher order and changes whose linear part does not respect the weight order is open. The result is not in Lean.'

@@ -1,0 +1,13 @@
+tag: SG0000009A
+kind: example
+title: 'Forms of degree 5 in three variables that no change of coordinates prepares'
+statement: 'Let $k$ be an algebraically closed field of characteristic $5$ and $h = x^4 y + y^4 w + w^4 x \in k[x, y, w]$. Then the surface $\{z^5 + h = 0\} \subset \mathbb{P}^3$ contains no line, and the critical set of $h$ in $\mathbb{P}^2$ has $13$ points. So for each $g \in k[[x, y, w]]$ with form of degree $5$ equal to $h$, no automorphism of $k[[x, y, w, z]]$ and no unit make $z^5 + g$ Newton nondegenerate. The same holds for the five forms of the lab table of research note 55 for $p = 5$, $n = 3$, the weight $(1, 1, 1)$ and $D = 5$ that note 55 left undecided.'
+sources:
+- paper: Newt
+uses:
+- SG00000099
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Example 4.4 and Computation 4.5 of research note 68, which the referee report in note 70 reproduced with independent code. The absence of a line is an exact Groebner basis computation over $\mathbb{F}_5$ in a cover of the dual plane, with the criterion of Lemma 4.2 of note 68 (SG00000099). The size of $C$ is a lower bound from the distinct roots of an eliminant. Note 70 used a second cover of the dual plane and all three charts, and found the same result. The five forms are in the data file of note 55 (rows 2, 3, 4, 5 and 7 of `cert_p5n3.jsonl`). Before note 68 they were open for the changes $(\varphi, q)$, because the splitting field was too large for the search. Now each of them resists all changes of all coordinates. The certified row 6 is strengthened in the same way. Row 1 has a line on $Q$, so SG00000099 does not apply to it. The decision depends on exact computer computations. The result is not in Lean.'

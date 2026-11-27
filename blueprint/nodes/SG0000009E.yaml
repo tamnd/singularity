@@ -1,0 +1,14 @@
+tag: SG0000009E
+kind: conjecture
+title: 'Problem 5.15 in three or more variables: an induction on the residual order'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $n \ge 3$, and let $f = z^p + g$ with $g \in k[[x_1, \dots, x_n]]$ and residual order $\nu \ge 2$, the order of the part of $g$ without $p$-th power monomials. Then there is a finite sequence of weighted blowups such that at each step the largest residual order at the points of the strict transform over the origin drops. In particular, after a finite number of steps the strict transform is smooth at each point over the origin.'
+sources:
+- paper: Newt
+uses:
+- SG0000009D
+- SG0000008X
+tier: T2
+route:
+- R5
+- R7
+notes: 'This node states the expected answer to Problem 5.15 of research note 05 for $n \ge 3$, in the form of the open statement 2 of research notes 68 and 70. The node fixes one form of the problem, with the residual order as the measure. It is not known if the statement is true. Problem 5.15 asks for a measure of the degenerate faces of $z^p + g$ that a weighted blowup strictly lowers. SG0000009D gives one step for the measure $\nu$ when $p \mid \nu$: the blowup with the weights $(1, \dots, 1, \nu/p)$ lowers $\nu$ at each point over the origin, outside the points $P_v$ with $\partial_v h \equiv 0$, after the change $z \mapsto z + q(x)$ that removes the $p$-th power monomials of $g$. For $n = 2$ there is no exceptional point. The missing parts are the case $p \nmid \nu$, the exceptional points (where the blowup of the line in the direction $v$ may replace the point blowup), and the termination. Other open parts of track NW are the case $D = p$, $n \ge 3$, where $Q = \{z^p + h = 0\}$ contains a line and $C$ is infinite or not contained in $n$ hyperplanes with independent equations (SG00000099), and the full nondegeneracy after a preparation of the top face (SG0000009C).'
