@@ -1,0 +1,15 @@
+tag: SG00000093
+kind: theorem
+title: Each corner run in four variables of degree at most p, or under the condition (C), or in the p-th powers of x and w, is linear
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Condition (C) says that for each $e \ge 1$ the Hasse derivatives $g^{[p^e, 0]}$ and $g^{[0, p^e]}$ in the variables $(x, w)$ are in $K[[y, z]]$, that is, they do not depend on $x$ and $w$. Assume that $\deg_{x, w} g \le p$, or that $g$ satisfies (C), or that $g \in K[[y, z]][x^p, w^p]$. Then the run is linear, and the conjecture SG0000006Z holds for it. By SG0000008N the same holds in each free coordinate system.
+sources:
+- paper: CJS20
+uses:
+- SG00000092
+- SG00000094
+- SG0000008N
+- SG0000006M
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.18.36 of Volume 7 of the handbook (Section 3.18). It is Corollary 5.5 of note 64 of the research notes, with the fix 3 of note 67, which is that the case $\deg_{x, w} g < p$ satisfies (C), so SG00000092 covers it. For $\deg_{x, w} g = 0$ there is no run by SG0000006M. Otherwise the run is not planar by SG00000092 or, for $g \in K[[y, z]][x^p, w^p]$, by Theorem 3.18.35, which is part 2 of SG00000094. By SG0000008N a run that is not planar satisfies SG0000006Z. This gives Conjecture L for $\deg_{x, w} g = p$, but not the conjecture SG00000075 or Hypothesis SG0000007D in this degree. The result is not in Lean.
