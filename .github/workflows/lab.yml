@@ -1,12 +1,12 @@
 name: lab
 
-# Run the tests of the lab simulator in lab/sim. The job runs on each push and pull request that changes the lab.
+# Run the tests of the lab simulator in lab/sim and the smoke tests of the note scripts in lab/notes. The job runs on each push and pull request that changes the lab.
 on:
   push:
     branches: [main]
-    paths: ["lab/sim/**", ".github/workflows/lab.yml"]
+    paths: ["lab/sim/**", "lab/notes/**", ".github/workflows/lab.yml"]
   pull_request:
-    paths: ["lab/sim/**", ".github/workflows/lab.yml"]
+    paths: ["lab/sim/**", "lab/notes/**", ".github/workflows/lab.yml"]
   merge_group:
   workflow_dispatch:
 
@@ -28,4 +28,7 @@ jobs:
           persist-credentials: false
       - name: tests
         working-directory: lab/sim
+        run: python3 -m unittest discover -s tests -t . -v
+      - name: note scripts
+        working-directory: lab/notes
         run: python3 -m unittest discover -s tests -t . -v
