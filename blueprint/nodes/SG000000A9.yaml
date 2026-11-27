@@ -1,0 +1,15 @@
+tag: SG000000A9
+kind: theorem
+title: Weighted blowups with weights less than p resolve the foliations of the maximal torus
+statement: 'Let $V \subseteq \mathbb{F}_p^n$ and $\mathcal{F}_V$ be as in SG000000A8. There is a simplicial fan $\Sigma$ that subdivides $\mathbb{R}^n_{\ge 0}$, obtained by a finite sequence of stellar subdivisions, whose maximal cones all have a determinant prime to $p$, such that for the canonical smooth toric Deligne-Mumford stack $\mathcal{X}_\Sigma$ of $\Sigma$ in the lattice $\mathbb{Z}^n$ the morphism $f : \mathcal{X}_\Sigma \to \mathbb{A}^n$ is proper and birational, $\mathcal{X}_\Sigma$ is a regular tame stack, and $f^* \mathcal{F}_V$ is regular. Up to a root stack of order prime to $p$ along the new divisor, each subdivision is a weighted blowup in the coordinates of a chart with weights in $\{1, \dots, p - 1\}$. If $V = \mathbb{F}_p c$ has rank one and $c$ is not a multiple of a coordinate vector, one weighted blowup suffices, with the center $\{x_k = 0 : c_k \ne 0\}$ and weights in $\{1, \dots, p - 1\}$ that reduce modulo $p$ to a generator of $V$. If $p = 2$, then $\Sigma$ is a smooth fan and $\mathcal{X}_\Sigma$ is a regular toric variety.'
+sources:
+- paper: Pos24
+  loc: Example 2.4.3, Claim 4.0.4
+- paper: Quek22
+uses:
+- SG000000A8
+tier: T2
+route:
+- R4
+- R7
+notes: 'This is Theorem 3.4 of research note 58, with Lemma 3.1, Algorithm 3.2 and Lemma 3.3, in the form of the referee report in note 73. Note 73 adds two points: the stack is the canonical toric stack of $\Sigma$, which differs from the iterated weighted blowups by roots of order prime to $p$ along the new divisors, and this changes neither tameness nor regularity of the pullback; and the vector of each step has at least two nonzero entries, so each step is a genuine blowup. On the chart of a cone with generator matrix $B$, the saturated pullback of $\mathcal{F}_V$ is $\mathcal{F}_{\bar{B}^{-1} V}$. The algorithm stops because $\sum_\sigma K^{r - s(\sigma)}$, with $K > n$ and $s(\sigma)$ the number of generators in $V$ modulo $p$, goes down at each step. The weights must be reduced modulo $p$: for $p = 2$ the field $D_{(0, 0, 1, 2)}$ with the naive weights $(1, 2)$ gives a wild chart. The lab test A of notes 58 and 73 resolves all subspaces of $\mathbb{F}_p^4$ for $p = 2, 3, 5$; this is numerical evidence only. Handbook Volume 9, Section 3.22. Not in Lean.'

@@ -1,0 +1,14 @@
+tag: SG000000AP
+kind: theorem
+title: Untwisting by one weighted blowup under a second torus symmetry
+statement: 'Let $Y = \operatorname{Spec} k[v_1, v'']$, let $\delta = \lambda(v'') v_1 \partial_{v_1} + \delta''''$, where $\lambda \in k[v'']$ and $\delta''''$ is a derivation in the variables $v''$ with coefficients in $k[v'']$, assume $\delta$ saturated and $p$-closed with $\delta^p = H \delta$, and let $\alpha = -e \lambda$ with $1 \le e \le p - 1$. Put $w = p - e$. Then the weighted blowup of $\mathbb{A}^1_u \times Y$ along $\{u = v_1 = 0\}$ with the weights $(w, 1)$ is tame, and on both charts the pullback of $D'' = \alpha u \partial_u + \delta$ is untwisted: on $D_+(v_1)$, with $v_1 = t$ and $u = t^w u_1$, it is $\lambda t \partial_t + \delta''''$, the product of $\mathbb{A}^1_{u_1}$ with $(Y, \delta)$; on $D_+(u) = [\operatorname{Spec} k[\tau, v_1'', v''] / \mu_w]$, with $u = \tau^w$ and $v_1 = \tau v_1''$, it is $\lambda \tau \partial_\tau + \delta''''$, the product of $\mathbb{A}^1_{v_1''}$ with a copy of $(Y, \delta)$. In this situation $\psi(\alpha) = H \alpha$ holds, and for $H = 0$ one can take $s = v_1^e$ in SG000000AM.'
+sources:
+- paper: Pos24
+  loc: Example 2.4.3
+uses:
+- SG000000AM
+tier: T2
+route:
+- R4
+- R5
+notes: 'This is Proposition 6.4'' of the referee report in note 73 on research note 58. It holds for each $H$. The hypothesis is a second torus symmetry: $\delta$ commutes with the scaling of $v_1$. Without it, the chart $D_+(u)$ of the same blowup carries a family over $\mathbb{A}^1_{v_1''}$ of threefold foliations that degenerates at $v_1'' = 0$ to the normal linearization of $\delta$ along $V(v_1)$, and Posva''s theorems say nothing about families. Handbook Volume 9, Section 3.22. Not in Lean.'

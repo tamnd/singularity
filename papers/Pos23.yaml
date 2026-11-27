@@ -1,0 +1,11 @@
+key: Pos23
+title: Posva, Singularities of quotients by 1-foliations, arXiv:2311.16694
+tag: P
+tier: T8
+why: Quotients by 1-foliations and their singularities in char $p$
+year: 2023
+arxiv:
+- '2311.16694'
+lean: none
+use:
+- read

@@ -1,0 +1,13 @@
+tag: SG000000AN
+kind: theorem
+title: Problem 6.4 with H = 0 is untwisted off an invariant divisor
+statement: Let $R$, $\delta$, $\alpha$ and $D'$ be as in SG000000AM, with $\psi(\alpha) = 0$, and let $s \in R \setminus \{0\}$ with $\delta(s) = -\alpha s$. On $\mathbb{A}^1_u \times D(s)$ the $\mathbb{G}_m$-equivariant automorphism $(u, v) \mapsto (u s, v)$ turns $D'$ into the product field $\delta$, with no $u' \partial_{u'}$ term. Hence the singularities of $D'$ outside $\mathbb{A}^1 \times V(s)$ are those of the untwisted case $\alpha = 0$, and the twisted part of Problem 6.4 with $H = 0$ lies over $Z(\delta) \cap V(s)$, where $V(s)$ is $\delta$-invariant.
+sources:
+- paper: Pos24
+uses:
+- SG000000AM
+tier: T2
+route:
+- R4
+- R5
+notes: This is Corollary 6.3' of the referee report in note 73 on research note 58. The proof is the gauge part of SG000000AM with $g = s$, a unit on $D(s)$. Handbook Volume 9, Section 3.22. Not in Lean.
