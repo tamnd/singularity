@@ -1,0 +1,13 @@
+tag: SG0000006F
+kind: lemma
+title: A change of the free coordinate keeps an infinite number of nonzero translations
+statement: Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations, with the notation of Section 3.15 of Volume 7 of the handbook. Assume that an infinite number of the $t_j$ are not $0$, and let $x''$ be a free coordinate at a point $P_b$ of the run. Then the run from $P_b$, which is a corner run with free translations in the coordinates $(x'', y_b, z_b)$, also has an infinite number of nonzero translations in these coordinates.
+sources:
+- paper: CJS20
+uses:
+- SG00000062
+- SG00000063
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.16.12 of Volume 7 of the handbook. Write $x'' = u(x_b - \zeta)$ by Weierstrass preparation. If the new run has only a finite number of nonzero translations, then $\xi = \varphi_b + M_b\zeta \in \hat H$ satisfies $v(a_\ell - \xi) = \gamma_\ell$ for $\ell$ large, so it is a limit in $\hat H$ of the sequence of the translations, and this contradicts Proposition 3.15.7 (SG00000062). This is Lemma N of note 34 of the research notes. The result is not in Lean.

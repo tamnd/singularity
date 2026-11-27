@@ -1,0 +1,18 @@
+tag: SG0000006G
+kind: theorem
+title: A corner run with free translations of mu x + F(x^p) has only a finite number of nonzero translations
+statement: Let $n = 3$ and let $g = \mu x + F(x^p, y, z)$ be clean at $P_N$, with $\mu$ zero or a nonzero constant times a monomial in $y, z$ times a unit of $K[[y, z]]$, and $F \in K[[y, z]][[Y]]$. Then each corner run with free translations from $P_N$ has only a finite number of nonzero translations.
+sources:
+- paper: CJS20
+uses:
+- SG0000006B
+- SG0000006C
+- SG0000006D
+- SG0000006E
+- SG0000006F
+- SG00000063
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.16.13 of Volume 7 of the handbook. The coordinate $x' = u x$ removes the unit of $\mu$, by Lemma 3.15.2 (SG00000063) and Lemma 3.16.12 (SG0000006F). If $F$ is constant, then $g \in K[[y, z]]$ and Proposition 3.13.26 (SG0000005W) gives $\rho = 0$ later. Otherwise Theorems 3.16.8, 3.16.9 and 3.16.10 cover all the tie sets. The proof is in notes 34 and 35 of the research notes, with the case analysis of Corollary F of note 36. The result is not in Lean.
