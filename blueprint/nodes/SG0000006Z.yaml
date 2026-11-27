@@ -1,13 +1,16 @@
 tag: SG0000006Z
-kind: conjecture
+kind: theorem
 title: Each corner run in four variables lies eventually on a regular hypersurface
 statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Then there are a $J$ and a free coordinate system $(x', w')$ at $P_J$ such that the translations of $x'$ are $0$ after $J$. Equivalently, the points $P_j$, $j > J$, lie on the strict transforms of the regular hypersurface $V(x')$.
 sources:
 - paper: CJS20
 uses:
+- SG00000096
+- SG0000008N
+- SG0000006M
 - SG0000006V
 - SG0000006P
 tier: T2
 route:
 - R1
-notes: This is Conjecture 3.17.18 of Volume 7 of the handbook (Section 3.17). It is the conjecture L of note 38 of the research notes. It holds for the runs of SG0000006R, in the class of SG0000006X, at the cylindrical points of SG0000006W, and for each corner run with $\deg_{x, w} g < p$ (SG0000008M, from notes 50, 52 and 54 of the research notes). By SG0000008N it holds for a run if and only if the run is not planar. It also holds for $\deg_{x, w} g = p$, under the condition (C) and in the class $K[[y, z]][x^p, w^p]$ (SG00000093, from note 64 of the research notes, refereed in note 67). The other cases with $\deg_{x, w} g > p$ are open, and by SG0000008N they are the conjecture SG00000096, so the node stays a conjecture. The runs of SG0000006T show that it cannot be replaced by the finiteness of all translations. Alone it does not give Question 3.13.18, and the form with the corner curves is SG00000075.
+notes: This is Corollary 3.19.7 of Volume 7 of the handbook (Section 3.19), which proves Conjecture 3.17.18 (Section 3.17) for each clean $g \in K[[y, z]][x, w]$. It was the conjecture L of note 38 of the research notes. It is Corollary 4.2 of the referee report 71, confirmed in note 74. For $\deg_{x, w} g = 0$ there is no run (SG0000006M). Otherwise the run is not planar by SG00000096, so it is linear, and by SG0000008N a linear run satisfies the statement in each free coordinate system. Before, it was known for the runs of SG0000006R, in the class of SG0000006X, at the cylindrical points of SG0000006W, for $\deg_{x, w} g < p$ (SG0000008M), for $\deg_{x, w} g = p$, under the condition (C) and in $K[[y, z]][x^p, w^p]$ (SG00000093). The statement is only for polynomials in $x, w$. For a power series in $x, w$ and for $g \in K[[x, y, z]]$ it is open. The runs of SG0000006T show that it cannot be replaced by the finiteness of all translations. Alone it does not give Question 3.13.18. The form with the corner curves is SG00000075, which stays open. The result is not in Lean.

@@ -1,14 +1,17 @@
 tag: SG00000096
-kind: conjecture
+kind: theorem
 title: There is no planar corner run in four variables
 statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Then the run is not planar.
 sources:
 - paper: CJS20
 uses:
-- SG00000092
-- SG00000094
-- SG0000008N
+- SG0000009F
+- SG0000009G
+- SG00000090
+- SG0000006M
+- SG0000006V
+- SG00000066
 tier: T2
 route:
 - R1
-notes: This is Conjecture 3.18.39 of Volume 7 of the handbook (Section 3.18). It is Conjecture P of note 64 of the research notes, with the open statement 1 of note 67. By SG0000008N it is equivalent to SG0000006Z for all clean $g \in K[[y, z]][x, w]$. It holds for $\deg_{x, w} g < p$ (SG0000008K), under the condition (C) and so for $\deg_{x, w} g = p$ (SG00000092), and for $g \in K[[y, z]][x^p, w^p]$ (SG00000094). The open case is $\deg_{x, w} g > p$ with (C) false and $g \notin K[[y, z]][x^p, w^p]$. There a planar run must have $\Lambda_0 \ge \Lambda_+$, a least term of class $0$ for each $e \ge 1$ with $\Lambda_e = \Lambda$, and $v(\operatorname{cl} g(\Phi_\infty)) \ge \Lambda$. The first open case is $p = 2$, $\deg_{x, w} g = 3$ and $g = Y x^2 w + Y' x w^2 + B_1 x^2 + B_2 w^2 + \alpha x + \beta w + B_0$. It is not known if the statement is true. The evidence is numerical only. The depth first searches of note 64 over six finite fields and the random dives with controls of note 67 over $\mathbb{F}_2$, $\mathbb{F}_4$ and $\mathbb{F}_3$, also in classes outside (C) and outside $K[[y, z]][x^p, w^p]$, found no planar run that keeps $\rho$, while the controls found many. The dives are finite and the fields are finite, so this is not a proof.
+notes: 'This is Theorem 3.19.6 of Volume 7 of the handbook (Section 3.19), which proves Conjecture 3.18.39 (Section 3.18). It was Conjecture P of note 64 of the research notes. The proof is Theorem 4.1 of the referee report 71 on note 69, confirmed by the second referee in note 74, which gives the reference proof in five steps. It holds for each prime $p$ and each clean $g$; for $\deg_{x, w} g = 0$ there is no run. Suppose the run is planar. By SG0000009F the run starts again at each $P_m$ as a planar corner run of the function $g^{(m)}$ of $P_m$, of the same degree $D \ge 1$, so Theorem 3.18.32 and Corollary 3.18.33 (from SG00000090, SG0000006M, SG0000006V and SG00000066) hold there with $\delta_m$ in place of $1 + \theta$. The minimum $\Lambda^{(m)}_+$ is attained at some $e$ with $p^e \le D$, and the least term of the pair of derivatives of order $p^e$ has class $0$. With the powers $M_m^{1 - p}$ and $M_m^{p^e - p}$ of SG0000009G this gives $\beta_1 \ge v(g^{[k, l]}(\Phi_m)) + (k + l - p^e) v(M_{m+1}) + (p^e - 1)(1 + \theta)$ for some $(k, l)$ not both divisible by $p$. A pigeonhole on the finite set of triples $(e, k, l)$ and part (b) of SG00000090 give $\beta_1 \ge \beta_{kl} + (k + l - 1)(1 + \theta)$ in the limit, and part (a) of SG00000090 for $g_X$ or $g_W$ at the index $(k - 1, l)$ or $(k, l - 1)$ says the opposite. The finite degree in $x, w$ is used twice: to bound $e$, and for the pigeonhole. So the statement for power series in $x, w$ and for $g \in K[[x, y, z]]$ is open. It contains SG0000008K, SG00000092 and part 2 of SG00000094, and Theorem 3.1 of note 69 for $p = 2$ and $\deg_{x, w} g \le 3$. Remark 3.5 of note 69, which claimed a gap for odd $p$, is false. The random dives of notes 64, 67, 69, 71 and 74 found no planar run that keeps $\rho$, with controls that see planar walks. The result is not in Lean.'
