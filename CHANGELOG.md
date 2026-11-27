@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The records pin tamnd/singularity-lean 0.4.43 at commit 8c9ec55, with 3138 declarations. The base record is from commit 6c993dc.
+- The notes of SG0000005Z (Theorem 3.14.7) and SG00000061 (Example 3.14.9) name the Lean proofs of their parts in Singularity/Invariant/OriginRunsCorner.lean, and the parts that are not in Lean.
+
 ## 0.4.59 - 2026-11-27
 
 ### Added
