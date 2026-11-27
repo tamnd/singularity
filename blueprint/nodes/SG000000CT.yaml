@@ -1,0 +1,15 @@
+tag: SG000000CT
+kind: theorem
+title: 'The generic steps of Rule 61.9'' that keep omega'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. In the setting of SG000000CS, a generic step at a point with $K \ne \emptyset$ keeps $\omega$ only if the centre is the closed point, $K = \{k\}$ has one element, and the bottom face $\mathcal{F}$ is the vertex $\omega e_l$ of the third index $l$, with $h \ge 2$. Each other generic step at a point that is not a chart origin lowers $\omega$. A generic step over a curve with $\lambda \ne 0$, or over the closed point with two nonzero $\lambda_k$, reaches $\omega = 0$, after which SG0000009R applies.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG000000CS
+- SG0000009R
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Corollary 86.7 of research note 86. A divisorial centre has no point with $K \ne \emptyset$. For a curve $S = \{j, k\}$ with $\lambda_k \ne 0$ we have $K = S \setminus \{j\}$, and the same holds for the point with two nonzero $\lambda_k$, so part (1) of SG000000CS gives $\omega = 0$. The remaining case is part (2) of SG000000CS. In the lab of note 86, the $2430$ steps of the stored histories of the $81$ cut nodes of note 72 have $2$ generic steps away from chart origins that keep $\omega$, both of this type, and $18$ steps at which the generic image has a lower $\omega$ and a new preparation brings $\omega$ back to its old value. The result is new in research note 86, the referee report on note 81, and a referee has not read it yet. Handbook Volume 7, Corollary 4.5.24. The result is not in Lean.'
