@@ -1,0 +1,19 @@
+tag: SG000000BS
+kind: theorem
+title: 'Resolution of 4-folds is local uniformization plus the fundamental theorem'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$. Suppose that for each function field $K$ of transcendence degree 4 over $k$ and each valuation $v$ of $K/k$ there is a regular local ring $A \subset K$, essentially of finite type over $k$, with fraction field $K$, dominated by $\mathcal{O}_v$. Assume SG000000BQ. Then each variety $X$ of dimension 4 over $k$ has a projective birational morphism $X'' \to X$ with $X''$ regular. Conversely, if each variety of dimension 4 over $k$ has such a morphism, then SG000000BQ holds, and each valuation of a function field of transcendence degree 4 has local uniformization in the affine form with a finite set.'
+sources:
+- paper: Cut09
+  loc: 'Theorems 16.1 and 16.2'
+- paper: Zar44
+- paper: ZS2
+  loc: 'Section 17, Theorem 40'
+uses:
+- SG0000000X
+- SG000000BQ
+hypotheses:
+- SG000000BQ
+tier: T6
+route:
+- R2
+notes: 'This is Theorem 77.1(a) of research note 77, which the referee report in note 82 checked step by step. Proof: local uniformization gives a normal projective model $W_v$ with a regular center for each $v$; quasi-compactness (SG0000000X) gives finitely many of them; repeated use of SG000000BQ gives a regular projective model; Chow''s lemma and SG000000BQ with $V_1$ regular then resolve $X$. For the converse, resolve the normalized closure of the graph, and for the finite set $S$ resolve a projective closure of $\operatorname{Spec} k[S \cup S_0]$. The premise is the premise of SG0000007X, so SG0000007X follows from SG000000BQ. Note 82 calls the theorem a reformulation, not a reduction: the global input is exactly SG000000BQ. Handbook Volume 9, Section 3.24. The result is not in Lean.'

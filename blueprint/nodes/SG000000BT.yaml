@@ -1,0 +1,16 @@
+tag: SG000000BT
+kind: theorem
+title: 'Resolution of 4-folds is equivalent to PILU_4 and Fund_4'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$. Then each variety of dimension 4 over $k$ has a projective resolution if and only if SG000000BR and SG000000BQ hold.'
+sources:
+- paper: Tem13
+  loc: 'Theorem 1.3.2'
+uses:
+- SG0000001G
+- SG000000BS
+- SG000000BR
+- SG000000BQ
+tier: T6
+route:
+- R2
+notes: 'This is Theorem 77.1(b) of research note 77. The referee report in note 82 confirms it, given the theorem of Temkin SG0000001G, which has no restriction on the characteristic or the dimension. If: SG0000001G and SG000000BR give local uniformization with a finite set (note 02, Theorem 2.6, by descent one degree $p$ step at a time), and then SG000000BS applies. Only if: SG000000BS gives SG000000BQ and local uniformization with a finite set; apply it to $L(b)$, $v$ and the set of $b$ and the generators of a finitely generated algebra $B_0$ with $A = (B_0)_{\mathfrak{q}_0}$. Temkin writes that a reduction of global resolution to local uniformization is not known above dimension 3 [Tem13, Section 1.2(ii)]. The theorem agrees with this: the missing step is exactly SG000000BQ. Handbook Volume 9, Section 3.24. The result is not in Lean.'

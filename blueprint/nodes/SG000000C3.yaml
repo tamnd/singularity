@@ -1,0 +1,12 @@
+tag: SG000000C3
+kind: theorem
+title: 'The ring S_0 is not an iterated monoidal transform for any regular centers'
+statement: 'Let $F$ be a field, $R = F[x,y,z]_{(x,y,z)}$, and $S_0$ the regular local ring of SG000000C2. Then there is no prime $P \subseteq \mathfrak{m}_R$ of height at least 2 with $R/P$ regular such that $P S_0$ is principal. Hence $S_0$ is not an iterated monoidal transform of $R$ for any choice of regular centers, and $\mathfrak{m}_R S_0$ is not principal.'
+sources:
+- paper: Cut09
+uses:
+- SG000000C2
+tier: T2
+route:
+- R2
+notes: 'Proposition 82.2 of the referee report in note 82, which answers Problem 77.P1 of note 77 with no. Note 83 proves it again as Theorem 83.2. In the chart coordinates $X_1 = x y^{-2} z$, $X_2 = x^{-3} y^6 z^{-2}$, $X_3 = x^2 y^{-3} z$ of $S_0$ one has $x = X_2 X_3^2$, $y = X_1 X_2 X_3$ and $z = X_1^3 X_2$. So the order along $X_2 = 0$ is the order of $R$. For $P = (u, v)$ of height 2, $P S_0 = X_2 (u'', v'') S_0$, and modulo $X_2$ the elements $u'', v''$ become two independent elements of the span of $X_3^2$, $X_1 X_3$ and $X_1^3$, which never generate a principal ideal. For height 3, SG000000C2 applies. The result agrees with the examples of Sally and Shannon, which Cutkosky quotes in arXiv math/9803078. Handbook Volume 9, Section 3.24. The result is not in Lean.'

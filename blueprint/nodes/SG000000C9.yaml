@@ -1,0 +1,15 @@
+tag: SG000000C9
+kind: conjecture
+title: 'Patching along curves'
+statement: 'Let $\alpha \colon V_2 \to V_1$ and $\beta \colon V_3 \to V_1$ be projective birational morphisms of normal 4-folds, with $\beta^{-1}(\mathrm{Reg}\, V_1)$ regular, and let $\Gamma \subseteq V_2$ be an irreducible curve in the fundamental locus of $V_2 \dashrightarrow V_3$ such that $\alpha(\Gamma)$ is a curve that meets $\mathrm{Sing}\, V_1$. Then there are projective birational $V_2'' \to V_2$, a composite of blowups along regular centers over $\mathrm{Reg}\, V_2$ near $\alpha^{-1}(\mathrm{Sing}\, V_1)$, and $V_3'' \to V_3$, a composite of blowups along regular centers over $\beta^{-1}(\mathrm{Reg}\, V_1)$, both isomorphisms off a neighborhood of $\Gamma$, such that $V_2'' \dashrightarrow V_3''$ is a morphism near the generic point of $\Gamma$.'
+sources:
+- paper: CP19
+  loc: 'Section 4.1'
+- paper: Kar03
+uses:
+- SG000000C7
+- SG000000C6
+tier: T6
+route:
+- R2
+notes: 'Problem 83.P2 of research note 83. A positive answer removes $\Gamma$ from the fundamental locus and keeps the centers of the valuations in $N$ regular. Whether finitely many such steps, with SG000000BV, reach the condition (A$^{\rm w}$) of SG000000C6 is part of the problem. The local input at the generic point of $\Gamma$ is local strong factorization in dimension 3 over $\kappa(\Gamma)$, open in characteristic $p$. The new global difficulty is the termination of the alternating blowups along $\Gamma$ near its points over $\mathrm{Sing}\, V_1$. It is open. Handbook Volume 9, Section 3.24. The result is not in Lean.'

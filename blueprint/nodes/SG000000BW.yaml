@@ -1,0 +1,11 @@
+tag: SG000000BW
+kind: lemma
+title: 'A modification that is an isomorphism off a small set is a blowup with small cosupport'
+statement: 'Let $X$ be a regular quasi-projective variety, let $G \subset X$ be closed of codimension at least 2, and let $f \colon X'' \to X$ be a projective birational morphism that is an isomorphism over $X \setminus G$. Then $X'' \cong \mathrm{Bl}_J X$ over $X$ for a coherent ideal $J$ with $V(J) \subseteq G$.'
+sources:
+- paper: Har
+  loc: 'Theorem II.7.17'
+tier: T1
+route:
+- R2
+notes: 'Lemma 77.4 of research note 77, confirmed in note 82. Write $X'' = \mathrm{Bl}_{J_0} X$. On $X \setminus G$ the ideal $J_0$ is $\mathcal{O}(-D)$ for an effective Cartier divisor $D$. Put $J = J_0 \cdot \mathcal{O}_X(\bar D)$. Its sections are regular off $G$, so they are regular, since $X$ is normal and $G$ has codimension at least 2. A twist by an invertible sheaf does not change the blowup. Handbook Volume 9, Section 3.24. The result is not in Lean.'

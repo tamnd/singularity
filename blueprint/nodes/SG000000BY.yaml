@@ -1,0 +1,16 @@
+tag: SG000000BY
+kind: lemma
+title: 'Each principalization is a local isomorphism over regular points of codimension 2'
+statement: 'Let $U$ be a regular variety of dimension 4, $K \subseteq \mathcal{O}_U$ a nonzero ideal, $\alpha \colon Z \to U$ the normalized blowup of $K$, and $\sigma \colon W \to U$ a principalization of $K$ by blowups along regular centers in the locus where $K$ is not invertible. Let $\zeta \in Z$ with $\mathcal{O}_{Z,\zeta}$ regular of dimension 2 and $\mathcal{O}_{U,\alpha(\zeta)}$ of dimension 2. Then the induced morphism $\tau \colon W \to Z$ is a local isomorphism over $\zeta$.'
+sources:
+- paper: Abh56
+  loc: 'Theorem 3'
+- paper: CP19
+  loc: 'Proposition 4.2'
+uses:
+- SG0000004A
+- SG0000002X
+tier: T2
+route:
+- R2
+notes: 'Lemma 77.9 of research note 77, confirmed in note 82. After the flat base change to $\operatorname{Spec} \mathcal{O}_{U,\alpha(\zeta)}$, $\sigma$ is a sequence of blowups of closed points of regular surfaces. By Abhyankar ([CP19] Proposition 4.2) $S = \mathcal{O}_{Z,\zeta}$ is an iterated quadratic transform $S_0 \subset \dots \subset S_m = S$ of $R$, and $K S_j$ is not invertible for $j < m$. A valuation that dominates $S$ goes through the $S_j$ in order, so $W$ has a point $w$ with $\mathcal{O}_{W,w} = S$. Zariski''s Main Theorem SG0000002X makes $\tau$ an isomorphism near $\zeta$. This is the case $d = 2$ of Claim A in SG000000C1. Handbook Volume 9, Section 3.24. The result is not in Lean.'

@@ -1,0 +1,16 @@
+tag: SG000000BQ
+kind: conjecture
+title: 'Zariski''s fundamental theorem in dimension 4'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$ and let $K$ be a function field of transcendence degree 4 over $k$. Let $V_0$ and $V_1$ be normal projective models of $K$, and let $N$ be the set of valuations of $K/k$ whose center on $V_0$ or on $V_1$ is a regular point. Then there is a normal projective model $W$ of $K$, with birational morphisms $W \to V_0$ and $W \to V_1$, such that each $v \in N$ has a regular center on $W$.'
+sources:
+- paper: Cut09
+  loc: 'Theorem 15.1'
+- paper: CP19
+  loc: 'Section 4.1, Step 3'
+- paper: Zar44
+uses:
+- SG0000000X
+tier: T6
+route:
+- R2
+notes: 'This is $\mathrm{Fund}_4$, Definition 77.6 of research note 77. In dimension 3 it is [Cut09] Theorem 15.1, with $N$ restricted to the valuations with residue field $k$, and the patching step of [CP19] Section 4.1. In characteristic 0 it follows from the theorem of Hironaka by the converse part of SG000000BS. The referee report in note 82 found no proof in positive characteristic in dimension 4, and no proof by patching in any characteristic. By SG000000BT it is the global half of resolution of 4-folds. It is open. Handbook Volume 9, Section 3.24. The result is not in Lean.'

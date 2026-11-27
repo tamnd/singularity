@@ -1,0 +1,16 @@
+tag: SG000000C5
+kind: counterexample
+title: 'A toric pair of 4-folds on which Claim A and Fac_3^L fail'
+statement: 'Let $k$ be a field and $N = \mathbb{Z}^4$ with coordinates $(t,x,y,z)$. Let $V_1$ be the fake weighted projective space of the vectors $f = (2,1,1,1)$, $e_x$, $e_y$, $e_z$, $v_5 = (-1,-1,-1,-1)$, whose only singular point $p_1$ is the fixed point of $C = \langle f, e_x, e_y, e_z \rangle$, of determinant 2. Let $V_0 \to V_1$ be the toric variety of the common refinement of the fan of $V_1$ and the pullback of the normal fan of $K = (x^3 y^3 z^2, x^4 y z^3, y^9, x^5 z^3)$, star subdivided at $r = (1,1,1,1)$ and $r'' = (-2,1,1,1)$. Then the cone $\{0\} \times \sigma_0$ of SG000000C2 is a face of the cones $D = \langle \sigma_0, r \rangle$, of determinant 1, and $D'' = \langle \sigma_0, r'' \rangle$, of determinant $-2$. For the proof of SG000000C1 on $(V_0, V_1, N)$, with any principalization in its Step 3: the generic point of the curve $V(\sigma_0)$ lies in the fundamental locus $\Phi$, its component meets $L$, and it is not contained in $\alpha^{-1}(\mathrm{Sing}\, V_1)$. So Claim A and $\mathrm{Fac}_3^L$ of SG000000BZ fail, over each field. Also the weaker condition of SG000000C6 fails, and SG000000BQ holds for this pair by toric resolution.'
+sources:
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Theorem 11.1.9'
+uses:
+- SG000000C3
+- SG000000C1
+- SG000000BZ
+- SG0000001T
+tier: T3
+route:
+- R2
+notes: 'Construction 83.12 and Theorem 83.12 of research note 83. This result is new in note 83, and a second referee has not read it yet. The scripts of note 83 check each number exactly: $f + e_x + e_y + e_z + 2 v_5 = 0$, $\det C = 2$ with regular proper faces, $r$ has coordinates $(\frac12, \frac12, \frac12, \frac12)$ in the basis of $C$, and $r''$ has coordinates $(3,3,3,2)$ in the basis of $C'' = \langle e_x, e_y, e_z, v_5 \rangle$. The monomial valuation of weight $w = (1,4,4,5)$, the sum of the generators of $D$, has coordinates $(\frac12, \frac72, \frac72, \frac92)$ in $C$, so its center is the regular point $p_2$ of $D$ on $V_0$ and $p_1$ on $V_1$, and it lies in $N$. The local ring at the generic point of $V(\sigma_0)$ is $S_0$ over $k(t)$, so SG000000C3 shows that no principalization is a local isomorphism there. The other end $z$ of the curve, the fixed point of $D''$, is singular and maps to a regular point of $V_1$. Handbook Volume 9, Section 3.24. The result is not in Lean.'

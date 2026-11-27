@@ -1,0 +1,12 @@
+tag: SG000000C2
+kind: theorem
+title: 'A regular toric cone that toric monoidal transforms do not reach'
+statement: 'Let $F$ be a field, $R = F[x,y,z]_{(x,y,z)}$, and let $\sigma_0 \subset \mathbb{R}^3_{\ge 0}$ be the cone spanned by $(0,1,3)$, $(1,1,1)$ and $(2,1,0)$. Then $\sigma_0$ is regular, the local ring $S_0$ of $F[\sigma_0^\vee \cap \mathbb{Z}^3]$ at its maximal monomial ideal birationally dominates $R$, and for none of the torus-invariant regular primes $P$ of $R$ of height at least 2 is $P S_0$ principal. So $S_0$ is not an iterated monoidal transform of $R$ with torus-invariant centers.'
+sources:
+- paper: Ful93
+uses:
+- SG0000001T
+tier: T3
+route:
+- R2
+notes: 'Proposition 77.11 of research note 77, confirmed in note 82. The determinant is $-1$. For a monomial ideal, $P S_0$ is principal if and only if one generator has the least weight on each generator of $\sigma_0$, and this fails for $(x,y)$, $(x,z)$, $(y,z)$ and $(x,y,z)$. Computation 77.11'' (rerun in note 82 with independent code) counts the regular cones in the octant with entries at most $B$ that toric star subdivisions do not reach: none for $B = 2$ (337 cones), 144 of 2515 for $B = 3$, and 900 of 8860 for $B = 4$. Handbook Volume 9, Section 3.24. The result is not in Lean.'

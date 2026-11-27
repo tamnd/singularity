@@ -1,0 +1,20 @@
+tag: SG000000C1
+kind: theorem
+title: 'Principalization and Fac_3^L give the fundamental theorem in dimension 4'
+statement: 'Assume SG000000BV. Let $(V_0, V_1, N)$ be as in SG000000BQ, and assume that $\mathrm{Fac}_3^L$ of SG000000BZ holds for this triple. Then the conclusion of SG000000BQ holds for $(V_0, V_1, N)$. In particular $\mathrm{Fac}_3$ implies SG000000BQ, and if $V_1$ is regular, then SG000000BV alone gives the conclusion for the triple.'
+sources:
+- paper: Cut09
+  loc: 'Theorem 15.1 and its proof'
+uses:
+- SG000000BV
+- SG000000BZ
+- SG000000BW
+- SG000000BX
+- SG000000BY
+hypotheses:
+- SG000000BV
+- SG000000BZ
+tier: T6
+route:
+- R2
+notes: 'Theorem 77.8 of research note 77, in the form of Proposition 83.11 of note 83 that the referee report in note 82 asks for. The proof is the proof of [Cut09] Theorem 15.1 in dimension 4 with a corrected case analysis. Cutkosky applies Abhyankar''s theorem at $\eta_1$ without a check that $\eta_1$ is regular; the repair is Claim A in the form that each component of the fundamental locus $\Phi$ of $V_2 \dashrightarrow V_3$ that meets $L$ lies in $\alpha^{-1}(\mathrm{Sing}\, V_1)$. The cases of Claim A are: $\eta_1$ singular, $d = 0$, $d = 1$ (this uses $\mathrm{Fac}_3^L$) and $d = 2$ (SG000000BY). Both hypotheses on factorization are false in general (SG000000C4, SG000000C5), so the theorem does not give SG000000BQ. Handbook Volume 9, Section 3.24. The result is not in Lean.'
