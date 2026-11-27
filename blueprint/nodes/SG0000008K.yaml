@@ -11,4 +11,4 @@ uses:
 tier: T2
 route:
 - R1
-notes: This is Theorem 3.18.17 of Volume 7 of the handbook (Section 3.18). It is Theorem 5.1 of note 54 of the research notes, refereed in note 63. SG0000008G applied to $g_X$ and $g_W$ makes both derivatives of $g_m$ a monomial times a unit, and SG0000008H gives the contradiction. The obstruction for $\deg_{x, w} g \ge p$ is the cleaning of the coefficients $A_{kl}$ with $p \mid k$ and $p \mid l$, and the failure of SG0000008E. The result is not in Lean.
+notes: This is Theorem 3.18.17 of Volume 7 of the handbook (Section 3.18). It is Theorem 5.1 of note 54 of the research notes, refereed in note 63. SG0000008G applied to $g_X$ and $g_W$ makes both derivatives of $g_m$ a monomial times a unit, and SG0000008H gives the contradiction. The obstruction for $\deg_{x, w} g \ge p$ is the cleaning of the coefficients $A_{kl}$ with $p \mid k$ and $p \mid l$, and the failure of the chain of SG0000008E. The extension to the condition (C), which contains each $g$ with $\deg_{x, w} g \le p$, is SG00000092, and the class $K[[y, z]][x^p, w^p]$ is in SG00000094. The result is not in Lean.

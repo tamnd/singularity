@@ -1,0 +1,13 @@
+tag: SG00000095
+kind: theorem
+title: Each corner run of B1 x^p + B2 w^p + B0 is linear and has the initial form a p-th power of a line
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Let $g = B_1 x^p + B_2 w^p + B_0$ with $B_i \in K[[y, z]]$, of any rank in the sense of SG0000006Y. Then the run is linear, there is a linear free coordinate $x'$ whose translations are $0$ from some point on, and SG00000075 holds for the run. If the run has an infinite number of nonzero translations, then for $m$ large $\operatorname{in} G_m = c\, x_m'^{\,p}$ with $c \in K^*$ and $d = \rho = p$, and SG00000071 holds for the run.
+sources:
+- paper: CJS20
+uses:
+- SG00000094
+- SG0000006Y
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.18.38 of Volume 7 of the handbook (Section 3.18). It is Corollary 6.2 of note 64 of the research notes, with the fix 6 of note 67, which is that the hypothesis of rank $2$ is not used, and the rank at most $1$ was SG0000006Y. The class is in $K[[y, z]][x^p, w^p]$ with $\deg_{x, w} g = p$, so SG00000094 applies, and $d = pk$ with $k \le 1$ and $d = \rho \ge 1$ gives $d = p$. So open question 2 of Section 3.17 has a positive answer for this class. The result is not in Lean.

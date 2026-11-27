@@ -10,4 +10,4 @@ uses:
 tier: T2
 route:
 - R1
-notes: This is Corollary 3.17.17 of Volume 7 of the handbook (Section 3.17). If the rank is $1$, then $g = B (\gamma_1 x + \gamma_2 w)^p + B_0$ with coprime $\gamma_1, \gamma_2$. If the rank is $0$, then $g = B_0$ and SG0000006M gives no run. The class of rank $2$ of the form $y^{pA} z^{pB}(y x^p + z w^p + B_0)$ has no corner run by SG0000007A. It is Corollary 7.3 of note 38 of the research notes. The result is not in Lean.
+notes: This is Corollary 3.17.17 of Volume 7 of the handbook (Section 3.17). If the rank is $1$, then $g = B (\gamma_1 x + \gamma_2 w)^p + B_0$ with coprime $\gamma_1, \gamma_2$. If the rank is $0$, then $g = B_0$ and SG0000006M gives no run. The class of rank $2$ of the form $y^{pA} z^{pB}(y x^p + z w^p + B_0)$ has no corner run by SG0000007A. For each rank, each corner run of $B_1 x^p + B_2 w^p + B_0$ is linear with the initial form $c\, x'^{\,p}$ by SG00000095. It is Corollary 7.3 of note 38 of the research notes. The result is not in Lean.

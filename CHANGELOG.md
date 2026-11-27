@@ -4,6 +4,15 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000090 to SG00000096 for the corner runs in four variables with $\deg_{x, w} g \ge p$, in Volume 7, Section 3.18 of the handbook. The nodes are the results of research note 64 that the referee report in note 67 marks safe, in the form that note 67 corrected. SG00000090 and SG00000091 are Theorem 3.1 and Corollary 3.2 of note 64: on a planar run each nonzero $f \in \hat H[X, W]$ of any degree has $f(\Phi_\infty) \ne 0$, so Conjecture T holds for the planar runs, and the dominant part of $f$ is additive. SG00000092 is Theorem 5.3 of note 64: there is no planar corner run under the condition (C), which contains each $g$ with $\deg_{x, w} g \le p$. SG00000093 is Corollary 5.5 of note 64: each corner run with $\deg_{x, w} g \le p$, under (C), or in $K[[y, z]][x^p, w^p]$ is linear and satisfies Conjecture L. SG00000094 and SG00000095 are Theorem 6.1 and Corollary 6.2 of note 64: for $g \in K[[y, z]][x^p, w^p]$ the run is linear, the initial form is a power of a line, and L° holds, and for $g = B_1 x^p + B_2 w^p + B_0$ this is true for each rank. SG00000096 is Conjecture P of note 64, that there is no planar corner run. It is open. None of the new nodes has a Lean proof.
+
+### Changed
+
+- The notes of SG0000006Z, SG00000075 and SG00000071, Conjectures L, L° and L+, name the new cases with $\deg_{x, w} g \ge p$ in which they hold. The three nodes stay conjectures. The notes of SG0000007D say that H1 holds in the form $\operatorname{in} G_m \in K[x'_m]$ for $g \in K[[y, z]][x^p, w^p]$.
+- The notes of SG0000008E and SG0000008K name SG00000090 and SG00000092 for $\deg f \ge p$ and $\deg_{x, w} g \ge p$. The notes of SG0000006Y name SG00000095 for each rank.
+
 ## 0.4.66 - 2026-11-27
 
 ### Added

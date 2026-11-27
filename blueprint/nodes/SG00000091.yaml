@@ -1,0 +1,12 @@
+tag: SG00000091
+kind: theorem
+title: On a planar corner run the dominant part of a polynomial at the limits is additive
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Put $M_N = 1$, $M_{m+1} = M_m L_m$ with $L_m$ the chart variable, $\varphi_m = \sum_{N \le j < m} a_j M_{j+1}$, $\psi_m = \sum_{N \le j < m} b_j M_{j+1}$, $\Phi_m = (\varphi_m, \psi_m)$, and let $\Phi_\infty = (\varphi_\infty, \psi_\infty)$ be the limit in the Hahn field $\mathbb{K}$ of Lemma 3.15.6, with the valuation $v(y_N^a z_N^b) = a + \theta b$, $\theta$ irrational, and the completion $\hat H$ of $K(y_N, z_N)$ in it. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Assume that the run is planar, and let $f \in \hat H[X, W]$ with $\deg f \ge 1$. Write $f^{[k, l]}$ for the Hasse derivatives and $\beta_{kl}(f) = v(f^{[k, l]}(\Phi_\infty))$ with $v(0) = \infty$. Let $S$ be the set of the $(k, l) \ne (0, 0)$ at which $\beta_{kl}(f) + (k + l)(1 + \theta)$ takes its least value. Then $S \subseteq \{(p^e, 0), (0, p^e) \mid e \ge 0\}$. So the dominant part of $f$ at $\Phi_\infty$ is an additive polynomial $\sum_e (c_e X^{p^e} + d_e W^{p^e})$.
+sources:
+- paper: CJS20
+uses:
+- SG00000090
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.18.27 of Volume 7 of the handbook (Section 3.18). It is Corollary 3.2 of note 64 of the research notes, refereed in note 67. It is part (c) of SG00000090. It is the two-variable analogue of the statement of Kaplansky that the dominant index of Lemma 3.15.8, part 2, is a power of $p$, but the proof uses only the induction of SG00000090. The result is not in Lean.

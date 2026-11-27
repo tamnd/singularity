@@ -1,0 +1,16 @@
+tag: SG00000094
+kind: theorem
+title: A corner run in four variables in the p-th powers of x and w is linear and has the initial form a power of a line
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Assume that $g \in K[[y, z]][x^p, w^p]$ and $\deg_{x, w} g \ge 1$. Then (1) $\rho(P_m) = d(P_m)$ at each point $P_m$ of the run; (2) the run is linear, so there are a $J$ and a linear free coordinate $x' = \alpha x_J + \beta w_J$ at $P_J$ whose translations are $0$ after $J$; (3) if the run has an infinite number of nonzero translations, then for $m$ large $\operatorname{in} G_m = c\, x_m'^{\,d}$ with $c \in K^*$ and $d = \rho$ a multiple of $p$, and the corner curves $V(x'_m, w'_m, y_m)$, $V(x'_m, w'_m, z_m)$ and the corner surfaces $V(x'_m, y_m)$, $V(x'_m, z_m)$ have $\nu^G = d = \rho$; (4) if the run has only a finite number of nonzero translations, it is an origin run from some point on. So the conjectures SG0000006Z and SG00000075 hold for the run, the initial form satisfies $\operatorname{in} G_m \in K[x'_m]$ for $m$ large in case 3, and SG00000071 holds in case 3.
+sources:
+- paper: CJS20
+uses:
+- SG00000090
+- SG0000006M
+- SG0000006K
+- SG0000005R
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.18.37 of Volume 7 of the handbook (Section 3.18). It is Theorem 6.1 of note 64 of the research notes, with Theorem 5.4 of that note for part 2, refereed in note 67, and with the fixes 4 and 5 of note 67. The hypotheses of SG0000005R are listed, and the form of Hypothesis H1 here is $\operatorname{in} G_m \in K[x'_m]$. Write $g = \sum_c y^{c_1} z^{c_2} F_c(x, w)^p$ with $c \ne 0$ in $\{0, \dots, p - 1\}^2$. Then nothing is cleaned along the run, and SG00000090 for the $F_c$ gives the drop criterion SG0000006M on a planar run. On a linear run the coefficients of the powers $x^{pk}$ become monomials times units, and the run is compared with a run in three variables at the origins of the charts, to which SG0000005R applies. In case 4, SG0000005Z gives SG0000006Z and SG00000075, and Example 3.17.22 shows that SG00000071 can fail. The result is not in Lean.
