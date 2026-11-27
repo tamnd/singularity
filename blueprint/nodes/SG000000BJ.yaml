@@ -1,0 +1,14 @@
+tag: SG000000BJ
+kind: counterexample
+title: The cubic x^2 w in characteristic 2, and x^p w for each p, has linear corner runs whose initial form is not a power of a line
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$. Let $p$ be a prime, $\lambda \in K$, $Y$ a monomial in $y, z$ whose exponents are divisible by $p$, and $g = Y x^p (\lambda x + w)$. Take the word $y z y z \dots$ from the origin, $a_j = 0$ for each $j$, and $b_j \ne 0$ exactly at the $j$ where the monomial $M_{j+1} = y_N z_N / (y_{j+1} z_{j+1})$ has exponents divisible by $p$. A corner run in four variables is a sequence $P_N, P_{N+1}, \dots$ in which each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, $\operatorname{ord} \ge p$ at each point, and $\rho \ge 1$ is the same at each point. Then an infinite number of the $b_j$ are not $0$, the function of $P_m$ is $Y M_m x_m^p (\lambda x_m + w_m)$, so $G_m = x_m^p (\lambda x_m + w_m)$, $d = p + 1$ and $\rho = p$ at each point, and the sequence is a linear corner run in four variables. The adapted coordinate is $x' = x$, and in each linear free coordinate system $(x', w')$ the initial form is $c\, x'^p (w' + \gamma x')$ with $c \ne 0$, which is not in $K[x'_m]$. So SG0000009J is false for $p = 2$, $\lambda = 0$, $Y = 1$, and the form $\operatorname{in} G_m \in K[x'_m]$ of Hypothesis H1 is false for each $p$ and each $\deg_{x, w} g \ge p + 1$ (for example $g = x^p w + y x^D$ with $D \ge p + 2$, and $g = x^p w + x^D$ with $D \ge p + 2$ and $p \nmid D$). The corner curves have $\nu^G = p + 1$ and the corner surfaces $V(x_m, y_m)$, $V(x_m, z_m)$ have $\nu^G = p$.
+sources:
+- paper: CJS20
+uses:
+- SG0000007D
+- SG0000007B
+- SG0000006Z
+tier: T2
+route:
+- R1
+notes: 'This is Theorem 3.19.14 of Volume 7 of the handbook (Section 3.19), which replaces Conjecture 3.19.14. It is Theorem 3.1 and Corollary 3.2 of note 79 of the research notes, which the referee report in note 84 confirmed with Fix 3 (the explicit family of higher degree). The terms $b_j Y M_m^p M_{j+1} x_m^p$ that the translations create are $p$-th powers, so the cleaning removes them. The run contradicts only the clause on the initial form of SG0000009J: $d = \rho + 1$ and the corner curves have $\nu^G \ge \rho$. Proposition 3.17.30 (SG0000007B) is stated for $d < p$ and stays true; the example shows that it does not extend to $d = p + 1$. Note 84 checked the run with a literal blowing up step for $p = 2, 3, 5, 7$, four words and $40$ steps. The result is not in Lean.'

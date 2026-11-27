@@ -1,0 +1,13 @@
+tag: SG000000BK
+kind: counterexample
+title: A linear corner run with an infinite number of nonzero translations whose corner surfaces have order of G less than rho
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$. Let $p$ be a prime and $g = y x^p + y^p z^{p-1} w$. Take the word $y z y z \dots$ from the origin, $a_j = 0$ for each $j$, and $b_j \ne 0$ exactly at the $j$ where $z_N^{p-1} M_{j+1}$ has exponents divisible by $p$, with $M_{j+1} = y_N z_N / (y_{j+1} z_{j+1})$. A corner run in four variables is a sequence $P_N, P_{N+1}, \dots$ in which each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, $\operatorname{ord} \ge p$ at each point, and $\rho \ge 1$ is the same at each point. Then an infinite number of the $b_j$ are not $0$, the function of $P_m$ is $y_N (x_m^p + (y_m z_m)^{p-1} w_m)$, $G_m = x_m^p + (y_m z_m)^{p-1} w_m$ and $\rho = d = p$ at each point, and the sequence is a linear corner run in four variables. At each point $P_m$ and for each free coordinate $X$ at $P_m$, the corner surfaces $V(X, y_m)$ and $V(X, z_m)$ have $\nu^G \le p - 1 < \rho$. So SG00000071 is false also for the linear runs with an infinite number of nonzero translations, for each $p$. For $p = 2$ the same holds for the cubic $g = y x^2 + y^2 z w + x^3$, with the same run and $\rho = 2$, for $m \ge N + 3$. This cubic has no monomial $x^2 w$, $w^2$ or $w^3$, so it is in the class of SG0000009H. The corner curves have $\nu^G \ge p$ and $\operatorname{in} G_m = x_m^p$.
+sources:
+- paper: CJS20
+uses:
+- SG00000075
+- SG0000006Z
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.19.17 and Corollary 3.19.18 of Volume 7 of the handbook (Section 3.19). It is Theorem 3.3 and Corollary 3.4 of note 79 of the research notes, which the referee report in note 84 confirmed. The constant terms $b_j y_N^p z_N^{p-1} M_{j+1}$ that the translations create are $p$-th powers, so the cleaning removes them. Along $V(x', z_m)$ the coefficient of $z_m^{r_z + p - 1}$ of $g + h^p$ contains $y_m^{r_y + p - 1} w_m$, which no $p$-th power cancels, and the case of a coordinate $w - \sigma$ is similar. SG00000071 was already false for origin runs (SG00000072, SG00000073). It holds for $\deg_{x, w} g < p$ and for $g \in K[[y, z]][x^p, w^p]$, and these results do not change. L° and Hypothesis H1 hold for this run. Note 84 checked the run with a literal blowing up step for $p = 2, 3, 5, 7$, four words and $40$ steps, with random free coordinates; the largest order on the corner surfaces was $p - 1$. The result is not in Lean.

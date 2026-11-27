@@ -1,0 +1,13 @@
+tag: SG000000BM
+kind: theorem
+title: The binary initial forms at a point before a nonzero translation, in each degree
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$. Let $g = y^{r_y} z^{r_z} G$ be clean with $\operatorname{ord} g \ge p$ and $\rho \ge 1$, and let $h = \operatorname{in} G \in K[x, w]$ be a binary form of degree $d \ge 2$. Assume that a $y$-step or a $z$-step with the translation $u = (a, b) \ne 0$ keeps $\rho$. Let $\ell = b x - a w$ and let $m$ be a linear form with $m(u) = 1$, and write $h$ as a polynomial in $\ell, m$. If $\rho = d$, then $h = c\, \ell^d$ with $c \ne 0$ and $p \mid d$. If $\rho = d - 1$, then $h = c\, \ell^d + c' \ell^{d-1} m + H$, where each monomial $\ell^i m^j$ of $H$ has $j \ge 2$, $p \mid i$ and $p \mid j$, and $p \mid d - 1$ if $c' \ne 0$. For $d < p$ this gives $h = c\, \ell^d$.
+sources:
+- paper: CJS20
+uses:
+- SG0000007B
+- SG0000004X
+tier: T2
+route:
+- R1
+notes: 'This is Proposition 3.19.19 and Corollary 3.19.20 of Volume 7 of the handbook (Section 3.19). It is Proposition 4.1 of note 79 of the research notes, with the Fixes 4 and 5 of the referee report in note 84: the change to $(\ell, m)$ is applied to the form $h$ without a new cleaning, and $d \ge 2$. The proof uses the directrix condition of Theorem 3.7.1 at the point (SG0000004X): the chart vector of the step is in the directrix of $h$ if $\rho = d$, and in the directrices of $h_x$ and $h_w$ if $\rho = d - 1$. It contains SG0000007B. The form $x^p (\lambda x + w)$ of SG000000BJ shows that the list is sharp for $d = p + 1$. For $p = 2$ and $\deg_{x, w} g = 3$ the list is $c\, x^2$, $c\, x^3$ and $x^2 (c x + c'' w)$, with $\rho = 2$. Note 84 tested it at about $26000$ points for $p = 2, 3, 5$ and found no exception. The result is not in Lean.'

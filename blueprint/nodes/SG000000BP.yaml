@@ -1,0 +1,15 @@
+tag: SG000000BP
+kind: conjecture
+title: Hypothesis H1 in its binary form and Conjecture L-circle for all linear corner runs
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$. Let $g \in K[[y, z]][x, w]$ be clean, and let $P_N, P_{N+1}, \dots$ be a corner run in four variables of $g$ with an infinite number of nonzero translations. A corner run in four variables is a sequence $P_N, P_{N+1}, \dots$ in which each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, $\operatorname{ord} \ge p$ at each point, and $\rho \ge 1$ is the same at each point. Then in adapted coordinates $(x', w')$, for $m$ large, $\operatorname{in} G_m \in K[x'_m, w'_m]$, it is one of the forms of SG000000BM, and the corner curves $V(x'_m, w'_m, y_m)$ and $V(x'_m, w'_m, z_m)$ have $\nu^G \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG000000BM
+- SG000000BN
+- SG00000075
+- SG0000007D
+tier: T2
+route:
+- R1
+notes: This is Conjecture 3.19.22 of Volume 7 of the handbook (Section 3.19). It is Conjecture 5.2 of note 79 of the research notes. By SG0000006Z each corner run of $g$ is linear. The claim holds for $\deg_{x, w} g < p$ (SG0000008M) and for $g \in K[[y, z]][x^p, w^p]$ (SG00000094), and it contains SG000000BN. The stronger form $\operatorname{in} G_m \in K[x'_m]$ is false for $\deg_{x, w} g \ge p + 1$ by SG000000BJ, and Conjecture L+ is false for these runs by SG000000BK. It is open.
