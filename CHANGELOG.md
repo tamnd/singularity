@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.66 - 2026-11-27
+
 ### Added
 
 - SG0000008P to SG0000008Z for track NW, the Newton and Frobenius preparation of research note 55, in the form that the referee report in note 60 corrected. SG0000008P is Theorem 5.3 of note 05 in the weight form, with the Lean proof Singularity.newtonNondegenerate_purelyInseparable_iff for a perfect reduced ring. SG0000008Q is the counterexample $z^p + t x^p$ over $\mathbb{F}_p(t)$, which shows that the perfect field is necessary, with the Lean proof Singularity.newtonNondegenerate_ratFunc_example. SG0000008R is Theorem 4.1 of note 55 for the changes of $x$ and the cleanings. SG0000008S is Theorem 4.3 of note 55 for all changes of coordinates when $D > p$. SG0000008T is the corrected Proposition 5.4(b). SG0000008V is the corrected Proposition 11.1, with "singular or not transverse". SG0000008W and SG0000008X are Theorems 10.1 and 11.2. SG0000008Y is the Fano obstruction in characteristic 2. SG0000008Z is a conjecture for the open case $D = p$. Only SG0000008P and SG0000008Q have a Lean proof.
