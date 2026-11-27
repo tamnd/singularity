@@ -1,5 +1,5 @@
 tag: SG0000007D
-kind: conjecture
+kind: theorem
 title: In a corner run in four variables of degree less than p the initial form is eventually binary
 statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Assume $\deg_{x, w} g < p$, and let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Then $\operatorname{in} G_m \in K[x_m, w_m]$ for $m$ large.
 sources:
@@ -7,7 +7,8 @@ sources:
 uses:
 - SG0000005Z
 - SG00000079
+- SG0000008M
 tier: T2
 route:
 - R1
-notes: This is Hypothesis 3.17.32 of Volume 7 of the handbook (Section 3.17). It is the hypothesis H1 of note 40 of the research notes. For a run with only a finite number of nonzero translations it holds by Theorem 3.14.7 (SG0000005Z), so it is open only for the runs with an infinite number of nonzero translations. It held in all the tests of notes 40 and 42. SG00000079 gives type $1$ at the points before a change of letter, which is a first step.
+notes: This is Hypothesis 3.17.32 of Volume 7 of the handbook (Section 3.17). It is the hypothesis H1 of note 40 of the research notes. For a run with only a finite number of nonzero translations it holds by Theorem 3.14.7 (SG0000005Z), and SG00000079 gives type $1$ at the points before a change of letter. It was stated as a hypothesis in note 40. It is now proved by SG0000008M (Corollary 3.18.18, from note 54 of the research notes, refereed in note 63). A run that is not planar satisfies it by SG0000008A, and there is no planar run by SG0000008K. The statement is only for $\deg_{x, w} g < p$. For $\deg_{x, w} g \ge p$ the same claim is open. The result is not in Lean.

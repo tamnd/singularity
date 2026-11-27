@@ -1,0 +1,16 @@
+tag: SG00000089
+kind: theorem
+title: A linear corner run in four variables of degree less than p with an infinite number of nonzero translations has the initial form a power of a line
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Assume $\deg_{x, w} g < p$ and that the run is linear with an infinite number of nonzero translations. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Then there are an $m_0$ and a free coordinate system $(x, w)$ at $P_{m_0}$ in which the translations of $x$ are $0$, and an integer $d$ with $2 \le d < p$, such that for $m$ large (1) $\operatorname{in} G_m = c\, x_m^d$ with $c \in K^*$, $d_m = d$ and $\rho = d - 1$, (2) the corner curves $V(x_m, w_m, y_m)$ and $V(x_m, w_m, z_m)$ have $\nu^G = d$, and (3) the corner surfaces $V(x_m, y_m)$ and $V(x_m, z_m)$ have $\nu^G \ge \rho$. So Hypothesis H1 (SG0000007D) and the conjectures SG0000006Z, SG00000071 and SG00000075 hold for the run.
+sources:
+- paper: CJS20
+uses:
+- SG0000006J
+- SG0000006K
+- SG0000006M
+- SG00000064
+- SG0000006P
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.18.6 of Volume 7 of the handbook (Section 3.18). It is Theorem 4.1 of note 50 of the research notes, with Proposition 3.1 and Lemma 3.2 of that note, and with the two fixes of note 52 (the translations of $x$ stay $0$ after the change of $w$, and the monomial factor of $g_m$ is the largest monomial that divides it). Note 52 checked the proof, and note 54, Part A, checked it again. The linearity makes the part in $x$ rigid, and the part in $w$ is a sequence in one variable, so Section 3.15 applies. The result is not in Lean.

@@ -1,0 +1,14 @@
+tag: SG0000008K
+kind: theorem
+title: There is no planar corner run in four variables of degree less than p
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Assume $1 \le \deg_{x, w} g < p$. Then the run is not planar. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5).
+sources:
+- paper: CJS20
+uses:
+- SG0000008G
+- SG0000008H
+- SG0000006J
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.18.17 of Volume 7 of the handbook (Section 3.18). It is Theorem 5.1 of note 54 of the research notes, refereed in note 63. SG0000008G applied to $g_X$ and $g_W$ makes both derivatives of $g_m$ a monomial times a unit, and SG0000008H gives the contradiction. The obstruction for $\deg_{x, w} g \ge p$ is the cleaning of the coefficients $A_{kl}$ with $p \mid k$ and $p \mid l$, and the failure of SG0000008E. The result is not in Lean.

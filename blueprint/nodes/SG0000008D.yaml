@@ -1,0 +1,13 @@
+tag: SG0000008D
+kind: lemma
+title: On a planar corner run a linear form in the tail of the limits with coefficients of finite type has a small value
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Put $M_N = 1$, $M_{m+1} = M_m L_m$ with $L_m$ the chart variable, $\varphi_m = \sum_{N \le j < m} a_j M_{j+1}$, $\psi_m = \sum_{N \le j < m} b_j M_{j+1}$, $\Phi_m = (\varphi_m, \psi_m)$, and let $\Phi_\infty = (\varphi_\infty, \psi_\infty)$ be the limit in the Hahn field $\mathbb{K}$ of Lemma 3.15.6, with the valuation $v(y_N^a z_N^b) = a + \theta b$, $\theta$ irrational, and the completion $\hat H$ of $K(y_N, z_N)$ in it. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Assume that the run is planar, let $m \ge N$, and put $\Delta\varphi = \sum_{j \ge m} a_j M_{j+1}$ and $\Delta\psi = \sum_{j \ge m} b_j M_{j+1}$. Let $\alpha, \beta, \gamma$ be elements of finite type of $\mathbb{K}$ (SG0000008B) with $(\alpha, \beta) \ne (0, 0)$. Then $v(\gamma + \alpha\, \Delta\varphi + \beta\, \Delta\psi) < \min(v(\alpha), v(\beta)) + 1 + \theta$.
+sources:
+- paper: CJS20
+uses:
+- SG0000008B
+- SG0000008C
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.18.10 of Volume 7 of the handbook (Section 3.18). It is Lemma 3.1 of note 54 of the research notes, refereed in note 63. The proof is the proof of SG0000008C for the tail of the run, and it uses only that the coefficients are of finite type. This is what makes the induction of SG0000008E work. The result is not in Lean.

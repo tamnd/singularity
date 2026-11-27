@@ -1,0 +1,12 @@
+tag: SG0000008G
+kind: theorem
+title: On a planar corner run a polynomial of degree less than p in the translated coordinates is eventually a monomial times a unit
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Put $M_N = 1$, $M_{m+1} = M_m L_m$ with $L_m$ the chart variable, $\varphi_m = \sum_{N \le j < m} a_j M_{j+1}$, $\psi_m = \sum_{N \le j < m} b_j M_{j+1}$, $\Phi_m = (\varphi_m, \psi_m)$, and let $\Phi_\infty = (\varphi_\infty, \psi_\infty)$ be the limit in the Hahn field $\mathbb{K}$ of Lemma 3.15.6, with the valuation $v(y_N^a z_N^b) = a + \theta b$, $\theta$ irrational, and the completion $\hat H$ of $K(y_N, z_N)$ in it. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Assume that the run is planar, let $f \in K[[y_N, z_N]][X, W]$ be nonzero with $\deg f < p$, and let $c \nu$ be the term of least value of $f(\Phi_\infty)$ (SG0000008E). Then there is an $m_2$ such that for each $m \ge m_2$, $\nu$ is a monomial in $y_m, z_m$ with nonnegative exponents and $f(\varphi_m + M_m x_m, \psi_m + M_m w_m) = c\, \nu\, (1 + h_m)$ with $h_m$ in the ideal $(x_m, w_m, y_m, z_m)$ of $K[[y_m, z_m]][x_m, w_m]$.
+sources:
+- paper: CJS20
+uses:
+- SG0000008E
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.18.14 of Volume 7 of the handbook (Section 3.18). It is Proposition 4.1 of note 54 of the research notes, refereed in note 63. All the terms of the Taylor expansion at $\Phi_{m_1}$ go into one set at the base point $P_{m_1 + 1}$, and the dominance lemma 3.15.4 applies. The result is not in Lean.

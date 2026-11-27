@@ -1,0 +1,15 @@
+tag: SG0000008M
+kind: theorem
+title: Each corner run in four variables of degree less than p is linear and satisfies Hypothesis H1 and Conjectures L and L-circle
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Assume $\deg_{x, w} g < p$. Then the run is linear (Definition 3.17.5), $\operatorname{in} G_m \in K[x_m, w_m]$ and $d = \rho + 1$ for $m$ large, and the conjectures SG0000006Z and SG00000075 hold for the run. If the run has an infinite number of nonzero translations, then the corner surfaces of SG00000071 also have $\nu^G \ge \rho$ for $m$ large.
+sources:
+- paper: CJS20
+uses:
+- SG0000008K
+- SG0000008A
+- SG00000089
+- SG0000006M
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.18.18 of Volume 7 of the handbook (Section 3.18). It is Corollary 5.2 of note 54 of the research notes, with the fix 5 of note 63, so it is a statement for $\deg_{x, w} g < p$ only. For $\deg_{x, w} g = 0$ there is no run by SG0000006M, and for $\deg_{x, w} g \ge 1$ the run is not planar by SG0000008K, so SG0000008A and SG00000089 apply. It proves SG0000007D, so SG0000007E holds without its hypothesis. For $\deg_{x, w} g \ge p$, Hypothesis H1 and the conjectures SG0000006Z and SG00000075 stay open. The result is not in Lean.
