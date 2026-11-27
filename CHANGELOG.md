@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The handbook page of the site points to the edition 0.4.64 of tamnd/singularity-handbook. Before this change it pointed to the edition 0.4.9.
+
 ## 0.4.67 - 2026-11-27
 
 ### Added
