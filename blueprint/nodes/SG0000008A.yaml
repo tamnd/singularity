@@ -1,0 +1,13 @@
+tag: SG0000008A
+kind: theorem
+title: Hypothesis H1 and Conjectures L and L-circle hold for each corner run in four variables of degree less than p that is not planar
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Assume $\deg_{x, w} g < p$ and that the run is not planar. The run is planar if there is no $(\alpha, \beta) \ne (0, 0)$ in $K^2$ with $\alpha a_j + \beta b_j = 0$ for $j$ large, and linear otherwise (Definition 3.17.5). Then $\operatorname{in} G_m \in K[x_m, w_m]$ for $m$ large, the conjectures SG0000006Z and SG00000075 hold for the run, and $d = \rho + 1$ for $m$ large.
+sources:
+- paper: CJS20
+uses:
+- SG00000089
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.18.7 of Volume 7 of the handbook (Section 3.18). It is Corollary 5.1 of note 50 of the research notes, with the fixes of note 52. An origin run from some point on is SG0000005Z (Theorem 3.14.7), and a linear run with an infinite number of nonzero translations is SG00000089. The result is not in Lean.

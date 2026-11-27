@@ -1,0 +1,13 @@
+tag: SG0000008N
+kind: theorem
+title: A corner run in four variables is linear in all free coordinates or in none
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). The following are equivalent. (1) The run is linear in the coordinates $(x_N, w_N)$ (Definition 3.17.5). (2) There are a $J \ge N$ and a free coordinate $x'$ at $P_J$, linear or not, whose translations are $0$ from some point on, that is, SG0000006Z holds for the run. (3) For each $J \ge N$ and each free coordinate system $(x'', w'')$ at $P_J$, the run from $P_J$ is linear in $(x'', w'')$. There is no condition on the degree.
+sources:
+- paper: CJS20
+uses:
+- SG0000006K
+- SG0000006P
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.18.19 of Volume 7 of the handbook (Section 3.18). It is Theorem 7.1 of note 54 of the research notes, with the fix 1 of note 63 in the proof of (3). So a run is planar in one free coordinate system if and only if it is planar in all of them, and SG0000006Z fails for a run if and only if the run is planar. SG0000006P is the case of a linear free coordinate. The proof writes the hypersurface as $x = F(w, y, z)$ and compares $F(\psi_\infty, y, z)$ with $\varphi_\infty$ below the limit of $v(M_m)$. The result is not in Lean.

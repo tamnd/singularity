@@ -4,6 +4,16 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG00000089 to SG0000008N for the corner runs in four variables of Volume 7, Section 3.18 of the handbook, "Planar runs and the hypothesis H1". The nodes are the results of research notes 50, 52 and 54 that the referee reports in notes 52, 54 and 63 mark safe, in the corrected form of these reports. SG00000089 and SG0000008A are Theorem 4.1 and Corollary 5.1 of note 50: a corner run with $\deg_{x, w} g < p$ that is not planar satisfies Hypothesis H1 and Conjectures L and L°. SG0000008C, SG0000008F, SG0000008H and SG0000008J are Lemma 4.1, Proposition 5.2, Lemma 5.1 and Theorem 5.3 of note 52. SG0000008B, SG0000008D, SG0000008E, SG0000008G, SG0000008K, SG0000008M and SG0000008N are Lemma 1.1, Lemma 3.1, Theorem 3.2, Proposition 4.1, Theorem 5.1, Corollary 5.2 and Theorem 7.1 of note 54. SG0000008E is Statement D, that is, Conjecture T for the planar runs and the polynomials of degree less than $p$. SG0000008K says that there is no planar corner run with $1 \le \deg_{x, w} g < p$. SG0000008M says that each corner run with $\deg_{x, w} g < p$ is linear and satisfies H1, L and L°. SG0000008N says that a run is linear in all free coordinates or in none. None of the new nodes has a Lean proof.
+
+### Changed
+
+- SG0000007D, Hypothesis H1 for $\deg_{x, w} g < p$, has the kind theorem. SG0000008M proves it.
+- SG0000007E, Theorem 3.17.33, has no hypothesis. Its title does not name H1.
+- The notes of SG0000006Z and SG00000075, Conjectures L and L°, say that they hold for $\deg_{x, w} g < p$ and are open for $\deg_{x, w} g \ge p$. The two nodes stay conjectures. The notes of SG00000071 name the runs with $\deg_{x, w} g < p$ for which it holds.
+
 ## 0.4.65 - 2026-11-27
 
 ### Added

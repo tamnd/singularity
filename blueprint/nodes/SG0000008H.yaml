@@ -1,0 +1,13 @@
+tag: SG0000008H
+kind: lemma
+title: A point of a corner run in four variables of degree less than p with the derivative in x a monomial times a unit ends the run
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Let $(x, w)$ be a free coordinate system at a point $P_m$ of the run, with the function of $P_m$ equal to $M^{-p} g_m$, $g_m = \sum_{k, l} A_{kl} x^k w^l$, $\deg_{x, w} g_m < p$ and only $A_{00}$ removed by the cleaning. Assume $\partial_x g_m = \mu \varepsilon$ with $\mu$ a nonzero constant times a monomial in $y_m, z_m$ and $\varepsilon$ a unit, and assume that $\mu$ divides $\partial_w g_m$. Then the run does not keep $\rho \ge 1$, so there is no such corner run.
+sources:
+- paper: CJS20
+uses:
+- SG0000006V
+- SG00000066
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.18.15 of Volume 7 of the handbook (Section 3.18). It is Lemma 5.1 of note 52 of the research notes, checked again in note 54, Part A. The series $x'' = (g_m - A_{00}) / \mu$ is a free coordinate, the point is cylindrical, and SG0000006V reduces the run to a corner run with free translations of $\mu' x'' + B'_0$, which SG00000066 (Theorem 3.15.16) excludes. The result is not in Lean.
