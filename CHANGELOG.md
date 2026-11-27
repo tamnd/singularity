@@ -4,6 +4,13 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- SG00000068, Example 3.15.18 of Volume 7 of the handbook, has the Lean proof Singularity.Translations.exRun_of_charts over `ZMod p`. Lean has no definition of a corner run with free translations, so the Lean statement is a sequence of chart steps with $\rho = 1$.
+- SG0000003M, the transformation law of the log-Jacobian ideal under a point blowup, has the Lean proof Singularity.map_logJacobian_eq_map_pointChart. This is Theorem 3.11 of research note 03 as an equality in the local ring of the origin of the chart, in place of the two inclusions.
+- The notes of SG0000003E, SG0000003F and SG0000003N name the Lean proofs of part 2 of Lemma 3.6 for polynomial units, of Corollary 3.8 and Definition 3.9 in fixed coordinates, and of Corollary 3.14 of research note 03. The notes of SG0000006B and SG0000006E name the Lean proofs of the facts on Lucas's theorem and on the primitive vectors of Section 3.16 of Volume 7, and the notes of SG0000004F name the Lean proof of the formula for the transcendence degree. These nodes keep their Lean fields, or have none, because the Lean proofs are partial.
+- records/lean.json pins singularity-lean 0.4.48 at commit 0cff052, with the base package at commit 6ba20cb. The record has 3340 declarations and none with sorry. records/base-charzero.json and records/trust.json name the new commits and the new count.
+
 ## 0.4.63 - 2026-11-27
 
 ### Added

@@ -9,10 +9,10 @@ uses:
 - SG0000003E
 - SG0000002E
 lean:
-  statement: Singularity.span_mul_logJacobian_le_map_pointChart
-  proof: Singularity.span_mul_logJacobian_le_map_pointChart
+  statement: Singularity.map_logJacobian_eq_map_pointChart
+  proof: Singularity.map_logJacobian_eq_map_pointChart
 tier: T2
 route:
 - R1
 - R5
-notes: The formula holds at each point of the exceptional divisor, translated or not. At a translated point the unit $x_j + t_j$ absorbs the derivation that is not logarithmic. For a base of dimension 3 this is in the thesis of Cossart. The Lean library proves the law for polynomials over each commutative ring of characteristic $p$, as two inclusions, because $x_j + t_j$ is not a unit in $K[x]$. The Lean names are Singularity.map_pointChart_logJacobianTangent_le_span_mul for the first inclusion and Singularity.span_mul_logJacobian_le_map_pointChart for the second, with Singularity.blowupUnit for the product of the factors $x_j + t_j$ (tamnd/singularity-lean#90).
+notes: The formula holds at each point of the exceptional divisor, translated or not. At a translated point the unit $x_j + t_j$ absorbs the derivation that is not logarithmic. For a base of dimension 3 this is in the thesis of Cossart. The Lean library proves the law for polynomials over each commutative ring of characteristic $p$, as two inclusions, because $x_j + t_j$ is not a unit in $K[x]$. The Lean names are Singularity.map_pointChart_logJacobianTangent_le_span_mul for the first inclusion and Singularity.span_mul_logJacobian_le_map_pointChart for the second, with Singularity.blowupUnit for the product of the factors $x_j + t_j$ (tamnd/singularity-lean#90). The product is a unit in the local ring Singularity.OriginLocalRing of $k[x]$ at the origin of the chart (Singularity.isUnit_algebraMap_blowupUnit), so the two inclusions give the equality of the law in this local ring, for each translation $t$ with entries in $k$ (Singularity.map_logJacobian_eq_map_pointChart, tamnd/singularity-lean#195). This is Theorem 3.11 of research note 03. The equality in the local ring gives the equality in $K[[x]]$. Lean proves the equality in the algebraic local ring and not in the power series ring, and it covers only the origin of the chart.
