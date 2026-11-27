@@ -1,0 +1,12 @@
+key: Bla12
+title: Blanco, Math. Nachr. 285 (2012), arXiv:0902.2887; Q. J. Math. 63 (2012), arXiv:1009.0636
+tag: P
+tier: T3
+why: Log-resolution of binomial ideals in each characteristic
+year: 2012
+arxiv:
+- '0902.2887'
+- '1009.0636'
+lean: none
+use:
+- read

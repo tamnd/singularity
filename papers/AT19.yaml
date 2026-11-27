@@ -1,0 +1,11 @@
+key: AT19
+title: Abramovich-Temkin, Functorial factorization of birational maps for qe schemes in characteristic 0, ANT 13 (2019), arXiv:1606.08414
+tag: P
+tier: T8
+why: The known cases of resolution and principalization in characteristic $p$ (Remark 2.2.3)
+year: 2019
+arxiv:
+- '1606.08414'
+lean: none
+use:
+- read

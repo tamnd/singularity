@@ -1,0 +1,16 @@
+tag: SG000000CH
+kind: theorem
+title: 'Toric relative strong factorization for the cone sigma_0'
+statement: 'Let $F$ be a field, $R = F[x,y,z]_{(x,y,z)}$, and $S_0$ the ring of SG000000C2, with $x = b c^2$, $y = a b c$ and $z = a^3 b$. Then $\mathrm{RSF}(R, S_0)$ of SG000000CG holds in its strong variant for $K = (x^3 y^3 z^2, x^4 y z^3, y^9, x^5 z^3)$, with torus-invariant centers. In terms of fans: 14 smooth star subdivisions at 2-faces of the octant, with the new rays $(0,1,1)$, $(0,1,2)$, $(1,1,1)$, $(0,1,3)$, $(1,1,0)$, $(2,1,0)$, $(1,1,2)$, $(2,2,3)$, $(2,1,1)$, $(1,2,4)$, $(2,3,6)$, $(2,3,5)$, $(3,2,2)$, $(4,3,3)$ in this order, give a regular fan $F_1$ with 24 maximal cones that refines the normal fan of $K$. The cone $\sigma_0$ is the union of 6 maximal cones of $F_1$, and this subfan is obtained from $\sigma_0$ by 5 smooth star subdivisions at 2-faces, with the new rays $(2,2,3)$, $(1,2,4)$, $(4,3,3)$, $(2,3,5)$ and $(2,3,6)$. Each of the 14 centers lies in the locus where $K$ is not invertible.'
+sources:
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Proposition 3.3.15'
+uses:
+- SG000000CG
+- SG000000C2
+- SG000000C4
+- SG0000001T
+tier: T3
+route:
+- R2
+notes: 'Theorem 85.7 of research note 85, an exact integer computation. The centers of the 14 stars on the side of $R$ are the 2-faces $\langle e_3, e_2 \rangle$, $\langle e_3, (0,1,1) \rangle$, $\langle (0,1,1), e_1 \rangle$, $\langle e_3, (0,1,2) \rangle$, $\langle e_2, e_1 \rangle$, $\langle e_1, (1,1,0) \rangle$, $\langle (0,1,2), e_1 \rangle$, $\langle (1,1,1), (1,1,2) \rangle$, $\langle e_1, (1,1,1) \rangle$, $\langle (0,1,2), (1,1,2) \rangle$, $\langle (1,1,2), (1,2,4) \rangle$, $\langle (0,1,2), (2,2,3) \rangle$, $\langle (1,1,1), (2,1,1) \rangle$, $\langle (1,1,1), (3,2,2) \rangle$; the first one is the curve $y = z = 0$. The six cones in $\sigma_0$ are $\langle (0,1,3), (1,2,4), (2,3,6) \rangle$, $\langle (1,1,1), (2,1,0), (4,3,3) \rangle$, $\langle (1,1,1), (2,2,3), (2,3,5) \rangle$, $\langle (1,1,1), (2,2,3), (4,3,3) \rangle$, $\langle (1,2,4), (2,2,3), (2,3,5) \rangle$ and $\langle (1,2,4), (2,2,3), (2,3,6) \rangle$. On the side of $S_0$ the stars are at $\langle g_1, g_3 \rangle$ (the curve $a = c = 0$), $\langle g_1, g_2 \rangle$ (the curve $a = b = 0$), $\langle g_3, (2,2,3) \rangle$, $\langle g_2, (1,2,4) \rangle$ and $\langle g_1, (2,2,3) \rangle$. So $Y = X(F_1)$, $Z$ the normalized blowup of $K$ and $\zeta$ the fixed point of the chart of $\sigma_0$ satisfy SG000000CG. By SG000000C3 the ring $S_0$ has no first center from the side of $R$; this result shows that it has one from its own side. A blind search found no common model up to depth 5 (19781 nodes); the certificate comes from a heuristic that cuts the 2-faces that cross the facet hyperplanes of $\sigma_0$, with inward normals $(1,-2,1)$, $(-3,6,-2)$ and $(2,-3,1)$. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

@@ -1,0 +1,14 @@
+tag: SG000000CD
+kind: theorem
+title: 'Weak principalization in dimension 4 reduces to ideals with cosupport in an snc divisor'
+statement: 'Assume $\mathrm{Princ}_4^{\rm w}$ of SG000000CC for all pairs $(U'', I'''')$ of a regular quasi-projective 4-fold $U''$ and a nonzero coherent ideal $I''''$ whose cosupport lies in a divisor of $U''$ with simple normal crossings. Then $\mathrm{Princ}_4^{\rm w}$ holds.'
+sources:
+- paper: CJS20
+  loc: 'Corollary 0.4'
+uses:
+- SG000000CC
+- SG0000001C
+tier: T6
+route:
+- R2
+notes: 'Proposition 85.3 of research note 85. Write $I = \mathcal{O}_U(-D) I''$ and $X = V(I'')_{\rm red}$, of dimension at most 2. Corollary 0.4 of [CJS20] gives blowups along regular centers over $X$, an isomorphism over $U \setminus X$, after which the preimage of $X$ is a divisor with simple normal crossings; the new non-invertible locus lies in it, and the hypothesis applies. The case of snc cosupport still contains the hard part: for example $(z^p + g(x,y,w), x^a y^b)$ has cosupport in $\{x y = 0\}$. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

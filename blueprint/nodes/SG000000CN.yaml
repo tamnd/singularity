@@ -1,0 +1,21 @@
+tag: SG000000CN
+kind: theorem
+title: 'Local strong factorization in dimension 3 for valuations of rank 1 and rational rank 3'
+statement: 'Let $k$ be a field of any characteristic. Let $R \subseteq S$ be regular local rings of dimension 3, essentially of finite type over $k$, with the same fraction field $K$ and $S$ dominating $R$. Let $\nu$ be a valuation of $K$ that dominates $S$, with value group of rank 1 and rational rank 3. Then there is a regular local ring $T$, dominated by $\nu$, that is an iterated monoidal transform along $\nu$ of $R$ and also of $S$.'
+sources:
+- paper: CJS20
+  loc: 'Corollary 0.4'
+- paper: Kar03
+  loc: 'Theorem 0.2 and Section 1'
+- paper: Zar44
+- paper: EGA4
+  loc: '8.12.10'
+- paper: KK05
+uses:
+- SG0000001C
+- SG0000002X
+- SG000000C7
+tier: T5
+route:
+- R2
+notes: 'Proposition 85.11 of research note 85. Step 1: embedded resolution of the surface $V(f_1 f_2 f_3)$ [CJS20, Corollary 0.4], for $f_i$ with rationally independent values, gives coordinates $z$ with independent values. Step 2: then $\nu$ is monomial in $z$. Step 3: Perron transforms along the weight make finitely many elements monomials [Zar44], [Kar03, Section 1]. Step 4: a transform $R''''$ of $R$ dominates a transform $S''$ of $S$, with $y = \varepsilon z^A$ and $A$ unimodular. Step 5: the toric theorem [Kar03, Theorem 0.2] gives a common regular cone, and Zariski''s Main Theorem SG0000002X identifies the two rings. Not covered: valuations of rank 2 or 3 with rational rank 3, Abhyankar valuations with residue transcendence degree at least 1, where local uniformization is known [KK05] but strong factorization is not, and valuations that are not Abhyankar. The missing step is local monomialization of birational extensions of regular local rings of dimension 3 in characteristic $p$. The global factorization theorems in characteristic $p$ need resolution in dimension 4, which is circular here. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'
