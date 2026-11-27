@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.61 - 2026-11-27
+
 ### Added
 
 - SG00000069, SG0000006A, SG0000006B, SG0000006C, SG0000006D, SG0000006E, SG0000006F, SG0000006G and SG0000006H for the finiteness of the translations of Volume 7, Section 3.16 of the handbook. SG00000069 says that the closed form of the transform and the criterion for the drop hold when $g$ is a power series in $x$. SG0000006A is the Kaplansky inequality for power series along the translations. SG0000006B says that the tie set of the limit values has only $1$ and powers of $p$. SG0000006C, SG0000006D and SG0000006E treat the three cases of the tie set for $\mu x + F(x^p)$. SG0000006F says that a change of the free coordinate keeps an infinite number of nonzero translations. SG0000006G gives only a finite number of nonzero translations for $\mu x + F(x^p, y, z)$. SG0000006H gives only a finite number of nonzero translations for each clean $g \in K[[y, z]][x]$, so Question 3.13.18 has a positive answer for each corner run with free translations. The proofs are in notes 34 to 37 of the research notes. None of the nodes has a Lean proof.
