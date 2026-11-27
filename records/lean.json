@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "4d150bd7cbf6c04ed15bb502a984260df8663170",
+  "commit": "6c993dc05fbe6ee077be1d43207f8b3ac7bdf354",
   "record": "records/base-charzero.json"
  },
- "built": "2026-11-26",
- "commit": "8cd9a21d60f5b197aefccba0006c4d6bdadb52c0",
+ "built": "2026-11-27",
+ "commit": "8c9ec556708238b9ff0404f927126e110e4361df",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -2305,6 +2305,28 @@
    "line": 90,
    "type": "\u2200 {R : Type u} [inst : CommRing R] (I : Ideal R) (M : Type v) [inst_1 : AddCommGroup M] [inst_2 : Module R M],\n  Singularity.Algebra.hilbertSamuel I M 0 = 0"
   },
+  "Singularity.Algebra.iInf_pow_eq_bot_of_isDomain": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 19,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [IsNoetherianRing R] [IsDomain R] {I : Ideal R}, I \u2260 \u22a4 \u2192 \u2a05 n, I ^ n = \u22a5"
+  },
+  "Singularity.Algebra.iInf_pow_prod_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 48,
+   "type": "\u2200 (k : Type u_1) [inst : Field k],\n  \u2a05 n, Singularity.Algebra.prodIdeal k ^ n = Singularity.Algebra.prodIdeal k \u2227 Singularity.Algebra.prodIdeal k \u2260 \u22a5"
+  },
   "Singularity.Algebra.iSupIndep_cokerGrading": {
    "axioms": [
     "Classical.choice",
@@ -3368,6 +3390,16 @@
    "line": 274,
    "type": "\u2200 {R : Type u} [inst : CommRing R] [inst_1 : IsRegularLocalRing R] {d : \u2115},\n  ringKrullDim R = \u2191(d + 1) \u2192\n    \u2200 {g : Fin (d + 1) \u2192 R},\n      IsLocalRing.maximalIdeal R = Ideal.span (Set.range g) \u2192\n        \u2200 {k n : \u2115} {v : R}, g 0 ^ n * v \u2208 IsLocalRing.maximalIdeal R ^ (k + n) \u2192 v \u2208 IsLocalRing.maximalIdeal R ^ k"
   },
+  "Singularity.Algebra.mem_prodIdeal": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 29,
+   "type": "\u2200 (k : Type u_1) [inst : Field k] {x : k \u00d7 k}, x \u2208 Singularity.Algebra.prodIdeal k \u2194 x.2 = 0"
+  },
   "Singularity.Algebra.mem_regularLocus": {
    "axioms": [
     "Classical.choice",
@@ -3630,6 +3662,48 @@
    "kind": "theorem",
    "line": 31,
    "type": "\u2200 (R : Type u_1) [inst : CommRing R] (p : \u2115) [inst_1 : ExpChar R p], PrimeSpectrum.comap (frobenius R p) = fun P => P"
+  },
+  "Singularity.Algebra.prodIdeal": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "def",
+   "line": 26,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Ideal (k \u00d7 k)"
+  },
+  "Singularity.Algebra.prodIdeal_mul_self": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 32,
+   "type": "\u2200 (k : Type u_1) [inst : Field k],\n  Singularity.Algebra.prodIdeal k * Singularity.Algebra.prodIdeal k = Singularity.Algebra.prodIdeal k"
+  },
+  "Singularity.Algebra.prodIdeal_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 42,
+   "type": "\u2200 (k : Type u_1) [inst : Field k] {n : \u2115}, 1 \u2264 n \u2192 Singularity.Algebra.prodIdeal k ^ n = Singularity.Algebra.prodIdeal k"
+  },
+  "Singularity.Algebra.prod_mul_mem_eq_zero": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Algebra/KrullDomain.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 (k : Type u_1) [inst : Field k] {x : k \u00d7 k}, x \u2208 Singularity.Algebra.prodIdeal k \u2192 (1 + (-1, 0)) * x = 0"
   },
   "Singularity.Algebra.prod_pow_mem_pow_sum": {
    "axioms": [
@@ -7780,6 +7854,660 @@
    "kind": "def",
    "line": 222,
    "type": "Prop"
+  },
+  "Singularity.Example.C_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 71,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (B : Subalgebra k (Polynomial k)) (a : k), Polynomial.C a \u2208 B"
+  },
+  "Singularity.Example.C_mem_umbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 314,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (a : k), MvPolynomial.C a \u2208 Singularity.Example.umbrella k"
+  },
+  "Singularity.Example.X_cube_mem_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 98,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Polynomial.X ^ 3 \u2208 Singularity.Example.cusp k"
+  },
+  "Singularity.Example.X_mem_originIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 41,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (i : Fin 2), MvPolynomial.X i \u2208 Singularity.Example.originIdeal k"
+  },
+  "Singularity.Example.X_ne_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/ImperfectField.lean",
+   "kind": "theorem",
+   "line": 35,
+   "type": "\u2200 {F : Type u_1} [inst : Field F] {p : \u2115}, 2 \u2264 p \u2192 \u2200 (f : RatFunc F), f ^ p \u2260 RatFunc.X"
+  },
+  "Singularity.Example.X_not_mem_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 159,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Polynomial.X \u2209 Singularity.Example.cusp k"
+  },
+  "Singularity.Example.X_sq_mem_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Polynomial.X ^ 2 \u2208 Singularity.Example.cusp k"
+  },
+  "Singularity.Example.X_sq_mul_X_pow_mem_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (n : \u2115), Polynomial.X ^ 2 * Polynomial.X ^ n \u2208 Singularity.Example.cusp k"
+  },
+  "Singularity.Example.X_sq_mul_mem_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 111,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : Polynomial k), Polynomial.X ^ 2 * g \u2208 Singularity.Example.cusp k"
+  },
+  "Singularity.Example.X_sq_sub_one_dvd": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 231,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  2 \u2260 0 \u2192 \u2200 {q : Polynomial k}, Polynomial.eval 1 q = 0 \u2192 Polynomial.eval (-1) q = 0 \u2192 Polynomial.X ^ 2 - 1 \u2223 q"
+  },
+  "Singularity.Example.coeffOneZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "def",
+   "line": 125,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Subalgebra k (Polynomial k)"
+  },
+  "Singularity.Example.coeff_one_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 119,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (p q : Polynomial k), (p * q).coeff 1 = p.coeff 0 * q.coeff 1 + p.coeff 1 * q.coeff 0"
+  },
+  "Singularity.Example.cone_chart_x": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [IsDomain R] {x y z v : R},\n  x \u2260 0 \u2192 x * y = z ^ 2 \u2192 z = x * v \u2192 y = x * v ^ 2 \u2227 Ideal.span {x, y, z} = Ideal.span {x}"
+  },
+  "Singularity.Example.cone_chart_z": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 93,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [IsDomain R] {x y z a b : R},\n  z \u2260 0 \u2192 x * y = z ^ 2 \u2192 x = z * a \u2192 y = z * b \u2192 a * b = 1"
+  },
+  "Singularity.Example.cone_overlap": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 102,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] [IsDomain R] {x y z v w : R},\n  x * y \u2260 0 \u2192 x * y = z ^ 2 \u2192 z = x * v \u2192 z = y * w \u2192 v * w = 1"
+  },
+  "Singularity.Example.cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "def",
+   "line": 91,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Subalgebra k (Polynomial k)"
+  },
+  "Singularity.Example.cuspEq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "def",
+   "line": 66,
+   "type": "{k : Type u_1} \u2192 [inst : Field k] \u2192 MvPolynomial (Fin 2) k"
+  },
+  "Singularity.Example.cuspEq_mem_sq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 69,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Singularity.Example.cuspEq \u2208 Singularity.Example.originIdeal k ^ 2"
+  },
+  "Singularity.Example.cusp_chart_x": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 34,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (x u : R), (x * u) ^ 2 - x ^ 3 = x ^ 2 * (u ^ 2 - x)"
+  },
+  "Singularity.Example.cusp_chart_y": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 37,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (y w : R), y ^ 2 - (y * w) ^ 3 = y ^ 2 * (1 - y * w ^ 3)"
+  },
+  "Singularity.Example.cusp_normalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 182,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  IsFractionRing (\u21a5(Singularity.Example.cusp k)) (RatFunc k) \u2227\n    IsIntegralClosure (Polynomial k) (\u21a5(Singularity.Example.cusp k)) (RatFunc k)"
+  },
+  "Singularity.Example.cusp_strict_inter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 40,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (x u : R), Ideal.span {x, u ^ 2 - x} = Ideal.span {x, u ^ 2}"
+  },
+  "Singularity.Example.cusp_strict_inter_y": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 53,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (y w : R), Ideal.span {y, 1 - y * w ^ 3} = \u22a4"
+  },
+  "Singularity.Example.eval_zero_substXZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 48,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : MvPolynomial (Fin 2) k),\n  Polynomial.eval 0 (Singularity.Example.substXZero g) = MvPolynomial.constantCoeff g"
+  },
+  "Singularity.Example.instIsIntegralSubtypeMvPolynomialFinOfNatNatMemSubalgebraUmbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 347,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Algebra.IsIntegral (\u21a5(Singularity.Example.umbrella k)) (MvPolynomial (Fin 2) k)"
+  },
+  "Singularity.Example.isFractionRing_of_mul_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 35,
+   "type": "\u2200 {R : Type u_1} {C : Type u_2} {K : Type u_3} [inst : CommRing R] [inst_1 : CommRing C] [IsDomain C]\n  [inst_3 : Algebra R C] [inst_4 : Field K] [inst_5 : Algebra C K] [IsFractionRing C K] (B : Subalgebra R C) {c : C},\n  c \u2260 0 \u2192 (\u2200 (g : C), c * g \u2208 B) \u2192 IsFractionRing (\u21a5B) K"
+  },
+  "Singularity.Example.isIntegralClosure_of_isIntegral": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 48,
+   "type": "\u2200 {R : Type u_1} {C : Type u_2} {K : Type u_3} [inst : CommRing R] [inst_1 : CommRing C] [IsDomain C]\n  [inst_3 : Algebra R C] [inst_4 : Field K] [inst_5 : Algebra C K] [IsFractionRing C K] [IsIntegrallyClosed C]\n  (B : Subalgebra R C) [Algebra.IsIntegral (\u21a5B) C], IsIntegralClosure C (\u21a5B) K"
+  },
+  "Singularity.Example.isIntegral_of_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 59,
+   "type": "\u2200 {R : Type u_1} {C : Type u_2} [inst : CommRing R] [inst_1 : CommRing C] [IsDomain C] [inst_3 : Algebra R C]\n  (B : Subalgebra R C) {x : C}, x \u2208 B \u2192 IsIntegral (\u21a5B) x"
+  },
+  "Singularity.Example.map_originIdeal_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 58,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  Ideal.map Singularity.Example.substXZero (Singularity.Example.originIdeal k) \u2264 Ideal.span {Polynomial.X}"
+  },
+  "Singularity.Example.mem_coeffOneZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 138,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] {p : Polynomial k}, p \u2208 Singularity.Example.coeffOneZero k \u2194 p.coeff 1 = 0"
+  },
+  "Singularity.Example.mem_cusp_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 141,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] {p : Polynomial k}, p \u2208 Singularity.Example.cusp k \u2194 p.coeff 1 = 0"
+  },
+  "Singularity.Example.mem_node_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 249,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  2 \u2260 0 \u2192 \u2200 {p : Polynomial k}, p \u2208 Singularity.Example.node k \u2194 Polynomial.eval 1 p = Polynomial.eval (-1) p"
+  },
+  "Singularity.Example.mem_originIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 37,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] {g : MvPolynomial (Fin 2) k},\n  g \u2208 Singularity.Example.originIdeal k \u2194 MvPolynomial.constantCoeff g = 0"
+  },
+  "Singularity.Example.mul_cuspEq_not_mem_cube": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 77,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] {s : MvPolynomial (Fin 2) k},\n  s \u2209 Singularity.Example.originIdeal k \u2192 s * Singularity.Example.cuspEq \u2209 Singularity.Example.originIdeal k ^ 3"
+  },
+  "Singularity.Example.mul_mem_cusp_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 163,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : Polynomial k),\n  (\u2200 (p : Polynomial k), g * p \u2208 Singularity.Example.cusp k) \u2194 Polynomial.X ^ 2 \u2223 g"
+  },
+  "Singularity.Example.mul_mem_node_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 271,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  2 \u2260 0 \u2192 \u2200 (g : Polynomial k), (\u2200 (p : Polynomial k), g * p \u2208 Singularity.Example.node k) \u2194 Polynomial.X ^ 2 - 1 \u2223 g"
+  },
+  "Singularity.Example.node": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "def",
+   "line": 191,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Subalgebra k (Polynomial k)"
+  },
+  "Singularity.Example.node_chart_x": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 58,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (x u : R), (x * u) ^ 2 - x ^ 2 - x ^ 3 = x ^ 2 * (u ^ 2 - 1 - x)"
+  },
+  "Singularity.Example.node_normalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 220,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  IsFractionRing (\u21a5(Singularity.Example.node k)) (RatFunc k) \u2227\n    IsIntegralClosure (Polynomial k) (\u21a5(Singularity.Example.node k)) (RatFunc k)"
+  },
+  "Singularity.Example.node_strict_inter": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/BlowupCharts.lean",
+   "kind": "theorem",
+   "line": 62,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (x u : R), Ideal.span {x, u ^ 2 - 1 - x} = Ideal.span {x, (u - 1) * (u + 1)}"
+  },
+  "Singularity.Example.not_perfectRing_ratFunc": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/ImperfectField.lean",
+   "kind": "theorem",
+   "line": 57,
+   "type": "\u2200 (p : \u2115) [inst : Fact (Nat.Prime p)], \u00acPerfectRing (RatFunc (ZMod p)) p"
+  },
+  "Singularity.Example.order_cusp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 92,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  Singularity.Algebra.order (IsLocalRing.maximalIdeal (Localization.AtPrime (Singularity.Example.originIdeal k)))\n      ((algebraMap (MvPolynomial (Fin 2) k) (Localization.AtPrime (Singularity.Example.originIdeal k)))\n        Singularity.Example.cuspEq) =\n    2"
+  },
+  "Singularity.Example.originIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "def",
+   "line": 28,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Ideal (MvPolynomial (Fin 2) k)"
+  },
+  "Singularity.Example.originIdeal_isMaximal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 32,
+   "type": "\u2200 (k : Type u_1) [inst : Field k], (Singularity.Example.originIdeal k).IsMaximal"
+  },
+  "Singularity.Example.perfectRing_of_finite": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/ImperfectField.lean",
+   "kind": "theorem",
+   "line": 25,
+   "type": "\u2200 (K : Type u_1) [inst : Field K] [Finite K] (p : \u2115) [ExpChar K p], PerfectRing K p"
+  },
+  "Singularity.Example.perfectRing_of_isAlgClosed": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/ImperfectField.lean",
+   "kind": "theorem",
+   "line": 30,
+   "type": "\u2200 (K : Type u_1) [inst : Field K] [IsAlgClosed K] (p : \u2115) [ExpChar K p], PerfectRing K p"
+  },
+  "Singularity.Example.polynomial_normalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 75,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (B : Subalgebra k (Polynomial k)) {c : Polynomial k},\n  c \u2260 0 \u2192\n    (\u2200 (g : Polynomial k), c * g \u2208 B) \u2192\n      IsIntegral (\u21a5B) Polynomial.X \u2192 IsFractionRing (\u21a5B) (RatFunc k) \u2227 IsIntegralClosure (Polynomial k) (\u21a5B) (RatFunc k)"
+  },
+  "Singularity.Example.substXZero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "def",
+   "line": 44,
+   "type": "{k : Type u_1} \u2192 [inst : Field k] \u2192 MvPolynomial (Fin 2) k \u2192+* Polynomial k"
+  },
+  "Singularity.Example.substXZero_cuspEq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CuspOrder.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Singularity.Example.substXZero Singularity.Example.cuspEq = Polynomial.X ^ 2"
+  },
+  "Singularity.Example.t_sq_mem_umbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 310,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], MvPolynomial.X 1 ^ 2 \u2208 Singularity.Example.umbrella k"
+  },
+  "Singularity.Example.umbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "def",
+   "line": 296,
+   "type": "(k : Type u_1) \u2192 [inst : Field k] \u2192 Subalgebra k (MvPolynomial (Fin 2) k)"
+  },
+  "Singularity.Example.umbrella_mul_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 343,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : MvPolynomial (Fin 2) k), MvPolynomial.X 0 * g \u2208 Singularity.Example.umbrella k"
+  },
+  "Singularity.Example.umbrella_mul_mem_aux": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 318,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : MvPolynomial (Fin 2) k),\n  MvPolynomial.X 0 * g \u2208 Singularity.Example.umbrella k \u2227\n    MvPolynomial.X 0 * MvPolynomial.X 1 * g \u2208 Singularity.Example.umbrella k"
+  },
+  "Singularity.Example.umbrella_normalization": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 359,
+   "type": "\u2200 {k : Type u_1} [inst : Field k],\n  IsFractionRing (\u21a5(Singularity.Example.umbrella k)) (FractionRing (MvPolynomial (Fin 2) k)) \u2227\n    IsIntegralClosure (MvPolynomial (Fin 2) k) (\u21a5(Singularity.Example.umbrella k))\n      (FractionRing (MvPolynomial (Fin 2) k))"
+  },
+  "Singularity.Example.x_mem_node": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 194,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Polynomial.X ^ 2 - 1 \u2208 Singularity.Example.node k"
+  },
+  "Singularity.Example.x_mul_X_pow_mem_node": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (n : \u2115), (Polynomial.X ^ 2 - 1) * Polynomial.X ^ n \u2208 Singularity.Example.node k"
+  },
+  "Singularity.Example.x_mul_mem_node": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 212,
+   "type": "\u2200 {k : Type u_1} [inst : Field k] (g : Polynomial k), (Polynomial.X ^ 2 - 1) * g \u2208 Singularity.Example.node k"
+  },
+  "Singularity.Example.y_mem_node": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 198,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], Polynomial.X ^ 3 - Polynomial.X \u2208 Singularity.Example.node k"
+  },
+  "Singularity.Example.y_mem_umbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 302,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], MvPolynomial.X 0 \u2208 Singularity.Example.umbrella k"
+  },
+  "Singularity.Example.yt_mem_umbrella": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Example/CurveNormalization.lean",
+   "kind": "theorem",
+   "line": 306,
+   "type": "\u2200 {k : Type u_1} [inst : Field k], MvPolynomial.X 0 * MvPolynomial.X 1 \u2208 Singularity.Example.umbrella k"
   },
   "Singularity.Examples.Exp5": {
    "axioms": [],
@@ -15429,6 +16157,17 @@
    "line": 118,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (n : \u2115) (\u03c6 : MvPowerSeries \u03c3 k) (\u03b1 : \u03c3 \u2192\u2080 \u2115),\n  (MvPowerSeries.coeff \u03b1) (\u2191n * \u03c6) = \u2191n * (MvPowerSeries.coeff \u03b1) \u03c6"
   },
+  "Singularity.OriginRuns.CornerIneq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 176,
+   "type": "{\u03c3 : Type u_1} \u2192 [Fintype \u03c3] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192 \u03c3 \u2192 \u2124) \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 Prop"
+  },
   "Singularity.OriginRuns.DegreeGe": {
    "axioms": [
     "Classical.choice",
@@ -15450,6 +16189,17 @@
    "kind": "def",
    "line": 524,
    "type": "{\u03c3 : Type u_1} \u2192 \u2115 \u2192 List \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 Prop"
+  },
+  "Singularity.OriginRuns.ExpFormula": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 91,
+   "type": "{\u03c3 : Type u_1} \u2192 [Fintype \u03c3] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 (\u03c3 \u2192 \u03c3 \u2192 \u2124) \u2192 Prop"
   },
   "Singularity.OriginRuns.HasLeastExponent": {
    "axioms": [
@@ -15512,6 +16262,50 @@
    "line": 1129,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : DecidableEq \u03c3] [inst_1 : Field k] [inst_2 : DecidableEq k] (\u0394 : Finset \u03c3)\n  (j : \u03c3), Singularity.blowupDivisor \u0394 j 0 = insert j \u0394"
   },
+  "Singularity.OriginRuns.cleanOrdAlong_eq_of_min": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 354,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : DecidableEq \u03c3] [inst_1 : Field k] {p : \u2115} [CharP k p],\n  Nat.Prime p \u2192\n    \u2200 {S : Finset \u03c3} {F : MvPolynomial \u03c3 k},\n      Singularity.IsClean p F \u2192\n        \u2200 {b : \u03c3 \u2192\u2080 \u2115},\n          b \u2208 F.support \u2192\n            (\u2200 d \u2208 F.support, \u2211 i \u2208 S, b i \u2264 \u2211 i \u2208 S, d i) \u2192 Singularity.cleanOrdAlong p S F = \u2191(\u2211 i \u2208 S, b i)"
+  },
+  "Singularity.OriginRuns.cleanOrdAlong_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 860,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (S : Finset (Fin 4)) {v : Fin 4 \u2192\u2080 \u2115},\n  Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n    Singularity.cleanOrdAlong p S (Singularity.OriginRuns.exPoly p v) =\n      \u2191(min (\u2211 i \u2208 S, (v + Finsupp.single 3 p) i)\n          (\u2211 i \u2208 S, (v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)) i))"
+  },
+  "Singularity.OriginRuns.coeff_exPoly_left": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 605,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (v : Fin 4 \u2192\u2080 \u2115),\n  (Singularity.OriginRuns.exPoly p v).coeff (v + Finsupp.single 3 p) = 1"
+  },
+  "Singularity.OriginRuns.coeff_exPoly_right": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 610,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (v : Fin 4 \u2192\u2080 \u2115),\n  (Singularity.OriginRuns.exPoly p v).coeff (v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)) = 1"
+  },
   "Singularity.OriginRuns.coeff_originTransform": {
    "axioms": [
     "Classical.choice",
@@ -15534,6 +16328,36 @@
    "line": 657,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [DecidableEq \u03c3] [inst : Field k] {p : \u2115} (j : \u03c3) {g : MvPolynomial \u03c3 k},\n  Singularity.OriginRuns.DegreeGe p g \u2192\n    \u2200 {e : \u03c3 \u2192\u2080 \u2115},\n      p \u2264 Finsupp.degree e \u2192\n        (Singularity.OriginRuns.originTransform p j g).coeff (Singularity.OriginRuns.expStep p j e) = g.coeff e"
   },
+  "Singularity.OriginRuns.colStep": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 78,
+   "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 \u03c3 \u2192 (\u03c3 \u2192 \u03c3 \u2192 \u2124) \u2192 \u03c3 \u2192 \u03c3 \u2192 \u2124"
+  },
+  "Singularity.OriginRuns.colSteps": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 81,
+   "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 List \u03c3 \u2192 (\u03c3 \u2192 \u03c3 \u2192 \u2124) \u2192 \u03c3 \u2192 \u03c3 \u2192 \u2124"
+  },
+  "Singularity.OriginRuns.cols": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 87,
+   "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 List \u03c3 \u2192 \u03c3 \u2192 \u03c3 \u2192 \u2124"
+  },
   "Singularity.OriginRuns.constantCoeff_residualFactor_ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -15544,6 +16368,28 @@
    "kind": "theorem",
    "line": 901,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [DecidableEq \u03c3] [inst_2 : Field k] {g : MvPolynomial \u03c3 k},\n  Singularity.OriginRuns.HasLeastExponent g \u2192 MvPolynomial.constantCoeff (Singularity.residualFactor Finset.univ g) \u2260 0"
+  },
+  "Singularity.OriginRuns.cornerIneq_of": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 183,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] {p : \u2115} {L : Finset \u03c3} {c : \u03c3 \u2192 \u03c3 \u2192 \u2124} {T \u03bc : \u03c3 \u2192\u2080 \u2115},\n  ((\u2200 t \u2208 L, Singularity.OriginRuns.qVec p L \u03bc t = Singularity.OriginRuns.qVec p L T t) \u2227\n        Singularity.OriginRuns.uSum L \u03bc \u2264 Singularity.OriginRuns.uSum L T \u2228\n      \u2200 s \u2208 L,\n        max 1 (\u2191(Singularity.OriginRuns.uSum L \u03bc) - \u2191(Singularity.OriginRuns.uSum L T)) \u2264\n          Singularity.OriginRuns.qDot p L \u03bc (c s) - Singularity.OriginRuns.qDot p L T (c s)) \u2192\n    Singularity.OriginRuns.CornerIneq p L c T \u03bc"
+  },
+  "Singularity.OriginRuns.degreeGe_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 634,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (v : Fin 4 \u2192\u2080 \u2115),\n  Singularity.OriginRuns.DegreeGe p (Singularity.OriginRuns.exPoly p v)"
   },
   "Singularity.OriginRuns.degreeGe_of_le_ord": {
    "axioms": [
@@ -15566,6 +16412,39 @@
    "kind": "theorem",
    "line": 415,
    "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] (e : \u03c3 \u2192\u2080 \u2115), Finsupp.degree e = \u2211 i, e i"
+  },
+  "Singularity.OriginRuns.degree_eq_sum_add_uSum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 208,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (L : Finset \u03c3) (e : \u03c3 \u2192\u2080 \u2115),\n  Finsupp.degree e = \u2211 s \u2208 L, e s + Singularity.OriginRuns.uSum L e"
+  },
+  "Singularity.OriginRuns.degree_exLeft": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 624,
+   "type": "\u2200 {p : \u2115} (v : Fin 4 \u2192\u2080 \u2115), Finsupp.degree (v + Finsupp.single 3 p) = Finsupp.degree v + p"
+  },
+  "Singularity.OriginRuns.degree_exRight": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 629,
+   "type": "\u2200 {p : \u2115} (v : Fin 4 \u2192\u2080 \u2115),\n  Finsupp.degree (v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)) = Finsupp.degree v + 3 + (p - 2)"
   },
   "Singularity.OriginRuns.degree_le_degree": {
    "axioms": [
@@ -15686,6 +16565,39 @@
    "line": 116,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] (\u03b4 : \u03b9 \u2192 \u2124), Singularity.OriginRuns.diffSteps [] \u03b4 = \u03b4"
   },
+  "Singularity.OriginRuns.divisorExponent_apply_eq_of": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 321,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [DecidableEq \u03c3] [inst : Field k] {\u0394 : Finset \u03c3} {F : MvPolynomial \u03c3 k} {i : \u03c3},\n  i \u2208 \u0394 \u2192 \u2200 {b : \u03c3 \u2192\u2080 \u2115}, b \u2208 F.support \u2192 (\u2200 d \u2208 F.support, b i \u2264 d i) \u2192 (Singularity.divisorExponent \u0394 F) i = b i"
+  },
+  "Singularity.OriginRuns.divisorExponent_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 743,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192 Singularity.divisorExponent Singularity.OriginRuns.exDivisor (Singularity.OriginRuns.exPoly p v) = v"
+  },
+  "Singularity.OriginRuns.divisorExponent_polySteps_of_notMem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 331,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [DecidableEq \u03c3] [inst : Field k] {p : \u2115} {L \u0394 : Finset \u03c3} {l : List \u03c3}\n  {g : MvPolynomial \u03c3 k},\n  (\u2200 j \u2208 l, j \u2208 L) \u2192\n    Singularity.OriginRuns.IsAdmissible p l g \u2192\n      \u2200 {u : \u03c3},\n        u \u2209 L \u2192\n          (Singularity.divisorExponent \u0394 (Singularity.OriginRuns.polySteps p l g)) u =\n            (Singularity.divisorExponent \u0394 g) u"
+  },
   "Singularity.OriginRuns.divisorExponent_univ_eq": {
    "axioms": [
     "Classical.choice",
@@ -15707,6 +16619,214 @@
    "kind": "theorem",
    "line": 458,
    "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] {j : \u03c3} {\u03b4 : \u03c3 \u2192 \u2124},\n  Singularity.OriginRuns.diffStep j \u03b4 = 0 \u2192 \u03b4 = 0"
+  },
+  "Singularity.OriginRuns.exDivisor": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 554,
+   "type": "Finset (Fin 4)"
+  },
+  "Singularity.OriginRuns.exDivisor_hG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 732,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  \u2200 i \u2208 Singularity.OriginRuns.exDivisor, \u2203 d \u2208 (Singularity.OriginRuns.exG p).support, d i = 0"
+  },
+  "Singularity.OriginRuns.exDivisor_hr": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 727,
+   "type": "\u2200 {v : Fin 4 \u2192\u2080 \u2115}, v 3 = 0 \u2192 \u2200 i \u2209 Singularity.OriginRuns.exDivisor, v i = 0"
+  },
+  "Singularity.OriginRuns.exG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 546,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 MvPolynomial (Fin 4) (ZMod p)"
+  },
+  "Singularity.OriginRuns.exG_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 580,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  Singularity.OriginRuns.exG p =\n    MvPolynomial.X 3 ^ p + MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 ^ (p - 2)"
+  },
+  "Singularity.OriginRuns.exG_eq_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 576,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], Singularity.OriginRuns.exG p = Singularity.OriginRuns.exPoly p 0"
+  },
+  "Singularity.OriginRuns.exGen_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 768,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {i : Fin 4},\n  i \u2260 3 \u2192\n    \u2200 (c : ZMod p),\n      c \u2022 Singularity.OriginRuns.exG p + MvPolynomial.X i * (MvPolynomial.pderiv i) (Singularity.OriginRuns.exG p) =\n        (MvPolynomial.monomial (Finsupp.single 3 p)) c +\n          (MvPolynomial.monomial (Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2))) (c + 1)"
+  },
+  "Singularity.OriginRuns.exOnes": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 543,
+   "type": "Fin 4 \u2192\u2080 \u2115"
+  },
+  "Singularity.OriginRuns.exOnes_apply": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 656,
+   "type": "\u2200 {j : Fin 4}, j \u2260 3 \u2192 Singularity.OriginRuns.exOnes j = 1"
+  },
+  "Singularity.OriginRuns.exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 550,
+   "type": "(p : \u2115) \u2192 [inst : Fact (Nat.Prime p)] \u2192 (Fin 4 \u2192\u2080 \u2115) \u2192 MvPolynomial (Fin 4) (ZMod p)"
+  },
+  "Singularity.OriginRuns.exPoly_eq_mul": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 585,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (v : Fin 4 \u2192\u2080 \u2115),\n  Singularity.OriginRuns.exPoly p v = (MvPolynomial.monomial v) 1 * Singularity.OriginRuns.exG p"
+  },
+  "Singularity.OriginRuns.exPoly_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 570,
+   "type": "\u2200 {p : \u2115} (v : Fin 4 \u2192\u2080 \u2115), v + Finsupp.single 3 p \u2260 v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)"
+  },
+  "Singularity.OriginRuns.exPoly_ne_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 616,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] (v : Fin 4 \u2192\u2080 \u2115), Singularity.OriginRuns.exPoly p v \u2260 0"
+  },
+  "Singularity.OriginRuns.exPoly_start": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 589,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  Singularity.OriginRuns.exPoly p (Finsupp.single 0 1) =\n    MvPolynomial.X 0 * MvPolynomial.X 3 ^ p +\n      MvPolynomial.X 0 ^ 2 * MvPolynomial.X 1 * MvPolynomial.X 2 * MvPolynomial.X 3 ^ (p - 2)"
+  },
+  "Singularity.OriginRuns.exStep": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 557,
+   "type": "Fin 4 \u2192 (Fin 4 \u2192\u2080 \u2115) \u2192 Fin 4 \u2192\u2080 \u2115"
+  },
+  "Singularity.OriginRuns.exStep_apply_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 687,
+   "type": "\u2200 {j : Fin 4}, j \u2260 3 \u2192 \u2200 (v : Fin 4 \u2192\u2080 \u2115), (Singularity.OriginRuns.exStep j v) 3 = v 3"
+  },
+  "Singularity.OriginRuns.exSteps": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 560,
+   "type": "List (Fin 4) \u2192 (Fin 4 \u2192\u2080 \u2115) \u2192 Fin 4 \u2192\u2080 \u2115"
+  },
+  "Singularity.OriginRuns.exSteps_apply_three": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 692,
+   "type": "\u2200 {l : List (Fin 4)}, (\u2200 j \u2208 l, j \u2260 3) \u2192 \u2200 (v : Fin 4 \u2192\u2080 \u2115), (Singularity.OriginRuns.exSteps l v) 3 = v 3"
+  },
+  "Singularity.OriginRuns.example_3_14_9": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 950,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {l : List (Fin 4)},\n  (\u2200 j \u2208 l, j \u2260 3) \u2192\n    have v := Singularity.OriginRuns.exSteps l (Finsupp.single 0 1);\n    Singularity.OriginRuns.polySteps p l (Singularity.OriginRuns.exPoly p (Finsupp.single 0 1)) =\n        Singularity.OriginRuns.exPoly p v \u2227\n      Singularity.OriginRuns.IsAdmissible p l (Singularity.OriginRuns.exPoly p (Finsupp.single 0 1)) \u2227\n        Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2227\n          Singularity.logJacobianOrder Singularity.OriginRuns.exDivisor (Singularity.OriginRuns.exPoly p v) = \u2191p \u2227\n            Singularity.ord\n                  (Singularity.residualFactor Singularity.OriginRuns.exDivisor (Singularity.OriginRuns.exPoly p v)) =\n                \u2191p \u2227\n              (\u2200 (t : Fin 4),\n                  t \u2260 3 \u2192\n                    Singularity.orderGAlong p Singularity.OriginRuns.exDivisor (Finset.univ.erase t)\n                        (Singularity.OriginRuns.exPoly p v) =\n                      \u2191p) \u2227\n                (\u2200 (s : Fin 4),\n                    s \u2260 3 \u2192\n                      Singularity.orderGAlong p Singularity.OriginRuns.exDivisor {3, s}\n                            (Singularity.OriginRuns.exPoly p v) =\n                          \u2191(p - 1) \u2227\n                        \u2191(p - 1) <\n                          Singularity.logJacobianOrder Singularity.OriginRuns.exDivisor\n                            (Singularity.OriginRuns.exPoly p v)) \u2227\n                  Singularity.orderGAlong p Singularity.OriginRuns.exDivisor {3} (Singularity.OriginRuns.exPoly p v) =\n                      \u2191(p - 2) \u2227\n                    \u2200 (j : Fin 4),\n                      j \u2260 3 \u2192\n                        Singularity.RhoStep p p (Singularity.OriginRuns.exDivisor, Singularity.OriginRuns.exPoly p v)\n                          (Singularity.OriginRuns.exDivisor,\n                            Singularity.OriginRuns.exPoly p (Singularity.OriginRuns.exStep j v))"
   },
   "Singularity.OriginRuns.exists_least_of_pairwise": {
    "axioms": [
@@ -15774,6 +16894,39 @@
    "line": 1066,
    "type": "\u2200 {\u03c3 : Type u_1} [Fintype \u03c3] {w : \u2115 \u2192 \u03c3},\n  (\u2200 (i : \u03c3) (N : \u2115), \u2203 m, N \u2264 m \u2227 w m = i) \u2192\n    \u2200 (c a : \u2115),\n      \u2203 ws n, ws.length = c \u2227 (\u2200 v \u2208 ws, \u2200 (i : \u03c3), i \u2208 v) \u2227 ws.flatten = Singularity.OriginRuns.runList w a n"
   },
+  "Singularity.OriginRuns.expFormula_expSteps": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 131,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (p : \u2115) (L : Finset \u03c3) {l : List \u03c3},\n  (\u2200 j \u2208 l, j \u2208 L) \u2192\n    \u2200 {e\u2080 e : \u03c3 \u2192\u2080 \u2115} {c : \u03c3 \u2192 \u03c3 \u2192 \u2124},\n      Singularity.OriginRuns.ExpFormula p L e\u2080 e c \u2192\n        Singularity.OriginRuns.ExpAdmissible p l e \u2192\n          Singularity.OriginRuns.ExpFormula p L e\u2080 (Singularity.OriginRuns.expSteps p l e)\n            (Singularity.OriginRuns.colSteps L l c)"
+  },
+  "Singularity.OriginRuns.expFormula_step": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 106,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (p : \u2115) (L : Finset \u03c3) {e\u2080 e : \u03c3 \u2192\u2080 \u2115} {c : \u03c3 \u2192 \u03c3 \u2192 \u2124},\n  Singularity.OriginRuns.ExpFormula p L e\u2080 e c \u2192\n    \u2200 {j : \u03c3},\n      j \u2208 L \u2192\n        p \u2264 Finsupp.degree e \u2192\n          Singularity.OriginRuns.ExpFormula p L e\u2080 (Singularity.OriginRuns.expStep p j e)\n            (Singularity.OriginRuns.colStep L j c)"
+  },
+  "Singularity.OriginRuns.expFormula_unitCols": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 97,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (p : \u2115) (L : Finset \u03c3) (e : \u03c3 \u2192\u2080 \u2115),\n  Singularity.OriginRuns.ExpFormula p L e e Singularity.OriginRuns.unitCols"
+  },
   "Singularity.OriginRuns.expStep": {
    "axioms": [
     "Classical.choice",
@@ -15807,6 +16960,28 @@
    "line": 406,
    "type": "\u2200 {\u03c3 : Type u_1} [DecidableEq \u03c3] (p : \u2115) (j : \u03c3) (e : \u03c3 \u2192\u2080 \u2115),\n  (Singularity.OriginRuns.expStep p j e) j = Finsupp.degree e - p"
   },
+  "Singularity.OriginRuns.expStep_exLeft": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 644,
+   "type": "\u2200 {p : \u2115} {j : Fin 4},\n  j \u2260 3 \u2192\n    \u2200 (v : Fin 4 \u2192\u2080 \u2115),\n      Singularity.OriginRuns.expStep p j (v + Finsupp.single 3 p) =\n        Singularity.OriginRuns.exStep j v + Finsupp.single 3 p"
+  },
+  "Singularity.OriginRuns.expStep_exRight": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 660,
+   "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)] {j : Fin 4},\n  j \u2260 3 \u2192\n    \u2200 (v : Fin 4 \u2192\u2080 \u2115),\n      Singularity.OriginRuns.expStep p j (v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)) =\n        Singularity.OriginRuns.exStep j v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)"
+  },
   "Singularity.OriginRuns.expStep_injOn": {
    "axioms": [
     "Classical.choice",
@@ -15839,6 +17014,28 @@
    "kind": "def",
    "line": 520,
    "type": "{\u03c3 : Type u_1} \u2192 \u2115 \u2192 List \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 \u03c3 \u2192\u2080 \u2115"
+  },
+  "Singularity.OriginRuns.expSteps_apply_of_forall_ne": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 158,
+   "type": "\u2200 {\u03c3 : Type u_1} [DecidableEq \u03c3] (p : \u2115) {l : List \u03c3} {u : \u03c3},\n  (\u2200 j \u2208 l, j \u2260 u) \u2192 \u2200 (e : \u03c3 \u2192\u2080 \u2115), (Singularity.OriginRuns.expSteps p l e) u = e u"
+  },
+  "Singularity.OriginRuns.expSteps_formula": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 141,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (p : \u2115) (L : Finset \u03c3) {l : List \u03c3},\n  (\u2200 j \u2208 l, j \u2208 L) \u2192\n    \u2200 {e : \u03c3 \u2192\u2080 \u2115},\n      Singularity.OriginRuns.ExpAdmissible p l e \u2192\n        (\u2200 u \u2209 L, (Singularity.OriginRuns.expSteps p l e) u = e u) \u2227\n          \u2200 s \u2208 L,\n            (\u2191L.card - 1) * \u2191((Singularity.OriginRuns.expSteps p l e) s) =\n              Singularity.OriginRuns.qDot p L e (Singularity.OriginRuns.cols L l s) -\n                  \u2191(Singularity.OriginRuns.uSum L e) +\n                \u2191p"
   },
   "Singularity.OriginRuns.expSteps_mono": {
    "axioms": [
@@ -15883,6 +17080,17 @@
    "kind": "theorem",
    "line": 1009,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {p : \u2115} {w : \u2115 \u2192 \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2200 (m : \u2115), Singularity.OriginRuns.DegreeGe p (Singularity.OriginRuns.runPoly p w g m)) \u2192\n    \u2200 (a n : \u2115),\n      Singularity.OriginRuns.IsAdmissible p (Singularity.OriginRuns.runList w a n)\n        (Singularity.OriginRuns.runPoly p w g a)"
+  },
+  "Singularity.OriginRuns.isClean_exPoly_start": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 717,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], Singularity.IsClean p (Singularity.OriginRuns.exPoly p (Finsupp.single 0 1))"
   },
   "Singularity.OriginRuns.isClean_originTransform": {
    "axioms": [
@@ -15939,6 +17147,17 @@
    "line": 546,
    "type": "\u2200 {\u03c3 : Type u_1} [Fintype \u03c3] {e e' : \u03c3 \u2192\u2080 \u2115},\n  \u00acSingularity.OriginRuns.IsMixed (Singularity.OriginRuns.toZ e - Singularity.OriginRuns.toZ e') \u2192 e' \u2264 e \u2228 e \u2264 e'"
   },
+  "Singularity.OriginRuns.le_ord_monomial_add_monomial": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 532,
+   "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {n : \u2115} {A B : \u03c3 \u2192\u2080 \u2115},\n  n \u2264 Finsupp.degree A \u2192\n    n \u2264 Finsupp.degree B \u2192 \u2200 (a b : R), \u2191n \u2264 Singularity.ord ((MvPolynomial.monomial A) a + (MvPolynomial.monomial B) b)"
+  },
   "Singularity.OriginRuns.le_ord_of_degreeGe": {
    "axioms": [
     "Classical.choice",
@@ -15983,6 +17202,17 @@
    "line": 920,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} [CharP k p]\n  {g : MvPolynomial \u03c3 k},\n  Singularity.IsClean p g \u2192 Singularity.OriginRuns.HasLeastExponent g \u2192 Singularity.logJacobianOrder Finset.univ g = 0"
   },
+  "Singularity.OriginRuns.logJacobianOrder_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 789,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192\n    Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n      Singularity.logJacobianOrder Singularity.OriginRuns.exDivisor (Singularity.OriginRuns.exPoly p v) = \u2191p"
+  },
   "Singularity.OriginRuns.max_sub_max_neg": {
    "axioms": [
     "Quot.sound",
@@ -16014,6 +17244,17 @@
    "kind": "theorem",
    "line": 1042,
    "type": "\u2200 {\u03c3 : Type u_1} [inst : DecidableEq \u03c3] (w : \u2115 \u2192 \u03c3) (\u0394 : Finset \u03c3) {m n : \u2115},\n  m < n \u2192 w m \u2208 Singularity.OriginRuns.runDivisor w \u0394 n"
+  },
+  "Singularity.OriginRuns.mem_support_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 596,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v d : Fin 4 \u2192\u2080 \u2115},\n  d \u2208 (Singularity.OriginRuns.exPoly p v).support \u2192\n    d = v + Finsupp.single 3 p \u2228 d = v + Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2)"
   },
   "Singularity.OriginRuns.minimalSupport": {
    "axioms": [
@@ -16081,6 +17322,17 @@
    "line": 312,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] [inst_1 : DecidableEq \u03b9] {\u03b4 : \u03b9 \u2192 \u2124},\n  (\u2200 (i : \u03b9), 0 \u2264 \u03b4 i) \u2192 \u2200 (l : List \u03b9) (i : \u03b9), 0 \u2264 Singularity.OriginRuns.diffSteps l \u03b4 i"
   },
+  "Singularity.OriginRuns.nonneg_of_mul_nonneg_of_one_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 202,
+   "type": "\u2200 {a b : \u2124}, 1 \u2264 a \u2192 0 \u2264 a * b \u2192 0 \u2264 b"
+  },
   "Singularity.OriginRuns.nonpos_diffStep": {
    "axioms": [
     "Classical.choice",
@@ -16147,6 +17399,28 @@
    "line": 352,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] {\u03b4 : \u03b9 \u2192 \u2124}, Singularity.OriginRuns.IsMixed \u03b4 \u2192 1 \u2264 Singularity.OriginRuns.phi \u03b4"
   },
+  "Singularity.OriginRuns.ord_eq_of_min": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 344,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {F : MvPolynomial \u03c3 k} {b : \u03c3 \u2192\u2080 \u2115},\n  b \u2208 F.support \u2192 (\u2200 d \u2208 F.support, Finsupp.degree b \u2264 Finsupp.degree d) \u2192 Singularity.ord F = \u2191(Finsupp.degree b)"
+  },
+  "Singularity.OriginRuns.ord_exG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 755,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)], Singularity.ord (Singularity.OriginRuns.exG p) = \u2191p"
+  },
   "Singularity.OriginRuns.ord_residualFactor_eq_zero": {
    "axioms": [
     "Classical.choice",
@@ -16157,6 +17431,83 @@
    "kind": "theorem",
    "line": 910,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [DecidableEq \u03c3] [inst_2 : Field k] {g : MvPolynomial \u03c3 k},\n  Singularity.OriginRuns.HasLeastExponent g \u2192 Singularity.ord (Singularity.residualFactor Finset.univ g) = 0"
+  },
+  "Singularity.OriginRuns.orderGAlong_exPoly_curve": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 884,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192\n    Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n      \u2200 {t : Fin 4},\n        t \u2260 3 \u2192\n          Singularity.orderGAlong p Singularity.OriginRuns.exDivisor (Finset.univ.erase t)\n              (Singularity.OriginRuns.exPoly p v) =\n            \u2191p"
+  },
+  "Singularity.OriginRuns.orderGAlong_exPoly_surface": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 906,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192\n    Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n      \u2200 {s : Fin 4},\n        s \u2260 3 \u2192\n          Singularity.orderGAlong p Singularity.OriginRuns.exDivisor {3, s} (Singularity.OriginRuns.exPoly p v) =\n            \u2191(p - 1)"
+  },
+  "Singularity.OriginRuns.orderGAlong_exPoly_x4": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 925,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192\n    Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n      Singularity.orderGAlong p Singularity.OriginRuns.exDivisor {3} (Singularity.OriginRuns.exPoly p v) = \u2191(p - 2)"
+  },
+  "Singularity.OriginRuns.originRun_cornerCurves": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 492,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L \u0394 : Finset \u03c3}\n  {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115} [CharP k p],\n  Nat.Prime p \u2192\n    Singularity.IsClean p g \u2192\n      2 \u2264 L.card \u2192\n        L \u2286 \u0394 \u2192\n          \u2200 {w : \u2115 \u2192 \u03c3},\n            (\u2200 (m : \u2115), w m \u2208 L) \u2192\n              (\u2200 (m : \u2115), Singularity.OriginRuns.DegreeGe p (Singularity.OriginRuns.runPoly p w g m)) \u2192\n                T \u2208 g.support \u2192\n                  \u2200 (m : \u2115),\n                    (\u2200 \u03bc \u2208 g.support,\n                        Singularity.OriginRuns.CornerIneq p L\n                          (Singularity.OriginRuns.cols L (Singularity.OriginRuns.runList w 0 m)) T \u03bc) \u2192\n                      Singularity.OriginRuns.runDivisor w \u0394 m = \u0394 \u2227\n                        (\u2200 s \u2208 L,\n                            (Singularity.divisorExponent \u0394 (Singularity.OriginRuns.runPoly p w g m)) s =\n                              (Singularity.OriginRuns.expSteps p (Singularity.OriginRuns.runList w 0 m) T) s) \u2227\n                          Singularity.ord (Singularity.residualFactor \u0394 (Singularity.OriginRuns.runPoly p w g m)) =\n                              \u2191(Singularity.OriginRuns.uSum L T - \u2211 u \u2208 L\u1d9c, (Singularity.divisorExponent \u0394 g) u) \u2227\n                            \u2200 t \u2208 L,\n                              Singularity.orderGAlong p \u0394 (Finset.univ.erase t)\n                                    (Singularity.OriginRuns.runPoly p w g m) =\n                                  Singularity.ord\n                                    (Singularity.residualFactor \u0394 (Singularity.OriginRuns.runPoly p w g m)) \u2227\n                                Singularity.logJacobianOrder \u0394 (Singularity.OriginRuns.runPoly p w g m) \u2264\n                                  Singularity.orderGAlong p \u0394 (Finset.univ.erase t)\n                                    (Singularity.OriginRuns.runPoly p w g m)"
+  },
+  "Singularity.OriginRuns.originRun_corner_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 278,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115},\n  2 \u2264 L.card \u2192\n    (\u2200 j \u2208 l, j \u2208 L) \u2192\n      Singularity.OriginRuns.IsAdmissible p l g \u2192\n        T \u2208 g.support \u2192\n          \u2200 {\u03bc : \u03c3 \u2192\u2080 \u2115},\n            \u03bc \u2208 g.support \u2192\n              Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc \u2192\n                \u2200 {t : \u03c3},\n                  t \u2208 L \u2192\n                    \u2211 i \u2208 Finset.univ.erase t, (Singularity.OriginRuns.expSteps p l T) i \u2264\n                      \u2211 i \u2208 Finset.univ.erase t, (Singularity.OriginRuns.expSteps p l \u03bc) i"
+  },
+  "Singularity.OriginRuns.originRun_degree_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 242,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115},\n  2 \u2264 L.card \u2192\n    (\u2200 j \u2208 l, j \u2208 L) \u2192\n      Singularity.OriginRuns.IsAdmissible p l g \u2192\n        T \u2208 g.support \u2192\n          \u2200 {\u03bc : \u03c3 \u2192\u2080 \u2115},\n            \u03bc \u2208 g.support \u2192\n              Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc \u2192\n                Finsupp.degree (Singularity.OriginRuns.expSteps p l T) \u2264\n                  Finsupp.degree (Singularity.OriginRuns.expSteps p l \u03bc)"
+  },
+  "Singularity.OriginRuns.originRun_divisorExponent_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 372,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L \u0394 : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115},\n  2 \u2264 L.card \u2192\n    L \u2286 \u0394 \u2192\n      (\u2200 j \u2208 l, j \u2208 L) \u2192\n        Singularity.OriginRuns.IsAdmissible p l g \u2192\n          T \u2208 g.support \u2192\n            (\u2200 \u03bc \u2208 g.support, Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc) \u2192\n              \u2200 s \u2208 L,\n                (Singularity.divisorExponent \u0394 (Singularity.OriginRuns.polySteps p l g)) s =\n                  (Singularity.OriginRuns.expSteps p l T) s"
   },
   "Singularity.OriginRuns.originRun_exists_logJacobianOrder_eq_zero": {
    "axioms": [
@@ -16169,6 +17520,28 @@
    "line": 1083,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} [CharP k p]\n  {w : \u2115 \u2192 \u03c3} {g : MvPolynomial \u03c3 k} (\u0394 : Finset \u03c3),\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      (\u2200 (m : \u2115), Singularity.OriginRuns.DegreeGe p (Singularity.OriginRuns.runPoly p w g m)) \u2192\n        (\u2200 (i : \u03c3) (N : \u2115), \u2203 m, N \u2264 m \u2227 w m = i) \u2192\n          \u2203 m,\n            Singularity.OriginRuns.runDivisor w \u0394 m = Finset.univ \u2227\n              Singularity.ord (Singularity.residualFactor Finset.univ (Singularity.OriginRuns.runPoly p w g m)) = 0 \u2227\n                Singularity.logJacobianOrder (Singularity.OriginRuns.runDivisor w \u0394 m)\n                    (Singularity.OriginRuns.runPoly p w g m) =\n                  0"
   },
+  "Singularity.OriginRuns.originRun_exp_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 223,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115},\n  2 \u2264 L.card \u2192\n    (\u2200 j \u2208 l, j \u2208 L) \u2192\n      Singularity.OriginRuns.IsAdmissible p l g \u2192\n        T \u2208 g.support \u2192\n          \u2200 {\u03bc : \u03c3 \u2192\u2080 \u2115},\n            \u03bc \u2208 g.support \u2192\n              Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc \u2192\n                \u2200 {s : \u03c3}, s \u2208 L \u2192 (Singularity.OriginRuns.expSteps p l T) s \u2264 (Singularity.OriginRuns.expSteps p l \u03bc) s"
+  },
+  "Singularity.OriginRuns.originRun_logJacobianOrder_le_orderGAlong": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 467,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L \u0394 : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115} [CharP k p],\n  Nat.Prime p \u2192\n    Singularity.IsClean p g \u2192\n      2 \u2264 L.card \u2192\n        L \u2286 \u0394 \u2192\n          (\u2200 j \u2208 l, j \u2208 L) \u2192\n            Singularity.OriginRuns.IsAdmissible p l g \u2192\n              T \u2208 g.support \u2192\n                (\u2200 \u03bc \u2208 g.support, Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc) \u2192\n                  \u2200 {t : \u03c3},\n                    t \u2208 L \u2192\n                      Singularity.orderGAlong p \u0394 (Finset.univ.erase t) (Singularity.OriginRuns.polySteps p l g) =\n                          Singularity.ord (Singularity.residualFactor \u0394 (Singularity.OriginRuns.polySteps p l g)) \u2227\n                        Singularity.logJacobianOrder \u0394 (Singularity.OriginRuns.polySteps p l g) \u2264\n                          Singularity.orderGAlong p \u0394 (Finset.univ.erase t) (Singularity.OriginRuns.polySteps p l g)"
+  },
   "Singularity.OriginRuns.originRun_not_forall_one_le": {
    "axioms": [
     "Classical.choice",
@@ -16179,6 +17552,28 @@
    "kind": "theorem",
    "line": 1113,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [inst : DecidableEq \u03c3] [inst_1 : Field k] {p : \u2115} [CharP k p] {w : \u2115 \u2192 \u03c3}\n  {g : MvPolynomial \u03c3 k} (\u0394 : Finset \u03c3),\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      (\u2200 (m : \u2115), Singularity.OriginRuns.DegreeGe p (Singularity.OriginRuns.runPoly p w g m)) \u2192\n        (\u2200 (m : \u2115),\n            1 \u2264\n              Singularity.logJacobianOrder (Singularity.OriginRuns.runDivisor w \u0394 m)\n                (Singularity.OriginRuns.runPoly p w g m)) \u2192\n          \u00ac\u2200 (i : \u03c3) (N : \u2115), \u2203 m, N \u2264 m \u2227 w m = i"
+  },
+  "Singularity.OriginRuns.originRun_ord_residualFactor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 388,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L \u0394 : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115},\n  2 \u2264 L.card \u2192\n    L \u2286 \u0394 \u2192\n      (\u2200 j \u2208 l, j \u2208 L) \u2192\n        Singularity.OriginRuns.IsAdmissible p l g \u2192\n          T \u2208 g.support \u2192\n            (\u2200 \u03bc \u2208 g.support, Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc) \u2192\n              Singularity.ord (Singularity.residualFactor \u0394 (Singularity.OriginRuns.polySteps p l g)) =\n                \u2191(Singularity.OriginRuns.uSum L T - \u2211 u \u2208 L\u1d9c, (Singularity.divisorExponent \u0394 g) u)"
+  },
+  "Singularity.OriginRuns.originRun_orderGAlong_corner": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 429,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] [inst_2 : Field k] {p : \u2115} {L \u0394 : Finset \u03c3}\n  {l : List \u03c3} {g : MvPolynomial \u03c3 k} {T : \u03c3 \u2192\u2080 \u2115} [CharP k p],\n  Nat.Prime p \u2192\n    Singularity.IsClean p g \u2192\n      2 \u2264 L.card \u2192\n        L \u2286 \u0394 \u2192\n          (\u2200 j \u2208 l, j \u2208 L) \u2192\n            Singularity.OriginRuns.IsAdmissible p l g \u2192\n              T \u2208 g.support \u2192\n                (\u2200 \u03bc \u2208 g.support, Singularity.OriginRuns.CornerIneq p L (Singularity.OriginRuns.cols L l) T \u03bc) \u2192\n                  \u2200 {t : \u03c3},\n                    t \u2208 L \u2192\n                      Singularity.orderGAlong p \u0394 (Finset.univ.erase t) (Singularity.OriginRuns.polySteps p l g) =\n                        \u2191(Singularity.OriginRuns.uSum L T - \u2211 u \u2208 L\u1d9c, (Singularity.divisorExponent \u0394 g) u)"
   },
   "Singularity.OriginRuns.originRun_unit_of_windows": {
    "axioms": [
@@ -16224,6 +17619,17 @@
    "line": 617,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : Field k] \u2192 \u2115 \u2192 \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 MvPolynomial \u03c3 k"
   },
+  "Singularity.OriginRuns.originTransform_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 675,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {j : Fin 4},\n  j \u2260 3 \u2192\n    \u2200 (v : Fin 4 \u2192\u2080 \u2115),\n      Singularity.OriginRuns.originTransform p j (Singularity.OriginRuns.exPoly p v) =\n        Singularity.OriginRuns.exPoly p (Singularity.OriginRuns.exStep j v)"
+  },
   "Singularity.OriginRuns.originTransform_ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -16234,6 +17640,17 @@
    "kind": "theorem",
    "line": 694,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [DecidableEq \u03c3] [inst : Field k] {p : \u2115} (j : \u03c3) {g : MvPolynomial \u03c3 k},\n  Singularity.OriginRuns.DegreeGe p g \u2192 g \u2260 0 \u2192 Singularity.OriginRuns.originTransform p j g \u2260 0"
+  },
+  "Singularity.OriginRuns.pderiv_three_exG": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 779,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)],\n  (MvPolynomial.pderiv 3) (Singularity.OriginRuns.exG p) =\n    (MvPolynomial.monomial (Singularity.OriginRuns.exOnes + Finsupp.single 3 (p - 2) - Finsupp.single 3 1)) \u2191(p - 2)"
   },
   "Singularity.OriginRuns.phi": {
    "axioms": [
@@ -16433,6 +17850,17 @@
    "line": 712,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) (j : \u03c3) (l : List \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.OriginRuns.polySteps p (j :: l) g =\n    Singularity.OriginRuns.polySteps p l (Singularity.OriginRuns.originTransform p j g)"
   },
+  "Singularity.OriginRuns.polySteps_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 702,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {l : List (Fin 4)},\n  (\u2200 j \u2208 l, j \u2260 3) \u2192\n    \u2200 (v : Fin 4 \u2192\u2080 \u2115),\n      Singularity.OriginRuns.polySteps p l (Singularity.OriginRuns.exPoly p v) =\n          Singularity.OriginRuns.exPoly p (Singularity.OriginRuns.exSteps l v) \u2227\n        Singularity.OriginRuns.IsAdmissible p l (Singularity.OriginRuns.exPoly p v)"
+  },
   "Singularity.OriginRuns.polySteps_ne_zero": {
    "axioms": [
     "Classical.choice",
@@ -16488,6 +17916,60 @@
    "line": 145,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] (\u03b4 : \u03b9 \u2192 \u2124),\n  Singularity.OriginRuns.posSum \u03b4 - Singularity.OriginRuns.negSum \u03b4 = \u2211 i, \u03b4 i"
   },
+  "Singularity.OriginRuns.qDot": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 75,
+   "type": "{\u03c3 : Type u_1} \u2192 [Fintype \u03c3] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 (\u03c3 \u2192 \u2124) \u2192 \u2124"
+  },
+  "Singularity.OriginRuns.qVec": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 72,
+   "type": "{\u03c3 : Type u_1} \u2192 [Fintype \u03c3] \u2192 [DecidableEq \u03c3] \u2192 \u2115 \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 \u03c3 \u2192 \u2124"
+  },
+  "Singularity.OriginRuns.qVec.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3] (p p_1 : \u2115),\n  p = p_1 \u2192\n    \u2200 (L L_1 : Finset \u03c3),\n      L = L_1 \u2192\n        \u2200 (e e_1 : \u03c3 \u2192\u2080 \u2115),\n          e = e_1 \u2192\n            \u2200 (t t_1 : \u03c3), t = t_1 \u2192 Singularity.OriginRuns.qVec p L e t = Singularity.OriginRuns.qVec p_1 L_1 e_1 t_1"
+  },
+  "Singularity.OriginRuns.residualFactor_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 749,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {v : Fin 4 \u2192\u2080 \u2115},\n  v 3 = 0 \u2192\n    Singularity.residualFactor Singularity.OriginRuns.exDivisor (Singularity.OriginRuns.exPoly p v) =\n      Singularity.OriginRuns.exG p"
+  },
+  "Singularity.OriginRuns.rhoStep_exPoly": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 934,
+   "type": "\u2200 {p : \u2115} [inst : Fact (Nat.Prime p)] {j : Fin 4},\n  j \u2260 3 \u2192\n    \u2200 {v : Fin 4 \u2192\u2080 \u2115},\n      v 3 = 0 \u2192\n        Singularity.IsClean p (Singularity.OriginRuns.exPoly p v) \u2192\n          Singularity.RhoStep p p (Singularity.OriginRuns.exDivisor, Singularity.OriginRuns.exPoly p v)\n            (Singularity.OriginRuns.exDivisor, Singularity.OriginRuns.exPoly p (Singularity.OriginRuns.exStep j v))"
+  },
   "Singularity.OriginRuns.rhoStep_originStep": {
    "axioms": [
     "Classical.choice",
@@ -16508,6 +17990,26 @@
    "kind": "def",
    "line": 978,
    "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 (\u2115 \u2192 \u03c3) \u2192 Finset \u03c3 \u2192 \u2115 \u2192 Finset \u03c3"
+  },
+  "Singularity.OriginRuns.runDivisor.eq_def": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : DecidableEq \u03c3] (w : \u2115 \u2192 \u03c3) (\u0394 : Finset \u03c3) (x : \u2115),\n  Singularity.OriginRuns.runDivisor w \u0394 x =\n    match x with\n    | 0 => \u0394\n    | m.succ => insert (w m) (Singularity.OriginRuns.runDivisor w \u0394 m)"
+  },
+  "Singularity.OriginRuns.runDivisor_eq_of_forall_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 485,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : DecidableEq \u03c3] {\u0394 : Finset \u03c3} {w : \u2115 \u2192 \u03c3},\n  (\u2200 (m : \u2115), w m \u2208 \u0394) \u2192 \u2200 (m : \u2115), Singularity.OriginRuns.runDivisor w \u0394 m = \u0394"
   },
   "Singularity.OriginRuns.runDivisor_mono": {
    "axioms": [
@@ -16611,6 +18113,17 @@
    "line": 187,
    "type": "\u2200 {\u03b9 : Type u_1} [inst : Fintype \u03b9] (\u03b4 : \u03b9 \u2192 \u2124), \u2211 i, (-\u03b4) i = -\u2211 i, \u03b4 i"
   },
+  "Singularity.OriginRuns.sum_univ_erase_eq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 213,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] {L : Finset \u03c3} {t : \u03c3},\n  t \u2208 L \u2192 \u2200 (f : \u03c3 \u2192 \u2115), \u2211 i \u2208 Finset.univ.erase t, f i = \u2211 s \u2208 L.erase t, f s + \u2211 u \u2208 L\u1d9c, f u"
+  },
   "Singularity.OriginRuns.support_originTransform": {
    "axioms": [
     "Classical.choice",
@@ -16687,6 +18200,56 @@
    "kind": "theorem",
    "line": 430,
    "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] (e : \u03c3 \u2192\u2080 \u2115), \u2211 i, Singularity.OriginRuns.toZ e i = \u2191(Finsupp.degree e)"
+  },
+  "Singularity.OriginRuns.two_le_p": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 566,
+   "type": "\u2200 {p : \u2115} [Fact (Nat.Prime p)], 2 \u2264 p"
+  },
+  "Singularity.OriginRuns.uSum": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 69,
+   "type": "{\u03c3 : Type u_1} \u2192 [Fintype \u03c3] \u2192 [DecidableEq \u03c3] \u2192 Finset \u03c3 \u2192 (\u03c3 \u2192\u2080 \u2115) \u2192 \u2115"
+  },
+  "Singularity.OriginRuns.uSum.congr_simp": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] {inst_1 : DecidableEq \u03c3} [inst_2 : DecidableEq \u03c3] (L L_1 : Finset \u03c3),\n  L = L_1 \u2192 \u2200 (e e_1 : \u03c3 \u2192\u2080 \u2115), e = e_1 \u2192 Singularity.OriginRuns.uSum L e = Singularity.OriginRuns.uSum L_1 e_1"
+  },
+  "Singularity.OriginRuns.uSum_expSteps": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "theorem",
+   "line": 151,
+   "type": "\u2200 {\u03c3 : Type u_1} [inst : Fintype \u03c3] [inst_1 : DecidableEq \u03c3] (p : \u2115) (L : Finset \u03c3) {l : List \u03c3},\n  (\u2200 j \u2208 l, j \u2208 L) \u2192\n    \u2200 {e : \u03c3 \u2192\u2080 \u2115},\n      Singularity.OriginRuns.ExpAdmissible p l e \u2192\n        Singularity.OriginRuns.uSum L (Singularity.OriginRuns.expSteps p l e) = Singularity.OriginRuns.uSum L e"
+  },
+  "Singularity.OriginRuns.unitCols": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginRunsCorner.lean",
+   "kind": "def",
+   "line": 84,
+   "type": "{\u03c3 : Type u_1} \u2192 [DecidableEq \u03c3] \u2192 \u03c3 \u2192 \u03c3 \u2192 \u2124"
   },
   "Singularity.OriginRuns.windowBound": {
    "axioms": [
