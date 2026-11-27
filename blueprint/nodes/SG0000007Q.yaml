@@ -1,0 +1,15 @@
+tag: SG0000007Q
+kind: theorem
+title: The clean order decides the lifting test
+statement: Let $B$ be an excellent regular scheme of characteristic $p$, $C \subseteq B$ a regular center and $x \in C$ a closed point with perfect residue field $k$, with formal coordinates $(u, t)$ adapted to $C = V(u)$. Let $g_c$ be $g$ minus its monomials with all exponents divisible by $p$. The lifting test holds for $C$ if and only if $\operatorname{ord}_C(g_c) \ge p$, and the generic multiplicity of $X$ along $C$ is $\min(p, \max(1, \operatorname{ord}_C(g_c)))$.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007N
+- SG0000007M
+- SG0000007K
+tier: T2
+route:
+- R5
+notes: Handbook Volume 7, Proposition 4.3.9 and Example 4.3.10. Research note 43, Proposition 43.7 and the warning after it. The descent from the completion uses excellence. The coordinates must be adapted to $C$. Planned for Lean.

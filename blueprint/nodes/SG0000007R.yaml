@@ -1,0 +1,13 @@
+tag: SG0000007R
+kind: theorem
+title: The invariant nu of Cossart is at most the clean order
+statement: Let $C$ be a regular center with normal crossings with the boundary $E$, let $\nu(C)$ be the order of the ideal $J(B, g, E)$ of Cossart at the generic point of $C$, and $d = \operatorname{ord}_C(g_c)$ in coordinates adapted to $C$ and $E$. If $d < p$, then $\nu(C) \le d$. So $\nu(C) \ge p$ implies that $C$ passes the lifting test.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007Q
+tier: T2
+route:
+- R5
+notes: Handbook Volume 7, Proposition 4.3.11. Research note 43, Proposition 43.8. The bound is sharp for $p = 5$ (note 43, Example 43.13). Planned for Lean.

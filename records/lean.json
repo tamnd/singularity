@@ -1,10 +1,10 @@
 {
  "base": {
-  "commit": "1017a8ed3dce7f39ad576f494a1fb0a96a22f9d2",
+  "commit": "d84acc862e62c579f5b1a8dabbc6ccdfc17e03d2",
   "record": "records/base-charzero.json"
  },
  "built": "2026-11-27",
- "commit": "1fe514d329bbfd600fc109b59eef95da3d7aecd3",
+ "commit": "4e042310964fcdbc24ca777fec4775d6f6bef823",
  "decls": {
   "Singularity.Algebra.GrMod": {
    "axioms": [
@@ -18503,6 +18503,266 @@
    "line": 21,
    "type": "(k : Type u) \u2192 [inst : Field k] \u2192 \u2115 \u2192 (n : \u2115) \u2192 MvPolynomial (Fin n) k \u2192 Type u"
   },
+  "Singularity.Portfolio.X_pow_add_C_mem_pow_iff_order": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 301,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (p : \u2115) [ExpChar R p] {I : Ideal R},\n  I \u2260 \u22a4 \u2192\n    \u2200 (g h : R) (e n : \u2115),\n      Polynomial.X ^ p ^ e + Polynomial.C g \u2208\n          (Ideal.span {Polynomial.X - Polynomial.C h} \u2294 Ideal.map Polynomial.C I) ^ n \u2194\n        n \u2264 p ^ e \u2227 g + h ^ p ^ e \u2208 I ^ n"
+  },
+  "Singularity.Portfolio.cast_choose_pow_mul_eq_zero_lucas": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 94,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {e m\u2080 k : \u2115},\n  \u00acp ^ e \u2223 k \u2192 \u2191((p ^ e * m\u2080).choose k) = 0"
+  },
+  "Singularity.Portfolio.cast_choose_pow_mul_pow_lucas": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 89,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] (e m\u2080 : \u2115),\n  \u2191((p ^ e * m\u2080).choose (p ^ e)) = \u2191m\u2080"
+  },
+  "Singularity.Portfolio.cast_ne_zero_of_not_dvd": {
+   "axioms": [
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 135,
+   "type": "\u2200 {p : \u2115} {R : Type u_1} [inst : CommRing R] [CharP R p] [Nontrivial R] {m\u2080 : \u2115}, \u00acp \u2223 m\u2080 \u2192 \u2191m\u2080 \u2260 0"
+  },
+  "Singularity.Portfolio.choose_pow_mul_modEq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 75,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {e m\u2080 k : \u2115}, \u00acp ^ e \u2223 k \u2192 \u2191((p ^ e * m\u2080).choose k) \u2261 0 [ZMOD \u2191p]"
+  },
+  "Singularity.Portfolio.choose_pow_mul_pow_modEq": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 60,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] (e m\u2080 : \u2115), \u2191((p ^ e * m\u2080).choose (p ^ e)) \u2261 \u2191m\u2080 [ZMOD \u2191p]"
+  },
+  "Singularity.Portfolio.coeffPowIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "def",
+   "line": 186,
+   "type": "{R : Type u_1} \u2192 [inst : CommRing R] \u2192 Ideal R \u2192 \u2115 \u2192 Ideal (Polynomial R)"
+  },
+  "Singularity.Portfolio.coeffPowIdeal_le_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 245,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R) (n : \u2115),\n  Singularity.Portfolio.coeffPowIdeal I n \u2264 (Ideal.span {Polynomial.X} \u2294 Ideal.map Polynomial.C I) ^ n"
+  },
+  "Singularity.Portfolio.coeffPowIdeal_mul_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 203,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R) (a b : \u2115),\n  Singularity.Portfolio.coeffPowIdeal I a * Singularity.Portfolio.coeffPowIdeal I b \u2264\n    Singularity.Portfolio.coeffPowIdeal I (a + b)"
+  },
+  "Singularity.Portfolio.exists_lucas_tschirnhausen_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 139,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {K : Type u_2} [inst : Field K] [CharP K p] [PerfectRing K p] {f : Polynomial K},\n  f.Monic \u2192\n    \u2200 {e m\u2080 m : \u2115},\n      m = p ^ e * m\u2080 \u2192\n        \u00acp \u2223 m\u2080 \u2192\n          f.natDegree = m \u2192\n            (\u2200 (j : \u2115), 0 < j \u2192 j < p ^ e \u2192 f.coeff (m - j) = 0) \u2192\n              \u2203 c, (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - p ^ e) = 0"
+  },
+  "Singularity.Portfolio.inseparable_layer_rigid": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 150,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {f : Polynomial R} {e m\u2080 m : \u2115},\n  m = p ^ e * m\u2080 \u2192\n    \u00acp \u2223 m\u2080 \u2192\n      f.natDegree = m \u2192\n        \u2200 (c : R) {i : \u2115},\n          0 < i \u2192\n            i < p ^ e \u2192\n              (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - i) =\n                f.coeff (m - i) + \u2211 j \u2208 Finset.Ioo 0 i, \u2191((m - j).choose (i - j)) * f.coeff (m - j) * c ^ (i - j)"
+  },
+  "Singularity.Portfolio.inseparable_layer_rigid_of_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 161,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {f : Polynomial R} {e m\u2080 m : \u2115},\n  m = p ^ e * m\u2080 \u2192\n    \u00acp \u2223 m\u2080 \u2192\n      f.natDegree = m \u2192\n        \u2200 (c : R) {i : \u2115},\n          0 < i \u2192\n            i < p ^ e \u2192\n              (\u2200 (j : \u2115), 0 < j \u2192 j < i \u2192 f.coeff (m - j) = 0) \u2192\n                (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - i) = f.coeff (m - i)"
+  },
+  "Singularity.Portfolio.inseparable_layer_rigid_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 171,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {f : Polynomial R} {e m\u2080 m : \u2115},\n  1 \u2264 e \u2192\n    m = p ^ e * m\u2080 \u2192\n      \u00acp \u2223 m\u2080 \u2192 f.natDegree = m \u2192 \u2200 (c : R), (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - 1) = f.coeff (m - 1)"
+  },
+  "Singularity.Portfolio.lift_base_blowup": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 340,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (p : \u2115) [ExpChar R p] {I : Ideal R},\n  I \u2260 \u22a4 \u2192\n    \u2200 (g h : R) (e : \u2115),\n      Polynomial.X ^ p ^ e + Polynomial.C g \u2208 Ideal.span {Polynomial.X - Polynomial.C h} \u2294 Ideal.map Polynomial.C I \u2227\n          Polynomial.X ^ p ^ e + Polynomial.C g \u2208\n              (Ideal.span {Polynomial.X - Polynomial.C h} \u2294 Ideal.map Polynomial.C I) ^ p ^ e \u2227\n            Polynomial.X ^ p ^ e + Polynomial.C g \u2209\n              (Ideal.span {Polynomial.X - Polynomial.C h} \u2294 Ideal.map Polynomial.C I) ^ (p ^ e + 1) \u2194\n        g + h ^ p ^ e \u2208 I ^ p ^ e"
+  },
+  "Singularity.Portfolio.lift_base_blowup_chart": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 359,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (p : \u2115) [ExpChar R p] {A : Type u_2} [inst_2 : CommRing A] (\u03c6 : R \u2192+* A)\n  {I : Ideal R} {x : A},\n  Ideal.map \u03c6 I \u2264 Ideal.span {x} \u2192\n    \u2200 (g h : R) (e : \u2115),\n      g + h ^ p ^ e \u2208 I ^ p ^ e \u2192\n        \u2203 g'',\n          \u03c6 (g + h ^ p ^ e) = x ^ p ^ e * g'' \u2227\n            (Polynomial.map \u03c6 ((Polynomial.X ^ p ^ e + Polynomial.C g).comp (Polynomial.X + Polynomial.C h))).comp\n                (Polynomial.C x * Polynomial.X) =\n              Polynomial.C (x ^ p ^ e) * (Polynomial.X ^ p ^ e + Polynomial.C g'')"
+  },
+  "Singularity.Portfolio.lucas_tschirnhausen": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 111,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {f : Polynomial R},\n  f.Monic \u2192\n    \u2200 {e m\u2080 m : \u2115},\n      m = p ^ e * m\u2080 \u2192\n        \u00acp \u2223 m\u2080 \u2192\n          f.natDegree = m \u2192\n            \u2200 (c : R),\n              (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - p ^ e) =\n                f.coeff (m - p ^ e) + \u2191m\u2080 * c ^ p ^ e +\n                  \u2211 j \u2208 Finset.Ioo 0 (p ^ e), \u2191((m - j).choose (p ^ e - j)) * f.coeff (m - j) * c ^ (p ^ e - j)"
+  },
+  "Singularity.Portfolio.lucas_tschirnhausen_of_eq_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 124,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {R : Type u_1} [inst : CommRing R] [CharP R p] {f : Polynomial R},\n  f.Monic \u2192\n    \u2200 {e m\u2080 m : \u2115},\n      m = p ^ e * m\u2080 \u2192\n        \u00acp \u2223 m\u2080 \u2192\n          f.natDegree = m \u2192\n            \u2200 (c : R),\n              (\u2200 (j : \u2115), 0 < j \u2192 j < p ^ e \u2192 f.coeff (m - j) = 0) \u2192\n                (f.comp (Polynomial.X + Polynomial.C c)).coeff (m - p ^ e) = f.coeff (m - p ^ e) + \u2191m\u2080 * c ^ p ^ e"
+  },
+  "Singularity.Portfolio.mem_coeffPowIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 199,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] {I : Ideal R} {n : \u2115} {f : Polynomial R},\n  f \u2208 Singularity.Portfolio.coeffPowIdeal I n \u2194 \u2200 (k : \u2115), f.coeff k \u2208 I ^ (n - k)"
+  },
+  "Singularity.Portfolio.mem_span_X_sup_map_C_pow_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 263,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R) (n : \u2115) (f : Polynomial R),\n  f \u2208 (Ideal.span {Polynomial.X} \u2294 Ideal.map Polynomial.C I) ^ n \u2194 \u2200 (k : \u2115), f.coeff k \u2208 I ^ (n - k)"
+  },
+  "Singularity.Portfolio.pow_dvd_of_forall_div_pow_mod_eq_zero": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 40,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {k a : \u2115}, (\u2200 i < a, k / p ^ i % p = 0) \u2192 p ^ a \u2223 k"
+  },
+  "Singularity.Portfolio.pow_mul_div_pow_mod_eq_zero": {
+   "axioms": [
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 {p : \u2115} [hp : Fact (Nat.Prime p)] {e i : \u2115} (m\u2080 : \u2115), i < e \u2192 p ^ e * m\u2080 / p ^ i % p = 0"
+  },
+  "Singularity.Portfolio.pow_span_X_sup_map_C_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 234,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R) (n : \u2115),\n  (Ideal.span {Polynomial.X} \u2294 Ideal.map Polynomial.C I) ^ n \u2264 Singularity.Portfolio.coeffPowIdeal I n"
+  },
+  "Singularity.Portfolio.span_X_sup_map_C_le_coeffPowIdeal": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 214,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R),\n  Ideal.span {Polynomial.X} \u2294 Ideal.map Polynomial.C I \u2264 Singularity.Portfolio.coeffPowIdeal I 1"
+  },
+  "Singularity.Portfolio.taylor_mem_pow": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Portfolio/Mixed.lean",
+   "kind": "theorem",
+   "line": 268,
+   "type": "\u2200 {R : Type u_1} [inst : CommRing R] (I : Ideal R) (c d : R) {f : Polynomial R} {n : \u2115},\n  f \u2208 (Ideal.span {Polynomial.X - Polynomial.C d} \u2294 Ideal.map Polynomial.C I) ^ n \u2192\n    (Polynomial.taylor c) f \u2208 (Ideal.span {Polynomial.X - Polynomial.C (d - c)} \u2294 Ideal.map Polynomial.C I) ^ n"
+  },
   "Singularity.PurelyInseparableHypersurfaceResolution": {
    "axioms": [
     "Classical.choice",
@@ -22893,6 +23153,17 @@
    "line": 74,
    "type": "{\u03c3 : Type u_1} \u2192 {k : Type u_2} \u2192 [inst : CommSemiring k] \u2192 Finset \u03c3 \u2192 MvPolynomial \u03c3 k \u2192 \u2115\u221e"
   },
+  "Singularity.cpOmega_add_one_of_exists": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 126,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) \u2260 0) \u2192\n    Singularity.cpOmega \u0394 g + 1 = Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
   "Singularity.cpOmega_cleanPart_le": {
    "axioms": [
     "Classical.choice",
@@ -22926,6 +23197,39 @@
    "line": 169,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (p : \u2115) [CharP k p] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192 Singularity.IsClean p g \u2192 Singularity.cpOmega \u0394 g = Singularity.logJacobianOrder \u0394 g"
   },
+  "Singularity.cpOmega_eq_of_forall_mem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 73,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2200 (j : \u03c3), j \u2208 \u0394) \u2192 Singularity.cpOmega \u0394 g = Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
+  "Singularity.cpOmega_eq_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 134,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    (Singularity.cpOmega \u0394 g = 0 \u2194\n      Singularity.ord (Singularity.residualFactor \u0394 g) = 0 \u2228\n        Singularity.ord (Singularity.residualFactor \u0394 g) = 1 \u2227\n          \u2203 j \u2209 \u0394, (Singularity.residualFactor \u0394 g).coeff (Finsupp.single j 1) \u2260 0)"
+  },
+  "Singularity.cpOmega_le_ord_residualFactor": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 52,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.cpOmega \u0394 g \u2264 Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
   "Singularity.cpOmega_of_exists": {
    "axioms": [
     "Classical.choice",
@@ -22947,6 +23251,17 @@
    "kind": "theorem",
    "line": 90,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2200 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) = 0) \u2192\n    Singularity.cpOmega \u0394 g = Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
+  "Singularity.cpOmega_originTransform_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 206,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [inst : DecidableEq \u03c3] [inst_1 : Field k] [DecidableEq k] {p : \u2115}\n  [CharP k p] {\u0394 : Finset \u03c3} {j : \u03c3} {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    Singularity.IsClean p g \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        Singularity.cpOmega (insert j \u0394) (Singularity.OriginRuns.originTransform p j g) \u2264 Singularity.cpOmega \u0394 g"
   },
   "Singularity.cuspPair": {
    "axioms": [],
@@ -23087,6 +23402,17 @@
    "kind": "theorem",
    "line": 88,
    "type": "\u2200 {\u03c3 : Type u_1} (e : Option \u03c3 \u2192\u2080 \u2115), Finsupp.degree e = e none + Finsupp.degree e.some"
+  },
+  "Singularity.degree_expStep_add_add": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 92,
+   "type": "\u2200 {\u03c3 : Type u_1} [Fintype \u03c3] [DecidableEq \u03c3] {p : \u2115} (j : \u03c3) {e : \u03c3 \u2192\u2080 \u2115},\n  p \u2264 Finsupp.degree e \u2192 Finsupp.degree (Singularity.OriginRuns.expStep p j e) + p + e j = 2 * Finsupp.degree e"
   },
   "Singularity.degree_expansionCoeff_lt": {
    "axioms": [
@@ -24339,6 +24665,17 @@
    "kind": "theorem",
    "line": 96,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] [Fintype \u03c3] {f : MvPolynomial \u03c3 k} {r : \u2115},\n  Singularity.ord f = \u2191r \u2192 1 \u2264 r \u2192 \u2191r \u2260 0 \u2192 \u2203 i, Singularity.ord ((MvPolynomial.pderiv i) f) = \u2191(r - 1)"
+  },
+  "Singularity.exists_ord_residualFactor_eq_natCast": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 76,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) {f : MvPolynomial \u03c3 k},\n  f \u2260 0 \u2192 \u2203 e, Singularity.ord (Singularity.residualFactor \u0394 f) = \u2191e"
   },
   "Singularity.exists_pderiv_initialForm_ne_zero_iff": {
    "axioms": [
@@ -27114,6 +27451,17 @@
    "kind": "theorem",
    "line": 366,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {P : MvPolynomial \u03c3 k} {N : \u03c3 \u2192\u2080 \u2115},\n  P \u2260 0 \u2192 (\u2200 i \u2209 \u0394, N i = 0) \u2192 (\u2200 \u03b2 \u2208 P.support, N \u2264 \u03b2) \u2192 N \u2264 Singularity.divisorExponent \u0394 P"
+  },
+  "Singularity.le_divisorExponent_apply_of_forall": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 67,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [DecidableEq \u03c3] [inst : Field k] {\u0394 : Finset \u03c3} {P : MvPolynomial \u03c3 k},\n  P \u2260 0 \u2192 \u2200 {i : \u03c3}, i \u2208 \u0394 \u2192 \u2200 {n : \u2115}, (\u2200 \u03b2 \u2208 P.support, n \u2264 \u03b2 i) \u2192 n \u2264 (Singularity.divisorExponent \u0394 P) i"
   },
   "Singularity.le_divisorExponent_of_logJacobian_le": {
    "axioms": [
@@ -30625,6 +30973,17 @@
    "line": 131,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] {f : MvPolynomial \u03c3 R},\n  1 \u2264 Singularity.ord f \u2194 MvPolynomial.constantCoeff f = 0"
   },
+  "Singularity.one_le_ord_residualFactor_of_exists": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 112,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  (\u2203 j \u2209 \u0394, (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent (Singularity.ord g).toNat) g) \u2260 0) \u2192\n    1 \u2264 Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
   "Singularity.opOf": {
    "axioms": [
     "Classical.choice",
@@ -31097,6 +31456,17 @@
    "line": 62,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.ord g =\n    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 g)) + Singularity.ord (Singularity.residualFactor \u0394 g)"
   },
+  "Singularity.ord_eq_degree_divisorExponent_add_ord": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 86,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] (\u0394 : Finset \u03c3) (f : MvPolynomial \u03c3 k),\n  Singularity.ord f =\n    \u2191(Finsupp.degree (Singularity.divisorExponent \u0394 f)) + Singularity.ord (Singularity.residualFactor \u0394 f)"
+  },
   "Singularity.ord_eq_iInf_degree": {
    "axioms": [
     "Classical.choice",
@@ -31416,6 +31786,17 @@
    "line": 198,
    "type": "\u2200 {\u03c3 : Type u_1} {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R] [Nontrivial R] {\u03b9 : Type u_3} (s : Finset \u03b9)\n  (f : \u03b9 \u2192 MvPolynomial \u03c3 R), Singularity.ord (\u220f i \u2208 s, f i) = \u2211 i \u2208 s, Singularity.ord (f i)"
   },
+  "Singularity.ord_residualFactor_le_cpOmega_add_one": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 60,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.ord (Singularity.residualFactor \u0394 g) \u2264 Singularity.cpOmega \u0394 g + 1"
+  },
   "Singularity.ord_residualFactor_le_logJacobianOrder_add_one": {
    "axioms": [
     "Classical.choice",
@@ -31437,6 +31818,50 @@
    "kind": "theorem",
    "line": 200,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {\u0394 : Finset \u03c3} {g : MvPolynomial \u03c3 k},\n  Singularity.logJacobianOrder \u0394 g = 0 \u2192 Singularity.ord (Singularity.residualFactor \u0394 g) \u2264 1"
+  },
+  "Singularity.ord_residualFactor_originTransform_add_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 107,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [inst : DecidableEq \u03c3] [inst_1 : Field k] {p : \u2115} {\u0394 : Finset \u03c3} {j : \u03c3}\n  {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    \u2191p \u2264 Singularity.ord g \u2192\n      \u2200 {a : \u03c3 \u2192\u2080 \u2115},\n        a \u2208 g.support \u2192\n          Singularity.ord g = \u2191(Finsupp.degree a) \u2192\n            Singularity.ord (Singularity.residualFactor (insert j \u0394) (Singularity.OriginRuns.originTransform p j g)) +\n                \u2191(a j) \u2264\n              Singularity.ord (Singularity.residualFactor \u0394 g) + \u2191((Singularity.divisorExponent \u0394 g) j)"
+  },
+  "Singularity.ord_residualFactor_originTransform_add_le_of_notMem": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 174,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [inst : DecidableEq \u03c3] [inst_1 : Field k] {p : \u2115} {\u0394 : Finset \u03c3} {j : \u03c3}\n  {g : MvPolynomial \u03c3 k},\n  j \u2209 \u0394 \u2192\n    g \u2260 0 \u2192\n      \u2191p \u2264 Singularity.ord g \u2192\n        \u2200 {a : \u03c3 \u2192\u2080 \u2115},\n          a \u2208 g.support \u2192\n            Singularity.ord g = \u2191(Finsupp.degree a) \u2192\n              Singularity.ord (Singularity.residualFactor (insert j \u0394) (Singularity.OriginRuns.originTransform p j g)) +\n                  \u2191(a j) \u2264\n                Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
+  "Singularity.ord_residualFactor_originTransform_le": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/OriginChartResidualOrder.lean",
+   "kind": "theorem",
+   "line": 183,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [Fintype \u03c3] [inst : DecidableEq \u03c3] [inst_1 : Field k] {p : \u2115} {\u0394 : Finset \u03c3} {j : \u03c3}\n  {g : MvPolynomial \u03c3 k},\n  g \u2260 0 \u2192\n    \u2191p \u2264 Singularity.ord g \u2192\n      Singularity.ord (Singularity.residualFactor (insert j \u0394) (Singularity.OriginRuns.originTransform p j g)) \u2264\n        Singularity.ord (Singularity.residualFactor \u0394 g)"
+  },
+  "Singularity.ord_residualFactor_sub_one_le_cpOmega": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 68,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (\u0394 : Finset \u03c3) (g : MvPolynomial \u03c3 k),\n  Singularity.ord (Singularity.residualFactor \u0394 g) - 1 \u2264 Singularity.cpOmega \u0394 g"
   },
   "Singularity.ord_sum_smul_add_X_mul_pderiv": {
    "axioms": [
@@ -31591,6 +32016,28 @@
    "kind": "theorem",
    "line": 147,
    "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : Field k] {F : MvPolynomial \u03c3 k} {v : \u03c3 \u2192 k} {i : \u03c3} (c : k),\n  v \u2208 Singularity.directrix F \u2192\n    v \u2208 Singularity.directrix (c \u2022 F + MvPolynomial.X i * (MvPolynomial.pderiv i) F) \u2192\n      v i \u2260 0 \u2192 (MvPolynomial.pderiv i) F = 0"
+  },
+  "Singularity.pderiv_homogeneousComponent_one_ne_zero_iff": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 83,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (j : \u03c3) (G : MvPolynomial \u03c3 k),\n  (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent 1) G) \u2260 0 \u2194 G.coeff (Finsupp.single j 1) \u2260 0"
+  },
+  "Singularity.pderiv_homogeneousComponent_zero": {
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "file": "Singularity/Invariant/CossartPiltantOmegaBounds.lean",
+   "kind": "theorem",
+   "line": 78,
+   "type": "\u2200 {\u03c3 : Type u_1} {k : Type u_2} [inst : CommSemiring k] (j : \u03c3) (G : MvPolynomial \u03c3 k),\n  (MvPolynomial.pderiv j) ((MvPolynomial.homogeneousComponent 0) G) = 0"
   },
   "Singularity.pderiv_mem_centerDegreeIdeal": {
    "axioms": [

@@ -1,0 +1,10 @@
+tag: SG0000007M
+kind: lemma
+title: The generic multiplicity of z^p + g along a prime
+statement: Let $R$ be a noetherian ring of characteristic $p$, $g \in R$, $X = V(z^p + g)$, and $P$ a prime with $R_P$ regular. Exactly one point of $X$ lies over $P$. If $\bar g$ is not a $p$-th power in $\kappa(P)$, then $X$ is regular there. If $\bar g = -b^p$ and $h \in R_P$ lifts $b$, then the multiplicity of $X$ at that point is $\min(p, \operatorname{ord}_P(g + h^p))$, independent of the lift.
+sources:
+- paper: Hir64
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Definition 4.3.3 and Lemma 4.3.5. Research note 43, Definition 43.1 and Lemma 43.3, as corrected in Section 43.0. Planned for Lean.

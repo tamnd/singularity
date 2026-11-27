@@ -1,0 +1,13 @@
+tag: SG0000007S
+kind: theorem
+title: The surface centers of Cossart and the lifting test
+statement: Let $D = V(u)$ be a regular surface with $d = \operatorname{ord}_D(g_c) < p$. If $u$ is an equation of a component of $E$, then $\nu(D) = 0$. Otherwise $\nu(D) \le \max(0, d - 1)$. So a failing surface center of the algorithm of Cossart is not in $E$ and has $1 \le \nu \le p - 2$, and for $p = 2$ every surface center passes the test.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007R
+tier: T2
+route:
+- R5
+notes: Handbook Volume 7, Corollary 4.3.12 and Remark 4.3.13. Research note 43, Corollary 43.9 and Remark 43.9a. Planned for Lean.

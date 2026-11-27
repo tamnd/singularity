@@ -1,0 +1,17 @@
+tag: SG0000007N
+kind: theorem
+title: The lifting test is generic equimultiplicity
+statement: 'Let $R$ be a regular noetherian ring of characteristic $p$, $g \in R$, $X = V(z^p + g)$, and $C = V(P)$ an irreducible regular closed subscheme. The following are equivalent: (a) $g + h^p \in P^p$ for some $h \in R$; (b) $X$ has multiplicity $p$ at the point over the generic point of $C$; (c) $X$ has multiplicity $p$ at each point over $C$. Then $h$ is unique modulo $P$, $C'' = V(z - h, P)$ is the reduced inverse image of $C$, $X$ is normally flat along $C''$, and the blowup of $X$ along $C''$ is permissible. Globally there is a unique $b \in \mathcal{O}(C)$ with $b^p = -g|_C$.'
+sources:
+- paper: Cos87
+- paper: Pos24
+- paper: Hir64
+- paper: Benn70
+uses:
+- SG0000007H
+- SG0000007K
+- SG0000007M
+tier: T2
+route:
+- R5
+notes: Handbook Volume 7, Theorem 4.3.6. Research note 43, Theorem 43.4, with the corrections of note 47. The normality of $C$ puts the $p$-th root of $-g|_C$ in $\mathcal{O}(C)$, so the imperfect residue field at the generic point is no obstruction. Planned for Lean.
