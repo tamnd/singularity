@@ -1,0 +1,16 @@
+tag: SG000000CW
+kind: theorem
+title: 'Rule 61.9'' terminates on germs with a_p = 0 or a_2p = 0 along branches without cancellation'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Suppose that $a_p = 0$ or $a_{2p} = 0$. Let $\xi_0, \xi_1, \dots$ be a sequence of Rule 61.9'' through rational points of multiplicity $2p$, in the coordinates of the charts, for any choice among tied centres, such that at each step to a point that is not a chart origin no vertex of the image polyhedron $\pi(U) + \mathbb{R}^3_{\ge 0}$ of SG000000CS cancels. Then the sequence is finite. So SG0000009T holds for these sequences.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG000000CP
+- SG000000CV
+- SG0000009R
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Corollary 86.10 of research note 86. By SG000000CP the translation $\nu$ is $0$ and $z$ stays simultaneously prepared at each point, and at a chart origin no two monomials of one coefficient go to the same monomial. So the sequence is a branch of the extended model of SG000000CV. Cancellations of vertices do occur away from chart origins. The lab of note 86 found $74$ in $37161$ steps of the rule trees of $60$ random germs with $a_3 = 0$ ($p = 3$, truncated germs). On the branch of germ $52$ of the run with $a_6 = 0$, computed without truncation, there are $12$ cancellations (steps $6$ to $22$), $\omega = \frac13$ stays constant from step $7$ to step $79$, and at step $80$ the multiplicity drops and the branch ends. The truncated computation of this branch continues past this end, so truncated runs are evidence and not a check. So the sequences with cancellations are not covered, and whether they end is open. The result is new in research note 86, the referee report on note 81, and a referee has not read it yet. Handbook Volume 7, Corollary 4.5.29. The result is not in Lean.'

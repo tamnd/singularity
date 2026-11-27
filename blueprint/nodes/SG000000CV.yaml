@@ -1,0 +1,17 @@
+tag: SG000000CV
+kind: theorem
+title: 'The extended model of Rule 61.9'' with the generic steps terminates'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. The extended model acts on the pairs $(U, E)$ of SG000000CR, for each boundary $E$. Its moves are the divisorial steps, the steps at chart origins of SG000000CR, and, at each point with $K \ne \emptyset$ in each chart of the centre of the rule, the generic step of SG000000CS, which replaces $U$ by $\pi(U)$ and $E$ by $\{j\} \cup (E \setminus K)$. In the extended model $\omega$ never increases, and each run with $\omega$ constant is finite. So each branch of the extended model is finite: it reaches $\omega = 0$, after which SG0000009R applies, or a state with no move to a point of multiplicity $2p$.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG000000CR
+- SG000000CS
+- SG000000CT
+- SG0000009R
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Theorem 86.9 of research note 86, with Lemma 86.8. By SG000000CT a generic step that keeps $\omega$ has the bottom face $\{\omega e_l\}$, which the map $T_N$ fixes, so the bottom face still never shrinks. If the bottom face is not an axis vertex, there is no generic step that keeps $\omega$. In the stage $\omega_2 > 0$ of the proof of SG000000BE a generic step sends the projected polyhedron to an orthant, so it ends the stage. In the orthant regime the generic moves are $N_k$, the point blowup in the chart of $x_k$ at the point with $\lambda$ nonzero at the other index $\bar k$. They need $h > 2$ and no candidate curve, and they send $c_k$ to $h - 1$, $c_{\bar k}$ to $0$ and $\mu_k$ to $\sigma + \beta - 1$ modulo $1$, and make $\bar k$ free. With $\varepsilon = 1 - \beta$, a state is low if $\mu_a, \mu_c < \varepsilon$. From a low state the run ends within $B = \operatorname{lcm}(1, \dots, 2p)$ steps, since $\sigma = \mu_a + \mu_c$ drops by at least $\frac1B$. Outside low states, the moves $C$ and $P$ do not raise $H = \max(c_a, c_c)$, the moves $N$ lower it, and $H$ stays constant only for finitely many steps. The lab of note 86 followed all $81$ cut nodes of note 72 in this model ($2721$ nodes, $1114$ steps that keep $\omega$, $706$ distinct states, no violation), and enumerated the reduced orthant system with the moves $C$, $P$ and $N$ on three grids ($192141$, $1117190$ and $421740$ states) with no cycle and no failure of the steps of the proof. The result is new in research note 86, the referee report on note 81, and a referee has not read it yet. Handbook Volume 7, Theorem 4.5.28. The result is not in Lean.'

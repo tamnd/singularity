@@ -1,0 +1,15 @@
+tag: SG000000CQ
+kind: theorem
+title: 'Omega never goes up on germs with a_p = 0 or a_2p = 0 under Rule 61.9'''
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Suppose that $a_p = 0$ or $a_{2p} = 0$. Then $\omega(\xi_{n+1}) \le \omega(\xi_n)$ at each step of each sequence $\xi_0, \xi_1, \dots$ of Rule 61.9'' through points of multiplicity $2p$, for each choice among tied centres and each choice of points.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG000000CP
+- SG0000009R
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Corollary 86.2 of research note 86. A divisorial step does not raise $\omega$, and at $\omega = 0$ SG0000009R applies. A main step of the rule blows up a centre along which $\omega$ is constant: the point, or a curve with $\omega(\eta_S) = \omega$. By SG000000CP the vertex of $z'' = z / x_j$ for the weight $(1, 1, 1)$ is not solvable at each point $\xi''$ over the centre, so $\delta(\xi'') = \delta_{z''}(\xi'')$, and Proposition 61.11 and Corollary 61.12 of note 61 give $\omega(\xi'') \le \omega_{z''}(\xi'') \le \omega(\xi)$. So the rises of $\omega$ of SG0000009K and SG0000009M need $a_p \ne 0$ and $a_{2p} \ne 0$. In the rule trees of the lab of note 86 for $120$ random germs with $a_3 = 0$ or $a_6 = 0$ ($p = 3$, truncated germs), no step raised $\omega$. The result is new in research note 86, the referee report on note 81, and a referee has not read it yet. Handbook Volume 7, Corollary 4.5.18. The result is not in Lean.'
