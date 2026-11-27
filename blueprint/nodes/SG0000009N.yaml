@@ -1,0 +1,14 @@
+tag: SG0000009N
+kind: lemma
+title: 'The low flag of the q-part is intrinsic in the regime R1'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $z$ be simultaneously prepared at the point, put $F = a_p/2$ and $q = \frac{\operatorname{ord} F}{p} - \sum_{k \in E} \mu_k$. The point is low if $q = \omega$ and the initial form of $F$ is not in $k[X_E, X_t^p : t \notin E]$. Assume that the point is in the regime R1: at a prepared $z$, the least normalised order $\sigma^* = \min_{p \nmid i} \operatorname{ord}(a_i)/i$ of the rigid coefficients is larger than the least normalised order $D$ of $a_p$ and $a_{2p}$. Then the property of being low does not depend on the simultaneously prepared coordinate $z$, nor on the base coordinates adapted to $E$.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000007G
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Lemma 66.2 of research note 66, with Definition 66.1 of the flag. The referee report in note 72 checked it and added two sentences: in R1 one has $\delta = D < \sigma^*$, and the case $q > \omega$ is covered because $(\operatorname{in} c)^p \in k[X^p]$. Two prepared coordinates differ by $z \mapsto z + c$ with $\operatorname{ord} c \ge \delta$, and the new $F$ is $F + c^p$ plus rigid terms of order larger than $p \delta$. Outside R1 the rigid terms can reach the degree $p \delta$ of $F$, and the flag is then not intrinsic. Handbook Volume 7, Lemma 4.4.10. The result is not in Lean.'

@@ -1,0 +1,17 @@
+tag: SG0000009T
+kind: conjecture
+title: 'Rule 61.9'' terminates at the points of multiplicity 2p with omega > 0'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $\xi_0$ be a closed point of multiplicity $m = 2p$ with $\omega(\xi_0) > 0$. For each choice of base coordinates adapted to the boundary at each step, each choice among tied candidates in the steps of Rule 61.9'', and each sequence $\xi_0, \xi_1, \dots$ of closed points of multiplicity $m$, each over the centre chosen at the previous one, the sequence is finite.'
+sources:
+- paper: Hir67
+- paper: CP19
+- paper: Hau10
+uses:
+- SG0000009R
+- SG0000009K
+- SG0000009M
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Conjecture 65.2 of research note 65, the strong form, in the case $\omega > 0$ that is left open after SG0000009R proves the case $\omega = 0$. It is part (b) of Problem 10.2 of research note 10 for $m = 2p$ (tamnd/singularity#287), and it is open. The weak form fixes the tie-break of the code of note 61. Since $\omega$ can go up under the centre of the rule (SG0000009K, SG0000009M), $\omega$ alone is not a decreasing invariant, and no correction by a flag works (SG0000009Q). Computational evidence from the referee report in note 72 for $p = 3$ on the family pert651: the reproduction of the search of note 66 has $81$ nodes with $\omega > 0$ cut at depth $30$, from the germs $57$, $63$ and $42$. From $80$ of them every branch of the rule, with all ties, ends, with no cycle and no node at the new depth limit. One subtree, from germ $57$ with $\omega = \frac{8}{15}$ and $\delta = \frac{12}{5}$, hit the time limit after $110$ nodes, with no cycle seen, and it is still open. The longest $\omega$-constant run found has $41$ steps, with $\omega = \frac{22}{15}$, and it ends (SG0000009S). A wider search for $p = 3$ saw $74212$ nodes and a search for $p = 5$ saw $18488$ nodes, with no cycle. The searches follow only rational points over $\mathbb{F}_p$. This is not a proof. Handbook Volume 7, Conjecture 4.4.6.'

@@ -1,0 +1,14 @@
+tag: SG0000009P
+kind: counterexample
+title: 'The low flag in R1 is lost at a step from R1 to R2 with omega constant'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $p = 3$, $E = \{0, 2\}$, $a_2 = x_0^2 x_2$, $a_3 = x_1^2 x_2 + x_0^4 x_1^2 x_2^3$, $a_6 = x_1^4 x_2^2 + x_0^4 x_1^2 x_2^4 + 2 x_0^4 x_1^4 x_2^4 + x_0^8 x_1^4 x_2^6$ and $a_i = 0$ otherwise. At the origin $\delta = 1$, $\mu_0 = 0$, $\mu_2 = \frac13$ and $\omega = \frac23$, the point is in R1 and it is low. In each choice of base coordinates adapted to $E$, Rule 61.9'' blows up the point. At the origin of the chart of $x_0$ the boundary is $\{0, 2\}$, $\omega = \frac23$, and the point is in R2. So the invariant $V_6 = \omega - \frac{1}{2p} \lambda_{R1}$, with $\lambda_{R1} = 1$ exactly at the low points of R1, goes up from $\frac12$ to $\frac23$ under the rule.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000009N
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Example 66.4 of research note 66. The referee report in note 72 confirmed it and proved more: the centre is forced in each choice of base coordinates adapted to $E$, because $a_2$ does not depend on $z$ (since $a_1 = 0$ and $\binom62 \equiv 0 \pmod 3$), the curve $V(z, x_1'', x_2)$ is not permissible for each free coordinate $x_1''$, and the curve $V(z, x_0, x_1'')$ is not $\omega$-constant. The same transition from R1 to R2 with $\omega$ constant occurs for $p = 5$ in the lab. Handbook Volume 7, Example 4.4.11. The result is not in Lean.'
