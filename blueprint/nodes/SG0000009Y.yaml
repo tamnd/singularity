@@ -1,0 +1,12 @@
+tag: SG0000009Y
+kind: lemma
+title: The residual order of the Hasse-Schmidt log-Jacobian ideal is upper semicontinuous
+statement: 'Let $K$ be an algebraically closed field of characteristic $p > 0$, $q = p^e$, $1 \le m < q$, let $W$ be a smooth variety over $K$ with a simple normal crossings divisor $E$, and let $g \in \mathcal O(W)$. (1) The ideals $\Theta^{\le m}$ of SG0000009V, computed at each closed point in adapted coordinates, are the stalks of one coherent ideal sheaf $\mathcal T_m$, which does not change under $g \mapsto g + h^q$. Let $D$ be the largest effective divisor supported on $E$ with $\mathcal T_m \subseteq \mathcal O(-D)$. Then the residual order $\rho_m$ at a closed point $x$ is the order at $x$ of $\mathcal T_m \otimes \mathcal O(D)$, and $x \mapsto \rho_m(x)$ is the restriction to the closed points of an upper semicontinuous function on $W$. (2) Let $\iota$ be an upper semicontinuous function on a scheme with values in a well-ordered set. Then each point $x$ has an open neighbourhood $U$ with $\iota \le \iota(x)$ on $U$. So each closed point $x$ lies in the top locus of $\iota$ on $U$, and the blowup of a closed point is a blowup of a regular centre inside the local top locus.'
+sources:
+- paper: BenV13
+uses:
+- SG0000009V
+tier: T4
+route:
+- R5
+notes: 'This is Lemma 75.3 of research note 75 with the wording of Fix 6 of the referee report in note 78. Near each closed point there are etale coordinates adapted to $E$, and the ideal of the coefficients of $\tau(g)$ in the $s$-degrees $1, \dots, m$ does not depend on the adapted coordinates (note 45, Proposition 2.4), so the local ideals glue. The components of $E$ are smooth, so the valuation of $\mathcal T_m$ along a component $E_i$ equals the local exponent $\tilde r_i$ at each point of $E_i$. The order of a coherent ideal $\mathcal I$ is upper semicontinuous, because the set where it is at least $a$ is the zero set of the $D^{(\alpha)} \mathcal I$ with $|\alpha| < a$. For (2), let $\lambda^+$ be the least value above $\iota(x)$. The set where $\iota \ge \lambda^+$ is closed and does not contain $x$, and $U$ is its complement. Part (2) is about the local top locus at a closed point, not about the global top locus that an algorithm uses. Upper semicontinuity is not automatic for invariants built from Hasse-Schmidt derivations: the slope invariant of Benito and Villamayor is not upper semicontinuous in general [BenV13, Sections 1.5 and 4.1]. Handbook Volume 7, Section 3.19. The result is not in Lean.'

@@ -1,0 +1,12 @@
+tag: SG000000A4
+kind: example
+title: An intermediate Hasse-Schmidt residual order goes up for q = 8
+statement: 'Let $K$ be an algebraically closed field of characteristic $2$, $q = 8$, $P = 4$, $R = K[[x, y, w]]$ with the boundary $\{x, y\}$, and $g = x^4 y^8 w + x^4 y^4 w^2 + x^6 y^3$. Then $\Theta^{\le 2}(g) = x^4 y^3 (x^2, y^5, y)$ and $\rho_2 = 1$. At the origin of the $w$-chart, $g'' = x^4 y^8 w^5 + x^4 y^4 w^2 + x^6 y^3 w$ with the boundary $\{x, y, w\}$, $\Theta'' = x^4 y^3 w (y^5 w^4, y w, x^2)$ and $\rho''_2 = 2$. Meanwhile $\rho_1 = 2$ and $d = 2$ do not change.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+tier: T4
+route:
+- R5
+notes: 'This is Example 75.8 of research note 75, which the referee report in note 78 checked by hand and by independent code. The nonzero generators of $\Theta^{\le 2}(g)$ are $x^6 y^3$ (from $\beta = e_y, 2 e_x, 2 e_y$), $x^4 y^8$ (from $\gamma = e_w$) and $x^4 y^4$ (from $\gamma = 2 e_w$). After the blowup the three monomials have the odd logarithmic coefficients $\binom51$, $\binom22$ and $\binom11$ of order at most $2$. Note 78 also found that $\rho_3$ and $\rho_4$ go from $1$ to $2$, and that the origin of the $w$-chart is the only rational point of order $8$ over the origin. Here $m = 2$ is a level strictly between $1$ and $P$. Handbook Volume 7, Section 3.19. The example is not in Lean.'

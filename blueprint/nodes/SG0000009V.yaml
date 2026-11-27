@@ -1,0 +1,15 @@
+tag: SG0000009V
+kind: definition
+title: The Hasse-Schmidt log-Jacobian ideals of z^q + g, their graded pieces and the imbalance
+statement: 'Let $K$ be an algebraically closed field of characteristic $p > 0$, let $q = p^e$ with $e \ge 1$, $P = p^{e-1}$, $R = K[[x_1, \dots, x_n]]$, and let $\Delta \subseteq \{1, \dots, n\}$ be the boundary indices, and let $\Delta^c = \{1, \dots, n\} \setminus \Delta$ be the free indices. The logarithmic Taylor map is the continuous homomorphism $\tau : R \to R[[s_1, \dots, s_n]]$ with $\tau(x_i) = x_i(1 + s_i)$ for $i \in \Delta$ and $\tau(x_j) = x_j + s_j$ for $j \in \Delta^c$. For $g \in R$ write $\tau(g) = \sum_{\beta \in \mathbb N^\Delta, \gamma \in \mathbb N^{\Delta^c}} \Phi_{\beta,\gamma}(g) s_\Delta^\beta s_{\Delta^c}^\gamma$. Then $\Phi_{\beta,\gamma} = x^\beta D^{(\beta)} D^{(\gamma)}$ and $\Phi_{\beta,\gamma}(x^a) = \binom{a_\Delta}{\beta} \binom{a_{\Delta^c}}{\gamma} x^{a - \gamma}$. For $1 \le m < q$ the Hasse-Schmidt log-Jacobian ideal $\Theta^{\le m}(g)$ is the ideal of the $\Phi_{\beta,\gamma}(g)$ with $0 < |\beta| + |\gamma| \le m$. Let $x^{\tilde r}$ be the largest monomial in the boundary variables that divides it. The residual order $\rho_m$ is the order of $x^{-\tilde r} \Theta^{\le m}(g)$. In fixed adapted coordinates, the graded piece $\Theta_{(c)}$ is the ideal of the generators with $|\gamma| = c$, $\rho_{(c)} = \operatorname{ord} x^{-\tilde r} \Theta_{(c)}$ (with $\rho_{(c)} = \infty$ if $\Theta_{(c)} = 0$) and $\sigma = \min_c (\rho_{(c)} + c)$, so that $\rho_m = \min_c \rho_{(c)}$. Let $g$ be clean, that is, no monomial of $g$ has all its exponents divisible by $q$, and write $g = x^r G$ with $x^r$ the largest monomial in the boundary variables that divides $g$ and $d = \operatorname{ord} G$, the residual order. The excess of the piece $c$ is $\varepsilon_c = \rho_{(c)} + c - d$, and the imbalance of $g$ is $\delta = \min_c ((\rho_{(c)} - \rho_m) + \varepsilon_c)$. The germ is balanced at level $m$ in the given coordinates if some $c$ minimizes both $\rho_{(c)}$ and $\rho_{(c)} + c$.'
+sources:
+- paper: HSDer
+- paper: HP19a
+uses:
+- SG0000000W
+- SG0000003E
+- SG00000013
+tier: T4
+route:
+- R5
+notes: 'This is Definition 2.2 of research note 45, refereed in note 48, with the excess and the imbalance of note 75, Section 2, as the referee report in note 78 checked them. The ideal $\Theta^{\le m}(g)$ depends only on $(R, \Delta, g)$ and not on the adapted coordinates (note 45, Proposition 2.4), and $\Theta^{\le m}(g + h^q) = \Theta^{\le m}(g)$ for each $h \in R$ because $\tau(h^q) = h^q + (\tau(h) - h)^q$ and $m < q$ (note 45, Proposition 2.5). So $\tilde r$ and $\rho_m$ are invariants of the germ. The graded pieces, $\sigma$, $\varepsilon_c$, $\delta$ and the balanced condition are defined in fixed coordinates and can depend on them. For $m = 1$ the ideal is the log-Jacobian ideal SG0000003E of any $g_0$ with $g - g_0 \in R^p$. The residual order $d$ is the one of [HP19a], Section 2. Handbook Volume 7, Section 3.19. The definition is not in Lean.'

@@ -1,0 +1,14 @@
+tag: SG000000A0
+kind: theorem
+title: Each invariant that dominates the top Hasse-Schmidt residual order goes up infinitely often on the Hauser-Perlega sequences
+statement: 'Let $p$, $n$ and $\mathcal G_{3,n}$ be as in SG0000009Z, and $P = p^2$. Let $\iota$ be an invariant on $\mathcal G_{3,n}$ with $\rho_P \le F_0(\iota)$ for a monotone function $F_0 : \Lambda \to \mathbb N$, where $\rho_P$ is the residual order of SG0000009V at the level $m = P$. Then along each sequence of point blowups of SG00000017, $\iota$ goes up at infinitely many steps. This holds for $\iota = \rho_P$ and for $\iota = \rho_m$ with $P \le m < q$.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009Z
+- SG0000009W
+- SG00000017
+tier: T4
+route:
+- R5
+notes: 'This is Corollary 75.5 of research note 75, which the referee report in note 78 found correct, with the dimensions of Fix 1. If $\iota$ went up at finitely many steps only, then it would not go up from some step $k_0$ on, and $d_k \le \rho_P(x_k) + P \le F_0(\iota(x_{k_0})) + P$ for $k \ge k_0$ by SG0000009W, a contradiction. For $P \le m < q$, $\rho_P \le d \le \rho_m + m$. The same argument shows that each invariant with the property (D'') of SG0000009Z goes up at infinitely many steps, so the corollary also covers the lexicographic invariants $(d, \rho_P)$ and $(\rho_P, \pm \delta)$. Note 75 tested eight such candidates by exact computation on five passes of the first cycle and four passes of the second, and note 78 reproduced the counts with independent code: each candidate goes up on each pass. Handbook Volume 7, Section 3.19. The result is not in Lean.'

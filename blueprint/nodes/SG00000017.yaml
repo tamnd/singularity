@@ -10,6 +10,6 @@ uses:
 lean:
   statement: Singularity.Examples.hauserPerlega_unbounded
 tier: T4
-notes: The Lean name of the statement is planned. Singularity.Examples.hauserPerlegaCycle certifies one cycle for one choice of the parameters (SG00000039). The iteration of the cycle is not certified.
+notes: The Lean name of the statement is planned. Singularity.Examples.hauserPerlegaCycle certifies one cycle for one choice of the parameters (SG00000039). The iteration of the cycle is not certified. The cycle has $n = 5$ for $p = 2$ and $n = 4$ for $p \ge 3$. With the no-go theorem SG0000009Z it shows that no invariant of the germ in these dimensions bounds the residual order and does not go up under the blowups of closed points of order $p^3$ (research notes 75 and 78).
 route:
 - R5

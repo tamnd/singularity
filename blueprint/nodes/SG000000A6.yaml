@@ -1,0 +1,14 @@
+tag: SG000000A6
+kind: theorem
+title: An invariant that bounds the residual order and does not go up exists if and only if the residual order is bounded on the tree of point blowups
+statement: 'Fix a prime $p$, $e \ge 1$, $q = p^e$ and $n$, and let $\mathcal G_{e,n}$ be the class of germs and the invariants as in SG0000009Z, with $q$ in place of $p^3$. For $\gamma \in \mathcal G_{e,n}$ let $D^*(\gamma) \in \mathbb N \cup \{\infty\}$ be the supremum of the residual order $d$, over all adapted clean coordinates, of all the germs obtained from $\gamma$ by finite sequences of blowups of closed points of order $q$ at which the order stays $q$, including the empty sequence. Then there is an invariant $\iota$ on $\mathcal G_{e,n}$ with (N$_{pt}$) and with a monotone $F : \Lambda \to \mathbb N$ such that $d \le F(\iota)$ if and only if $D^*$ is finite on each germ. In that case $D^*$ is such an invariant, with $F$ the identity, and $D^* \le F \circ \iota$ for each such pair $(\iota, F)$.'
+sources:
+- paper: HP19a
+- paper: Moh87
+uses:
+- SG0000009Z
+- SG0000009W
+tier: T4
+route:
+- R5
+notes: 'This is Proposition 78.3 of the referee report in note 78 on note 75. The finite sequences from $\gamma$ depend only on the germ, so $D^*$ is an invariant. It bounds $d$ by the empty sequence, and it does not go up because the sequences from a point over $x$ are among the sequences from $x$. By SG0000009W with $m = P$, the values of $d$ in different coordinates at one germ differ by at most $P$. Conversely, along a finite sequence $\iota$ does not go up, so $d \le F(\iota) \le F(\iota(\gamma))$. For $e = 2$ no sequence with $d \to \infty$ is known, and the existence of such an invariant is open: by this result it is equivalent to the finiteness of $D^*$, a uniform form of the bound SG00000015 of Moh. The weaker statement that $d$ is bounded along each infinite sequence is equivalent to the existence of an invariant with (N$_{pt}$) and (D'') only, and the two statements do not obviously agree, because the tree of point blowups has infinite branching, so the lemma of Konig does not apply. Handbook Volume 7, Section 3.19. The result is not in Lean.'

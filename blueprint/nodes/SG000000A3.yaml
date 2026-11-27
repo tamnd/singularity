@@ -1,0 +1,13 @@
+tag: SG000000A3
+kind: example
+title: The top Hasse-Schmidt residual order goes up for q = 4
+statement: 'Let $K$ be an algebraically closed field of characteristic $2$, $q = 4$, $P = 2$, $R = K[[x, y]]$ with the boundary $\{x\}$, and $g = x^5 + x^4 y^2$. Then $g$ is clean, $r = (4, 0)$, $G = x + y^2$ and $d = 1$. The ideal of SG0000009V is $\Theta^{\le 2}(g) = (x^4)$, so $\rho_2 = 0$, with $\rho_{(0)} = 1$, $\rho_{(2)} = 0$, $\sigma = 1 = d$ and $\delta = 1$, and $g$ is unbalanced. At the origin of the $y$-chart, $g'' = x^5 y + x^4 y^2$ with the boundary $\{x, y\}$, $\Theta'' = x^4 y (x, y)$ and $\rho''_2 = 1 = \rho_2 + \delta$, while $d'' = 1$.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+- SG0000009X
+tier: T4
+route:
+- R5
+notes: 'This is Example 75.7 of research note 75, which the referee report in note 78 checked by hand and by independent code. The nonzero generators of $\Theta^{\le 2}(g)$ are $\Phi_{e_x, 0}(x^5) = x^5$ and $\Phi_{0, 2 e_y}(x^4 y^2) = x^4$, because $\binom51$ and $\binom22$ are odd and $\binom41$, $\binom42$, $\binom52$ and $\binom21$ are even. After the blowup each variable is a boundary variable, and both monomials have an odd logarithmic coefficient of order at most $2$, namely $\binom51$ and $\binom22$. So the bound $\rho_m + \delta$ of SG0000009X is attained. No sequence with $d \to \infty$ is known for $e = 2$. SG000000A5 extends the example to each $p$. Handbook Volume 7, Section 3.19. The example is not in Lean.'

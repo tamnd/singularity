@@ -1,0 +1,14 @@
+tag: SG000000A1
+kind: theorem
+title: The first Hasse-Schmidt residual order does not go up but does not bound the residual order
+statement: 'Let $p$, $n$ and $\mathcal G_{3,n}$ be as in SG0000009Z. The residual order $\rho_1$ of SG0000009V at the level $m = 1$ is an invariant on $\mathcal G_{3,n}$. It is upper semicontinuous, and it does not go up under the blowup of a closed point of order $q$, at each point of order $q$ over it. It does not have the property (D''), so for some value $\lambda$ the residual order $d$ is not bounded on the germs with $\rho_1 = \lambda$. So the hypothesis of domination in SG0000009Z cannot be removed.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009Z
+- SG0000009Y
+- SG0000003N
+tier: T4
+route:
+- R5
+notes: 'This is Corollary 75.6 of research note 75, which the referee report in note 78 found correct, with the dimensions of Fix 1. Upper semicontinuity is part (1) of SG0000009Y with $m = 1$. The non-increase is Corollary 5.5 of note 45: at the level $1$ the only free orders are $c = 0$ and $c = 1$, and one of them minimizes both $\rho_{(c)}$ and $\rho_{(c)} + c$, so each point is balanced and the bound of the graded law gives $\rho''_1 \le \rho_1$. For $e = 1$ this is SG0000003N. If (D'') held, SG0000009Z would give a contradiction. Along the computed passes of both cycles $\rho_1 = 0$ at each point (notes 45, 48 and 78), which is the explicit form of the failure. Handbook Volume 7, Section 3.19. The result is not in Lean.'
