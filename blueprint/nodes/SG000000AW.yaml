@@ -1,0 +1,16 @@
+tag: SG000000AW
+kind: theorem
+title: 'Rank 2: local uniformization of the coarsening gives local uniformization of the valuation'
+statement: 'Let $\nu = v_1 \circ \bar v$ be as in SG000000AT. If $v_1$ has local uniformization in the strong form, then $\nu$ has local uniformization in the strong form. In particular, $\nu$ has local uniformization in the strong form for each $d \in \{1, 2, 3\}$ if $\kappa = F v_1$ is finitely generated over $k$.'
+sources:
+- paper: NS14
+  loc: 'Theorem 1.1 and Section 3.1 of arXiv:1204.4751'
+- paper: Abh56s
+- paper: CP09
+uses:
+- SG000000AT
+- SG0000001F
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 1.2 of the referee report in note 80, which replaces Proposition 2.2 of research note 76 (Fix 2). The proof of Theorem 1.1 of Novacoski-Spivakovsky is pointwise: for $R$ the local ring of $k[x_1, \dots, x_4, Z]$ at the center of $\nu$ and $\mathfrak{p}$ the center of $v_1$, it needs only local uniformization of $v_1$ on $R_{\mathfrak p}$ and of $\bar v$ on $\kappa(\mathfrak{p})$. The field $\kappa(\mathfrak{p})$ has transcendence degree at most 3, so the second input is Abhyankar or Cossart-Piltant. Local monomialization for $d = 3$ would need weak embedded local uniformization of threefolds in characteristic $p$, which is not known in general. Handbook Volume 9, Section 3.23. The result is not in Lean.'

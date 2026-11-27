@@ -1,0 +1,15 @@
+tag: SG000000AT
+kind: theorem
+title: 'Rank 2 with a finitely generated residue field of the coarsening: the Knaf-Kuhlmann case'
+statement: 'Let $\nu$ be as in SG000000AS with rank 2, so $\nu = v_1 \circ \bar v$ with $v_1$ discrete of rank 1 and $\bar v$ discrete of rank 1 on $\kappa = F v_1$, and let $d = \mathrm{trdeg}(\kappa/k) \in \{1, 2, 3\}$. Assume that $\kappa$ is finitely generated over $k$ (this holds if $d = 3$). Then there is a subfield $F_1 = k(z_1, \dots, z_d, \theta_0)$ of $F$ such that $v_1|_{F_1}$ is Abhyankar with value group $\mathbb{Z}$ and residue field $\kappa$, and $F$ lies in the $v_1$-completion of $F_1$. Hence (a) $v_1$ has local uniformization in the strong form, for each finite subset of $\mathcal{O}_{v_1}$. (b) If $d = 1$, then $\nu|_{F_1}$ is Abhyankar, $\nu$ is of KK type and $\nu$ has local uniformization in the strong form.'
+sources:
+- paper: KK09
+  loc: 'Theorem 1.5'
+uses:
+- SG000000AS
+- SG0000000Y
+- SG0000001E
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 2.1(a), (b) of research note 76 with Fix 1 of the referee report in note 80: the hypothesis that $\kappa$ is finitely generated is needed, and SG000000AX shows that (b) is false without it. The proof takes $\bar z$ a separating transcendence basis of $\kappa/k$ and $\bar\theta$ a primitive element, puts $t = \bar g(z, \theta_0)$ for the minimal polynomial $\bar g$, and arranges $v_1(t) = 1$ by a Taylor shift of $\theta_0$. Successive approximation in $t$ gives the density. For (b), the topology of $\nu$ is the topology of $v_1$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

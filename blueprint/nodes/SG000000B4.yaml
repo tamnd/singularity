@@ -1,0 +1,15 @@
+tag: SG000000B4
+kind: theorem
+title: 'Problem V7 for three classes of rank 1 valuations with value group Z^2'
+statement: 'Let $\nu$ be as in SG000000AS with rank 1, and let $K$ be a projection with $x_1, x_2$ adapted and $F \subseteq K^h$. Assume one of the following: (i) $x_3 \in C$; (ii) $x_4 \in K_3^c$; (iii) $K_3^c$ is algebraically maximal. Then $(F, \nu)$ has local uniformization in the strong form.'
+sources:
+- paper: KK09
+uses:
+- SG000000AZ
+- SG000000B0
+- SG000000B2
+- SG000000B3
+tier: T2
+route:
+- R2
+notes: 'This is Corollary 4.3 of research note 76, which the referee report in note 80 confirms. By SG000000B2(c) and SG000000AZ(b), $x_3$ has the ball property over $K_2$; in each case $x_4$ has it over $K_3$ by SG000000B2(a) or (c). Then SG000000B3 and SG000000B0 apply. Class (i) contains valuations that are not of KK type (SG000000B6). The method is the method of [KK09], Lemma 3.9 with Corollary 3.6; what is new is the classes and the explicit member. Handbook Volume 9, Section 3.23. The result is not in Lean.'

@@ -1,0 +1,16 @@
+tag: SG000000B7
+kind: theorem
+title: 'The distance to a defect subfield does not grow'
+statement: 'Let $(E, \nu)$ be a rank 1 valued field of characteristic $p$ and $\vartheta$ an element of an immediate extension, transcendental over $E$, such that a cofinal pseudo-Cauchy sequence of $\vartheta$ in $E$ is of transcendental type. Let $\delta = \mathrm{dist}(\vartheta, E) < \infty$. Let $\varphi(X) = X^p$, or $\varphi(X) = X^p - X$ and $\delta \le 0$, and let $a = \varphi(\vartheta)$. Then $\nu(\vartheta - c) < \delta$ for each $c \in E(a)$ and $\mathrm{dist}(\vartheta, E(a)) = \delta$. So $E(\vartheta)/E(a)$ is immediate of degree $p$ with defect $p$. It is purely inseparable if $\varphi = X^p$, a dependent Artin-Schreier extension if $\varphi = X^p - X$ and $\delta < 0$, and an independent one if $\delta = 0$.'
+sources:
+- paper: Kuh10b
+  loc: 'the criterion for dependence'
+- paper: Kap42
+uses:
+- SG000000B1
+- SG000000B2
+- SG00000010
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 6.1 of research note 76, which the referee report in note 80 checks line by line, with Fix 12 on the degrees of the initial forms. In the handbook the proof uses Gauss valuations only and no graded ring: the term $(A_i + B_iT)\varphi(T)^i$ of $H(\vartheta + T)$ equals $A_iT^{ip} + B_iT^{ip+1}$ plus terms of larger value for $\gamma < 0$. The condition $\delta \le 0$ is needed in the Artin-Schreier case. The numerical check of note 76 is not evidence and is not used. Handbook Volume 9, Section 3.23. The result is not in Lean.'

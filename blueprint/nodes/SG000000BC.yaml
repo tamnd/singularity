@@ -1,0 +1,14 @@
+tag: SG000000BC
+kind: conjecture
+title: 'Problem 7.2: a good projection'
+statement: 'Let $\nu$ be a rank 1 valuation of a function field $F$ of transcendence degree 4 over $k$ with $\nu F \cong \mathbb{Z}^2$, $F\nu = k$ and $F \subseteq K^h$ for a projection $K$. Then there is a projection $K'' = k(x_1'', \dots, x_4'')$ with $F \subseteq K''^h$, with $x_1'', x_2''$ adapted, such that $x_3''$ has the ball property over $K_2''$ and $x_4''$ has the ball property over $K_3''$.'
+sources:
+- paper: KK09
+uses:
+- SG000000B0
+- SG000000B3
+- SG000000AZ
+tier: T2
+route:
+- R2
+notes: 'This is Problem 7.2 of research note 76. It is open. By SG000000B0 and SG000000B3 a positive answer proves Problem V7 for rank 1 valuations with value group $\mathbb{Z}^2$. If every projection of defect 1 is in case (B) (a cofinal pseudo-Cauchy sequence of $x_4$ of algebraic type), then $K_3^h$ has an immediate algebraic extension of degree $p^e$ (Proposition 5.1 of note 76). Family T (SG000000B9) is the first test. Handbook Volume 9, Section 3.23. The result is not in Lean.'

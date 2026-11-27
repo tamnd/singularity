@@ -1,0 +1,15 @@
+tag: SG000000B3
+kind: theorem
+title: 'Towers with the ball property have local uniformization and local monomialization'
+statement: 'Let $\nu$ be a rank 1 valuation of $K = k(x_1, x_2, x_3, x_4)$, trivial on $k$, with $K\nu = k$ and $\nu K \cong \mathbb{Z}^2$, and with $x_1, x_2$ adapted. If $x_3$ has the ball property over $K_2$ and $x_4$ has the ball property over $K_3$, then $(K, \nu)$ has local uniformization in the strong form and local monomialization: for each finite $Z \subset \mathcal{O}_\nu \setminus \{0\}$ there is a regular local ring $R$ of $K$, essentially of finite type over $k$ and dominated by $\nu$, with a regular system of parameters $u_1, u_2, y_3, y_4$ such that $\nu(u_1), \nu(u_2)$ is a basis of $\nu K$ and each $z \in Z$ is $u_1^a u_2^b$ times a unit of $R$, with $a, b \ge 0$.'
+sources:
+- paper: KK09
+  loc: 'Lemmas 2.18 and 3.9, Corollary 3.6'
+uses:
+- SG000000B1
+- SG000000B2
+- SG0000004D
+tier: T2
+route:
+- R2
+notes: 'This is Theorem 4.2 of research note 76 with Fix 6 of the referee report in note 80: the hypothesis is the ball property, because the distinctness of the Taylor values (Lemma 2.18 of [KK09]) needs it. The proof is an induction on $i$ with the substitution $Y = (x_i - d)/N$ and $R_i = R_{i-1}[Y]_{(\mathfrak m, Y - \lambda)}$. In the handbook the quotients are put into the finite set of the induction, so no extra Perron transform is needed. The rings are not localizations of polynomial rings in general, so the polynomial form of ELU(4) of note 57 is not claimed. Handbook Volume 9, Section 3.23. The result is not in Lean.'

@@ -1,0 +1,15 @@
+tag: SG000000BD
+kind: conjecture
+title: 'Local uniformization of a discrete valuation with a residue field that is not finitely generated'
+statement: 'Let $\nu = v_1 \circ \bar v$ be a rank 2 valuation of a function field $F$ of transcendence degree 4 over $k$, with $\nu F = \mathbb{Z}^2$ and $F\nu = k$, such that $\kappa = F v_1$ has transcendence degree $d \in \{1, 2\}$ and is not finitely generated over $k$. Then $v_1$ has local uniformization in the strong form, and so $\nu$ has local uniformization by SG000000AW.'
+sources:
+- paper: NS14
+- paper: Kuh10c
+  loc: 'Theorem 1.1'
+uses:
+- SG000000AW
+- SG000000AX
+tier: T2
+route:
+- R2
+notes: 'This is open statement 1 of the referee report in note 80. Theorem 1.5 of [KK09] does not apply, because $v_1$ is not of KK type, and the examples of SG000000AX show that the case is not empty. With SG000000AT and SG000000AW it is the only open part of Problem V7 in rank 2 with value group $\mathbb{Z}^2$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

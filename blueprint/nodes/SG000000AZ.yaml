@@ -1,0 +1,16 @@
+tag: SG000000AZ
+kind: lemma
+title: 'Rank 1 with value group Z^2: defect, the completion of an adapted pair, and Knaf-Kuhlmann type'
+statement: 'Let $\nu$ be as in SG000000AS with rank 1 and let $K$ be a projection with $x_1, x_2$ adapted. (a) $F/K$ is immediate and its defect is $[F^h : K^h]$, so the defect is 1 if and only if $F \subseteq K^h$. (b) $C = K_2^c$ is defectless and algebraically maximal. (c) $\nu$ is of KK type if and only if $F \subseteq C$.'
+sources:
+- paper: Kuh10
+  loc: 'generalized stability theorem'
+- paper: Kuh-book
+uses:
+- SG000000AS
+- SG000000AY
+- SG00000010
+tier: T2
+route:
+- R2
+notes: 'This is Lemma 3.1 of research note 76 with the proof of (c) repaired by Lemma 2.1 of the referee report in note 80 (SG000000AY). For (c), if $F \subseteq F_0^c$ with $F_0$ Abhyankar, choose $y_1, y_2 \in F_0$ whose values are a basis; then $F_0 \subseteq k(y)^h$ by the stability theorem, so $F \subseteq C_y$ and SG000000AY gives $C_y = C$. The original proof assumed that $F_0 K_2$ is finite over $K_2$, which can fail. Handbook Volume 9, Section 3.23. The result is not in Lean.'
