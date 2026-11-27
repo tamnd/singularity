@@ -1,0 +1,15 @@
+tag: SG000000BG
+kind: theorem
+title: 'No lexicographic pair that starts with omega decreases at each step of Rule 61.9'''
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. For each odd $p$ there is no function $s$ of the point, with values in a totally ordered set, such that $(\omega, s)$ decreases strictly in the lexicographic order at each step of Rule 61.9'' from a point of multiplicity $2p$ to a point of multiplicity $2p$ over the chosen centre.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000009K
+- SG0000009M
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Proposition 81.13 of research note 81. By SG0000009M there is a step of the rule, with a forced centre, at which $\omega$ goes from $1$ to $\frac{p+1}{p}$, for each odd $p$. At this step $(\omega, s)$ goes up for each $s$. SG0000009K gives a second family, with $\omega$ from $\frac{p+3}{2(p+1)}$ to $\frac{p+2}{2p}$. Both rises happen at points that are not chart origins and need a new preparation of $z$, as Corollary 61.12 of note 61 predicts. So a proof of SG0000009T for $\omega > 0$ must bound the rises of $\omega$, or use an invariant in which $\omega$ is not the first entry. On the toric branches the pair of SG000000BF works. Handbook Volume 7, Proposition 4.5.14. The result is not in Lean.'

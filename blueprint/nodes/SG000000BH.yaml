@@ -1,0 +1,15 @@
+tag: SG000000BH
+kind: theorem
+title: 'The hidden decreasing quantity on the period-5 runs of Rule 61.9'''
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $p = 3$, $E = \{0, 1, 2\}$ and $f_{e,g} = (z^3 + x_1 x_2^5)^2 + x_0^7 x_1^e x_2 z + x_0^7 x_1^g x_2^6$ as in SG0000009S. The normalised points $u - \mu$ of the monomials are $A = (0, 0, \frac{22}{15})$, $(\frac75, \frac{3e-5}{15}, 0)$ and $(\frac76, \frac{g-2}{6}, \frac45)$, so the bottom face is the vertex $A = \omega e_2$. The projection $v \mapsto (v_0, v_1) / (\omega - v_2)$ sends the last two points to $(\frac{21}{22}, \frac{3e-5}{22})$ and $(\frac74, \frac{g-2}{4})$. If $11g \ge 6e + 12$, the second point lies in the orthant of the first, and the planar polyhedron is the orthant at $c = (\frac{21}{22}, \frac{3e-5}{22})$, and the quantity $h - 1 = \frac{3(e-2)}{22}$, with $h = c_0 + c_1$, drops by exactly $\frac{1}{22}$ at each point blowup of the period of SG0000009S and is unchanged by the divisorial steps. The gap $\frac{e-2}{5}$ of SG0000009S is $\omega (h - 1)$, and the run ends when $h$ reaches $1$.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000009S
+- SG000000BE
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Section 81.6 of research note 81, which answers open statement 2 of the referee report in note 72 for this family. The run of SG0000009S is a toric branch in the sense of SG000000BE, in the orthant regime of its proof, with $\beta = \mu_2 + \omega = \frac53 \ge 1$, where each point blowup lowers $h$. Each point blowup is in the chart of $x_1$ and sends $c_1$ to $c_0 + c_1 - 1 = c_1 - \frac{1}{22}$, so $h$ drops by $\frac{3}{22}$ in each period, as the change $e \mapsto e - 1$ needs. For $e = 8$ the values of $h$ are $\frac{20}{11}, \frac{39}{22}, \frac{19}{11}, \dots$. For germ $57 = f_{9,5}$ the second point matters at first: there $m_t = \frac34$ and the planar residual slope is $\omega_2 = \frac14$, so the branch starts in the stage $\omega_2 > 0$ of the proof. The script run57.py of note 81 reproduces the run lengths of note 72 in the toric model, for example $41$ for $f_{9,5}$. Note 81 has no referee report yet. Handbook Volume 7, Proposition 4.5.11. The result is not in Lean.'
