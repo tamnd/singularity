@@ -1,0 +1,11 @@
+p 5 D 3 levels 14 mode planar {'trials': 200, 'exact': 170, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 504, 'dom_fail': 0, 'div_checked': 164, 'div_fail': 0, 'zero': 0}
+p 5 D 3 levels 14 mode sparse {'trials': 200, 'exact': 91, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 265, 'dom_fail': 0, 'div_checked': 83, 'div_fail': 0, 'zero': 0}
+p 5 D 3 levels 14 mode linear {'trials': 200, 'exact': 68, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 202, 'dom_fail': 0, 'div_checked': 66, 'div_fail': 0, 'zero': 4}
+p 3 D 2 levels 14 mode planar {'trials': 200, 'exact': 145, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 421, 'dom_fail': 0, 'div_checked': 131, 'div_fail': 0, 'zero': 0}
+p 7 D 5 levels 12 mode planar {'trials': 100, 'exact': 8, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 24, 'dom_fail': 0, 'div_checked': 8, 'div_fail': 0, 'zero': 0}
+p 2 D 1 levels 16 mode planar {'trials': 300, 'exact': 300, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 774, 'dom_fail': 0, 'div_checked': 174, 'div_fail': 0, 'zero': 0}
+p 2 D 2 levels 16 mode planar {'trials': 300, 'exact': 106, 'failA': 0, 'failB': 0, 'failC': 15, 'dom_checked': 269, 'dom_fail': 0, 'div_checked': 67, 'div_fail': 0, 'zero': 0}
+p 3 D 3 levels 14 mode planar {'trials': 200, 'exact': 46, 'failA': 0, 'failB': 0, 'failC': 4, 'dom_checked': 132, 'dom_fail': 0, 'div_checked': 41, 'div_fail': 0, 'zero': 0}
+p 3 D 4 levels 12 mode planar {'trials': 150, 'exact': 23, 'failA': 0, 'failB': 0, 'failC': 6, 'dom_checked': 66, 'dom_fail': 0, 'div_checked': 20, 'div_fail': 0, 'zero': 0}
+p 5 D 5 levels 12 mode planar {'trials': 100, 'exact': 12, 'failA': 0, 'failB': 0, 'failC': 3, 'dom_checked': 36, 'dom_fail': 0, 'div_checked': 12, 'div_fail': 0, 'zero': 0}
+p 5 D 3 levels 14 mode linear {'trials': 200, 'exact': 69, 'failA': 0, 'failB': 0, 'failC': 0, 'dom_checked': 207, 'dom_fail': 0, 'div_checked': 69, 'div_fail': 0, 'zero': 9}

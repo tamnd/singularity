@@ -1,0 +1,39 @@
+(2, 3, (1, 1, 1), 2) {'total': 12, 'res&crit': 12, 'off': 12, 'linear': 12, 'verified prepared': 12}
+(2, 3, (1, 1, 1), 4) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 9, 'rank3': 9, 'rank3 <-> certified': 12, 'linear': 3, 'verified prepared': 3}
+(2, 3, (1, 1, 1), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(2, 3, (1, 1, 2), 4) {'total': 12, 'res&crit': 12, 'off': 12, 'linear': 3, 'verified prepared': 12, 'frobenius': 9}
+(2, 3, (1, 1, 2), 6) {'total': 12, 'res&crit': 12, 'off': 11, 'none': 6, 'frobenius': 6, 'verified prepared': 6}
+(2, 3, (1, 2, 2), 4) {'total': 12, 'res&crit': 12, 'off': 12, 'linear': 12, 'verified prepared': 12}
+(2, 3, (1, 2, 2), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 8, 'frobenius': 3, 'verified prepared': 4, 'linear': 1}
+(2, 3, (1, 2, 3), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'frobenius': 12, 'verified prepared': 12}
+(3, 2, (1, 1), 3) {'total': 12, 'res&crit': 12, 'off': 12, 'linear': 12, 'verified prepared': 12, 'n2 prediction agrees': 12}
+(3, 2, (1, 1), 6) {'total': 12, 'res&crit': 12, 'off': 11, 'none': 9, 'n2 prediction agrees': 12, 'cert >=3 pts': 9, 'linear': 3, 'verified prepared': 3}
+(3, 2, (1, 1), 9) {'total': 12, 'res&crit': 12, 'off': 11, 'linear': 1, 'verified prepared': 1, 'n2 prediction agrees': 12, 'none': 11, 'cert >=3 pts': 11}
+(3, 2, (1, 2), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'frobenius': 12, 'verified prepared': 12}
+(3, 2, (1, 2), 9) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 9, 'frobenius': 3, 'verified prepared': 3}
+(3, 2, (1, 3), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'frobenius': 12, 'verified prepared': 12}
+(3, 2, (1, 3), 9) {'total': 12, 'res&crit': 12, 'off': 12, 'frobenius': 12, 'verified prepared': 12}
+(3, 3, (1, 1, 1), 3) {'total': 12, 'res&crit': 12, 'off': 8, 'linear': 10, 'verified prepared': 10, 'none': 2}
+(3, 3, (1, 1, 1), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(3, 3, (1, 1, 2), 3) {'total': 12, 'res&crit': 12, 'off': 6, 'linear': 12, 'verified prepared': 12}
+(3, 3, (1, 1, 2), 6) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 11, 'frobenius': 1, 'verified prepared': 1}
+(3, 3, (1, 1, 2), 9) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(3, 3, (1, 2, 2), 6) {'total': 12, 'res&crit': 12, 'off': 11, 'none': 7, 'frobenius': 5, 'verified prepared': 5}
+(3, 3, (1, 2, 2), 9) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 11, 'linear': 1, 'verified prepared': 1}
+(3, 3, (1, 2, 3), 6) {'total': 12, 'res&crit': 12, 'off': 8, 'frobenius': 12, 'verified prepared': 12}
+(3, 3, (1, 2, 3), 9) {'total': 12, 'res&crit': 12, 'off': 9, 'none': 10, 'frobenius': 2, 'verified prepared': 2}
+(5, 2, (1, 1), 5) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 8, 'n2 prediction agrees': 12, 'cert >=3 pts': 8, 'linear': 4, 'verified prepared': 4}
+(5, 2, (1, 1), 10) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12, 'n2 prediction agrees': 12, 'cert >=3 pts': 12}
+(5, 2, (1, 1), 15) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12, 'n2 prediction agrees': 12, 'cert >=3 pts': 12}
+(5, 2, (1, 2), 5) {'total': 12, 'res&crit': 12, 'off': 12, 'frobenius': 12, 'verified prepared': 12}
+(5, 2, (1, 2), 10) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 11, 'frobenius': 1, 'verified prepared': 1}
+(5, 2, (1, 2), 15) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(5, 2, (1, 3), 10) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 11, 'frobenius': 1, 'verified prepared': 1}
+(5, 2, (1, 3), 15) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(5, 2, (2, 3), 15) {'total': 12, 'res&crit': 12, 'off': 12, 'none': 12}
+(5, 3, (1, 1, 2), 5) {'total': 6, 'res&crit': 6, 'off': 5, 'frobenius': 1, 'verified g only': 1, 'none': 5}
+(5, 3, (1, 2, 2), 5) {'total': 6, 'res&crit': 6, 'off': 4, 'frobenius': 4, 'verified g only': 6, 'linear': 2}
+(5, 3, (1, 2, 3), 5) {'total': 6, 'res&crit': 6, 'off': 6, 'frobenius': 6, 'verified g only': 6}
+(5, 3, (1, 1, 1), 5) {'total': 4, 'res&crit': 4, 'off': 4, 'none': 4}
+issues: 0
+time 152s

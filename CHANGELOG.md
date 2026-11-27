@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The scripts of research notes 50 to 57 and 59 to 63 in `lab/notes/NN/` (track LB, issue 289). They are the evidence for the [C] claims of these notes. Each folder has a `README.md` with the claims, the commands, the expected output, the run time and the dependencies. The scripts use paths relative to their own file. Most of them need only the standard library of Python 3. Some scripts of notes 54, 55 and 60 need NumPy, sympy or galois. The new test `lab/notes/tests/test_smoke.py` runs 45 short commands that use only the standard library and checks their output. The workflow `lab` runs it. Notes 58, 64 and 65 are not included, because they are still being written.
+
 ### Changed
 
 - The handbook page of the site links edition 0.4.70 of the handbook.
