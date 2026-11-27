@@ -1,0 +1,14 @@
+tag: SG00000097
+kind: theorem
+title: 'The critical set obstruction for all changes of coordinates when D = p in two variables'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $g \in k[[x, y]]$ with $\operatorname{ord} g = p$, let $h$ be the form of degree $p$ of $g$ with $\nabla h \ne 0$, and let $C \subset \mathbb{P}^1$ be the set of the zeros of $\nabla h$. Assume $|C| \ge 3$, and let $F = z^p + g$. Then for each automorphism $\Psi$ of $k[[x, y, z]]$ and each unit $u$ of $k[[x, y, z]]$, the series $u \cdot (F \circ \Psi)$ is Newton degenerate. Always $|C| \le p - 2$, so the hypothesis can hold only for $p \ge 5$.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+- SG0000008S
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 3.1 of research note 68, which the referee report in note 70 checked, with the bound $|C| \le p - 2$ of Proposition 3.5 of note 68 (Proposition 1.1 of note 70). It proves SG0000008Z for $n = 2$. The terms of higher order of $g$ can be arbitrary. The proof reduces to the form of degree $p$ (Proposition 2.3 of note 68), so to a linear change $A$ of $(x, y, z)$. An arc lemma (Lemma 2.1 of note 68) moves the singular points of the plane curve $\{(z^p + h) \circ A = 0\}$ to the coordinate points. At such a point the tangent cone is a line through $(0 : 0 : 1)$ counted $e$ times, with $2 \le e \le p - 1$, and the weight $(1, 2, 2)$ gives a face $c X^{p-e} L^e$ with a torus singular point. The bound $|C| \le p - 2$ follows from Euler: $h_x = y G$ and $h_y = -x G$ with $\deg G = p - 2$. Examples are $z^5 + x^4 y + x y^4$ and $z^5 + 2 x^2 y^2 (x + y)$ (Corollary 3.2 of note 68), with any terms of higher order. An exhaustive exact search over all linear changes over $\mathbb{F}_5$ found no nondegenerate change, in agreement with the theorem. The result is not in Lean.'

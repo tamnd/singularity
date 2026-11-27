@@ -1,0 +1,15 @@
+tag: SG00000098
+kind: theorem
+title: 'Preparation of z^p + h for a binary form h'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, and let $h \in k[x, y]$ be a form of degree $D$ with $p \mid D$ and $\nabla h \ne 0$. Let $C \subset \mathbb{P}^1$ be the set of the zeros of $\nabla h$. Then the following are equivalent. (i) There are an automorphism $\Psi$ of $k[[x, y, z]]$ and a unit $u$ such that $u \cdot ((z^p + h) \circ \Psi)$ is Newton nondegenerate. (ii) There is a linear change of $(x, y)$ such that $z^p + h$, after the change and the cleaning, is Newton nondegenerate. (iii) $|C| \le 2$.'
+sources:
+- paper: Newt
+uses:
+- SG00000097
+- SG0000008S
+- SG0000008R
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Corollary 3.3 of research note 68, which the referee report in note 70 checked. The step from (i) to (iii) is SG00000097 for $D = p$ and SG0000008S for $D > p$. The step from (iii) to (ii) is Theorem 5.2 of research note 55: a linear change moves $C$ into $\{x y = 0\}$, and then the compact faces of the cleaned form are its segment and its two end monomials, which have no torus critical point. The statement is for $g = h$. With terms of higher order only the step from (i) to (iii) is proved. The result is not in Lean.'

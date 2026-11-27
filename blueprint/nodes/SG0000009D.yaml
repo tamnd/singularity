@@ -1,0 +1,13 @@
+tag: SG0000009D
+kind: theorem
+title: 'One weighted blowup lowers the residual order of z^p + g'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $n \ge 2$, let $g \in k[[x_1, \dots, x_n]]$ with $\operatorname{ord} g = D$ and $p \mid D$, and let $h$ be the form of degree $D$ of $g$ with $\nabla h \ne 0$. Let $f = z^p + g$, with residual order $\nu(f) = D$, the order of the part of $g$ without $p$-th power monomials. Let $\pi$ be the weighted blowup of the origin with the weights $(1, \dots, 1, D/p)$ and $f''$ the strict transform. Then $f''$ meets the exceptional divisor only in the $x_i$-charts. At a point of $f'' = 0$ over the origin, $f''$ is smooth unless the point lies over a direction $v \in C$, where $C \subset \mathbb{P}^{n-1}$ is the set of the zeros of $\nabla h$. At the point $P_v$ over $v \in C$, $\nu(P_v) \le D - 1$ unless $\partial_v h \equiv 0$. If $n = 2$, the exception does not occur, so $\nu$ drops at each point over the origin.'
+sources:
+- paper: Newt
+uses:
+- SG0000008X
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 7.1 of research note 68, which the referee report in note 70 checked. The terms of higher order of $g$ can be arbitrary. In the $x_1$-chart $f'' = z''^p + h(1, y) + t R(t, y)$, and at $P_v$ the part of $h(1, y_0 + s) - h(1, y_0)$ without $p$-th power monomials survives in the new $g$. If it has no monomial of degree at most $D - 1$, then $\partial_v h \equiv 0$. For $n = 2$ this would make $h$ a $p$-th power. It extends SG0000008X, where $g = h$, to terms of higher order. The exception is real: for $p = 5$ and $g = y^4 w + y w^4 + x^5$, $\nu(P_v) = 5$ at $v = e_1$. It is not proved that the exceptional set has high codimension. The theorem does not claim that $f''$ is Newton nondegenerate at $P_v$. The residual order is invariant under the changes of $x$ and under $z \mapsto z + q(x)$; nothing is claimed for the general changes of $(x, z)$. Random tests over finite fields found no exceptional point; this is numerical evidence only. The result is not in Lean.'

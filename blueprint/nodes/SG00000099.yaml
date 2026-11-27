@@ -1,0 +1,14 @@
+tag: SG00000099
+kind: theorem
+title: 'The critical set obstruction for all changes of coordinates when D = p and Q has no line'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $n \ge 2$, let $g \in k[[x_1, \dots, x_n]]$ with $\operatorname{ord} g = p$, let $h$ be the form of degree $p$ of $g$ with $\nabla h \ne 0$, and let $C \subset \mathbb{P}^{n-1}$ be the set of the zeros of $\nabla h$. Assume that the hypersurface $Q = \{z^p + h = 0\} \subset \mathbb{P}^n$ contains no line, and that $C$ is infinite or has at least $n + 2$ points. Then for each automorphism $\Psi$ of $k[[x, z]]$ and each unit $u$ of $k[[x, z]]$, the series $u \cdot ((z^p + g) \circ \Psi)$ is Newton degenerate. The hypersurface $Q$ contains a line if and only if there is a line $M \subset \mathbb{P}^{n-1}$ such that $h|_M$ is the $p$-th power of a linear form on $M$.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+- SG00000097
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 4.1 and Lemma 4.2 of research note 68, which the referee report in note 70 checked. The terms of higher order of $g$ can be arbitrary. The map $v \mapsto (v : c_v)$ with $c_v^p = -h(v)$ is a bijection from $C$ onto the singular set of $Q$. For a linear change $A$ that makes $(z^p + h) \circ A$ nondegenerate on all faces, the arc lemma (Lemma 2.1 of note 68) puts a coordinate subspace through each singular point into $A^{-1}(Q)$. With no line on $Q$ the singular points are coordinate points, so there are at most $n + 1$ of them. For $n = 2$ there is always a line condition to check, and SG00000097 is stronger. For $n = 3$ and $C$ contained in three lines with independent equations, a linear change of $x$ prepares the top face, also when $Q$ contains a line (Theorem 4.1 of note 55 and Proposition 4.3 of note 68). The open case is SG0000009E. The result is not in Lean.'

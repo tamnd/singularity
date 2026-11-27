@@ -1,0 +1,14 @@
+tag: SG0000009C
+kind: theorem
+title: 'Preparation of the top face of a weighted form in three variables'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $\omega \in \mathbb{Z}^3_{>0}$ with $\gcd 1$, and let $h \in k[x, y, w]$ be clean and $\omega$-homogeneous of degree $D$, with $\nabla h \ne 0$ and critical set $Z = \{\nabla h = 0\} \subset \mathbb{A}^3$. Some change of coordinates that preserves the weight, followed by the cleaning, makes the $\omega$-face free of torus critical points if and only if there is a graded automorphism $\psi$ with $\psi(Z) \subset \{x y w = 0\}$. Explicitly: (a) for $\omega = (1, 1, 1)$, the critical set $C \subset \mathbb{P}^2$ of $h$ lies on three lines with no common point; (b) for $\omega = (a, a, b)$ with $a, b \ge 2$ and $a \ne b$, the points of $Z$ with $w \ne 0$ and $(x, y) \ne 0$ have at most two images $(x : y)$; (c) for $\omega = (1, 1, m)$ with $m \ge 2$, there are a set $B \subset \mathbb{P}^1$ with $|B| \le 2$ and a binary form $c$ of degree $m$ such that each point of $Z$ with $(x, y) \ne 0$ and $(x : y) \notin B$ satisfies $w = c(x, y)$; (d) for $\omega = (1, m, m)$ with $m \ge 2$, $Z \cap \{x = 1\}$ lies on two lines with independent directions; (e) for $\omega = (a, b, b)$ with $2 \le a < b$ and $a \nmid b$, the points of $Z$ with $x \ne 0$ and $(y, w) \ne 0$ have at most two images $(y : w)$; (f) for $\omega = (1, m_1, m_2)$ with $1 < m_1 < m_2$, there are $s_0 \in k$ and a polynomial $P_1$ of degree at most $\lfloor m_2 / m_1 \rfloor$ with $Z \cap \{x = 1\} \subset \{y = s_0\} \cup \{w = P_1(y)\}$; (g) for three distinct entries, no entry being a nonnegative integer combination of the other two, $Z$ does not meet the torus.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+- SG0000008T
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Proposition 6.1 and Theorem 6.2 of research note 68, with the fixes of the referee report in note 70. The terms of higher $\omega$-weight play no role. Case (b) with $a > b$ and case (e) are the same weight type, and the two conditions agree. Case (a) is Theorem 4.1 of research note 55. The analogue in two variables for the weight $(1, m)$ is SG0000008T. The theorem is about the top face only. After a preparation of the top face, lower faces are often still degenerate, and an edge $x^a \psi(x^u)$ has a torus critical point if and only if $\psi$ has a multiple root, or in the resonant case $a \equiv \lambda u \bmod p$ if $\lambda \psi + T \psi''$ has a nonzero root or is zero (Lemma 6.3 of note 68, in the sense $\nabla f = 0$). The weights with three distinct entries with relations and smallest entry at least $2$, and $n \ge 4$, are open. Exact searches over finite fields for the type $(1, 1, m)$ agree with the criterion. This evidence is numerical and checks the group description, not many forms. The result is not in Lean.'
