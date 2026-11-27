@@ -1,0 +1,14 @@
+tag: SG0000009R
+kind: theorem
+title: 'Rule 61.9'' terminates at the points with omega = 0'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $\xi_0$ be a point of multiplicity $2p$ with $\omega(\xi_0) = 0$, and let $\xi_0, \xi_1, \dots$ be a sequence in which $\xi_{n+1}$ is a point of multiplicity $2p$ over the centre that Rule 61.9'' chooses at $\xi_n$, for each choice of base coordinates adapted to the boundary and each tie-break. Then $\omega(\xi_n) = 0$ for each $n$, and $\delta(\xi_{n+1}) \le \delta(\xi_n) - \frac1B$ with $B = \operatorname{lcm}(1, \dots, 2p)$. So the sequence has at most $B(\delta(\xi_0) - 1) + 1$ points.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000007G
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Theorem 66.6 of research note 66, which the referee report in note 72 checked step by step, with three fixes of wording: the quantifier is over the centre chosen at $\xi_n$, Step 2 can cite Proposition 61.10 of note 61, and at a point that is not rational the field $k$ is replaced by the residue field, which is perfect. At a simultaneously prepared $z$ the polyhedron is the orthant $\hat\mu + \mathbb{R}^3_{\ge 0}$ with $\hat\mu = \sum_{k \in E} \mu_k e_k$, the centre is $V(z, x_S)$ with $S \subseteq E$ and minimal, the transform is again an orthant with no cancellation and no re-preparation, and $\delta$ drops by $1 - \sum_{k \in S \setminus (T \cup \{j\})} \mu_k > 0$. Each value of $\delta$ lies in $\frac1B \mathbb{Z}$, because it has the form $n/i$ with $1 \le i \le 2p$. This proves the case $\omega = 0$ of the conjecture SG0000009T in its strong form. The lab of note 66 checked it on $2075$ germs and $30461$ nodes, and note 72 checked it again with independent code and random changes of the base coordinates, with no failure. Handbook Volume 7, Theorem 4.4.13. The result is not in Lean.'

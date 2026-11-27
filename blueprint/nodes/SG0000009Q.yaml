@@ -1,0 +1,16 @@
+tag: SG0000009Q
+kind: theorem
+title: 'No invariant of the form omega minus a constant times the low flag is monotone under Rule 61.9'''
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $p = 3$ and $c \in \mathbb{R}$. Let $\lambda = 1$ at a low point and $\lambda = 0$ otherwise, and let $\lambda_{R1} = 1$ at a low point of R1 and $\lambda_{R1} = 0$ otherwise. Then neither $\omega - c \lambda$ nor $\omega - c \lambda_{R1}$ is non-increasing along the steps of Rule 61.9''.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000009M
+- SG0000009P
+- SG0000009N
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Proposition 66.5 of research note 66, which the referee report in note 72 confirmed. SG0000009M forces $c \ge \frac13$: there $\omega$ goes from $1$ to $\frac43$ and the flag goes from $0$ to $1$. SG0000009P forces $c \le 0$ for $\lambda_{R1}$. For $\lambda$, a second germ with $E = \{1, 2\}$, $a_3 = 2 x_0 x_1^2 x_2^3 + x_0^2 x_2^2$ and $a_6 = x_0^2 x_1^4 x_2^6 + x_0^3 x_1^2 x_2^5 + 2 x_0^3 x_1^5 x_2^2 + x_0^4 x_2^4$ has a low point with $\omega = 1$ over which the rule gives a point that is not low with $\omega = \frac56$, which forces $c \le \frac16$. Only points of R1 are used, where the flag is intrinsic by SG0000009N. The second germ uses particular base coordinates, which the strong form of Conjecture 65.2 (SG0000009T) allows. A replacement of $\omega$ must carry a second number. Handbook Volume 7, Proposition 4.4.12. The result is not in Lean.'

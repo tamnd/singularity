@@ -1,0 +1,14 @@
+tag: SG0000009K
+kind: counterexample
+title: 'The residual slope omega goes up under the centre of Rule 61.9'' for multiplicity 2p'
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $E = \{0, 1, 2\}$, $F = x_0 x_1^p x_2^{p-1}$ and $f = (z^p + F)^2 + x_0 x_1^{2p} x_2^{p-1} z^{p-1} + x_0^2 x_1^p x_2^{4p}$. Then $f$ is reduced, the origin $\xi$ has multiplicity $2p$ and lies in the regime R1, $\delta = 2$, $\mu = (\frac{1}{p+1}, \frac12, \frac{p-1}{p+1})$ and $\omega(\xi) = \frac{p+3}{2(p+1)}$. For each tie-break and each choice of base coordinates, Rule 61.9'' blows up the point $\xi$. For $\lambda \in k^*$, the point $x_1'' = 0$, $x_2'' = \lambda$ of the chart of $x_0$ has multiplicity $2p$, lies in R1, has the boundary $E'' = \{0, 1\}$ and has $\omega = \frac{p+2}{2p}$. So $\omega$ goes up by $\frac{1}{p(p+1)}$ under the centre of the rule.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000007G
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Theorem 65.1 of research note 65, the referee report on note 61, with the correction of the slip that note 66 found and that the referee report in note 72 confirmed. After the translation $z'' \mapsto z'' + \gamma$ with $\operatorname{ord} \gamma = 2$, the rigid coefficients $b_{p+1+j} = \binom{p-1}{j} \gamma^j a''_{p+1}$ have the order $4p - 1 + 2j$, not $4p - 1 + j$ as note 65 wrote. So the least rigid slope at the new point is $\sigma^* = \frac{6p-5}{2p-1}$, which is larger than $\delta = \frac{2p+1}{p}$ because $2p^2 - 5p + 1 > 0$. The point stays in R1 and the conclusion is unchanged. For $p = 3$ the value of $\sigma^*$ is $\frac{13}{5}$. The theorem refutes part (a) of Conjecture 61.18 of note 61 for each odd $p$. Because $E$ has three components, the centre does not depend on any choice. Note 72 recomputed the theorem exactly for $p = 3, 5, 7$. Handbook Volume 7, Theorem 4.4.7. The result is not in Lean.'

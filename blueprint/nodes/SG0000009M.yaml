@@ -1,0 +1,15 @@
+tag: SG0000009M
+kind: counterexample
+title: 'A jump of omega by 1/p under the centre of Rule 61.9'''
+statement: 'Let $p$ be an odd prime, $k$ a perfect field of characteristic $p$, $R = k[[x_0, x_1, x_2]]$ and $f = z^{2p} + a_1 z^{2p-1} + \dots + a_{2p}$ with $a_i \in R$ and $\operatorname{ord} a_i \ge i$, with a boundary $E \subseteq \{0, 1, 2\}$. For a weight $w$ let $\delta(w) = \sup_z \min_i v_w(a_i)/i$ be the slope of Hironaka, and put $\delta = \delta(1, 1, 1)$, $\mu_k = \delta(e_k)$ and $\omega = \delta - \sum_{k \in E} \mu_k$, the residual slope of research note 61. Let $E = \{0, 2\}$, $F = x_0 x_1^p x_2^{p-1}$ and $f = (z^p + F)^2 + x_0^{2p} x_1 x_2^2 z^{2p-2} + x_0^2 x_1^{p+1} x_2^{4p+2}$. Then $f$ is reduced, the origin $\xi$ has multiplicity $2p$ and lies in R1, $\delta = 2$, $\mu = (\frac1p, \frac12, \frac{p-1}{p})$ and $\omega(\xi) = 1$. For each choice of base coordinates adapted to $E$ and each tie-break, Rule 61.9'' blows up the point $\xi$. For $\lambda \in k^*$, the point $x_1'' = 0$, $x_2'' = \lambda$ of the chart of $x_0$ has multiplicity $2p$, lies in R1, has $E'' = \{0\}$ and has $\omega = \frac{p+1}{p}$. So $\omega$ goes up by $\frac1p$ under the centre of the rule.'
+sources:
+- paper: Hir67
+- paper: CP19
+uses:
+- SG0000009K
+- SG0000007G
+tier: T2
+route:
+- R1
+- R5
+notes: 'This is Theorem 66.3 of research note 66, which the referee report in note 72 checked by hand for $p = 3$ and by independent exact code for $p = 3, 5, 7$, with the values $\frac43$, $\frac65$ and $\frac87$ at the new point and $\omega \le 1$ at each other point of multiplicity $2p$ over $\xi$. One sentence of the proof is corrected by note 72: by the theorem of Lucas, $\binom{2p-2}{p-1} \equiv 0$, so the rigid coefficient $b_{p+1}$ is $0$. The least rigid slope is attained at $j = 2p - 3$, where it is $\frac{6p-4}{2p-1}$, so the conclusion does not change. The mechanism is the one of SG0000009K: the re-preparation at the new point removes the $p$-th power $\lambda^{p-1} x_0^p x_1''^p$ from $F$ and leaves a term of order $2p + 1$ that is linear in the new free variable, and $\mu_0$ jumps to $1$. Handbook Volume 7, Theorem 4.4.8. The result is not in Lean.'
