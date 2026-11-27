@@ -1,0 +1,13 @@
+tag: SG0000006S
+kind: lemma
+title: Two points of the family x squared Y plus F are not cylindrical at any point of the run
+statement: Let $p \ge 3$, $Y = y^{p-2} z^{p-2}$, and let $g = x^2 Y + w y^p z^p$ or $g = x^2 Y + x w y^p z^p$, with $n = 4$ and $\Delta = V(y) \cup V(z)$. At each point $P_m$ of a corner run in four variables of $g$ there is no free coordinate system $(x'', w'')$ such that the function of $P_m$ is, up to a $p$-th power and a factor $\varepsilon^p$ with $\varepsilon$ a unit, a series in $x'', y_m, z_m$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006R
+- SG0000006K
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.11 of Volume 7 of the handbook (Section 3.17). The proof applies the derivation $D = \partial / \partial w''$, which kills $y_m$, $z_m$ and the $p$-th powers, to $x^2 + R$, and finds that both coefficients of $D$ in $\partial_x, \partial_w$ vanish at the point. The letters $y_m, z_m$ are fixed; a change of the letters by units is not treated. It is Lemma 5.5 of note 38 of the research notes. The result is not in Lean.

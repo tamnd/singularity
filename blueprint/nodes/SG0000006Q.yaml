@@ -1,0 +1,14 @@
+tag: SG0000006Q
+kind: conjecture
+title: Each corner run in four variables has only a finite number of nonzero translations
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Then each corner run in four variables from $P_N$, with two letters $y, z$ and translations $(a_m, b_m) \in K^2$, has only a finite number of nonzero translations. This is false. SG0000006T is a counterexample.
+sources:
+- paper: CJS20
+uses:
+- SG0000006K
+- SG00000067
+- SG0000006H
+tier: T2
+route:
+- R1
+notes: 'This is Question 3.17.7 of Volume 7 of the handbook (Section 3.17). The Notes of Section 3.14 asked it, as the analogue for $n = 4$ and $k = 2$ of the finiteness for $n = 3$ (SG0000006H). The answer is negative: SG0000006T gives runs with $\rho = 1$ and an infinite number of nonzero translations in each free coordinate system, also for points with $\deg_{x, w} g = 2 < p$. Question 3.13.18 is not refuted by this, and the corrected forms are SG0000006Z and SG00000075. The status stays open until a Lean proof of the negation exists.'

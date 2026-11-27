@@ -1,0 +1,12 @@
+tag: SG0000006K
+kind: lemma
+title: Free coordinates in four variables keep the run and the order rho
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. A free coordinate system at $P_m$ is a pair $(x'', w'')$ such that $(x'', w'', y_m, z_m)$ is a regular system of parameters. (1) The ideal $\Theta(g) = (g_x, g_w, y g_y, z g_z)$, its monomial $x^r$ and $\rho$ do not depend on the free coordinate system, on a $p$-th power added to $g$, or on a factor $\varepsilon^p$ with $\varepsilon$ a unit. (2) A corner run in four variables from $P_m$ is a corner run in four variables in the coordinates $(x'', w'', y_m, z_m)$, with the same points, charts and $\rho$, and other translations. (3) If $(x'', w'') = (x_m, w_m) A^T$ with $A \in \mathrm{GL}_2(K)$, then the coordinates $(x_j, w_j) A^T$ at $P_j$ have the translations $(a_j, b_j) A^T$.
+sources:
+- paper: CJS20
+uses:
+- SG00000063
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.2 of Volume 7 of the handbook (Section 3.17). It is Lemma 3.15.2 with one more free coordinate. Part 3 follows from $\alpha x_m + \beta w_m = L_m(\alpha x_{m+1} + \beta w_{m+1} + \alpha a_m + \beta b_m)$. It is Lemma 2.2 of note 38 of the research notes. The result is not in Lean.

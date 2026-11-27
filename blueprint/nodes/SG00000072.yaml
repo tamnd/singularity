@@ -1,0 +1,14 @@
+tag: SG00000072
+kind: counterexample
+title: The point x w (x + w) y^(p-3) z^(p-3) has a corner run with no corner surface of order at least rho
+statement: Let $p \ge 5$, $n = 4$, $\Delta = V(y) \cup V(z)$ and $g = x w (x + w) y^{p-3} z^{p-3}$. Then $g$ is clean, $G = x w (x + w)$, $d = 3$ and $\rho = 2$. The $y$-chart and the $z$-chart at the origin send $g$ to $g$, and the translation $0$ is the only one that keeps $\rho$. So each word in the two charts with each chart an infinite number of times is a corner run in four variables with all translations $0$. Each free coordinate $X$ at each point of the run has $\nu^G \le 1$ on $V(X, y)$ and on $V(X, z)$, whatever its translations. So SG00000071 is false. The corner curves $V(x, w, y)$ and $V(x, w, z)$ and the surface $V(x, w)$ have $\nu^G = 3 \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG00000070
+- SG0000007B
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.21 of Volume 7 of the handbook (Section 3.17). So Question 3.13.18 and Question 3.13.13 have a positive answer here, and the run is a cycle of the kind of Remark 3.12.3. It is Theorem 2.3 of note 40 of the research notes, with the fix of note 42. Note 42 checked it over $\mathbb{F}_5$, $\mathbb{F}_{25}$, $\mathbb{F}_{49}$, $\mathbb{F}_{121}$ and $\mathbb{F}_{125}$, with nonlinear free coordinates. The result is not in Lean.

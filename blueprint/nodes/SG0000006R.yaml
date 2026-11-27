@@ -1,0 +1,14 @@
+tag: SG0000006R
+kind: theorem
+title: The points x squared times y to the p minus 2 times z to the p minus 2 plus higher terms keep rho equal to 1 with any translations in w
+statement: Let $p \ge 3$, $n = 4$, $\Delta = V(y) \cup V(z)$, $Y = y^{p-2} z^{p-2}$, and let $F \in K[[y, z]][x, w]$ have each monomial divisible by $y^p z^p$, such that $g = x^2 Y + F$ is clean. Then a sequence of steps from $P_N$, with each chart an infinite number of times, is a corner run in four variables with $\rho \ge 1$ if and only if $a_m = 0$ for each $m$. Then $\rho = 1$ at each point, with any $b_m \in K$. The function of $P_m$ is $y_m^{p-2} z_m^{p-2} (x^2 + R)$ up to a $p$-th power monomial, with $R \in (y_m z_m)$, and $\nu^G \ge 1$ along $V(x_m, y_m)$ and $V(x_m, z_m)$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006J
+- SG0000006K
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.17.8 of Volume 7 of the handbook (Section 3.17). A term $c\, x^i w^l y^A z^B$ of $F$ gives, after division by $M_m^2 Y$, monomials with the exponent at least $E_m(A - p + 2, B - p + 2) + (i + l' - 2) e_m$, which is divisible by $y_m z_m$. If $a_j \ne 0$, then $G$ becomes $(x + a_j)^2 + R$, a unit. It is Proposition 5.1 of note 38 of the research notes, with the converse of note 39. Note 38 tested it at 9000 points and note 39 at 15200 points. The result is not in Lean.

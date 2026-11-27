@@ -1,0 +1,12 @@
+tag: SG00000079
+kind: theorem
+title: In a corner run with rho less than p each point before a change of letter has type 1
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, and let $P_N, P_{N+1}, \dots$ be a corner run in four variables with $1 \le \rho < p$. If the steps out of $P_m$ and out of $P_{m+1}$ use different letters, then $P_m$ has type $1$, so $d = \rho + 1 \le p$ at $P_m$.
+sources:
+- paper: CJS20
+uses:
+- SG00000078
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.17.28 of Volume 7 of the handbook (Section 3.17). The point $P_{m+1}$ reached by the step can have type $0$. It is Corollary 3.4 of note 40 of the research notes, in the words of note 42. The result is not in Lean.

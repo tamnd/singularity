@@ -1,0 +1,12 @@
+tag: SG00000070
+kind: lemma
+title: The order of G along a corner surface is bounded by the multiplicity of a line in the binary initial form
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, $g = y^{r_y} z^{r_z} G$, and let $(X, W, y, z)$ be a regular system of parameters. (1) If $D$ is a derivation with $D(y) = D(z) = 0$, then $\nu^G_{V(X, z)} \le 1 + \operatorname{ord}_{V(X, z)}(D G)$. (2) If $\operatorname{in} G = h(x, w)$ is a nonzero binary form of degree $d$ with $1 \le d < p$, and $\ell$ is the part in $x, w$ of the linear part of $X$, then $\nu^G_{V(X, z)} \le \max(1, \operatorname{mult}_\ell h)$, where $\operatorname{mult}_\ell h$ is the largest $m$ with $\ell^m \mid h$. The same holds for $V(X, y)$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005T
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.19 of Volume 7 of the handbook (Section 3.17). Part 1 is the proof of Lemma 3.13.14 (SG0000005T) with one derivation. Part 2 applies part 1 to a constant derivation $D$ with $D(\ell) = 1$ if $\ell \mid h$, and to $\partial_x$ or $\partial_w$ by the Euler identity if not. It is Lemmas 2.1 and 2.2 of note 40 of the research notes. Note 42 tested part 2 on 45000 random pairs over $\mathbb{F}_9$, $\mathbb{F}_{25}$ and $\mathbb{F}_{49}$ with no failure. The result is not in Lean.

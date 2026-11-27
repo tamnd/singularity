@@ -1,0 +1,13 @@
+tag: SG00000077
+kind: lemma
+title: For a point in the p-th powers of the free coordinates a step that keeps rho needs p-th powers of the letter
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x^p, w^p]$ be clean with $\rho \ge 1$. If a $y$-step keeps $\rho$, then each monomial of $\operatorname{in} G$ has its exponent of $y$ divisible by $p$. The same holds for $z$ and a $z$-step.
+sources:
+- paper: CJS20
+uses:
+- SG0000004X
+- SG00000059
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.26 of Volume 7 of the handbook (Section 3.17). Here $G_x = G_w = 0$, so the point has type $0$, and Theorem 3.7.1, part 1, applies to $r_y G + y G_y$ and $r_z G + z G_z$. It is Lemma 3.2 of note 40 of the research notes. The result is not in Lean.

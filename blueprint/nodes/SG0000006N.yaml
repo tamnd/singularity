@@ -1,0 +1,15 @@
+tag: SG0000006N
+kind: theorem
+title: Each direction of the translations of a corner run in four variables is of transcendental type
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let the run be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). For $\lambda = (\alpha, \beta) \ne 0$ put $t^\lambda_j = \alpha a_j + \beta b_j$, the translation of the free coordinate $\alpha x + \beta w$. If an infinite number of the $t^\lambda_j$ are not $0$, then the values of $\alpha \varphi_m + \beta \psi_m$ just after these translations form a pseudo Cauchy sequence of transcendental type over $\hat H$, $H = K(y_N, z_N)$, and $\alpha \varphi_\infty + \beta \psi_\infty$ is transcendental over $\hat H$.
+sources:
+- paper: CJS20
+- paper: Kuh10
+- paper: Kuh-book
+uses:
+- SG0000006K
+- SG00000062
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.17.4 of Volume 7 of the handbook (Section 3.17). The proof of Proposition 3.15.7 uses only the sequence $\sum_j t_j M_{j+1}$ with $t_j \in K$ and the monomials of the run, which has the two letters $y, z$. So the value group stays $\mathbb{Z} + \theta \mathbb{Z}$ of rational rank $2$ for $k = 2$ and each $n$, and the proof applies to $t^\lambda_j$. The transcendence is the first step of Remark 3.16.15. The pair $(\varphi_\infty, \psi_\infty)$ is not treated, and the conjecture T of note 38 on the pair is open. It is Proposition 3.1 of note 38 of the research notes. The result is not in Lean.

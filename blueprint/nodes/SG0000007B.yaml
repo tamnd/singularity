@@ -1,0 +1,14 @@
+tag: SG0000007B
+kind: theorem
+title: A binary initial form of degree less than p allows a nonzero translation only if it is a power of a line
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, let $g = y^{r_y} z^{r_z} G$ be clean with $\operatorname{ord} g \ge p$, and let $\operatorname{in} G = h(x, w)$ be a binary form of degree $d$ with $2 \le d < p$. If a $y$-step or a $z$-step with the translation $u = (a, b) \ne 0$ keeps $\rho$, then $h = c \ell^d$ with $\ell = b x - a w$, so $\ell(u) = 0$.
+sources:
+- paper: CJS20
+uses:
+- SG0000004X
+- SG00000059
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.17.30 of Volume 7 of the handbook (Section 3.17). The type is $1$ by the Euler identity. Theorem 3.7.1, part 2 (SG0000004X), applied to $G_x$ and $G_w$ gives $D_u h_x = D_u h_w = 0$, so $D_u h = 0$, and $h$ is a form in $\ell$ alone since $d < p$. It is Proposition 4.1 of note 40 of the research notes (Proposition H). The result is not in Lean.
