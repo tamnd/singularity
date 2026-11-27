@@ -1,0 +1,14 @@
+tag: SG00000080
+kind: hypothesis
+title: Resolution of log regular schemes
+statement: Let $X$ be a log regular scheme in the sense of Kato. There is a log blowup $Y \to X$ such that $Y$ is regular, $Y \to X$ is projective, and $Y \to X$ is an isomorphism over the open set of $X$ where the log structure is trivial.
+sources:
+- paper: Kat94
+- paper: Niz06
+- paper: KKMS
+uses:
+- SG0000001T
+tier: T3
+route:
+- R7
+notes: Input (A15) of research note 56. It is the toroidal resolution of [KKMS] in the language of log geometry, and it holds in each characteristic. SG00000085 uses it. Handbook Volume 9, Section 3.21. Not in Lean.

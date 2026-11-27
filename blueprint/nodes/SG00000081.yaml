@@ -1,0 +1,15 @@
+tag: SG00000081
+kind: lemma
+title: A small completed local degree forces separability
+statement: 'Let $k$ be a field of characteristic $p > 0$ and $R$ a normal local domain, essentially of finite type over $k$, with fraction field $K$. Let $K^*$ be the fraction field of the completion $R^*$. Let $L/K$ be a finite extension, $T$ the integral closure of $R$ in $L$, $\mathfrak{m}$ a maximal ideal of $T$, $S = T_{\mathfrak{m}}$, and $L^*$ the fraction field of the completion $S^*$. If $[L^* : K^*] < p$, then $L/K$ is separable.'
+sources:
+- paper: Cut09
+  loc: Theorem 14.4
+- paper: EGA4
+uses:
+- SG0000000M
+- SG00000030
+tier: T1
+route:
+- R2
+notes: 'Lemma 3.2 of research note 56. It is a standard lemma: the inseparable degree of $L/K$ divides each completed local degree. The proof writes $L \otimes_K K^*$ as the product of the fraction fields of the completions of the localizations of $T$, and shows that each factor has degree divisible by $[L : L_s]$, where $L_s$ is the separable closure of $K$ in $L$. It makes explicit the separability of $L/K$ that [Cut09] Theorem 14.4 uses without a statement: the discriminant in that proof is nonzero only if the generators are separable (note 62, Section 2.2). Handbook Volume 9, Section 3.21. Planned for Lean.'

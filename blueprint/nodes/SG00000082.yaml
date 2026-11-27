@@ -1,0 +1,22 @@
+tag: SG00000082
+kind: theorem
+title: Jung's method gives local uniformization of 4-folds for p > 24
+statement: Let $k$ be an algebraically closed field of characteristic $p > 24$, and assume SG0000007W. Let $L$ be a function field of transcendence degree 4 over $k$ and $V$ a valuation ring of $L$ that contains $k$. Then there is a regular local ring $A$, essentially of finite type over $k$, with fraction field $L$ and dominated by $V$.
+sources:
+- paper: Cut09
+  loc: Theorem 14.4
+- paper: Abh66
+uses:
+- SG0000007W
+- SG0000007Y
+- SG0000007Z
+- SG00000081
+- SG00000033
+hypotheses:
+- SG0000007W
+- SG0000007Y
+- SG0000007Z
+tier: T6
+route:
+- R2
+notes: 'This is [Cut09] Theorem 14.4 in dimension 4: the proof of Cutkosky for 3-folds works in dimension 4 when SG0000007W holds. It is not a new theorem. The write-up in dimension 4 is research note 56, Theorem 3.1, and note 62 checked it line by line. In [Cut09] the dimension enters only through the embedded resolution of surfaces and $3! < p$. Here SG0000007W gives the local monomialization of one element at the closed points of $\mathbb{P}^4$ (note 56, Lemma 1.3), and the bound is $4! = 24 < p$, from SG0000007Y. The proof also uses SG0000007Z, SG00000081, and standard facts on multiplicities and completions, the inputs (A2) to (A10), (A12) and (A13) of note 56. The conclusion is local uniformization without a finite set. It is weaker than the affine form of SG0000001H. Handbook Volume 9, Section 3.21. Planned for Lean.'

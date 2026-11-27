@@ -1,0 +1,15 @@
+tag: SG0000007X
+kind: conjecture
+title: Patching in dimension 4 from local uniformization without a finite set
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$. Suppose that for each function field $L$ of transcendence degree 4 over $k$ and each valuation ring $V$ of $L$ that contains $k$, there is a regular local ring $A$, essentially of finite type over $k$, with fraction field $L$ and dominated by $V$. Then each variety of dimension 4 over $k$ has a resolution.
+sources:
+- paper: Cut09
+  loc: Section 16
+- paper: Zar44
+uses:
+- SG0000000X
+- SG00000007
+tier: T6
+route:
+- R2
+notes: This is the hypothesis $\mathrm{Patch}_4^{\rm Z}$ of research note 56, Corollary 3.3, in the form of note 62. It is the form of patching of [Cut09, Section 16], where the premise has no finite set. The premise is weaker than the affine form of local uniformization of SG0000001H, which asks for a regular center that contains a given finite set. So this statement implies SG0000001J for 4-folds, and it is a priori a stronger assumption. In characteristic 0 the conclusion is true by SG0000001P, but no proof by patching is known for 4-folds, also in characteristic 0. For 3-folds, [Cut09] Theorems 16.1 and 16.2 prove the analogue from the quasi-compactness of the Zariski-Riemann space and principalization. Handbook Volume 9, Section 3.21.
