@@ -1,0 +1,11 @@
+tag: SG000000BX
+kind: lemma
+title: 'Extension of an ideal from an open set with controlled cosupport'
+statement: 'Let $V$ be a Noetherian scheme, $j \colon \tilde U \to V$ an open immersion, $G$ closed in $\tilde U$, $\bar G$ its closure in $V$, and $H \subseteq \mathcal{O}_{\tilde U}$ a coherent ideal with $V(H) \subseteq G$. Then for $n$ large the ideal $H'' = (\mathcal{O}_V \cap j_* H) + I_{\bar G}^n$ is coherent, $H''|_{\tilde U} = H$, and $H'' = \mathcal{O}_V$ on $V \setminus \bar G$.'
+sources:
+- paper: Har
+  loc: 'Exercise II.5.15'
+tier: T1
+route:
+- R2
+notes: 'Lemma 77.5 of research note 77, confirmed in note 82. Since $V(H) \subseteq G$ and $\tilde U$ is Noetherian, $I_G^n \subseteq H$ for $n$ large. Handbook Volume 9, Section 3.24. The result is not in Lean.'

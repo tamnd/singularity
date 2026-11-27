@@ -1,0 +1,13 @@
+tag: SG000000BR
+kind: conjecture
+title: 'The purely inseparable step of local uniformization in dimension 4'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$. Let $A$ be a regular local ring, essentially of finite type over $k$, whose fraction field $L$ has transcendence degree 4 over $k$. Let $a \in A$ with $b = a^{1/p} \notin L$, and let $v$ be a valuation of $L(b)/k$ that dominates $A$. Then there is a regular local ring $A'' \subset L(b)$, essentially of finite type over $k$, with fraction field $L(b)$, dominated by $\mathcal{O}_v$, such that $A[b] \subseteq A''$.'
+sources:
+- paper: Tem13
+  loc: 'Remark 1.3.5'
+uses:
+- SG0000001G
+tier: T6
+route:
+- R2
+notes: 'This is $\mathrm{PILU}_4$, Definition 2.3 of research note 02. With SG0000001G it implies the affine form of local uniformization SG0000001H (note 02, Theorem 2.6), and SG000000BT shows that it is also necessary for resolution. The reduction from the local core of route V in note 77, Proposition 77.12, has a gap that the referee report in note 82 found, so this node does not use it. It is open. Handbook Volume 9, Section 3.24. The result is not in Lean.'

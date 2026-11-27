@@ -1,0 +1,19 @@
+tag: SG000000C7
+kind: counterexample
+title: 'The dimension 2 step of the patching proofs fails at generic points of curves in dimension 4'
+statement: 'In dimension 3 the patching proofs of Cutkosky and of Cossart and Piltant use, at the generic point $\xi$ of a curve in the fundamental locus that maps onto a curve, that a regular local ring of dimension 2 that birationally dominates another one is an iterated quadratic transform of it. In dimension 4 the corresponding local rings have dimension 3 over the imperfect field $\kappa(\xi)$, and both forms of the step fail: there are regular local rings $R \subset S$ of dimension 3, essentially of finite type over $k(t)$, with $S$ birationally dominating $R$, such that $S$ is not an iterated monoidal transform of $R$ and $\mathfrak{m}_R S$ is not principal. For toric pairs a local strong factorization exists in each characteristic.'
+sources:
+- paper: Cut09
+  loc: 'proof of Theorem 15.1'
+- paper: CP19
+  loc: 'Proposition 4.6, Step 2'
+- paper: Kar03
+  loc: 'Theorems 0.1 and 0.2'
+uses:
+- SG0000004A
+- SG000000C3
+- SG000000C5
+tier: T6
+route:
+- R2
+notes: 'Section 83.7 of research note 83. Take $R = k(t)[x,y,z]_{(x,y,z)}$ and $S = S_0$ of SG000000C2 over $k(t)$ (SG000000C3). Cutkosky needs direct factorization at $\xi$, and SG000000C5 shows that it fails also in a global configuration. Cossart and Piltant need that $\mathfrak{m}_R S$ becomes principal, in Step 2 of the proof of their Proposition 4.6, condition (4.7); this reading of their proof is from note 83 and is not a theorem. Local strong factorization (a ring that is an iterated monoidal transform of both $R$ and $S$) holds for toric pairs in each characteristic [Kar03, Theorem 0.2] and in characteristic 0 in general [Kar03, Theorem 0.1]. In characteristic $p$ it is open. New in note 83; a second referee has not read it yet. Handbook Volume 9, Section 3.24. The result is not in Lean.'

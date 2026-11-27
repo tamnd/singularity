@@ -1,0 +1,13 @@
+tag: SG000000C8
+kind: conjecture
+title: 'Regular reachability of regular cones is toric reachability'
+statement: 'Let $F$ be a field, $R = F[x,y,z]_{(x,y,z)}$, and for a regular cone $\sigma \subseteq \mathbb{R}^3_{\ge 0}$ let $S_\sigma$ be the local ring of $F[\sigma^\vee \cap \mathbb{Z}^3]$ at its maximal monomial ideal. If $S_\sigma$ is an iterated monoidal transform of $R$ with arbitrary regular centers, then $\sigma$ is reached from $\mathbb{R}^3_{\ge 0}$ by smooth star subdivisions at 2-faces or at the cone.'
+sources:
+- paper: Ful93
+uses:
+- SG000000C2
+- SG000000C3
+tier: T3
+route:
+- R2
+notes: 'Problem 83.P1'' of research note 83, stated in one direction. The converse is clear. Computation 83.9 of note 83 checks a sufficient condition (H) for the statement: for entries at most 3 all 144 cones that toric subdivisions do not reach are settled, and for entries at most 4, 768 of the 900 are settled. The 132 cones that are left (22 classes) are open; an example is $\langle (0,1,3), (1,2,2), (3,4,1) \rangle$, where the center $(x, y + z^3)$ is allowed. The question is open in both forms. Handbook Volume 9, Section 3.24. The result is not in Lean.'

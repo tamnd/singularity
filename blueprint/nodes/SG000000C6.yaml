@@ -1,0 +1,16 @@
+tag: SG000000C6
+kind: theorem
+title: 'The weakest form of Claim A that the patching proof needs'
+statement: 'In the proof of SG000000C1, replace Claim A by the condition (A$^{\rm w}$): there is an open set $\tilde U_2$ with $L \subseteq \tilde U_2 \subseteq U_2 = \mathrm{Reg}\, V_2$ such that $\overline{\Phi \cap \tilde U_2} \cap \alpha^{-1}(\mathrm{Reg}\, V_1) \subseteq \tilde U_2$. Then SG000000BV and (A$^{\rm w}$), for some choice of the principalization in Step 3, give the conclusion of SG000000BQ for $(V_0, V_1, N)$. Claim A implies (A$^{\rm w}$), and (A$^{\rm w}$) does not imply Claim A.'
+sources:
+- paper: Cut09
+  loc: 'proof of Theorem 15.1'
+uses:
+- SG000000C1
+- SG000000BV
+hypotheses:
+- SG000000BV
+tier: T6
+route:
+- R2
+notes: 'Proposition 83.13 of research note 83, with its remarks. This result is new in note 83, and a second referee has not read it yet. Step 6 of the proof uses Claim A only through (A$^{\rm w}$). If $V_0$ in SG000000C5 is replaced by a toric resolution that keeps $D$ and $\sigma_0$, then (A$^{\rm w}$) holds and Claim A still fails. In SG000000C5 itself (A$^{\rm w}$) fails, because each such $\tilde U_2$ contains the generic point of $V(\sigma_0)$, whose closure contains the singular point $z$ over a regular point of $V_1$. So no hypothesis on the principalization of Step 3 and no choice of $\tilde U_2$ make Steps 5 and 6 of the proof work in dimension 4. Handbook Volume 9, Section 3.24. The result is not in Lean.'

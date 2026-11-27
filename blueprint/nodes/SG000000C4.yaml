@@ -1,0 +1,14 @@
+tag: SG000000C4
+kind: counterexample
+title: 'Faithful principalization over curves is false'
+statement: 'Let $k$ be a field. On $U = \mathbb{A}^4_k$ with coordinates $(t,x,y,z)$ let $K = (x^3 y^3 z^3, x^4 y z^4, y^9 z, x^5 z^4)$, let $\alpha \colon Z \to U$ be its normalized blowup, and let $\zeta$ be the generic point of $\zeta_0 \times \mathbb{A}^1_t$, where $\zeta_0$ is the torus-fixed point of the chart of $\sigma_0$. Then $\zeta \in \mathrm{Reg}\, Z$, $\dim \overline{\alpha(\zeta)} = 1$, $\dim \mathcal{O}_{Z,\zeta} = 3$, and no principalization of $K$ is a local isomorphism over $\zeta$. So $\mathrm{Fac}_3$ of SG000000BZ is false in each characteristic.'
+sources:
+- paper: Ful93
+uses:
+- SG000000C3
+- SG000000C0
+- SG000000BZ
+tier: T3
+route:
+- R2
+notes: 'Corollary 82.3 of the referee report in note 82. The exponents of $K$ are $u_0 = (3,3,3)$ and $u_0 + u_j$ for the dual basis $u_1 = (1,-2,1)$, $u_2 = (-3,6,-2)$, $u_3 = (2,-3,1)$ of $\sigma_0$, so the normal cone of the Newton polyhedron at $u_0$ is $\sigma_0$. Note 83 uses the vertex $(3,3,2)$ and $K = (x^3 y^3 z^2, x^4 y z^3, y^9, x^5 z^3)$, which works equally well. The local ring at $\zeta$ is $S_0$ over $F = k(t)$, and SG000000C0 with SG000000C3 gives the contradiction. Here $V_1 = \mathbb{A}^4$ is regular, so the example does not refute $\mathrm{Fac}_3^L$ or SG000000BQ. Handbook Volume 9, Section 3.24. The result is not in Lean.'

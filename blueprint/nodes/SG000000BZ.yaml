@@ -1,0 +1,13 @@
+tag: SG000000BZ
+kind: definition
+title: 'Faithful principalization over curves, Fac_3 and Fac_3^L'
+statement: 'Let $U$ be a regular quasi-projective 4-fold, $K \subseteq \mathcal{O}_U$ a nonzero ideal, and $\alpha \colon Z \to U$ the normalized blowup of $K$. $\mathrm{Fac}_3$ asks for a principalization $\sigma \colon W \to U$ of $K$, by blowups along regular centers in the locus where $K$ is not invertible, such that the induced morphism $\tau \colon W \to Z$ is a local isomorphism over each $\zeta \in \mathrm{Reg}\, Z$ with $\dim \overline{\alpha(\zeta)} = 1$ and $\dim \mathcal{O}_{Z,\zeta} \ge 2$. $\mathrm{Fac}_3^L$ asks for the same only for the ideal $K$, the open set $U = U_1 = \mathrm{Reg}\, V_1$ and the set $L$ that the proof of SG000000C1 makes from a triple $(V_0, V_1, N)$ as in SG000000BQ, and only over the points $\zeta$ with, in addition, $\overline{\{\zeta\}} \cap L \ne \emptyset$.'
+sources:
+- paper: Cut09
+  loc: 'proof of Theorem 15.1'
+uses:
+- SG000000BV
+tier: T6
+route:
+- R2
+notes: '$\mathrm{Fac}_3$ is from research note 77, Definition 77.6, and $\mathrm{Fac}_3^L$ is Definition 83.10 of research note 83. Here $L$ is the set of centers on $V_2$ of the valuations in $N$ whose center on $V_1$ is singular. $\mathrm{Fac}_3$ is false (SG000000C4), and $\mathrm{Fac}_3^L$ is false for some triples (SG000000C5). Note 83 shows that $\mathrm{Fac}_3$ is a form of direct factorization, not of strong factorization (SG000000C0). Handbook Volume 9, Section 3.24. The result is not in Lean.'

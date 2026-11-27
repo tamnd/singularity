@@ -1,0 +1,11 @@
+key: Kar03
+title: Karu, Local strong factorization of toric birational maps, J. Algebraic Geom. 14 (2005), arXiv:math/0303148
+tag: P
+tier: T3
+why: Local strong factorization, toric in each characteristic and general in characteristic 0
+year: 2003
+arxiv:
+- math/0303148
+lean: none
+use:
+- read

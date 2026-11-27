@@ -1,0 +1,14 @@
+tag: SG000000C0
+kind: lemma
+title: 'Fac_3 forces direct factorization of 3-dimensional regular local rings'
+statement: 'Assume that $\mathrm{Fac}_3$ of SG000000BZ holds for $(U, K)$. Then each regular local ring $S = \mathcal{O}_{Z,\zeta}$, with $\zeta$ as in $\mathrm{Fac}_3$, is an iterated monoidal transform of $R = \mathcal{O}_{U,\alpha(\zeta)}$: there is a chain $R = T_0 \subset T_1 \subset \dots \subset T_r = S$, dominated by $S$, where $T_{i+1}$ is a localization of the blowup of $\operatorname{Spec} T_i$ along a prime $P$ with $T_i / P$ regular. Conversely, each regular local ring $S$, essentially of finite type over $R$, that birationally dominates $R$ is $\mathcal{O}_{Z,\zeta}$ for some ideal $K$ and some $\zeta \in \mathrm{Reg}\, Z$.'
+sources:
+- paper: Cut09
+  loc: 'proof of Theorem 15.1'
+uses:
+- SG000000BZ
+- SG000000BX
+tier: T2
+route:
+- R2
+notes: 'Lemma 77.10 of research note 77, confirmed in note 82. A valuation that dominates $S$ goes through the blowups of $\sigma$ localized at $\alpha(\zeta)$, and this gives the chain. For the converse, $S$ is the local ring of a normalized blowup of $\operatorname{Spec} R$, which spreads out to a neighborhood and extends by SG000000BX. Research note 83 corrects the remark after the lemma in note 77: the statement that $\mathrm{Fac}_3$ forces is direct factorization, not strong factorization. Direct factorization implies strong factorization, which implies weak factorization. Handbook Volume 9, Section 3.24. The result is not in Lean.'
