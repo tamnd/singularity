@@ -1,0 +1,14 @@
+tag: SG000000AS
+kind: definition
+title: 'Valuations of Knaf-Kuhlmann type in dimension 4 with value group Z^2'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p$, $F/k$ a function field of transcendence degree 4 and $\nu$ a valuation of $F$, trivial on $k$, with $F\nu = k$ and $\nu F \cong \mathbb{Z}^2$. A projection is a transcendence basis $x_1, \dots, x_4$ of $F/k$ in $F$, with $K = k(x_1, \dots, x_4)$ and $K_i = k(x_1, \dots, x_i)$. If $\nu$ has rank 1, the pair $x_1, x_2$ is adapted if $\nu(x_1), \nu(x_2)$ is a basis of $\nu F$, and $C = K_2^c$ is the completion of $K_2$. The valuation $\nu$ is of Knaf-Kuhlmann type (KK type) if $F \subseteq F_0^c$ for a subfield $F_0$ such that $\nu|_{F_0}$ is an Abhyankar valuation. Here $F \subseteq F_0^c$ means that for each $a \in F$ and each $\alpha \in \nu F$ there is $b \in F_0$ with $\nu(a - b) \ge \alpha$.'
+sources:
+- paper: KK09
+  loc: 'Theorem 1.5'
+uses:
+- SG0000000Y
+- SG00000010
+tier: T2
+route:
+- R2
+notes: 'This is Definition 1.3 of research note 76. The valuations of KK type have local uniformization by Theorem 1.5 of [KK09]. If $\nu F = \mathbb{Z}$ and $F\nu = k$, then $F$ lies in the completion of a rational function field in one variable (Corollary 3.10 of note 57), so $\nu$ is of KK type. Abhyankar valuations are of KK type with $F_0 = F$. So for a valuation with residue field $k$ in dimension 4, the value group $\mathbb{Z}^2$ is the first case that these two results do not cover. Handbook Volume 9, Section 3.23. The result is not in Lean.'

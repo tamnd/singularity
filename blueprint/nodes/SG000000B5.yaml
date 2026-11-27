@@ -1,0 +1,12 @@
+tag: SG000000B5
+kind: lemma
+title: 'Hahn series whose support accumulates at a point are not in the completion of an adapted pair'
+statement: 'Let $\Gamma = \mathbb{Z} + \mathbb{Z}\sqrt 2$, $H = k((t^\Gamma))$ with the $t$-adic valuation and $K_2 = k(t, t^{\sqrt 2}) \subset H$. Then the completion $C$ of $K_2$ in $H$ is the set of series with finitely many support points below each bound. If $\vartheta \in H$ has support whose least accumulation point is $\delta$, then $\mathrm{dist}(\vartheta, K_2) = \mathrm{dist}(\vartheta, C) = \delta$, the supremum $\sup \nu(\vartheta - C)$ is not attained, and $\vartheta \notin C$.'
+sources:
+- paper: Kuh-book
+uses:
+- SG000000AZ
+tier: T2
+route:
+- R2
+notes: 'This is Lemma 6.2 of research note 76, which the referee report in note 80 confirms. The truncations of $\vartheta$ below $\delta - \epsilon$ are Laurent polynomials, and for $c \in C$ the difference $\vartheta - c$ still has support points that accumulate at $\delta$. The standard elements are $\vartheta_\delta = \sum_m t^{\gamma_m(\delta)}$ with $\gamma_m(\delta) = \delta + q_m\sqrt 2 - r_m$, where $r_m/q_m$ are the convergents $3/2, 17/12, 99/70, \dots$ of $\sqrt 2$ from above. Handbook Volume 9, Section 3.23. The result is not in Lean.'

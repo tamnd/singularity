@@ -1,0 +1,14 @@
+tag: SG000000BA
+kind: theorem
+title: 'A reduction of Question T1 for family T'
+statement: 'In family T (SG000000B9), let $\psi = \sum_m c_m t^{\gamma_m(0)}$, so $\zeta = t\psi$ and $\varepsilon = t^p\psi^p$, and put $L = K_2(y_3)$ and $M = K_2(\psi^p)$. Then (a) $L^h = M^h$. (b) If $\vartheta$ has the ball property over $M^h$, then $x_4$ has the ball property over $L$, so $K$ has local uniformization in the strong form. (c) $M^h = \bigoplus_r t^r (K_2(\psi)^h)^p$, with $r$ in $\{i + j\sqrt 2 : 0 \le i, j < p\}$, and the sum is orthogonal for $\nu$. So for each $b \in M^h$ there is $B_0 \in K_2(\psi)^h$ with $\nu(\vartheta^p - b) \le p\,\nu(\vartheta - B_0)$, and $X^p - b$ can be a limit key polynomial of $\vartheta$ only if $\nu(\vartheta - B_0) \ge 0$ for some $B_0 \in K_2(\psi)^h$.'
+sources:
+- paper: Kap42
+uses:
+- SG000000B9
+- SG000000B1
+- SG000000B3
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 7.1 of the referee report in note 80. Part (b) uses $x_4 = \vartheta + \varepsilon$ with $\varepsilon \in M^h = L^h$ and the density of $L$ in $L^h$. The Artin-Schreier shape of key polynomial reduces in the same way to the coset components of $\vartheta$. Key polynomials of other shapes and of degree $p^e$ with $e \ge 2$ are not treated. Handbook Volume 9, Section 3.23. The result is not in Lean.'

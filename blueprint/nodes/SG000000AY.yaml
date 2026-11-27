@@ -1,0 +1,12 @@
+tag: SG000000AY
+kind: lemma
+title: 'The completion of an adapted pair does not depend on the pair'
+statement: 'Let $(F, \nu)$ be a rank 1 valued field with residue field $k$ and $\nu F = \Gamma \cong \mathbb{Z}^2$. Let $x = (x_1, x_2)$ and $y = (y_1, y_2)$ be pairs in $F$ whose values are bases of $\Gamma$, and let $C_x$ and $C_y$ be the completions of $k(x_1, x_2)$ and $k(y_1, y_2)$. If $x_1, x_2 \in C_y$, then $C_x = C_y$.'
+sources:
+- paper: Kuh-book
+uses:
+- SG000000AS
+tier: T2
+route:
+- R2
+notes: 'This is Lemma 2.1 of the referee report in note 80, which repairs the proof of Lemma 3.1(c) of research note 76 (Fix 4). The proof identifies $C_y$ with the field of Hahn series in $k((t^\Gamma))$ with finitely many support points below each bound, writes $t$ and $t^{\sqrt 2}$ as Laurent monomials in $x_1, x_2$ times $1 + \eta_i$, and shows that the map $T \mapsto (X^{n_1} \lambda_1 (1 + \eta_1(T)), X^{n_2} \lambda_2 (1 + \eta_2(T)))$ is a contraction on pairs in the closure of $k(x_1, x_2)$, with fixed point $(t, t^{\sqrt 2})$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

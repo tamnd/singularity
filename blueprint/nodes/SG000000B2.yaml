@@ -1,0 +1,15 @@
+tag: SG000000B2
+kind: lemma
+title: 'Sufficient conditions for the ball property'
+statement: 'Let $(L, \nu)$ be a rank 1 valued field and $z$ transcendental over $L$ in an immediate extension. (a) If $z \in L^c$, then $z$ has the ball property over $L$. (b) If $z$ is the limit of a pseudo-Cauchy sequence in $L$ of transcendental type that is cofinal in $\nu(z - L)$, then $z$ has the ball property over $L$. (c) If $L^c$ is algebraically maximal and $z \notin L^c$, then each pseudo-Cauchy sequence in $L$ with limit $z$ that is cofinal in $\nu(z - L)$ is of transcendental type, so $z$ has the ball property over $L$.'
+sources:
+- paper: Kap42
+  loc: 'Lemmas 5 to 8 and Theorem 3'
+- paper: KK09
+  loc: 'Lemma 2.17'
+uses:
+- SG000000B1
+tier: T2
+route:
+- R2
+notes: 'This is Lemma 4.1 of research note 76 with the strengthening of Fix 6 of the referee report in note 80: in (b), once $\min_{j \ge 1}(h_j + j\gamma_n) > h_0$, the ultrametric inequality gives the constant value $\nu(h(a)) = \nu(h(z))$ on a whole ball. Part (c) uses Theorem 3 of Kaplansky and a cofinality argument for a possible limit in $L^c$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

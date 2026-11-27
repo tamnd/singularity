@@ -1,0 +1,15 @@
+tag: SG000000B9
+kind: example
+title: 'Family T: an independent Artin-Schreier defect in the natural projection'
+statement: 'Let $k = \overline{\mathbb{F}}_p$, $\vartheta = \vartheta_0$, $\zeta = \sum_m c_m t^{1 + \gamma_m(0)}$ with $c_m \in k$ chosen so that $\zeta$ is transcendental over $k(t, t^{\sqrt 2}, \vartheta)$, and $\varepsilon = \zeta^p$. Let $K = k(x_1, x_2, x_3, x_4)$ with $x_1 \mapsto t$, $x_2 \mapsto t^{\sqrt 2}$, $x_3 \mapsto \vartheta^p - \vartheta$, $x_4 \mapsto \vartheta + \varepsilon$. Then: (1) $K_3(\vartheta)/K_3$ is an independent Artin-Schreier defect extension with $\mathrm{dist}(\vartheta, K_3) = 0$. (2) A cofinal pseudo-Cauchy sequence of $x_4$ in $K_3$ is of algebraic type, so $x_4$ does not have the ball property over $K_3$. (3) With $y_3 = \varepsilon - \varepsilon^p$ one has $K = k(x_1, x_2, y_3, x_4)$, $y_3 \notin C$, $y_3$ has the ball property over $K_2$, and $\varepsilon \in K_2(y_3)^h$ as the root of positive value of $X^p - X + y_3$. (4) $[K(\zeta) : K] = p^2$, $K(\vartheta)/K$ is separable of degree $p$ inside $K^h$, $K^h(\zeta)/K^h$ is purely inseparable of degree $p$ and immediate, so the defect of $K(\zeta)/K$ is $p$, and $K(\zeta) = k(x_1, x_2, \zeta, \vartheta)$ is rational.'
+sources:
+- paper: Kuh10b
+uses:
+- SG000000B7
+- SG000000B5
+- SG000000B2
+- SG000000B3
+tier: T2
+route:
+- R2
+notes: 'This is Lemma 7.1 and test family T of research note 76 with Fix 8 (the polynomial is $X^p - X + y_3$, not $X - X^p + y_3$), Fix 9 (item 4: the degree is $p^2$ and the extension is not purely inseparable) and Fix 10 of the referee report in note 80. A generic choice of $(c_m)$ exists by a countability argument, and the choice $c_m = 1$ for each $m$ is not allowed, because it gives $\zeta = t\vartheta$. Whether $K$ has local uniformization is open (SG000000BB). Handbook Volume 9, Section 3.23. The result is not in Lean.'

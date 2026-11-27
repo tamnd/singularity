@@ -1,0 +1,13 @@
+tag: SG000000AV
+kind: theorem
+title: 'Rank 2 with residue field of the coarsening of transcendence degree at least 2 is not of Knaf-Kuhlmann type'
+statement: 'Let $\nu = v_1 \circ \bar v$ be as in SG000000AT, with no hypothesis on $\kappa = F v_1$. If $d = \mathrm{trdeg}(\kappa/k) \ge 2$, then $\nu$ is not of KK type.'
+sources:
+- paper: KK09
+uses:
+- SG000000AS
+- SG0000000Y
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 2.1(c) of research note 76, which note 80 confirms. If $F \subseteq F_0^c$ with $\nu|_{F_0}$ Abhyankar, then $F_0\nu = k$, $\nu F_0 = \mathbb{Z}^2$ and $F_0 v_1 = \kappa$, because the completion does not change the value group or the residue fields. So $\mathrm{trdeg} F_0 = 2$, and the Abhyankar inequality for $v_1|_{F_0}$ gives $1 + d \le 2$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

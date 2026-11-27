@@ -1,0 +1,14 @@
+tag: SG000000B6
+kind: example
+title: 'An explicit valuation with local uniformization that is not of Knaf-Kuhlmann type'
+statement: 'Let $k = \overline{\mathbb{F}}_p$, $\Gamma = \mathbb{Z} + \mathbb{Z}\sqrt 2$ and $H = k((t^\Gamma))$. Let $\nu$ be the valuation of $K = k(x_1, x_2, x_3, x_4)$ given by the embedding $x_1 \mapsto t$, $x_2 \mapsto t^{\sqrt 2}$, $x_3 \mapsto \sum_{n \ge 1} t^{n!}$, $x_4 \mapsto \vartheta_0 = \sum_{m \ge 1} t^{q_m\sqrt 2 - r_m}$. Then $x_1, \dots, x_4$ are algebraically independent, $\nu K = \Gamma$, $K\nu = k$, $(K, \nu)$ and each $F \subseteq K^h$ have local uniformization in the strong form, and $\nu$ is not of KK type.'
+sources:
+- paper: KK09
+uses:
+- SG000000B4
+- SG000000B5
+- SG000000AZ
+tier: T2
+route:
+- R2
+notes: 'This is the explicit member of Corollary 4.3 of research note 76, which the referee report in note 80 confirms with the repaired Lemma 3.1(c). The series $\sum t^{n!}$ is transcendental over $k(t)$ by a Liouville argument, $t^{\sqrt 2}$ is transcendental over $k((t))$, and $\vartheta_0$ is transcendental over the algebraically maximal field $C$ by SG000000B5. Case (i) of SG000000B4 applies, and $x_4 \notin C$ gives the last claim by SG000000AZ(c). Handbook Volume 9, Section 3.23. The result is not in Lean.'

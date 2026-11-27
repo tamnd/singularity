@@ -1,0 +1,14 @@
+tag: SG000000B8
+kind: example
+title: 'Purely inseparable, dependent and independent defect with value group Z^2 on fields with local uniformization'
+statement: 'Let $k = \overline{\mathbb{F}}_p$, $H = k((t^\Gamma))$ with $\Gamma = \mathbb{Z} + \mathbb{Z}\sqrt 2$, $E = k(x_1, x_2, w)$ with $x_1 \mapsto t$, $x_2 \mapsto t^{\sqrt 2}$, $w \mapsto \sum_n t^{n!}$, and $\vartheta = \vartheta_\delta$ for $\delta \in \Gamma$. Put $F = E(\vartheta)$ and $K = E(\varphi(\vartheta))$. Then $\nu F = \nu K = \Gamma$, $F\nu = K\nu = k$, and $F/K$ has defect $p$: purely inseparable for $\varphi = X^p$, dependent Artin-Schreier for $\varphi = X^p - X$ and $\delta \in \{-1, 1 - \sqrt 2\}$, and independent Artin-Schreier for $\varphi = X^p - X$ and $\delta = 0$. In each case $F = k(x_1, x_2, w, \vartheta)$ has local uniformization in the strong form.'
+sources:
+- paper: Kuh10b
+uses:
+- SG000000B7
+- SG000000B5
+- SG000000B4
+tier: T2
+route:
+- R2
+notes: 'This is Example 6.3 of research note 76, which the referee report in note 80 confirms. Note 57 had such examples only with value groups that are not finitely generated. A defect in one projection is no obstruction, because the projection $(x_1, x_2, w, \vartheta)$ of $F$ is in class (i) of SG000000B4. So these are test cases for Problem V6, and none of them triggers the no-go condition of issue tamnd/singularity#298. Handbook Volume 9, Section 3.23. The result is not in Lean.'

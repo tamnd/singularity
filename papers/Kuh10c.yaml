@@ -1,0 +1,10 @@
+key: Kuh10c
+title: Kuhlmann, Value groups, residue fields and bad places of rational function fields, Trans. AMS 356 (2004), arXiv:1003.5685
+tag: S
+tier: T2
+why: Valuations of rational function fields with a prescribed value group and residue field
+arxiv:
+- '1003.5685'
+lean: none
+use:
+- prove

@@ -1,0 +1,13 @@
+tag: SG000000BB
+kind: conjecture
+title: 'Question T1: the swapped projection of family T has the ball property'
+statement: 'In family T (SG000000B9) with a generic sequence $(c_m)$, $x_4$ has the ball property over $K_2(y_3)$. Then SG000000B3 applies to the projection $(x_1, x_2, y_3, x_4)$ and $K$ has local uniformization in the strong form.'
+sources:
+- paper: Kap42
+uses:
+- SG000000B9
+- SG000000BA
+tier: T2
+route:
+- R2
+notes: 'This is Question T1 and Conjecture 7.3 of research note 76. It is open. The heuristic of note 76 for it is wrong (Section 7.2 of the referee report in note 80) and is not used. By SG000000BA it is enough that $\vartheta$ has the ball property over $K_2(\psi^p)^h$, and for the purely inseparable shape of key polynomial it is enough that $\nu(\vartheta - B) < 0$ for each $B \in K_2(\psi)^h$. Handbook Volume 9, Section 3.23. The result is not in Lean.'

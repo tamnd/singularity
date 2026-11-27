@@ -1,0 +1,14 @@
+tag: SG000000AX
+kind: counterexample
+title: 'A rank 2 valuation with value group Z^2 and d = 1 that is not of Knaf-Kuhlmann type'
+statement: 'Let $k$ be algebraically closed of characteristic $p$ and $F = k(x_1, \dots, x_4)$. There is a valuation $\nu = v_1 \circ \bar v$ of $F$, trivial on $k$, with $\nu F = \mathbb{Z}^2$ lexicographic, $F\nu = k$ and $\mathrm{trdeg}(F v_1 / k) = 1$, that is not of KK type. One can take $F v_1 = \kappa = k(z, (1 + z)^{1/\ell} : \ell \text{ prime}, \ell \ne p) \subset k((z))$ and $\bar v$ the $z$-adic valuation.'
+sources:
+- paper: Kuh10c
+  loc: 'Theorem 1.1'
+uses:
+- SG000000AS
+- SG0000000Y
+tier: T2
+route:
+- R2
+notes: 'This is Proposition 1.1 of the referee report in note 80. It shows that Proposition 2.1(b) of research note 76 is false without the hypothesis of SG000000AT. The field $\kappa$ is countably generated of transcendence degree 1 and is not finitely generated, because each prime $\ell \ne p$ divides a degree over $k(z)$. Theorem 1.1 of [Kuh10c] with $\rho = 1$, $\tau = 1$ and $n = 4$ gives $v_1$. If $F \subseteq F_0^c$ with $\nu|_{F_0}$ Abhyankar, the two Abhyankar inequalities for $v_1$ and $\bar v$ add up to the one for $\nu$, so $v_1|_{F_0}$ is Abhyankar and $F_0 v_1 = \kappa$ is finitely generated, a contradiction. The same method with $\tau = 2$ gives examples with $d = 2$. Local uniformization of these valuations is open (SG000000BD). Handbook Volume 9, Section 3.23. The result is not in Lean.'

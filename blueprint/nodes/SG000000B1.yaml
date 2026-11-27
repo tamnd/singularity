@@ -1,0 +1,12 @@
+tag: SG000000B1
+kind: definition
+title: 'The ball property of an immediate transcendental element'
+statement: 'Let $(L, \nu)$ be a rank 1 valued field and $z$ an element of an immediate extension of $L$, transcendental over $L$. A pseudo-Cauchy sequence $(d_n)$ in $L$ with limit $z$ is of transcendental type if for each $h \in L[X]$ the value $\nu(h(d_n))$ is constant for large $n$, and of algebraic type otherwise. The element $z$ has the ball property over $L$ if for each $h \in L[X]$ there are $\alpha$ and $a_0 \in L$ such that $\nu(h(a)) = \alpha$ for each $a \in L$ with $\nu(z - a) \ge \nu(z - a_0)$.'
+sources:
+- paper: KK09
+  loc: 'Lemma 2.17, property (3)'
+- paper: Kap42
+tier: T2
+route:
+- R2
+notes: 'This is property (3) of Lemma 2.17 of [KK09]. Definition 1.4 of research note 76 (degree-one type) is a weaker form, and Fix 6 of the referee report in note 80 replaces it by this property, because Lemma 2.18 of [KK09], which SG000000B3 uses, assumes it. Handbook Volume 9, Section 3.23. The result is not in Lean.'

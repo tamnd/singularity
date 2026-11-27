@@ -1,0 +1,15 @@
+tag: SG000000B0
+kind: theorem
+title: 'Local uniformization goes up from a projection to a subfield of its henselization'
+statement: 'Let $(F, \nu)$ be a valued function field over $k$ with $F\nu = k$, and let $K \subseteq F$ be a subfield with $F/K$ finite and $F \subseteq K^h$. If $(K, \nu)$ has local uniformization in the strong form, then $(F, \nu)$ has local uniformization in the strong form.'
+sources:
+- paper: KK09
+  loc: 'Lemma 3.7 and Corollary 3.6'
+uses:
+- SG0000004Y
+- SG0000004C
+- SG000000AZ
+tier: T2
+route:
+- R2
+notes: 'This is Theorem 3.3 of research note 76 with Fix 5 of the referee report in note 80: $\theta$ must be integral with integral conjugates and $c$ must satisfy $\nu(\theta - c) > \nu(f''(\theta))$, and the strong form needs Corollary 3.6 of [KK09] with Lemma 3.7. In the handbook the proof is direct: $F/K$ has ramification index 1, a separable residue extension and defect 1, so SG0000004Y gives an étale generator and SG0000004C lifts the strong local uniformization. With SG000000AZ(a), it reduces Problem V7 for $\nu$ to a projection of defect 1. Handbook Volume 9, Section 3.23. The result is not in Lean.'
