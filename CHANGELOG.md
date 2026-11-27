@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.64 - 2026-11-27
+
 ### Changed
 
 - SG00000068, Example 3.15.18 of Volume 7 of the handbook, has the Lean proof Singularity.Translations.exRun_of_charts over `ZMod p`. Lean has no definition of a corner run with free translations, so the Lean statement is a sequence of chart steps with $\rho = 1$.
