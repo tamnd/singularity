@@ -1,0 +1,14 @@
+tag: SG000000AJ
+kind: conjecture
+title: 'Problem 6.4: the twisted pair problem'
+statement: Let $Y$ be a regular threefold over an algebraically closed field of characteristic $p$, let $\delta = \sum_j b_j \partial_{v_j}$ generate a rank one $p$-closed foliation with $\delta^p = H \delta$, and let $\alpha \in \mathcal{O}_Y$ with $\alpha^p + \delta^{p-1}(\alpha) = H \alpha$ and $\gcd(\alpha, b_1, b_2, b_3) = 1$. Then there are proper birational modifications of $Y$, together with weighted blowups of $Y \times \mathbb{A}^1_u$ along centers over $\{u = 0\}$, from a regular tame Deligne-Mumford stack (a regular variety if $p = 2$), that make the pullback of $\alpha u \partial_u + \delta$ regular.
+sources:
+- paper: Pos24
+uses:
+- SG000000AF
+- SG000000AG
+tier: T2
+route:
+- R4
+- R5
+notes: 'This is Problem 6.4 of research note 58, with the corrections of the referee report in note 73: the coprimality is $\gcd(\alpha, b_1, b_2, b_3) = 1$, and $\alpha$ is defined only up to $\delta(g)/g$ for units $g$ (SG000000AM). For the $\mathbb{G}_m$ case of SG000000AF a solution must also be $\mu_{w_i}$-equivariant and glue across the charts. The case $\alpha = 0$ is SG000000AH. For $H = 0$, SG000000AM, SG000000AN and SG000000AP classify $\alpha$, untwist off an invariant divisor and untwist by one weighted blowup under a second torus symmetry. Open: the case $H = 0$ at the points of $Z(\delta) \cap V(s)$ when $\delta$ has no second torus symmetry, and the case $H \ne 0$. It is not known whether the statement is true. Handbook Volume 9, Section 3.22.'

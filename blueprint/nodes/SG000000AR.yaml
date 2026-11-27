@@ -1,0 +1,14 @@
+tag: SG000000AR
+kind: theorem
+title: Where the case H = 0 of Problem 6.4 comes from
+statement: Let $D$ be an additive foliation on $\mathbb{A}^4$, homogeneous of degree $d$ for a linear $\mathbb{G}_m$-action with positive weights prime to $p$, and assume that on the chart $D_+(x_i)$ of the weighted blowup of the origin the pullback is $u^d D'$ with $D' = \alpha u \partial_u + \delta$ saturated and $D'^p = H D'$. Put $c_0 = 1$ and $c_{k+1} = \delta(c_k) + d (k + 1) \alpha c_k$. Then $H = -c_{p-1}$. In particular $p \mid d$ implies $H = 0$, and $\delta(\alpha) = 0$ implies $H = d^{p-1} \alpha^{p-1}$.
+sources:
+- paper: Pos23
+  loc: Hochschild's formula, Section 2.3
+uses:
+- SG000000AF
+tier: T2
+route:
+- R4
+- R5
+notes: This is Proposition 6.6 of the referee report in note 73 on research note 58. The proof is Hochschild's formula $(g E)^p = g^p E^p + (g E)^{p-1}(g) E$. In SG000000AC, $d = p - 1$ and $\delta(\alpha) = 0$ in the chart $x$, which gives $H = \alpha^{p-1}$ again. So the case $H = 0$ of Problem 6.4 is the one that additive invariant foliations of degree divisible by $p$ produce, together with the untwisted charts. Handbook Volume 9, Section 3.22. Not in Lean.

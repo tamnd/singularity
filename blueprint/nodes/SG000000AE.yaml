@@ -1,0 +1,12 @@
+tag: SG000000AE
+kind: example
+title: A foliation invariant under a torus of rank 3 with no toric resolution
+statement: Let $p \ge 3$ and let $T = \{(s, s, t, u)\} \cong \mathbb{G}_m^3$ act on $\mathbb{A}^4$ by $(x_1, x_2, x_3, x_4) \mapsto (s x_1, s x_2, t x_3, u x_4)$. Let $D = A \partial_1 + B \partial_3 + C \partial_4$ with $A = x_1 (x_1 + x_2)(x_1 - x_2)$, $B = x_3 (2 x_1 + x_2)(x_1 - x_2)$ and $C = x_4 x_1 (x_1 + x_2)$. Then $\mathcal{F} = k[x] \cdot D$ is a $T$-invariant $p$-closed rank one foliation, the annihilator of $x_2$, $x_3 x_2^2 / (x_1 (x_1 + x_2))$ and $x_4 x_2 / (x_1 - x_2)$. Its singular locus is the union of the four planes $\{x_1 = x_2 = 0\}$, $\{x_1 = x_3 = 0\}$, $\{x_1 + x_2 = x_3 = 0\}$ and $\{x_1 - x_2 = x_4 = 0\}$. In no coordinate system on $\mathbb{A}^4$ does $\mathcal{F}$ have a toric resolution. So for each rank $1$, $2$ and $3$ there is a torus of that rank and an invariant $p$-closed foliation on $\mathbb{A}^4$ with no toric resolution.
+sources:
+- paper: Pos24
+uses:
+- SG000000AB
+tier: T2
+route:
+- R7
+notes: 'This is Example 5.3 and Proposition 5.4 of research note 58, in the form of the referee report in note 73: the singular locus is exactly the four planes, and the last claim is an existence statement for each rank (the subtori of $T$ also act). The proof uses only the last three planes: two of them meet the third in a point, and they meet each other in a line, which is impossible for coordinate planes in four variables. With SG000000AC this is the no-go for toric methods on tori of rank $1$ to $3$ in track FO (tamnd/singularity#299). It is not a no-go for Problem 4.10 of note 04. Handbook Volume 9, Section 3.22. Not in Lean.'

@@ -1,0 +1,14 @@
+tag: SG000000AM
+kind: theorem
+title: 'Problem 6.4 with H = 0: the twist is given by invariant divisors'
+statement: 'Let $R = k[v_1, \dots, v_d]$ over an algebraically closed field $k$ of characteristic $p$, with fraction field $K$, let $\delta \ne 0$ be a saturated derivation of $R$ with $\delta^p = 0$, let $\alpha \in R$, and let $D'' = \alpha u \partial_u + \delta$ on $R[u]$. Put $\psi(\alpha) = \alpha^p + \delta^{p-1}(\alpha)$. (Gauge) For a unit $g$ of a localization of $R$, the change $u'' = u g$ turns $D''$ into $(\alpha + \delta(g)/g) u'' \partial_{u''} + \delta$, and $\psi(\alpha + \delta(g)/g) = \psi(\alpha)$. (Structure) The following are equivalent: (1) $\psi(\alpha) = 0$, that is, $D''$ is additive; (2) there is $s \in R \setminus \{0\}$ with $\delta(s) = -\alpha s$; (3) $D''$ has a nonzero first integral of $\mathbb{G}_m$-weight one, namely $u s$ with $s$ as in (2); (4) $\alpha = \sum_i e_i \lambda_i$ with $e_i \in \mathbb{F}_p$, where the $s_i$ are prime elements of $R$ with $\delta(s_i) = \lambda_i s_i$. The set $\{\alpha \in R : \psi(\alpha) = 0\}$ is the $\mathbb{F}_p$-span of the cofactors $\lambda$ of the $\delta$-invariant primes, and $s$ in (2) is unique up to a factor in $\ker(\delta : K \to K)$.'
+sources:
+- paper: Pos23
+  loc: Section 2.3
+uses:
+- SG000000AJ
+tier: T2
+route:
+- R4
+- R5
+notes: 'This is Lemma 6.1'' and Theorem 6.2'' of the referee report in note 73, which is the referee report on research note 58. In Problem 6.4 with $H = 0$ the equation $\psi(\alpha) = H \alpha$ is condition (1), so each $\alpha$ of the problem is an $\mathbb{F}_p$-combination of cofactors of invariant primes, and $\alpha$ is a connection form defined up to logarithmic derivatives of units. The proof of (1) implies (2) uses that $\delta + \alpha$ is a nilpotent $\ker\delta$-linear operator on the finite dimensional $\ker\delta$-space $K$, by Jacobson''s formula. This explains why the chart $z$ of SG000000AC has $\alpha = 0$ and the chart $x$ has $\alpha = 1 - Z^{p-1} W$: the trivializations differ. Handbook Volume 9, Section 3.22. Not in Lean.'

@@ -1,0 +1,13 @@
+tag: SG000000AQ
+kind: example
+title: A twisted additive instance of Problem 6.4
+statement: Let $p$ be a prime, $e \in \{1, \dots, p - 1\}$, and on $\mathbb{A}^3$ let $\delta = v_1 v_2 \partial_{v_1} + v_2^2 \partial_{v_2} + v_3^p \partial_{v_3}$ and $\alpha = e v_2$. Then $\delta^p = 0$, $\delta$ is saturated, $\alpha^p + \delta^{p-1}(\alpha) = 0$ and $\alpha \ne 0$, so $D' = e v_2 u \partial_u + \delta$ is an instance of Problem 6.4 with $H = 0$, and $\alpha$ is not $\delta(g)/g$ for a unit $g$ of $k[v]$. Its singular locus is $\mathbb{A}^1_u \times \{v_2 = v_3 = 0\}$, and $u v_1^{p-e}$ is a first integral. One weighted blowup of $\{u = v_1 = 0\}$ with the weights $(e, 1)$ reduces it to the untwisted threefold field $\delta$.
+sources:
+- paper: Pos24
+uses:
+- SG000000AP
+tier: T2
+route:
+- R4
+- R5
+notes: This is Example 6.5 of the referee report in note 73 on research note 58. It satisfies the hypothesis of SG000000AP with $\lambda = v_2$ and $e$ replaced by $p - e$. The script `lab_ex.py` of note 73 checks it for $p = 2, 3, 5, 7$ and each $e$, which is numerical evidence only. Note 73 does not decide whether the twist is trivial in the local ring at the origin. Handbook Volume 9, Section 3.22. Not in Lean.

@@ -1,0 +1,16 @@
+tag: SG000000A7
+kind: definition
+title: 1-foliations, additive and multiplicative singularities, and the quotient by a foliation
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$ and let $X$ be a normal variety over $k$. A 1-foliation on $X$ is a saturated subsheaf $\mathcal{F} \subset T_X$ that is closed under the Lie bracket and under $D \mapsto D^p$. Its rank is the generic rank of $\mathcal{F}$, and its corank is $\dim X$ minus the rank. It is regular at a point if $\mathcal{F}$ and $T_X / \mathcal{F}$ are free near the point, and $\operatorname{Sing} \mathcal{F}$ is the closed set where it is not regular. The quotient $X / \mathcal{F}$ has the same underlying space as $X$ and the sheaf of the functions $f$ with $D(f) = 0$ for each local section $D$ of $\mathcal{F}$. On a regular $X$ a rank one foliation is locally $\mathcal{O}_X \cdot D$ with $D = \sum_i f_i \partial_i$, $\gcd(f_i) = 1$ and $D^p = h D$ for a function $h$. It is additive if $D^p = 0$, and multiplicative at a point $q$ if $h(q) \ne 0$. If a torus $T$ acts on $X$, the foliation is $T$-invariant if $t \cdot \mathcal{F} = \mathcal{F}$ for each $t \in T$, where $(t \cdot D)(f) = t \cdot D(t^{-1} \cdot f)$.
+sources:
+- paper: Pos23
+  loc: Sections 2.3 to 2.5
+- paper: Pos24
+  loc: Section 1
+uses:
+- SG00000002
+- SG00000005
+tier: T2
+route:
+- R5
+notes: 'This is Definitions 1.1 and 1.2 of research note 58, which the referee report in note 73 checked against the sources. By the Jacobson correspondence [Pos23, Section 2.5], on a regular $X$ with function field $L$ the foliations of rank $r$ correspond to the fields $L^p \subseteq M \subseteq L$ with $[L : M] = p^r$, and $X / \mathcal{F}$ is the normalization of the Frobenius twist $X^{(p)}$ in $M$. So the normalization of a regular $B$ in $k(B)(g^{1/p})$, the purely inseparable cover $z^p = g$ of route R5, is the quotient of the regular variety $B^{(1/p)}$ by a foliation of corank one. A rank one foliation on a regular $n$-fold $Y$ gives $[k(Y / \mathcal{F}) : k(Y)^p] = p^{n-1}$, so in dimension 4 rank one and corank one are different problems. Posva proves the multiplicative normal form of his Theorem 1 on threefolds only in corank one [Pos24, Theorem 5.1.1]; the introduction of [Pos24] says this restriction. Handbook Volume 9, Section 3.22. Not in Lean.'

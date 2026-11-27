@@ -1,0 +1,14 @@
+tag: SG000000AF
+kind: theorem
+title: The G_m case after one weighted blowup
+statement: Let $\mathbb{G}_m$ act linearly on $\mathbb{A}^4$ with weights $w_i \ge 1$ prime to $p$, and let $\mathcal{F}$ be a $\mathbb{G}_m$-invariant rank one foliation. Blow up the origin with the weights $w$, and take the chart $D_+(x_i)$ with coordinates $u$, $x_i = u^{w_i}$, and $v = (v_j)_{j \ne i}$. On this chart the pullback is generated either by $\partial_u$ or by $D' = \alpha(v) u \partial_u + \delta$, with $\delta = \sum_j b_j(v) \partial_{v_j}$ and $\gcd(\alpha, b_1, b_2, b_3) = 1$. In the second case $p$-closure is equivalent to $\delta^p = H \delta$ and $\alpha^p + \delta^{p-1}(\alpha) = H \alpha$ for one $H \in k[v]$, and $\operatorname{Sing} = (\{u = 0\} \times Z(\delta)) \cup (\mathbb{A}^1 \times (Z(\delta) \cap V(\alpha)))$, where $Z(\delta) = V(b_1, b_2, b_3)$.
+sources:
+- paper: Pos24
+  loc: Example 2.4.3
+uses:
+- SG000000A7
+tier: T2
+route:
+- R4
+- R5
+notes: 'This is Lemma 6.1 and Proposition 6.2 of research note 58, with the scope of the referee report in note 73: a linear $\mathbb{G}_m$-action with all weights at least $1$ and prime to $p$. Weights of mixed sign or zero, weights divisible by $p$ and actions that are not linear are not covered. The proof uses Jacobson''s formula $(\delta + a)^p = \delta^p + a^p + \delta^{p-1}(a)$. The reduction lives on the chart $\mathbb{A}^4$ above $[\mathbb{A}^4 / \mu_{w_i}]$, so a resolution of the chart problem must be $\mu_{w_i}$-equivariant and must glue across the charts. Handbook Volume 9, Section 3.22. Not in Lean.'

@@ -1,0 +1,15 @@
+tag: SG000000AH
+kind: theorem
+title: The untwisted G_m case is resolved chart by chart
+statement: 'In the setting of SG000000AF, assume $\alpha = 0$ on the chart $D_+(x_i)$. Then the pullback is the product of $\mathbb{A}^1_u$ with the rank one foliation $k[v] \cdot \delta$ on $\mathbb{A}^3_v$. Under SG000000AG, for $p > 2$ there is a proper birational morphism from a regular tame Deligne-Mumford stack to $\mathbb{A}^3_v$, and for $p = 2$ a projective birational morphism from a regular variety, on which the pullback of $\delta$ is regular, and its product with $\mathbb{A}^1_u$ makes the pullback of $\mathcal{F}$ regular on the chart. The statement is for one chart: compatibility with the action of $\mu_{w_i}$ and the gluing across the charts are not part of it.'
+sources:
+- paper: Pos24
+  loc: Theorems 5.2.1 and 5.3.1, Remark 5.1.5
+uses:
+- SG000000AF
+- SG000000AG
+tier: T2
+route:
+- R4
+- R5
+notes: 'This is Corollary 6.3 of research note 58, which the referee report in note 73 checked: the citations of Posva are exact. Note 73 adds that the missing gluing cannot be had by citation, since [Pos24, Remark 5.1.5] says that the methods are not functorial for etale morphisms. So the untwisted case is covered chart by chart, and the gluing is SG000000AK. Handbook Volume 9, Section 3.22. Not in Lean.'

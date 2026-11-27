@@ -1,0 +1,14 @@
+tag: SG000000AD
+kind: conjecture
+title: One weighted blowup at a multiplicative point in truncated coordinates
+statement: Let $q$ be a closed point of a regular 4-fold $Y$ over an algebraically closed field of characteristic $p$, and let $\mathcal{F}$ be a rank one foliation that is singular and multiplicative at $q$, with formal normal form $\sum_i \lambda_i t_i \partial_{t_i}$, $\lambda \in \mathbb{F}_p^4$. Let $y_1, \dots, y_4$ be polynomial coordinates at $q$ with $y_i \equiv t_i$ modulo $\mathfrak{m}_q^p$. Then the weighted blowup of $q$ in the coordinates $y$, with the weights the lifts in $\{1, \dots, p - 1\}$ of $\lambda$ (after a common factor in $\mathbb{F}_p^\times$ that makes them nonzero where possible), makes $\mathcal{F}$ regular over $q$.
+sources:
+- paper: Pos23
+  loc: Section 4.1
+uses:
+- SG000000A9
+- SG000000A7
+tier: T2
+route:
+- R4
+notes: 'This is the hypothesis (W) of Corollary 3.2 of the referee report in note 73, stated there for the $p + 1$ multiplicative points of SG000000AC, where the weights are $(1, p - 1, p - 1, p - 1)$. Note 73 expects a short proof: the weighted filtration depends only on the coordinates modulo terms of large weight, and the formal case is SG000000A9. The missing step is that regularity of the saturated pullback can be checked after completion at the points over $q$. It is open. Handbook Volume 9, Section 3.22.'

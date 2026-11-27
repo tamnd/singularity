@@ -1,0 +1,13 @@
+tag: SG000000AB
+kind: lemma
+title: An obstruction to toric resolutions of rank one foliations
+statement: 'Let $\mathcal{F} = A \cdot D$ be a rank one foliation on $\mathbb{A}^n$, let $x$ be coordinates, and let $U_1 \subseteq \mathbb{A}^n$ be the set of points with at most one coordinate equal to $0$. Let $\Sigma$ be a simplicial fan that subdivides the orthant, with determinants prime to $p$, and let $f : \mathcal{X}_\Sigma \to \mathbb{A}^n$ be the toric stack modification. If $f^* \mathcal{F}$ is regular, then $\operatorname{Sing} \mathcal{F} \cap U_1 = \emptyset$. Hence, if the reduced set $\operatorname{Sing} \mathcal{F}$ has an irreducible component of dimension $2$ that is not of the form $\{y_a = y_b = 0\}$ for a coordinate system $y$, then $\mathcal{F}$ has no toric resolution in the coordinates $y$.'
+sources:
+- paper: Pos24
+  loc: Section 2.4
+uses:
+- SG000000A7
+tier: T2
+route:
+- R7
+notes: 'This is Lemma 4.1 and Corollary 4.2 of research note 58, with the sentence that the referee report in note 73 adds to the saturation step: over the points with $x_j \ne 0$ for $j \ne i$, the chart is locally $x_i = s^m$ with $p \nmid m$, which is etale off $s = 0$, so the only possible common factor of the pulled back coefficients is a power of $s$. Handbook Volume 9, Section 3.22. Not in Lean.'

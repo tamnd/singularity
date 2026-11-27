@@ -1,0 +1,13 @@
+tag: SG000000AA
+kind: theorem
+title: The quotient by an invariant foliation of the maximal torus is a simplicial toric variety
+statement: 'Let $\mathbb{G}_m^n$ act diagonally on $\mathbb{A}^n$ in the coordinates $x_1, \dots, x_n$, and let $V \subseteq \mathbb{F}_p^n$ and $\mathcal{F}_V$ be as in SG000000A8. Then $\mathbb{A}^n / \mathcal{F}_V = \operatorname{Spec} k[x^m : m \in \mathbb{N}^n, \ \bar{m} \in V^\perp]$, where $\bar{m}$ is $m$ modulo $p$ and $V^\perp$ is the orthogonal of $V$ for the dot product. This is the affine toric variety of the orthant in the lattice $\{m \in \mathbb{Z}^n : \bar{m} \in V^\perp\}$ of index $p^r$, which is simplicial, so it has a toric resolution.'
+sources:
+- paper: KKMS
+uses:
+- SG000000A8
+- SG0000001T
+tier: T2
+route:
+- R7
+notes: 'This is Corollary 3.6 of research note 58, with the scope of the referee report in note 73: the torus acts diagonally in the given coordinates. For an arbitrary embedding of $\mathbb{G}_m^n$ in $\operatorname{Aut} \mathbb{A}^n$ one needs a linearization theorem in characteristic $p$, and note 73 did not check its hypotheses. With SG000000A9 this answers Problem 4.10 of note 04 for the diagonal maximal torus in both readings: resolve the foliation, and resolve the quotient. Handbook Volume 9, Section 3.22. Not in Lean.'

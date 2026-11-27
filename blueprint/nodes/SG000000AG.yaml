@@ -1,0 +1,14 @@
+tag: SG000000AG
+kind: hypothesis
+title: Posva's resolution of 1-foliations on threefolds
+statement: 'Let $X$ be a normal threefold over an algebraically closed field $k$ of characteristic $p > 0$, and let $\mathcal{F}$ be a 1-foliation on $X$. (1) If $\mathcal{F}$ has corank one, there is a projective birational morphism $f : X'' \to X$ with $X''$ regular such that $f^* \mathcal{F}$ has at worst multiplicative singularities. (2) If $p > 2$ and $\mathcal{F}$ has corank two, there is a proper birational morphism $f : \mathcal{Y}'' \to X$ with $\mathcal{Y}''$ a regular tame Deligne-Mumford stack such that $f^* \mathcal{F}$ is regular. (3) If $p = 2$, there is a projective birational morphism $f : X'' \to X$ with $X''$ a regular threefold such that $f^* \mathcal{F}$ is regular; here $k$ perfect is enough.'
+sources:
+- paper: Pos24
+  loc: Theorems 5.1.1, 5.2.1 and 5.3.1, Remarks 5.1.5 and 5.2.2
+uses:
+- SG000000A7
+tier: T8
+route:
+- R4
+- R5
+notes: Parts 1, 2 and 3 are [Pos24, Theorems 5.1.1, 5.2.1 and 5.3.1], as the referee report in note 73 checked from the source. A rank one foliation on a threefold has corank two, so part 2 is the case that SG000000AH uses. By [Pos24, Remark 5.2.2], for corank two on a regular variety (not a stack) Posva can lift the multiplicative generators to a resolution when $\operatorname{Sing} f^* \mathcal{F}$ is a regular curve, and does not know the answer otherwise. By [Pos24, Remark 5.1.5], the methods are not functorial for etale morphisms and do not extend to stacks. These are published theorems that the project has not proved. Not in Lean. Handbook Volume 9, Section 3.22.
