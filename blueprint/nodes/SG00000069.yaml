@@ -1,0 +1,13 @@
+tag: SG00000069
+kind: lemma
+title: The closed form of the transform and the criterion for the drop hold for power series in x
+statement: Let $n = 3$, and let $g \in K[[x, y, z]]$ be clean at $P_N$, the first point of a corner run with free translations. Then Lemma 3.15.1 and Proposition 3.15.5 of Volume 7 of the handbook hold for $g$. That is, $g_m = \operatorname{cl}(g(\varphi_m + M_m x_m))$ is $M_m^p$ times the function of $P_m$, the coefficients $A_k = M_m^k g^{[k]}(\varphi_m)$ are in $K[[y_m, z_m]]$, and if $\operatorname{cl} A_0 \ne 0$ and $v(\operatorname{cl} A_0) < w_k$ for each $k \ge 1$ at a point $P_m$, then $\rho = 0$ at each later point $P_{m'}$ with $m'$ large. So this condition fails at each point of a corner run with free translations of $g$.
+sources:
+- paper: CJS20
+uses:
+- SG0000005W
+- SG00000063
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.16.1 of Volume 7 of the handbook. The substitution $x_N = \varphi_m + M_m x_m$ is in the maximal ideal, so Taylor's formula holds for power series in $x$. The set $S$ of the dominance lemma (Lemma 3.15.4) can be infinite, and the proof of Proposition 3.15.5 gives $\pi(P^{\mathrm{cl}}) = \mu_0'(1 + f)$ with $f$ in the maximal ideal. Note 35 of the research notes states the extension, and note 37 asks for the written proof. The result is not in Lean.

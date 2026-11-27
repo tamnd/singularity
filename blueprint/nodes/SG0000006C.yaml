@@ -1,0 +1,15 @@
+tag: SG0000006C
+kind: theorem
+title: If the tie set is the linear index then a corner run of mu x + F(x^p) has only a finite number of nonzero translations
+statement: Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations, with the notation of Section 3.15 of Volume 7 of the handbook. Let $g = \mu x + F(x^p)$ be clean at $P_N$, with $\mu$ zero or a nonzero constant times a monomial in $y, z$, and $F(Y) = \sum_k B_k Y^k$ with $B_k \in K[[y, z]]$. Assume that $\mu \ne 0$. If $W_1 < W_{pi}$ for each $i \ge 1$, that is, $\mathcal{T} = \{1\}$, then the run has only a finite number of nonzero translations.
+sources:
+- paper: CJS20
+uses:
+- SG00000069
+- SG0000006A
+- SG00000062
+- SG0000005W
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.16.8 of Volume 7 of the handbook, with Lemma 3.16.6 and Proposition 3.16.7. If the number is infinite, the identity $(V_m)_{<W} = -\mu\delta^{\mathrm{tw}}_m$ gives only a finite number of twisted translations. After the last one, put $C = \mu\varphi^{\mathrm{tw}}_{J+1}$ and $\tilde F = C + F$. If $\lim v(\tilde F(\Phi_m)) < W_1$, the criterion of Proposition 3.15.5 holds. If not, the bound of Lemma 3.16.3 puts all the monomials of the coefficients at one base point above the monomial $\mu M_m^{1-p} y_m z_m$, the dominance lemma applies to this fixed set, and $\rho = 0$ later. This is Theorem A of note 34 of the research notes, with the fixes of note 35. The result is not in Lean.

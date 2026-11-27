@@ -1,0 +1,13 @@
+tag: SG0000006D
+kind: theorem
+title: If the linear index is not in the tie set then a corner run of mu x + F(x^p) has only a finite number of nonzero translations
+statement: Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations, with the notation of Section 3.15 of Volume 7 of the handbook. Let $g = \mu x + F(x^p)$ be clean at $P_N$, with $\mu$ zero or a nonzero constant times a monomial in $y, z$, and $F(Y) = \sum_k B_k Y^k$ with $B_k \in K[[y, z]]$. Assume that $F$ is not constant. If $\min_i W_{pi} < W_1$, with $W_1 = \infty$ if $\mu = 0$, then the run has only a finite number of nonzero translations. In particular this holds for each clean $g \in K[[y, z]][[x^p]]$ that is not in $K[[y, z]]$.
+sources:
+- paper: CJS20
+uses:
+- SG00000069
+- SG0000006A
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.16.9 of Volume 7 of the handbook. If the number is infinite, Lemma 3.16.3 (SG0000006A) gives $v(V_m) = \tilde\beta_0 < \lambda(v(M_m)) < W$, so the criterion of Proposition 3.15.5 fails only if $\tilde\beta_0 \ge v(\mu M_m)$, and in the limit $\tilde\beta_0 \ge W_1 > W$. This is Theorem B of note 34 of the research notes. Note 35 adds the case $\mu = 0$, and note 36 gives a second proof by the transcendence of $\varphi_\infty$. The result is not in Lean.

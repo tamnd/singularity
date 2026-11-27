@@ -1,0 +1,15 @@
+tag: SG0000006E
+kind: theorem
+title: If the tie set has the linear index and a power of p then a corner run of mu x + F(x^p) has only a finite number of nonzero translations
+statement: Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations, with the notation of Section 3.15 of Volume 7 of the handbook. Let $g = \mu x + F(x^p)$ be clean at $P_N$, with $\mu$ zero or a nonzero constant times a monomial in $y, z$, and $F(Y) = \sum_k B_k Y^k$ with $B_k \in K[[y, z]]$. Assume that $\mu \ne 0$. If $1 \in \mathcal{T}$ and $\mathcal{T} \ne \{1\}$, then the run has only a finite number of nonzero translations.
+sources:
+- paper: CJS20
+uses:
+- SG00000069
+- SG0000006A
+- SG0000006B
+- SG00000062
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.16.10 of Volume 7 of the handbook, with Proposition 3.16.7 and Example 3.16.11. If the number is infinite, Lemma 3.16.4 (SG0000006B) gives $\mathcal{T} \setminus \{1\} \subseteq \{p, p^2, \dots\}$, so $\delta_m^k$ has no cross terms for $k \in \mathcal{T}$. Each term of the identity of Proposition 3.16.7 is a constant times $E N_{j+1}^k$ with $N_{j+1} = (y_{j+1} z_{j+1})^{-1}$. The exponent of $N_{j+1}$ is the sum of the two columns of a matrix of determinant $\pm 1$, so it is primitive, and distinct pairs $(j, k)$ give distinct monomials. So the right side has an infinite number of terms below $W$, and the left side has a finite number. This replaces the chain argument of Theorem C of note 34 of the research notes. The result is not in Lean.

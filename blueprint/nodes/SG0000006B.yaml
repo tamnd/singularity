@@ -1,0 +1,12 @@
+tag: SG0000006B
+kind: lemma
+title: Along a corner run with an infinite number of nonzero translations the tie set has only 1 and powers of p
+statement: 'Let $n = 3$, and let $P_N, P_{N+1}, \dots$ be a corner run with free translations, with the notation of Section 3.15 of Volume 7 of the handbook. Let $g = \mu x + F(x^p)$ be clean at $P_N$, with $\mu$ zero or a nonzero constant times a monomial in $y, z$, and $F(Y) = \sum_k B_k Y^k$ with $B_k \in K[[y, z]]$. Assume that an infinite number of the $t_j$ are not $0$. Put $\beta_1 = v(\mu)$, $\beta_{pi} = v(F^{[i]}(\varphi_\infty^p))$, $W_k = \beta_k + k(1 + \theta)$, $W = \min_k W_k$ and $\mathcal{T} = \{k : W_k = W\}$. If $i = p^a s$ with $s > 1$, $p \nmid s$ and $F^{[i]} \ne 0$, then $W_{p^{a+1}} < W_{pi}$. So $\mathcal{T} \setminus \{1\} \subseteq \{p, p^2, p^3, \dots\}$.'
+sources:
+- paper: CJS20
+uses:
+- SG0000006A
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.16.4 of Volume 7 of the handbook. Put $G = F^{[p^a]}$. By Lucas, $G^{[i - p^a]} = s F^{[i]} \ne 0$. Lemma 3.16.3 (SG0000006A) gives $D(v(M_m)) > 0$ for the affine function $D(\gamma) = \beta_{pi} + p(i - p^a)\gamma - \beta_{p^{a+1}}$, which has a positive slope, and $v(M_m) < 1 + \theta$. So $D(1 + \theta) > 0$. This is the strong form of Lemma 3 of note 34, from note 35 of the research notes, and note 37 checked it a second time. Theorem D of note 36 is a second proof of the consequence on $\mathcal{T}$ (Remark 3.16.15). The result is not in Lean.

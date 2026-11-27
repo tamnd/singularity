@@ -1,0 +1,16 @@
+tag: SG0000006H
+kind: theorem
+title: A corner run with free translations of a clean point in three variables has only a finite number of nonzero translations
+statement: Let $n = 3$ and let $g \in K[[y, z]][x]$ be clean at $P_N$. Then each corner run with free translations from $P_N$ has only a finite number of nonzero translations. Let $J$ be the last index with $t_J \ne 0$, and let $J = N - 1$ if all $t_m$ are $0$. Then $P_{J+1}, P_{J+2}, \dots$ is a run of Theorem 3.13.20 in the coordinates of $P_{J+1}$. So for $m$ large both corner curves at $P_m$ have $\nu^G = d_m \ge \rho$, and Question 3.13.18 has a positive answer for this run.
+sources:
+- paper: CJS20
+uses:
+- SG0000006G
+- SG00000064
+- SG00000063
+- SG0000006F
+- SG0000005R
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.16.14 of Volume 7 of the handbook. It answers the finiteness question of Section 3.15. If $g_x = 0$, Theorem 3.16.13 (SG0000006G) with $\mu = 0$ applies. If $g_x \ne 0$ and the number is infinite, Proposition 3.15.10 and Corollary 3.15.11 (SG00000064) give a late point with $g_m = \mu_m x'' + Q(x''^p, y_m, z_m)$. After the cleaning in $(x'', y_m, z_m)$, Lemma 3.15.2 (SG00000063) and Lemma 3.16.12 (SG0000006F) give a run of the class of Theorem 3.16.13 with an infinite number of nonzero translations, which is a contradiction. The end of the run is Theorem 3.13.20 (SG0000005R). The result does not prove the conjecture V of note 28, and $\rho$ need not drop (Example 3.15.18). The proof is in notes 34 to 37 of the research notes. The result is not in Lean.
