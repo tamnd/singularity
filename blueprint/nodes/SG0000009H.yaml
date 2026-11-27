@@ -1,0 +1,15 @@
+tag: SG0000009H
+kind: theorem
+title: Hypothesis H1 and Conjecture L-circle for the linear corner runs of a class of cubics in characteristic 2
+statement: 'Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Let $p = 2$ and $\deg_{x, w} g = 3$, and assume that an infinite number of the translations are not $0$. Let $(\alpha_0, \beta_0) \ne (0, 0)$ in $K^2$ and $J \ge N$ with $\alpha_0 a_j + \beta_0 b_j = 0$ for $j \ge J$, let $(x'', w'')$ be a linear free coordinate system with $x'' = \alpha_0 x + \beta_0 w$, and let $(x''_m, w''_m)$ be its transforms. Assume that the function of $P_J$, written in $(x''_J, w''_J, y_J, z_J)$ and cleaned, has no monomial with $x_J''^2 w''_J$, $w_J''^2$ or $w_J''^3$, that is, it is $E_3 x''^3 + \alpha x''^2 + x'' E_1(w'') + f_0 + f_1 w''$ with $E_3, \alpha, f_0, f_1 \in K[[y_J, z_J]]$ and $E_1 \in K[[y_J, z_J]][w'']$. Then there is $d \in \{2, 3\}$ such that for $m$ large: $\operatorname{in} G_m = c\, x_m''^{\,d}$ with $c \in K^*$, $d - 1 \le \rho \le d$ with $\rho = 2$ if $d = 3$, and the corner curves $V(x''_m, w''_m, y_m)$ and $V(x''_m, w''_m, z_m)$ have $\nu^G = d \ge \rho$. So the form $\operatorname{in} G_m \in K[x''_m]$ of Hypothesis H1 and Conjectures L and L° (Conjectures 3.17.18 and 3.17.24) hold for the run.'
+sources:
+- paper: CJS20
+uses:
+- SG0000006Z
+- SG0000009F
+- SG00000089
+- SG0000006K
+tier: T2
+route:
+- R1
+notes: 'This is Theorem 3.19.11 of Volume 7 of the handbook (Section 3.19). It is Theorem 4.2 of note 69 of the research notes with the fixes 2 and 3 of the referee report 71. By SG0000006Z each corner run of $g$ is linear, so $(\alpha_0, \beta_0)$ and $J$ exist. Fix 2 puts the hypothesis at the restart point $P_J$: the same hypothesis on the cleaned $g \circ A$ at $P_N$ does not pass to $P_J$, as the example $y x w^2 + y z x^2 + x^3$ with one $z$-step and the translation $(1, 0)$ shows, since it gives the monomial $y z^2 w^2$. Under the hypothesis only the constant term is cleaned at each later point, and the coefficient $\alpha$ of $x''^2$ has only terms of nonzero class, so the proof of SG00000089 goes through with $I \subseteq \{1, 2, 3\}$ in place of $I \subseteq \{1, \dots, p - 1\}$. Fix 3 is the bound $d - 1 \le \rho$ for $d = 2$ through the class of $\alpha$, and the use of the cleaned function in the new coordinates. Conjecture L+ is not claimed: for $d = 2 = \rho$ the term with $w''_m$ can give a corner surface of order $1$. The other linear runs of cubics in characteristic $2$ are the conjecture SG0000009J. The result is not in Lean.'

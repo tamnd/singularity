@@ -6,10 +6,13 @@ Each release has a section. The newest release is first.
 
 ### Added
 
+- SG0000009F to SG0000009J for track C4, from research notes 69, 71 and 74. SG0000009F is Lemma 2.1 of note 69: a corner run in four variables starts again at each of its points, for the function of that point, with the valuation scaled by $v(y_m)$. SG0000009G is Lemma 2.1 of note 74: the derivatives of the function of $P_m$ at the limit, with the powers $M_m^{1 - p}$ and $M_m^{p^e - p}$, and the bound on their terms of class $0$. SG0000009H is Theorem 4.2 of note 69, with the hypothesis at the restart point $P_J$ as note 71 asks: Hypothesis H1 and Conjecture L° for the linear runs of a class of cubics in characteristic $2$. SG0000009J is Conjecture 4.4 of note 69, the rest of that case, which is open. None of the new nodes has a Lean proof.
 - The scripts of research notes 50 to 57 and 59 to 63 in `lab/notes/NN/` (track LB, issue 289). They are the evidence for the [C] claims of these notes. Each folder has a `README.md` with the claims, the commands, the expected output, the run time and the dependencies. The scripts use paths relative to their own file. Most of them need only the standard library of Python 3. Some scripts of notes 54, 55 and 60 need NumPy, sympy or galois. The new test `lab/notes/tests/test_smoke.py` runs 45 short commands that use only the standard library and checks their output. The workflow `lab` runs it. Notes 58, 64 and 65 are not included, because they are still being written.
 
 ### Changed
 
+- SG00000096, Conjecture P, and SG0000006Z, Conjecture L, have the kind theorem. Theorem 4.1 of the referee report 71 on note 69, confirmed by the second referee in note 74, proves that no clean $g \in K[[y, z]][x, w]$ has a planar corner run in four variables, for each prime $p$ and each degree, and so that Conjecture L holds for each clean $g \in K[[y, z]][x, w]$. The uses and the notes of the two nodes give the new proof. The statements for power series in $x, w$ and for $g \in K[[x, y, z]]$ stay open.
+- The notes of SG00000075, SG00000071 and SG0000007D (Conjectures L° and L+ and Hypothesis H1) name SG0000009H and SG0000009J, and say that each corner run is now linear. The notes of SG0000008K, SG00000092 and SG00000093 name the general results SG00000096 and SG0000006Z.
 - The handbook page of the site links edition 0.4.70 of the handbook.
 - The handbook page of the site links edition 0.4.69 of the handbook.
 - The handbook page of the site links edition 0.4.68 of the handbook.
