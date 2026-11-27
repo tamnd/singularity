@@ -6,11 +6,11 @@ sources:
 - paper: Abh56
   loc: 'Theorem 3'
 - paper: CP19
-  loc: 'Proposition 4.2'
+  loc: 'Proposition 4.2 of arXiv 1412.0868v2'
 uses:
 - SG0000004A
 - SG0000002X
 tier: T2
 route:
 - R2
-notes: 'Lemma 77.9 of research note 77, confirmed in note 82. After the flat base change to $\operatorname{Spec} \mathcal{O}_{U,\alpha(\zeta)}$, $\sigma$ is a sequence of blowups of closed points of regular surfaces. By Abhyankar ([CP19] Proposition 4.2) $S = \mathcal{O}_{Z,\zeta}$ is an iterated quadratic transform $S_0 \subset \dots \subset S_m = S$ of $R$, and $K S_j$ is not invertible for $j < m$. A valuation that dominates $S$ goes through the $S_j$ in order, so $W$ has a point $w$ with $\mathcal{O}_{W,w} = S$. Zariski''s Main Theorem SG0000002X makes $\tau$ an isomorphism near $\zeta$. This is the case $d = 2$ of Claim A in SG000000C1. Handbook Volume 9, Section 3.24. The result is not in Lean.'
+notes: 'Lemma 77.9 of research note 77, confirmed in note 82. After the flat base change to $\operatorname{Spec} \mathcal{O}_{U,\alpha(\zeta)}$, $\sigma$ is a sequence of blowups of closed points of regular surfaces. By Abhyankar ([CP19] Proposition 4.2, the numbering of arXiv 1412.0868v2; in v1 it is Proposition 4.1) $S = \mathcal{O}_{Z,\zeta}$ is an iterated quadratic transform $S_0 \subset \dots \subset S_m = S$ of $R$, and $K S_j$ is not invertible for $j < m$. A valuation that dominates $S$ goes through the $S_j$ in order, so $W$ has a point $w$ with $\mathcal{O}_{W,w} = S$. Zariski''s Main Theorem SG0000002X makes $\tau$ an isomorphism near $\zeta$. This is the case $d = 2$ of Claim A in SG000000C1. It is the only place where the proof of SG000000C1 uses that the centers of the principalization lie in the locus where $K$ is not invertible (SG000000CC). Handbook Volume 9, Section 3.24. The result is not in Lean.'

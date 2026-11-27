@@ -1,0 +1,14 @@
+tag: SG000000CK
+kind: theorem
+title: 'Toric relative strong factorization for regular cones with small entries'
+statement: 'Let $F$ be a field and $R = F[x,y,z]_{(x,y,z)}$. For each regular cone $\sigma$ in the octant whose primitive generators have entries at most 2, there is a fan obtained from the octant by smooth star subdivisions at 2-faces in which $\sigma$ is a union of cones, and this subfan is obtained from $\sigma$ by smooth star subdivisions at 2-faces. So $\mathrm{RSF}(R, S_\sigma)$ of SG000000CG holds with torus-invariant centers. The same holds for 418 of the 429 classes, up to permutation of the coordinates, of regular cones with entries at most 3.'
+sources:
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Proposition 3.3.15'
+uses:
+- SG000000CG
+- SG000000CH
+tier: T3
+route:
+- R2
+notes: 'Computation 85.9 of research note 85. With entries at most 2 there are 61 classes, and each has a certificate. With entries at most 3, the first run found 394 certificates; in 202 of them $\sigma$ is itself a cone of the fan, so $\sigma$ is directly reachable. Two more runs on the 35 failures found 7 and 17 certificates. Each certificate is checked exactly. The 11 classes without a certificate are $\langle (0,1,2), (0,1,3), (1,3,0) \rangle$, $\langle (0,1,2), (0,2,3), (1,3,0) \rangle$, $\langle (0,1,2), (1,2,3), (3,2,0) \rangle$, $\langle (0,1,2), (2,2,3), (3,1,0) \rangle$, $\langle (0,1,2), (2,3,3), (3,2,0) \rangle$, $\langle (0,1,3), (1,2,3), (2,2,1) \rangle$, $\langle (0,1,3), (2,2,1), (3,3,1) \rangle$, $\langle (0,1,3), (2,2,1), (3,3,2) \rangle$, $\langle (0,1,3), (2,2,3), (3,2,1) \rangle$, $\langle (0,2,3), (1,3,2), (2,3,0) \rangle$ and $\langle (0,2,3), (2,3,3), (3,2,1) \rangle$. The search is a randomized heuristic with a budget, so they are not counterexamples; they are open. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

@@ -1,0 +1,18 @@
+tag: SG000000CF
+kind: lemma
+title: 'Freedom in the choice of V_2 in the patching proof'
+statement: 'Let $(V_0, V_1, N)$ be as in SG000000BQ, and let $V_2$ be as in Step 2 of the proof of SG000000C1. Let $\psi \colon V_2'' \to V_2$ be projective and birational, with $V_2''$ normal, such that each $v \in N$ whose center on $V_1$ is singular has a regular center on $V_2''$. Run Steps 3 to 6 with $V_2''$ and $\alpha \circ \psi$ in place of $V_2$ and $\alpha$. If the condition (A$^{\rm w}$) of SG000000C6 holds for $V_2''$, for some choice of the principalization in Step 3, then the conclusion of SG000000BQ holds for $(V_0, V_1, N)$.'
+sources:
+- paper: Har
+  loc: 'Theorem II.7.17'
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Proposition 3.3.15 and Theorem 11.1.9'
+uses:
+- SG000000C6
+- SG000000CC
+hypotheses:
+- SG000000BV
+tier: T6
+route:
+- R2
+notes: 'Lemma 85.5 of research note 85. Step 3 needs only that $V_2''$ is normal, projective and birational over $V_1$, so that it is the normalized blowup of a coherent ideal on $V_1$. Step 4 needs that the centers of the valuations of $L$ are regular, which is the hypothesis on $\psi$. The final model dominates $V_0$ through $V_2$. The weak form of SG000000BV in SG000000CC is enough. In the toric case, star subdivisions at regular cones keep each regular chart regular, so the hypothesis holds. The lemma gives a way to remove a bad curve of the fundamental locus that note 83 did not consider: modify both $V_2$ and $W_1$ along the curve (SG000000C9). The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

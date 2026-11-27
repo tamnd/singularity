@@ -1,0 +1,18 @@
+tag: SG000000CM
+kind: theorem
+title: 'Oda''s strong factorization conjecture implies toric RSF_3'
+statement: 'Assume Oda''s strong factorization conjecture in dimension 3 for regular fans whose support is a convex cone: two such fans with the same support have a common refinement that is reached from each of them by smooth star subdivisions. Then for each regular cone $\sigma$ contained in a regular 3-cone $\tau$ there is a fan $F$, obtained from $\tau$ by smooth star subdivisions, such that the cones of $F$ in $\sigma$ form a fan that is obtained from $\sigma$ by smooth star subdivisions. In particular $\mathrm{RSF}(R, S_\sigma)$ of SG000000CG holds for each regular cone $\sigma$ in the octant.'
+sources:
+- paper: AKMW02
+  loc: 'Section 0.5'
+- paper: AT19
+- paper: DSK11
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Theorem 11.1.9'
+uses:
+- SG000000CG
+- SG0000001T
+tier: T3
+route:
+- R2
+notes: 'Proposition 85.10 of research note 85. Cut $\tau$ by the three facet hyperplanes of $\sigma$ and resolve by stars that keep regular cones, to get a regular fan $\Delta$ with support $\tau$ and $\sigma \in \Delta$. Apply the conjecture to $\Delta$ and $\{\tau\}$. Along the stars from $\Delta$ the cones in $\sigma$ always form a subfan with support $\sigma$, and a star at a cone in $\sigma$ acts on it as a star. Oda''s conjecture is open in dimension 3 [AKMW02, Section 0.5], [AT19]; [DSK11] proves special cases. So toric $\mathrm{RSF}_3$ in general is open. The relative form for one cone in the octant is weaker than the conjecture, and SG000000CK suggests that it can be proved directly. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

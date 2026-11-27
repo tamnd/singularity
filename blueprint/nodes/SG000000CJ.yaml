@@ -1,0 +1,17 @@
+tag: SG000000CJ
+kind: theorem
+title: 'The toric counterexample to Claim A is repaired near the bad curve'
+statement: 'Let $(V_0, V_1)$ be the toric pair of SG000000C5, with $V_2 = V_0$ and $\Gamma = V(\{0\} \times \sigma_0)$. Let $V_2''$ be obtained from $V_2$ by the 5 stars on the side of $\sigma_0$ of SG000000CH, lifted to $\{0\} \times \mathbb{Z}^3$, and let $W_1''$ be a toric resolution, by star subdivisions that keep regular cones, of the common refinement of the fan of $V_1$ with the 14 stars of SG000000CH lifted to the face $\tau_1$ and the fan of $V_2''$, restricted over $U_1 = \mathrm{Reg}\, V_1$. Then (a) $V_2'' \to V_2$ satisfies SG000000CF and $W_1''$ is a valid choice in Step 3; (b) the strict transforms of $\Gamma$ are not in the new fundamental locus $\Phi''$; (c) each component of $\Phi''$ that meets the preimage of $\Gamma$ lies over $p_1$ or over the regular point $p_1''$, and the ones over $p_1''$ do not meet $L''$; (d) with $\tilde U_2''$ chosen as in Step 5, no point of $\overline{\Phi'' \cap \tilde U_2''} \cap \alpha''^{-1}(U_1)$ lies over $\Gamma$. So the failure of (A$^{\rm w}$) in SG000000C5 at the point $z$ does not occur on $V_2''$.'
+sources:
+- paper: Ful93
+  loc: 'Cox, Little and Schenck, Theorem 11.1.9'
+uses:
+- SG000000C5
+- SG000000CF
+- SG000000CH
+- SG000000CC
+- SG0000001T
+tier: T3
+route:
+- R2
+notes: 'Proposition 85.8 of research note 85, given the computation SG000000CH and standard toric facts. The stars subdivide $D$ into the regular cones $\langle \kappa, r \rangle$ and $D''$ into the cones $\langle \kappa, r'' \rangle$ of determinant $\pm 2$, for the 6 cones $\kappa$ of SG000000CH in $\sigma_0$. Each cone $\{0\} \times \kappa$ is a cone of both fans, so it is kept by the resolution, and a toric map is defined near the generic point of an orbit if and only if its cone is in the finer fan. Not shown: (A$^{\rm w}$) for the components of $\Phi''$ away from the preimage of $\Gamma$, since the stars at faces of $\sigma_0$ also subdivide other cones of $V_2$. This is open. So the method of SG000000C6 is not blocked by SG000000C5 once SG000000CF is used. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

@@ -6,10 +6,14 @@ sources:
 - paper: Cut09
   loc: 'Theorem 1.3'
 - paper: CP19
-  loc: 'Proposition 4.4'
+  loc: 'Proposition 4.4 of arXiv 1412.0868v2'
+- paper: CJS20
+  loc: 'Corollary 0.4'
+- paper: AT19
+  loc: 'Remark 2.2.3(ii)'
 uses:
 - SG00000042
 tier: T6
 route:
 - R2
-notes: 'This is $\mathrm{Princ}_4$ of research note 77, Definition 77.3. In dimension 3 it is [Cut09] Theorem 1.3 and [CP19] Proposition 4.4. In characteristic 0 it is SG00000042. The referee report in note 82 records that it is not known to follow from resolution of 4-folds, so a proof of SG000000BQ through it can use a hypothesis that is stronger than the goal. The known method, order reduction of weak transforms as in [Cut09] Theorem 5.6, contains the multiplicity drop problem for 3-folds. It is open. Handbook Volume 9, Section 3.24. The result is not in Lean.'
+notes: 'This is $\mathrm{Princ}_4$ of research note 77, Definition 77.3. In dimension 3 it is [Cut09] Theorem 1.3 and [CP19] Proposition 4.4 (the numbering of arXiv 1412.0868v2; in v1 it is Proposition 4.3). In characteristic 0 it is SG00000042. The weak form $\mathrm{Princ}_4^{\rm w}$ of research note 85, Definition 85.1, asks only for a regular $W$, projective and birational over $U$ and an isomorphism over $U \setminus V(I'')$, with $I \mathcal{O}_W$ invertible; here $I = \mathcal{O}_U(-D) I''$ and $V(I'')$, the locus where $I$ is not invertible, has dimension at most 2. The proof of SG000000C1 needs the weak form in Steps 2, 3 and 5, and the strong form only through SG000000BY (SG000000CC). The weak form reduces to ideals with cosupport in a divisor with simple normal crossings (SG000000CD), and it contains resolution of each projective 4-fold with a projective birational morphism to a regular 4-fold (SG000000CE). Known cases in characteristic $p$, after note 85: ambient dimension at most 3 ([CP19], [Cut09]); monomial ideals, by toric resolution SG0000001T and [Gow05]; binomial ideals [Bla12]; principal ideals; and a neighborhood of each non-closed point of $V(I'')$, since the local ring there has dimension at most 3 and [CP19] Proposition 4.4 applies, but these local principalizations do not glue by a known argument. At closed points it is open in characteristic $p$ [AT19, Remark 2.2.3(ii)]; the methods of [BenV13] and of Kawanoue and Matsuki give no result in ambient dimension 4. The referee report in note 82 records that it is not known to follow from resolution of 4-folds, so a proof of SG000000BQ through it can use a hypothesis that is stronger than the goal. The known method, order reduction of weak transforms as in [Cut09] Theorem 5.6, contains the multiplicity drop problem for 3-folds. It is open. Handbook Volume 9, Sections 3.24 and 3.25. The result is not in Lean.'

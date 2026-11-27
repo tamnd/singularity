@@ -1,0 +1,12 @@
+tag: SG000000CG
+kind: definition
+title: 'Relative strong factorization RSF_3'
+statement: 'Let $R \subseteq S$ be regular local rings of dimension 3 with the same fraction field, $S$ dominating $R$ and essentially of finite type over $R$. Say that $\mathrm{RSF}(R,S)$ holds if there are a composite $Y \to \operatorname{Spec} R$ of blowups along regular centers and a projective birational $Z \to \operatorname{Spec} R$ with a point $\zeta$ such that $\mathcal{O}_{Z,\zeta} = S$, such that $Y \to Z$ is a morphism over a neighborhood of $\zeta$ and $Y \times_Z \operatorname{Spec} S \to \operatorname{Spec} S$ is a composite of blowups along regular centers. For an ideal $K$ of $R$ with $K S$ invertible, the strong variant asks in addition that the centers of $Y \to \operatorname{Spec} R$ lie in the locus where the transform of $K$ is not invertible. $\mathrm{RSF}_3$ is the statement that $\mathrm{RSF}(R,S)$ holds for all such pairs.'
+sources:
+- paper: Kar03
+uses:
+- SG000000C7
+tier: T6
+route:
+- R2
+notes: 'Definition 85.6 of research note 85. $\mathrm{RSF}(R,S)$ implies local strong factorization along each valuation that dominates $S$: take the local ring of its center on $Y \times_Z \operatorname{Spec} S$. Whether local strong factorization for all these valuations implies $\mathrm{RSF}(R,S)$ is open; the local factorizations exist on finitely many patches of the Zariski-Riemann space, but they need not glue. $\mathrm{RSF}_3$ over the residue fields of curves is the local input of SG000000C9, which note 83 gave as local strong factorization. $\mathrm{RSF}_3$ is open in characteristic $p$, and in the toric case in general: it holds for $\sigma_0$ (SG000000CH) and for small cones (SG000000CK), and Oda''s conjecture implies the toric case (SG000000CM). Handbook Volume 9, Section 3.25. The result is not in Lean.'

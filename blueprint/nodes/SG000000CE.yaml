@@ -1,0 +1,14 @@
+tag: SG000000CE
+kind: theorem
+title: 'Weak principalization in dimension 4 resolves the 4-folds over a regular 4-fold'
+statement: 'Assume $\mathrm{Princ}_4^{\rm w}$ of SG000000CC. Let $U$ be a regular quasi-projective 4-fold over $k$ and $X \to U$ a projective birational morphism. Then there is a regular $W$ with a projective birational morphism $W \to X$. If $X \to U$ is an isomorphism over $U \setminus G$ with $G$ closed of codimension at least 2, then $W \to X$ is an isomorphism over $U \setminus G$.'
+sources:
+- paper: Har
+  loc: 'Theorem II.7.17'
+uses:
+- SG000000CC
+- SG000000BW
+tier: T6
+route:
+- R2
+notes: 'Proposition 85.4 of research note 85. $X = \mathrm{Bl}_J U$ for a coherent ideal $J$, with $V(J) \subseteq G$ by SG000000BW; a principalization of $J$ factors through $X$ by the universal property of the blowup. So $\mathrm{Princ}_4^{\rm w}$ gives resolution of each projective 4-fold with a projective birational morphism to a regular 4-fold, for example each projective rational 4-fold, which is open in characteristic $p$. This is not circular for SG000000BQ, because SG000000C1 applies principalization only over $\mathrm{Reg}\, V_0$, $\mathrm{Reg}\, V_1$ and $\tilde U_2$, but the principalization part of the proof is a resolution problem of the same depth. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

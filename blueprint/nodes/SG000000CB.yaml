@@ -1,0 +1,14 @@
+tag: SG000000CB
+kind: theorem
+title: 'Thirty-six more regular cones are not reachable with regular centers'
+statement: 'Let $F$ be a field and $R = F[x,y,z]_{(x,y,z)}$. For each of the 36 regular cones $\sigma$ in the six classes, up to permutation of the coordinates, of $\langle (0,1,3), (1,2,2), (3,4,1) \rangle$, $\langle (0,1,3), (2,3,2), (3,4,1) \rangle$, $\langle (0,1,4), (1,2,2), (2,3,1) \rangle$, $\langle (0,1,4), (1,2,3), (2,3,1) \rangle$, $\langle (1,3,3), (2,2,3), (4,1,4) \rangle$ and $\langle (1,3,3), (3,2,4), (4,1,4) \rangle$, the ring $S_\sigma$ of SG000000C8 is not an iterated monoidal transform of $R$ for any regular centers.'
+sources:
+- paper: Ful93
+uses:
+- SG000000CA
+- SG000000C2
+- SG000000C3
+tier: T3
+route:
+- R2
+notes: 'Theorem 87.6 of the referee report in note 87. The proof is an induction on the length of a chain, as in Theorem 83.8 of note 83. An exact computation lists, for each of the 36 cones, all toric states reachable from the octant that contain the cone. At each of them $|L_l| \le 2$, and each first center that is not torus-invariant after a change of parameters has the data of SG000000CA, with $(c_l, c_m, k)$ one of $((0,1,2),(4,2,1),2)$, $((0,1,2),(4,3,1),2)$, $((0,1,3),(3,2,1),3)$ and $((0,2,3),(3,2,1),3)$. So each chain stays in the toric game or stops at a dead chart, and it never reaches $S_\sigma$. Over $k(t)$ each of these cones gives a counterexample to $\mathrm{Fac}_3$ as in SG000000C4 and a version of SG000000C5. With this result 804 of the 900 toric-unreachable cones with entries at most 4 are settled in SG000000C8, and 96 cones in 16 classes are open. The result is new in note 87, and a second referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

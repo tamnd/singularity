@@ -1,0 +1,15 @@
+tag: SG000000CC
+kind: lemma
+title: 'The patching proof needs only weak principalization, except in one case'
+statement: 'Say that $\mathrm{Princ}_4^{\rm w}$ holds if for each regular quasi-projective 4-fold $U$ over $k$ and each nonzero coherent ideal $I = \mathcal{O}_U(-D) I''$, with $D$ effective and $V(I'')$ of codimension at least 2, there is a projective birational $\sigma \colon W \to U$ with $W$ regular, $\sigma$ an isomorphism over $U \setminus V(I'')$, and $I \mathcal{O}_W$ invertible. In the proof of SG000000C1, and of its variant SG000000C6, Steps 2, 3 and 5 use only $\mathrm{Princ}_4^{\rm w}$. The strong form SG000000BV is used only through SG000000BY, the case $d = 2$ of Claim A.'
+sources:
+- paper: Cut09
+  loc: 'proof of Theorem 15.1'
+uses:
+- SG000000C1
+- SG000000C6
+- SG000000BY
+tier: T6
+route:
+- R2
+notes: 'Lemma 85.2 and Definition 85.1 of research note 85. Step 2 needs only a regular $W_0$ with $I \mathcal{O}_{W_0}$ invertible. Step 3 needs only a regular $W_1$, projective and birational over $U_1$, that dominates the normalized blowup $Z$ of $K$; the morphism $\tau \colon W_1 \to Z$ exists because $K \mathcal{O}_{W_1}$ is invertible and $W_1$ is normal. Step 5 needs the clause that $W_2 \to \tilde U_2$ is an isomorphism off $V(J_2)$. Only the proof of SG000000BY follows the centers. In the variant SG000000C6 the strong form is needed only if (A$^{\rm w}$) is proved for the components with $d = 2$ by the argument of SG000000BY. The locus where $I$ is not invertible is $V(I'')$, of dimension at most 2, so no restriction on its dimension is needed. The result is new in note 85, and a referee has not read it yet. Handbook Volume 9, Section 3.25. The result is not in Lean.'

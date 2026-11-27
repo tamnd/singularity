@@ -4,12 +4,14 @@ title: 'Patching along curves'
 statement: 'Let $\alpha \colon V_2 \to V_1$ and $\beta \colon V_3 \to V_1$ be projective birational morphisms of normal 4-folds, with $\beta^{-1}(\mathrm{Reg}\, V_1)$ regular, and let $\Gamma \subseteq V_2$ be an irreducible curve in the fundamental locus of $V_2 \dashrightarrow V_3$ such that $\alpha(\Gamma)$ is a curve that meets $\mathrm{Sing}\, V_1$. Then there are projective birational $V_2'' \to V_2$, a composite of blowups along regular centers over $\mathrm{Reg}\, V_2$ near $\alpha^{-1}(\mathrm{Sing}\, V_1)$, and $V_3'' \to V_3$, a composite of blowups along regular centers over $\beta^{-1}(\mathrm{Reg}\, V_1)$, both isomorphisms off a neighborhood of $\Gamma$, such that $V_2'' \dashrightarrow V_3''$ is a morphism near the generic point of $\Gamma$.'
 sources:
 - paper: CP19
-  loc: 'Section 4.1'
+  loc: 'Section 4.1 of arXiv 1412.0868v2'
 - paper: Kar03
 uses:
 - SG000000C7
 - SG000000C6
+- SG000000CF
+- SG000000CG
 tier: T6
 route:
 - R2
-notes: 'Problem 83.P2 of research note 83. A positive answer removes $\Gamma$ from the fundamental locus and keeps the centers of the valuations in $N$ regular. Whether finitely many such steps, with SG000000BV, reach the condition (A$^{\rm w}$) of SG000000C6 is part of the problem. The local input at the generic point of $\Gamma$ is local strong factorization in dimension 3 over $\kappa(\Gamma)$, open in characteristic $p$. The new global difficulty is the termination of the alternating blowups along $\Gamma$ near its points over $\mathrm{Sing}\, V_1$. It is open. Handbook Volume 9, Section 3.24. The result is not in Lean.'
+notes: 'Problem 83.P2 of research note 83. A positive answer removes $\Gamma$ from the fundamental locus and keeps the centers of the valuations in $N$ regular. Whether finitely many such steps, with SG000000BV, reach the condition (A$^{\rm w}$) of SG000000C6 is part of the problem. The modification of $V_2$ is allowed by SG000000CF. Note 83 named local strong factorization in dimension 3 over $\kappa(\Gamma)$ as the local input. Research note 85 corrects this: one modification near the generic point of $\Gamma$ must serve all valuations at the same time, so the local input is the relative strong factorization $\mathrm{RSF}_3$ of SG000000CG, which implies local strong factorization; the converse is open. In the toric case of SG000000C5 the problem is solved near $\Gamma$ (SG000000CH and SG000000CJ). Note 85 splits the general problem into (N1) $\mathrm{RSF}_3$ at the generic point of $\Gamma$, (N2) closures of the centers that stay regular at the points of $L$, (N3) no new bad components near the special points of $\bar\Gamma$, (N4) termination of the alternating blowups, and (N5) the weak form of SG000000BV at closed points. It is open. Handbook Volume 9, Sections 3.24 and 3.25. The result is not in Lean.'
