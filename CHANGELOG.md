@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.68 - 2026-11-27
+
 ### Added
 
 - SG00000097 to SG0000009E for track NW, the boundary cases of Newton and Frobenius preparation in research note 68. The nodes are the results that the referee report in note 70 marks safe, in the form that note 70 corrected. SG00000097 is Theorem 3.1 of note 68: for $n = 2$, $D = p$ and at least three critical directions, no change of all coordinates and no unit make $z^p + g$ Newton nondegenerate, for each $g$ with these terms of degree $p$, and always $|C| \le p - 2$. SG00000098 is Corollary 3.3 of note 68, the complete answer for $z^p + h$ with $h$ a binary form. SG00000099 is Theorem 4.1 and Lemma 4.2 of note 68, the same obstruction for $n \ge 3$ when $\{z^p + h = 0\}$ contains no line. SG0000009A is Example 4.4 of note 68, $z^5 + x^4 y + y^4 w + w^4 x$, and the decision of the five rows for $p = 5$, $n = 3$ that note 55 left undecided. SG0000009B is Theorem 5.1 of note 68 in the scope of note 70, with Proposition 3.1 of note 70 for terms of higher order. SG0000009C is Theorem 6.2 of note 68 for the top face of a weighted form in three variables. SG0000009D is Theorem 7.1 of note 68: one weighted blowup lowers the residual order outside an explicit exceptional set. SG0000009E is Problem 5.15 of note 05 for $n \ge 3$, an induction on the residual order. It is open. None of the new nodes has a Lean proof.
