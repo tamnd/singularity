@@ -1,0 +1,14 @@
+tag: SG0000008V
+kind: theorem
+title: 'A weighted blowup localizes the degenerate faces of z^p + g'
+statement: 'Let $f = z^p + g$, let $w$ be a weight with all entries positive, let $m = m_w(g) \ge 1$, let $\sigma$ be the face of $w$, and let $W = (p w, m)$, divided by the gcd. In each regular fan that contains the ray of $W$ and refines the normal fan of the Newton polyhedron of $f$, the points of the open orbit of the divisor $E_W$ where the strict transform is singular or not transverse to $E_W$ correspond to the torus orbits of the torus critical points $v$ of $g_\sigma$ with $g_\sigma(v) \ne 0$. If $g = g_\sigma$, these points are singular points of the strict transform.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+- SG0000008W
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Proposition 11.1 of research note 55 in the form that research note 60 corrected (Proposition 4.2 of note 60). The first form said that these points are the singular points of the strict transform on the open orbit. This is false. For $p = 3$ and $f = z^3 + x^2 y + x y^2 + y^4$, the strict transform in the chart $y = x t$, $z = x z''$ is $z''^3 + t + t^2 + x t^4$. It is smooth at $(x, t, z'') = (0, 1, 1)$ but tangent to $E_W = \{x = 0\}$ there (Example 11.1a of note 55). So a measure of the defect after a weighted blowup must count the points that are not transverse. The result is not in Lean.'

@@ -1,0 +1,13 @@
+tag: SG0000008Z
+kind: conjecture
+title: 'The critical set obstruction for all changes of coordinates when D = p'
+statement: 'Let $k$, $g$, $D$, $h$ and $C$ be as in SG0000008R, and assume $D = p$. Assume that $C$ is not contained in the union of $n$ hyperplanes with linearly independent equations, and let $F = z^p + g$. Then for each automorphism $\Psi$ of $k[[x, z]]$ and each unit $u$ of $k[[x, z]]$, the series $u \cdot (F \circ \Psi)$ is Newton degenerate.'
+sources:
+- paper: Newt
+uses:
+- SG0000008S
+tier: T2
+route:
+- R5
+- R7
+notes: 'This node states the expected answer of an open question, Section 4.1 of research note 55 and Section 1.3 of research note 60. It is not known if the statement is true. For $D = p$ the form of degree $p$ of $F$ is $z^p + h$, which is not a $p$-th power, so Step 1 of the proof of SG0000008S fails. For $n = 2$ and three critical directions that are not collinear, a linear change of $(x, y, z)$ removes the degenerate top face, so the obstruction of SG0000008R does not apply. The test cases are $z^5 + x^4 y + x y^4$ and $z^5 + 2 x^2 y^2 (x + y)$ over $\mathbb{F}_5$ (Example 4.5 of note 55). For both, the linear changes of all coordinates leave three degenerate edges. The nonlinear changes are not tested.'

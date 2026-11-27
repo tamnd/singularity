@@ -1,0 +1,13 @@
+tag: SG0000008X
+kind: theorem
+title: 'One weighted blowup for z^p + h with h a binary form'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $h \in k[x, y]$ be a form of degree $D$ with $p \mid D$ and $\nabla h \ne 0$, and let $f = z^p + h$. Let $\pi$ be the weighted blowup with the weights $(1, 1, D/p)$. Then the strict transform of $f = 0$ is in the $x$-chart and the $y$-chart, and at each of its singular points it is, in suitable coordinates, $\{z^p + s^e u(s) = 0\} \times \mathbb{A}^1$ with $u(0) \ne 0$, $p \nmid e$ and $2 \le e \le D$. These germs are Newton nondegenerate and convenient in $(s, z)$, so a toric modification resolves each of them.'
+sources:
+- paper: Newt
+uses:
+- SG0000008W
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 11.2 of research note 55, which research note 60 checked. In the $x$-chart the strict transform is $z''^p + h(1, t)$, a curve times a line. For $z^5 + x^4 y + x y^4$ the three critical directions give $e = 2$, so one weighted blowup and three toric modifications resolve it, while no change $(\varphi, q)$ makes it nondegenerate (SG0000008R). If $h$ has terms of higher order, the strict transform is not a product, and a drop of the defect is not proved. The result is not in Lean.'

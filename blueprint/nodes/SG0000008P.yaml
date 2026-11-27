@@ -1,0 +1,16 @@
+tag: SG0000008P
+kind: theorem
+title: 'The Newton criterion for z^p + g in the weight form'
+statement: 'Let $K$ be a perfect field of characteristic $p > 0$ and let $g \in K[x_1, \dots, x_n]$ with $g \ne 0$ and $g(0) = 0$. A polynomial $F$ is Newton nondegenerate over $K$ if, for each weight $W$ with all entries positive, the initial form $\operatorname{in}_W F$ has no singular point in the torus. Then $z^p + g$ is Newton nondegenerate over $K$ if and only if, for each weight $w \in \mathbb{Z}^n_{>0}$, the initial form $\operatorname{in}_w g$ has no critical point in $(K^*)^n$.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+lean:
+  statement: Singularity.newtonNondegenerate_purelyInseparable_iff
+  proof: Singularity.newtonNondegenerate_purelyInseparable_iff
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 2.8 of research note 55, the weight form of Theorem 5.3 of research note 05, with the corrections of research note 60. Lean proves it for each perfect reduced ring $K$ of characteristic $p$ (Singularity.newtonNondegenerate_purelyInseparable_iff, tamnd/singularity-lean#208). The Lean definition is Singularity.NewtonNondegenerate, Definition 2.1 of note 55. The direction from the right side to the left side does not need a perfect $K$ (Singularity.newtonNondegenerate_purelyInseparable_of_forall). The hypothesis that $K$ is perfect is necessary for the other direction (SG0000008Q). Over an algebraically closed field the weights give the compact faces of the Newton polyhedron (Lemma 2.2 of note 55), so this is the face form SG0000003G. Lemma 2.2 is not in Lean.'

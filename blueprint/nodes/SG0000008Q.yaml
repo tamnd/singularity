@@ -1,0 +1,16 @@
+tag: SG0000008Q
+kind: counterexample
+title: 'The Newton criterion for z^p + g needs a perfect field'
+statement: 'Let $K = \mathbb{F}_p(t)$, $n = 1$ and $g = t x^p$. Then $z^p + t x^p$ is Newton nondegenerate over $K$, but each point of $K^*$ is a critical point of each initial form $\operatorname{in}_w g = t x^p$. So the equivalence of SG0000008P fails over a field that is not perfect.'
+sources:
+- paper: Newt
+uses:
+- SG0000008P
+lean:
+  statement: Singularity.newtonNondegenerate_ratFunc_example
+  proof: Singularity.newtonNondegenerate_ratFunc_example
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Example 2.9 of research note 55, from Section 2 of research note 60. The initial forms of $z^p + t x^p$ are $z^p$, $t x^p$ and $z^p + t x^p$. A singular point of the last one in the torus needs $(z/x)^p = -t$, and $t$ is not a $p$-th power in $K$. Over the algebraic closure of $K$ the polynomial is degenerate. Lean proves the example (Singularity.newtonNondegenerate_ratFunc_example, with Singularity.newtonNondegenerate_purelyInseparable_monomial and Singularity.ratFunc_pow_ne_neg_X, tamnd/singularity-lean#208).'

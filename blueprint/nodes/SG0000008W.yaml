@@ -1,0 +1,13 @@
+tag: SG0000008W
+kind: theorem
+title: 'Toric resolution of a Newton nondegenerate polynomial without convenience'
+statement: 'Let $k$ be a perfect field and let $F \in k[x_1, \dots, x_m]$ with $F \ne 0$ and $F(0) = 0$ be Newton nondegenerate over the algebraic closure of $k$. Let $\Sigma$ be a regular fan with support $\mathbb{R}^m_{\ge 0}$ that refines the normal fan of the Newton polyhedron of $F$, and let $\pi \colon X_\Sigma \to \mathbb{A}^m$ be the toric morphism. Then there is a Zariski open neighbourhood $U$ of $0$ such that over $U$ the total transform has simple normal crossings. Locally $\pi^* F = y^{\mu} \tilde F$ with $\mu_j = m_{v^j}(F)$, where $\tilde F = 0$ is smooth and transverse to the toric boundary, and $\tilde F = 0$ is the strict transform of the closure of $\{F = 0\} \cap T$. The polynomial $F$ need not be convenient.'
+sources:
+- paper: Newt
+uses:
+- SG00000011
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 10.1 of research note 55, with the notation that research note 60 corrected (the exponent vector is $\mu$, not $m$). It is Theorem 5.11 of research note 05 in each characteristic. The proof uses only the Jacobian criterion and the properness of $\pi$. The components of $F = 0$ in the coordinate hyperplanes become boundary divisors. A version is standard in characteristic 0 (Varchenko, Oka), and for characteristic $p$ there is work of Aroca, Gomez-Morales and Mourtada. The result is not in Lean.'

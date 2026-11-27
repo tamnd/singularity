@@ -1,0 +1,13 @@
+tag: SG0000008S
+kind: theorem
+title: 'The critical set obstruction for all changes of coordinates when D > p'
+statement: 'Let $k$, $g$, $D$, $h$ and $C$ be as in SG0000008R, and assume $D > p$. Assume that $C$ is not contained in the union of $n$ hyperplanes with linearly independent equations, and let $F = z^p + g$. Then for each automorphism $\Psi$ of $k[[x, z]]$ and each unit $u$ of $k[[x, z]]$, the series $u \cdot (F \circ \Psi)$ is Newton degenerate.'
+sources:
+- paper: Newt
+uses:
+- SG0000008R
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 4.3 of research note 55, which is Theorem 1.2 of research note 60 with its proof. The form of degree $p$ of $F \circ \Psi$ is $\ell^p$, with $\ell$ the linear part of $\Psi^* z$. If $\ell$ has two nonzero coefficients, the weight $(1, \dots, 1)$ gives a degenerate face. Otherwise the proof uses the weights $(1, \dots, 1, e)$, $(p, \dots, p, D)$ and $(p, \dots, p, D + 1)$ and the hypothesis on $C$ as in SG0000008R. Consequences (Corollary 4.4 of note 55) are $z^3 + x^5 y + x y^5$ and the series $z^2 + g$ of SG0000008Y. The case $D = p$ is open (SG0000008Z). The result is not in Lean.'

@@ -1,0 +1,13 @@
+tag: SG0000008T
+kind: theorem
+title: 'Preparation in two variables for the weight (1, m)'
+statement: 'Let $k$ be an algebraically closed field of characteristic $p > 0$, let $m \ge 2$, and let $h \in k[x, y]$ be weighted homogeneous of degree $D$ for the weight $(1, m)$ with $\nabla h \ne 0$. The weight preserving changes of coordinates are $x \mapsto \alpha x$, $y \mapsto \beta y + \gamma x^m$, and they act on $s = y / x^m$ by $s \mapsto (\beta s + \gamma) / \alpha^m$. Let $Z_0 \subset \mathbb{A}^1$ be the set of the values of $s$ at the critical points of $h$ with $x \ne 0$. Then a weight preserving change makes $\operatorname{in}_{(1,m)} h$ free of critical points in the torus if and only if $|Z_0| \le 1$. If $p \mid D$ and $h$ is clean, then $0 \in Z_0$ if and only if $h$ has no monomial $x^{D-m} y$.'
+sources:
+- paper: Newt
+uses:
+- SG0000003G
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Proposition 5.4(b) of research note 55 in the form that research note 60 corrected (Proposition 3.2 of note 60). The first form said that $h$ is preparable if and only if the set $Z$ of torus orbits of critical points has at most one point. This is false. The change $y \mapsto \beta y + \gamma x^m$ moves the critical point $s = 0$ on the axis $y = 0$, which is not in $Z$, into the torus. The counterexample is $p = 3$, $w = (1, 2)$ and $h = x^4 y^4 + x^2 y^5$, with $Z = \{1\}$ and $Z_0 = \{0, 1\}$ (Counterexample 5.4a of note 55). Note 60 checked all the weight preserving changes over $\mathbb{F}_3$ by computer. The cases $w = (1, 1)$ and $w_1, w_2 \ge 2$ are parts (a) and (c) of the proposition. The result is not in Lean.'
