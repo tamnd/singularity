@@ -4,6 +4,10 @@ This directory has the specs and the runs of the computation lab (spec 13, `docs
 
 A run is data from examples. It does not prove a statement. A result enters the map only as a node of kind `example`, `counterexample` or `conjecture`, as spec 13 says.
 
+## The simulator
+
+`sim/` has `labsim`, a small Python simulator for single examples, certificates and the test bank of the notes and the handbook. It has real charts with translations and cleaning, and the invariants rho, d and nu^G. See `sim/README.md`.
+
 ## The layout
 
 - `specs/<name>.yaml`: a spec. It has the question, the node of the map, the inputs and the outputs. The name starts with the experiment: `e1-`, `e2-` or `e4-`.
