@@ -15,6 +15,7 @@ Each release has a section. The newest release is first.
 
 - SG00000096, Conjecture P, and SG0000006Z, Conjecture L, have the kind theorem. Theorem 4.1 of the referee report 71 on note 69, confirmed by the second referee in note 74, proves that no clean $g \in K[[y, z]][x, w]$ has a planar corner run in four variables, for each prime $p$ and each degree, and so that Conjecture L holds for each clean $g \in K[[y, z]][x, w]$. The uses and the notes of the two nodes give the new proof. The statements for power series in $x, w$ and for $g \in K[[x, y, z]]$ stay open.
 - The notes of SG00000075, SG00000071 and SG0000007D (Conjectures L° and L+ and Hypothesis H1) name SG0000009H and SG0000009J, and say that each corner run is now linear. The notes of SG0000008K, SG00000092 and SG00000093 name the general results SG00000096 and SG0000006Z.
+- The handbook page of the site links edition 0.4.72 of the handbook.
 - The handbook page of the site links edition 0.4.70 of the handbook.
 - The handbook page of the site links edition 0.4.69 of the handbook.
 - The handbook page of the site links edition 0.4.68 of the handbook.
