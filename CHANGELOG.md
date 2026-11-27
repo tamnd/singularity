@@ -4,6 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## 0.4.62 - 2026-11-27
+
+### Added
+
+- SG0000006J to SG0000007E for the corner runs with translations in four variables of Volume 7, Section 3.17 of the handbook. The nodes give the closed form of the transform and the criterion for the drop in four variables, the counterexample $x^2 y^{p-2} z^{p-2} + F$ to the finiteness of the translations, the reduction of a cylindrical point to three variables, the corner surfaces and corner curves with the order of $G$ at least $\rho$, the counterexample $x w (x + w) y^{p-3} z^{p-3}$ to Conjecture L+, and the case of degree less than $p$ under the hypothesis H1. The proofs are in notes 38 to 42 of the research notes. None of the nodes has a Lean proof.
+
 ## 0.4.61 - 2026-11-27
 
 ### Added
