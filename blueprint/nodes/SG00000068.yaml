@@ -7,7 +7,10 @@ sources:
 uses:
 - SG0000003F
 - SG0000005N
+lean:
+  statement: Singularity.Translations.exRun_of_charts
+  proof: Singularity.Translations.exRun_of_charts
 tier: T2
 route:
 - R1
-notes: This is Example 3.15.18 of Volume 7 of the handbook. Here $r = (0, p-2, p-2)$, $G = x^2$ and $\widetilde\Theta(G)$ contains $2x$, so $\rho = 1$ and $d = 2$. It is Example 3.13.10 (SG0000005N) with $x^2$ in place of $x^p$. It shows that Theorem 6 of note 30, which says that no such run keeps $\rho \ge 1$ when $\deg_x g < p$, is false. Note 33 of the research notes gives the counterexample $x^2 y z$ with the total transform, and checks with a computer that $\rho$ stays constant along the run that takes the two charts in turn. The result is not in Lean.
+notes: This is Example 3.15.18 of Volume 7 of the handbook. Here $r = (0, p-2, p-2)$, $G = x^2$ and $\widetilde\Theta(G)$ contains $2x$, so $\rho = 1$ and $d = 2$. It is Example 3.13.10 (SG0000005N) with $x^2$ in place of $x^p$. It shows that Theorem 6 of note 30, which says that no such run keeps $\rho \ge 1$ when $\deg_x g < p$, is false. Note 33 of the research notes gives the counterexample $x^2 y z$ with the total transform, and checks with a computer that $\rho$ stays constant along the run that takes the two charts in turn. The Lean proof is over `ZMod p` for each prime $p \ge 3$ (tamnd/singularity-lean#193). Singularity.Translations.example_3_15_18 gives that $g$ is clean, $\operatorname{ord} g = 2p - 2$, $G = x^2$, $d = 2$, $\rho = 1$ and $\deg_x g = 2$. The chart lemmas are Singularity.Translations.pointChart_exPoly_y and Singularity.Translations.pointChart_exPoly_z, and the step lemmas are Singularity.Translations.rhoStep_exPoint_y and Singularity.Translations.rhoStep_exPoint_z. Lean has no definition of a corner run with free translations, so Singularity.Translations.exRun_of_charts states the run as a sequence of chart steps with the translation $0$, the divisor $\{y, z\}$ and $\rho = 1$.
