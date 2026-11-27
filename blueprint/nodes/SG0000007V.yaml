@@ -1,0 +1,14 @@
+tag: SG0000007V
+kind: counterexample
+title: A failing center of Cossart through a point of multiplicity p
+statement: Let $p = 2$, $g = xw + y^3$ and $E = \{x\}$ on $\mathbb{A}^3$. Then $\operatorname{Sing}(B)$ is the $w$-axis $C$, with $\nu = 1$, $J(B, g, E, C) = (x, y^3)$ and $\alpha = 1$, so $C$ is permis and is the curve of the test of a good point at the origin. The lifting test fails along $C$, since $X$ has generic multiplicity $1$ along $C$, but $X$ has multiplicity $2 = p$ at the origin.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007P
+- SG0000007Q
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Example 4.3.16. Research note 47, Example 47.A. Whether the full algorithm blows up $C$ or the origin first is not decided. Planned for Lean.

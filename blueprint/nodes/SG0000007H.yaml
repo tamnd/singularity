@@ -1,0 +1,16 @@
+tag: SG0000007H
+kind: theorem
+title: The order of z^q + g along a lifted center
+statement: Let $R$ be a commutative ring of characteristic $p > 0$, let $q = p^e$, let $I \ne R$ be an ideal, let $g, h \in R$ and $J = (z - h) + I R[z]$. Then $z^q + g \in J^n$ if and only if $n \le q$ and $g + h^q \in I^n$. In particular $z^q + g \in J^q \setminus J^{q+1}$ if and only if $g + h^q \in I^q$. The powers are ordinary powers.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000003K
+lean:
+  statement: Singularity.Portfolio.lift_base_blowup
+  proof: Singularity.Portfolio.lift_base_blowup
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Proposition 4.3.1. Research note 10, Lemma 10.5, order part. The order form with each $n$ is Singularity.Portfolio.X_pow_add_C_mem_pow_iff_order. Lean uses ordinary powers of $J$, not the order at the generic point of the center.

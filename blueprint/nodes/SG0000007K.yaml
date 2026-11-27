@@ -1,0 +1,10 @@
+tag: SG0000007K
+kind: lemma
+title: Powers of a regular prime are symbolic powers
+statement: Let $R$ be a regular noetherian ring and $P$ a prime ideal with $R/P$ regular. Then $P^n R_P \cap R = P^n$ for each $n \ge 0$.
+sources:
+- paper: Hir64
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Lemma 4.3.4. Research note 43, Lemma 43.2. The associated graded ring of $P$ is a polynomial ring over the domain $R/P$ locally, so the order along $P$ is a valuation-like function. Planned for Lean.

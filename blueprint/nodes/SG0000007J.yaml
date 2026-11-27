@@ -1,0 +1,16 @@
+tag: SG0000007J
+kind: lemma
+title: The chart of a lifted base blowup
+statement: Let $R$ be a commutative ring of characteristic $p > 0$, $q = p^e$, $I$ an ideal, $g, h \in R$ with $g + h^q \in I^q$, let $\varphi \colon R \to A$ be a ring homomorphism and $x \in A$ with $\varphi(I) A \subseteq (x)$. Then there is $g'' \in A$ with $\varphi(g + h^q) = x^q g''$, and the substitution $z = h + x z''$ sends $z^q + g$ to $x^q (z''^q + g'')$.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007H
+lean:
+  statement: Singularity.Portfolio.lift_base_blowup_chart
+  proof: Singularity.Portfolio.lift_base_blowup_chart
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Corollary 4.3.2. Research note 10, Lemma 10.5, chart part. This is a ring identity. That $z''^q + g''$ is the strict transform on the blowup is not proved in Lean.

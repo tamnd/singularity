@@ -1,0 +1,13 @@
+tag: SG0000007P
+kind: theorem
+title: No regular center in the multiplicity p locus fails the test
+statement: Let $B$ be a regular scheme of characteristic $p$, $g \in \mathcal{O}(B)$, $X = V(z^p + g)$, and $C \subseteq B$ an irreducible regular closed subscheme. Either $C$ lies in the image of the multiplicity $p$ locus of $X$ and the lifting test holds for $C$, or the generic multiplicity of $X$ along $C$ is less than $p$ and the test fails.
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007N
+tier: T2
+route:
+- R5
+notes: Handbook Volume 7, Corollary 4.3.8. Research note 43, Corollary 43.6. A failing center can still meet the multiplicity $p$ locus at closed points (SG0000007V). Planned for Lean.

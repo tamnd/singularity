@@ -4,6 +4,14 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000007F to SG0000007V for the base blowups of the algorithm of Cossart for $z^p + g$ of Volume 7, Section 4.3 of the handbook, and for the Lucas form of Volume 7, Section 4.1. SG0000007F and SG0000007G are Lemmas 10.3 and 10.4 of the research notes, with Lean proofs by the theorem of Lucas. SG0000007H and SG0000007J give the order of $z^q + g$ along the lifted center and the chart, with Lean proofs. SG0000007K and SG0000007M compute the generic multiplicity. SG0000007N says that the lifting test holds for a regular center if and only if the hypersurface has multiplicity $p$ at the generic point of the center, and then the blowup is permissible. SG0000007P says that no regular center in the multiplicity $p$ locus fails. SG0000007Q reads the test from the clean part. SG0000007R and SG0000007S bound the invariant $\nu$ of Cossart along a failing center. SG0000007T and SG0000007V are failing centers of the algorithm, and SG0000007V passes through a point of multiplicity $p$. The proofs are in notes 10, 43 and 47 of the research notes. SG0000007K to SG0000007V have no Lean proof.
+
+### Changed
+
+- records/lean.json pins singularity-lean 0.4.46 at commit 4e04231, with the base package at commit d84acc8. The record has 3198 declarations and none with sorry. records/base-charzero.json and records/trust.json name the new commits and the new count.
+
 ## 0.4.62 - 2026-11-27
 
 ### Added

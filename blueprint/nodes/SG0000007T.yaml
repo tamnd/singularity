@@ -1,0 +1,13 @@
+tag: SG0000007T
+kind: counterexample
+title: A surface center of Cossart that fails the lifting test
+statement: 'Let $p \ge 3$, $2 \le d \le p - 1$, $g = x^d$ and $E = \emptyset$ on a regular threefold. Then $\operatorname{Sing}_\nu = V(x)$ with $\nu = d - 1$, the algorithm of Cossart blows up the surface $V(x)$, and the lifting test fails: $X = V(z^p + x^d)$ has multiplicity $d < p$ along $V(x)$.'
+sources:
+- paper: Cos87
+- paper: Pos24
+uses:
+- SG0000007S
+tier: T1
+route:
+- R5
+notes: Handbook Volume 7, Example 4.3.14. Research note 43, Example 43.10. Planned for Lean.
