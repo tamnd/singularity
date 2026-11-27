@@ -1,0 +1,14 @@
+tag: SG0000008Y
+kind: theorem
+title: 'The Fano obstruction in characteristic 2'
+statement: 'Let $k$ be an algebraically closed field of characteristic $2$, and let $h = x_1 x_2 A^2 + x_1 x_3 B^2 + x_2 x_3 C^2$ be a clean quartic form in three variables, with linear forms $A$, $B$, $C$ that are linearly independent. Then the projective critical set of $h$ contains the seven points of a Fano plane, and it is not contained in the union of three lines with independent equations. So for each $g \in k[[x_1, x_2, x_3]]$ with lowest form $h$, no automorphism of $k[[x, z]]$ and no unit makes $z^2 + g$ Newton nondegenerate. Also $h$ has a torus critical point where $h \ne 0$.'
+sources:
+- paper: Newt
+uses:
+- SG0000008R
+- SG0000008S
+tier: T2
+route:
+- R5
+- R7
+notes: 'This is Theorem 6.3 of research note 55, with the scope that research note 60 corrected. The fixed points of the Frobenius semilinear map $\Phi(x) = (C(x)^2, B(x)^2, A(x)^2)$ form an $\mathbb{F}_2$-structure of $k^3$ by Lang''s theorem in the form of Katz, and they are critical points of $h$. Three lines with independent equations cover at most six of the seven points. Then SG0000008R gives the changes $(\varphi, q)$ and SG0000008S gives all changes of coordinates, since $D = 4 > 2 = p$. The example is $h = x y w (x + y + w)$ (Example 6.4 of note 55). Its critical set is $\mathbb{P}^2(\mathbb{F}_2)$, $h$ is nondegenerate in the classical sense, and only the whole triangle of the Newton polyhedron is degenerate. The result is not in Lean.'
