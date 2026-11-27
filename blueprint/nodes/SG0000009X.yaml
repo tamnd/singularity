@@ -1,0 +1,15 @@
+tag: SG0000009X
+kind: theorem
+title: The graded transformation law of the Hasse-Schmidt log-Jacobian ideal under a point blowup
+statement: 'In the setting of SG0000009V, let $g$ be clean with $\operatorname{ord} g \ge q$, let $P \le m < q$, and blow up the origin. At a closed point of the $x_1$-chart, with the coordinates $x_1$ and $y_i = x_i'' - t_i$ for $i \ne 1$, let $\Delta'' = \{1\} \cup \{i \in \Delta \mid t_i = 0\}$ and $g'' = x_1^{-q} \pi(g)$, and write $\pi(x^{-r} \Theta_{(c)}) R'' = x_1^{\rho_{(c)}} W_c$. Then, up to a unit, $\Theta^{\le m}_{\Delta''}(g'') = x_1^{|r| + d - q} \bigl(\prod_{i \in \Delta'', i \ne 1} y_i^{r_i}\bigr) \sum_c x_1^{\varepsilon_c} W_c$, the ideal $\sum_c x_1^{\varepsilon_c} W_c$ is not contained in $(x_1)$, and $\rho''_m \le \min_c (\varepsilon_c + \rho_{(c)}) = \rho_m + \delta$. Moreover $\delta \ge 0$, and $\delta = 0$ if and only if $g$ is balanced at level $m$ in the given coordinates.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+- SG0000009W
+- SG0000003M
+- SG0000003A
+tier: T4
+route:
+- R5
+notes: 'This is Proposition 75.2 of research note 75, which the referee report in note 78 found correct. It is Proposition 5.1 of note 45, $\rho''_m \le \min_c (c + 2 \rho_{(c)} - \sigma)$, with $\sigma = d$ from SG0000009W. The input is the exact law of note 45, Theorem 4.1: $\Theta^{\le m}_{\Delta''}(g'') = x_1^{-q} \pi(\sum_c \mathfrak m^c \Theta_{(c)}) R''$ for each $1 \le m < q$. Its proof writes $\tau''(\pi(g)) = \psi(H)$ with $H = \sum \pi(\Phi_{\beta,\gamma}(g)) x_1^{|\gamma|} s^\beta s^\gamma$ and an automorphism $\psi$ of $R''[[s]]$ that maps $(s)$ into $(s'')$, and uses $(1 + s_1'')^{-q} = (1 + s_1''^q)^{-1}$. The factor $x_1^{|\gamma|}$ is the only place where the free order $c$ enters. Each $W_c$ has order at most $\rho_{(c)}$ by the argument of SG0000003A, and the piece with $\varepsilon_c = 0$ shows that the sum is not in $(x_1)$. Both terms in the definition of $\delta$ are at least $0$, so $\delta = 0$ exactly when some $c$ makes both zero, which is the balanced condition. For $e = m = 1$ the law is SG0000003M. Handbook Volume 7, Section 3.19. The result is not in Lean.'

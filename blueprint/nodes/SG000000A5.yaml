@@ -1,0 +1,13 @@
+tag: SG000000A5
+kind: theorem
+title: Each Hasse-Schmidt residual order of level at least 2 goes up under some point blowup
+statement: 'Let $K$ be an algebraically closed field of characteristic $p > 0$, $q = p^e \ge 3$ and $2 \le m < q$. Let $R = K[[x, y]]$ with the boundary $\{x\}$ and $g = x^{q+1} y^m + x^{q+2}$. Then $g$ is clean, $\operatorname{ord} g \ge q$, $\Theta^{\le m}(g) = (x^{q+1})$ and $\rho_m(g) = 0$. At the origin of the $y$-chart, with the boundary $\{x, y\}$, $\Theta'' = x^{q+1} y^2 (y^{m-1}, x)$ and $\rho''_m = 1$.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+- SG000000A2
+tier: T4
+route:
+- R5
+notes: 'This is Proposition 78.1 of the referee report in note 78 on note 75. On $x^{q+1} y^m$ the operator with $\beta = 0$ and $\gamma = m$ gives $x^{q+1}$, and each other generator is a multiple of $x^{q+1}$. In the chart, $g'' = x^{q+1} y^{m+1} + x^{q+2} y^2$ has no free variable, so the generators are the monomials of $g''$ that have a nonzero logarithmic coefficient of order at most $m$: $\binom{q+1}{1} = 1$ for the first, and $\binom{q+2}{1} = 2$ for odd $p$ or $\binom22 = 1$ for $p = 2$ for the second, where $m \ge 2$ is used. Together with SG000000A1 for $e = 3$ and Corollary 5.5 of note 45 for each $e$, among the levels $m < q$ exactly $m = 1$ does not go up, for each $p$ and $e$ with $q \ge 3$. For $e = 2$ and $m = P$ this extends SG000000A3 to each $p$. For $m \ge P$, $d = 1$, $\rho_{(m)} = 0$, $\rho_{(0)} = 1$ and $\delta = 1$, so the increase attains the bound of SG0000009X. By SG000000A2 the origin is unbalanced in each adapted coordinate system. Note 78 checked the statement by code in 252 cases with $p \le 7$ and $q \le 125$. Handbook Volume 7, Section 3.19. The result is not in Lean.'

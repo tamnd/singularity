@@ -1,0 +1,13 @@
+tag: SG000000A2
+kind: theorem
+title: The Hasse-Schmidt residual order goes up only at points that are unbalanced in each adapted coordinate system
+statement: 'In the setting of SG0000009V, let $g$ be clean with $\operatorname{ord} g \ge q$ and let $1 \le m < q$. Blow up the origin. If $\rho''_m > \rho_m$ at some point over the origin, then $g$ is unbalanced at the level $m$ in each adapted coordinate system.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+- SG0000009X
+tier: T4
+route:
+- R5
+notes: 'This is Corollary 75.10 of research note 75 with Fix 7 of the referee report in note 78: it holds for each $m < q$, not only for $m \ge P$. The values $\rho_m$ and $\rho''_m$ do not depend on the coordinates. The graded law of note 45, Proposition 5.1, holds for each $m < q$ in each adapted coordinate system and gives $\rho''_m \le \min_c (c + 2 \rho_{(c)} - \sigma)$. At a balanced point some $c$ has $\rho_{(c)} = \rho_m$ and $\rho_{(c)} + c = \sigma$, so the bound is $\rho_m$ (note 45, Theorem 5.2). For $m \ge P$ this is the case $\delta = 0$ of SG0000009X. Examples SG000000A3, SG000000A4 and SG000000A5 give such points. Handbook Volume 7, Section 3.19. The result is not in Lean.'

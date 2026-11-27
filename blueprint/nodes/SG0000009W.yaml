@@ -1,0 +1,12 @@
+tag: SG0000009W
+kind: lemma
+title: The weighted order of the graded pieces is the residual order at the top digit levels
+statement: 'In the setting of SG0000009V, let $g \ne 0$ be clean and let $P \le m < q$. Then, in each adapted coordinate system in which $g$ is clean, $\tilde r = r$, $\rho_{(c)} + c \ge d$ for each $c$, and $\sigma = d$. So $\varepsilon_c \ge 0$ for each $c$, some $c$ has $\varepsilon_c = 0$, and $\rho_m \le d \le \rho_m + m$.'
+sources:
+- paper: HP19a
+uses:
+- SG0000009V
+tier: T4
+route:
+- R5
+notes: 'This is Lemma 75.1 of research note 75, which the referee report in note 78 found correct. The proof is Theorem 3.1 of note 45, refereed in note 48. Each term of a generator of $\Theta_{(c)}$ is $x^{a - \gamma}$ for a monomial $x^a$ of $g$ with $|\gamma| = c$, and $x^{a - r}$ has degree at least $d$, so $\rho_{(c)} \ge d - c$. For the other bound take a monomial $x^b$ of the initial form of $G$ and a nonzero base $p$ digit of one of its exponents, or of $r_i + b_i$, at a position $l \le e - 1$, which exists because $g$ is clean. The operator with $\beta$ or $\gamma$ equal to $p^l$ times a unit vector gives a term of weighted degree $d$, by the theorem of Lucas, and no two monomials cancel because $a \mapsto a - \gamma$ is injective. With $m = P$ the lemma gives $\rho_P \le d \le \rho_P + P$ in each adapted clean coordinate system (note 45, Corollary 3.4), and so a new proof of the bound SG00000015 of Moh for point blowups. Handbook Volume 7, Section 3.19. The result is not in Lean.'
