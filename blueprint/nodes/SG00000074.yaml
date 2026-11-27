@@ -1,0 +1,13 @@
+tag: SG00000074
+kind: theorem
+title: In an origin run with a binary initial form the corner surfaces need a line of multiplicity at least d minus 1
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, and let $P_N, P_{N+1}, \dots$ be an origin run of a clean $g$ with both charts an infinite number of times. Let $h$ be the initial form of $G_m$ for $m$ large, a binary form of degree $d$ by Theorem 3.14.7, and assume $3 \le d < p$ and $\rho = d - 1$. If a free coordinate $X$ gives corner surfaces $V(X_m, y_m)$ and $V(X_m, z_m)$ with $\nu^G \ge \rho$ for $m$ large, then $h = c \ell^d$ or $h = c \ell^{d-1} \ell'$ for linear forms $\ell, \ell'$.
+sources:
+- paper: CJS20
+uses:
+- SG00000070
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.17.23 of Volume 7 of the handbook (Section 3.17). The converse is false by SG00000073. It is Corollary 2.4 of note 40 of the research notes, with the remark of note 42. The result is not in Lean.

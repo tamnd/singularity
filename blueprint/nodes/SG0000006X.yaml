@@ -1,0 +1,15 @@
+tag: SG0000006X
+kind: theorem
+title: The points of one linear form in the free coordinates lie eventually on a regular hypersurface
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, let $(\gamma_1, \gamma_2) \ne 0$ in $K[[y, z]]^2$, let $\Phi \in K[[y, z]][T]$, and let $g = \operatorname{cl} \Phi(\gamma_1 x + \gamma_2 w, y, z)$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables. (1) There is an $m_0$ such that $P_m$ is cylindrical for $m \ge m_0$, with $x' = u_1 x_m + u_2 w_m$, $u_i \in K[[y_m, z_m]]$, at least one $u_i$ a unit, and with $f \in K[[y_m, z_m]][x']$. (2) If $\Phi = c T + B_0$, that is, $g = \mu x + \nu w + B_0$ with $(\mu, \nu) \ne 0$, then no corner run in four variables from $P_N$ keeps $\rho \ge 1$. (3) For each $\Phi$ there is a $J$ such that the points $P_j$, $j > J$, lie on the strict transforms of a regular hypersurface $V(x'_{J+1})$, and for $j$ large the corner surfaces and the corner curves of SG0000006W have $\nu^G = d_j \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006V
+- SG0000006W
+- SG00000066
+- SG0000006M
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.15 of Volume 7 of the handbook (Section 3.17). Part 1 is the dominance lemma 3.15.4 on the union of the supports of $\gamma_1$ and $\gamma_2$. Part 2 reduces to Theorem 3.15.16 (SG00000066). Part 3 is SG0000006W. For $\deg_T \Phi < p$ and for $\Phi = B_1 T^p + B_0$, part 3 also follows from Theorem 3.15.17 and Theorem 3.13.27. It is Theorem 7.1 of note 38 of the research notes, with the fixes of note 39. Note 38 tagged part 3 for a general $\Phi$ as conditional on note 36; Theorem 3.16.14 makes it unconditional. The result is not in Lean.

@@ -1,0 +1,13 @@
+tag: SG00000075
+kind: conjecture
+title: Each corner run in four variables has corner curves with the order of G at least rho
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Then there are a $J$ and a free coordinate system $(x', w')$ at $P_J$ such that the translations of $x'$ are $0$ after $J$, and for $m$ large the corner curves $V(x'_m, w'_m, y_m)$ and $V(x'_m, w'_m, z_m)$ have $\nu^G(P_m) \ge \rho$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006Z
+- SG0000005Z
+tier: T2
+route:
+- R1
+notes: This is Conjecture 3.17.24 of Volume 7 of the handbook (Section 3.17). It is the conjecture L° of note 40 of the research notes, in the words of note 42. It implies a positive answer to Question 3.13.18 for these runs. It holds for the origin runs by Theorem 3.14.7 (SG0000005Z), at the cylindrical points of SG0000006W, for the runs of SG0000006R, and for SG00000072 and SG00000073. It is not proved in case 2 of SG0000007E. A form for $k \ge 3$ letters is open.

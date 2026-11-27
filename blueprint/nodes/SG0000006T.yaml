@@ -1,0 +1,14 @@
+tag: SG0000006T
+kind: counterexample
+title: A corner run in four variables can keep rho with an infinite number of nonzero translations
+statement: Let $p \ge 3$, $n = 4$, $\Delta = V(y) \cup V(z)$ and $g = x^2 y^{p-2} z^{p-2} + w y^p z^p$. Each word in the two charts with each chart an infinite number of times, with $a_m = 0$ and any $b_m \in K$, is a corner run in four variables with $\rho = 1$ at each point. If an infinite number of the $b_m$ are not $0$, the run has an infinite number of nonzero translations in each free coordinate system, and no point of the run is cylindrical. For $g = x^2 y^{p-2} z^{p-2} + x w y^p z^p$ with an infinite number of $b_m \ne 0$, neither $\partial_x g_m$ nor $\partial_w g_m$ is a monomial times a unit at any point, in the coordinates of the run.
+sources:
+- paper: CJS20
+uses:
+- SG0000006R
+- SG0000006S
+- SG0000006P
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.17.12 of Volume 7 of the handbook (Section 3.17). So the analogues of Theorem 3.15.17 (SG00000067) and of Proposition 3.15.10 (SG00000064) are false for $n = 4$, and SG0000006Q is false. The runs lie on the strict transforms of $V(x)$, and Question 3.13.18 has a positive answer for them, since the corner curves $V(x_m, w_m, y_m)$ and $V(x_m, w_m, z_m)$ have $\nu^G \ge 1$. It is Corollary 5.4 of note 38 of the research notes, with the corrections of note 39. The result is not in Lean.

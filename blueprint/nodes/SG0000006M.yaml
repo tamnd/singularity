@@ -1,0 +1,13 @@
+tag: SG0000006M
+kind: theorem
+title: The criterion for the drop holds for corner runs in four variables
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. With the notation of SG0000006J at a point $P_m$ of a sequence of steps, put $w_{kl} = v(A_{kl})$ if $k$ or $l$ is not divisible by $p$, and $w_{kl} = v(\operatorname{cl} A_{kl})$ otherwise. If $\operatorname{cl} A_{00} \ne 0$ and $v(\operatorname{cl} A_{00}) < w_{kl}$ for each $(k, l) \ne (0, 0)$, then there is an $m_0$ such that $G_{m'}$ is a unit for each $m' \ge m_0$ and each choice of the later translations. So this criterion fails at each point of a corner run in four variables.
+sources:
+- paper: CJS20
+uses:
+- SG0000006J
+- SG00000069
+tier: T2
+route:
+- R1
+notes: This is Proposition 3.17.3 of Volume 7 of the handbook (Section 3.17). The proof is the proof of Proposition 3.15.5, with the dominance lemma 3.15.4 applied to the exponents of the terms of $g_m$. It is Proposition 2.3 of note 38 of the research notes. The result is not in Lean.

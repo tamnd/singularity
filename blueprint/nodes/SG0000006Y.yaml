@@ -1,0 +1,13 @@
+tag: SG0000006Y
+kind: theorem
+title: The points B1 x^p + B2 w^p + B0 of rank 1 lie eventually on a regular hypersurface
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, and let $g = B_1 x^p + B_2 w^p + B_0$ be clean, with $B_i \in K[[y, z]]$. Write $B_i = \sum_c y^{c_1} z^{c_2} \beta_{i, c}^p$ over $c \in \{0, \dots, p - 1\}^2$. If the vectors $(\beta_{1, c}, \beta_{2, c})$ span a space of dimension at most $1$ over the field of fractions of $K[[y, z]]$, then the conclusion of part 3 of SG0000006X holds for each corner run in four variables from $P_N$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006X
+- SG0000006M
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.17.17 of Volume 7 of the handbook (Section 3.17). If the rank is $1$, then $g = B (\gamma_1 x + \gamma_2 w)^p + B_0$ with coprime $\gamma_1, \gamma_2$. If the rank is $0$, then $g = B_0$ and SG0000006M gives no run. The class of rank $2$ of the form $y^{pA} z^{pB}(y x^p + z w^p + B_0)$ has no corner run by SG0000007A. It is Corollary 7.3 of note 38 of the research notes. The result is not in Lean.

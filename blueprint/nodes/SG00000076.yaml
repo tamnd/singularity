@@ -1,0 +1,14 @@
+tag: SG00000076
+kind: lemma
+title: At a point of type 0 with rho less than p a step that keeps rho fixes the initial form
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, let $g = y^{r_y} z^{r_z} G$ be clean with $\operatorname{ord} g \ge p$, and assume that the point has type $0$ with $1 \le \rho = d < p$. If a $y$-step with any translation keeps $\rho$, then $\operatorname{in} G = c z^d$ with $c \ne 0$. If a $z$-step keeps $\rho$, then $\operatorname{in} G = c y^d$.
+sources:
+- paper: CJS20
+uses:
+- SG0000004X
+- SG00000059
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.25 of Volume 7 of the handbook (Section 3.17). Type $0$ and $d < p$ give $\operatorname{in} G \in K[y, z]$. The elements $r_y G + y G_y$ and $r_z G + z G_z$ of $\widetilde\Theta_0(G)$ and Theorem 3.7.1, part 1 (SG0000004X), with the chart vector $(a, b, 1, 0)$ kill each monomial with a positive exponent of $y$, by the cleanness. It is Lemma 3.1 of note 40 of the research notes. The result is not in Lean.

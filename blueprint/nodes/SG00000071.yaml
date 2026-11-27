@@ -1,0 +1,13 @@
+tag: SG00000071
+kind: conjecture
+title: Each corner run in four variables has corner surfaces with the order of G at least rho
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Then there are a $J$ and a free coordinate system $(x', w')$ at $P_J$ such that the translations of $x'$ are $0$ after $J$, and for $m$ large the corner surfaces $V(x'_m, y_m)$ and $V(x'_m, z_m)$ have $\nu^G(P_m) \ge \rho$. This is false. SG00000072 is a counterexample.
+sources:
+- paper: CJS20
+uses:
+- SG0000006Z
+- SG00000070
+tier: T2
+route:
+- R1
+notes: This is Conjecture 3.17.20 of Volume 7 of the handbook (Section 3.17). It is the conjecture L+ of note 39 of the research notes. Note 40 found the counterexample SG00000072, and note 42 found a second one, SG00000073, where the initial form is a power of a line. It holds at the cylindrical points of SG0000006W. The corrected form is SG00000075. The status stays open until a Lean proof of the negation exists.

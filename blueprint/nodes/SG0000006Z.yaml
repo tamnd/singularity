@@ -1,0 +1,13 @@
+tag: SG0000006Z
+kind: conjecture
+title: Each corner run in four variables lies eventually on a regular hypersurface
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). Then there are a $J$ and a free coordinate system $(x', w')$ at $P_J$ such that the translations of $x'$ are $0$ after $J$. Equivalently, the points $P_j$, $j > J$, lie on the strict transforms of the regular hypersurface $V(x')$.
+sources:
+- paper: CJS20
+uses:
+- SG0000006V
+- SG0000006P
+tier: T2
+route:
+- R1
+notes: This is Conjecture 3.17.18 of Volume 7 of the handbook (Section 3.17). It is the conjecture L of note 38 of the research notes. It holds for the runs of SG0000006R, in the class of SG0000006X, at the cylindrical points of SG0000006W, and under the hypothesis SG0000007D for $\deg_{x, w} g < p$ (SG0000007E). The runs of SG0000006T show that it cannot be replaced by the finiteness of all translations. Alone it does not give Question 3.13.18, and the form with the corner curves is SG00000075.

@@ -1,0 +1,13 @@
+tag: SG0000006P
+kind: lemma
+title: The finiteness of the translations of a corner run does not depend on the free coordinates
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let the run be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point). If there are a $J$ and a free coordinate system at $P_J$ in which the translations are $0$ from some point on, then only a finite number of the $(a_j, b_j)$ are nonzero. If the translations of one free coordinate $x' = \alpha_0 x_J + \beta_0 w_J + \gamma(y_J, z_J)$ are $0$ from some point on, then $\alpha_0 a_j + \beta_0 b_j = 0$ for $j$ large.
+sources:
+- paper: CJS20
+uses:
+- SG0000006J
+- SG0000006K
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.6 of Volume 7 of the handbook (Section 3.17). The points lie on the strict transforms of a regular graph $x_J = \alpha(y_J, z_J)$, so $v(\alpha - \varphi^{(J)}_m) > v(M^{(J)}_m)$ for each $m$, and $\alpha$ would have an infinite number of terms below $1 + \theta$, against Lemma 3.15.6, part 2. It is Lemma R1 of note 39 of the research notes, the referee report on note 38. The result is not in Lean.

@@ -1,0 +1,13 @@
+tag: SG0000006V
+kind: theorem
+title: A cylindrical point in four variables reduces to a corner run in three variables
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_m$ be a point of a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point), and let $(x', w')$ be a free coordinate system at $P_m$ such that the function of $P_m$ is congruent modulo $p$-th powers to a series $f \in K[[x', y_m, z_m]]$. Put $x'_{j+1} = x'_j / L_j - t'_j$ and $w'_{j+1} = w'_j / L_j - s'_j$, with $t'_j, s'_j$ the values at $P_{j+1}$. Then $x'_j = L_j(x'_{j+1} + t'_j)$, the function of $P_j$ is congruent modulo $p$-th powers to the function $f_j \in K[[x'_j, y_j, z_j]]$ of the point $Q_j$ of the run of $f$ in three variables with the same charts and the translations $t'_j$, and $\rho(P_j) = \rho(Q_j)$. The $t'_j$ are $0$ for $j > J$ if and only if the points $P_j$, $j > J$, lie on the strict transforms of $V(x'_{J+1})$. The translations $s'_j$ are arbitrary.
+sources:
+- paper: CJS20
+uses:
+- SG0000006K
+- SG00000063
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.13 of Volume 7 of the handbook (Section 3.17). It is Theorem 6.1 of note 38 of the research notes, with the three fixes of note 39. The result is not in Lean.

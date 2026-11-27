@@ -1,0 +1,13 @@
+tag: SG00000078
+kind: theorem
+title: At a point of type 0 with rho less than p no corner run can change the letter
+statement: Let $n = 4$, $\Delta = V(y) \cup V(z)$, and let $P$ be a clean point with $\operatorname{ord} g \ge p$ of type $0$ with $1 \le \rho = d < p$. Then a $y$-step from $P$ to $P'$ followed by a $z$-step from $P'$, both keeping $\rho$, is not possible. The same holds with $y$ and $z$ exchanged.
+sources:
+- paper: CJS20
+uses:
+- SG00000076
+- SG0000003F
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.27 of Volume 7 of the handbook (Section 3.17). By SG00000076, $\operatorname{in} G = c z^d$, so $G'_c \equiv c z'^d$ modulo $y$, $P'$ has type $0$, and SG00000076 at $P'$ for the $z$-step needs $\operatorname{in} G'_c = c'' y^d$. It is Theorem 3.3 of note 40 of the research notes. The result is not in Lean.

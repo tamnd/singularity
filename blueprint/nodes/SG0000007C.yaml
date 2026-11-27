@@ -1,0 +1,12 @@
+tag: SG0000007C
+kind: lemma
+title: A power of a line in the initial form persists along the steps that keep rho
+statement: In the setting of SG0000007B, let $h = c \ell^d$ and let the translation $u$ satisfy $\ell(u) = 0$, or $u = 0$. Let $P'$ be the next point. Then $G'_c \equiv c\, \ell(x', w')^d$ modulo $y$ after a $y$-step, and modulo $z$ after a $z$-step. If $\operatorname{in} G'_c$ is binary, then $\operatorname{in} G'_c = c\, \ell(x', w')^d$.
+sources:
+- paper: CJS20
+uses:
+- SG0000007B
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.31 of Volume 7 of the handbook (Section 3.17). The chart sends $\ell(x, w)$ to $y \ell(x', w')$, and the monomials of $\ell(x', w')^d$ survive the cleaning since $d < p$. It is Lemma 4.2 of note 40 of the research notes. The result is not in Lean.

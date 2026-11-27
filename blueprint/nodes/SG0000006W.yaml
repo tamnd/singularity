@@ -1,0 +1,14 @@
+tag: SG0000006W
+kind: theorem
+title: A cylindrical point with a polynomial in the free coordinate satisfies the conjectures L and L+ and answers Question 3.13.18
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_m$ be a point of a corner run in four variables, cylindrical as in SG0000006V with $f \in K[[y_m, z_m]][x']$. Then only a finite number of the $t'_j$ are nonzero. For $j$ large the corner surfaces $V(x'_j, y_j)$ and $V(x'_j, z_j)$ and the corner curves $V(x'_j, w'_j, y_j)$ and $V(x'_j, w'_j, z_j)$ have $\nu^G = d_j \ge \rho$. So the conjectures SG0000006Z, SG00000071 and SG00000075 hold for the run, and Question 3.13.18 has a positive answer for it.
+sources:
+- paper: CJS20
+uses:
+- SG0000006V
+- SG0000006H
+- SG0000005R
+tier: T2
+route:
+- R1
+notes: This is Corollary 3.17.14 of Volume 7 of the handbook (Section 3.17). The finiteness for the run of $f$ is Theorem 3.16.14 (SG0000006H), and the end of the run is Theorem 3.13.20 (SG0000005R). The function does not depend on $w'_j$, so the order along the surfaces and the curves is the order along the corner curves in three variables. It is Corollary 6.2 of note 39 of the research notes, where it depended on Corollary F of note 36. Theorem 3.16.14 removes this hypothesis. The result is not in Lean.

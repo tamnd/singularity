@@ -1,0 +1,13 @@
+tag: SG0000007A
+kind: theorem
+title: Two classes of points in the p-th powers of the free coordinates have no corner run
+statement: Let $n = 4$ and $\Delta = V(y) \cup V(z)$. (1) If $g \in K[[y, z]][x^p, w^p]$ is clean with $\operatorname{ord} g \ge p$ and $1 \le \rho < p$, then no corner run in four variables from $g$ keeps $\rho$, and in fact no step that changes the letter keeps $\rho$. (2) If $g = y^{pA} z^{pB} (y x^p + z w^p + B_0)$ is clean with $\operatorname{ord} g \ge p$, $A, B \ge 0$ and $B_0 \in K[[y, z]]$, then no corner run in four variables from $g$ keeps $\rho \ge 1$.
+sources:
+- paper: CJS20
+uses:
+- SG00000077
+- SG00000078
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.29 of Volume 7 of the handbook (Section 3.17). The class of part 1 is kept by the steps, and each of its points has type $0$, so SG00000078 applies at the first change of letter. Part 2 uses SG00000077 at the first step. Part 2 is the first case of rank $2$ of SG0000006Y. The case of rank $2$ with $\rho \ge p$ in general is open. It is Theorem 3.5 of note 40 of the research notes, with the remark of note 42. The result is not in Lean.

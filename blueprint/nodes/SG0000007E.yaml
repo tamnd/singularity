@@ -1,0 +1,18 @@
+tag: SG0000007E
+kind: theorem
+title: Under the hypothesis H1 each corner run in four variables of degree less than p is linear
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Assume $\deg_{x, w} g < p$, and let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point) that satisfies SG0000007D. Then one of the following holds. (1) The run is an origin run from some point on. Then SG0000006Z and SG00000075 hold for it, by Theorem 3.14.7. (2) There are a linear form $\ell$ and an $m_1$ with $\operatorname{in} G_m = c_m \ell(x_m, w_m)^d$ and $\ell(a_m, b_m) = 0$ for each $m \ge m_1$. Then the run lies on the strict transforms of $V(\ell(x_{m_1}, w_{m_1}))$, so SG0000006Z holds. In both cases the run is linear, so no planar run exists in this class.
+sources:
+- paper: CJS20
+uses:
+- SG0000007B
+- SG0000007C
+- SG0000007D
+- SG0000005Z
+- SG0000006K
+hypotheses:
+- SG0000007D
+tier: T2
+route:
+- R1
+notes: This is Theorem 3.17.33 of Volume 7 of the handbook (Section 3.17). It is proved under the hypothesis SG0000007D, which is open. It answers the questions L' and H of note 38 in this class. The conjecture SG00000075 is not proved in case 2. It is Theorem 4.3 of note 40 of the research notes, with the remark of note 42 that the hypothesis holds in case 1. The result is not in Lean.

@@ -1,0 +1,12 @@
+tag: SG0000006J
+kind: lemma
+title: The closed form of the transform of a corner run in four variables
+statement: Let $n = 4$ with the coordinates $(x, w, y, z)$ and $\Delta = V(y) \cup V(z)$, and let $g \in K[[y, z]][x, w]$ be clean at $P_N$. Let $P_N, P_{N+1}, \dots$ be a corner run in four variables (each step is the $y$-chart or the $z$-chart followed by a translation $(a_m, b_m) \in K^2$ of $(x, w)$, each chart occurs an infinite number of times, and $\rho \ge 1$ is the same at each point), with $x_m = L_m (x_{m+1} + a_m)$, $w_m = L_m (w_{m+1} + b_m)$, $M_N = 1$, $M_{m+1} = M_m L_m$, $\varphi_{m+1} = \varphi_m + a_m M_{m+1}$ and $\psi_{m+1} = \psi_m + b_m M_{m+1}$. Then $x_N = \varphi_m + M_m x_m$ and $w_N = \psi_m + M_m w_m$, the function of $P_m$ is $M_m^{-p} g_m$ with $g_m = \operatorname{cl} g(\varphi_m + M_m x_m, \psi_m + M_m w_m)$, and $g_m = \sum A_{kl} x_m^k w_m^l$ over the $(k, l)$ not both divisible by $p$ plus $\sum \operatorname{cl}(A_{kl}) x_m^k w_m^l$ over the others, with $A_{kl} = M_m^{k + l} g^{[k, l]}(\varphi_m, \psi_m) \in K[[y_m, z_m]]$. Also $\partial_{x_m} g_m = M_m g_x(\varphi_m + M_m x_m, \psi_m + M_m w_m)$, and the same for $w$.
+sources:
+- paper: CJS20
+uses:
+- SG00000069
+tier: T2
+route:
+- R1
+notes: This is Lemma 3.17.1 of Volume 7 of the handbook (Section 3.17). It is Lemma 3.15.1 with two free coordinates, which are multiplied by the same chart variable $L_m$. The proof is by induction, with the facts that the cleaning commutes with the substitution and that a monomial with an exponent of $x$ or $w$ not divisible by $p$ is not a $p$-th power. It is Lemma 2.1 of note 38 of the research notes, and note 39 checked it on 500 random cases with no mismatch. The result is not in Lean.
