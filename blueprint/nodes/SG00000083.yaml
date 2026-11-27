@@ -1,0 +1,19 @@
+tag: SG00000083
+kind: theorem
+title: Jung's method and patching give resolution of 4-folds for p > 24
+statement: Let $k$ be an algebraically closed field of characteristic $p > 24$. Assume SG0000007W and SG0000007X. Then each variety of dimension 4 over $k$ has a resolution.
+sources:
+- paper: Cut09
+  loc: Theorems 14.4 and 16.1
+uses:
+- SG00000082
+- SG0000007X
+hypotheses:
+- SG0000007W
+- SG0000007X
+- SG0000007Y
+- SG0000007Z
+tier: T6
+route:
+- R2
+notes: 'Corollary 3.3 of research note 56, in the form of note 62: the second hypothesis is SG0000007X, not SG0000001J, and it is a priori stronger. The proof is SG00000082 followed by SG0000007X. This is the correct form of the claim of research note 02, Theorem 2.12, that embedded resolution of 3-folds and $p > 24$ give resolution of 4-folds. The sketch of that theorem does not prove it (SG00000084). No proof of SG0000007X by patching is known, also in characteristic 0. Handbook Volume 9, Section 3.21.'

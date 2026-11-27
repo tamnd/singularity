@@ -1,0 +1,10 @@
+tag: SG00000084
+kind: example
+title: The Hermitian 4-fold has no linear projection of local degree less than p
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$, let $q = p^m$ with $m \ge 1$, and let $X = V(F) \subset \mathbb{P}^5_k$ with $F = \sum_{i=0}^{5} x_i^{q+1}$. Then $X$ is smooth. For each point $P \notin X$, the linear projection $\pi_P \colon X \to \mathbb{P}^4_k$ from $P$ is finite and flat of degree $q + 1$, and its local degree is at least $q$ at each point of the 3-fold $R_P = X \cap V(\sum_i P_i x_i^q)$. If $P$ is projectively $\mathbb{F}_{q^2}$-rational, then the local degree is $q + 1$ at each point of $R_P$, and $\pi_P$ is tamely ramified along $R_P$ with ramification index $q + 1$. Otherwise the local degree is $q$ at the generic point of each component of $R_P$, and $\pi_P$ is wildly ramified along $R_P$.
+uses:
+- SG00000033
+tier: T5
+route:
+- R2
+notes: Proposition 2.2 of research note 56, with the dichotomy of tame and wild projections of Proposition 1.2 of note 62 (Proposition 2.4 of note 56 after the corrections). The proof uses the identity $F(x + tu) = F(x) + t \sum_i x_i^q u_i + t^q \sum_i u_i^q x_i + t^{q+1} F(u)$. The example shows that the step \"local degrees are bounded by multiplicities\" of the sketch of research note 02, Theorem 2.12, fails, also for a smooth variety that needs no step of Albanese. So the hypothesis (TP) of SG00000085 fails for each linear projection of $X$, but some projections of $X$ are tame. It rests on the known non-reflexivity of Hermitian varieties. It is an example, not a theorem. Note 62 checked it numerically over $\mathbb{F}_{3^6}$, $\mathbb{F}_{5^4}$ and $\mathbb{F}_{3^8}$. Handbook Volume 9, Section 3.21. Planned for Lean.

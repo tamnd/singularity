@@ -1,0 +1,12 @@
+tag: SG0000007Z
+kind: hypothesis
+title: Abhyankar's lemma for a complete regular local ring
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$, $R = k[[y_1, \dots, y_d]]$ with fraction field $K$, and $L/K$ a finite extension that is unramified outside $V(y_1 \cdots y_d)$ and tamely ramified at each prime $(y_i)$. Then there is an $N$ with $p \nmid N$ such that $L \subseteq K(z_1, \dots, z_d)$ with $z_i^N = y_i$. The integral closure of $R$ in $L$ is $k[[z_1, \dots, z_d]]^G$ for a subgroup $G$ of $\mu_N^d$ that acts diagonally, and it is generated as an $R$-module by elements $s_j$ such that $s_j^N$ is a monomial in the $y_i$.
+sources:
+- paper: Cut09
+  loc: Theorem 14.1 and Corollary 14.2
+- paper: Abh66
+tier: T2
+route:
+- R2
+notes: Input (A11) of research note 56. [Cut09] states it for each $d \ge 1$ and proves it from the purity of the branch locus, the fundamental inequality and the discriminant criterion. Handbook Volume 9, Section 3.21. Not in Lean.

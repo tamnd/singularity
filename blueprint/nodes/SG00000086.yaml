@@ -1,0 +1,16 @@
+tag: SG00000086
+kind: theorem
+title: Resolution of hypersurfaces of bounded degree in large characteristic
+statement: 'For all $n, d \ge 1$ there is a number $N(n, d)$ with this property. Let $k$ be an algebraically closed field of characteristic $p > N(n, d)$. Then each integral hypersurface $X \subset \mathbb{P}^{n+1}_k$ of degree at most $d$ has a resolution: a projective birational morphism $Y \to X$ with $Y$ regular.'
+sources:
+- paper: Tem08
+- paper: Hir64
+- paper: EGA4
+  loc: Sections 8, 9 and 17
+uses:
+- SG0000001P
+- SG00000004
+tier: T8
+route:
+- R9
+notes: Theorem 6.1 of research note 56, which is Theorem 9.4 of note 09. Note 62 checked the proof. The statement is folklore (spreading out from characteristic 0). The project found no written reference. The proof resolves the fibres over the generic points of the strata of characteristic 0 of the space of forms over $\mathbb{Z}$ (SG0000001P), spreads the resolution over a dense open set (EGA IV, Sections 8 and 9), uses noetherian induction on $\mathbb{P}^M_{\mathbb{Z}}$, and gets a finite set of bad primes by the theorem of Chevalley. The bound $N(n, d)$ is not effective. The resolution need not be an isomorphism over the regular locus. The same proof works for each bounded family. The bound depends on $d$, so the theorem does not give Target T. Handbook Volume 9, Section 3.21. Planned for Lean.

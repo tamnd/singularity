@@ -1,0 +1,18 @@
+tag: SG00000088
+kind: example
+title: A disguised z^2 - x^p where the Hasse derivative test fails one level down
+statement: Let $k$ be a field of characteristic $p \ge 5$, let $1 \le r \le (p-1)/2$, and let $f = z^2 + 2z(x^r + x^{p-r}) + x^{2r} \in k[[x, y, w, v, z]]$. Then $f$ has order 2 and degree $\max(2r, p - r + 1)$, and $f$ is a unit times $z''^2 - x^p$ for a regular parameter $z''$. For each hypersurface $H$ whose equation is an element of order 1 of $\Delta^1(f)$, the coefficient ideal of Kollár on $H$ is $C = (x^p)$. So $\Delta^{p-1}(C) = C$ has no element of order 1, also after an extension of $k$ and formally. The hypersurface $V(x) \subset H$ has maximal contact with $(C, p)$ in the sense of Hironaka, and the marked ideal $(C, p)$ is equivalent to $(x, 1)$.
+sources:
+- paper: Kol07
+  loc: Chapter 3
+- paper: KM10
+- paper: BenV13
+- paper: Nar83
+uses:
+- SG00000087
+- SG00000047
+- SG0000000W
+tier: T4
+route:
+- R3
+notes: 'Proposition 7.2 of research note 56 in the corrected form of note 62, Section 4.3. With $z'' = z + B$ and $B = x^r + x^{p-r}$, one has $f = z''^2 - u x^p$ with $u = 2 + x^{p-2r}$ a unit and a square. The failure is a failure of the definition of maximal contact by an element of order 1 of $\Delta^{e-1}$, not of maximal contact in the classical sense. The standard renormalization of $p$-th powers removes it, and the frameworks of Kawanoue-Matsuki [KM10] and Benito-Villamayor [BenV13] treat it. It is not a genuine failure as in SG00000018. The degree is not invariant under a change of coordinates: after $z'' = z + B$ it is $2p - 2r > p$. So the example answers Problem 9.9 of research note 09 only in its literal form. Handbook Volume 9, Section 3.21. Planned for Lean.'

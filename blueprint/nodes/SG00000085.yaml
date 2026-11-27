@@ -1,0 +1,20 @@
+tag: SG00000085
+kind: theorem
+title: Jung's method for a 4-fold with a projection of local degree less than p
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$ and $X$ a normal projective 4-fold over $k$. Suppose that there is a finite surjective morphism $\pi \colon X \to W$ onto a regular projective 4-fold $W$ such that, at each point $x \in X$, the degree of the fraction field of $\mathcal{O}_{X,x}^*$ over the fraction field of $\mathcal{O}_{W,\pi(x)}^*$ is less than $p$. Suppose also that the branch divisor $B$ of $\pi$ has an embedded resolution $W' \to W$ by blowups in regular centers whose total transform is a divisor with simple normal crossings. Then $X$ has a resolution $Y \to X$ that is projective and birational.
+sources:
+- paper: Cut09
+  loc: Theorem 14.1
+- paper: KKMS
+- paper: Kat94
+uses:
+- SG00000081
+- SG0000007Z
+- SG00000080
+hypotheses:
+- SG0000007Z
+- SG00000080
+tier: T5
+route:
+- R7
+notes: Theorem 4.1 of research note 56, checked in note 62. It is the standard toroidal argument of Jung, with the precise hypothesis (TP) on the local degrees. The proof normalizes $W'$ in $k(X)$, shows that the local degrees do not go up and that the cover is tame along the total transform of $B$, applies SG0000007Z to see that $X'$ is formally the quotient $k[[z_1, \dots, z_4]]^G$ by a diagonal group of order prime to $p$, so log regular (Kato, [S]), and applies SG00000080. SG00000084 shows that (TP) can fail for each linear projection of a smooth 4-fold, while some of these projections are tame. Whether (TP) can be replaced by tameness of $\pi$ along $B$ is open. Handbook Volume 9, Section 3.21. Planned for Lean.

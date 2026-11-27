@@ -1,0 +1,13 @@
+tag: SG0000007W
+kind: conjecture
+title: Embedded resolution of divisors in projective 4-space
+statement: Let $k$ be an algebraically closed field of characteristic $p > 0$. For each reduced divisor $D \subset \mathbb{P}^4_k$ there is a finite sequence of blowups $W = W_r \to \dots \to W_0 = \mathbb{P}^4_k$ in regular centers such that $W$ is regular and the total transform of $D$ in $W$ is a divisor with simple normal crossings.
+sources:
+- paper: Cut09
+uses:
+- SG0000000S
+- SG0000000V
+tier: T5
+route:
+- R2
+notes: 'This is the hypothesis $\mathrm{Emb}(\mathbb{P}^4)$ of research note 56, Definition 1.1. Handbook Volume 9, Section 3.21. It is the case $\mathbb{P}^4$ of embedded resolution of reduced 3-folds in regular 4-folds, so it follows from that statement. It is open for each $p$. SG00000082 uses it only in a local form: at each closed point of $\mathbb{P}^4$, one element of the local ring becomes a unit times a monomial after local blowups along a given valuation (note 56, Lemma 1.3). The analogue for $\mathbb{P}^3$ follows from SG0000001C.'

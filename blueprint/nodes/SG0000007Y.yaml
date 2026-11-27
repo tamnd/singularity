@@ -1,0 +1,15 @@
+tag: SG0000007Y
+kind: hypothesis
+title: Albanese's bound on multiplicities
+statement: Let $k$ be an algebraically closed field and $K/k$ a function field of transcendence degree $d$. There is a normal projective variety $V$ over $k$ with function field $K$ such that $e(\mathcal{O}_{V,q}) \le d!$ for each point $q \in V$.
+sources:
+- paper: Cut09
+  loc: Theorem 1.4
+- paper: Abh66
+  loc: Section 12
+uses:
+- SG00000033
+tier: T5
+route:
+- R2
+notes: Input (A1) of research note 56. [Cut09] states it for each $d$, and its proof at the end of Section 12 normalizes the model of Albanese and keeps the bound $d!$. This bound is the only source of the number $24 = 4!$ in Target T. It is not known to be sharp. Handbook Volume 9, Section 3.21. Not in Lean.

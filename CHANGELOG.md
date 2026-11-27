@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- SG0000007W to SG00000088 for Target T of the research notes: Jung's method for 4-folds in characteristic $p > 24$, Volume 9, Section 3.21 of the handbook. The nodes are the results of research note 56 that note 62 marks safe, in the corrected form of note 62. SG00000082 is Theorem 14.4 of Cutkosky in dimension 4, with the embedded resolution of divisors in $\mathbb{P}^4$ (SG0000007W) as a hypothesis. SG00000083 gives resolution of 4-folds for $p > 24$ from SG00000082 and the patching statement SG0000007X, which has no finite set in its premise and so is a priori stronger than SG0000001J. SG00000084 is the Hermitian 4-fold, where each linear projection has local degree at least $q$ and the tame projections are exactly those from $\mathbb{F}_{q^2}$-rational points. SG00000085 is Jung's method under a bound on the completed local degrees. SG00000086 is the folklore theorem on hypersurfaces of bounded degree in large characteristic. SG00000087 and SG00000088 are the Hasse derivative test and the corrected example of a disguised $z^2 - x^p$. SG0000007Y, SG0000007Z and SG00000080 are the cited theorems of Albanese, Abhyankar and Kato as hypotheses. None of the new nodes has a Lean proof.
+- Paper records Kat94 and Niz06 for the resolution of log regular schemes.
+
 ## 0.4.64 - 2026-11-27
 
 ### Changed
