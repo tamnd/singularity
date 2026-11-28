@@ -20,6 +20,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The Lean record is the record of singularity-lean 0.4.72, with 6008 declarations. records/trust.json names the new commit and the new count.
 - The handbook page of the site links edition 0.4.84 of the handbook.
 - The handbook page of the site links edition 0.4.81 of the handbook.
 - The handbook page of the site links edition 0.4.79 of the handbook.
