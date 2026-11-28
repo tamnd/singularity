@@ -20,6 +20,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
+- The trust row Q3 records the check of the export of SingularityBase by nanoda, from the job nanoda-base of tamnd/singularity-lean#318. The export has the theorems of resolutionorg/hironaka that the base uses.
 - The Lean record is the record of singularity-lean 0.4.72, with 6008 declarations. records/trust.json names the new commit and the new count.
 - The handbook page of the site links edition 0.4.84 of the handbook.
 - The handbook page of the site links edition 0.4.81 of the handbook.
