@@ -20,7 +20,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
-- The handbook page of the site links edition 0.4.83 of the handbook.
+- The handbook page of the site links edition 0.4.84 of the handbook.
 - The handbook page of the site links edition 0.4.81 of the handbook.
 - The handbook page of the site links edition 0.4.79 of the handbook.
 - SG000000BE and SG000000BF have the fixes of the referee report in note 86: their last claims need only $a_p = 0$ or $a_{2p} = 0$, and SG000000BE uses SG000000CP. The notes of SG000000BE give the fix of Proposition 81.10 (several divisorial steps after one step $P$) and the corrected counts of the lab ($613$ non-divisorial main steps, $566$ distinct states). The notes of SG000000BG say that one rise is sufficient and name SG000000CX. The notes of SG000000BH say that note 86 recomputed the hidden quantity, and the notes of SG0000009T give the germ-level check of all $81$ subtrees and name SG000000CR, SG000000CV, SG000000CW and SG000000CX.
